@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "eyebrow": "EL PRESUPUESTO, A LA VISTA",
+    "title": "Gasto Público de CABA",
+    "description": "La Ciudad recauda, decide y gasta. Acá podés entender de dónde vienen sus recursos, en qué se usan y cómo cambiaron con el tiempo.",
+    "action": "Explorar los datos",
+    "aside": "Datos abiertos.<br>Preguntas concretas.<br><b>Una Ciudad más transparente.</b>",
+    "source": "Elaborado por La Libertad Avanza CABA<br>sobre fuentes oficiales."
+  },
+  "panorama": {
+    "eyebrow": "PANORAMA DE LA CIUDAD · {{year}}",
+    "title": "Tres cifras para ubicarse.",
+    "budgetLabel": "Presupuesto {{year}} — vigente al {{cutDate}}",
+    "budgetDescription": "Dinero autorizado para gastar durante 2026, con las modificaciones registradas hasta junio.",
+    "budgetNote": "≈ $19,9 billones. Incluye el presupuesto sancionado y las modificaciones registradas hasta esa fecha. Importe nominal del informe de ejecución del segundo trimestre. Excluye gastos figurativos y aplicaciones financieras.",
+    "perCapitaLabel": "Por porteño, por año",
+    "perCapitaDescription": "Presupuesto anual por habitante censado en 2022.",
+    "perCapitaNote": "≈ $6,37 millones por habitante. Presupuesto fiscal nominal al 30/06/2026 dividido por {{population}} habitantes del Censo 2022, resultado definitivo. Es una autorización para gastar; no el gasto ya realizado ni la recaudación efectiva. No se ajusta por inflación esta fotografía.",
+    "executedNote": "≈ $7,10 billones. Importe nominal oficial enero–junio 2026. Incluye importes pagados y pendientes de pago. Excluye gastos figurativos y aplicaciones financieras."
+  },
+  "questions": {
+    "eyebrow": "EMPEZÁ POR UNA PREGUNTA",
+    "title": "Seguí el recorrido de los recursos.",
+    "items": [
+      [
+        "01",
+        "¿En qué gasta la Ciudad?",
+        "De la salud y la educación a cada programa.",
+        "home",
+        "bars"
+      ],
+      [
+        "02",
+        "¿De dónde sale la plata?",
+        "Impuestos y otros recursos que financian la Ciudad.",
+        "income",
+        "stack"
+      ],
+      [
+        "03",
+        "¿Cuánto cuesta el Estado?",
+        "El gasto en personal, los organismos y sus funcionarios.",
+        "structure",
+        "nodes"
+      ],
+      [
+        "04",
+        "¿Cómo cambió con el tiempo?",
+        "Recorré el presupuesto descontando la inflación.",
+        "history",
+        "line"
+      ]
+    ]
+  },
+  "comparison": {
+    "eyebrow": "MIRAR EN PERSPECTIVA",
+    "title": "¿Cómo se compara CABA?",
+    "description": "Explorá indicadores comparables con otras jurisdicciones, con cada fuente y período a la vista."
+  },
+  "guide": {
+    "title": "Los números necesitan contexto.",
+    "description": "El presupuesto muestra cuánto se puede gastar. Los gastos realizados muestran cuánto se usó, tanto si ya se pagó como si está pendiente. Conocé cómo se leen estas cifras."
+  }
+}

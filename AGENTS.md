@@ -1,0 +1,29 @@
+# Gasto Público de CABA — instrucciones permanentes para Codex
+
+- El repositorio GitHub `LFalcinelli/Presupuesto-CABA` es la fuente de verdad.
+- La web explica y permite explorar información fiscal pública de CABA.
+- No inventar cifras, fuentes, fechas, períodos ni cobertura.
+- No modificar metodología sin autorización. Leer `docs/METODOLOGIA.md` sólo para el criterio afectado.
+- Respetar las decisiones de `docs/DECISIONES.md`; no reabrirlas por defecto.
+- Empezar por `data/index.json`, y leer únicamente el dataset relevante.
+- Interfaz: `src/`. Datos: `data/<dominio>/`. Configuración: `config/site.json`.
+- Portada y hero: `content/home.json`. El dataset destacado se elige con `currentBudgetFile`.
+- Fuentes: `docs/FUENTES.md`. Schemas: `docs/DATASETS.md`.
+- No leer `archive/`, `data/raw/`, `research/`, `.research/` o `.local/` salvo necesidad explícita de la tarea.
+- No auditar todo el sitio ni regenerar documentación completa ante un ajuste pequeño.
+- No cargar 2027 hasta contar con datos verificados y un pedido del dueño.
+- No subir documentos internos, prompts, descargas de trabajo, credenciales o identificadores personales.
+- `public/sources/` contiene sólo las seis descargas oficiales ya ofrecidas públicamente; no agregar fuentes brutas por rutina.
+- No depender de rutas de una computadora ni de runtimes internos de Codex.
+- No modificar `dist/`: se genera mediante `npm run build`.
+- Node 22 o superior; instalar dependencias con `npm ci`.
+- Vista previa: `npm run build` y `npm run dev`; URL y subpath aparecen en la terminal.
+- Tests dirigidos durante cambios. `npm test` comprueba datos y configuración.
+- Para cambios de navegación, recursos o despliegue: `npm run test:smoke` con el servidor activo.
+- Suite completa antes de publicar o ante cambios estructurales; no repetir sin motivo.
+- `npm run test:migration` compara contra el snapshot original; usar sólo para esta migración.
+- Preferir ramas `feature/...` y Pull Request. `main` es producción.
+- Merge a `main` ejecuta validación y publicación automática en GitHub Pages.
+- Conservar hash routing. Resolver recursos mediante `Site.url`, sin URLs locales absolutas.
+- No cambiar la publicación anterior en chatgpt.site sin pedido explícito.
+- Registrar cambios sustanciales en `docs/CHANGELOG.md`; no duplicar los documentos canónicos.

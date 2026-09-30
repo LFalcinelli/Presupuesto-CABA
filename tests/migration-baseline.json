@@ -1,0 +1,366 @@
+{
+  "sourceCommit": "723750b831d28fec95932a5e137f2c45e158fda3",
+  "tag": "pre-github-migration-2026-09-30",
+  "files": [
+    {
+      "path": "data/budget/2013/2013-4.csv",
+      "originalName": "2013-4.csv",
+      "sha256": "d8a028c6d76b73a393a6ee705de61570a2965817aea597e29300bb321981563c"
+    },
+    {
+      "path": "data/budget/2013/2013-4.json",
+      "originalName": "2013-4.json",
+      "sha256": "918a8d68a9d6c86b5f4fcf0289c840f339adcdacb385a97f81101160f27b3cc5"
+    },
+    {
+      "path": "data/budget/2014/2014-4.csv",
+      "originalName": "2014-4.csv",
+      "sha256": "8fb20bb6a553740959656bcd62f63e2979d7e7b639e02ce224fa9f0e1be750ef"
+    },
+    {
+      "path": "data/budget/2014/2014-4.json",
+      "originalName": "2014-4.json",
+      "sha256": "f16d1230bd6ad2c3c9645c43ab0117e6ecedeb5efd17eb462b262fcdbba78581"
+    },
+    {
+      "path": "data/budget/2015/2015-4.csv",
+      "originalName": "2015-4.csv",
+      "sha256": "0a3a44a0a18062da3ce1ccdf26203052d25d3d0c79c663e81fa44c5f021b28a7"
+    },
+    {
+      "path": "data/budget/2015/2015-4.json",
+      "originalName": "2015-4.json",
+      "sha256": "9baa30cdb15abf098dcdce01fdc4040a7235ec3b78349c0c7ac5260a6b50a317"
+    },
+    {
+      "path": "data/budget/2016/2016-4.csv",
+      "originalName": "2016-4.csv",
+      "sha256": "00473095a864c6f98ba5f40670ae0c72da58a10c07d79983aa1f66fe4b352efd"
+    },
+    {
+      "path": "data/budget/2016/2016-4.json",
+      "originalName": "2016-4.json",
+      "sha256": "9e43a6a0ad8993295340a8b23d29afeb32e020d037d4801a3ea58ca1f97f47aa"
+    },
+    {
+      "path": "data/budget/2017/2017-4.csv",
+      "originalName": "2017-4.csv",
+      "sha256": "21b447045e80fa32f4311d19f9383d1b640aec96e6c5182cf040f57e02197201"
+    },
+    {
+      "path": "data/budget/2017/2017-4.json",
+      "originalName": "2017-4.json",
+      "sha256": "d0a4c6fd3a62df3297536ae8b363a8e152377f3acf22b3ef1b94b7f373b6d269"
+    },
+    {
+      "path": "data/budget/2018/2018-4.csv",
+      "originalName": "2018-4.csv",
+      "sha256": "6557660c89bb922c184cdd098400be5fde1f2d06d45d3f33c9e6aa63d33ff952"
+    },
+    {
+      "path": "data/budget/2018/2018-4.json",
+      "originalName": "2018-4.json",
+      "sha256": "44c6ac9b65df7f45804ef544d1b827304aba8c300fe9f95d0910b8e08383e79a"
+    },
+    {
+      "path": "data/budget/2019/2019-4.csv",
+      "originalName": "2019-4.csv",
+      "sha256": "3d8da82fd0f58cf2c6734086f4434bd4c62081c622ab52b0b62dac76ad6c577b"
+    },
+    {
+      "path": "data/budget/2019/2019-4.json",
+      "originalName": "2019-4.json",
+      "sha256": "e508355519ebb742ddf925ec436930a086f70e3d9e258dc81b6e77b8a39bc7b5"
+    },
+    {
+      "path": "data/budget/2020/2020-4.csv",
+      "originalName": "2020-4.csv",
+      "sha256": "9016ba22c061b48447f23085028eeba484a176493d638a1b3175560887425d2f"
+    },
+    {
+      "path": "data/budget/2020/2020-4.json",
+      "originalName": "2020-4.json",
+      "sha256": "00c1377e521fd8633cd5ce58f6be96aa73f96f14a86165a4e3d0358b019c1f6c"
+    },
+    {
+      "path": "data/budget/2021/2021-4.csv",
+      "originalName": "2021-4.csv",
+      "sha256": "783061a77d825f948d5a4fe409e75abf492aac26adef494e727771818fe8d058"
+    },
+    {
+      "path": "data/budget/2021/2021-4.json",
+      "originalName": "2021-4.json",
+      "sha256": "5dfce30c3a3e1fe74c345308070f9ed363a59da72d6461451d401579d8da4f57"
+    },
+    {
+      "path": "data/budget/2022/2022-4.csv",
+      "originalName": "2022-4.csv",
+      "sha256": "09fc5a62e6fc1eaa3dc2a58e42fe5f6e8529ac6939e46857c84f4aa472fdedc9"
+    },
+    {
+      "path": "data/budget/2022/2022-4.json",
+      "originalName": "2022-4.json",
+      "sha256": "9aa32a47ba158a66e7d870aeb1556237dce305ae066e62f7ec41a8bdadd73b3c"
+    },
+    {
+      "path": "data/budget/2023/2023-4.csv",
+      "originalName": "2023-4.csv",
+      "sha256": "3171400d94b30e1494697f2b4a17702df68f65e9067376c99112ba673d7bbe2a"
+    },
+    {
+      "path": "data/budget/2023/2023-4.json",
+      "originalName": "2023-4.json",
+      "sha256": "c4fdbe3dddec646340ec4b92d938ac672ee11db9c90cddf15daa9c9d70dd15f0"
+    },
+    {
+      "path": "data/budget/2024/2024-4.csv",
+      "originalName": "2024-4.csv",
+      "sha256": "65407be10765bac491a3911cf22f3d07e7df74cec3c25afbb0938fa4dba80831"
+    },
+    {
+      "path": "data/budget/2024/2024-4.json",
+      "originalName": "2024-4.json",
+      "sha256": "4b55721766336981dbbdc83d5fc86263e433e93f7f59e3b9fab694cff49ff402"
+    },
+    {
+      "path": "data/budget/2025/2025-2.csv",
+      "originalName": "2025-2.csv",
+      "sha256": "50e52e2cb3e0bb75d2b7f76021946459ee38929bb6e70338a61289a4a1a583af"
+    },
+    {
+      "path": "data/budget/2025/2025-2.json",
+      "originalName": "2025-2.json",
+      "sha256": "aac94b19512d96284b2f1961687be7ca588a87425aa682d81373d3ebb0b0d7ba"
+    },
+    {
+      "path": "data/budget/2025/2025-4.csv",
+      "originalName": "2025-4.csv",
+      "sha256": "1f6d22fb2d4e5658f5560d6886a7d07a1552fda82a20661edda838ac2e5e6838"
+    },
+    {
+      "path": "data/budget/2025/2025-4.json",
+      "originalName": "2025-4.json",
+      "sha256": "f178a4df6cda293c7c7e95f9f13112fd6586276e91c50e87961185dbeb44cbd0"
+    },
+    {
+      "path": "data/budget/2026/2026-2.csv",
+      "originalName": "2026-2.csv",
+      "sha256": "3cd4314ec31a65abcce905bb058edfb03b3ba73c6376c63c5303214b18bc9986"
+    },
+    {
+      "path": "data/budget/2026/2026-2.json",
+      "originalName": "2026-2.json",
+      "sha256": "6a4a78c2502566eb11bde37edc782c348d067a506538583dc26dcc33921dc17d"
+    },
+    {
+      "path": "data/execution/annual-comparison.json",
+      "originalName": "annual-comparison.json",
+      "sha256": "fb3457fb65142cc4717237ca34f71ed7d51a62160666ef71988d6e99de53d31a"
+    },
+    {
+      "path": "data/execution/approved-vs-executed.json",
+      "originalName": "approved-vs-executed.json",
+      "sha256": "d20df112e5095d2c8c53fded6b03bfd6983355124a51964a1c571373870abd0b"
+    },
+    {
+      "path": "data/history/budget-history-categories.csv",
+      "originalName": "budget-history-categories.csv",
+      "sha256": "b43548a4fb01cd32ea9c16f4a8ea6d7ea0288131062331ac0730fdf269198e0e"
+    },
+    {
+      "path": "data/history/budget-history-long.csv",
+      "originalName": "budget-history-long.csv",
+      "sha256": "232598a0201b309478ddb99231fa5c906a85e625dcd806a8d0b21fe748f6b3d6"
+    },
+    {
+      "path": "data/history/budget-history-long.json",
+      "originalName": "budget-history-long.json",
+      "sha256": "704fbb649fe33e0bc2b80bb3f0a76c53a59ba4eb5606fc6f71a1cfcd9bd8d838"
+    },
+    {
+      "path": "data/history/budget-history-usd.csv",
+      "originalName": "budget-history-usd.csv",
+      "sha256": "1e92ea77145143cac3c6a0b634cdb6209ec923c4d7d636bbc5e4e01dbe04581b"
+    },
+    {
+      "path": "data/history/budget-history-usd.json",
+      "originalName": "budget-history-usd.json",
+      "sha256": "16ba6388fc87afdc047b5392150a4cbd2a0d66df343c0c4d9d1e092417804ab1"
+    },
+    {
+      "path": "data/fiscal-results/caif.json",
+      "originalName": "caif.json",
+      "sha256": "96b5027152732629e64473ca854b689c79f75ba90a20a3bb6333e34be18040f7"
+    },
+    {
+      "path": "data/history/category-history.json",
+      "originalName": "category-history.json",
+      "sha256": "ec1d31bd46470dd249b8a095a7cacd92836aaf143bbebcb89756c50aa5b9312d"
+    },
+    {
+      "path": "data/provinces/comparisons-argentina.csv",
+      "originalName": "comparisons-argentina.csv",
+      "sha256": "eafc6059d3effc53537335379d777263aeb0a7f6396c9633da069e8c69806318"
+    },
+    {
+      "path": "data/provinces/comparisons-argentina.json",
+      "originalName": "comparisons-argentina.json",
+      "sha256": "88248497a72df2f9eef9dade91890590e735b8ddf1a0695f7af04775083ca5a6"
+    },
+    {
+      "path": "data/international/comparisons-world.csv",
+      "originalName": "comparisons-world.csv",
+      "sha256": "b19c38518272b5e4205d3be536973dd36721112f9b999f1bdfedd413bc366704"
+    },
+    {
+      "path": "data/international/comparisons-world.json",
+      "originalName": "comparisons-world.json",
+      "sha256": "4a807297d51ae059aa9cac9210d02e230a1ece0f62f0863300ab09eca79a58f6"
+    },
+    {
+      "path": "data/government/conduction.json",
+      "originalName": "conduction.json",
+      "sha256": "29d25178a41b5867f1c75f060de082dd9253da5e689bfd2b8c1d9910ef421591"
+    },
+    {
+      "path": "data/government/employment.json",
+      "originalName": "employment.json",
+      "sha256": "86803351003a441fe6fb609bbdce7c6047f203ceb986c16948e9aff48d2af07e"
+    },
+    {
+      "path": "data/history/execution-history.csv",
+      "originalName": "execution-history.csv",
+      "sha256": "b71c34e9d6dfd2110b8b66121e5653d61cb1c972a0885e7a46f2b3b8109c542d"
+    },
+    {
+      "path": "data/history/execution-history.json",
+      "originalName": "execution-history.json",
+      "sha256": "463d930f0618d7ef0b65e65842382d52be6b9e863ef7c35a0fd1d92e180cc223"
+    },
+    {
+      "path": "data/government/government-directory.json",
+      "originalName": "government-directory.json",
+      "sha256": "3ae4bf03b617d5419414676d86acb613a2fad0e3f801206392d5736d8b2c5ff9"
+    },
+    {
+      "path": "data/revenue/income-2025-4.json",
+      "originalName": "income-2025-4.json",
+      "sha256": "68bf0a4fef4272070c9433b2aacc4e322ec48aaedc5d79db71acfd7f3314395c"
+    },
+    {
+      "path": "data/revenue/income-2026-2.json",
+      "originalName": "income-2026-2.json",
+      "sha256": "b9ffac1ef57b5551510a1318e3d74f7e7e2e70a393fe4016900c484bbeec49f4"
+    },
+    {
+      "path": "data/revenue/income-comparison.csv",
+      "originalName": "income-comparison.csv",
+      "sha256": "f190b4cfe61476d5801302d06e8be95b081eef7690e67eeb2706b06e5b43a8f5"
+    },
+    {
+      "path": "data/revenue/income-comparison.json",
+      "originalName": "income-comparison.json",
+      "sha256": "0233edafb20dc70e1e4e5fb2d4f5ac778e17b01587bbb033ee727c4e77b5389c"
+    },
+    {
+      "path": "data/history/inflation-long.json",
+      "originalName": "inflation-long.json",
+      "sha256": "3294c630d735aa1d2d6f801f6ea088bdcf0e48fada0ab1584ff1896f72122eb4"
+    },
+    {
+      "path": "data/government/institutional-structure.json",
+      "originalName": "institutional-structure.json",
+      "sha256": "ed656ef4dcecddbf0989fe5867976307ed69c1c58cebf2ce5e105c36d39629a6"
+    },
+    {
+      "path": "data/history/ipcba.csv",
+      "originalName": "ipcba.csv",
+      "sha256": "b28ee0983f96c3e7cf8fa2625dcad5cd50c701a1d2bbce0c4df00f198b620554"
+    },
+    {
+      "path": "data/budget/manifest.json",
+      "originalName": "manifest.json",
+      "sha256": "7e847302668f0d12227e07661fcde47f385ed75269235951605898b08e0e962d"
+    },
+    {
+      "path": "data/provinces/national-spending-history.csv",
+      "originalName": "national-spending-history.csv",
+      "sha256": "ccb478074c29804f155c1fb6a00f2189e7f242a8c214382fc62d54d9bbc71782"
+    },
+    {
+      "path": "data/provinces/national-spending-history.json",
+      "originalName": "national-spending-history.json",
+      "sha256": "b18be76d071bfab38c71e3b018db746a7e5c7cbf602566f2d50a6241b8232526"
+    },
+    {
+      "path": "data/government/organigram.json",
+      "originalName": "organigram.json",
+      "sha256": "5247e483e9ac2b6adc7b96fb668d7da42d6eb9caed500c0f2fdebada33aff78c"
+    },
+    {
+      "path": "data/provinces/population-annual.csv",
+      "originalName": "population-annual.csv",
+      "sha256": "793fc6cf54f5fbf1f1e60d4ae4d20a7d833acfdf6e28d62f69142946f3456964"
+    },
+    {
+      "path": "data/provinces/population-annual.json",
+      "originalName": "population-annual.json",
+      "sha256": "036e08033bca46c23d4ac01925a765afcadb30ddc72b997c4ea32f69abaa7be1"
+    },
+    {
+      "path": "data/provinces/province-paths.json",
+      "originalName": "province-paths.json",
+      "sha256": "eb8d5876de3084e64eff64946034ac863ec7ec3563e221b4531db60dac913956"
+    },
+    {
+      "path": "data/budget/rem-benchmark-2026.json",
+      "originalName": "rem-benchmark-2026.json",
+      "sha256": "033eb95492290bd078eda8c115572cda20741c9bc53c593e20dc92de7d08720d"
+    },
+    {
+      "path": "data/salaries/salaries.csv",
+      "originalName": "salaries.csv",
+      "sha256": "213ec798a1f091e3da0babb18242e133fae9595caef2208829fff08a691f859a"
+    },
+    {
+      "path": "data/salaries/salaries.json",
+      "originalName": "salaries.json",
+      "sha256": "8d03936bf453c0b869de6949c3b0e513f5a331d36bc8aa403c09cf95da6f3c4e"
+    },
+    {
+      "path": "data/salaries/salary-hierarchy.json",
+      "originalName": "salary-hierarchy.json",
+      "sha256": "a9c38256aa9eb0241ecc97bcc57f8dd3c2bd61a22677ec98f9155f6738e2cbd1"
+    },
+    {
+      "path": "data/salaries/salary-history.csv",
+      "originalName": "salary-history.csv",
+      "sha256": "2f7785ba0d11827122ccfabe65d356df5f3778c5eee1ca818636391b537d5df6"
+    },
+    {
+      "path": "data/salaries/salary-history.json",
+      "originalName": "salary-history.json",
+      "sha256": "8f8dcb2ff024fc39cd580f399d29dd58b8f4429894492854e54de32f5d893c4f"
+    },
+    {
+      "path": "data/salaries/salary-jorge-macri.csv",
+      "originalName": "salary-jorge-macri.csv",
+      "sha256": "cb2133e9729c1049ad57a32076e68048bdc4f26343938678cde13bbb7ad62df1"
+    },
+    {
+      "path": "data/execution/semester-analysis.csv",
+      "originalName": "semester-analysis.csv",
+      "sha256": "55dc2ef2535f7ed7f465a21fa0f7105219fd9ea5314097e79a7f0c347eb0e199"
+    },
+    {
+      "path": "data/execution/semester-analysis.json",
+      "originalName": "semester-analysis.json",
+      "sha256": "4eb91fbbb23ef9f5731f1e0b490bf8efc709321e6298c47d0960b5283b888f80"
+    },
+    {
+      "path": "data/budget/series.csv",
+      "originalName": "series.csv",
+      "sha256": "7b06c14e248500bd75ff5dd8680c97907c8dfacf933deb7763f584db48f5625b"
+    }
+  ]
+}

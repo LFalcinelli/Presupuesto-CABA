@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "defaultPeriod": "2026-2",
+  "featuredPeriods": [
+    "2026-2",
+    "2025-4"
+  ],
+  "incomePeriods": [
+    "2025-4",
+    "2026-2"
+  ],
+  "analysisPeriods": {
+    "2026-2": "semester-analysis"
+  },
+  "comparisonReady": true,
+  "insights": [],
+  "employmentFile": "employment",
+  "worldComparisonFile": "comparisons-world",
+  "incomeAnalysisPeriods": {
+    "2026-2": "income-comparison"
+  },
+  "historyStart": 2005,
+  "caifFile": "caif",
+  "snapshotPrices": "nominal",
+  "currentBudgetYear": 2026,
+  "currentBudgetPeriod": "2026-2",
+  "currentExecutionPeriod": "2026-2",
+  "currentBudgetFile": "data/budget/2026/current.json",
+  "lastUpdate": "2026-09-09",
+  "availablePeriods": [
+    "2025-4",
+    "2026-2",
+    "2013-4",
+    "2014-4",
+    "2015-4",
+    "2016-4",
+    "2017-4",
+    "2018-4",
+    "2019-4",
+    "2020-4",
+    "2021-4",
+    "2022-4",
+    "2023-4",
+    "2024-4",
+    "2025-2"
+  ],
+  "periodLabels": {
+    "2026-2": "Avance 2026",
+    "2025-4": "Cierre 2025"
+  },
+  "flags": {
+    "compare": true,
+    "government": true,
+    "salaries": true
+  },
+  "publicUrl": "https://lfalcinelli.github.io/Presupuesto-CABA/",
+  "legacyPublication": "https://lla-caba-gasto-publico.lucianofalcinelli.chatgpt.site/"
+}

@@ -1,0 +1,742 @@
+{
+  "schemaVersion": 1,
+  "datasets": [
+    {
+      "id": "2013-4",
+      "name": "2013 4",
+      "path": "data/budget/2013/2013-4.json",
+      "period": "2013-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/historico_presupuesto_separados_por_cuatrimestres.zip",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2013/2013-4.json",
+        "data/budget/2013/2013-4.csv"
+      ]
+    },
+    {
+      "id": "2014-4",
+      "name": "2014 4",
+      "path": "data/budget/2014/2014-4.json",
+      "period": "2014-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/historico_presupuesto_separados_por_cuatrimestres.zip",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2014/2014-4.json",
+        "data/budget/2014/2014-4.csv"
+      ]
+    },
+    {
+      "id": "2015-4",
+      "name": "2015 4",
+      "path": "data/budget/2015/2015-4.json",
+      "period": "2015-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/historico_presupuesto_separados_por_cuatrimestres.zip",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2015/2015-4.json",
+        "data/budget/2015/2015-4.csv"
+      ]
+    },
+    {
+      "id": "2016-4",
+      "name": "2016 4",
+      "path": "data/budget/2016/2016-4.json",
+      "period": "2016-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/historico_presupuesto_separados_por_cuatrimestres.zip",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2016/2016-4.json",
+        "data/budget/2016/2016-4.csv"
+      ]
+    },
+    {
+      "id": "2017-4",
+      "name": "2017 4",
+      "path": "data/budget/2017/2017-4.json",
+      "period": "2017-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/historico_presupuesto_separados_por_cuatrimestres.zip",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2017/2017-4.json",
+        "data/budget/2017/2017-4.csv"
+      ]
+    },
+    {
+      "id": "2018-4",
+      "name": "2018 4",
+      "path": "data/budget/2018/2018-4.json",
+      "period": "2018-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/historico_presupuesto_separados_por_cuatrimestres.zip",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2018/2018-4.json",
+        "data/budget/2018/2018-4.csv"
+      ]
+    },
+    {
+      "id": "2019-4",
+      "name": "2019 4",
+      "path": "data/budget/2019/2019-4.json",
+      "period": "2019-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/historico_presupuesto_separados_por_cuatrimestres.zip",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2019/2019-4.json",
+        "data/budget/2019/2019-4.csv"
+      ]
+    },
+    {
+      "id": "2020-4",
+      "name": "2020 4",
+      "path": "data/budget/2020/2020-4.json",
+      "period": "2020-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2020-4-trimestre.xlsx",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2020/2020-4.json",
+        "data/budget/2020/2020-4.csv"
+      ]
+    },
+    {
+      "id": "2021-4",
+      "name": "2021 4",
+      "path": "data/budget/2021/2021-4.json",
+      "period": "2021-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2021-4-trimestre.xlsx",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2021/2021-4.json",
+        "data/budget/2021/2021-4.csv"
+      ]
+    },
+    {
+      "id": "2022-4",
+      "name": "2022 4",
+      "path": "data/budget/2022/2022-4.json",
+      "period": "2022-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2022-4.xlsx",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2022/2022-4.json",
+        "data/budget/2022/2022-4.csv"
+      ]
+    },
+    {
+      "id": "2023-4",
+      "name": "2023 4",
+      "path": "data/budget/2023/2023-4.json",
+      "period": "2023-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2023-4.xlsx",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2023/2023-4.json",
+        "data/budget/2023/2023-4.csv"
+      ]
+    },
+    {
+      "id": "2024-4",
+      "name": "2024 4",
+      "path": "data/budget/2024/2024-4.json",
+      "period": "2024-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2024-4.xlsx",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2024/2024-4.json",
+        "data/budget/2024/2024-4.csv"
+      ]
+    },
+    {
+      "id": "2025-2",
+      "name": "2025 2",
+      "path": "data/budget/2025/2025-2.json",
+      "period": "2025-2",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2025-2.xlsx",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2025/2025-2.json",
+        "data/budget/2025/2025-2.csv"
+      ]
+    },
+    {
+      "id": "2025-4",
+      "name": "2025 4",
+      "path": "data/budget/2025/2025-4.json",
+      "period": "2025-4",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2025-4.xlsx",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2025/2025-4.json",
+        "data/budget/2025/2025-4.csv"
+      ]
+    },
+    {
+      "id": "2026-2",
+      "name": "2026 2",
+      "path": "data/budget/2026/2026-2.json",
+      "period": "2026-2",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2026-2.xlsx",
+      "type": "official",
+      "description": "Detalle fiscal del período: códigos/nombres, sanción, actualizado y devengado; filas y agregados conciliados.",
+      "files": [
+        "data/budget/2026/2026-2.json",
+        "data/budget/2026/2026-2.csv"
+      ]
+    },
+    {
+      "id": "annual-comparison",
+      "name": "Annual comparison",
+      "path": "data/execution/annual-comparison.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": "2026-09-15",
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Snapshot público existente; conserva cifras, unidades, factores y fuentes.",
+      "files": [
+        "data/execution/annual-comparison.json"
+      ]
+    },
+    {
+      "id": "approved-vs-executed",
+      "name": "Approved vs executed",
+      "path": "data/execution/approved-vs-executed.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": "2026-09-22",
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Presupuesto inicial y gasto ejecutado por jurisdicción y período.",
+      "files": [
+        "data/execution/approved-vs-executed.json"
+      ]
+    },
+    {
+      "id": "budget-history-long",
+      "name": "Budget history long",
+      "path": "data/history/budget-history-long.json",
+      "period": "2005–2026",
+      "lastUpdate": "2026-09-14",
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Presupuesto histórico, datos nominales y factores de actualización.",
+      "files": [
+        "data/history/budget-history-long.json",
+        "data/history/budget-history-long.csv"
+      ]
+    },
+    {
+      "id": "budget-history-usd",
+      "name": "Budget history usd",
+      "path": "data/history/budget-history-usd.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": "2026-09-12",
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Comparación presupuestaria en USD nominales y ajustados por CPI-U.",
+      "files": [
+        "data/history/budget-history-usd.json",
+        "data/history/budget-history-usd.csv"
+      ]
+    },
+    {
+      "id": "caif",
+      "name": "Caif",
+      "path": "data/fiscal-results/caif.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": "2026-09-16",
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Cuenta ahorro–inversión: ingresos, gasto, intereses y resultados conciliados.",
+      "files": [
+        "data/fiscal-results/caif.json"
+      ]
+    },
+    {
+      "id": "category-history",
+      "name": "Category history",
+      "path": "data/history/category-history.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": "2026-09-15",
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Series por clasificación de finalidad/función y objeto del gasto.",
+      "files": [
+        "data/history/category-history.json"
+      ]
+    },
+    {
+      "id": "comparisons-argentina",
+      "name": "Comparisons argentina",
+      "path": "data/provinces/comparisons-argentina.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": "2026-09-15",
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Indicadores por provincia y período, población, superficie y faltantes.",
+      "files": [
+        "data/provinces/comparisons-argentina.json",
+        "data/provinces/comparisons-argentina.csv"
+      ]
+    },
+    {
+      "id": "comparisons-world",
+      "name": "Comparisons world",
+      "path": "data/international/comparisons-world.json",
+      "period": "2026",
+      "lastUpdate": "2026-09-15",
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Presupuestos de ciudades, censos, monedas, TC y alcance institucional.",
+      "files": [
+        "data/international/comparisons-world.json",
+        "data/international/comparisons-world.csv"
+      ]
+    },
+    {
+      "id": "conduction",
+      "name": "Conduction",
+      "path": "data/government/conduction.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": null,
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Cargos de conducción y referencias a remuneraciones.",
+      "files": [
+        "data/government/conduction.json"
+      ]
+    },
+    {
+      "id": "employment",
+      "name": "Employment",
+      "path": "data/government/employment.json",
+      "period": "2024",
+      "lastUpdate": null,
+      "source": "https://www.argentina.gob.ar/sites/default/files/ejec-presupuestaria-ocupacion_salarios_1.xlsx",
+      "type": "calculation",
+      "description": "Ocupación pública y fuente; distinta del gasto en personal.",
+      "files": [
+        "data/government/employment.json"
+      ]
+    },
+    {
+      "id": "execution-history",
+      "name": "Execution history",
+      "path": "data/history/execution-history.json",
+      "period": "1997–2026",
+      "lastUpdate": "2026-09-22",
+      "source": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2025/12/SP_Fi_AX01.xlsx",
+      "type": "calculation",
+      "description": "Gasto total oficial 1997–2025, factores de precios y punto de presupuesto 2026.",
+      "files": [
+        "data/history/execution-history.json",
+        "data/history/execution-history.csv"
+      ]
+    },
+    {
+      "id": "government-directory",
+      "name": "Government directory",
+      "path": "data/government/government-directory.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": "2026-09-22",
+      "source": "https://data.buenosaires.gob.ar/dataset/autoridades-superiores-funcionarios/resource/bca7f4cc-810a-4830-8ee7-5c509d00720b",
+      "type": "calculation",
+      "description": "Personas públicas, cargos, categorías y árbol reporta_a con conteos.",
+      "files": [
+        "data/government/government-directory.json"
+      ]
+    },
+    {
+      "id": "income-2025-4",
+      "name": "Income 2025 4",
+      "path": "data/revenue/income-2025-4.json",
+      "period": "2025-4",
+      "lastUpdate": null,
+      "source": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias",
+      "type": "calculation",
+      "description": "Recursos por clasificación económica y rubros; inicial, actualizado y realizado.",
+      "files": [
+        "data/revenue/income-2025-4.json"
+      ]
+    },
+    {
+      "id": "income-2026-2",
+      "name": "Income 2026 2",
+      "path": "data/revenue/income-2026-2.json",
+      "period": "2026-2",
+      "lastUpdate": null,
+      "source": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias",
+      "type": "calculation",
+      "description": "Recursos por clasificación económica y rubros; inicial, actualizado y realizado.",
+      "files": [
+        "data/revenue/income-2026-2.json"
+      ]
+    },
+    {
+      "id": "income-comparison",
+      "name": "Income comparison",
+      "path": "data/revenue/income-comparison.json",
+      "period": "2026-2",
+      "lastUpdate": "2026-09-12",
+      "source": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias",
+      "type": "calculation",
+      "description": "Comparación de recursos realizados de los primeros semestres 2025/2026.",
+      "files": [
+        "data/revenue/income-comparison.json",
+        "data/revenue/income-comparison.csv"
+      ]
+    },
+    {
+      "id": "inflation-long",
+      "name": "Inflation long",
+      "path": "data/history/inflation-long.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": "2026-09-12",
+      "source": "https://www.indec.gob.ar/ftp/cuadros/economia/serie_ipc_divisiones.csv",
+      "type": "calculation",
+      "description": "Índices mensuales y factores anuales de la serie empalmada.",
+      "files": [
+        "data/history/inflation-long.json"
+      ]
+    },
+    {
+      "id": "institutional-structure",
+      "name": "Institutional structure",
+      "path": "data/government/institutional-structure.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": "2026-09-04",
+      "source": "https://cdn2.buenosaires.gob.ar/organigrama/Organigrama_GCBA_2026.pdf",
+      "type": "calculation",
+      "description": "Snapshot público existente; conserva cifras, unidades, factores y fuentes.",
+      "files": [
+        "data/government/institutional-structure.json"
+      ]
+    },
+    {
+      "id": "manifest",
+      "name": "Manifest",
+      "path": "data/budget/manifest.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": "2026-09-09",
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Catálogo fiscal por período, totales, aperturas y factores IPCBA.",
+      "files": [
+        "data/budget/manifest.json"
+      ]
+    },
+    {
+      "id": "national-spending-history",
+      "name": "National spending history",
+      "path": "data/provinces/national-spending-history.json",
+      "period": "2005–2025",
+      "lastUpdate": "2026-09-12",
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Snapshot público existente; conserva cifras, unidades, factores y fuentes.",
+      "files": [
+        "data/provinces/national-spending-history.json",
+        "data/provinces/national-spending-history.csv"
+      ]
+    },
+    {
+      "id": "organigram",
+      "name": "Organigram",
+      "path": "data/government/organigram.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": "2026-09-15",
+      "source": "https://data.buenosaires.gob.ar/dataset/autoridades-superiores-funcionarios",
+      "type": "calculation",
+      "description": "Reparticiones, relaciones institucionales y referencias a láminas oficiales.",
+      "files": [
+        "data/government/organigram.json"
+      ]
+    },
+    {
+      "id": "population-annual",
+      "name": "Population annual",
+      "path": "data/provinces/population-annual.json",
+      "period": "2005–2026",
+      "lastUpdate": "2026-09-15",
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Series anuales de población por jurisdicción; vista secundaria documentada.",
+      "files": [
+        "data/provinces/population-annual.json",
+        "data/provinces/population-annual.csv"
+      ]
+    },
+    {
+      "id": "province-paths",
+      "name": "Province paths",
+      "path": "data/provinces/province-paths.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": null,
+      "source": "https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/resources/jsons/geo-provincias-argentinas.json",
+      "type": "calculation",
+      "description": "Snapshot público existente; conserva cifras, unidades, factores y fuentes.",
+      "files": [
+        "data/provinces/province-paths.json"
+      ]
+    },
+    {
+      "id": "rem-benchmark-2026",
+      "name": "Rem benchmark 2026",
+      "path": "data/budget/rem-benchmark-2026.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": null,
+      "source": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/tablas-relevamiento-expectativas-mercado-oct-2025.xlsx",
+      "type": "calculation",
+      "description": "Snapshot público existente; conserva cifras, unidades, factores y fuentes.",
+      "files": [
+        "data/budget/rem-benchmark-2026.json"
+      ]
+    },
+    {
+      "id": "salaries",
+      "name": "Salaries",
+      "path": "data/salaries/salaries.json",
+      "period": "2025–2026",
+      "lastUpdate": null,
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Registro mensual de remuneraciones públicas, componentes y fuentes.",
+      "files": [
+        "data/salaries/salaries.json",
+        "data/salaries/salaries.csv"
+      ]
+    },
+    {
+      "id": "salary-hierarchy",
+      "name": "Salary hierarchy",
+      "path": "data/salaries/salary-hierarchy.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": "2026-09-15",
+      "source": "https://data.buenosaires.gob.ar/dataset/autoridades-superiores-funcionarios",
+      "type": "calculation",
+      "description": "Snapshot público existente; conserva cifras, unidades, factores y fuentes.",
+      "files": [
+        "data/salaries/salary-hierarchy.json"
+      ]
+    },
+    {
+      "id": "salary-history",
+      "name": "Salary history",
+      "path": "data/salaries/salary-history.json",
+      "period": "2012–2026",
+      "lastUpdate": null,
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/sueldo-funcionarios/sueldos-funcionarios-2012.xlsx",
+      "type": "calculation",
+      "description": "Serie histórica de remuneraciones con factores e identificación de mandatario.",
+      "files": [
+        "data/salaries/salary-history.json",
+        "data/salaries/salary-history.csv"
+      ]
+    },
+    {
+      "id": "semester-analysis",
+      "name": "Semester analysis",
+      "path": "data/execution/semester-analysis.json",
+      "period": "Varios períodos; ver metadata",
+      "lastUpdate": null,
+      "source": "Fuentes oficiales individualizadas en el dataset y docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Snapshot público existente; conserva cifras, unidades, factores y fuentes.",
+      "files": [
+        "data/execution/semester-analysis.json",
+        "data/execution/semester-analysis.csv"
+      ]
+    },
+    {
+      "id": "budget-history-categories",
+      "name": "Budget history categories",
+      "path": "data/history/budget-history-categories.csv",
+      "files": [
+        "data/history/budget-history-categories.csv"
+      ],
+      "period": "Ver columnas del CSV",
+      "lastUpdate": null,
+      "source": "Fuentes oficiales documentadas en docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Descarga estructurada del sitio existente."
+    },
+    {
+      "id": "ipcba",
+      "name": "Ipcba",
+      "path": "data/history/ipcba.csv",
+      "files": [
+        "data/history/ipcba.csv"
+      ],
+      "period": "Ver columnas del CSV",
+      "lastUpdate": null,
+      "source": "Fuentes oficiales documentadas en docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Índice mensual IPCBA utilizado en las transformaciones existentes."
+    },
+    {
+      "id": "salary-jorge-macri",
+      "name": "Salary jorge macri",
+      "path": "data/salaries/salary-jorge-macri.csv",
+      "files": [
+        "data/salaries/salary-jorge-macri.csv"
+      ],
+      "period": "Ver columnas del CSV",
+      "lastUpdate": null,
+      "source": "Fuentes oficiales documentadas en docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Descarga estructurada del sitio existente."
+    },
+    {
+      "id": "series",
+      "name": "Series",
+      "path": "data/budget/series.csv",
+      "files": [
+        "data/budget/series.csv"
+      ],
+      "period": "Ver columnas del CSV",
+      "lastUpdate": null,
+      "source": "Fuentes oficiales documentadas en docs/FUENTES.md",
+      "type": "calculation",
+      "description": "Descarga estructurada del sitio existente."
+    },
+    {
+      "id": "budget-current-2026",
+      "name": "Presupuesto destacado 2026",
+      "path": "data/budget/2026/current.json",
+      "files": [
+        "data/budget/2026/current.json"
+      ],
+      "period": "2026-06-30",
+      "lastUpdate": "2026-09-22",
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2026-2.xlsx",
+      "type": "official",
+      "description": "Importes nominales, población y presupuesto por habitante de la portada; derivado del snapshot existente."
+    },
+    {
+      "id": "population-caba",
+      "name": "population CABA",
+      "path": "data/provinces/population-caba.json",
+      "files": [
+        "data/provinces/population-caba.json"
+      ],
+      "period": "2022",
+      "lastUpdate": null,
+      "source": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2025/10/ir_2025_1984.pdf",
+      "type": "official",
+      "description": "Metadata existente; no fue actualizada durante la migración."
+    },
+    {
+      "id": "fx-caba",
+      "name": "fx CABA",
+      "path": "data/international/fx-caba.json",
+      "files": [
+        "data/international/fx-caba.json"
+      ],
+      "period": "2026-06-30",
+      "lastUpdate": null,
+      "source": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/com3500.xls",
+      "type": "official",
+      "description": "Metadata existente; no fue actualizada durante la migración."
+    }
+  ],
+  "resources": {
+    "data/2013-4.csv": "data/budget/2013/2013-4.csv",
+    "data/2013-4.json": "data/budget/2013/2013-4.json",
+    "data/2014-4.csv": "data/budget/2014/2014-4.csv",
+    "data/2014-4.json": "data/budget/2014/2014-4.json",
+    "data/2015-4.csv": "data/budget/2015/2015-4.csv",
+    "data/2015-4.json": "data/budget/2015/2015-4.json",
+    "data/2016-4.csv": "data/budget/2016/2016-4.csv",
+    "data/2016-4.json": "data/budget/2016/2016-4.json",
+    "data/2017-4.csv": "data/budget/2017/2017-4.csv",
+    "data/2017-4.json": "data/budget/2017/2017-4.json",
+    "data/2018-4.csv": "data/budget/2018/2018-4.csv",
+    "data/2018-4.json": "data/budget/2018/2018-4.json",
+    "data/2019-4.csv": "data/budget/2019/2019-4.csv",
+    "data/2019-4.json": "data/budget/2019/2019-4.json",
+    "data/2020-4.csv": "data/budget/2020/2020-4.csv",
+    "data/2020-4.json": "data/budget/2020/2020-4.json",
+    "data/2021-4.csv": "data/budget/2021/2021-4.csv",
+    "data/2021-4.json": "data/budget/2021/2021-4.json",
+    "data/2022-4.csv": "data/budget/2022/2022-4.csv",
+    "data/2022-4.json": "data/budget/2022/2022-4.json",
+    "data/2023-4.csv": "data/budget/2023/2023-4.csv",
+    "data/2023-4.json": "data/budget/2023/2023-4.json",
+    "data/2024-4.csv": "data/budget/2024/2024-4.csv",
+    "data/2024-4.json": "data/budget/2024/2024-4.json",
+    "data/2025-2.csv": "data/budget/2025/2025-2.csv",
+    "data/2025-2.json": "data/budget/2025/2025-2.json",
+    "data/2025-4.csv": "data/budget/2025/2025-4.csv",
+    "data/2025-4.json": "data/budget/2025/2025-4.json",
+    "data/2026-2.csv": "data/budget/2026/2026-2.csv",
+    "data/2026-2.json": "data/budget/2026/2026-2.json",
+    "data/annual-comparison.json": "data/execution/annual-comparison.json",
+    "data/approved-vs-executed.json": "data/execution/approved-vs-executed.json",
+    "data/budget-history-categories.csv": "data/history/budget-history-categories.csv",
+    "data/budget-history-long.csv": "data/history/budget-history-long.csv",
+    "data/budget-history-long.json": "data/history/budget-history-long.json",
+    "data/budget-history-usd.csv": "data/history/budget-history-usd.csv",
+    "data/budget-history-usd.json": "data/history/budget-history-usd.json",
+    "data/caif.json": "data/fiscal-results/caif.json",
+    "data/category-history.json": "data/history/category-history.json",
+    "data/comparisons-argentina.csv": "data/provinces/comparisons-argentina.csv",
+    "data/comparisons-argentina.json": "data/provinces/comparisons-argentina.json",
+    "data/comparisons-world.csv": "data/international/comparisons-world.csv",
+    "data/comparisons-world.json": "data/international/comparisons-world.json",
+    "data/conduction.json": "data/government/conduction.json",
+    "data/employment.json": "data/government/employment.json",
+    "data/execution-history.csv": "data/history/execution-history.csv",
+    "data/execution-history.json": "data/history/execution-history.json",
+    "data/government-directory.json": "data/government/government-directory.json",
+    "data/income-2025-4.json": "data/revenue/income-2025-4.json",
+    "data/income-2026-2.json": "data/revenue/income-2026-2.json",
+    "data/income-comparison.csv": "data/revenue/income-comparison.csv",
+    "data/income-comparison.json": "data/revenue/income-comparison.json",
+    "data/inflation-long.json": "data/history/inflation-long.json",
+    "data/institutional-structure.json": "data/government/institutional-structure.json",
+    "data/ipcba.csv": "data/history/ipcba.csv",
+    "data/manifest.json": "data/budget/manifest.json",
+    "data/national-spending-history.csv": "data/provinces/national-spending-history.csv",
+    "data/national-spending-history.json": "data/provinces/national-spending-history.json",
+    "data/organigram.json": "data/government/organigram.json",
+    "data/population-annual.csv": "data/provinces/population-annual.csv",
+    "data/population-annual.json": "data/provinces/population-annual.json",
+    "data/province-paths.json": "data/provinces/province-paths.json",
+    "data/rem-benchmark-2026.json": "data/budget/rem-benchmark-2026.json",
+    "data/salaries.csv": "data/salaries/salaries.csv",
+    "data/salaries.json": "data/salaries/salaries.json",
+    "data/salary-hierarchy.json": "data/salaries/salary-hierarchy.json",
+    "data/salary-history.csv": "data/salaries/salary-history.csv",
+    "data/salary-history.json": "data/salaries/salary-history.json",
+    "data/salary-jorge-macri.csv": "data/salaries/salary-jorge-macri.csv",
+    "data/semester-analysis.csv": "data/execution/semester-analysis.csv",
+    "data/semester-analysis.json": "data/execution/semester-analysis.json",
+    "data/series.csv": "data/budget/series.csv"
+  }
+}
