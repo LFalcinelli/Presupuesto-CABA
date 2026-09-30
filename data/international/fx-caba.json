@@ -1,0 +1,11 @@
+{
+  "value": 1483.0198,
+  "date": "2026-06-30",
+  "currencyPair": "ARS por USD",
+  "source": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/com3500.xls",
+  "series": "Tipo de cambio de referencia BCRA — Comunicación A3500",
+  "sourceSheet": "TCR diario y TCNPM",
+  "sourceRow": 5964,
+  "sha256": "a95dc7c4862edd31b3934087dda9fba1c0588afe996d45ded7468b3dfb281168",
+  "method": "Presupuesto vigente nominal al 30/06/2026 / ARS por USD A3500 del 30/06/2026 / habitantes Censo 2022"
+}

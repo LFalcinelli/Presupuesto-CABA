@@ -1,0 +1,14 @@
+{
+  "budget": 19877152039294,
+  "executed": 7104105890576.16,
+  "date": "2026-06-30",
+  "population": 3121707,
+  "perCapita": 6367398.362272308,
+  "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2026-2.xlsx",
+  "universe": "Administración Gubernamental: Administración Central y organismos descentralizados. Antes de contribuciones y gastos figurativos; sin fuentes ni aplicaciones financieras.",
+  "verificationStatus": "verified",
+  "method": "Importes nominales oficiales, sin ajuste de precios; presupuesto por habitante = presupuesto / Censo 2022.",
+  "year": 2026,
+  "quarter": 2,
+  "period": "2026-2"
+}

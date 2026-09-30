@@ -1,0 +1,20 @@
+{
+  "canonicalDocument": "docs/METODOLOGIA.md",
+  "terms": [
+    {
+      "id": "budget",
+      "label": "Presupuesto",
+      "meaning": "Dinero autorizado para gastar; se conserva la etapa y la fecha de corte."
+    },
+    {
+      "id": "execution",
+      "label": "Gasto ejecutado",
+      "meaning": "Gasto devengado: incluye importes pagados y pendientes de pago."
+    },
+    {
+      "id": "financial-result",
+      "label": "Resultado financiero",
+      "meaning": "Ingresos corrientes y de capital menos gastos corrientes y de capital, con intereses."
+    }
+  ]
+}
