@@ -1,0 +1,529 @@
+﻿id,name,year,population,vintage,censusBase,referenceDate,break,source
+02,Ciudad Autónoma de Buenos Aires,2005,3018102,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+02,Ciudad Autónoma de Buenos Aires,2006,3025772,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+02,Ciudad Autónoma de Buenos Aires,2007,3034161,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+02,Ciudad Autónoma de Buenos Aires,2008,3042581,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+02,Ciudad Autónoma de Buenos Aires,2009,3050728,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+02,Ciudad Autónoma de Buenos Aires,2010,3028481,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2011,3033639,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2012,3038860,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2013,3044076,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2014,3049229,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2015,3054267,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2016,3059122,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2017,3063728,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2018,3068043,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2019,3072029,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2020,3075646,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2021,3078836,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2022,3121189,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2023,3107894,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2024,3093735,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2025,3079674,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+02,Ciudad Autónoma de Buenos Aires,2026,3065991,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+06,Buenos Aires,2005,14654379,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+06,Buenos Aires,2006,14784007,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+06,Buenos Aires,2007,14917940,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+06,Buenos Aires,2008,15052177,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+06,Buenos Aires,2009,15185336,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+06,Buenos Aires,2010,15716942,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+06,Buenos Aires,2011,15909607,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+06,Buenos Aires,2012,16100618,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+06,Buenos Aires,2013,16289599,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+06,Buenos Aires,2014,16476149,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+06,Buenos Aires,2015,16659931,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+06,Buenos Aires,2016,16841135,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+06,Buenos Aires,2017,17020012,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+06,Buenos Aires,2018,17196396,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+06,Buenos Aires,2019,17370144,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+06,Buenos Aires,2020,17541141,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+06,Buenos Aires,2021,17709598,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+06,Buenos Aires,2022,17409376,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+06,Buenos Aires,2023,17418577,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+06,Buenos Aires,2024,17431446,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+06,Buenos Aires,2025,17443372,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+06,Buenos Aires,2026,17453039,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+10,Catamarca,2005,365323,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+10,Catamarca,2006,372937,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+10,Catamarca,2007,380612,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+10,Catamarca,2008,388416,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+10,Catamarca,2009,396303,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+10,Catamarca,2010,377676,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+10,Catamarca,2011,381548,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+10,Catamarca,2012,385408,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+10,Catamarca,2013,389256,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+10,Catamarca,2014,393088,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+10,Catamarca,2015,396895,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+10,Catamarca,2016,400678,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+10,Catamarca,2017,404433,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+10,Catamarca,2018,408152,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+10,Catamarca,2019,411824,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+10,Catamarca,2020,415438,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+10,Catamarca,2021,418991,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+10,Catamarca,2022,434741,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+10,Catamarca,2023,436077,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+10,Catamarca,2024,437508,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+10,Catamarca,2025,439024,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+10,Catamarca,2026,440503,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+22,Chaco,2005,1024934,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+22,Chaco,2006,1033865,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+22,Chaco,2007,1042881,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+22,Chaco,2008,1052185,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+22,Chaco,2009,1061638,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+22,Chaco,2010,1080017,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+22,Chaco,2011,1092625,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+22,Chaco,2012,1105280,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+22,Chaco,2013,1117953,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+22,Chaco,2014,1130608,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+22,Chaco,2015,1143201,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+22,Chaco,2016,1155723,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+22,Chaco,2017,1168165,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+22,Chaco,2018,1180477,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+22,Chaco,2019,1192616,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+22,Chaco,2020,1204541,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+22,Chaco,2021,1216247,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+22,Chaco,2022,1190747,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+22,Chaco,2023,1194631,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+22,Chaco,2024,1200849,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+22,Chaco,2025,1207608,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+22,Chaco,2026,1214280,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+26,Chubut,2005,445458,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+26,Chubut,2006,450549,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+26,Chubut,2007,455607,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+26,Chubut,2008,460684,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+26,Chubut,2009,465750,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+26,Chubut,2010,513433,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+26,Chubut,2011,524201,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+26,Chubut,2012,534945,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+26,Chubut,2013,545656,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+26,Chubut,2014,556319,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+26,Chubut,2015,566922,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+26,Chubut,2016,577466,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+26,Chubut,2017,587956,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+26,Chubut,2018,598380,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+26,Chubut,2019,608729,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+26,Chubut,2020,618994,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+26,Chubut,2021,629181,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+26,Chubut,2022,597366,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+26,Chubut,2023,598946,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+26,Chubut,2024,600674,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+26,Chubut,2025,602348,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+26,Chubut,2026,603930,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+14,Córdoba,2005,3254279,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+14,Córdoba,2006,3282680,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+14,Córdoba,2007,3311280,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+14,Córdoba,2008,3340041,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+14,Córdoba,2009,3368609,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+14,Córdoba,2010,3373025,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+14,Córdoba,2011,3411773,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+14,Córdoba,2012,3450673,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+14,Córdoba,2013,3489669,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+14,Córdoba,2014,3528687,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+14,Córdoba,2015,3567654,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+14,Córdoba,2016,3606540,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+14,Córdoba,2017,3645321,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+14,Córdoba,2018,3683937,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+14,Córdoba,2019,3722332,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+14,Córdoba,2020,3760450,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+14,Córdoba,2021,3798261,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+14,Córdoba,2022,3923244,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+14,Córdoba,2023,3934514,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+14,Córdoba,2024,3946289,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+14,Córdoba,2025,3957565,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+14,Córdoba,2026,3968336,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+18,Corrientes,2005,980813,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+18,Corrientes,2006,991597,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+18,Corrientes,2007,1002416,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+18,Corrientes,2008,1013443,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+18,Corrientes,2009,1024575,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+18,Corrientes,2010,1017731,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+18,Corrientes,2011,1028248,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+18,Corrientes,2012,1038786,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+18,Corrientes,2013,1049325,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+18,Corrientes,2014,1059836,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+18,Corrientes,2015,1070283,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+18,Corrientes,2016,1080655,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+18,Corrientes,2017,1090938,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+18,Corrientes,2018,1101084,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+18,Corrientes,2019,1111052,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+18,Corrientes,2020,1120801,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+18,Corrientes,2021,1130320,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+18,Corrientes,2022,1189015,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+18,Corrientes,2023,1193970,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+18,Corrientes,2024,1199120,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+18,Corrientes,2025,1203905,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+18,Corrientes,2026,1208334,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+30,Entre Ríos,2005,1217212,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+30,Entre Ríos,2006,1229373,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+30,Entre Ríos,2007,1242547,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+30,Entre Ríos,2008,1255787,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+30,Entre Ríos,2009,1268979,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+30,Entre Ríos,2010,1255574,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+30,Entre Ríos,2011,1268744,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+30,Entre Ríos,2012,1281931,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+30,Entre Ríos,2013,1295121,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+30,Entre Ríos,2014,1308290,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+30,Entre Ríos,2015,1321415,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+30,Entre Ríos,2016,1334489,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+30,Entre Ríos,2017,1347508,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+30,Entre Ríos,2018,1360443,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+30,Entre Ríos,2019,1373270,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+30,Entre Ríos,2020,1385961,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+30,Entre Ríos,2021,1398510,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+30,Entre Ríos,2022,1449787,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+30,Entre Ríos,2023,1452721,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+30,Entre Ríos,2024,1456015,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+30,Entre Ríos,2025,1459182,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+30,Entre Ríos,2026,1462153,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+34,Formosa,2005,517506,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+34,Formosa,2006,524805,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+34,Formosa,2007,532238,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+34,Formosa,2008,539883,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+34,Formosa,2009,547726,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+34,Formosa,2010,551626,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+34,Formosa,2011,557223,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+34,Formosa,2012,562794,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+34,Formosa,2013,568331,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+34,Formosa,2014,573823,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+34,Formosa,2015,579250,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+34,Formosa,2016,584614,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+34,Formosa,2017,589916,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+34,Formosa,2018,595129,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+34,Formosa,2019,600229,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+34,Formosa,2020,605193,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+34,Formosa,2021,610019,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+34,Formosa,2022,620502,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+34,Formosa,2023,622428,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+34,Formosa,2024,624461,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+34,Formosa,2025,626649,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+34,Formosa,2026,628876,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+38,Jujuy,2005,652577,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+38,Jujuy,2006,661667,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+38,Jujuy,2007,670766,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+38,Jujuy,2008,679975,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+38,Jujuy,2009,689231,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+38,Jujuy,2010,683513,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+38,Jujuy,2011,692379,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+38,Jujuy,2012,701252,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+38,Jujuy,2013,710121,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+38,Jujuy,2014,718971,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+38,Jujuy,2015,727780,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+38,Jujuy,2016,736542,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+38,Jujuy,2017,745252,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+38,Jujuy,2018,753891,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+38,Jujuy,2019,762440,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+38,Jujuy,2020,770881,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+38,Jujuy,2021,779212,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+38,Jujuy,2022,795372,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+38,Jujuy,2023,796866,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+38,Jujuy,2024,798673,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+38,Jujuy,2025,800744,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+38,Jujuy,2026,802922,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+42,La Pampa,2005,321653,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+42,La Pampa,2006,325626,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+42,La Pampa,2007,329576,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+42,La Pampa,2008,333550,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+42,La Pampa,2009,337521,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+42,La Pampa,2010,327028,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+42,La Pampa,2011,330268,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+42,La Pampa,2012,333496,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+42,La Pampa,2013,336706,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+42,La Pampa,2014,339895,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+42,La Pampa,2015,343056,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+42,La Pampa,2016,346191,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+42,La Pampa,2017,349299,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+42,La Pampa,2018,352378,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+42,La Pampa,2019,355422,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+42,La Pampa,2020,358428,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+42,La Pampa,2021,361394,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+42,La Pampa,2022,373976,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+42,La Pampa,2023,374945,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+42,La Pampa,2024,375873,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+42,La Pampa,2025,376794,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+42,La Pampa,2026,377663,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+46,La Rioja,2005,320602,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+46,La Rioja,2006,327384,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+46,La Rioja,2007,334235,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+46,La Rioja,2008,341207,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+46,La Rioja,2009,348251,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+46,La Rioja,2010,342582,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+46,La Rioja,2011,347494,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+46,La Rioja,2012,352476,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+46,La Rioja,2013,357516,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+46,La Rioja,2014,362605,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+46,La Rioja,2015,367728,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+46,La Rioja,2016,372879,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+46,La Rioja,2017,378047,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+46,La Rioja,2018,383220,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+46,La Rioja,2019,388386,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+46,La Rioja,2020,393531,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+46,La Rioja,2021,398648,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+46,La Rioja,2022,398518,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+46,La Rioja,2023,400097,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+46,La Rioja,2024,401843,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+46,La Rioja,2025,403577,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+46,La Rioja,2026,405241,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+50,Mendoza,2005,1675309,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+50,Mendoza,2006,1693261,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+50,Mendoza,2007,1711416,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+50,Mendoza,2008,1729660,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+50,Mendoza,2009,1747801,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+50,Mendoza,2010,1774737,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+50,Mendoza,2011,1797235,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+50,Mendoza,2012,1819608,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+50,Mendoza,2013,1841813,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+50,Mendoza,2014,1863809,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+50,Mendoza,2015,1885551,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+50,Mendoza,2016,1907045,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+50,Mendoza,2017,1928304,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+50,Mendoza,2018,1949293,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+50,Mendoza,2019,1969982,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+50,Mendoza,2020,1990338,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+50,Mendoza,2021,2010363,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+50,Mendoza,2022,2032783,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+50,Mendoza,2023,2037228,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+50,Mendoza,2024,2042241,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+50,Mendoza,2025,2047181,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+50,Mendoza,2026,2051912,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+54,Misiones,2005,1029645,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+54,Misiones,2006,1045534,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+54,Misiones,2007,1061590,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+54,Misiones,2008,1077987,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+54,Misiones,2009,1094636,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+54,Misiones,2010,1113279,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+54,Misiones,2011,1128798,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+54,Misiones,2012,1144189,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+54,Misiones,2013,1159445,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+54,Misiones,2014,1174542,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+54,Misiones,2015,1189446,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+54,Misiones,2016,1204182,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+54,Misiones,2017,1218771,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+54,Misiones,2018,1233177,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+54,Misiones,2019,1247362,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+54,Misiones,2020,1261294,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+54,Misiones,2021,1274992,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+54,Misiones,2022,1313583,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+54,Misiones,2023,1322993,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+54,Misiones,2024,1333633,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+54,Misiones,2025,1344368,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+54,Misiones,2026,1355029,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+58,Neuquén,2005,521439,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+58,Neuquén,2006,530219,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+58,Neuquén,2007,538952,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+58,Neuquén,2008,547742,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+58,Neuquén,2009,556528,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+58,Neuquén,2010,571910,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+58,Neuquén,2011,581720,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+58,Neuquén,2012,591422,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+58,Neuquén,2013,601003,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+58,Neuquén,2014,610449,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+58,Neuquén,2015,619745,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+58,Neuquén,2016,628897,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+58,Neuquén,2017,637913,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+58,Neuquén,2018,646784,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+58,Neuquén,2019,655501,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+58,Neuquén,2020,664057,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+58,Neuquén,2021,672461,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+58,Neuquén,2022,689222,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+58,Neuquén,2023,693935,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+58,Neuquén,2024,698410,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+58,Neuquén,2025,702816,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+58,Neuquén,2026,707092,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+62,Río Negro,2005,587430,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+62,Río Negro,2006,590871,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+62,Río Negro,2007,594189,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+62,Río Negro,2008,597476,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+62,Río Negro,2009,600688,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+62,Río Negro,2010,648277,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+62,Río Negro,2011,658486,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+62,Río Negro,2012,668663,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+62,Río Negro,2013,678797,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+62,Río Negro,2014,688873,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+62,Río Negro,2015,698874,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+62,Río Negro,2016,708799,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+62,Río Negro,2017,718646,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+62,Río Negro,2018,728403,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+62,Río Negro,2019,738060,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+62,Río Negro,2020,747610,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+62,Río Negro,2021,757052,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+62,Río Negro,2022,776389,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+62,Río Negro,2023,780516,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+62,Río Negro,2024,784591,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+62,Río Negro,2025,788658,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+62,Río Negro,2026,792587,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+66,Salta,2005,1161484,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+66,Salta,2006,1181886,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+66,Salta,2007,1202753,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+66,Salta,2008,1224022,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+66,Salta,2009,1245573,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+66,Salta,2010,1239111,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+66,Salta,2011,1258111,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+66,Salta,2012,1277062,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+66,Salta,2013,1295944,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+66,Salta,2014,1314726,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+66,Salta,2015,1333365,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+66,Salta,2016,1351878,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+66,Salta,2017,1370283,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+66,Salta,2018,1388532,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+66,Salta,2019,1406584,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+66,Salta,2020,1424397,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+66,Salta,2021,1441988,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+66,Salta,2022,1467237,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+66,Salta,2023,1473871,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+66,Salta,2024,1480327,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+66,Salta,2025,1486517,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+66,Salta,2026,1492267,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+70,San Juan,2005,666446,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+70,San Juan,2006,676189,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+70,San Juan,2007,685883,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+70,San Juan,2008,695640,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+70,San Juan,2009,705378,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+70,San Juan,2010,696076,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+70,San Juan,2011,704652,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+70,San Juan,2012,713240,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+70,San Juan,2013,721830,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+70,San Juan,2014,730408,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+70,San Juan,2015,738959,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+70,San Juan,2016,747488,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+70,San Juan,2017,755994,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+70,San Juan,2018,764464,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+70,San Juan,2019,772876,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+70,San Juan,2020,781217,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+70,San Juan,2021,789489,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+70,San Juan,2022,837233,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+70,San Juan,2023,841155,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+70,San Juan,2024,845201,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+70,San Juan,2025,849117,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+70,San Juan,2026,852747,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+74,San Luis,2005,409280,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+74,San Luis,2006,418625,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+74,San Luis,2007,428025,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+74,San Luis,2008,437544,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+74,San Luis,2009,447138,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+74,San Luis,2010,443944,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+74,San Luis,2011,450434,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+74,San Luis,2012,456924,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+74,San Luis,2013,463411,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+74,San Luis,2014,469889,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+74,San Luis,2015,476351,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+74,San Luis,2016,482796,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+74,San Luis,2017,489225,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+74,San Luis,2018,495629,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+74,San Luis,2019,502000,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+74,San Luis,2020,508328,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+74,San Luis,2021,514610,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+74,San Luis,2022,527530,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+74,San Luis,2023,530792,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+74,San Luis,2024,533465,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+74,San Luis,2025,536173,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+74,San Luis,2026,538852,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+78,Santa Cruz,2005,213845,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+78,Santa Cruz,2006,217846,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+78,Santa Cruz,2007,221871,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+78,Santa Cruz,2008,225920,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+78,Santa Cruz,2009,230005,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+78,Santa Cruz,2010,275452,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+78,Santa Cruz,2011,284414,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+78,Santa Cruz,2012,293407,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+78,Santa Cruz,2013,302420,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+78,Santa Cruz,2014,311444,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+78,Santa Cruz,2015,320469,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+78,Santa Cruz,2016,329499,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+78,Santa Cruz,2017,338542,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+78,Santa Cruz,2018,347593,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+78,Santa Cruz,2019,356647,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+78,Santa Cruz,2020,365698,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+78,Santa Cruz,2021,374756,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+78,Santa Cruz,2022,334397,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+78,Santa Cruz,2023,334541,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+78,Santa Cruz,2024,334752,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+78,Santa Cruz,2025,334953,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+78,Santa Cruz,2026,335096,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+82,Santa Fe,2005,3177557,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+82,Santa Fe,2006,3199248,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+82,Santa Fe,2007,3220818,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+82,Santa Fe,2008,3242551,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+82,Santa Fe,2009,3264095,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+82,Santa Fe,2010,3257907,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+82,Santa Fe,2011,3285408,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+82,Santa Fe,2012,3313212,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+82,Santa Fe,2013,3341228,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+82,Santa Fe,2014,3369365,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+82,Santa Fe,2015,3397532,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+82,Santa Fe,2016,3425656,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+82,Santa Fe,2017,3453674,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+82,Santa Fe,2018,3481514,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+82,Santa Fe,2019,3509113,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+82,Santa Fe,2020,3536418,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+82,Santa Fe,2021,3563390,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+82,Santa Fe,2022,3670163,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+82,Santa Fe,2023,3674361,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+82,Santa Fe,2024,3679597,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+82,Santa Fe,2025,3684529,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+82,Santa Fe,2026,3688683,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+86,Santiago del Estero,2005,839767,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+86,Santiago del Estero,2006,848196,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+86,Santiago del Estero,2007,856739,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+86,Santiago del Estero,2008,865546,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+86,Santiago del Estero,2009,874519,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+86,Santiago del Estero,2010,879246,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+86,Santiago del Estero,2011,888809,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+86,Santiago del Estero,2012,898484,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+86,Santiago del Estero,2013,908268,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+86,Santiago del Estero,2014,918147,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+86,Santiago del Estero,2015,928097,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+86,Santiago del Estero,2016,938109,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+86,Santiago del Estero,2017,948172,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+86,Santiago del Estero,2018,958251,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+86,Santiago del Estero,2019,968309,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+86,Santiago del Estero,2020,978313,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+86,Santiago del Estero,2021,988245,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+86,Santiago del Estero,2022,1045276,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+86,Santiago del Estero,2023,1049610,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+86,Santiago del Estero,2024,1053409,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+86,Santiago del Estero,2025,1056774,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+86,Santiago del Estero,2026,1059927,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2005,115286,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2006,118899,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2007,122531,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2008,126212,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2009,129929,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2010,131661,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2011,135742,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2012,139852,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2013,143987,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2014,148143,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2015,152317,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2016,156509,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2017,160720,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2018,164944,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2019,169183,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2020,173432,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2021,177697,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2022,179645,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2023,180555,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2024,181263,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2025,182003,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+94,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",2026,182744,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+90,Tucumán,2005,1421824,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+90,Tucumán,2006,1439575,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+90,Tucumán,2007,1457357,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+90,Tucumán,2008,1475384,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+90,Tucumán,2009,1493488,INDEC SAD 31 (2005),2001,Base ajustada 30/06/2001,False,https://biblioteca.indec.gob.ar/bases/minde/4si20_31.pdf
+90,Tucumán,2010,1489225,INDEC SAD 36 (2014),2010,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+90,Tucumán,2011,1509932,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+90,Tucumán,2012,1530689,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+90,Tucumán,2013,1551460,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+90,Tucumán,2014,1572205,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+90,Tucumán,2015,1592878,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+90,Tucumán,2016,1613476,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+90,Tucumán,2017,1633992,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+90,Tucumán,2018,1654388,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+90,Tucumán,2019,1674622,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+90,Tucumán,2020,1694656,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+90,Tucumán,2021,1714487,INDEC SAD 36 (2014),2010,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_prov_2010_2040.pdf
+90,Tucumán,2022,1758288,INDEC SAD 40 (2025),2022,1 de julio,True,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+90,Tucumán,2023,1763239,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+90,Tucumán,2024,1768368,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+90,Tucumán,2025,1773567,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf
+90,Tucumán,2026,1778484,INDEC SAD 40 (2025),2022,1 de julio,False,https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf

@@ -1,0 +1,50 @@
+/* Third iteration: stronger figures, quiet supporting methodology. */
+.panorama { background:#371953; color:white; padding:2rem; border-radius:10px; }
+.panorama .eyebrow,.panorama h2,.panorama p,.panorama strong,.panorama .text-link,.panorama .amount-help,.panorama .provenance summary { color:white; }
+.panorama-grid { border-color:#735687; }
+.panorama-grid article { border-color:#735687; min-width:0; }
+.panorama-grid article>strong { font-weight:800; font-size:clamp(1.12rem,2.2vw,2rem); letter-spacing:-.025em; white-space:nowrap; }
+.panorama-grid article>span { color:#eee6f4; }
+.panorama .amount-help { font-size:.95rem; }
+.panorama .provenance p { color:#302439; }
+.panorama .snapshot-method { color:#eee6f4; border-top:1px solid #735687; margin-top:1.5rem; padding-top:1rem; font-size:.875rem; }
+.panorama .snapshot-method a { color:white; }
+.panorama-grid article>p {color:#eee6f4;}
+.panorama .amount-help summary {color:white;}
+.budget-summary { background:#371953; color:white; padding:1.7rem; border-radius:10px; }
+.budget-summary strong,.budget-summary b,.budget-summary p { color:white; }
+.budget-summary strong { font-size:clamp(1.15rem,3vw,2.5rem); white-space:nowrap; }
+@media(max-width:650px){ .panorama { padding:1.15rem; } .panorama-grid article>strong {font-size:clamp(1.05rem,5.7vw,1.8rem);} .budget-summary {padding:1rem;} }
+.hierarchy-summary {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;margin:1.5rem 0 2rem;}
+.hierarchy-summary>div {display:flex;flex-direction:column;border-left:3px solid #67339b;padding-left:1rem;gap:.35rem;}
+.hierarchy-summary strong {font-size:2.5rem;font-weight:800;}
+.hierarchy-summary small {color:#625b6c;font-size:.875rem;}
+.hierarchy-levels {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;}
+.hierarchy-levels article {display:flex;gap:1.25rem;align-items:center;padding:1.2rem;border:1px solid #e6dfed;border-radius:8px;min-width:0;}
+.hierarchy-levels article h3 {margin:.15rem 0 .5rem;}
+.hierarchy-count {font-size:2.5rem;font-weight:800;color:#67339b;min-width:2.8ch;}
+.hierarchy-levels span {font-size:.875rem;color:#625b6c;}
+.salary-range {display:block;margin-top:.5rem;font-size:.9375rem;}
+.org-current {border-left:4px solid #67339b;background:#faf8fc;padding:1rem 1.5rem;margin:1rem 0;}
+.org-children {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;}
+.org-children .structure-item {width:100%;height:100%;}
+.org-children .structure-item span {min-width:0;overflow-wrap:anywhere;}
+.search-result strong,.search-result small {display:block;}
+.search-result small {margin-top:.4rem;line-height:1.4;}
+#search-results h3 {font-size:.875rem;text-transform:uppercase;padding:.75rem 1rem;margin:0;background:#f5f1f8;}
+.treemap-tile .tile-amount {font-size:.8rem;display:block;margin-top:.3rem;line-height:1.2;color:white;font-weight:600;}
+.treemap-tile.mobile-compact .tile-amount,.treemap-tile.tiny-tile .tile-amount {display:none;}
+.treemap-key details {padding:.35rem 0;border:0;margin:0;}
+.treemap-key summary {font-size:.875rem;line-height:1.4;min-height:36px;}
+.treemap-key li {display:list-item;}
+.treemap-key p {font-variant-numeric:tabular-nums;}
+.treemap-readout:empty {display:none;}
+.competency-columns {display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.competency-columns p {font-size:.9375rem;line-height:1.65;}
+.competency-columns h4 {margin-bottom:.5rem;}
+.justice-note {padding:.85rem 1rem;border-left:3px solid #a598b1;background:#faf8fc;font-size:.875rem;line-height:1.6;}
+@media(min-width:1000px){.treemap-tile.mobile-compact:not(.tiny-tile) .tile-amount{display:block;}.treemap-tile .tile-name {font-size:.875rem;}}
+@media(max-width:800px){.hierarchy-levels,.org-children{grid-template-columns:1fr;}.salary-range {overflow-wrap:anywhere;}}
+@media(max-width:650px){.hierarchy-summary,.competency-columns{grid-template-columns:1fr;}.hierarchy-summary{gap:1rem;}.hierarchy-summary strong{font-size:2rem;}.hierarchy-levels article{gap:.8rem;padding:.85rem;}.hierarchy-count{font-size:2rem;}.hierarchy-levels h3{font-size:1rem;}.salary-range{font-size:.875rem;}.org-current{padding:1rem;}.category-history .tools label{width:100%;}.category-history select{width:100%;max-width:100%;}.treemap-key{grid-template-columns:1fr!important;}}
+@media(max-width:600px){.treemap-tile.tiny-tile strong{display:none;}.treemap-tile.mobile-compact strong{white-space:nowrap;font-size:.74rem;}.treemap-tile .tile-number{font-size:.75rem;}.treemap-tile .tile-name{font-size:.75rem;}}
+@media(max-width:400px){.rect-treemap{aspect-ratio:1;}}
