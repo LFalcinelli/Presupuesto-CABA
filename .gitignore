@@ -1,0 +1,12 @@
+node_modules/
+.research/
+research/
+archive/
+data/raw/
+.local/
+.env
+.env.*
+*.log
+*.tmp
+*.tar.gz
+__pycache__/
