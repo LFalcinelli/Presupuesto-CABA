@@ -2,6 +2,14 @@
 
 El índice canónico es `data/index.json`. Cada entrada incluye id, nombre, path, período, fecha de actualización de la fuente (null si no consta), fuente, tipo y descripción. `files` registra descargas asociadas; `resources` conserva aliases para el motor existente.
 
+## Incorporaciones 2027
+
+- `project-2027`: `data/budget/2027/project.json` y `project.csv`. `schemaVersion`, `year`, `status`, `source`, `universe`, `population`, `summary`, `breakdowns`, `creditAuthorizations`, `macroAssumptions`, `limitations`, `reconciliation`. Cada métrica/apertura conserva `value`, `unit`, `status`, `type`, `source`, `pdfPage`, `reference` y fórmula cuando corresponde. Finalidades y funciones relacionadas, 22 jurisdicciones, ocho objetos, clasificación económica y composición de recursos.
+- `project-comparison-2026`: `data/budget/2027/comparison-2026.json`. `projectYear`, `projectStatus`, `referenceYear`, `referenceDate`, `referenceStatus`, `source2026`, `source2027`, `universe`, `unit`, `inflationAdjusted: false`, `totals`, `groups` por finalidad/objeto, `method`. Guarda importes, diferencias nominales y fuentes de ambos términos; no mezcla presupuesto con ejecución.
+- `salary-latest-reference`: `data/salaries/latest-reference.json`. `latest`, `president`, `ratio`, `method`, fechas de verificación y hashes oficiales. Sólo importes necesarios, sin CUIL. Históricos de salarios preservados.
+- Importación reproducible: `scripts/import-project-2027.py /ruta/documento.pdf`; dependencia de mantenimiento opcional `pdfplumber`. El build consume los JSON versionados y no necesita Python ni el PDF.
+- `featuredBudgetYear`, `featuredBudgetStatus` y `featuredBudgetFile` seleccionan el proyecto destacado. `currentBudgetYear`, `currentBudgetFile` y `currentExecutionPeriod` siguen describiendo el presupuesto/ejecución 2026.
+
 | Dataset | Archivo | Estructura principal |
 | --- | --- | --- |
 | `2013-4` | `data/budget/2013/2013-4.json` | schemaVersion, year, quarter, sourceFile, sourceUrl, sourceSheet, sourceRows, sha256, allTotals, rows, factors, fiscalTotals |

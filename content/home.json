@@ -3,12 +3,12 @@
     "eyebrow": "EL PRESUPUESTO, A LA VISTA",
     "title": "Gasto Público de CABA",
     "description": "La Ciudad recauda, decide y gasta. Acá podés entender de dónde vienen sus recursos, en qué se usan y cómo cambiaron con el tiempo.",
-    "action": "Explorar los datos",
+    "action": "Explorar Proyecto 2027",
     "aside": "Datos abiertos.<br>Preguntas concretas.<br><b>Una Ciudad más transparente.</b>",
     "source": "Elaborado por La Libertad Avanza CABA<br>sobre fuentes oficiales."
   },
   "panorama": {
-    "eyebrow": "PANORAMA DE LA CIUDAD · {{year}}",
+    "eyebrow": "PANORAMA DE LA CIUDAD · PROYECTO 2027",
     "title": "Tres cifras para ubicarse.",
     "budgetLabel": "Presupuesto {{year}} — vigente al {{cutDate}}",
     "budgetDescription": "Dinero autorizado para gastar durante 2026, con las modificaciones registradas hasta junio.",
@@ -16,16 +16,20 @@
     "perCapitaLabel": "Por porteño, por año",
     "perCapitaDescription": "Presupuesto anual por habitante censado en 2022.",
     "perCapitaNote": "≈ $6,37 millones por habitante. Presupuesto fiscal nominal al 30/06/2026 dividido por {{population}} habitantes del Censo 2022, resultado definitivo. Es una autorización para gastar; no el gasto ya realizado ni la recaudación efectiva. No se ajusta por inflación esta fotografía.",
-    "executedNote": "≈ $7,10 billones. Importe nominal oficial enero–junio 2026. Incluye importes pagados y pendientes de pago. Excluye gastos figurativos y aplicaciones financieras."
+    "executedNote": "≈ $7,10 billones. Importe nominal oficial enero–junio 2026. Incluye importes pagados y pendientes de pago. Excluye gastos figurativos y aplicaciones financieras.",
+    "projectLabel": "Proyecto 2027 — gasto solicitado",
+    "projectDescription": "Dinero que el Poder Ejecutivo solicita autorización para gastar durante 2027.",
+    "projectPerCapitaLabel": "Proyecto 2027 — por porteño, por año",
+    "projectPerCapitaDescription": "Gasto anual solicitado por habitante censado en 2022."
   },
   "questions": {
-    "eyebrow": "EMPEZÁ POR UNA PREGUNTA",
+    "eyebrow": "",
     "title": "Seguí el recorrido de los recursos.",
     "items": [
       [
         "01",
         "¿En qué gasta la Ciudad?",
-        "De la salud y la educación a cada programa.",
+        "Las áreas y funciones que recibirían los recursos en 2027.",
         "home",
         "bars"
       ],
@@ -39,14 +43,14 @@
       [
         "03",
         "¿Cuánto cuesta el Estado?",
-        "El gasto en personal, los organismos y sus funcionarios.",
+        "Explorá cuánto solicita el proyecto para personal.",
         "structure",
         "nodes"
       ],
       [
         "04",
         "¿Cómo cambió con el tiempo?",
-        "Recorré el presupuesto descontando la inflación.",
+        "Compará el proyecto 2027 con el presupuesto actualizado 2026.",
         "history",
         "line"
       ]
@@ -55,10 +59,10 @@
   "comparison": {
     "eyebrow": "MIRAR EN PERSPECTIVA",
     "title": "¿Cómo se compara CABA?",
-    "description": "Explorá indicadores comparables con otras jurisdicciones, con cada fuente y período a la vista."
+    "description": "Explorá indicadores de CABA frente al resto del país y compará la Ciudad con otras ciudades del mundo."
   },
   "guide": {
     "title": "Los números necesitan contexto.",
-    "description": "El presupuesto muestra cuánto se puede gastar. Los gastos realizados muestran cuánto se usó, tanto si ya se pagó como si está pendiente. Conocé cómo se leen estas cifras."
+    "description": "El presupuesto muestra cuánto se puede gastar. Los gastos ejecutados muestran cuánto se usó, tanto si ya se pagó como si está pendiente."
   }
 }

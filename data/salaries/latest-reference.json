@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "latest": {
+    "name": "Jorge Macri",
+    "value": 12474468.49,
+    "year": 2026,
+    "month": 7,
+    "unit": "ARS nominales · bruto mensual sin aguinaldo",
+    "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/sueldo-funcionarios/sueldo_funcionarios_2026.csv",
+    "verifiedAt": "2026-09-30",
+    "fileSha256": "06a2a1845e4863c248b972ea59a479d6644295993c8d936b3401a9a8a3979bb4"
+  },
+  "president": {
+    "value": 4066018,
+    "currency": "ARS",
+    "concept": "Bruto mensual ordinario",
+    "validSince": "2023-12",
+    "source": "https://www3.hcdn.gob.ar/dependencias/prensa/archivos/informe_142.pdf#page=727",
+    "reference": "Informe 142, pregunta 938, páginas 726–727. Tabla de retribuciones autoridades superiores PEN: total bruto del Presidente.",
+    "freezeSource": "https://www.argentina.gob.ar/normativa/nacional/decreto-931-2025-422014/texto",
+    "freezeDate": "2026-01-02",
+    "freezeReference": "Decreto 931/2025, artículos 2 y 3: excluye Presidente y Vicepresidente de las recomposiciones",
+    "retrievedAt": "2026-09-30",
+    "verificationStatus": "verified",
+    "sac": null,
+    "method": "Comparación nominal de remuneraciones ordinarias. La equivalencia del SAC se identifica por separado; no infiere el SAC presidencial.",
+    "roundingNote": "Se conserva el total publicado de $4.066.018. Los dos componentes redondeados de la tabla suman un peso más.",
+    "referencePdfSha256": "39a0fb7b340d70cf9388417d1f88b7232f5739e75cf646fbaebaa85c08a97a49"
+  },
+  "ratio": 3.0679816198551015,
+  "method": "Asignación mensual ordinaria publicada para Jorge Macri / remuneración bruta ordinaria del Presidente. Sin SAC en ambos términos. La referencia presidencial conserva el total oficial publicado; Decreto 931/2025 excluye al Presidente de las recomposiciones."
+}

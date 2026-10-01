@@ -26,7 +26,7 @@
   "currentBudgetPeriod": "2026-2",
   "currentExecutionPeriod": "2026-2",
   "currentBudgetFile": "data/budget/2026/current.json",
-  "lastUpdate": "2026-09-09",
+  "lastUpdate": "2026-09-30",
   "availablePeriods": [
     "2025-4",
     "2026-2",
@@ -54,5 +54,16 @@
     "salaries": true
   },
   "publicUrl": "https://lfalcinelli.github.io/Presupuesto-CABA/",
-  "legacyPublication": "https://lla-caba-gasto-publico.lucianofalcinelli.chatgpt.site/"
+  "legacyPublication": "https://lla-caba-gasto-publico.lucianofalcinelli.chatgpt.site/",
+  "featuredBudgetYear": 2027,
+  "featuredBudgetStatus": "project",
+  "featuredBudgetFile": "data/budget/2027/project.json",
+  "featuredBudgetLabel": "Proyecto 2027",
+  "projectComparisonFile": "data/budget/2027/comparison-2026.json",
+  "projectViews": [
+    "summary",
+    "expenses",
+    "revenue",
+    "compare"
+  ]
 }

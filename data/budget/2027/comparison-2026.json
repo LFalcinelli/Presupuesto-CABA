@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "projectYear": 2027,
+  "projectStatus": "project",
+  "referenceYear": 2026,
+  "referenceDate": "2026-06-30",
+  "referenceStatus": "Presupuesto actualizado al 30/06/2026",
+  "unit": "ARS nominales de cada año",
+  "inflationAdjusted": false,
+  "universe": "Administración Gubernamental: Administración Central, organismos descentralizados, entes autárquicos y órganos de control. Gastos corrientes y de capital; sin figurativas ni aplicaciones financieras.",
+  "method": "Dos autorizaciones anuales del mismo universo fiscal. Proyecto 2027 frente a presupuesto 2026 actualizado al 30/06. La diferencia nominal no mide crecimiento real ni compara ejecuciones.",
+  "source2027": {
+    "document": "3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf",
+    "documentId": "PDLEY-2026-36-GCABA-AJG",
+    "messageId": "MJE-2026-42-GCABA-AJG",
+    "fileSha256": "feb7581d738222e3b2a14dab1558f820c027efb7131087c2a69edff8f722513b",
+    "date": "2026-09-30",
+    "url": null,
+    "origin": "Documento oficial aportado por el usuario",
+    "annexId": "IF-2026-43938160-GCABA-SSHA"
+  },
+  "source2026": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2026-2.xlsx",
+  "totals": {
+    "reference": 19877152039294,
+    "project": 24094340599263
+  },
+  "groups": {
+    "purposes": [
+      {
+        "name": "Administración Gubernamental",
+        "reference": 2685306931312,
+        "project": 3383540187838,
+        "difference": 698233256526,
+        "nominalVariationPct": 26.00199062476831,
+        "pdfPage": 174,
+        "reference2027": "Planilla 5 · artículo 1"
+      },
+      {
+        "name": "Servicios de Seguridad",
+        "reference": 2919515865856,
+        "project": 3594441105967,
+        "difference": 674925240111,
+        "nominalVariationPct": 23.117710987780924,
+        "pdfPage": 174,
+        "reference2027": "Planilla 5 · artículo 1"
+      },
+      {
+        "name": "Servicios Sociales",
+        "reference": 12227216477483,
+        "project": 14602002260986,
+        "difference": 2374785783503,
+        "nominalVariationPct": 19.422129213760808,
+        "pdfPage": 174,
+        "reference2027": "Planilla 5 · artículo 1"
+      },
+      {
+        "name": "Servicios Económicos",
+        "reference": 1750619148462,
+        "project": 1906164261173,
+        "difference": 155545112711,
+        "nominalVariationPct": 8.885148597149396,
+        "pdfPage": 174,
+        "reference2027": "Planilla 5 · artículo 1"
+      },
+      {
+        "name": "Deuda Pública - Intereses y Gastos",
+        "reference": 294493616181,
+        "project": 608192783299,
+        "difference": 313699167118,
+        "nominalVariationPct": 106.5215508526324,
+        "pdfPage": 174,
+        "reference2027": "Planilla 5 · artículo 1"
+      }
+    ],
+    "objects": [
+      {
+        "name": "Personal",
+        "reference": 8105637608029,
+        "project": 9950480728332,
+        "difference": 1844843120303,
+        "nominalVariationPct": 22.760000008828428,
+        "pdfPage": 173,
+        "reference2027": "Planilla 4 · artículo 1"
+      },
+      {
+        "name": "Bienes de consumo",
+        "reference": 771148704545,
+        "project": 958307355500,
+        "difference": 187158650955,
+        "nominalVariationPct": 24.270111568874263,
+        "pdfPage": 173,
+        "reference2027": "Planilla 4 · artículo 1"
+      },
+      {
+        "name": "Servicios no personales",
+        "reference": 5607831131458,
+        "project": 7065781096048,
+        "difference": 1457949964590,
+        "nominalVariationPct": 25.998464119424057,
+        "pdfPage": 173,
+        "reference2027": "Planilla 4 · artículo 1"
+      },
+      {
+        "name": "Bienes de uso",
+        "reference": 1971254118545,
+        "project": 2135503650524,
+        "difference": 164249531979,
+        "nominalVariationPct": 8.332235323380521,
+        "pdfPage": 173,
+        "reference2027": "Planilla 4 · artículo 1"
+      },
+      {
+        "name": "Transferencias",
+        "reference": 2869567465767,
+        "project": 3355578761470,
+        "difference": 486011295703,
+        "nominalVariationPct": 16.936744004138447,
+        "pdfPage": 173,
+        "reference2027": "Planilla 4 · artículo 1"
+      },
+      {
+        "name": "Activos financieros",
+        "reference": 234381539973,
+        "project": 20496224090,
+        "difference": -213885315883,
+        "nominalVariationPct": -91.25518840248208,
+        "pdfPage": 173,
+        "reference2027": "Planilla 4 · artículo 1"
+      },
+      {
+        "name": "Servicio de la deuda",
+        "reference": 294493616181,
+        "project": 608192783299,
+        "difference": 313699167118,
+        "nominalVariationPct": 106.5215508526324,
+        "pdfPage": 173,
+        "reference2027": "Planilla 4 · artículo 1"
+      },
+      {
+        "name": "Otros gastos",
+        "reference": 22837854796,
+        "project": 0,
+        "difference": -22837854796,
+        "nominalVariationPct": -100,
+        "pdfPage": 173,
+        "reference2027": "Planilla 4 · artículo 1"
+      }
+    ]
+  }
+}
