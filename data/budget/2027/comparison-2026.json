@@ -6,9 +6,9 @@
   "referenceDate": "2026-06-30",
   "referenceStatus": "Presupuesto actualizado al 30/06/2026",
   "unit": "ARS nominales de cada año",
-  "inflationAdjusted": false,
+  "inflationAdjusted": true,
   "universe": "Administración Gubernamental: Administración Central, organismos descentralizados, entes autárquicos y órganos de control. Gastos corrientes y de capital; sin figurativas ni aplicaciones financieras.",
-  "method": "Dos autorizaciones anuales del mismo universo fiscal. Proyecto 2027 frente a presupuesto 2026 actualizado al 30/06. La diferencia nominal no mide crecimiento real ni compara ejecuciones.",
+  "method": "Dos autorizaciones anuales del mismo universo fiscal. Proyecto 2027 frente al presupuesto 2026 actualizado al 30/06. Variación real estimada = (Proyecto 2027 / Presupuesto 2026 / 1,18 − 1) × 100. Se conserva también la lectura nominal. No compara ejecuciones ni utiliza inflación observada.",
   "source2027": {
     "document": "3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf",
     "documentId": "PDLEY-2026-36-GCABA-AJG",
@@ -22,7 +22,11 @@
   "source2026": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2026-2.xlsx",
   "totals": {
     "reference": 19877152039294,
-    "project": 24094340599263
+    "project": 24094340599263,
+    "nominalVariationPct": 21.216261522939917,
+    "projectAdjusted": 20418932711239.832,
+    "realDifference": 541780671945.83203,
+    "realVariationPct": 2.725645358423656
   },
   "groups": {
     "purposes": [
@@ -33,7 +37,10 @@
         "difference": 698233256526,
         "nominalVariationPct": 26.00199062476831,
         "pdfPage": 174,
-        "reference2027": "Planilla 5 · artículo 1"
+        "reference2027": "Planilla 5 · artículo 1",
+        "projectAdjusted": 2867406938845.7627,
+        "realDifference": 182100007533.7627,
+        "realVariationPct": 6.781347987091801
       },
       {
         "name": "Servicios de Seguridad",
@@ -42,7 +49,10 @@
         "difference": 674925240111,
         "nominalVariationPct": 23.117710987780924,
         "pdfPage": 174,
-        "reference2027": "Planilla 5 · artículo 1"
+        "reference2027": "Planilla 5 · artículo 1",
+        "projectAdjusted": 3046136530480.509,
+        "realDifference": 126620664624.50879,
+        "realVariationPct": 4.3370432099838485
       },
       {
         "name": "Servicios Sociales",
@@ -51,7 +61,10 @@
         "difference": 2374785783503,
         "nominalVariationPct": 19.422129213760808,
         "pdfPage": 174,
-        "reference2027": "Planilla 5 · artículo 1"
+        "reference2027": "Planilla 5 · artículo 1",
+        "projectAdjusted": 12374578187276.271,
+        "realDifference": 147361709793.27148,
+        "realVariationPct": 1.2051942489498257
       },
       {
         "name": "Servicios Económicos",
@@ -60,7 +73,10 @@
         "difference": 155545112711,
         "nominalVariationPct": 8.885148597149396,
         "pdfPage": 174,
-        "reference2027": "Planilla 5 · artículo 1"
+        "reference2027": "Planilla 5 · artículo 1",
+        "projectAdjusted": 1615393441672.034,
+        "realDifference": -135225706789.96606,
+        "realVariationPct": -7.724450341398814
       },
       {
         "name": "Deuda Pública - Intereses y Gastos",
@@ -69,7 +85,10 @@
         "difference": 313699167118,
         "nominalVariationPct": 106.5215508526324,
         "pdfPage": 174,
-        "reference2027": "Planilla 5 · artículo 1"
+        "reference2027": "Planilla 5 · artículo 1",
+        "projectAdjusted": 515417612965.2543,
+        "realDifference": 220923996784.25427,
+        "realVariationPct": 75.01826343443425
       }
     ],
     "objects": [
@@ -80,7 +99,10 @@
         "difference": 1844843120303,
         "nominalVariationPct": 22.760000008828428,
         "pdfPage": 173,
-        "reference2027": "Planilla 4 · artículo 1"
+        "reference2027": "Planilla 4 · artículo 1",
+        "projectAdjusted": 8432610786722.034,
+        "realDifference": 326973178693.0342,
+        "realVariationPct": 4.033898312566464
       },
       {
         "name": "Bienes de consumo",
@@ -89,7 +111,10 @@
         "difference": 187158650955,
         "nominalVariationPct": 24.270111568874263,
         "pdfPage": 173,
-        "reference2027": "Planilla 4 · artículo 1"
+        "reference2027": "Planilla 4 · artículo 1",
+        "projectAdjusted": 812124877542.3729,
+        "realDifference": 40976172997.372925,
+        "realVariationPct": 5.3136538719273485
       },
       {
         "name": "Servicios no personales",
@@ -98,7 +123,10 @@
         "difference": 1457949964590,
         "nominalVariationPct": 25.998464119424057,
         "pdfPage": 173,
-        "reference2027": "Planilla 4 · artículo 1"
+        "reference2027": "Planilla 4 · artículo 1",
+        "projectAdjusted": 5987950081396.61,
+        "realDifference": 380118949938.61035,
+        "realVariationPct": 6.778359423240721
       },
       {
         "name": "Bienes de uso",
@@ -107,7 +135,10 @@
         "difference": 164249531979,
         "nominalVariationPct": 8.332235323380521,
         "pdfPage": 173,
-        "reference2027": "Planilla 4 · artículo 1"
+        "reference2027": "Planilla 4 · artículo 1",
+        "projectAdjusted": 1809748856376.2712,
+        "realDifference": -161505262168.72876,
+        "realVariationPct": -8.193020912389382
       },
       {
         "name": "Transferencias",
@@ -116,7 +147,10 @@
         "difference": 486011295703,
         "nominalVariationPct": 16.936744004138447,
         "pdfPage": 173,
-        "reference2027": "Planilla 4 · artículo 1"
+        "reference2027": "Planilla 4 · artículo 1",
+        "projectAdjusted": 2843710814805.085,
+        "realDifference": -25856650961.91504,
+        "realVariationPct": -0.901064403272489
       },
       {
         "name": "Activos financieros",
@@ -125,7 +159,10 @@
         "difference": -213885315883,
         "nominalVariationPct": -91.25518840248208,
         "pdfPage": 173,
-        "reference2027": "Planilla 4 · artículo 1"
+        "reference2027": "Planilla 4 · artículo 1",
+        "projectAdjusted": 17369681432.203392,
+        "realDifference": -217011858540.7966,
+        "realVariationPct": -92.58914271396786
       },
       {
         "name": "Servicio de la deuda",
@@ -134,7 +171,10 @@
         "difference": 313699167118,
         "nominalVariationPct": 106.5215508526324,
         "pdfPage": 173,
-        "reference2027": "Planilla 4 · artículo 1"
+        "reference2027": "Planilla 4 · artículo 1",
+        "projectAdjusted": 515417612965.2543,
+        "realDifference": 220923996784.25427,
+        "realVariationPct": 75.01826343443425
       },
       {
         "name": "Otros gastos",
@@ -143,8 +183,29 @@
         "difference": -22837854796,
         "nominalVariationPct": -100,
         "pdfPage": 173,
-        "reference2027": "Planilla 4 · artículo 1"
+        "reference2027": "Planilla 4 · artículo 1",
+        "projectAdjusted": 0,
+        "realDifference": -22837854796,
+        "realVariationPct": -100
       }
     ]
-  }
+  },
+  "deflator": {
+    "indicator": "Inflación IPC diciembre/diciembre",
+    "year": 2027,
+    "percentage": 18,
+    "rate": 0.18,
+    "factor": 1.18,
+    "basis": "projection",
+    "source": "Supuestos macroeconómicos 2027 · valor indicado por el usuario",
+    "sourceType": "user-provided",
+    "providedAt": "2026-10-01",
+    "verificationStatus": "user-specified",
+    "reference": "Inflación IPC diciembre/diciembre: 18,0%",
+    "pdfPage": null,
+    "formula": "(Proyecto 2027 / Presupuesto 2026 / 1,18 − 1) × 100",
+    "limitation": "IPC diciembre/diciembre utilizado por indicación del usuario como aproximación para comparar presupuestos anuales; no equivale a inflación promedio anual ni es inflación observada."
+  },
+  "defaultDisplay": "real",
+  "adjustedUnit": "ARS a precios de 2026 · ajuste con inflación proyectada"
 }

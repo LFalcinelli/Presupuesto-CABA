@@ -1236,11 +1236,12 @@
   ],
   "macroAssumptions": {
     "quantitative": [],
-    "qualitative": "El mensaje toma como referencia el marco nacional y describe menor inflación y variación pautada del tipo de cambio. No se incorpora un deflactor anual 2027 no cuantificado en esas páginas.",
+    "qualitative": "El mensaje toma como referencia el marco nacional y describe menor inflación y variación pautada del tipo de cambio. El supuesto adicional aplicado a la comparación se documenta por separado.",
     "pdfPages": [
       31,
       32
-    ]
+    ],
+    "comparisonDeflatorFile": "data/budget/2027/comparison-2026.json"
   },
   "limitations": [
     "No contiene una apertura completa de programas que permita reproducir el explorador de ejecución.",

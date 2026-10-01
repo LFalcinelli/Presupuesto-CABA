@@ -683,10 +683,10 @@
       "name": "Proyecto 2027 frente a autorización 2026",
       "path": "data/budget/2027/comparison-2026.json",
       "period": "2026-2027",
-      "lastUpdate": "2026-09-30",
+      "lastUpdate": "2026-10-01",
       "source": "3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf",
       "type": "calculation",
-      "description": "Comparación exclusivamente nominal del mismo universo: autorizaciones anuales, no ejecución ni crecimiento real.",
+      "description": "Autorizaciones anuales del mismo universo: variaciones nominales y reales estimadas con IPC diciembre/diciembre 2027 de 18%, indicado por el usuario; no compara ejecuciones.",
       "files": [
         "data/budget/2027/comparison-2026.json"
       ]

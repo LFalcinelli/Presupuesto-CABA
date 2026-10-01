@@ -14,7 +14,7 @@ function renderInsights(){const items=(state.config.insights||[]).filter(i=>i.ve
 async function dataFile(name){if(!dataRequests.has(name))dataRequests.set(name,fetch(`${Site.url('data/'+name+'.json')}?v=${document.querySelector('meta[name="site-build"]')?.getAttribute('content')||'local'}`).then(r=>{if(!r.ok)throw Error(`No se pudo cargar ${name}`);return r.json()}).catch(e=>{dataRequests.delete(name);throw e}));return dataRequests.get(name)}
 async function ensureViewData(view,period){const work=[];
   if(['project','landing','method'].includes(view)&&state.config.featuredBudgetFile)work.push(Site.load(state.config.featuredBudgetFile).then(d=>state.project=d));
-  if(view==='project'&&state.config.projectComparisonFile)work.push(Site.load(state.config.projectComparisonFile).then(d=>state.projectComparison=d));
+  if(['project','method'].includes(view)&&state.config.projectComparisonFile)work.push(Site.load(state.config.projectComparisonFile).then(d=>state.projectComparison=d));
   if(view==='landing')work.push(dataFile('caif').then(d=>state.caif=d));
   if(view==='home')work.push(dataFile('approved-vs-executed').then(d=>state.approvedExecution=d));
   if(view==='history')work.push(dataFile('execution-history').then(d=>state.executionHistory=d));

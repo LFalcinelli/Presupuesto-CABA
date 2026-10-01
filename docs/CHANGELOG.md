@@ -1,5 +1,12 @@
 # Cambios
 
+## 2026-10-01 — Comparación real estimada y publicación
+
+- IPC diciembre/diciembre 2027 de 18,0%, indicado por el usuario, aplicado con factor 1,18 a la comparación de autorizaciones anuales. Se identifica como proyección y aproximación, con procedencia documentada.
+- Vista real estimada por defecto, selector nominal/real y enlaces que conservan la elección. Aumento total: +21,2% nominal / +2,7% real estimado.
+- Importes oficiales, portada y ejecución preservados. Script reproducible y controles de conciliación de los valores ajustados.
+- El usuario autoriza publicar en GitHub Pages el Proyecto 2027 con este ajuste, mediante merge del PR validado.
+
 ## 2026-10-01 — Proyecto de Presupuesto 2027 y lectura bajo demanda
 
 - Incorporación del documento oficial PDLEY-2026-36: total del artículo 1 conciliado con CAIF y clasificaciones, sin sumar figurativas, aplicaciones financieras ni proyectos externos.
