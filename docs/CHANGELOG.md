@@ -1,5 +1,15 @@
 # Cambios
 
+## 2026-10-01 — Arquitectura visual y UX final · revisión por PR
+
+- Hero unificado con Proyecto 2027 protagonista, importe completo, monto por porteño y presupuesto 2026 secundario; sin duplicar el inicio editorial.
+- Cuatro destinos principales, metodología por dominio y período de cierre con sólo sus pestañas pertinentes. Tablas, fórmulas y alcance bajo demanda.
+- Componente de puntos conectados para porcentaje real y cambio real en pesos, escalas adaptativas y tooltip compartido con teclado y toque. Montserrat y treemaps existentes conservados.
+- Historia 1997–2027: valores y factores 1997–2026 intactos; 2027* nominal, sin deflactar, separado con diamante y conexión punteada. Advertencia visible y enlaces normativos oficiales para los hitos.
+- Capa CSS del proyecto consolidada, navegación blanca sticky, pestañas móviles horizontales y movimiento reducido. Sin framework ni biblioteca nueva.
+- Revisión dirigida en cuatro anchos y siete capturas locales; controles de conciliación, navegación y descargas ampliados. Documento breve `FINAL_UX_REVIEW.md`.
+- Rama `feature/final-visual-ux-2027`: no modificar `main`, fusionar ni publicar; entrega para revisión humana.
+
 ## 2026-10-01 — Comparación real estimada y publicación
 
 - IPC diciembre/diciembre 2027 de 18,0%, indicado por el usuario, aplicado con factor 1,18 a la comparación de autorizaciones anuales. Se identifica como proyección y aproximación, con procedencia documentada.

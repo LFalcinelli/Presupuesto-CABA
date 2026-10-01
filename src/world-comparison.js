@@ -1,5 +1,5 @@
 'use strict';
-const comparabilityLabels={reference:'Referencia: CABA',medium:'Comparabilidad media',limited:'Comparabilidad limitada',high:'Comparabilidad alta'};
+const comparabilityLabels={reference:'Referencia: CABA',medium:'Más información ↗',limited:'Más información ↗',high:'Más información ↗'};
 function verifiedCities(){return (state.world?.cities||[]).filter(c=>c.verificationStatus==='verified'&&c.budget.year===state.world.year&&c.population.type==='census'&&c.population.value>0&&c.budget.valueOriginal>0&&c.fx.value>0&&c.fx.date===state.world.fxDate&&['divide','multiply'].includes(c.fx.operation))}
 function worldReady(){const cities=verifiedCities();return cities.length>1&&cities.some(c=>c.id===state.world.reference)}
 function ppaReady(){const cities=verifiedCities();return state.world?.ppa?.status==='verified'&&cities.length>1&&cities.every(c=>c.ppa?.status==='verified'&&c.ppa.year===c.budget.year&&c.ppa.value>0&&c.ppa.source)}
