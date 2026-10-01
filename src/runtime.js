@@ -2,7 +2,7 @@
 window.Site={
  base:new URL('.',document.currentScript.src),resources:{},config:null,content:{},
  url(input){const [file,...query]=input.replace(/^\/+/, '').split('?');const target=this.resources[file]||file;const url=new URL(target,this.base);if(query.length)url.search=query.join('?');return url.href;},
- async load(input){const r=await fetch(this.url(input));if(!r.ok)throw Error('No se pudo cargar '+input);return r.json();},
+ async load(input){const request=new URL(this.url(input));if(request.origin===this.base.origin)request.searchParams.set('v',document.querySelector('meta[name="site-build"]')?.content||'local');const r=await fetch(request);if(!r.ok)throw Error('No se pudo cargar '+input);return r.json();},
  markup(html){return html.replace(/\b(href|src)="(\/[^"<>]*)"/g,(_,attr,url)=>attr+'="'+this.url(url).replaceAll('&','&amp;')+'"');},
  text(text,values){return text.replace(/\{\{(\w+)\}\}/g,(_,key)=>values[key]??'');}
 };
