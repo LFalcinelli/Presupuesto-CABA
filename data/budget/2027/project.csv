@@ -1,0 +1,68 @@
+dimension,id,name,value,unit,status,pdfPage,reference
+purposes,1,Administración Gubernamental,3383540187838,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+purposes,7,Servicios de Seguridad,3594441105967,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+purposes,10,Servicios Sociales,14602002260986,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+purposes,19,Servicios Económicos,1906164261173,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+purposes,24,Deuda Pública - Intereses y Gastos,608192783299,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,2,Legislativa,265093707021,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,3,Judicial,1802706124393,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,4,Dirección ejecutiva,796937739595,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,5,Administración fiscal,284524286645,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,6,Control de la gestión,234278330184,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,8,Seguridad interior,3455341315542,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,9,Sistema penal,139099790425,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,11,Salud,3966268774382,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,12,Promoción y acción social,2234522651727,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,13,Educación,4735496151225,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,14,Cultura,350528265332,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,15,Trabajo,196655608124,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,16,Vivienda y Urbanismo,826689834789,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,17,Agua potable y alcantarillado,208618277445,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,18,Servicios Urbanos,2083222697962,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,20,Transporte,1248297111016,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,21,Ecología,520868689242,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,22,Turismo,81329097670,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,23,Industria y Comercio,55669363245,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+functions,25,Deuda Pública - Intereses y Gastos,608192783299,ARS nominales de 2027,project,174,Planilla 5 · artículo 1
+jurisdictions,1,LEGISLATURA DE LA CIUDAD DE BUENOS AIRES,265093707021,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,2,AUDITORIA GENERAL DE LA CIUDAD DE BUENOS AIRES,64408541276,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,3,DEFENSORIA DEL PUEBLO,102444004012,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,4,MINISTERIO PUBLICO,801886134844,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,5,TRIBUNAL SUPERIOR DE JUSTICIA,77915000000,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,6,CONSEJO DE LA MAGISTRATURA,835216599257,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,7,SINDICATURA GENERAL DE LA CIUDAD DE BUENOS AIRES,9532795999,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,8,PROCURACION GENERAL DE LA CIUDAD,55092285444,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,9,JEFATURA DE GOBIERNO,1185214035022,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,10,JEFATURA DE GABINETE DE MINISTROS,2606756259111,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,11,MINISTERIO DE JUSTICIA,380295663820,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,12,MINISTERIO DE SEGURIDAD,2677004026889,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,13,MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA,1977474831688,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,14,MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA,918168562577,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,15,MINISTERIO DE SALUD,3986126808100,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,16,MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT,1372958089030,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,17,MINISTERIO DE CULTURA,387931142767,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,18,MINISTERIO DE EDUCACIÓN,4363643374769,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,19,MINISTERIO DE HACIENDA y FINANZAS,358416288365,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,20,MINISTERIO DE DESARROLLO ECONÓMICO,137128586380,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,21,SERVICIO DE LA DEUDA PUBLICA,608192783299,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+jurisdictions,22,OBLIGACIONES A CARGO DEL TESORO,923441079593,ARS nominales de 2027,project,175,Planilla 6 · artículo 1
+objects,1,Personal,9950480728332,ARS nominales de 2027,project,173,Planilla 4 · artículo 1
+objects,2,Bienes de consumo,958307355500,ARS nominales de 2027,project,173,Planilla 4 · artículo 1
+objects,3,Servicios no personales,7065781096048,ARS nominales de 2027,project,173,Planilla 4 · artículo 1
+objects,4,Bienes de uso,2135503650524,ARS nominales de 2027,project,173,Planilla 4 · artículo 1
+objects,5,Transferencias,3355578761470,ARS nominales de 2027,project,173,Planilla 4 · artículo 1
+objects,6,Activos financieros,20496224090,ARS nominales de 2027,project,173,Planilla 4 · artículo 1
+objects,7,Servicio de la deuda,608192783299,ARS nominales de 2027,project,173,Planilla 4 · artículo 1
+objects,8,Otros gastos,0,ARS nominales de 2027,project,173,Planilla 4 · artículo 1
+economic,current,Gastos corrientes,19768623479401,ARS nominales de 2027,project,3,Artículo 1
+economic,capital,Gastos de capital,4325717119862,ARS nominales de 2027,project,190,Planilla 16 · artículo 5
+revenue,1,Ingresos Tributarios,19094214003433,ARS nominales de 2027,project,190,Planilla 16 · artículo 5
+revenue,2,Ingresos No Tributarios,663825629989,ARS nominales de 2027,project,190,Planilla 16 · artículo 5
+revenue,3,Ventas de Bienes y Servicios de la Administración Pública,365617417614,ARS nominales de 2027,project,190,Planilla 16 · artículo 5
+revenue,4,Rentas de la Propiedad,951290901460,ARS nominales de 2027,project,190,Planilla 16 · artículo 5
+revenue,5,Transferencias Corrientes,3017533491405,ARS nominales de 2027,project,190,Planilla 16 · artículo 5 · ingresos corrientes
+revenue,6,Recursos de capital,3175598228,ARS nominales de 2027,project,190,Planilla 16 · artículo 5
+taxRevenue,1,Sobre el Patrimonio,1946712359442,ARS nominales de 2027,project,183,Planilla 11 · artículo 2
+taxRevenue,2,"Sobre la Producción, el Consumo y las Transacciones",14909383645569,ARS nominales de 2027,project,183,Planilla 11 · artículo 2
+taxRevenue,3,Otros tributos locales,12132998422,ARS nominales de 2027,project,183,Planilla 11 · artículo 2
+taxRevenue,4,Tributos de Jurisdicción Nacional,2225985000000,ARS nominales de 2027,project,183,Planilla 11 · artículo 2

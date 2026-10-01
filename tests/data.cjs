@@ -14,3 +14,4 @@ assert.equal(history.rows[0].kind,'legacy');assert(history.rows.slice(1,-1).ever
 for(const period of Object.values(caif.periods)){assert(Math.abs(period.income-period.expense-period.financialResult)<1);}
 for(const p of read('approved-vs-executed').periods){const d=read(p.period);assert.equal(p.initial,d.fiscalTotals.s);assert.equal(p.executed,d.fiscalTotals.d);assert(Math.abs(p.groups.reduce((v,g)=>v+g.executed,0)-p.executed)<1);}
 console.log(`Datos: ${ids.size} datasets; conciliaciones fiscales y jerarquía correctas.`);
+require('./project-2027.cjs');

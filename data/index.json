@@ -663,6 +663,46 @@
       "source": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/com3500.xls",
       "type": "official",
       "description": "Metadata existente; no fue actualizada durante la migración."
+    },
+    {
+      "id": "project-2027",
+      "name": "Proyecto de Presupuesto 2027",
+      "path": "data/budget/2027/project.json",
+      "period": "2027",
+      "lastUpdate": "2026-09-30",
+      "source": "3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf",
+      "type": "official",
+      "description": "Proyecto: resumen legal y CAIF, finalidades, funciones, jurisdicciones, incisos, ingresos y autorizaciones propias; trazabilidad por página y conciliación.",
+      "files": [
+        "data/budget/2027/project.json",
+        "data/budget/2027/project.csv"
+      ]
+    },
+    {
+      "id": "project-comparison-2026",
+      "name": "Proyecto 2027 frente a autorización 2026",
+      "path": "data/budget/2027/comparison-2026.json",
+      "period": "2026-2027",
+      "lastUpdate": "2026-10-01",
+      "source": "3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf",
+      "type": "calculation",
+      "description": "Autorizaciones anuales del mismo universo: variaciones nominales y reales estimadas con IPC diciembre/diciembre 2027 de 18%, indicado por el usuario; no compara ejecuciones.",
+      "files": [
+        "data/budget/2027/comparison-2026.json"
+      ]
+    },
+    {
+      "id": "salary-latest-reference",
+      "name": "Último sueldo de Jorge Macri y referencia presidencial",
+      "path": "data/salaries/latest-reference.json",
+      "period": "2026-07",
+      "lastUpdate": "2026-09-30",
+      "source": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/sueldo-funcionarios/sueldo_funcionarios_2026.csv",
+      "type": "calculation",
+      "description": "Brutos mensuales ordinarios verificados, sin SAC; referencia presidencial del Informe 142 y exclusión de aumentos del Decreto 931/2025.",
+      "files": [
+        "data/salaries/latest-reference.json"
+      ]
     }
   ],
   "resources": {
@@ -737,6 +777,9 @@
     "data/salary-jorge-macri.csv": "data/salaries/salary-jorge-macri.csv",
     "data/semester-analysis.csv": "data/execution/semester-analysis.csv",
     "data/semester-analysis.json": "data/execution/semester-analysis.json",
-    "data/series.csv": "data/budget/series.csv"
+    "data/series.csv": "data/budget/series.csv",
+    "data/project-2027.json": "data/budget/2027/project.json",
+    "data/project-comparison-2026.json": "data/budget/2027/comparison-2026.json",
+    "data/salary-latest-reference.json": "data/salaries/latest-reference.json"
   }
 }
