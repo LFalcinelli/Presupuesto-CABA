@@ -11,3 +11,4 @@
 9. Conservar sólo las seis descargas oficiales que ya necesita la interfaz; no publicar la carpeta de investigación ni documentos internos.
 10. Base path central por URL del script; los recursos se resuelven por catálogo. Mantener hash routing.
 11. Conservar chatgpt.site hasta que el dueño solicite expresamente reemplazarlo o retirarlo.
+12. Historia 1997–2027: conservar factores y etapas validados de 1997–2026. Mostrar 2027* como referencia nominal del proyecto, sin deflactar, con marcador separado y advertencia visible. No calcular crecimiento real entre esos puntos; la comparación real estimada corresponde exclusivamente a la vista 2027 vs 2026 con su deflactor documentado.

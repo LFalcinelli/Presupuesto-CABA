@@ -35,3 +35,33 @@ function salaryHierarchyPanel(){const d=state.salaryHierarchy,c=state.conduction
 document.addEventListener('click',e=>{const b=e.target.closest('[data-conduction-list]');if(!b)return;document.getElementById('conduction-lists').open=true;const target=document.getElementById('conduction-'+b.dataset.conductionList);target.focus({preventScroll:true});target.scrollIntoView({block:'start',behavior:'smooth'})});
 
 function annualTick(i,length,width,year){if(i===0||i===length-1||length<=5)return true;const step=width>=950?2:width>=600?3:5;return i%step===0&&i<length-2;}
+
+
+function vizTip(lines){return `data-viz-tip="${E(JSON.stringify(lines))}"`;}
+let vizTooltip=null,vizOwner=null;
+function hideVizTip(){if(!vizTooltip)return;vizTooltip.classList.remove('visible');vizTooltip.setAttribute('aria-hidden','true');vizOwner?.removeAttribute('aria-describedby');vizOwner=null;}
+function showVizTip(el){
+ if(!el?.dataset.vizTip)return;if(!vizTooltip){vizTooltip=document.createElement('div');vizTooltip.id='viz-tooltip';vizTooltip.className='viz-tooltip';vizTooltip.setAttribute('role','tooltip');document.body.append(vizTooltip);}
+ const lines=JSON.parse(el.dataset.vizTip);vizTooltip.innerHTML=lines.slice(0,4).map((t,i)=>`<${i?'span':'strong'}>${E(t)}</${i?'span':'strong'}>`).join('');vizOwner?.removeAttribute('aria-describedby');vizOwner=el;el.setAttribute('aria-describedby','viz-tooltip');vizTooltip.setAttribute('aria-hidden','false');
+ const r=el.getBoundingClientRect();vizTooltip.style.left='0px';vizTooltip.style.top='0px';const w=vizTooltip.offsetWidth,h=vizTooltip.offsetHeight;vizTooltip.style.left=Math.max(8,Math.min(innerWidth-w-8,r.left+r.width/2-w/2))+'px';vizTooltip.style.top=Math.max(8,r.top-h-10>8?r.top-h-10:Math.min(innerHeight-h-8,r.bottom+10))+'px';vizTooltip.classList.add('visible');
+}
+document.addEventListener('pointerover',e=>{if(e.pointerType==='touch')return;const el=e.target.closest('[data-viz-tip]');if(el)showVizTip(el);});
+document.addEventListener('pointerout',e=>{if(vizOwner&&!vizOwner.contains(e.relatedTarget))hideVizTip();});
+document.addEventListener('focusin',e=>{const el=e.target.closest('[data-viz-tip]');if(el)showVizTip(el);else hideVizTip();});
+document.addEventListener('focusout',e=>{if(vizOwner===e.target)hideVizTip();});
+document.addEventListener('click',e=>{const el=e.target.closest('[data-viz-tip]');if(el)showVizTip(el);else hideVizTip();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')hideVizTip();if((e.key==='Enter'||e.key===' ')&&e.target.matches('svg [role="button"]')){e.preventDefault();e.target.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
+addEventListener('scroll',hideVizTip,{passive:true});addEventListener('resize',hideVizTip);
+const revealedViews=new Set();
+function enhanceVisuals(view){
+ hideVizTip();const content=document.getElementById('content');
+ for(const el of content.querySelectorAll('[data-treemap-info]')){el.dataset.vizTip=JSON.stringify(el.dataset.treemapInfo.split(': ').slice(0,2));el.removeAttribute('title');}
+ for(const el of content.querySelectorAll('.trend-svg circle')){const title=el.querySelector('title');if(title){el.dataset.vizTip=JSON.stringify([title.textContent]);el.setAttribute('tabindex','0');el.setAttribute('role','button');el.setAttribute('aria-label',title.textContent);title.remove();}}
+ if(view==='compare'&&state.compareUniverse!=='world'){const c=comparisonState();for(const el of content.querySelectorAll('[data-province]')){const row=c.p.rows.find(r=>r.id===el.dataset.province);if(!row)continue;const rank=c.rows.findIndex(r=>r.id===row.id)+1;el.dataset.vizTip=JSON.stringify([row.name,comparisonValue(row.indicators[c.ind.id],c.ind),rank?`Posición ${rank} de ${c.rows.length}`:'Sin dato']);el.querySelector('title')?.remove();}}
+ for(const el of content.querySelectorAll('.world-row'))el.dataset.vizTip=JSON.stringify([el.querySelector('.world-name b').textContent,el.querySelector('strong').textContent,el.querySelector('.world-name small').textContent]);
+ for(const el of content.querySelectorAll('.waterfall-row')){el.tabIndex=0;el.dataset.vizTip=JSON.stringify([el.firstElementChild.textContent,el.lastElementChild.textContent,'Cuenta ahorro–inversión · pesos nominales']);}
+ // Exact amounts remain downloadable; long primary tables start collapsed.
+ for(const el of content.querySelectorAll('.table-wrap'))if(!el.closest('details')&&!['method'].includes(view)&&el.querySelectorAll('tbody tr').length>7){const d=document.createElement('details');d.className='exact-values';d.innerHTML='<summary>Ver tabla completa</summary>';el.replaceWith(d);d.append(el);}
+ const key=view==='project'?view+'-'+state.projectTab:view;if(revealedViews.has(key)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;revealedViews.add(key);
+ const observer=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){e.target.classList.add('revealed');observer.unobserve(e.target);}},{threshold:.05});for(const el of content.querySelectorAll('.home-section,.chart-panel,.project-kpis')){el.classList.add('reveal');observer.observe(el);}setTimeout(()=>observer.disconnect(),15000);
+}
