@@ -1,0 +1,40 @@
+{
+  "cut": "2026-07-31",
+  "source": "https://data.buenosaires.gob.ar/dataset/autoridades-superiores-funcionarios",
+  "method": "Conteos conservados de la reconstrucción del padrón al 31/07/2026. Ministros y secretarios identifican titulares de ministerios y secretarías; los demás niveles cuentan personas únicas dentro de cada categoría.",
+  "limitation": "No se obtuvo una copia oficial archivada exactamente al 31 de julio. Si la publicación de agosto eliminó bajas anteriores, esas personas no pueden recuperarse de este archivo. Es el padrón publicado con fechas compatibles con julio, no una certificación exhaustiva de toda la planta.",
+  "institutionalMethod": "Cruce de puesto publicado, sigla de repartición, responsable y dependencia en el padrón oficial. Diez titulares de ministerios; dieciocho titulares de secretarías (seis directas y doce dependientes de Jefatura de Gabinete o ministerios). La Jefatura de Gabinete es un cargo separado, no el undécimo ministro.",
+  "note": "Estos seis niveles no abarcan todo el padrón de 2.595 personas. No deben sumarse como una partición del recorrido general, que incluye otras categorías y tiene otro corte.",
+  "levels": [
+    {
+      "id": "ministers",
+      "name": "Ministros",
+      "count": 10
+    },
+    {
+      "id": "secretaries",
+      "name": "Secretarios",
+      "count": 18
+    },
+    {
+      "id": "SS",
+      "name": "Subsecretarios",
+      "count": 82
+    },
+    {
+      "id": "DG",
+      "name": "Directores generales",
+      "count": 344
+    },
+    {
+      "id": "GO",
+      "name": "Gerentes operativos",
+      "count": 932
+    },
+    {
+      "id": "SGO",
+      "name": "Subgerentes operativos",
+      "count": 855
+    }
+  ]
+}

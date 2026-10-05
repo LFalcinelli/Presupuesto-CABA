@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-10-05 — Conducción, comparación provincial y portada
+
+- Sueldos de funcionarios y CABA en el mundo quedan ocultos por configuración. Se retiran sus pestañas, botones, referencias y enlaces de metodología; las rutas antiguas conducen a Estructura del Gobierno o a la comparación provincial. Se conservan los datos para una futura reactivación.
+- Conducción trasladada a Estructura del Gobierno: 10 ministros, 18 secretarios, 82 subsecretarios, 344 directores generales, 932 gerentes operativos y 855 subgerentes. Nuevo export de cantidades sin remuneraciones, con el corte y sus límites; no se confunden esos seis niveles con el padrón general de 2.595 personas.
+- Listados de responsables bajo demanda y navegación por dependencias con foco en el nivel elegido. Se retiran los desplegables que repetían exactamente el gráfico de personas.
+- Comparación provincial con una sola entrada, controles y nombres más claros, mapa con selección persistente, ficha breve y sin la comparación de CABA consigo misma. Historia de gasto real en primer plano; composición, otros indicadores y fuentes bajo demanda.
+- Inicio: déficit 2025 de $281.525.677.404 destacado, junto al 2,1% de los ingresos; primeros semestres comparados por cada $100 ingresados ($20,1 / $14,3 / $11,4). Se aclara que los tres tuvieron superávit y que en pesos corrientes el saldo creció. Importes, universos, períodos y deflactores sin cambios.
+- Validación: 53 datasets, 34 vistas en escritorio/móvil, interacción de listados, Resto y dependencias, selección provincial e indicadores históricos; revisión adicional a 320 y 768 px. Sin errores de navegador ni desbordamiento horizontal.
+
 ## 2026-10-01 — Arquitectura visual y UX final · revisión por PR
 
 - Hero unificado con Proyecto 2027 protagonista, importe completo, monto por porteño y presupuesto 2026 secundario; sin duplicar el inicio editorial.

@@ -67,3 +67,7 @@ Las tablas detalladas de gasto comparten columnas `s` (inicial), `v` (actualizad
 Para actualizar una unidad: consultar su metadata y fuente, preparar el JSON/CSV revisado, importarlo con `scripts/update-dataset.mjs` y ejecutar tests del dominio. Construir el sitio no cambia esos datos.
 
 La estructura 2027 debe añadir un archivo bajo `data/budget/2027/`, con metadata verificada, registrar el dataset y seleccionar su path mediante `currentBudgetFile`. No sustituir datos de 2026.
+
+## Conducción sin remuneraciones · 05/10/2026
+
+`conduction-counts` → `data/government/conduction-counts.json`: corte, fuente, método, límites y seis niveles con `id`, `name`, `count`. Proyección de las cantidades ya verificadas de `conduction` y `salary-hierarchy`; no contiene importes, normas ni fórmulas salariales. La interfaz de Gobierno carga esta proyección y los listados de `conduction`, sin cargar datasets de remuneraciones. No equivale a una partición del padrón general, que conserva otro corte y más categorías.

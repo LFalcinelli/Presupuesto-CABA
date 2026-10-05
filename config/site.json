@@ -51,7 +51,8 @@
   "flags": {
     "compare": true,
     "government": true,
-    "salaries": true
+    "salaries": false,
+    "world": false
   },
   "publicUrl": "https://lfalcinelli.github.io/Presupuesto-CABA/",
   "legacyPublication": "https://lla-caba-gasto-publico.lucianofalcinelli.chatgpt.site/",

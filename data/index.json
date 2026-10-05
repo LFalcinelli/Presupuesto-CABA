@@ -703,6 +703,19 @@
       "files": [
         "data/salaries/latest-reference.json"
       ]
+    },
+    {
+      "id": "conduction-counts",
+      "name": "Conducción del Gobierno",
+      "path": "data/government/conduction-counts.json",
+      "period": "Reconstrucción al 31/07/2026",
+      "lastUpdate": "2026-10-05",
+      "source": "https://data.buenosaires.gob.ar/dataset/autoridades-superiores-funcionarios",
+      "type": "calculation",
+      "description": "Seis niveles de conducción: cantidades y alcance, sin remuneraciones.",
+      "files": [
+        "data/government/conduction-counts.json"
+      ]
     }
   ],
   "resources": {
