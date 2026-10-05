@@ -1,7 +1,7 @@
 'use strict';
 const comparabilityLabels={reference:'Referencia: CABA',medium:'Más información ↗',limited:'Más información ↗',high:'Más información ↗'};
 function verifiedCities(){return (state.world?.cities||[]).filter(c=>c.verificationStatus==='verified'&&c.budget.year===state.world.year&&c.population.type==='census'&&c.population.value>0&&c.budget.valueOriginal>0&&c.fx.value>0&&c.fx.date===state.world.fxDate&&['divide','multiply'].includes(c.fx.operation))}
-function worldReady(){const cities=verifiedCities();return cities.length>1&&cities.some(c=>c.id===state.world.reference)}
+function worldReady(){if(!featureEnabled('world'))return false;const cities=verifiedCities();return cities.length>1&&cities.some(c=>c.id===state.world.reference)}
 function ppaReady(){const cities=verifiedCities();return state.world?.ppa?.status==='verified'&&cities.length>1&&cities.every(c=>c.ppa?.status==='verified'&&c.ppa.year===c.budget.year&&c.ppa.value>0&&c.ppa.source)}
 function worldValue(c,currency,basis){const fx=c.fx,n=currency==='ppa'?(c.ppa?.value>0?c.budget.valueOriginal/c.ppa.value:null):fx.operation==='divide'?c.budget.valueOriginal/fx.value:c.budget.valueOriginal*fx.value;return n===null?null:basis==='total'?n:n/c.population.value}
 const worldAmount=(n,basis)=>basis==='total'?`USD ${fmt(n/1e9,2)} mil millones`:`USD ${fmt(n)}`;

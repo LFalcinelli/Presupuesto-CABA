@@ -12,3 +12,5 @@
 10. Base path central por URL del script; los recursos se resuelven por catálogo. Mantener hash routing.
 11. Conservar chatgpt.site hasta que el dueño solicite expresamente reemplazarlo o retirarlo.
 12. Historia 1997–2027: conservar factores y etapas validados de 1997–2026. Mostrar 2027* como referencia nominal del proyecto, sin deflactar, con marcador separado y advertencia visible. No calcular crecimiento real entre esos puntos; la comparación real estimada corresponde exclusivamente a la vista 2027 vs 2026 con su deflactor documentado.
+
+13. Desde 05/10/2026, ocultar Sueldos y CABA en el mundo mediante `flags.salaries=false` y `flags.world=false`. No ofrecer accesos ni contenido salarial/internacional en la interfaz o en su metodología. Conservar sus datos; la estructura de conducción usa un export independiente de cantidades sin remuneraciones. Sus cortes y categorías no forman una partición del padrón general.
