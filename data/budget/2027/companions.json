@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "status": "project",
+  "includedInFiscalTotals": false,
+  "projects": [
+    {
+      "id": "providers",
+      "title": "Bonos para pagar a proveedores",
+      "amount": 600000000000,
+      "currency": "ARS",
+      "description": "Autoriza emitir deuda para cancelar obligaciones ya devengadas, exigibles y pendientes de pago.",
+      "conditions": "Hasta $600.000.000.000; plazo mínimo de un año; tasa TAMAR. No se presenta el monto autorizado como gasto adicional del Proyecto 2027.",
+      "articles": "1, 2 y 5",
+      "pdfPages": [
+        1,
+        2
+      ],
+      "source": {
+        "document": "3082 - MJE. 38-26 - PDLEY 32-26 (Emisión de Bonos).pdf",
+        "documentId": "PDLEY-2026-32-GCABA-AJG",
+        "date": "2026-09-30",
+        "origin": "PDF oficial aportado por el usuario",
+        "fileSha256": "2dc02229a8bb5f99bf6eab811f77e0af2e7447927d81880d5739a88977df02ba"
+      }
+    },
+    {
+      "id": "belgrano",
+      "title": "Financiamiento para el Belgrano Sur",
+      "amount": 75000000,
+      "currency": "USD",
+      "description": "Solicita autorización de endeudamiento para financiar obras de la Línea Belgrano Sur.",
+      "conditions": "Hasta USD 75.000.000, más intereses y gastos asociados; plazo mínimo de un año. Permite afectar recursos de coparticipación como garantía. No se convierte el monto a pesos ni se suma al presupuesto del mapa.",
+      "articles": "1, 3, 4, 5 y 9",
+      "pdfPages": [
+        1,
+        2,
+        3
+      ],
+      "source": {
+        "document": "3084 - MJE. 43-26 - PDLEY 37-26 (Belgrano Sur).pdf",
+        "documentId": "PDLEY-2026-37-GCABA-AJG",
+        "date": "2026-09-30",
+        "origin": "PDF oficial aportado por el usuario",
+        "fileSha256": "84072fe06cdd380c49093616c193d8a1eeff529727ebd0cecabcb14332dee9bf"
+      }
+    },
+    {
+      "id": "flood",
+      "title": "Emergencia hídrica y climática",
+      "amount": null,
+      "currency": null,
+      "description": "Propone una emergencia por doce meses y facultades especiales para reorganizar recursos.",
+      "conditions": "El proyecto no fija un monto global máximo. Su artículo 3 permite transferir recursos con asignación específica y modificar el presupuesto; el artículo 7 refiere a ingresos netos de AUSA. No se interpreta la remisión a la Ley 70 como una autorización monetaria cuantificada.",
+      "articles": "1, 3 y 7",
+      "pdfPages": [
+        1,
+        2
+      ],
+      "source": {
+        "document": "3085 - MJE 44-26 - PDLEY 38-26 (Emergencia el Niño).pdf",
+        "documentId": "PDLEY-2026-38-GCABA-AJG",
+        "date": "2026-09-30",
+        "origin": "PDF oficial aportado por el usuario",
+        "fileSha256": "aee67207f624dcb8982f14cbadc68f6e28fe9ff5a19a4f9d235257f935d0464a"
+      }
+    }
+  ]
+}

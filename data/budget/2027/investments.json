@@ -1,0 +1,6213 @@
+{
+  "schemaVersion": 1,
+  "years": [
+    2027,
+    2028,
+    2029
+  ],
+  "status": "project",
+  "source": {
+    "document": "3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf",
+    "documentId": "PDLEY-2026-36-GCABA-AJG",
+    "messageId": "MJE-2026-42-GCABA-AJG",
+    "fileSha256": "feb7581d738222e3b2a14dab1558f820c027efb7131087c2a69edff8f722513b",
+    "date": "2026-09-30",
+    "url": null,
+    "origin": "Documento oficial aportado por el usuario",
+    "annexId": "IF-2026-43938160-GCABA-SSHA"
+  },
+  "reference": "Plan Plurianual de Inversiones Públicas 2027–2029 · páginas 240–296",
+  "totals": [
+    4170360367357,
+    2907671643815,
+    2733674774519
+  ],
+  "projects": [
+    {
+      "id": "1-1-10-16-0-1",
+      "codes": [
+        1,
+        1,
+        10,
+        16,
+        0,
+        1
+      ],
+      "name": "REP Y PUESTA EN VALOR LEGISLAT",
+      "jurisdiction": "LEGISLATURA DE LA CIUDAD DE BUENOS AIRES",
+      "program": "FORMACIÓN Y SANCIÓN DE LEYES",
+      "amounts": [
+        2853894181,
+        0,
+        0
+      ],
+      "pdfPage": 240
+    },
+    {
+      "id": "5-5-70-40-0-1",
+      "codes": [
+        5,
+        5,
+        70,
+        40,
+        0,
+        1
+      ],
+      "name": "INFRAESTRUCTURA EDILICIA",
+      "jurisdiction": "MINISTERIO PUBLICO",
+      "program": "COM. ADM. CONJ. REPR. MP",
+      "amounts": [
+        10649048167,
+        0,
+        0
+      ],
+      "pdfPage": 241
+    },
+    {
+      "id": "6-6-50-1-0-1",
+      "codes": [
+        6,
+        6,
+        50,
+        1,
+        0,
+        1
+      ],
+      "name": "OBRAS EN EDIFICIO TRIBUNAL SU",
+      "jurisdiction": "TRIBUNAL SUPERIOR DE JUSTICIA",
+      "program": "ACTIVIDADES CENTRALES",
+      "amounts": [
+        66806092,
+        0,
+        0
+      ],
+      "pdfPage": 242
+    },
+    {
+      "id": "7-7-51-16-0-1",
+      "codes": [
+        7,
+        7,
+        51,
+        16,
+        0,
+        1
+      ],
+      "name": "OBRAS EN CONSEJO DE LA MAG",
+      "jurisdiction": "CONSEJO DE LA MAGISTRATURA",
+      "program": "ACT..ESPEC.CONS. MAGISTRATURA",
+      "amounts": [
+        18234337201,
+        0,
+        0
+      ],
+      "pdfPage": 243
+    },
+    {
+      "id": "20-218-3161-86-0-61",
+      "codes": [
+        20,
+        218,
+        3161,
+        86,
+        0,
+        61
+      ],
+      "name": "MANT. DE ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "ÁREAS DE CONSERVACIÓN",
+      "amounts": [
+        7839081413,
+        7839081413,
+        7839081413
+      ],
+      "pdfPage": 244
+    },
+    {
+      "id": "20-218-3161-86-0-62",
+      "codes": [
+        20,
+        218,
+        3161,
+        86,
+        0,
+        62
+      ],
+      "name": "FUENTES ORNAMENTALES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "ÁREAS DE CONSERVACIÓN",
+      "amounts": [
+        165324173,
+        165324173,
+        165324173
+      ],
+      "pdfPage": 244
+    },
+    {
+      "id": "20-218-3161-86-0-63",
+      "codes": [
+        20,
+        218,
+        3161,
+        86,
+        0,
+        63
+      ],
+      "name": "MANTENIMIENTO DE LAGOS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "ÁREAS DE CONSERVACIÓN",
+      "amounts": [
+        2922609848,
+        2922609848,
+        2922609848
+      ],
+      "pdfPage": 244
+    },
+    {
+      "id": "20-218-3162-88-0-61",
+      "codes": [
+        20,
+        218,
+        3162,
+        88,
+        0,
+        61
+      ],
+      "name": "MANTENIMIENTO DEL ECOPARQUE",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "CONSERV. BIODIV. Y PATR. HIST.",
+      "amounts": [
+        6491710742,
+        6491710742,
+        6491710742
+      ],
+      "pdfPage": 244
+    },
+    {
+      "id": "20-218-3162-88-0-62",
+      "codes": [
+        20,
+        218,
+        3162,
+        88,
+        0,
+        62
+      ],
+      "name": "GESTIÓN DEL PREDIO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "CONSERV. BIODIV. Y PATR. HIST.",
+      "amounts": [
+        200000000,
+        200000000,
+        200000000
+      ],
+      "pdfPage": 244
+    },
+    {
+      "id": "20-218-3172-22-0-1",
+      "codes": [
+        20,
+        218,
+        3172,
+        22,
+        0,
+        1
+      ],
+      "name": "OBRAS COPIDIS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "ACCESIBILIDAD UNIVERSAL",
+      "amounts": [
+        2834987007,
+        0,
+        0
+      ],
+      "pdfPage": 244
+    },
+    {
+      "id": "20-218-3172-22-0-90",
+      "codes": [
+        20,
+        218,
+        3172,
+        22,
+        0,
+        90
+      ],
+      "name": "EQUIPAMIENTO DISCAPACIDAD",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "ACCESIBILIDAD UNIVERSAL",
+      "amounts": [
+        4773811891,
+        0,
+        0
+      ],
+      "pdfPage": 244
+    },
+    {
+      "id": "20-311-2401-1-0-1",
+      "codes": [
+        20,
+        311,
+        2401,
+        1,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 1",
+      "amounts": [
+        3201616670,
+        0,
+        0
+      ],
+      "pdfPage": 245
+    },
+    {
+      "id": "20-311-2401-1-0-6",
+      "codes": [
+        20,
+        311,
+        2401,
+        1,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 1",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 245
+    },
+    {
+      "id": "20-311-2401-1-0-61",
+      "codes": [
+        20,
+        311,
+        2401,
+        1,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 1",
+      "amounts": [
+        4173867989,
+        4173867989,
+        4173867989
+      ],
+      "pdfPage": 245
+    },
+    {
+      "id": "20-311-2401-1-0-62",
+      "codes": [
+        20,
+        311,
+        2401,
+        1,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 1",
+      "amounts": [
+        23151492305,
+        23151492305,
+        23151492305
+      ],
+      "pdfPage": 245
+    },
+    {
+      "id": "20-311-2401-1-0-63",
+      "codes": [
+        20,
+        311,
+        2401,
+        1,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VÍA PÚBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 1",
+      "amounts": [
+        162353345,
+        162353345,
+        162353345
+      ],
+      "pdfPage": 245
+    },
+    {
+      "id": "20-312-2402-2-0-1",
+      "codes": [
+        20,
+        312,
+        2402,
+        2,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 2",
+      "amounts": [
+        3846161388,
+        0,
+        0
+      ],
+      "pdfPage": 245
+    },
+    {
+      "id": "20-312-2402-2-0-6",
+      "codes": [
+        20,
+        312,
+        2402,
+        2,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 2",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 245
+    },
+    {
+      "id": "20-312-2402-2-0-61",
+      "codes": [
+        20,
+        312,
+        2402,
+        2,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 2",
+      "amounts": [
+        2178305086,
+        2178305086,
+        2178305086
+      ],
+      "pdfPage": 245
+    },
+    {
+      "id": "20-312-2402-2-0-62",
+      "codes": [
+        20,
+        312,
+        2402,
+        2,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 2",
+      "amounts": [
+        5893413173,
+        5893413173,
+        5893413173
+      ],
+      "pdfPage": 246
+    },
+    {
+      "id": "20-312-2402-2-0-63",
+      "codes": [
+        20,
+        312,
+        2402,
+        2,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VÍA PÚBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 2",
+      "amounts": [
+        86692766,
+        86692766,
+        86692766
+      ],
+      "pdfPage": 246
+    },
+    {
+      "id": "20-313-2403-3-0-3",
+      "codes": [
+        20,
+        313,
+        2403,
+        3,
+        0,
+        3
+      ],
+      "name": "NUEVOS ESPACIOS PUBLICOS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 3",
+      "amounts": [
+        1349861049,
+        0,
+        0
+      ],
+      "pdfPage": 246
+    },
+    {
+      "id": "20-313-2403-3-0-6",
+      "codes": [
+        20,
+        313,
+        2403,
+        3,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 3",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 246
+    },
+    {
+      "id": "20-313-2403-3-0-61",
+      "codes": [
+        20,
+        313,
+        2403,
+        3,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 3",
+      "amounts": [
+        3207684280,
+        3207684280,
+        3207684280
+      ],
+      "pdfPage": 246
+    },
+    {
+      "id": "20-313-2403-3-0-62",
+      "codes": [
+        20,
+        313,
+        2403,
+        3,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 3",
+      "amounts": [
+        3914579888,
+        3914579888,
+        3914579888
+      ],
+      "pdfPage": 246
+    },
+    {
+      "id": "20-313-2403-3-0-63",
+      "codes": [
+        20,
+        313,
+        2403,
+        3,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VÍA PÚBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 3",
+      "amounts": [
+        31983957,
+        31983957,
+        31983957
+      ],
+      "pdfPage": 246
+    },
+    {
+      "id": "20-314-2404-4-0-1",
+      "codes": [
+        20,
+        314,
+        2404,
+        4,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 4",
+      "amounts": [
+        1240134821,
+        0,
+        0
+      ],
+      "pdfPage": 246
+    },
+    {
+      "id": "20-314-2404-4-0-6",
+      "codes": [
+        20,
+        314,
+        2404,
+        4,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 4",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 247
+    },
+    {
+      "id": "20-314-2404-4-0-61",
+      "codes": [
+        20,
+        314,
+        2404,
+        4,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 4",
+      "amounts": [
+        7395012679,
+        7395012679,
+        7395012679
+      ],
+      "pdfPage": 247
+    },
+    {
+      "id": "20-314-2404-4-0-62",
+      "codes": [
+        20,
+        314,
+        2404,
+        4,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 4",
+      "amounts": [
+        12932937305,
+        12932937305,
+        12932937305
+      ],
+      "pdfPage": 247
+    },
+    {
+      "id": "20-314-2404-4-0-63",
+      "codes": [
+        20,
+        314,
+        2404,
+        4,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VÍA PÚBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 4",
+      "amounts": [
+        5214776,
+        5214776,
+        5214776
+      ],
+      "pdfPage": 247
+    },
+    {
+      "id": "20-315-2405-5-0-1",
+      "codes": [
+        20,
+        315,
+        2405,
+        5,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 5",
+      "amounts": [
+        224100000,
+        0,
+        0
+      ],
+      "pdfPage": 247
+    },
+    {
+      "id": "20-315-2405-5-0-2",
+      "codes": [
+        20,
+        315,
+        2405,
+        5,
+        0,
+        2
+      ],
+      "name": "ESPACIOS DE JUEGO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 5",
+      "amounts": [
+        944345494,
+        0,
+        0
+      ],
+      "pdfPage": 247
+    },
+    {
+      "id": "20-315-2405-5-0-6",
+      "codes": [
+        20,
+        315,
+        2405,
+        5,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 5",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 247
+    },
+    {
+      "id": "20-315-2405-5-0-61",
+      "codes": [
+        20,
+        315,
+        2405,
+        5,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 5",
+      "amounts": [
+        3493318755,
+        3493318755,
+        3493318755
+      ],
+      "pdfPage": 247
+    },
+    {
+      "id": "20-315-2405-5-0-62",
+      "codes": [
+        20,
+        315,
+        2405,
+        5,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 5",
+      "amounts": [
+        1711521536,
+        1711521536,
+        1711521536
+      ],
+      "pdfPage": 247
+    },
+    {
+      "id": "20-315-2405-5-0-63",
+      "codes": [
+        20,
+        315,
+        2405,
+        5,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VÍA PÚBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 5",
+      "amounts": [
+        94511034,
+        94511034,
+        94511034
+      ],
+      "pdfPage": 248
+    },
+    {
+      "id": "20-316-2406-6-0-1",
+      "codes": [
+        20,
+        316,
+        2406,
+        6,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 6",
+      "amounts": [
+        538145888,
+        0,
+        0
+      ],
+      "pdfPage": 248
+    },
+    {
+      "id": "20-316-2406-6-0-2",
+      "codes": [
+        20,
+        316,
+        2406,
+        6,
+        0,
+        2
+      ],
+      "name": "ESPACIOS DE JUEGO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 6",
+      "amounts": [
+        809250000,
+        0,
+        0
+      ],
+      "pdfPage": 248
+    },
+    {
+      "id": "20-316-2406-6-0-6",
+      "codes": [
+        20,
+        316,
+        2406,
+        6,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 6",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 248
+    },
+    {
+      "id": "20-316-2406-6-0-61",
+      "codes": [
+        20,
+        316,
+        2406,
+        6,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 6",
+      "amounts": [
+        3898728070,
+        3898728070,
+        3898728070
+      ],
+      "pdfPage": 248
+    },
+    {
+      "id": "20-316-2406-6-0-62",
+      "codes": [
+        20,
+        316,
+        2406,
+        6,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 6",
+      "amounts": [
+        5384668337,
+        5384668337,
+        5384668337
+      ],
+      "pdfPage": 248
+    },
+    {
+      "id": "20-316-2406-6-0-63",
+      "codes": [
+        20,
+        316,
+        2406,
+        6,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VÍA PÚBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 6",
+      "amounts": [
+        172000000,
+        172000000,
+        172000000
+      ],
+      "pdfPage": 248
+    },
+    {
+      "id": "20-317-2407-7-0-1",
+      "codes": [
+        20,
+        317,
+        2407,
+        7,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 7",
+      "amounts": [
+        2344719600,
+        0,
+        0
+      ],
+      "pdfPage": 249
+    },
+    {
+      "id": "20-317-2407-7-0-2",
+      "codes": [
+        20,
+        317,
+        2407,
+        7,
+        0,
+        2
+      ],
+      "name": "ESPACIOS DE JUEGO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 7",
+      "amounts": [
+        722858291,
+        0,
+        0
+      ],
+      "pdfPage": 249
+    },
+    {
+      "id": "20-317-2407-7-0-6",
+      "codes": [
+        20,
+        317,
+        2407,
+        7,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 7",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 249
+    },
+    {
+      "id": "20-317-2407-7-0-61",
+      "codes": [
+        20,
+        317,
+        2407,
+        7,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 7",
+      "amounts": [
+        5819916501,
+        5819916501,
+        5819916501
+      ],
+      "pdfPage": 249
+    },
+    {
+      "id": "20-317-2407-7-0-62",
+      "codes": [
+        20,
+        317,
+        2407,
+        7,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 7",
+      "amounts": [
+        7633280365,
+        7633280365,
+        7633280365
+      ],
+      "pdfPage": 249
+    },
+    {
+      "id": "20-317-2407-7-0-63",
+      "codes": [
+        20,
+        317,
+        2407,
+        7,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VIA PUBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 7",
+      "amounts": [
+        6605382,
+        6605382,
+        6605382
+      ],
+      "pdfPage": 249
+    },
+    {
+      "id": "20-318-2408-8-0-1",
+      "codes": [
+        20,
+        318,
+        2408,
+        8,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 8",
+      "amounts": [
+        3398850000,
+        0,
+        0
+      ],
+      "pdfPage": 249
+    },
+    {
+      "id": "20-318-2408-8-0-2",
+      "codes": [
+        20,
+        318,
+        2408,
+        8,
+        0,
+        2
+      ],
+      "name": "ESPACIOS DE JUEGO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 8",
+      "amounts": [
+        476702448,
+        0,
+        0
+      ],
+      "pdfPage": 249
+    },
+    {
+      "id": "20-318-2408-8-0-6",
+      "codes": [
+        20,
+        318,
+        2408,
+        8,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 8",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 250
+    },
+    {
+      "id": "20-318-2408-8-0-61",
+      "codes": [
+        20,
+        318,
+        2408,
+        8,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 8",
+      "amounts": [
+        5724324772,
+        5724324772,
+        5724324772
+      ],
+      "pdfPage": 250
+    },
+    {
+      "id": "20-318-2408-8-0-62",
+      "codes": [
+        20,
+        318,
+        2408,
+        8,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 8",
+      "amounts": [
+        9188712847,
+        9188712847,
+        9188712847
+      ],
+      "pdfPage": 250
+    },
+    {
+      "id": "20-318-2408-8-0-63",
+      "codes": [
+        20,
+        318,
+        2408,
+        8,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VIA PUBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 8",
+      "amounts": [
+        4171820,
+        4171820,
+        4171820
+      ],
+      "pdfPage": 250
+    },
+    {
+      "id": "20-319-2409-9-0-1",
+      "codes": [
+        20,
+        319,
+        2409,
+        9,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 9",
+      "amounts": [
+        224100000,
+        0,
+        0
+      ],
+      "pdfPage": 250
+    },
+    {
+      "id": "20-319-2409-9-0-2",
+      "codes": [
+        20,
+        319,
+        2409,
+        9,
+        0,
+        2
+      ],
+      "name": "ESPACIOS DE JUEGO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 9",
+      "amounts": [
+        1618500000,
+        0,
+        0
+      ],
+      "pdfPage": 250
+    },
+    {
+      "id": "20-319-2409-9-0-6",
+      "codes": [
+        20,
+        319,
+        2409,
+        9,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 9",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 250
+    },
+    {
+      "id": "20-319-2409-9-0-61",
+      "codes": [
+        20,
+        319,
+        2409,
+        9,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 9",
+      "amounts": [
+        8426673299,
+        8426673299,
+        8426673299
+      ],
+      "pdfPage": 250
+    },
+    {
+      "id": "20-319-2409-9-0-62",
+      "codes": [
+        20,
+        319,
+        2409,
+        9,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 9",
+      "amounts": [
+        9979144400,
+        9979144400,
+        9979144400
+      ],
+      "pdfPage": 250
+    },
+    {
+      "id": "20-319-2409-9-0-63",
+      "codes": [
+        20,
+        319,
+        2409,
+        9,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VIA PUBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 9",
+      "amounts": [
+        4171820,
+        4171820,
+        4171820
+      ],
+      "pdfPage": 251
+    },
+    {
+      "id": "20-320-2410-10-0-1",
+      "codes": [
+        20,
+        320,
+        2410,
+        10,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 10",
+      "amounts": [
+        2614500000,
+        0,
+        0
+      ],
+      "pdfPage": 251
+    },
+    {
+      "id": "20-320-2410-10-0-2",
+      "codes": [
+        20,
+        320,
+        2410,
+        10,
+        0,
+        2
+      ],
+      "name": "ESPACIOS DE JUEGO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 10",
+      "amounts": [
+        1399714689,
+        0,
+        0
+      ],
+      "pdfPage": 251
+    },
+    {
+      "id": "20-320-2410-10-0-6",
+      "codes": [
+        20,
+        320,
+        2410,
+        10,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 10",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 251
+    },
+    {
+      "id": "20-320-2410-10-0-61",
+      "codes": [
+        20,
+        320,
+        2410,
+        10,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 10",
+      "amounts": [
+        7520491082,
+        7520491082,
+        7520491082
+      ],
+      "pdfPage": 251
+    },
+    {
+      "id": "20-320-2410-10-0-62",
+      "codes": [
+        20,
+        320,
+        2410,
+        10,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 10",
+      "amounts": [
+        3361751210,
+        3361751210,
+        3361751210
+      ],
+      "pdfPage": 251
+    },
+    {
+      "id": "20-320-2410-10-0-63",
+      "codes": [
+        20,
+        320,
+        2410,
+        10,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VÍA PÚBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 10",
+      "amounts": [
+        23292664,
+        23292664,
+        23292664
+      ],
+      "pdfPage": 251
+    },
+    {
+      "id": "20-321-2411-11-0-3",
+      "codes": [
+        20,
+        321,
+        2411,
+        11,
+        0,
+        3
+      ],
+      "name": "NUEVOS ESPACIOS PÚBLICOS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 11",
+      "amounts": [
+        4800000000,
+        0,
+        0
+      ],
+      "pdfPage": 251
+    },
+    {
+      "id": "20-321-2411-11-0-6",
+      "codes": [
+        20,
+        321,
+        2411,
+        11,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 11",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 252
+    },
+    {
+      "id": "20-321-2411-11-0-61",
+      "codes": [
+        20,
+        321,
+        2411,
+        11,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 11",
+      "amounts": [
+        7746124067,
+        7746124067,
+        7746124067
+      ],
+      "pdfPage": 252
+    },
+    {
+      "id": "20-321-2411-11-0-62",
+      "codes": [
+        20,
+        321,
+        2411,
+        11,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 11",
+      "amounts": [
+        3304344397,
+        3304344397,
+        3304344397
+      ],
+      "pdfPage": 252
+    },
+    {
+      "id": "20-321-2411-11-0-63",
+      "codes": [
+        20,
+        321,
+        2411,
+        11,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VÍA PÚBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 11",
+      "amounts": [
+        74934824,
+        74934824,
+        74934824
+      ],
+      "pdfPage": 252
+    },
+    {
+      "id": "20-322-2412-12-0-1",
+      "codes": [
+        20,
+        322,
+        2412,
+        12,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 12",
+      "amounts": [
+        1643400000,
+        0,
+        0
+      ],
+      "pdfPage": 252
+    },
+    {
+      "id": "20-322-2412-12-0-2",
+      "codes": [
+        20,
+        322,
+        2412,
+        12,
+        0,
+        2
+      ],
+      "name": "ESPACIOS DE JUEGO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 12",
+      "amounts": [
+        1900608869,
+        0,
+        0
+      ],
+      "pdfPage": 252
+    },
+    {
+      "id": "20-322-2412-12-0-6",
+      "codes": [
+        20,
+        322,
+        2412,
+        12,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 12",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 252
+    },
+    {
+      "id": "20-322-2412-12-0-61",
+      "codes": [
+        20,
+        322,
+        2412,
+        12,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 12",
+      "amounts": [
+        9680544764,
+        9680544764,
+        9680544764
+      ],
+      "pdfPage": 252
+    },
+    {
+      "id": "20-322-2412-12-0-62",
+      "codes": [
+        20,
+        322,
+        2412,
+        12,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 12",
+      "amounts": [
+        15474384554,
+        15474384554,
+        15474384554
+      ],
+      "pdfPage": 252
+    },
+    {
+      "id": "20-322-2412-12-0-63",
+      "codes": [
+        20,
+        322,
+        2412,
+        12,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VIA PUBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 12",
+      "amounts": [
+        71963902,
+        71963902,
+        71963902
+      ],
+      "pdfPage": 253
+    },
+    {
+      "id": "20-323-2413-13-0-1",
+      "codes": [
+        20,
+        323,
+        2413,
+        13,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 13",
+      "amounts": [
+        6287247202,
+        0,
+        0
+      ],
+      "pdfPage": 253
+    },
+    {
+      "id": "20-323-2413-13-0-6",
+      "codes": [
+        20,
+        323,
+        2413,
+        13,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 13",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 253
+    },
+    {
+      "id": "20-323-2413-13-0-61",
+      "codes": [
+        20,
+        323,
+        2413,
+        13,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 13",
+      "amounts": [
+        7559731602,
+        7559731602,
+        7559731602
+      ],
+      "pdfPage": 253
+    },
+    {
+      "id": "20-323-2413-13-0-62",
+      "codes": [
+        20,
+        323,
+        2413,
+        13,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 13",
+      "amounts": [
+        17407226131,
+        17407226131,
+        17407226131
+      ],
+      "pdfPage": 253
+    },
+    {
+      "id": "20-323-2413-13-0-63",
+      "codes": [
+        20,
+        323,
+        2413,
+        13,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VIA PUBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 13",
+      "amounts": [
+        347652,
+        347652,
+        347652
+      ],
+      "pdfPage": 253
+    },
+    {
+      "id": "20-324-2414-14-0-1",
+      "codes": [
+        20,
+        324,
+        2414,
+        14,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 14",
+      "amounts": [
+        4625388423,
+        0,
+        0
+      ],
+      "pdfPage": 253
+    },
+    {
+      "id": "20-324-2414-14-0-6",
+      "codes": [
+        20,
+        324,
+        2414,
+        14,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 14",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 253
+    },
+    {
+      "id": "20-324-2414-14-0-61",
+      "codes": [
+        20,
+        324,
+        2414,
+        14,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 14",
+      "amounts": [
+        6434304393,
+        6434304393,
+        6434304393
+      ],
+      "pdfPage": 254
+    },
+    {
+      "id": "20-324-2414-14-0-62",
+      "codes": [
+        20,
+        324,
+        2414,
+        14,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 14",
+      "amounts": [
+        26977916558,
+        26977916558,
+        26977916558
+      ],
+      "pdfPage": 254
+    },
+    {
+      "id": "20-324-2414-14-0-63",
+      "codes": [
+        20,
+        324,
+        2414,
+        14,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VÍA PÚBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 14",
+      "amounts": [
+        39632294,
+        39632294,
+        39632294
+      ],
+      "pdfPage": 254
+    },
+    {
+      "id": "20-325-2415-15-0-1",
+      "codes": [
+        20,
+        325,
+        2415,
+        15,
+        0,
+        1
+      ],
+      "name": "PUESTAS EN VALOR Y REF INT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 15",
+      "amounts": [
+        7311025188,
+        0,
+        0
+      ],
+      "pdfPage": 254
+    },
+    {
+      "id": "20-325-2415-15-0-6",
+      "codes": [
+        20,
+        325,
+        2415,
+        15,
+        0,
+        6
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 15",
+      "amounts": [
+        859329292,
+        0,
+        0
+      ],
+      "pdfPage": 254
+    },
+    {
+      "id": "20-325-2415-15-0-61",
+      "codes": [
+        20,
+        325,
+        2415,
+        15,
+        0,
+        61
+      ],
+      "name": "ARBOLADO",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 15",
+      "amounts": [
+        6965876539,
+        6965876539,
+        6965876539
+      ],
+      "pdfPage": 254
+    },
+    {
+      "id": "20-325-2415-15-0-62",
+      "codes": [
+        20,
+        325,
+        2415,
+        15,
+        0,
+        62
+      ],
+      "name": "ESPACIOS VERDES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 15",
+      "amounts": [
+        8161299855,
+        8161299855,
+        8161299855
+      ],
+      "pdfPage": 254
+    },
+    {
+      "id": "20-325-2415-15-0-63",
+      "codes": [
+        20,
+        325,
+        2415,
+        15,
+        0,
+        63
+      ],
+      "name": "MANT DE MACETAS EN LA VÍA PÚBL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "GESTIÓN DE LA COMUNA 15",
+      "amounts": [
+        76085280,
+        76085280,
+        76085280
+      ],
+      "pdfPage": 255
+    },
+    {
+      "id": "20-480-144-23-0-1",
+      "codes": [
+        20,
+        480,
+        144,
+        23,
+        0,
+        1
+      ],
+      "name": "RESOLUCIONES URBANAS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "COMPETENCIAS COMUNALES Y TALLE",
+      "amounts": [
+        28704378324,
+        0,
+        0
+      ],
+      "pdfPage": 255
+    },
+    {
+      "id": "20-480-144-23-0-62",
+      "codes": [
+        20,
+        480,
+        144,
+        23,
+        0,
+        62
+      ],
+      "name": "COMPLEJOS HABITACIONALES MANT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "COMPETENCIAS COMUNALES Y TALLE",
+      "amounts": [
+        4825331652,
+        4825331652,
+        4825331652
+      ],
+      "pdfPage": 255
+    },
+    {
+      "id": "20-480-1064-49-0-1",
+      "codes": [
+        20,
+        480,
+        1064,
+        49,
+        0,
+        1
+      ],
+      "name": "OBRAS EN CEMENTERIOS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "SERVICIOS MORTUORIOS",
+      "amounts": [
+        13985628990,
+        0,
+        0
+      ],
+      "pdfPage": 255
+    },
+    {
+      "id": "20-480-1064-49-0-61",
+      "codes": [
+        20,
+        480,
+        1064,
+        49,
+        0,
+        61
+      ],
+      "name": "MANTENIMIENTO Y OBRAS CEMENT",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "SERVICIOS MORTUORIOS",
+      "amounts": [
+        17501143564,
+        17501143564,
+        17501143564
+      ],
+      "pdfPage": 255
+    },
+    {
+      "id": "20-480-3237-106-0-1",
+      "codes": [
+        20,
+        480,
+        3237,
+        106,
+        0,
+        1
+      ],
+      "name": "REMODELACIÓN REGISTRO CIVIL",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "CERT IDENT Y CAP PERSONAS",
+      "amounts": [
+        849056543,
+        0,
+        0
+      ],
+      "pdfPage": 256
+    },
+    {
+      "id": "20-480-3264-7-0-61",
+      "codes": [
+        20,
+        480,
+        3264,
+        7,
+        0,
+        61
+      ],
+      "name": "MANT CORRECT. SEDES COMUNALES",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "ACTIVIDADES COMUNES",
+      "amounts": [
+        2359697667,
+        2359697667,
+        2359697667
+      ],
+      "pdfPage": 256
+    },
+    {
+      "id": "20-480-3269-38-0-63",
+      "codes": [
+        20,
+        480,
+        3269,
+        38,
+        0,
+        63
+      ],
+      "name": "CONTROL Y RELEVAMIENTO DEL ARB",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "CUIDADO Y PUESTA VAL.ARBOLADO",
+      "amounts": [
+        4392936805,
+        4392936805,
+        4392936805
+      ],
+      "pdfPage": 256
+    },
+    {
+      "id": "20-480-3269-38-0-64",
+      "codes": [
+        20,
+        480,
+        3269,
+        38,
+        0,
+        64
+      ],
+      "name": "DESPEJE DE CAMARAS Y LUMINARIA",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "CUIDADO Y PUESTA VAL.ARBOLADO",
+      "amounts": [
+        5190342842,
+        5190342842,
+        5190342842
+      ],
+      "pdfPage": 256
+    },
+    {
+      "id": "20-480-3270-50-0-1",
+      "codes": [
+        20,
+        480,
+        3270,
+        50,
+        0,
+        1
+      ],
+      "name": "PATIO DE JUEGOS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "CUID.Y PTA.VALOR EEVV",
+      "amounts": [
+        13269443853,
+        0,
+        0
+      ],
+      "pdfPage": 256
+    },
+    {
+      "id": "20-480-3270-50-0-2",
+      "codes": [
+        20,
+        480,
+        3270,
+        50,
+        0,
+        2
+      ],
+      "name": "PUESTA VALOR Y REFORMAS INTG",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "CUID.Y PTA.VALOR EEVV",
+      "amounts": [
+        61206138185,
+        0,
+        0
+      ],
+      "pdfPage": 256
+    },
+    {
+      "id": "20-480-3270-50-0-3",
+      "codes": [
+        20,
+        480,
+        3270,
+        50,
+        0,
+        3
+      ],
+      "name": "NUEVOS ESPACIOS PUBLICOS",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "CUID.Y PTA.VALOR EEVV",
+      "amounts": [
+        23431942035,
+        0,
+        0
+      ],
+      "pdfPage": 256
+    },
+    {
+      "id": "20-480-3270-50-0-7",
+      "codes": [
+        20,
+        480,
+        3270,
+        50,
+        0,
+        7
+      ],
+      "name": "PLAZA GRECIA",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "CUID.Y PTA.VALOR EEVV",
+      "amounts": [
+        1323127679,
+        0,
+        0
+      ],
+      "pdfPage": 256
+    },
+    {
+      "id": "20-480-3270-50-0-61",
+      "codes": [
+        20,
+        480,
+        3270,
+        50,
+        0,
+        61
+      ],
+      "name": "SERVICIO MANTENIMIENTO INTEG",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "CUID.Y PTA.VALOR EEVV",
+      "amounts": [
+        10666264704,
+        10666264704,
+        10666264704
+      ],
+      "pdfPage": 256
+    },
+    {
+      "id": "20-480-3270-50-0-62",
+      "codes": [
+        20,
+        480,
+        3270,
+        50,
+        0,
+        62
+      ],
+      "name": "GDES PARQUES ASIST OPERATIVA",
+      "jurisdiction": "JEFATURA DE GOBIERNO",
+      "program": "CUID.Y PTA.VALOR EEVV",
+      "amounts": [
+        11329681963,
+        11329681963,
+        11329681963
+      ],
+      "pdfPage": 257
+    },
+    {
+      "id": "21-21-47-199-0-61",
+      "codes": [
+        21,
+        21,
+        47,
+        199,
+        0,
+        61
+      ],
+      "name": "MANTENIMIENTOS SSSYP",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INNOVACIÓN ADMINISTRATIVA",
+      "amounts": [
+        4769542913,
+        4769542913,
+        4769542913
+      ],
+      "pdfPage": 258
+    },
+    {
+      "id": "21-21-47-199-0-62",
+      "codes": [
+        21,
+        21,
+        47,
+        199,
+        0,
+        62
+      ],
+      "name": "INFRAESTRUCTURA COMPLEMENTARIA",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INNOVACIÓN ADMINISTRATIVA",
+      "amounts": [
+        679245236,
+        679245236,
+        679245236
+      ],
+      "pdfPage": 258
+    },
+    {
+      "id": "21-21-47-199-0-63",
+      "codes": [
+        21,
+        21,
+        47,
+        199,
+        0,
+        63
+      ],
+      "name": "ESTANDARIZACIÓN DE DATOS",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INNOVACIÓN ADMINISTRATIVA",
+      "amounts": [
+        470113316,
+        470113316,
+        470113316
+      ],
+      "pdfPage": 258
+    },
+    {
+      "id": "21-21-47-199-0-64",
+      "codes": [
+        21,
+        21,
+        47,
+        199,
+        0,
+        64
+      ],
+      "name": "MANT. PLATAF. DATOS ABIERTOS",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INNOVACIÓN ADMINISTRATIVA",
+      "amounts": [
+        254716964,
+        254716964,
+        254716964
+      ],
+      "pdfPage": 258
+    },
+    {
+      "id": "21-21-47-199-0-65",
+      "codes": [
+        21,
+        21,
+        47,
+        199,
+        0,
+        65
+      ],
+      "name": "GOBERNABILIDAD EN DATOS",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INNOVACIÓN ADMINISTRATIVA",
+      "amounts": [
+        383242116,
+        383242116,
+        383242116
+      ],
+      "pdfPage": 258
+    },
+    {
+      "id": "21-21-47-199-0-80",
+      "codes": [
+        21,
+        21,
+        47,
+        199,
+        0,
+        80
+      ],
+      "name": "MODERNIZACIÓN DIGITAL",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INNOVACIÓN ADMINISTRATIVA",
+      "amounts": [
+        3288164742,
+        0,
+        0
+      ],
+      "pdfPage": 258
+    },
+    {
+      "id": "21-21-47-199-0-81",
+      "codes": [
+        21,
+        21,
+        47,
+        199,
+        0,
+        81
+      ],
+      "name": "GOBERNABILIDAD EN DATOS",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INNOVACIÓN ADMINISTRATIVA",
+      "amounts": [
+        417367554,
+        0,
+        0
+      ],
+      "pdfPage": 258
+    },
+    {
+      "id": "21-21-47-199-0-82",
+      "codes": [
+        21,
+        21,
+        47,
+        199,
+        0,
+        82
+      ],
+      "name": "ESTANDARIZACIÓN DE DATOS",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INNOVACIÓN ADMINISTRATIVA",
+      "amounts": [
+        346987927,
+        0,
+        0
+      ],
+      "pdfPage": 259
+    },
+    {
+      "id": "21-21-129-80-0-61",
+      "codes": [
+        21,
+        21,
+        129,
+        80,
+        0,
+        61
+      ],
+      "name": "MANT. PRE Y POST COLONIAS",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "COLONIAS DEPORTIVAS Y RECR.",
+      "amounts": [
+        14737656305,
+        14737656305,
+        14737656305
+      ],
+      "pdfPage": 259
+    },
+    {
+      "id": "21-21-131-84-0-1",
+      "codes": [
+        21,
+        21,
+        131,
+        84,
+        0,
+        1
+      ],
+      "name": "OBRAS EN POLIDEPORTIVOS",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INFRAESTRUCTURA DEPORTIVA",
+      "amounts": [
+        3403520585,
+        0,
+        0
+      ],
+      "pdfPage": 259
+    },
+    {
+      "id": "21-21-131-84-0-4",
+      "codes": [
+        21,
+        21,
+        131,
+        84,
+        0,
+        4
+      ],
+      "name": "PARQUES URBANOS",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INFRAESTRUCTURA DEPORTIVA",
+      "amounts": [
+        1551523078,
+        0,
+        0
+      ],
+      "pdfPage": 259
+    },
+    {
+      "id": "21-21-131-84-0-5",
+      "codes": [
+        21,
+        21,
+        131,
+        84,
+        0,
+        5
+      ],
+      "name": "PLATAF Y EQUIP PARQUES Y POLID",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INFRAESTRUCTURA DEPORTIVA",
+      "amounts": [
+        1107441638,
+        1107441638,
+        1107441638
+      ],
+      "pdfPage": 259
+    },
+    {
+      "id": "21-21-131-84-0-6",
+      "codes": [
+        21,
+        21,
+        131,
+        84,
+        0,
+        6
+      ],
+      "name": "PISTA ATLETISMO PQUE CHACABUCO",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INFRAESTRUCTURA DEPORTIVA",
+      "amounts": [
+        717068615,
+        0,
+        0
+      ],
+      "pdfPage": 259
+    },
+    {
+      "id": "21-21-131-84-0-62",
+      "codes": [
+        21,
+        21,
+        131,
+        84,
+        0,
+        62
+      ],
+      "name": "MANT CAMPO DE GOLF",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INFRAESTRUCTURA DEPORTIVA",
+      "amounts": [
+        713980204,
+        713980204,
+        713980204
+      ],
+      "pdfPage": 259
+    },
+    {
+      "id": "21-21-785-8-0-80",
+      "codes": [
+        21,
+        21,
+        785,
+        8,
+        0,
+        80
+      ],
+      "name": "INTELIGENCIA ARTIFICIAL",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "ACTIVIDADES COMUNES",
+      "amounts": [
+        2442554765,
+        0,
+        0
+      ],
+      "pdfPage": 259
+    },
+    {
+      "id": "21-21-785-41-0-80",
+      "codes": [
+        21,
+        21,
+        785,
+        41,
+        0,
+        80
+      ],
+      "name": "DESARROLLO SOFTWARE BIM",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "REGISTRO DE OBRAS E INSTAL",
+      "amounts": [
+        127260158,
+        0,
+        0
+      ],
+      "pdfPage": 259
+    },
+    {
+      "id": "21-21-2700-23-0-61",
+      "codes": [
+        21,
+        21,
+        2700,
+        23,
+        0,
+        61
+      ],
+      "name": "TRATAMIENTO PET",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "RECICLADO Y ECONOMIA CIRCULAR",
+      "amounts": [
+        954111126,
+        954111126,
+        954111126
+      ],
+      "pdfPage": 260
+    },
+    {
+      "id": "21-21-2701-24-0-1",
+      "codes": [
+        21,
+        21,
+        2701,
+        24,
+        0,
+        1
+      ],
+      "name": "OBRAS EN CENTROS VERDES",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "OPERACION DEL RECICLADO",
+      "amounts": [
+        4512271230,
+        0,
+        0
+      ],
+      "pdfPage": 260
+    },
+    {
+      "id": "21-21-2701-24-0-60",
+      "codes": [
+        21,
+        21,
+        2701,
+        24,
+        0,
+        60
+      ],
+      "name": "ACUMAR TRATAMIENTO RES. ORG",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "OPERACION DEL RECICLADO",
+      "amounts": [
+        1254646197,
+        1254646197,
+        1254646197
+      ],
+      "pdfPage": 260
+    },
+    {
+      "id": "21-21-2701-24-0-61",
+      "codes": [
+        21,
+        21,
+        2701,
+        24,
+        0,
+        61
+      ],
+      "name": "MANTENIMIENTO MRF CHILAVERT",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "OPERACION DEL RECICLADO",
+      "amounts": [
+        1254646197,
+        1254646197,
+        1254646197
+      ],
+      "pdfPage": 260
+    },
+    {
+      "id": "21-21-2701-24-0-62",
+      "codes": [
+        21,
+        21,
+        2701,
+        24,
+        0,
+        62
+      ],
+      "name": "MRF SALGUERO",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "OPERACION DEL RECICLADO",
+      "amounts": [
+        1254646197,
+        1254646197,
+        1254646197
+      ],
+      "pdfPage": 260
+    },
+    {
+      "id": "21-21-2701-24-0-63",
+      "codes": [
+        21,
+        21,
+        2701,
+        24,
+        0,
+        63
+      ],
+      "name": "MANTENIMIENTO DE FLOTA PESADA",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "OPERACION DEL RECICLADO",
+      "amounts": [
+        2225671464,
+        2225671464,
+        2225671464
+      ],
+      "pdfPage": 260
+    },
+    {
+      "id": "21-21-2702-25-0-60",
+      "codes": [
+        21,
+        21,
+        2702,
+        25,
+        0,
+        60
+      ],
+      "name": "A.CU.MAR - RIACHUELO",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "SERVICIOS DE HIGIENE URBANA",
+      "amounts": [
+        8213029340,
+        8213029340,
+        8213029340
+      ],
+      "pdfPage": 260
+    },
+    {
+      "id": "21-21-2702-25-0-61",
+      "codes": [
+        21,
+        21,
+        2702,
+        25,
+        0,
+        61
+      ],
+      "name": "DISPOSICION FINAL RESIDUOS SOL",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "SERVICIOS DE HIGIENE URBANA",
+      "amounts": [
+        156691069126,
+        156691069126,
+        156691069126
+      ],
+      "pdfPage": 260
+    },
+    {
+      "id": "21-21-2702-25-0-62",
+      "codes": [
+        21,
+        21,
+        2702,
+        25,
+        0,
+        62
+      ],
+      "name": "SERV DE LIMP DE ARROYOS",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "SERVICIOS DE HIGIENE URBANA",
+      "amounts": [
+        11920179354,
+        11920179354,
+        11920179354
+      ],
+      "pdfPage": 260
+    },
+    {
+      "id": "21-21-2702-25-0-63",
+      "codes": [
+        21,
+        21,
+        2702,
+        25,
+        0,
+        63
+      ],
+      "name": "CTROL CALIDAD SERV RECOLECCION",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "SERVICIOS DE HIGIENE URBANA",
+      "amounts": [
+        1164562104,
+        1164562104,
+        1164562104
+      ],
+      "pdfPage": 260
+    },
+    {
+      "id": "21-21-2702-25-0-64",
+      "codes": [
+        21,
+        21,
+        2702,
+        25,
+        0,
+        64
+      ],
+      "name": "IA EN SPHU",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "SERVICIOS DE HIGIENE URBANA",
+      "amounts": [
+        2294785980,
+        2294785980,
+        2294785980
+      ],
+      "pdfPage": 261
+    },
+    {
+      "id": "21-21-2702-25-0-65",
+      "codes": [
+        21,
+        21,
+        2702,
+        25,
+        0,
+        65
+      ],
+      "name": "SISTEMA GESTION RECLAMOS (SGR)",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "SERVICIOS DE HIGIENE URBANA",
+      "amounts": [
+        231872066,
+        231872066,
+        231872066
+      ],
+      "pdfPage": 261
+    },
+    {
+      "id": "21-21-2704-29-0-61",
+      "codes": [
+        21,
+        21,
+        2704,
+        29,
+        0,
+        61
+      ],
+      "name": "INSPECCIÓN DEL USO DEL ESPACIO",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "ORD., FISC. Y RECUP. ESP. PÚB.",
+      "amounts": [
+        14689882229,
+        14689882229,
+        14689882229
+      ],
+      "pdfPage": 261
+    },
+    {
+      "id": "21-21-7313-111-0-64",
+      "codes": [
+        21,
+        21,
+        7313,
+        111,
+        0,
+        64
+      ],
+      "name": "CIUDADANÍA DIGITAL",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "GOBIERNO E IDENTIDAD DIGITAL",
+      "amounts": [
+        1505849182,
+        1505849182,
+        1505849182
+      ],
+      "pdfPage": 261
+    },
+    {
+      "id": "21-21-7313-111-0-65",
+      "codes": [
+        21,
+        21,
+        7313,
+        111,
+        0,
+        65
+      ],
+      "name": "SIST.ATENCIÓN.CIUDADANA",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "GOBIERNO E IDENTIDAD DIGITAL",
+      "amounts": [
+        1051557137,
+        1051557137,
+        1051557137
+      ],
+      "pdfPage": 261
+    },
+    {
+      "id": "21-21-7313-111-0-67",
+      "codes": [
+        21,
+        21,
+        7313,
+        111,
+        0,
+        67
+      ],
+      "name": "CANALES DIGITALES",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "GOBIERNO E IDENTIDAD DIGITAL",
+      "amounts": [
+        3896672453,
+        3896672453,
+        3896672453
+      ],
+      "pdfPage": 261
+    },
+    {
+      "id": "21-21-7313-111-0-68",
+      "codes": [
+        21,
+        21,
+        7313,
+        111,
+        0,
+        68
+      ],
+      "name": "PROYECTOS DE IA",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "GOBIERNO E IDENTIDAD DIGITAL",
+      "amounts": [
+        620631029,
+        620631029,
+        620631029
+      ],
+      "pdfPage": 262
+    },
+    {
+      "id": "21-21-7313-111-0-80",
+      "codes": [
+        21,
+        21,
+        7313,
+        111,
+        0,
+        80
+      ],
+      "name": "CIUDADANÍA DIGITAL",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "GOBIERNO E IDENTIDAD DIGITAL",
+      "amounts": [
+        3013543961,
+        0,
+        0
+      ],
+      "pdfPage": 262
+    },
+    {
+      "id": "21-21-7313-111-0-81",
+      "codes": [
+        21,
+        21,
+        7313,
+        111,
+        0,
+        81
+      ],
+      "name": "SISTEMAS DE ATENCIÓN CIUDADANA",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "GOBIERNO E IDENTIDAD DIGITAL",
+      "amounts": [
+        1516186178,
+        0,
+        0
+      ],
+      "pdfPage": 262
+    },
+    {
+      "id": "21-21-7313-111-0-82",
+      "codes": [
+        21,
+        21,
+        7313,
+        111,
+        0,
+        82
+      ],
+      "name": "CANALES DIGITALES",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "GOBIERNO E IDENTIDAD DIGITAL",
+      "amounts": [
+        1639330140,
+        0,
+        0
+      ],
+      "pdfPage": 262
+    },
+    {
+      "id": "21-21-7313-111-0-83",
+      "codes": [
+        21,
+        21,
+        7313,
+        111,
+        0,
+        83
+      ],
+      "name": "PROYECTOS DE IA",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "GOBIERNO E IDENTIDAD DIGITAL",
+      "amounts": [
+        2074715254,
+        0,
+        0
+      ],
+      "pdfPage": 262
+    },
+    {
+      "id": "21-21-9765-88-0-1",
+      "codes": [
+        21,
+        21,
+        9765,
+        88,
+        0,
+        1
+      ],
+      "name": "READ. Y P. VALOR.AUTODROMO",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "AUTÓDROMO",
+      "amounts": [
+        15086646025,
+        0,
+        0
+      ],
+      "pdfPage": 262
+    },
+    {
+      "id": "21-270-682-96-0-61",
+      "codes": [
+        21,
+        270,
+        682,
+        96,
+        0,
+        61
+      ],
+      "name": "INFRAESTRUCTURA",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INFRAESTRUCTURA INFORMÁTICA",
+      "amounts": [
+        19440537855,
+        19440537855,
+        19440537855
+      ],
+      "pdfPage": 263
+    },
+    {
+      "id": "21-270-682-96-0-80",
+      "codes": [
+        21,
+        270,
+        682,
+        96,
+        0,
+        80
+      ],
+      "name": "INFRAESTRUCTURA",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "INFRAESTRUCTURA INFORMÁTICA",
+      "amounts": [
+        8237552620,
+        0,
+        0
+      ],
+      "pdfPage": 263
+    },
+    {
+      "id": "21-270-683-94-0-81",
+      "codes": [
+        21,
+        270,
+        683,
+        94,
+        0,
+        81
+      ],
+      "name": "INT. DE SISTEMAS",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "DES. Y CALIDAD DE APLIC.",
+      "amounts": [
+        5110702996,
+        0,
+        0
+      ],
+      "pdfPage": 263
+    },
+    {
+      "id": "21-270-687-98-0-1",
+      "codes": [
+        21,
+        270,
+        687,
+        98,
+        0,
+        1
+      ],
+      "name": "ACTIVOS DIGITALES",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "SEGURIDAD INFORMÁTICA",
+      "amounts": [
+        27529895,
+        0,
+        0
+      ],
+      "pdfPage": 263
+    },
+    {
+      "id": "21-270-687-98-0-62",
+      "codes": [
+        21,
+        270,
+        687,
+        98,
+        0,
+        62
+      ],
+      "name": "MANT. FIRMA DIGITAL",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "SEGURIDAD INFORMÁTICA",
+      "amounts": [
+        491368415,
+        491368415,
+        491368415
+      ],
+      "pdfPage": 263
+    },
+    {
+      "id": "21-270-687-98-0-81",
+      "codes": [
+        21,
+        270,
+        687,
+        98,
+        0,
+        81
+      ],
+      "name": "SEGURIDAD INFORMATICA",
+      "jurisdiction": "JEFATURA DE GABINETE DE MINISTROS",
+      "program": "SEGURIDAD INFORMÁTICA",
+      "amounts": [
+        5608795433,
+        0,
+        0
+      ],
+      "pdfPage": 263
+    },
+    {
+      "id": "24-261-3181-2-0-62",
+      "codes": [
+        24,
+        261,
+        3181,
+        2,
+        0,
+        62
+      ],
+      "name": "ACTAS DIGIT., SIFER Y ARCHIVO",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "ACTIVIDADES COMUNES",
+      "amounts": [
+        582670996,
+        582670996,
+        582670996
+      ],
+      "pdfPage": 264
+    },
+    {
+      "id": "24-261-3181-2-0-63",
+      "codes": [
+        24,
+        261,
+        3181,
+        2,
+        0,
+        63
+      ],
+      "name": "SISTEMA DE HABILITACIONES",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "ACTIVIDADES COMUNES",
+      "amounts": [
+        1346713450,
+        1346713450,
+        1346713450
+      ],
+      "pdfPage": 264
+    },
+    {
+      "id": "24-261-3181-2-0-64",
+      "codes": [
+        24,
+        261,
+        3181,
+        2,
+        0,
+        64
+      ],
+      "name": "DIRECTOR DE OBRA Y SIGMA",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "ACTIVIDADES COMUNES",
+      "amounts": [
+        849391472,
+        849391472,
+        849391472
+      ],
+      "pdfPage": 264
+    },
+    {
+      "id": "24-261-3181-2-0-65",
+      "codes": [
+        24,
+        261,
+        3181,
+        2,
+        0,
+        65
+      ],
+      "name": "SIST DE GEST. DE INSP LIZA",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "ACTIVIDADES COMUNES",
+      "amounts": [
+        771000873,
+        771000873,
+        771000873
+      ],
+      "pdfPage": 264
+    },
+    {
+      "id": "24-261-3181-2-0-66",
+      "codes": [
+        24,
+        261,
+        3181,
+        2,
+        0,
+        66
+      ],
+      "name": "SOPORTE DE LD",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "ACTIVIDADES COMUNES",
+      "amounts": [
+        386678763,
+        386678763,
+        386678763
+      ],
+      "pdfPage": 264
+    },
+    {
+      "id": "24-261-3181-2-0-67",
+      "codes": [
+        24,
+        261,
+        3181,
+        2,
+        0,
+        67
+      ],
+      "name": "SISCOR",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "ACTIVIDADES COMUNES",
+      "amounts": [
+        204532574,
+        204532574,
+        204532574
+      ],
+      "pdfPage": 264
+    },
+    {
+      "id": "24-261-3181-2-0-68",
+      "codes": [
+        24,
+        261,
+        3181,
+        2,
+        0,
+        68
+      ],
+      "name": "SISTEMA DE TICKETS",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "ACTIVIDADES COMUNES",
+      "amounts": [
+        255666548,
+        255666548,
+        255666548
+      ],
+      "pdfPage": 264
+    },
+    {
+      "id": "24-261-3181-2-0-69",
+      "codes": [
+        24,
+        261,
+        3181,
+        2,
+        0,
+        69
+      ],
+      "name": "GESTION DE DENUNCIAS",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "ACTIVIDADES COMUNES",
+      "amounts": [
+        361340288,
+        361340288,
+        361340288
+      ],
+      "pdfPage": 265
+    },
+    {
+      "id": "24-261-3182-92-0-61",
+      "codes": [
+        24,
+        261,
+        3182,
+        92,
+        0,
+        61
+      ],
+      "name": "SERV DE ALQ DE FLOTA VEHICULAR",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "FISCALIZACIÓN ACTIV. COMERC.",
+      "amounts": [
+        10179639712,
+        10179639712,
+        10179639712
+      ],
+      "pdfPage": 265
+    },
+    {
+      "id": "24-263-2630-16-0-80",
+      "codes": [
+        24,
+        263,
+        2630,
+        16,
+        0,
+        80
+      ],
+      "name": "INFRA. Y TECNO. PARA LA GAP.",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "APOYO AL SISTEMA PENITENCIARIO",
+      "amounts": [
+        8862385321,
+        0,
+        0
+      ],
+      "pdfPage": 265
+    },
+    {
+      "id": "24-263-2630-16-0-81",
+      "codes": [
+        24,
+        263,
+        2630,
+        16,
+        0,
+        81
+      ],
+      "name": "SIS. DE CIBERSEG. Y MONITOREO",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "APOYO AL SISTEMA PENITENCIARIO",
+      "amounts": [
+        12137614679,
+        0,
+        0
+      ],
+      "pdfPage": 265
+    },
+    {
+      "id": "24-263-2630-16-0-90",
+      "codes": [
+        24,
+        263,
+        2630,
+        16,
+        0,
+        90
+      ],
+      "name": "EQUIPAMIENTO",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "APOYO AL SISTEMA PENITENCIARIO",
+      "amounts": [
+        867372080,
+        0,
+        0
+      ],
+      "pdfPage": 265
+    },
+    {
+      "id": "24-263-2631-17-0-1",
+      "codes": [
+        24,
+        263,
+        2631,
+        17,
+        0,
+        1
+      ],
+      "name": "ALCAIDIA PEN 27 DE FEB",
+      "jurisdiction": "MINISTERIO DE JUSTICIA",
+      "program": "SERVICIO PENITENCIARIO Y DE RE",
+      "amounts": [
+        42885198132,
+        0,
+        0
+      ],
+      "pdfPage": 265
+    },
+    {
+      "id": "29-29-3202-1-0-61",
+      "codes": [
+        29,
+        29,
+        3202,
+        1,
+        0,
+        61
+      ],
+      "name": "MANTENIMIENTO EDIFICIOS MSEG",
+      "jurisdiction": "MINISTERIO DE SEGURIDAD",
+      "program": "ACTIVIDADES CENTRALES",
+      "amounts": [
+        539771392,
+        539771392,
+        539771392
+      ],
+      "pdfPage": 266
+    },
+    {
+      "id": "29-29-3204-100-0-1",
+      "codes": [
+        29,
+        29,
+        3204,
+        100,
+        0,
+        1
+      ],
+      "name": "CONST Y REM, COMIS, DEST Y DEP",
+      "jurisdiction": "MINISTERIO DE SEGURIDAD",
+      "program": "POLICÍA DE LA CIUDAD",
+      "amounts": [
+        44117707456,
+        0,
+        0
+      ],
+      "pdfPage": 266
+    },
+    {
+      "id": "29-29-3204-100-0-61",
+      "codes": [
+        29,
+        29,
+        3204,
+        100,
+        0,
+        61
+      ],
+      "name": "MANT INTEGR. EDIF. POLICIA CIU",
+      "jurisdiction": "MINISTERIO DE SEGURIDAD",
+      "program": "POLICÍA DE LA CIUDAD",
+      "amounts": [
+        14384246580,
+        14384246580,
+        14384246580
+      ],
+      "pdfPage": 266
+    },
+    {
+      "id": "29-29-3204-100-0-68",
+      "codes": [
+        29,
+        29,
+        3204,
+        100,
+        0,
+        68
+      ],
+      "name": "EQUIP. JEFAT CENTRAL POL. METR",
+      "jurisdiction": "MINISTERIO DE SEGURIDAD",
+      "program": "POLICÍA DE LA CIUDAD",
+      "amounts": [
+        136919440840,
+        136919440840,
+        136919440840
+      ],
+      "pdfPage": 266
+    },
+    {
+      "id": "29-29-3204-100-0-70",
+      "codes": [
+        29,
+        29,
+        3204,
+        100,
+        0,
+        70
+      ],
+      "name": "SEGURIDAD DIGITAL",
+      "jurisdiction": "MINISTERIO DE SEGURIDAD",
+      "program": "POLICÍA DE LA CIUDAD",
+      "amounts": [
+        54239986959,
+        54239986959,
+        54239986959
+      ],
+      "pdfPage": 266
+    },
+    {
+      "id": "29-29-3204-100-0-72",
+      "codes": [
+        29,
+        29,
+        3204,
+        100,
+        0,
+        72
+      ],
+      "name": "MANTENIMIENTO FLOTA POLICIA",
+      "jurisdiction": "MINISTERIO DE SEGURIDAD",
+      "program": "POLICÍA DE LA CIUDAD",
+      "amounts": [
+        60289652262,
+        60289652262,
+        60289652262
+      ],
+      "pdfPage": 266
+    },
+    {
+      "id": "29-29-3204-100-0-73",
+      "codes": [
+        29,
+        29,
+        3204,
+        100,
+        0,
+        73
+      ],
+      "name": "MANTENIM. CAMARAS DE SEGURIDAD",
+      "jurisdiction": "MINISTERIO DE SEGURIDAD",
+      "program": "POLICÍA DE LA CIUDAD",
+      "amounts": [
+        56868077003,
+        56868077003,
+        56868077003
+      ],
+      "pdfPage": 266
+    },
+    {
+      "id": "29-29-3204-100-0-80",
+      "codes": [
+        29,
+        29,
+        3204,
+        100,
+        0,
+        80
+      ],
+      "name": "SISTEMAS DE LA PC",
+      "jurisdiction": "MINISTERIO DE SEGURIDAD",
+      "program": "POLICÍA DE LA CIUDAD",
+      "amounts": [
+        5268260438,
+        0,
+        0
+      ],
+      "pdfPage": 266
+    },
+    {
+      "id": "29-29-3204-100-0-90",
+      "codes": [
+        29,
+        29,
+        3204,
+        100,
+        0,
+        90
+      ],
+      "name": "EQUIPAMIENTO EMERGENCIAS",
+      "jurisdiction": "MINISTERIO DE SEGURIDAD",
+      "program": "POLICÍA DE LA CIUDAD",
+      "amounts": [
+        16783428281,
+        0,
+        0
+      ],
+      "pdfPage": 267
+    },
+    {
+      "id": "29-29-3206-7-0-62",
+      "codes": [
+        29,
+        29,
+        3206,
+        7,
+        0,
+        62
+      ],
+      "name": "EQUIP CUCC",
+      "jurisdiction": "MINISTERIO DE SEGURIDAD",
+      "program": "ACTIVIDADES COMUNES",
+      "amounts": [
+        110451243,
+        110451243,
+        110451243
+      ],
+      "pdfPage": 267
+    },
+    {
+      "id": "29-264-3224-61-0-61",
+      "codes": [
+        29,
+        264,
+        3224,
+        61,
+        0,
+        61
+      ],
+      "name": "MANTENIMIENTO ISSP",
+      "jurisdiction": "MINISTERIO DE SEGURIDAD",
+      "program": "ACCIONES ISSP",
+      "amounts": [
+        440604680,
+        440604680,
+        440604680
+      ],
+      "pdfPage": 267
+    },
+    {
+      "id": "31-31-3116-38-0-2",
+      "codes": [
+        31,
+        31,
+        3116,
+        38,
+        0,
+        2
+      ],
+      "name": "COMPONENTES MEDIDAS ESTRUCTURA",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "PROGRAMA GESTION RIESGO HID",
+      "amounts": [
+        1152755242,
+        0,
+        0
+      ],
+      "pdfPage": 268
+    },
+    {
+      "id": "31-31-3116-38-0-8",
+      "codes": [
+        31,
+        31,
+        3116,
+        38,
+        0,
+        8
+      ],
+      "name": "REGULACIION Y EFICACIA MEDRANO",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "PROGRAMA GESTION RIESGO HID",
+      "amounts": [
+        3930202974,
+        0,
+        0
+      ],
+      "pdfPage": 268
+    },
+    {
+      "id": "31-31-3116-38-0-9",
+      "codes": [
+        31,
+        31,
+        3116,
+        38,
+        0,
+        9
+      ],
+      "name": "RAMALES JOSE MARTI Y ZUVIRIA",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "PROGRAMA GESTION RIESGO HID",
+      "amounts": [
+        8373622084,
+        0,
+        0
+      ],
+      "pdfPage": 268
+    },
+    {
+      "id": "31-31-3116-38-0-10",
+      "codes": [
+        31,
+        31,
+        3116,
+        38,
+        0,
+        10
+      ],
+      "name": "RAMALES DE LAS CUENCAS DEL SUR",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "PROGRAMA GESTION RIESGO HID",
+      "amounts": [
+        698901303,
+        0,
+        0
+      ],
+      "pdfPage": 268
+    },
+    {
+      "id": "31-31-3116-85-0-2",
+      "codes": [
+        31,
+        31,
+        3116,
+        85,
+        0,
+        2
+      ],
+      "name": "TERMINALES DE COMBIS",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "INFRAEST. SISTEMAS TRANSPORTTE",
+      "amounts": [
+        14161532,
+        0,
+        0
+      ],
+      "pdfPage": 268
+    },
+    {
+      "id": "31-31-3116-85-0-4",
+      "codes": [
+        31,
+        31,
+        3116,
+        85,
+        0,
+        4
+      ],
+      "name": "OPTIM.RED.CICLOV.Y BICISEND.",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "INFRAEST. SISTEMAS TRANSPORTTE",
+      "amounts": [
+        562895124,
+        0,
+        0
+      ],
+      "pdfPage": 268
+    },
+    {
+      "id": "31-31-3116-85-0-5",
+      "codes": [
+        31,
+        31,
+        3116,
+        85,
+        0,
+        5
+      ],
+      "name": "OBR.COMP.ORDENAM.ESPAC.VIAL",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "INFRAEST. SISTEMAS TRANSPORTTE",
+      "amounts": [
+        1315840496,
+        0,
+        0
+      ],
+      "pdfPage": 268
+    },
+    {
+      "id": "31-31-3116-85-0-9",
+      "codes": [
+        31,
+        31,
+        3116,
+        85,
+        0,
+        9
+      ],
+      "name": "MEJ.MOVILIDAD BORDES COSTEROS",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "INFRAEST. SISTEMAS TRANSPORTTE",
+      "amounts": [
+        633373709,
+        0,
+        0
+      ],
+      "pdfPage": 268
+    },
+    {
+      "id": "31-31-3116-85-0-13",
+      "codes": [
+        31,
+        31,
+        3116,
+        85,
+        0,
+        13
+      ],
+      "name": "PLAYON FERROVIARIO PALERMO",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "INFRAEST. SISTEMAS TRANSPORTTE",
+      "amounts": [
+        1495717985,
+        0,
+        0
+      ],
+      "pdfPage": 268
+    },
+    {
+      "id": "31-31-3116-87-0-4",
+      "codes": [
+        31,
+        31,
+        3116,
+        87,
+        0,
+        4
+      ],
+      "name": "GIGENA",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "OBRAS DE INGENIERÍA Y ARQUITEC",
+      "amounts": [
+        10518540722,
+        0,
+        0
+      ],
+      "pdfPage": 268
+    },
+    {
+      "id": "31-31-3116-87-0-7",
+      "codes": [
+        31,
+        31,
+        3116,
+        87,
+        0,
+        7
+      ],
+      "name": "CAMINABILIDAD LA BOCA",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "OBRAS DE INGENIERÍA Y ARQUITEC",
+      "amounts": [
+        74754280,
+        0,
+        0
+      ],
+      "pdfPage": 269
+    },
+    {
+      "id": "31-31-3116-87-0-22",
+      "codes": [
+        31,
+        31,
+        3116,
+        87,
+        0,
+        22
+      ],
+      "name": "TORRE ESPACIAL P.DE LA CIUDAD",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "OBRAS DE INGENIERÍA Y ARQUITEC",
+      "amounts": [
+        4124290258,
+        0,
+        0
+      ],
+      "pdfPage": 269
+    },
+    {
+      "id": "31-31-3125-33-0-2",
+      "codes": [
+        31,
+        31,
+        3125,
+        33,
+        0,
+        2
+      ],
+      "name": "P.E ING.-ARQUIT.LINEA F SUBTE",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "DESARROLLOS Y PROYECTOS",
+      "amounts": [
+        368930498582,
+        487862431831,
+        435591456992
+      ],
+      "pdfPage": 269
+    },
+    {
+      "id": "31-31-3126-40-0-1",
+      "codes": [
+        31,
+        31,
+        3126,
+        40,
+        0,
+        1
+      ],
+      "name": "CONST.AMPL.Y.MODERNIZ.RED.SUBT",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "SUBTERRÁNEOS DE BS.AS.",
+      "amounts": [
+        548176187079,
+        214717191914,
+        98373189529
+      ],
+      "pdfPage": 269
+    },
+    {
+      "id": "31-31-3126-40-0-61",
+      "codes": [
+        31,
+        31,
+        3126,
+        40,
+        0,
+        61
+      ],
+      "name": "MANTENIMIENTO DE REDES",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "SUBTERRÁNEOS DE BS.AS.",
+      "amounts": [
+        71729473,
+        71729473,
+        71729473
+      ],
+      "pdfPage": 269
+    },
+    {
+      "id": "31-31-3134-50-0-61",
+      "codes": [
+        31,
+        31,
+        3134,
+        50,
+        0,
+        61
+      ],
+      "name": "MANTENIMIENTO S.T.P.B.",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "MICROMOVILIDAD",
+      "amounts": [
+        11843115073,
+        11843115073,
+        11843115073
+      ],
+      "pdfPage": 269
+    },
+    {
+      "id": "31-31-3134-51-0-61",
+      "codes": [
+        31,
+        31,
+        3134,
+        51,
+        0,
+        61
+      ],
+      "name": "BA TAXI",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "REG. Y OP. SERV. TRANSP",
+      "amounts": [
+        339849979,
+        339849979,
+        339849979
+      ],
+      "pdfPage": 269
+    },
+    {
+      "id": "31-31-3638-60-0-4",
+      "codes": [
+        31,
+        31,
+        3638,
+        60,
+        0,
+        4
+      ],
+      "name": "ESTUD.MEJORAS CAPACIDAD VIAL",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "PLAN.MOV.Y SEG.VIAL",
+      "amounts": [
+        1429027419,
+        0,
+        0
+      ],
+      "pdfPage": 270
+    },
+    {
+      "id": "31-31-3638-74-0-1",
+      "codes": [
+        31,
+        31,
+        3638,
+        74,
+        0,
+        1
+      ],
+      "name": "MINIBUS ETAPAI-SISTEMA MUBE",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "SIST.MOVILID.URBANA",
+      "amounts": [
+        2716980939,
+        0,
+        0
+      ],
+      "pdfPage": 270
+    },
+    {
+      "id": "31-31-3638-74-0-90",
+      "codes": [
+        31,
+        31,
+        3638,
+        74,
+        0,
+        90
+      ],
+      "name": "CORREDOR COSTERO-TRAMBUS-T1",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "SIST.MOVILID.URBANA",
+      "amounts": [
+        29512658742,
+        0,
+        0
+      ],
+      "pdfPage": 270
+    },
+    {
+      "id": "31-31-3640-63-0-80",
+      "codes": [
+        31,
+        31,
+        3640,
+        63,
+        0,
+        80
+      ],
+      "name": "TECNOLOGÍA APLICADA TRANSPORTE",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "COORDINACION GESTION MOV",
+      "amounts": [
+        3903376813,
+        0,
+        0
+      ],
+      "pdfPage": 270
+    },
+    {
+      "id": "31-31-3643-65-0-61",
+      "codes": [
+        31,
+        31,
+        3643,
+        65,
+        0,
+        61
+      ],
+      "name": "OBRAS SEÑALAMIENTO VERTICAL",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "SEÑALAMIENTO VIAL",
+      "amounts": [
+        7327976164,
+        7327976164,
+        7327976164
+      ],
+      "pdfPage": 270
+    },
+    {
+      "id": "31-31-3643-66-0-1",
+      "codes": [
+        31,
+        31,
+        3643,
+        66,
+        0,
+        1
+      ],
+      "name": "SEÑALAM. VIAL POR DEMARC.HORIZ",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "DEMARCACION HORIZONTAL",
+      "amounts": [
+        985385969,
+        0,
+        0
+      ],
+      "pdfPage": 270
+    },
+    {
+      "id": "31-31-3643-66-0-61",
+      "codes": [
+        31,
+        31,
+        3643,
+        66,
+        0,
+        61
+      ],
+      "name": "OBRS DE DEMARCACIÓN HORIZONTAL",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "DEMARCACION HORIZONTAL",
+      "amounts": [
+        6246687699,
+        6246687699,
+        6246687699
+      ],
+      "pdfPage": 270
+    },
+    {
+      "id": "31-31-3643-70-0-60",
+      "codes": [
+        31,
+        31,
+        3643,
+        70,
+        0,
+        60
+      ],
+      "name": "A.CU.MAR - CEN.CON.CEN.TRANSIT",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "SEÑALIZACION LUMINOSA",
+      "amounts": [
+        8363158919,
+        8363158919,
+        8363158919
+      ],
+      "pdfPage": 270
+    },
+    {
+      "id": "31-31-3643-70-0-61",
+      "codes": [
+        31,
+        31,
+        3643,
+        70,
+        0,
+        61
+      ],
+      "name": "MEJ.INFRAEST.S.L. - D.H. - S.V",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "SEÑALIZACION LUMINOSA",
+      "amounts": [
+        2228546272,
+        2228546272,
+        2228546272
+      ],
+      "pdfPage": 271
+    },
+    {
+      "id": "31-31-3643-70-0-62",
+      "codes": [
+        31,
+        31,
+        3643,
+        70,
+        0,
+        62
+      ],
+      "name": "CENTRO CONTROL CENT. TRANSITO",
+      "jurisdiction": "MINISTERIO DE MOVILIDAD E INFRAESTRUCTURA",
+      "program": "SEÑALIZACION LUMINOSA",
+      "amounts": [
+        32907642159,
+        32907642159,
+        32907642159
+      ],
+      "pdfPage": 271
+    },
+    {
+      "id": "35-35-1018-92-0-61",
+      "codes": [
+        35,
+        35,
+        1018,
+        92,
+        0,
+        61
+      ],
+      "name": "MERCADOS DE MEPHU",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "PERMISOS Y FERIAS",
+      "amounts": [
+        602312959,
+        602312959,
+        602312959
+      ],
+      "pdfPage": 272
+    },
+    {
+      "id": "35-35-1018-92-0-90",
+      "codes": [
+        35,
+        35,
+        1018,
+        92,
+        0,
+        90
+      ],
+      "name": "PUESTOS DE FERIAS",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "PERMISOS Y FERIAS",
+      "amounts": [
+        3804779729,
+        0,
+        0
+      ],
+      "pdfPage": 272
+    },
+    {
+      "id": "35-35-2355-17-0-1",
+      "codes": [
+        35,
+        35,
+        2355,
+        17,
+        0,
+        1
+      ],
+      "name": "FACHADAS AVENIDA DE MAYO",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "REGENERACIÓN URBANA",
+      "amounts": [
+        7355872888,
+        0,
+        0
+      ],
+      "pdfPage": 272
+    },
+    {
+      "id": "35-35-2355-17-0-2",
+      "codes": [
+        35,
+        35,
+        2355,
+        17,
+        0,
+        2
+      ],
+      "name": "FUENTE MONUMENTAL",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "REGENERACIÓN URBANA",
+      "amounts": [
+        1091989979,
+        0,
+        0
+      ],
+      "pdfPage": 272
+    },
+    {
+      "id": "35-35-2355-17-0-3",
+      "codes": [
+        35,
+        35,
+        2355,
+        17,
+        0,
+        3
+      ],
+      "name": "CAPILLA NUESTRA SRA DEL HUERTO",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "REGENERACIÓN URBANA",
+      "amounts": [
+        830986510,
+        0,
+        0
+      ],
+      "pdfPage": 272
+    },
+    {
+      "id": "35-35-2355-17-0-4",
+      "codes": [
+        35,
+        35,
+        2355,
+        17,
+        0,
+        4
+      ],
+      "name": "PLAYON FERROVIARIO URQUIZA",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "REGENERACIÓN URBANA",
+      "amounts": [
+        3051060902,
+        0,
+        0
+      ],
+      "pdfPage": 272
+    },
+    {
+      "id": "35-35-2504-79-0-60",
+      "codes": [
+        35,
+        35,
+        2504,
+        79,
+        0,
+        60
+      ],
+      "name": "A.CU.MAR - MEJ.SIST.PLUVIAL",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "MANT. RED PLUVIAL",
+      "amounts": [
+        22591852639,
+        22591852639,
+        22591852639
+      ],
+      "pdfPage": 272
+    },
+    {
+      "id": "35-35-2504-79-0-61",
+      "codes": [
+        35,
+        35,
+        2504,
+        79,
+        0,
+        61
+      ],
+      "name": "MEJORAMIENTO DEL SISTEMA PLUVI",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "MANT. RED PLUVIAL",
+      "amounts": [
+        140709890892,
+        140709890892,
+        140709890892
+      ],
+      "pdfPage": 272
+    },
+    {
+      "id": "35-35-3137-27-0-61",
+      "codes": [
+        35,
+        35,
+        3137,
+        27,
+        0,
+        61
+      ],
+      "name": "PARQUE DE LA CIUDAD",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "PARQUE DE LA CIUDAD",
+      "amounts": [
+        2428060027,
+        2428060027,
+        2428060027
+      ],
+      "pdfPage": 273
+    },
+    {
+      "id": "35-35-3143-5-0-61",
+      "codes": [
+        35,
+        35,
+        3143,
+        5,
+        0,
+        61
+      ],
+      "name": "CONS SECTOR YPF- BARRIO MUGICA",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "ACTIVIDADES COMUNES",
+      "amounts": [
+        1011339362,
+        1011339362,
+        1011339362
+      ],
+      "pdfPage": 273
+    },
+    {
+      "id": "35-35-7164-24-0-80",
+      "codes": [
+        35,
+        35,
+        7164,
+        24,
+        0,
+        80
+      ],
+      "name": "SIGEP",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "MONITOREO Y SISTEMAS",
+      "amounts": [
+        1472203502,
+        0,
+        0
+      ],
+      "pdfPage": 273
+    },
+    {
+      "id": "35-35-7166-91-0-61",
+      "codes": [
+        35,
+        35,
+        7166,
+        91,
+        0,
+        61
+      ],
+      "name": "NUEVO PLAN DE VEREDAS",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "OBRAS VÍAS PEATONALES",
+      "amounts": [
+        137869480089,
+        137869480089,
+        137869480089
+      ],
+      "pdfPage": 274
+    },
+    {
+      "id": "35-35-7406-321-0-61",
+      "codes": [
+        35,
+        35,
+        7406,
+        321,
+        0,
+        61
+      ],
+      "name": "MICROCENTRO Y EJE CIVICO",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "CONSERVACION DEL PAISAJE URB.",
+      "amounts": [
+        6855243488,
+        6855243488,
+        6855243488
+      ],
+      "pdfPage": 274
+    },
+    {
+      "id": "35-35-7406-321-0-62",
+      "codes": [
+        35,
+        35,
+        7406,
+        321,
+        0,
+        62
+      ],
+      "name": "AREAS VERDES",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "CONSERVACION DEL PAISAJE URB.",
+      "amounts": [
+        2118165520,
+        2118165520,
+        2118165520
+      ],
+      "pdfPage": 274
+    },
+    {
+      "id": "35-35-7406-321-0-63",
+      "codes": [
+        35,
+        35,
+        7406,
+        321,
+        0,
+        63
+      ],
+      "name": "FUENTES",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "CONSERVACION DEL PAISAJE URB.",
+      "amounts": [
+        811212327,
+        811212327,
+        811212327
+      ],
+      "pdfPage": 274
+    },
+    {
+      "id": "35-35-8807-37-0-61",
+      "codes": [
+        35,
+        35,
+        8807,
+        37,
+        0,
+        61
+      ],
+      "name": "MANTENIMIENTO Y OPTIMIZACIÓN D",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "MANT Y OPT DEL ALUM.PCO.",
+      "amounts": [
+        119680715914,
+        119680715914,
+        119680715914
+      ],
+      "pdfPage": 274
+    },
+    {
+      "id": "35-351-8811-88-0-61",
+      "codes": [
+        35,
+        351,
+        8811,
+        88,
+        0,
+        61
+      ],
+      "name": "FUELLE - PREVIAL I",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "MEJ. VÍAS DE TRANSITO",
+      "amounts": [
+        298617620422,
+        298617620422,
+        298617620422
+      ],
+      "pdfPage": 274
+    },
+    {
+      "id": "35-351-8811-88-0-62",
+      "codes": [
+        35,
+        351,
+        8811,
+        88,
+        0,
+        62
+      ],
+      "name": "OBRAS ESTRUCTURALES EN PUENTES",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "MEJ. VÍAS DE TRANSITO",
+      "amounts": [
+        12635607082,
+        12635607082,
+        12635607082
+      ],
+      "pdfPage": 275
+    },
+    {
+      "id": "35-351-8811-88-0-63",
+      "codes": [
+        35,
+        351,
+        8811,
+        88,
+        0,
+        63
+      ],
+      "name": "MANT. INT. METROBUS",
+      "jurisdiction": "MINISTERIO DE ESPACIO PUBLICO E HIGIENE URBANA",
+      "program": "MEJ. VÍAS DE TRANSITO",
+      "amounts": [
+        26451280969,
+        26451280969,
+        26451280969
+      ],
+      "pdfPage": 275
+    },
+    {
+      "id": "40-40-404-22-0-7",
+      "codes": [
+        40,
+        40,
+        404,
+        22,
+        0,
+        7
+      ],
+      "name": "OBRAS HOSP SALUD MENTAL",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "RECURSOS FÍSICOS EN SALUD",
+      "amounts": [
+        4023973041,
+        0,
+        0
+      ],
+      "pdfPage": 276
+    },
+    {
+      "id": "40-40-404-22-0-9",
+      "codes": [
+        40,
+        40,
+        404,
+        22,
+        0,
+        9
+      ],
+      "name": "OBRAS EN HOSPITALES MONOVALENT",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "RECURSOS FÍSICOS EN SALUD",
+      "amounts": [
+        3353310868,
+        0,
+        0
+      ],
+      "pdfPage": 276
+    },
+    {
+      "id": "40-40-404-22-0-10",
+      "codes": [
+        40,
+        40,
+        404,
+        22,
+        0,
+        10
+      ],
+      "name": "OBRAS EDIFICIOS ADM SALUD",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "RECURSOS FÍSICOS EN SALUD",
+      "amounts": [
+        14683353554,
+        0,
+        0
+      ],
+      "pdfPage": 276
+    },
+    {
+      "id": "40-40-404-22-0-14",
+      "codes": [
+        40,
+        40,
+        404,
+        22,
+        0,
+        14
+      ],
+      "name": "OBRAS EN HOSPIT GRAL DE AGUDOS",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "RECURSOS FÍSICOS EN SALUD",
+      "amounts": [
+        126428377000,
+        0,
+        0
+      ],
+      "pdfPage": 276
+    },
+    {
+      "id": "40-40-404-22-0-16",
+      "codes": [
+        40,
+        40,
+        404,
+        22,
+        0,
+        16
+      ],
+      "name": "PLAN DE TERMOMECANICA",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "RECURSOS FÍSICOS EN SALUD",
+      "amounts": [
+        10278347487,
+        0,
+        0
+      ],
+      "pdfPage": 277
+    },
+    {
+      "id": "40-40-404-22-0-21",
+      "codes": [
+        40,
+        40,
+        404,
+        22,
+        0,
+        21
+      ],
+      "name": "EMERGENCIAS EN EFECTORES",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "RECURSOS FÍSICOS EN SALUD",
+      "amounts": [
+        26430036397,
+        0,
+        0
+      ],
+      "pdfPage": 277
+    },
+    {
+      "id": "40-40-404-22-0-26",
+      "codes": [
+        40,
+        40,
+        404,
+        22,
+        0,
+        26
+      ],
+      "name": "REMOL DE AREAS DE DIAG Y TRAT",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "RECURSOS FÍSICOS EN SALUD",
+      "amounts": [
+        9689471593,
+        0,
+        0
+      ],
+      "pdfPage": 277
+    },
+    {
+      "id": "40-40-410-52-10-65",
+      "codes": [
+        40,
+        40,
+        410,
+        52,
+        10,
+        65
+      ],
+      "name": "PUE. EN VALOR H T ALVAREZ",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        3335500696,
+        3335500696,
+        3335500696
+      ],
+      "pdfPage": 277
+    },
+    {
+      "id": "40-40-411-85-11-65",
+      "codes": [
+        40,
+        40,
+        411,
+        85,
+        11,
+        65
+      ],
+      "name": "PUE. EN VALOR H T. DE ALVEAR",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN DE SALUD MENTAL",
+      "amounts": [
+        1773197662,
+        1773197662,
+        1773197662
+      ],
+      "pdfPage": 278
+    },
+    {
+      "id": "40-40-412-52-12-65",
+      "codes": [
+        40,
+        40,
+        412,
+        52,
+        12,
+        65
+      ],
+      "name": "PUE. EN VALOR H C. ARGERICH",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        6812493779,
+        6812493779,
+        6812493779
+      ],
+      "pdfPage": 278
+    },
+    {
+      "id": "40-40-413-85-13-65",
+      "codes": [
+        40,
+        40,
+        413,
+        85,
+        13,
+        65
+      ],
+      "name": "P VALOR S. HOS BORDA",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN DE SALUD MENTAL",
+      "amounts": [
+        7130134963,
+        7130134963,
+        7130134963
+      ],
+      "pdfPage": 278
+    },
+    {
+      "id": "40-40-414-54-14-65",
+      "codes": [
+        40,
+        40,
+        414,
+        54,
+        14,
+        65
+      ],
+      "name": "PUE. EN VALOR H M. CURIE",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "AT. MÉDICA PATOLOGÍAS ESPECIF.",
+      "amounts": [
+        1303063373,
+        1303063373,
+        1303063373
+      ],
+      "pdfPage": 278
+    },
+    {
+      "id": "40-40-415-57-15-65",
+      "codes": [
+        40,
+        40,
+        415,
+        57,
+        15,
+        65
+      ],
+      "name": "PUE. EN VALOR H ODONT J. DUEÑA",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN ODONTOLÓGICA GENERAL",
+      "amounts": [
+        849472741,
+        849472741,
+        849472741
+      ],
+      "pdfPage": 278
+    },
+    {
+      "id": "40-40-416-52-16-65",
+      "codes": [
+        40,
+        40,
+        416,
+        52,
+        16,
+        65
+      ],
+      "name": "PUE. EN VALOR H A. G. DURAND",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        10901629828,
+        10901629828,
+        10901629828
+      ],
+      "pdfPage": 278
+    },
+    {
+      "id": "40-40-417-55-17-65",
+      "codes": [
+        40,
+        40,
+        417,
+        55,
+        17,
+        65
+      ],
+      "name": "PUE. EN VALOR H P. ELIZALDE",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENC. MÉDICA MATERNO-INFANTIL",
+      "amounts": [
+        8496554122,
+        8496554122,
+        8496554122
+      ],
+      "pdfPage": 279
+    },
+    {
+      "id": "40-40-418-52-18-65",
+      "codes": [
+        40,
+        40,
+        418,
+        52,
+        18,
+        65
+      ],
+      "name": "PUE. EN VALOR H J. A. FERNADEZ",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        5964691265,
+        5964691265,
+        5964691265
+      ],
+      "pdfPage": 279
+    },
+    {
+      "id": "40-40-419-59-19-65",
+      "codes": [
+        40,
+        40,
+        419,
+        59,
+        19,
+        65
+      ],
+      "name": "PUE. EN VALOR H M. FERRER",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN DE REHABILITACIÓN",
+      "amounts": [
+        1660797456,
+        1660797456,
+        1660797456
+      ],
+      "pdfPage": 279
+    },
+    {
+      "id": "40-40-420-55-20-65",
+      "codes": [
+        40,
+        40,
+        420,
+        55,
+        20,
+        65
+      ],
+      "name": "PUE. EN VALOR H R GUTIERREZ",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENC. MÉDICA MATERNO-INFANTIL",
+      "amounts": [
+        9913388798,
+        9913388798,
+        9913388798
+      ],
+      "pdfPage": 279
+    },
+    {
+      "id": "40-40-421-56-21-65",
+      "codes": [
+        40,
+        40,
+        421,
+        56,
+        21,
+        65
+      ],
+      "name": "PUE. EN VALOR H P. LAGLEYZE",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA OFTALMOLÓGICA",
+      "amounts": [
+        876064372,
+        876064372,
+        876064372
+      ],
+      "pdfPage": 279
+    },
+    {
+      "id": "40-40-422-85-22-65",
+      "codes": [
+        40,
+        40,
+        422,
+        85,
+        22,
+        65
+      ],
+      "name": "PTA EN VALOR B MOYANO",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN DE SALUD MENTAL",
+      "amounts": [
+        5053070965,
+        5053070965,
+        5053070965
+      ],
+      "pdfPage": 280
+    },
+    {
+      "id": "40-40-423-54-23-65",
+      "codes": [
+        40,
+        40,
+        423,
+        54,
+        23,
+        65
+      ],
+      "name": "PUE. EN VALOR H F. J. MUÑIZ",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "AT. MÉDICA PATOLOGÍAS ESPECIF.",
+      "amounts": [
+        8861992113,
+        8861992113,
+        8861992113
+      ],
+      "pdfPage": 280
+    },
+    {
+      "id": "40-40-424-57-24-65",
+      "codes": [
+        40,
+        40,
+        424,
+        57,
+        24,
+        65
+      ],
+      "name": "PTA EN VALOR ODONTOLOG.",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN ODONTOLÓGICA GENERAL",
+      "amounts": [
+        598768376,
+        598768376,
+        598768376
+      ],
+      "pdfPage": 280
+    },
+    {
+      "id": "40-40-425-52-25-65",
+      "codes": [
+        40,
+        40,
+        425,
+        52,
+        25,
+        65
+      ],
+      "name": "PUE. EN VALOR J. M. PENNA",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        4192092926,
+        4192092926,
+        4192092926
+      ],
+      "pdfPage": 280
+    },
+    {
+      "id": "40-40-426-52-26-65",
+      "codes": [
+        40,
+        40,
+        426,
+        52,
+        26,
+        65
+      ],
+      "name": "PUE. EN VALOR H P. PIÑERO",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        7901191135,
+        7901191135,
+        7901191135
+      ],
+      "pdfPage": 281
+    },
+    {
+      "id": "40-40-427-52-27-65",
+      "codes": [
+        40,
+        40,
+        427,
+        52,
+        27,
+        65
+      ],
+      "name": "PUE. EN VALOR I. PIROVANO",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        6887896701,
+        6887896701,
+        6887896701
+      ],
+      "pdfPage": 281
+    },
+    {
+      "id": "40-40-428-54-28-65",
+      "codes": [
+        40,
+        40,
+        428,
+        54,
+        28,
+        65
+      ],
+      "name": "PUE. EN VALOR H DE QUEMADOS",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "AT. MÉDICA PATOLOGÍAS ESPECIF.",
+      "amounts": [
+        1704292551,
+        1704292551,
+        1704292551
+      ],
+      "pdfPage": 281
+    },
+    {
+      "id": "40-40-429-57-29-65",
+      "codes": [
+        40,
+        40,
+        429,
+        57,
+        29,
+        65
+      ],
+      "name": "PTA EN VALOR H. QUINQUELA MART",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN ODONTOLÓGICA GENERAL",
+      "amounts": [
+        563395546,
+        563395546,
+        563395546
+      ],
+      "pdfPage": 281
+    },
+    {
+      "id": "40-40-430-52-30-65",
+      "codes": [
+        40,
+        40,
+        430,
+        52,
+        30,
+        65
+      ],
+      "name": "PUE. EN VALOR J. M RAMOS MEJIA",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        7571840265,
+        7571840265,
+        7571840265
+      ],
+      "pdfPage": 281
+    },
+    {
+      "id": "40-40-431-52-31-65",
+      "codes": [
+        40,
+        40,
+        431,
+        52,
+        31,
+        65
+      ],
+      "name": "PUE. EN VALOR H B. RIVADAVIA",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        10241151410,
+        10241151410,
+        10241151410
+      ],
+      "pdfPage": 282
+    },
+    {
+      "id": "40-40-432-59-32-65",
+      "codes": [
+        40,
+        40,
+        432,
+        59,
+        32,
+        65
+      ],
+      "name": "PUE. EN VALOR H M. ROCCA",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN DE REHABILITACIÓN",
+      "amounts": [
+        1317417318,
+        1317417318,
+        1317417318
+      ],
+      "pdfPage": 282
+    },
+    {
+      "id": "40-40-433-56-33-65",
+      "codes": [
+        40,
+        40,
+        433,
+        56,
+        33,
+        65
+      ],
+      "name": "PUESTA EN VALOR SANTA LUCIA",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA OFTALMOLÓGICA",
+      "amounts": [
+        1657511292,
+        1657511292,
+        1657511292
+      ],
+      "pdfPage": 282
+    },
+    {
+      "id": "40-40-434-52-34-65",
+      "codes": [
+        40,
+        40,
+        434,
+        52,
+        34,
+        65
+      ],
+      "name": "PUE. EN VALOR D. F. SANTOJANNI",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        6172462600,
+        6172462600,
+        6172462600
+      ],
+      "pdfPage": 282
+    },
+    {
+      "id": "40-40-435-55-35-65",
+      "codes": [
+        40,
+        40,
+        435,
+        55,
+        35,
+        65
+      ],
+      "name": "PUE. EN VALOR H R. SARDA",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENC. MÉDICA MATERNO-INFANTIL",
+      "amounts": [
+        3080357296,
+        3080357296,
+        3080357296
+      ],
+      "pdfPage": 282
+    },
+    {
+      "id": "40-40-437-85-37-65",
+      "codes": [
+        40,
+        40,
+        437,
+        85,
+        37,
+        65
+      ],
+      "name": "PUE. EN VALOR H T. GARCIA",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN DE SALUD MENTAL",
+      "amounts": [
+        1682111212,
+        1682111212,
+        1682111212
+      ],
+      "pdfPage": 282
+    },
+    {
+      "id": "40-40-438-52-38-65",
+      "codes": [
+        40,
+        40,
+        438,
+        52,
+        38,
+        65
+      ],
+      "name": "PUE. EN VALOR H E. TORNU",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        4974665040,
+        4974665040,
+        4974665040
+      ],
+      "pdfPage": 283
+    },
+    {
+      "id": "40-40-439-54-39-65",
+      "codes": [
+        40,
+        40,
+        439,
+        54,
+        39,
+        65
+      ],
+      "name": "PUE. EN VALOR B. UDAONDO",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "AT. MÉDICA PATOLOGÍAS ESPECIF.",
+      "amounts": [
+        2544414575,
+        2544414575,
+        2544414575
+      ],
+      "pdfPage": 283
+    },
+    {
+      "id": "40-40-440-52-40-65",
+      "codes": [
+        40,
+        40,
+        440,
+        52,
+        40,
+        65
+      ],
+      "name": "PUE. EN VALOR H D. VELEZ SARSF",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        1616083490,
+        1616083490,
+        1616083490
+      ],
+      "pdfPage": 283
+    },
+    {
+      "id": "40-40-441-52-41-65",
+      "codes": [
+        40,
+        40,
+        441,
+        52,
+        41,
+        65
+      ],
+      "name": "PUE. EN VALOR H A. ZUBIZARRETA",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        1352065214,
+        1352065214,
+        1352065214
+      ],
+      "pdfPage": 283
+    },
+    {
+      "id": "40-40-443-85-43-65",
+      "codes": [
+        40,
+        40,
+        443,
+        85,
+        43,
+        65
+      ],
+      "name": "PUES. VALOR CENT SALUD MEN AME",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN DE SALUD MENTAL",
+      "amounts": [
+        633697304,
+        633697304,
+        633697304
+      ],
+      "pdfPage": 283
+    },
+    {
+      "id": "40-40-445-45-0-65",
+      "codes": [
+        40,
+        40,
+        445,
+        45,
+        0,
+        65
+      ],
+      "name": "PUESTA EN VALOR PASTEUR",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "INSTITUTO ZOONOSIS L. PASTEUR",
+      "amounts": [
+        1097616942,
+        1097616942,
+        1097616942
+      ],
+      "pdfPage": 284
+    },
+    {
+      "id": "40-40-446-59-46-65",
+      "codes": [
+        40,
+        40,
+        446,
+        59,
+        46,
+        65
+      ],
+      "name": "IREP REESTRUCTURACIÓN INTEGRAL",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN DE REHABILITACIÓN",
+      "amounts": [
+        1844015710,
+        1844015710,
+        1844015710
+      ],
+      "pdfPage": 284
+    },
+    {
+      "id": "40-40-455-52-55-65",
+      "codes": [
+        40,
+        40,
+        455,
+        52,
+        55,
+        65
+      ],
+      "name": "PUESTA EN VALOR GRIERSON",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN MÉDICA GENERAL",
+      "amounts": [
+        2483998986,
+        2483998986,
+        2483998986
+      ],
+      "pdfPage": 284
+    },
+    {
+      "id": "40-40-4000-7-0-90",
+      "codes": [
+        40,
+        40,
+        4000,
+        7,
+        0,
+        90
+      ],
+      "name": "EQUIPAMIENTO HOSPITALARIO",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "ATENCIÓN HOSPITALARIA",
+      "amounts": [
+        13368929947,
+        0,
+        0
+      ],
+      "pdfPage": 284
+    },
+    {
+      "id": "40-40-4001-70-0-65",
+      "codes": [
+        40,
+        40,
+        4001,
+        70,
+        0,
+        65
+      ],
+      "name": "PUESTA EN VALOR CESAC",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "AT. PRIMARIA, AMB. Y COMUNIT.",
+      "amounts": [
+        9048004858,
+        9048004858,
+        9048004858
+      ],
+      "pdfPage": 284
+    },
+    {
+      "id": "40-40-7307-88-0-80",
+      "codes": [
+        40,
+        40,
+        7307,
+        88,
+        0,
+        80
+      ],
+      "name": "SISTEMAS INFORMATICOS",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "PLANIF. SANITARIA Y GEST. RED",
+      "amounts": [
+        7981131508,
+        0,
+        0
+      ],
+      "pdfPage": 284
+    },
+    {
+      "id": "40-40-7307-88-0-90",
+      "codes": [
+        40,
+        40,
+        7307,
+        88,
+        0,
+        90
+      ],
+      "name": "PRÉSTAMO BID 5943/OC-AR",
+      "jurisdiction": "MINISTERIO DE SALUD",
+      "program": "PLANIF. SANITARIA Y GEST. RED",
+      "amounts": [
+        49308948466,
+        0,
+        0
+      ],
+      "pdfPage": 285
+    },
+    {
+      "id": "45-45-1028-75-0-1",
+      "codes": [
+        45,
+        45,
+        1028,
+        75,
+        0,
+        1
+      ],
+      "name": "MEJORAMIENTO DE VIVIENDAS",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "INFRAESTRUCTURA Y VIVIENDA",
+      "amounts": [
+        731949623,
+        0,
+        0
+      ],
+      "pdfPage": 286
+    },
+    {
+      "id": "45-45-1028-75-0-61",
+      "codes": [
+        45,
+        45,
+        1028,
+        75,
+        0,
+        61
+      ],
+      "name": "MANTENIMIENTOS DEL BARRIO PADR",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "INFRAESTRUCTURA Y VIVIENDA",
+      "amounts": [
+        13820390881,
+        13820390881,
+        13820390881
+      ],
+      "pdfPage": 286
+    },
+    {
+      "id": "45-45-1028-76-0-1",
+      "codes": [
+        45,
+        45,
+        1028,
+        76,
+        0,
+        1
+      ],
+      "name": "REFACCION EFECTORES PRIORITARI",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "INFRAESTRUCTURA SOCIAL",
+      "amounts": [
+        1707709856,
+        0,
+        0
+      ],
+      "pdfPage": 286
+    },
+    {
+      "id": "45-45-1028-77-0-1",
+      "codes": [
+        45,
+        45,
+        1028,
+        77,
+        0,
+        1
+      ],
+      "name": "OBRAS RECUP.TRAZA EX AU3",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "RECUPERACION TRAZA EX AU3",
+      "amounts": [
+        14232493956,
+        0,
+        0
+      ],
+      "pdfPage": 286
+    },
+    {
+      "id": "45-245-7327-100-0-60",
+      "codes": [
+        45,
+        245,
+        7327,
+        100,
+        0,
+        60
+      ],
+      "name": "ACUMAR",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "CREDITOS LEY 341/964",
+      "amounts": [
+        954734345,
+        0,
+        0
+      ],
+      "pdfPage": 286
+    },
+    {
+      "id": "45-245-7327-104-0-4",
+      "codes": [
+        45,
+        245,
+        7327,
+        104,
+        0,
+        4
+      ],
+      "name": "RODRIGO BUENO",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "REINTEGRACION, INTEGRACIÓN Y T",
+      "amounts": [
+        2326210606,
+        0,
+        0
+      ],
+      "pdfPage": 286
+    },
+    {
+      "id": "45-245-7327-104-0-5",
+      "codes": [
+        45,
+        245,
+        7327,
+        104,
+        0,
+        5
+      ],
+      "name": "URBANIZACION FRAGA",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "REINTEGRACION, INTEGRACIÓN Y T",
+      "amounts": [
+        900496980,
+        0,
+        0
+      ],
+      "pdfPage": 287
+    },
+    {
+      "id": "45-245-7327-104-0-11",
+      "codes": [
+        45,
+        245,
+        7327,
+        104,
+        0,
+        11
+      ],
+      "name": "OBRAS EN BARRIOS IVC",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "REINTEGRACION, INTEGRACIÓN Y T",
+      "amounts": [
+        1821926813,
+        0,
+        0
+      ],
+      "pdfPage": 287
+    },
+    {
+      "id": "45-245-7327-104-0-60",
+      "codes": [
+        45,
+        245,
+        7327,
+        104,
+        0,
+        60
+      ],
+      "name": "ACUMAR - VILLA 21-24",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "REINTEGRACION, INTEGRACIÓN Y T",
+      "amounts": [
+        5071129508,
+        0,
+        0
+      ],
+      "pdfPage": 287
+    },
+    {
+      "id": "45-245-7327-104-0-61",
+      "codes": [
+        45,
+        245,
+        7327,
+        104,
+        0,
+        61
+      ],
+      "name": "MANTENIMI SAN BLAS Y TRES ROSA",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "REINTEGRACION, INTEGRACIÓN Y T",
+      "amounts": [
+        614460930,
+        614460930,
+        614460930
+      ],
+      "pdfPage": 287
+    },
+    {
+      "id": "45-245-7327-104-0-62",
+      "codes": [
+        45,
+        245,
+        7327,
+        104,
+        0,
+        62
+      ],
+      "name": "OBRAS DGGIS",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "REINTEGRACION, INTEGRACIÓN Y T",
+      "amounts": [
+        16622659936,
+        11551530428,
+        11551530428
+      ],
+      "pdfPage": 287
+    },
+    {
+      "id": "45-245-7327-105-0-2",
+      "codes": [
+        45,
+        245,
+        7327,
+        105,
+        0,
+        2
+      ],
+      "name": "RECUPERACION CONVENTILLOS",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "REHABILITACION LA BOCA",
+      "amounts": [
+        2103790934,
+        2103790934,
+        0
+      ],
+      "pdfPage": 287
+    },
+    {
+      "id": "45-245-7327-106-0-1",
+      "codes": [
+        45,
+        245,
+        7327,
+        106,
+        0,
+        1
+      ],
+      "name": "REHABILITACION C.U.",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "REHABILITACIÓN CONJUNTOS URBAN",
+      "amounts": [
+        4481556967,
+        0,
+        0
+      ],
+      "pdfPage": 287
+    },
+    {
+      "id": "45-245-7327-106-0-61",
+      "codes": [
+        45,
+        245,
+        7327,
+        106,
+        0,
+        61
+      ],
+      "name": "MANT.Y MEJORAS EN CONJ.URBANOS",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "REHABILITACIÓN CONJUNTOS URBAN",
+      "amounts": [
+        7451336475,
+        7451336475,
+        7451336475
+      ],
+      "pdfPage": 288
+    },
+    {
+      "id": "45-245-7327-109-0-60",
+      "codes": [
+        45,
+        245,
+        7327,
+        109,
+        0,
+        60
+      ],
+      "name": "ACUMAR",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "PROYECTOS ESPECIALES DE VIVIEN",
+      "amounts": [
+        2209145718,
+        0,
+        0
+      ],
+      "pdfPage": 288
+    },
+    {
+      "id": "45-245-7327-110-0-32",
+      "codes": [
+        45,
+        245,
+        7327,
+        110,
+        0,
+        32
+      ],
+      "name": "VIVIENDAS SECTORES MEDIOS",
+      "jurisdiction": "MINISTERIO DE DESARROLLO HUMANO Y HÁBITAT",
+      "program": "VIVIENDAS SECTORES MEDIOS",
+      "amounts": [
+        3805410050,
+        3278101138,
+        0
+      ],
+      "pdfPage": 288
+    },
+    {
+      "id": "50-50-543-57-0-1",
+      "codes": [
+        50,
+        50,
+        543,
+        57,
+        0,
+        1
+      ],
+      "name": "CENTRO CULTURAL SAN MARTIN",
+      "jurisdiction": "MINISTERIO DE CULTURA",
+      "program": "NUEVAS TENDENCIAS EN EL CCGSM",
+      "amounts": [
+        22276131235,
+        0,
+        0
+      ],
+      "pdfPage": 289
+    },
+    {
+      "id": "55-55-568-58-0-10",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        10
+      ],
+      "name": "OBRAS NUEVAS, AMPL, REL",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        427347703,
+        0,
+        0
+      ],
+      "pdfPage": 290
+    },
+    {
+      "id": "55-55-568-58-0-12",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        12
+      ],
+      "name": "ADECUACION INSTALACI",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        10688395851,
+        0,
+        0
+      ],
+      "pdfPage": 290
+    },
+    {
+      "id": "55-55-568-58-0-13",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        13
+      ],
+      "name": "ADECUACION INSTALACI",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        13132796141,
+        0,
+        0
+      ],
+      "pdfPage": 290
+    },
+    {
+      "id": "55-55-568-58-0-14",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        14
+      ],
+      "name": "ADECUACION INSTALCI",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        8676746058,
+        0,
+        0
+      ],
+      "pdfPage": 290
+    },
+    {
+      "id": "55-55-568-58-0-15",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        15
+      ],
+      "name": "ADECUACION INSTALACI",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        10448164636,
+        0,
+        0
+      ],
+      "pdfPage": 290
+    },
+    {
+      "id": "55-55-568-58-0-16",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        16
+      ],
+      "name": "OTRAS OBRAS E INSTALACIONES",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        6589825629,
+        0,
+        0
+      ],
+      "pdfPage": 291
+    },
+    {
+      "id": "55-55-568-58-0-17",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        17
+      ],
+      "name": "OBRAS CIV ALBÑ FACHA CUBIE PIN",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        4522580149,
+        0,
+        0
+      ],
+      "pdfPage": 291
+    },
+    {
+      "id": "55-55-568-58-0-18",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        18
+      ],
+      "name": "OTRAS OBRAS E INSTALACIONES 2",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        3303356647,
+        0,
+        0
+      ],
+      "pdfPage": 291
+    },
+    {
+      "id": "55-55-568-58-0-19",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        19
+      ],
+      "name": "OBRAS CIV ALBÑ FACHA CUBIE III",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        6189340319,
+        0,
+        0
+      ],
+      "pdfPage": 291
+    },
+    {
+      "id": "55-55-568-58-0-21",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        21
+      ],
+      "name": "OBRAS NUEVAS AMP Y RELOC 3",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        1852248038,
+        0,
+        0
+      ],
+      "pdfPage": 291
+    },
+    {
+      "id": "55-55-568-58-0-22",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        22
+      ],
+      "name": "ADEC. INSTALACIONES 5",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        8740452468,
+        0,
+        0
+      ],
+      "pdfPage": 292
+    },
+    {
+      "id": "55-55-568-58-0-23",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        23
+      ],
+      "name": "OBRAS NUEVAS AMP Y RELOC 4",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        5074916941,
+        0,
+        0
+      ],
+      "pdfPage": 292
+    },
+    {
+      "id": "55-55-568-58-0-24",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        24
+      ],
+      "name": "INFRAEST EDIF ESCOLARES",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        4812697669,
+        0,
+        0
+      ],
+      "pdfPage": 292
+    },
+    {
+      "id": "55-55-568-58-0-25",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        25
+      ],
+      "name": "OBRAS NUEVAS AMP Y RELOC 5",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        29978023718,
+        0,
+        0
+      ],
+      "pdfPage": 292
+    },
+    {
+      "id": "55-55-568-58-0-26",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        26
+      ],
+      "name": "OBRAS NUEVAS AMP Y RELOC 6",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        7758951071,
+        0,
+        0
+      ],
+      "pdfPage": 292
+    },
+    {
+      "id": "55-55-568-58-0-60",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        60
+      ],
+      "name": "A.CU.MAR - OBRAS E INSTALACIO",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        669194750,
+        0,
+        0
+      ],
+      "pdfPage": 293
+    },
+    {
+      "id": "55-55-568-58-0-62",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        62
+      ],
+      "name": "ADECUACION INTEGRAL",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        227787957978,
+        227787957978,
+        227787957978
+      ],
+      "pdfPage": 293
+    },
+    {
+      "id": "55-55-568-58-0-63",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        63
+      ],
+      "name": "INTERV DESCONCENTRADAS DE MANT",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        8333998302,
+        8333998302,
+        8333998302
+      ],
+      "pdfPage": 293
+    },
+    {
+      "id": "55-55-568-58-0-68",
+      "codes": [
+        55,
+        55,
+        568,
+        58,
+        0,
+        68
+      ],
+      "name": "MITIG RIESGOS Y ESC SEGURAS",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "MEJORA Y CUIDADO EDIF ESC",
+      "amounts": [
+        737936517,
+        737936517,
+        737936517
+      ],
+      "pdfPage": 293
+    },
+    {
+      "id": "55-55-582-55-0-90",
+      "codes": [
+        55,
+        55,
+        582,
+        55,
+        0,
+        90
+      ],
+      "name": "EQUIPAMIENTO Y MOBILIARIO",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "EQUIPAMIENTO MOBILIARIO",
+      "amounts": [
+        18972492399,
+        0,
+        0
+      ],
+      "pdfPage": 293
+    },
+    {
+      "id": "55-55-3150-26-0-80",
+      "codes": [
+        55,
+        55,
+        3150,
+        26,
+        0,
+        80
+      ],
+      "name": "PLAN SARMIENTO",
+      "jurisdiction": "MINISTERIO DE EDUCACIÓN",
+      "program": "PIED",
+      "amounts": [
+        52779491359,
+        0,
+        0
+      ],
+      "pdfPage": 293
+    },
+    {
+      "id": "60-60-623-11-0-61",
+      "codes": [
+        60,
+        60,
+        623,
+        11,
+        0,
+        61
+      ],
+      "name": "FORT. SISTEMA DE COMPRAS",
+      "jurisdiction": "MINISTERIO DE HACIENDA Y FINANZAS",
+      "program": "COMP. DE BIENES Y CONT.DE SERV",
+      "amounts": [
+        778282396,
+        778282396,
+        778282396
+      ],
+      "pdfPage": 294
+    },
+    {
+      "id": "60-60-6638-29-0-61",
+      "codes": [
+        60,
+        60,
+        6638,
+        29,
+        0,
+        61
+      ],
+      "name": "FORT.DEL SIST.DE ADM.FINANC.",
+      "jurisdiction": "MINISTERIO DE HACIENDA Y FINANZAS",
+      "program": "DES. FUNCIONAL DEL SIST. SIGAF",
+      "amounts": [
+        5550291450,
+        5550291450,
+        5550291450
+      ],
+      "pdfPage": 294
+    },
+    {
+      "id": "60-60-6638-29-0-62",
+      "codes": [
+        60,
+        60,
+        6638,
+        29,
+        0,
+        62
+      ],
+      "name": "DESAR.SIST.DECISION E INF.GER.",
+      "jurisdiction": "MINISTERIO DE HACIENDA Y FINANZAS",
+      "program": "DES. FUNCIONAL DEL SIST. SIGAF",
+      "amounts": [
+        9528929964,
+        9528929964,
+        9528929964
+      ],
+      "pdfPage": 294
+    },
+    {
+      "id": "60-602-8618-85-0-61",
+      "codes": [
+        60,
+        602,
+        8618,
+        85,
+        0,
+        61
+      ],
+      "name": "SIST. TRIBUTARIO DE LA CIUDAD",
+      "jurisdiction": "MINISTERIO DE HACIENDA Y FINANZAS",
+      "program": "DESARROLLO TECNOLÓGICO",
+      "amounts": [
+        9305236963,
+        9305236963,
+        9305236963
+      ],
+      "pdfPage": 294
+    }
+  ],
+  "limitations": [
+    "Previsiones del plan, no ejecución ni garantía de terminación.",
+    "Los proyectos se identifican por código oficial; un proyecto puede agrupar varias obras.",
+    "Los montos de distintos años son nominales; no se informa una variación real entre ellos.",
+    "El plan no equivale al total de gastos de capital de la CAIF."
+  ]
+}

@@ -16,3 +16,5 @@ for(const p of read('approved-vs-executed').periods){const d=read(p.period);asse
 const counts=read('conduction-counts');assert.deepEqual(counts.levels.map(l=>l.count),[10,18,82,344,932,855]);assert(!/salary|salario|sueldo|cuil/i.test(JSON.stringify(counts)));assert.equal(config.flags.salaries,false);assert.equal(config.flags.world,false);
 console.log(`Datos: ${ids.size} datasets; conciliaciones fiscales y jerarquía correctas.`);
 require('./project-2027.cjs');
+
+require('./fiscal-map-2027.cjs');
