@@ -71,3 +71,9 @@ La estructura 2027 debe añadir un archivo bajo `data/budget/2027/`, con metadat
 ## Conducción sin remuneraciones · 05/10/2026
 
 `conduction-counts` → `data/government/conduction-counts.json`: corte, fuente, método, límites y seis niveles con `id`, `name`, `count`. Proyección de las cantidades ya verificadas de `conduction` y `salary-hierarchy`; no contiene importes, normas ni fórmulas salariales. La interfaz de Gobierno carga esta proyección y los listados de `conduction`, sin cargar datasets de remuneraciones. No equivale a una partición del padrón general, que conserva otro corte y más categorías.
+
+## Informes por área · Proyecto 2027 · 05/10/2026
+
+`area-reports-2027` → `data/budget/2027/area-reports.json`: `areas` (22 jurisdicciones), `units` (394 unidades de la base 2026), `coverage`, `deflator`, `historyMethod`, `sources`. Las áreas contienen `current2026`, `project2027`, variaciones nominal/ajustada, ocho objetos y referencia a Planilla 4. Las unidades se identifican por sus cinco códigos completos, con `parent` y `project2027: null`; no heredan el importe del ministerio. Cada `history` tiene año, período, devengado nominal, factor IPCBA, valor actualizado y motivo de ausencia. Fuentes y SHA por período permiten conciliar contra los datasets originales. No contiene remuneraciones individuales ni datos de planta inferidos.
+
+Reconstrucción opcional: `python scripts/build-area-reports-2027.py /ruta/al/PDF-oficial.pdf` (requiere pdfplumber). No se necesita Python para construir o publicar el sitio. El importador exige el SHA del PDF ya verificado y conserva los factores históricos existentes.

@@ -67,3 +67,10 @@
 
 - Portada fiscal, inicial versus ejecutado, historia oficial 1997–2026 y navegación por el padrón de autoridades.
 - Este registro resume el snapshot; no importa los documentos internos de iteraciones anteriores.
+
+## 05/10/2026 · Mini informes por área en Proyecto 2027
+
+- Buscador en Resumen y Gastos: ministerios, hospitales y otras unidades; ventana de informe y enlace compartible.
+- 22 áreas con presupuesto 2027/2026, lectura por encima/debajo de inflación proyectada (18%), composición y partidas. 394 unidades de 2026 con presupuesto propio e historial, sin inventar la apertura 2027 que falta.
+- Historial 2013–2025 con factores IPCBA existentes, selector anual, huecos de identidad y etapas separadas. No se infiere cantidad de empleados ni contratos.
+- Validación independiente de todos los importes y años; búsqueda, teclado, recarga de enlaces y móvil en 1440/390/320 px.

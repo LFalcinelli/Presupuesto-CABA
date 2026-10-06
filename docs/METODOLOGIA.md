@@ -23,6 +23,14 @@ La migración del 30/09/2026 no cambia cifras ni criterios. La metadata de cada 
 - Las autorizaciones propias de la Planilla 43 se conservan por separado, sin sumarlas nuevamente al gasto o a las fuentes. Código Fiscal, Impositiva, Arancelaria y proyectos externos de endeudamiento o emergencia quedan fuera del alcance. Las remisiones del propio documento se registran como límites, sin inferir cambios legales.
 - Trazabilidad: archivo, SHA-256, página física del PDF (297 páginas), artículo/planilla, estado, unidad, universo y fórmula. No se publica el PDF aportado. URL oficial exacta pendiente; aperturas completas de programas no disponibles en el dataset agregado.
 
+## Informes por área · Proyecto 2027
+
+- 22 jurisdicciones: Planilla 4 (página física 173), conciliada por nombre, código oficial y total contra el detalle 2026. Composición en ocho objetos; comparación anual con el presupuesto al 30/06/2026 y factor proyectado 1,18.
+- 394 unidades de la base 2026: la apertura completa por unidad ejecutora del proyecto 2027 no está disponible en el PDF aportado. Importe 2027 y variación de la unidad permanecen ausentes. El informe de su ministerio se ofrece por separado, sin atribuirle ese presupuesto a la unidad.
+- Historial 2013–2025: sólo gasto fiscal devengado anual del mismo nombre normalizado, misma jurisdicción y código completo. Se conservan los factores IPCBA del detalle existente (factors.d), con base abril–junio 2026. No se recalculan con el 18,0% proyectado ni se mezclan con la serie principal empalmada nacional/provincial.
+- Los años sin identidad verificada quedan vacíos; no se trazan conexiones a través de ellos. Coincidencia de código/nombre no garantiza igual alcance después de reorganizaciones: se advierte al lector. No se infieren empleados, crecimiento de planta ni número de contratos a partir de importes.
+- Dataset derivado: data/budget/2027/area-reports.json. Reconstrucción: scripts/build-area-reports-2027.py con el PDF verificado fuera del repositorio.
+
 ## Precios e historia
 
 - Detalles históricos, ingresos y sueldos conservan sus factores IPCBA y las notas de cada vista.

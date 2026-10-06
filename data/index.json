@@ -768,6 +768,19 @@
       "files": [
         "data/budget/2027/companions.json"
       ]
+    },
+    {
+      "id": "area-reports-2027",
+      "name": "Informes por area y unidad ejecutora",
+      "path": "data/budget/2027/area-reports.json",
+      "period": "2027",
+      "lastUpdate": "2026-10-05",
+      "source": "PDLEY-2026-36-GCABA-AJG, Planilla 4; datasets oficiales GCBA de ejecucion 2013-2026",
+      "type": "calculation",
+      "description": "22 areas 2027 comparadas con 2026; 394 unidades de la base 2026, sin asignarles importes 2027 inexistentes. Composicion e historia fiscal con trazabilidad.",
+      "files": [
+        "data/budget/2027/area-reports.json"
+      ]
     }
   ],
   "resources": {
