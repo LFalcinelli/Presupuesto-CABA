@@ -1,0 +1,57 @@
+'use strict';
+// Citizen-facing reading. The accounting data and denominators stay unchanged.
+function fiscalSummary(){
+ const d=state.caif?.periods?.[state.period];if(!d)return '<section class="panel"><h1>No hay un resultado conciliado para este período.</h1></section>';
+ const closed=d.quarter===4,negative=d.financialResult<0;
+ return `<section class="panel fiscal-summary"><p class="eyebrow">${closed?'CIERRE ANUAL':'ENERO–JUNIO'} · ${d.year}</p><h1>¿Qué dejaron los ingresos y los gastos?</h1><div class="fiscal-main-result ${negative?'is-deficit':'is-surplus'}"><div><h2>${closed?`${d.year} cerró con ${negative?'déficit':'superávit'}.`:`El primer semestre dejó ${negative?'déficit':'superávit'}.`}</h2><strong>${money(Math.abs(d.financialResult))}</strong><p>${pct(Math.abs(d.financialRatio))} de los ingresos del ${closed?'año':'semestre'}.</p></div><p>${negative?'Se gastó más de lo que ingresó.':'Ingresó más de lo que se gastó.'} Este saldo incluye los intereses de la deuda.<br><span>Pesos de ${d.year} · ${closed?'año completo':'primeros seis meses'} · cifras provisorias.</span></p></div>${caifPanel()}${fiscalContext(d)}<div class="fiscal-next"><button class="small-btn" data-view="home">¿En qué se gastó? ↗</button><button class="small-btn" data-view="income">¿De dónde vino el dinero? ↗</button></div></section>`;
+}
+extraViews.summary=fiscalSummary;
+
+function executionLabel(r){return r.kind==='legacy'?'Registro histórico · criterio distinto':r.kind==='budget'?'Presupuesto actualizado a junio':r.kind==='project'?'Proyecto · importe sin ajustar por inflación':r.status;}
+function tenYearImpact(){
+ const rows=state.executionHistory.rows,a=rows.find(r=>r.year===2015),b=rows.find(r=>r.year===2025);if(!a||!b||a.kind!=='executed'||b.kind!=='executed')return '';
+ return `<aside class="history-impact"><strong>${signedPct((b.real/a.real-1)*100)} en diez años, descontando la inflación.</strong>Gasto ejecutado de 2025 frente al de 2015.<p>En ese período cambiaron las responsabilidades de la Ciudad. El crecimiento del gasto no indica por sí solo una mejora equivalente de los servicios. ${detailLink('historia','Ver hitos y método')}</p></aside>`;
+}
+
+function caifPanel(){
+ const d=state.caif?.periods?.[state.period];if(!d)return '';const scale=Math.max(d.income,d.expense);
+ const rows=[['Ingresos corrientes',d.currentIncome],['Gastos corrientes sin intereses',d.currentPrimaryExpense],['Saldo corriente antes de intereses',d.economicPrimaryResult],['Ingresos de capital',d.capitalIncome],['Gastos de capital',d.capitalExpense],['Saldo antes de intereses',d.primaryResult],['Intereses de la deuda',d.interest],['Saldo final, incluidos intereses',d.financialResult],['Ingresos totales',d.income],['Gastos totales',d.expense]];
+ return `<section class="caif-panel caif-simple"><h2>Una cuenta: lo que entró menos lo que se gastó.</h2><p>Ingresos y gastos del mismo período. Los gastos incluyen obligaciones reconocidas que todavía pueden estar pendientes de pago.</p><div class="fiscal-two-bars" role="img" aria-label="Ingresos ${money(d.income)}; gastos ${money(d.expense)}; saldo ${money(d.financialResult)}">${[['Ingresó',d.income,'income'],['Se gastó',d.expense,'expense']].map(([label,value,kind])=>`<div><span>${label}</span><i><b class="${kind}" style="width:${value/scale*100}%"></b></i><strong>${short(value)}</strong></div>`).join('')}</div><details class="fiscal-account-detail"><summary>Ver la cuenta completa, antes y después de intereses</summary><div class="table-wrap"><table><caption>${d.year} · ${d.quarter===4?'año completo':'enero–junio'} · pesos del período</caption><thead><tr><th>Concepto</th><th>Importe</th></tr></thead><tbody>${rows.map(([name,value])=>`<tr><th scope="row">${name}</th><td class="num">${money(value)}</td></tr>`).join('')}</tbody></table></div><p>Los tres saldos son pasos de una misma cuenta: no se suman entre sí. El resultado económico primario descuenta los gastos habituales sin intereses; el primario descuenta también el gasto de capital; el financiero incluye además los intereses.</p><p>${E(state.caif.scope)} ${E(d.rounding.method)}</p><p><a href="${E(d.localSource)}" target="_blank" rel="noopener">Informe oficial ↗</a> · <a href="${E(d.interestSource.url)}" target="_blank" rel="noopener">Detalle de intereses ↗</a> · <a href="${Site.url('data/fiscal-results/caif.json')}" download>Cuenta y fuentes</a></p>${detailLink('caif','Cómo se calcula el resultado')}</details></section>`;
+}
+function fiscalContext(d){
+ if(d.quarter!==2)return `<p class="fiscal-coverage-link">La serie de esta vista todavía no permite determinar cuándo ocurrió el déficit anual anterior. ${detailLink('caif','Ver cobertura histórica')}</p>`;
+ const rows=state.caif.context.semesters,max=Math.max(...rows.map(r=>Math.abs(r.financialRatio)));
+ return `<section class="fiscal-semester-reading"><h2>¿Cuánto quedó de cada $100 que ingresaron?</h2><p>Comparamos enero a junio de cada año, después de todos los gastos e intereses.</p><div class="semester-bars" role="img" aria-label="Saldo por cada 100 pesos de ingresos en los primeros semestres de 2024 a 2026">${rows.map(r=>`<div><span>${r.year}</span><i><b style="width:${Math.abs(r.financialRatio)/max*100}%"></b></i><strong>$ ${fmt(r.financialRatio,1)}</strong></div>`).join('')}</div><p>Los tres semestres tuvieron superávit. En 2026 quedó una proporción menor de los ingresos; esto no significa que el semestre haya tenido déficit.</p><details><summary>Consultar los importes y las fuentes de cada semestre</summary><div class="table-wrap"><table><thead><tr><th>Enero–junio</th><th>Ingresos</th><th>Gastos</th><th>Saldo</th><th>Fuente</th></tr></thead><tbody>${rows.map(r=>`<tr><th>${r.year}</th><td class="num">${money(r.income)}</td><td class="num">${money(r.expense)}</td><td class="num">${money(r.financialResult)}</td><td><a href="${E(r.localSource)}" target="_blank" rel="noopener">Informe oficial ↗</a></td></tr>`).join('')}</tbody></table></div><p>Saldo por cada $100 = (ingresos − gastos) ÷ ingresos × 100. Se conserva el mismo universo fiscal; no se compara un semestre con un año completo.</p>${detailLink('caif','Método y cobertura')}</details></section>`;
+}
+
+function provinceSilhouette(id){
+ const f=state.provincePaths.features.find(f=>f.id===id);return f?`<svg class="pair-silhouette" viewBox="${state.provincePaths.viewBox}" aria-hidden="true" data-fit-province><path d="${f.path}"/></svg>`:'';
+}
+function provincePairRows(c,r,indicators){
+ return `<dl class="pair-metrics">${indicators.map(i=>`<div><dt>${E(comparisonLabel(i))}<small>${E(i.unit.replace('Pesos nominales','Pesos del período'))}</small></dt><dd aria-label="CABA: ${E(comparisonLabel(i))}">${comparisonValue(c.caba.indicators[i.id],i)}</dd><dd aria-label="${E(r.name)}: ${E(comparisonLabel(i))}">${comparisonValue(r.indicators[i.id],i)}</dd></div>`).join('')}</dl>`;
+}
+function provincePair(id,c=comparisonState()){
+ const target=id==='02'?'06':id,r=c.p.rows.find(r=>r.id===target);if(!r)return '';
+ const indicators=c.d.indicators.filter(i=>i.availablePeriods?.includes(c.p.id));
+ const featured=[c.ind,...indicators.filter(i=>i.id!==c.ind.id)].slice(0,Math.min(4,indicators.length)),more=indicators.filter(i=>!featured.includes(i));
+ const closed=c.d.periods.find(p=>p.id==='2025-4'),employment=c.d.periods.find(p=>p.id==='2024-4');
+ const extra=period=>{const other=period.rows.find(x=>x.id===target);const next={...c,p:period,caba:period.rows.find(x=>x.id==='02')};return {other,next};};
+ const annual=closed&&extra(closed),jobs=employment&&extra(employment);
+ return `<details class="pair-panel" open><summary>CABA frente a otra provincia</summary><label class="pair-picker">Comparar CABA con<select id="pair-province">${c.p.rows.filter(x=>x.id!=='02').sort((a,b)=>a.name.localeCompare(b.name,'es')).map(x=>`<option value="${x.id}" ${x.id===target?'selected':''}>${E(x.name)}</option>`).join('')}</select></label><div class="pair-sheet"><div class="pair-identities">${[c.caba,r].map(x=>`<div>${provinceSilhouette(x.id)}<h3>${E(x.name)}</h3><p>${fmt(x.population)} habitantes · Censo 2022</p></div>`).join('')}</div><p class="pair-period">${E(c.p.label)}${c.p.kind==='budget'?' · CABA actualizado a junio; la otra provincia, aprobado o prorrogado.':''}</p>${provincePairRows(c,r,featured)}${more.length?`<details class="pair-additional"><summary>Todos los indicadores de este período (${more.length} más)</summary>${provincePairRows(c,r,more)}</details>`:''}${c.p.kind==='budget'&&annual?.other?`<details class="pair-additional"><summary>Gastos e ingresos del cierre 2025</summary><p>Ambas columnas corresponden al año completo 2025, no al presupuesto 2026.</p>${provincePairRows(annual.next,annual.other,c.d.indicators.filter(i=>i.availablePeriods?.includes('2025-4')))}</details>`:''}${c.p.kind==='budget'&&jobs?.other?`<details class="pair-additional"><summary>Puestos públicos · 2024</summary><p>Último año laboral disponible para las dos jurisdicciones. No equivale a cantidad de funcionarios políticos.</p>${provincePairRows(jobs.next,jobs.other,c.d.indicators.filter(i=>i.id==='employeesRate'))}</details>`:''}<p class="pair-map-note">Siluetas del IGN, ampliadas para identificarlas; no están a la misma escala.</p>${detailLink('provincias','Fuentes y diferencias de alcance')}</div></details>`;
+}
+document.addEventListener('change',e=>{if(e.target.id==='pair-province')selectProvince(e.target.value,true);});
+const clarityEnhance=enhanceVisuals;
+enhanceVisuals=function(view){clarityEnhance(view);document.documentElement.style.setProperty('--nav-height',Math.ceil(document.querySelector('.main-nav').getBoundingClientRect().height)+'px');for(const svg of document.querySelectorAll('[data-fit-province]')){const b=svg.querySelector('path').getBBox(),pad=Math.max(b.width,b.height)*.08;svg.setAttribute('viewBox',`${b.x-pad} ${b.y-pad} ${b.width+2*pad} ${b.height+2*pad}`);}};
+
+const clarityExplorerShell=explorerShell;
+explorerShell=function(){
+ clarityExplorerShell();if(pageFor(state.view)!=='explore')return;
+ const project=state.view==='project',history=state.view==='history',current=project?'project':history?'history':state.period;
+ const periods=[['project','Proyecto 2027'],...state.config.featuredPeriods.map(id=>[id,periodName(summaryFor(id))]),['history','Evolución 1997–2027']];
+ document.querySelector('.compact-period')?.remove();document.querySelector('.explorer-location')?.remove();
+ const periodTabs=document.querySelector('#period-tabs');periodTabs.insertAdjacentHTML('beforebegin',`<label class="compact-period">Período de los datos<select id="mobile-period">${periods.map(([id,label])=>`<option value="${id}" ${id===current?'selected':''}>${E(label)}</option>`).join('')}</select></label>`);
+ const tab=document.querySelector('.tabs .active')?.textContent||'Gastos';
+ periodTabs.insertAdjacentHTML('afterend',`<p class="explorer-location"><span>Estás en</span> ${E(periods.find(([id])=>id===current)?.[1]||periodName(summaryFor(state.period)))}${history?'':` <span>›</span> <strong>${E(tab)}</strong>`}</p>`);
+ document.querySelector('.tabs').hidden=history;
+}
+document.addEventListener('change',e=>{if(e.target.id!=='mobile-period')return;const value=e.target.value;document.querySelector(value==='project'?'#period-tabs [data-project-tab="summary"]':value==='history'?'#period-tabs [data-view="history"]':`#period-tabs [data-period="${value}"]`)?.click();});
