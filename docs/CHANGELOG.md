@@ -9,7 +9,7 @@
 - Comparación 2005–2025: +113,7% de gasto ejecutado real, calculado con los factores existentes. Valores originales contrastados con SP_Fi_AX01, celdas L28 y AF28, expresadas en millones. Reemplaza la lectura 2015–2025 (+9,9%), sin corregir ni cambiar los datos o deflactores. 1997 conserva su diferencia contable; 2025 es provisorio; 2026 es presupuesto; 2027 continúa como referencia nominal separada.
 - Contraste USD 2005–2026 más visible: totales, barras por finalidad con acceso a funciones y alternativa por objeto. Tablas y método completos disponibles. No cambia A3500, inflación estadounidense ni etapas comparadas; no se presenta como poder de compra local.
 - Gastos 2027: composición antes del buscador; Servicios Sociales muestra ocho funciones desde el inicio, con tonos relacionados y detalle al pulsar. Deuda conserva una etiqueta legible y acceso al detalle.
-- Deslizamientos suaves con soporte de movimiento reducido. Curvas de líneas preservan cada observación y los cortes de cobertura.
+- Deslizamientos suaves con soporte de movimiento reducido. Curvas de líneas preservan cada observación y los cortes de cobertura. Los detalles de gráficos acompañan al elemento enfocado con teclado durante el desplazamiento; Escape los cierra.
 - La publicación anterior en ChatGPT Sites se restringió al propietario mediante acceso custom, sin invitados ni grupos. GitHub Pages sigue como publicación de trabajo.
 
 
