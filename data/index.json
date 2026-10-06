@@ -716,6 +716,58 @@
       "files": [
         "data/government/conduction-counts.json"
       ]
+    },
+    {
+      "id": "fiscal-map-2027",
+      "name": "Mapa fiscal de Buenos Aires · Proyecto 2027",
+      "path": "data/budget/2027/fiscal-map.json",
+      "period": "2027",
+      "lastUpdate": "2026-10-05",
+      "source": "PDFs oficiales aportados por el usuario · 30/09/2026",
+      "type": "calculation",
+      "description": "Jerarquías del Excel aportado, importes verificados con las planillas oficiales; participaciones con dos bases.",
+      "files": [
+        "data/budget/2027/fiscal-map.json"
+      ]
+    },
+    {
+      "id": "stages-2027",
+      "name": "Tres etapas: sanción 2026, junio 2026, proyecto 2027",
+      "path": "data/budget/2027/stages.json",
+      "period": "2027",
+      "lastUpdate": "2026-10-05",
+      "source": "PDFs oficiales aportados por el usuario · 30/09/2026",
+      "type": "calculation",
+      "description": "Mismo universo fiscal; agregados por finalidad y objeto y trazabilidad de las dos fuentes.",
+      "files": [
+        "data/budget/2027/stages.json"
+      ]
+    },
+    {
+      "id": "investments-2027",
+      "name": "Plan de inversiones 2027–2029",
+      "path": "data/budget/2027/investments.json",
+      "period": "2027",
+      "lastUpdate": "2026-10-05",
+      "source": "PDFs oficiales aportados por el usuario · 30/09/2026",
+      "type": "official",
+      "description": "309 proyectos por código completo; previsiones nominales anuales conciliadas con el plan oficial.",
+      "files": [
+        "data/budget/2027/investments.json"
+      ]
+    },
+    {
+      "id": "companions-2027",
+      "name": "Propuestas complementarias al Proyecto 2027",
+      "path": "data/budget/2027/companions.json",
+      "period": "2027",
+      "lastUpdate": "2026-10-05",
+      "source": "PDFs oficiales aportados por el usuario · 30/09/2026",
+      "type": "official",
+      "description": "Tres proyectos separados; no se suman autorizaciones a los agregados fiscales.",
+      "files": [
+        "data/budget/2027/companions.json"
+      ]
     }
   ],
   "resources": {

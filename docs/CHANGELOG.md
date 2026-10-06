@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-10-05 — Mapa fiscal y lectura del Proyecto 2027
+
+- Mapa propio de ingresos → caja común → destinos, integrado en Resumen; cuatro perspectivas, expansión progresiva, lectura por cada $100, cifras completas y fuente al seleccionar. Colores distintos para ingresos y destinos, versión vertical móvil y detalle inferior que se puede cerrar.
+- Tres etapas del presupuesto: 2026 inicial, actualizado a junio y proyecto 2027. La comparación permite elegir las dos bases de 2026 y mantiene el ajuste estimado con el supuesto de inflación del 18% definido por el usuario.
+- Explicación del margen financiero proyectado y ventana con el paso a paso de la CAIF. Explorador de los 309 proyectos de inversión oficiales, búsqueda, filtros y previsiones 2027–2029 en ventanas de detalle.
+- Bonos para proveedores, Belgrano Sur y emergencia hídrica presentados por separado, sin sumar autorizaciones al mapa ni incorporar cambios tributarios.
+- Nuevos datasets conciliados y trazabilidad por página; importador reproducible y pruebas de jerarquía, conexiones, etapas, obras, enlaces profundos y cuatro anchos de pantalla. Corrección de una actualización responsive demorada al cambiar de vista.
+- Evaluación selectiva del master R1–R12 y motivos de los descartes en `docs/ITERACION_MAPA_2027.md`. Se conserva el diseño y la arquitectura propios, sin tomar textos, código ni datasets del sitio de referencia.
+
 ## 2026-10-05 — Conducción, comparación provincial y portada
 
 - Sueldos de funcionarios y CABA en el mundo quedan ocultos por configuración. Se retiran sus pestañas, botones, referencias y enlaces de metodología; las rutas antiguas conducen a Estructura del Gobierno o a la comparación provincial. Se conservan los datos para una futura reactivación.

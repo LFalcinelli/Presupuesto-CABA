@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "source2026": {
+    "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2026-2.xlsx",
+    "sha256": "aed96a5f4085484d75fb56792cd4390d4eb74b12f8709452ad0d4ab585496c51"
+  },
+  "source2027": {
+    "document": "3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf",
+    "documentId": "PDLEY-2026-36-GCABA-AJG",
+    "messageId": "MJE-2026-42-GCABA-AJG",
+    "fileSha256": "feb7581d738222e3b2a14dab1558f820c027efb7131087c2a69edff8f722513b",
+    "date": "2026-09-30",
+    "url": null,
+    "origin": "Documento oficial aportado por el usuario",
+    "annexId": "IF-2026-43938160-GCABA-SSHA"
+  },
+  "unit": "ARS nominales de cada año",
+  "date2026": "2026-06-30",
+  "status2027": "project",
+  "totals": {
+    "initial": 17344864165159,
+    "current": 19877152039294,
+    "project": 24094340599263
+  },
+  "groups": {
+    "purposes": [
+      {
+        "name": "Administración Gubernamental",
+        "id": "1",
+        "initial": 2296848569150,
+        "current": 2685306931312,
+        "project": 3383540187838,
+        "pdfPage": 174
+      },
+      {
+        "name": "Servicios de Seguridad",
+        "id": "7",
+        "initial": 2605660552246,
+        "current": 2919515865856,
+        "project": 3594441105967,
+        "pdfPage": 174
+      },
+      {
+        "name": "Servicios Sociales",
+        "id": "10",
+        "initial": 10689860209585,
+        "current": 12227216477483,
+        "project": 14602002260986,
+        "pdfPage": 174
+      },
+      {
+        "name": "Servicios Económicos",
+        "id": "19",
+        "initial": 1485436244301,
+        "current": 1750619148462,
+        "project": 1906164261173,
+        "pdfPage": 174
+      },
+      {
+        "name": "Deuda Pública - Intereses y Gastos",
+        "id": "24",
+        "initial": 267058589877,
+        "current": 294493616181,
+        "project": 608192783299,
+        "pdfPage": 174
+      }
+    ],
+    "objects": [
+      {
+        "name": "Personal",
+        "id": "1",
+        "initial": 7155010416665,
+        "current": 8105637608029,
+        "project": 9950480728332,
+        "pdfPage": 173
+      },
+      {
+        "name": "Bienes de consumo",
+        "id": "2",
+        "initial": 693495096998,
+        "current": 771148704545,
+        "project": 958307355500,
+        "pdfPage": 173
+      },
+      {
+        "name": "Servicios no personales",
+        "id": "3",
+        "initial": 4891042594483,
+        "current": 5607831131458,
+        "project": 7065781096048,
+        "pdfPage": 173
+      },
+      {
+        "name": "Bienes de uso",
+        "id": "4",
+        "initial": 1682662740871,
+        "current": 1971254118545,
+        "project": 2135503650524,
+        "pdfPage": 173
+      },
+      {
+        "name": "Transferencias",
+        "id": "5",
+        "initial": 2507320202628,
+        "current": 2869567465767,
+        "project": 3355578761470,
+        "pdfPage": 173
+      },
+      {
+        "name": "Activos financieros",
+        "id": "6",
+        "initial": 148274523637,
+        "current": 234381539973,
+        "project": 20496224090,
+        "pdfPage": 173
+      },
+      {
+        "name": "Servicio de la deuda",
+        "id": "7",
+        "initial": 267058589877,
+        "current": 294493616181,
+        "project": 608192783299,
+        "pdfPage": 173
+      },
+      {
+        "name": "Otros gastos",
+        "id": "8",
+        "initial": 0,
+        "current": 22837854796,
+        "project": 0,
+        "pdfPage": 173
+      }
+    ]
+  }
+}
