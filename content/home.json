@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "EL PRESUPUESTO, A LA VISTA",
     "title": "Gasto Público de CABA",
-    "description": "Qué propone gastar la Ciudad en 2027, cómo se financiaría y cómo se compara con el presupuesto actual.",
+    "description": "Cuánto propone gastar la Ciudad en 2027, de dónde saldría el dinero y qué muestran las cuentas recientes.",
     "action": "Recorrer el mapa fiscal",
     "aside": "Datos abiertos.<br>Preguntas concretas.<br><b>Una Ciudad más transparente.</b>",
     "source": "Elaborado por La Libertad Avanza CABA<br>sobre fuentes oficiales."
@@ -14,17 +14,17 @@
     "budgetDescription": "Dinero autorizado para gastar durante 2026, con las modificaciones registradas hasta junio.",
     "budgetNote": "≈ $19,9 billones. Incluye el presupuesto sancionado y las modificaciones registradas hasta esa fecha. Importe nominal del informe de ejecución del segundo trimestre. Excluye gastos figurativos y aplicaciones financieras.",
     "perCapitaLabel": "Por porteño, por año",
-    "perCapitaDescription": "Presupuesto anual por habitante censado en 2022.",
+    "perCapitaDescription": "El presupuesto anual dividido por la cantidad de habitantes.",
     "perCapitaNote": "≈ $6,37 millones por habitante. Presupuesto fiscal nominal al 30/06/2026 dividido por {{population}} habitantes del Censo 2022, resultado definitivo. Es una autorización para gastar; no el gasto ya realizado ni la recaudación efectiva. No se ajusta por inflación esta fotografía.",
     "executedNote": "≈ $7,10 billones. Importe nominal oficial enero–junio 2026. Incluye importes pagados y pendientes de pago. Excluye gastos figurativos y aplicaciones financieras.",
     "projectLabel": "Proyecto 2027 — gasto solicitado",
     "projectDescription": "Dinero que el Poder Ejecutivo solicita autorización para gastar durante 2027.",
     "projectPerCapitaLabel": "Proyecto 2027 — por porteño, por año",
-    "projectPerCapitaDescription": "Gasto anual solicitado por habitante censado en 2022."
+    "projectPerCapitaDescription": "Lo solicitado para el año, dividido por la cantidad de habitantes."
   },
   "questions": {
     "eyebrow": "",
-    "title": "Seguí el recorrido de los recursos.",
+    "title": "Elegí cómo recorrer el gasto.",
     "items": [
       [
         "01",

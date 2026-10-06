@@ -1,5 +1,13 @@
 # Cambios
 
+## 2026-10-05 — Lectura ciudadana y comparación bilateral
+
+- Inicio organizado desde preguntas, con una única entrada principal al mapa fiscal. Se mantienen visibles el déficit 2025 y el menor superávit semestral como proporción de los ingresos.
+- Resumen fiscal con saldo destacado, dos barras de ingresos/gastos y una sola cuenta detallada; perspectiva semestral expresada por cada $100 ingresados, con iguales períodos y sin confundir superávit con déficit.
+- Comparación CABA/provincia en dos columnas centradas, siluetas oficiales y selector. Presupuesto 2026, ejecución 2025 y puestos públicos 2024 separados, con todos los indicadores disponibles bajo demanda.
+- Navegación móvil con selector de período, pestañas pertinentes y orientación; adaptación de importes completos a 320 px, textos largos y etiquetas visibles para rectángulos pequeños. Historia con lectura de diez años descontando inflación y términos más claros.
+- Cifras, fuentes, denominadores y ajuste estimado IPC 18% conservados. Sueldos y comparación internacional siguen ocultos. Evaluación y descartes fundamentados en `docs/REVISION_COMUNICACION.md`.
+
 ## 2026-10-05 — Mapa fiscal y lectura del Proyecto 2027
 
 - Mapa propio de ingresos → caja común → destinos, integrado en Resumen; cuatro perspectivas, expansión progresiva, lectura por cada $100, cifras completas y fuente al seleccionar. Colores distintos para ingresos y destinos, versión vertical móvil y detalle inferior que se puede cerrar.

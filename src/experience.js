@@ -70,6 +70,8 @@ function citizenLanguage(markup,view){
  .replace(/Gastos realizados/g,'Gastos ejecutados').replace(/gastos realizados/g,'gastos ejecutados')
  .replace(/Gasto realizado/g,'Gasto ejecutado').replace(/gasto realizado/g,'gasto ejecutado')
  .replace(/Gasto devengado/g,'Gasto ejecutado')
+ .replace(/\$ constantes|Pesos constantes/g,text=>view==='method'?text:'Valores actualizados por inflación')
+ .replace(/a precios constantes/g,text=>view==='method'?text:'con valores actualizados por inflación')
  .replace(/remuneración ordinaria/gi,'salario bruto').replace(/sueldo(?: bruto)? ordinario/gi,'salario bruto')
  .replace(/Ordinario nominal/g,'Salario bruto nominal').replace(/Ordinario real/g,'Salario bruto real')
  .replace(/\$\s*-?\d{1,3}(?:\.\d{3})+,\d+/g,amount=>money(Number(amount.replace(/\$|\s|\./g,'').replace(',','.'))))
