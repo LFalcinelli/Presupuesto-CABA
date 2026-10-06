@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict');
 module.exports=async function({page,base}){
  for(const width of [1440,390,320]){
-  await page.setViewportSize({width,height:950});await page.goto(base+'#proyecto-2027?vista=summary');await page.waitForFunction(()=>document.querySelector('#content')?.getAttribute('aria-busy')==='false'&&document.querySelector('.tabs [data-project-tab="summary"]')?.getAttribute('aria-pressed')==='true'&&document.querySelector('.fiscal-map'));
+  await page.setViewportSize({width,height:950});await page.goto(base+'#proyecto-2027?vista=summary');await page.waitForFunction(()=>document.querySelector('#content')?.getAttribute('aria-busy')==='false'&&document.querySelector('.tabs [data-project-tab="summary"]')?.getAttribute('aria-pressed')==='true'&&document.querySelector('.area-search'));
   await page.locator('.area-search-examples [data-area-report="area-40"]').click();await page.locator('#area-report-dialog[open]').waitFor();
   assert((await page.locator('.area-change').innerText()).includes('3,4% por encima'));assert.equal(await page.locator('.area-composition li').count(),6);
   assert(await page.locator('#area-report-dialog').evaluate(e=>e.scrollWidth<=e.clientWidth+1));assert(page.url().includes('informe=area-40'));

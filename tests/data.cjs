@@ -19,3 +19,5 @@ require('./project-2027.cjs');
 
 require('./fiscal-map-2027.cjs');
 require('./area-reports-2027.cjs');
+
+require('./chart-paths.cjs');
