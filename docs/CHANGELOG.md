@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-10-07 — Auditoría ciudadana y coherencia de lectura
+
+- Presupuestos y partidas históricos de CABA usan los factores de la serie principal; originales y etapas conservados. Comparación 2027/2026 con el supuesto del 18% y escenario anual visible.
+- Botones de portada diferenciados, Personal resaltado y treemaps con leyendas únicas. Fuentes públicas en el recorrido y metodología breve en ocho temas.
+- Intereses, origen nacional de los recursos y proyectos separados visibles. Comparación provincial con presupuesto inicial opcional. Montos del período y valores actualizados por inflación rotulados.
+- Signos y unidades consistentes, advertencia previa en comunas, aviso de carga, tarjetas móviles más compactas y fecha de revisión separada del corte de datos.
+- Decisiones adoptadas, adaptadas y descartadas en AUDITORIA_CIUDADANA.md. Validación de datos, navegación, fuentes, enlaces, escritorio y móvil.
+
+
 ## 2026-10-07 — Gráficos abiertos y lectura ciudadana
 
 - Resumen 2027 integra la comparación con 2026; quedan tres pestañas y los enlaces anteriores siguen funcionando. Cuenta fiscal visible para 2025, enero–junio 2026 y proyecto 2027: flujos proporcionales de ingresos, gastos de capital e intereses, cuatro saldos y financiamiento separado cuando está disponible.
