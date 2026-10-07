@@ -3,7 +3,7 @@ const root=path.resolve(__dirname,'..'),read=file=>JSON.parse(fs.readFileSync(pa
 const h=read('data/history/execution-history.json'),p=h.priceAdjustment,project=read('data/budget/2027/project.json');
 const near=(a,b,tolerance=1e-9)=>assert(Math.abs(a-b)<=tolerance,`${a} differs from ${b}`);
 const average=values=>values.reduce((a,b)=>a+b,0)/values.length;
-assert.equal(h.schemaVersion,2);assert.equal(h.rows.length,31);assert.equal(h.series.currentPrimary.rows.length,31);
+assert.equal(h.schemaVersion,2);assert.equal(h.rows.length,31);assert.equal(h.series.currentPrimary.rows.length,31);assert.equal(h.series.capital.rows.length,31);
 assert.equal(p.lastObservedMonth,'2026-08');assert.deepEqual(p.assumptions,{'2026':.30,'2027':.18});
 const csv=fs.readFileSync(path.join(root,'data/history/ipcba.csv'),'utf8').replace(/^\uFEFF/,'').trim().split(/\r?\n/).slice(1);
 for(const line of csv){const [month,value]=line.split(',');if(month>='2013-01')assert.equal(p.observedMonthly[month],Number(value));}
@@ -18,7 +18,7 @@ const monthly={...p.observedMonthly,...p.projectedMonthly};
 near(monthly['2026-12']/monthly['2025-12'],1.30);near(monthly['2027-12']/monthly['2026-12'],1.18);
 assert.deepEqual(Object.keys(p.projectedMonthly),['2026-09','2026-10','2026-11','2026-12',...Array.from({length:12},(_,i)=>`2027-${String(i+1).padStart(2,'0')}`)]);
 for(const year of [2026,2027])near(p.annualAverage[year],average(Array.from({length:12},(_,i)=>monthly[`${year}-${String(i+1).padStart(2,'0')}`])),1e-10);
-for(const rows of [h.rows,h.series.currentPrimary.rows])for(const r of rows){
+for(const rows of [h.rows,h.series.currentPrimary.rows,h.series.capital.rows])for(const r of rows){
  near(r.factor,p.baseIndex/p.annualAverage[r.year]);near(r.real,r.nominal*r.factor,.01);
  assert.equal(r.priceEstimated,r.year>=2026);assert.equal(r.kind,r.year===1997?'legacy':r.year<=2025?'executed':r.year===2026?'budget':'project');
 }
@@ -33,4 +33,5 @@ for(const [year,billions] of [[2013,15.53],[2017,19.09],[2023,19.18],[2024,17.35
 near(current(2023).real/1e12,15.24,.05);near(current(2027).real/1e12,15.34,.05);
 assert(total(2027).real<total(2026).real);assert.equal(h.events[1].label,'2016–2017 · Traspaso de la Policía');
 assert.equal(p.ipcbaSource.sha256,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'public/sources/IPCBA-serie-empalmada.xlsx'))).digest('hex'));
-console.log('Historia: fuentes, dos universos, empalme, factores y objetivos diciembre/diciembre verificados.');
+const capital=y=>h.series.capital.rows.find(r=>r.year===y);assert.equal(capital(2005).cell,'L20');assert.equal(capital(2026).nominal,4033207400000);assert.equal(capital(2027).nominal,project.summary.capitalExpense.value);
+console.log('Historia: fuentes, tres universos, empalme, factores y objetivos diciembre/diciembre verificados.');

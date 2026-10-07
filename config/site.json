@@ -64,7 +64,6 @@
   "projectViews": [
     "summary",
     "expenses",
-    "revenue",
-    "compare"
+    "revenue"
   ]
 }

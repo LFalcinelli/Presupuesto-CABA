@@ -19,7 +19,7 @@
     "executedNote": "≈ $7,10 billones. Importe nominal oficial enero–junio 2026. Incluye importes pagados y pendientes de pago. Excluye gastos figurativos y aplicaciones financieras.",
     "projectLabel": "Proyecto 2027 — gasto solicitado",
     "projectDescription": "Dinero que el Poder Ejecutivo solicita autorización para gastar durante 2027.",
-    "projectPerCapitaLabel": "Proyecto 2027 — por porteño, por año",
+    "projectPerCapitaLabel": "Presupuesto por porteño, por año",
     "projectPerCapitaDescription": "Lo solicitado para el año, dividido por la cantidad de habitantes."
   },
   "questions": {

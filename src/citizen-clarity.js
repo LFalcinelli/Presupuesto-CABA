@@ -28,7 +28,7 @@ function provinceSilhouette(id){
  const f=state.provincePaths.features.find(f=>f.id===id);return f?`<svg class="pair-silhouette" viewBox="${state.provincePaths.viewBox}" aria-hidden="true" data-fit-province><path d="${f.path}"/></svg>`:'';
 }
 function provincePairRows(c,r,indicators){
- return `<dl class="pair-metrics">${indicators.map(i=>`<div><dt>${E(comparisonLabel(i))}<small>${E(i.unit.replace('Pesos nominales','Pesos del período'))}</small></dt><dd aria-label="CABA: ${E(comparisonLabel(i))}">${comparisonValue(c.caba.indicators[i.id],i)}</dd><dd aria-label="${E(r.name)}: ${E(comparisonLabel(i))}">${comparisonValue(r.indicators[i.id],i)}</dd></div>`).join('')}</dl>`;
+ return `<dl class="pair-metrics">${indicators.map(i=>`<div><dt>${E(i.citizenName||comparisonLabel(i))}<small>${E(i.unit.replace('Pesos nominales','Pesos del período'))}</small></dt><dd aria-label="CABA: ${E(i.citizenName||comparisonLabel(i))}">${comparisonValue(c.caba.indicators[i.id],i)}</dd><dd aria-label="${E(r.name)}: ${E(i.citizenName||comparisonLabel(i))}">${comparisonValue(r.indicators[i.id],i)}</dd></div>`).join('')}</dl>`;
 }
 function provincePair(id,c=comparisonState()){
  const target=id==='02'?'06':id,r=c.p.rows.find(r=>r.id===target);if(!r)return '';
