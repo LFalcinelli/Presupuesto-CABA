@@ -31,7 +31,7 @@ module.exports=async({page,base})=>{
   await page.reload();await ready();assert.equal(await page.locator('#execution-series').inputValue(),'currentPrimary');assert((await page.locator('.history-chart-unit').innerText()).includes('Gasto corriente sin intereses'));
   await page.locator('#execution-series').selectOption('total');await ready();assert(!new URL(page.url()).hash.includes('serie=currentPrimary'));
   const tips=await page.locator('.execution-chart [data-execution-year]').evaluateAll(es=>es.map(e=>e.getAttribute('data-viz-tip')||e.getAttribute('aria-label')).join(' '));assert(!tips.includes('trimestre'));
-  await page.locator('[data-usd-history="7"]').click();await ready();if(await page.locator('[data-usd-group=""]').count()){await page.locator('[data-usd-group=""]').click();await ready();}
+  await page.locator('.dollar-perspective>summary').click();await page.locator('[data-usd-history="7"]').click();await ready();if(await page.locator('[data-usd-group=""]').count()){await page.locator('[data-usd-group=""]').click();await ready();}
   await page.locator('[data-usd-group="3"]').click();await ready();assert.equal(await page.locator('.usd-paired-bars article').count(),8);
   await page.locator('[data-usd-history="8"]').click();await ready();assert.equal(await page.locator('.usd-paired-bars article').count(),8);
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
