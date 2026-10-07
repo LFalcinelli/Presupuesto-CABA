@@ -10,7 +10,7 @@ assert.equal(government.people.length,government.count);assert.equal(government.
 for(const n of government.nodes){assert.equal(n.count,n.people.length+n.children.reduce((sum,i)=>sum+government.nodes[i].count,0));for(const i of n.children)assert.equal(government.nodes[i].parent,n.id);}
 assert(!JSON.stringify(government).match(/"(?:cuil|edad|sexo|mail_laboral)"/i));
 for(const row of history.rows)assert(Math.abs(row.nominal*row.factor-row.real)<.01);
-assert.equal(history.rows[0].kind,'legacy');assert(history.rows.slice(1,-1).every(r=>r.kind==='executed'));assert.equal(history.rows.at(-1).kind,'budget');
+assert.equal(history.rows[0].kind,'legacy');assert(history.rows.slice(1,-2).every(r=>r.kind==='executed'));assert.equal(history.rows.at(-2).kind,'budget');assert.equal(history.rows.at(-1).kind,'project');
 for(const period of Object.values(caif.periods)){assert(Math.abs(period.income-period.expense-period.financialResult)<1);}
 for(const p of read('approved-vs-executed').periods){const d=read(p.period);assert.equal(p.initial,d.fiscalTotals.s);assert.equal(p.executed,d.fiscalTotals.d);assert(Math.abs(p.groups.reduce((v,g)=>v+g.executed,0)-p.executed)<1);}
 const counts=read('conduction-counts');assert.deepEqual(counts.levels.map(l=>l.count),[10,18,82,344,932,855]);assert(!/salary|salario|sueldo|cuil/i.test(JSON.stringify(counts)));assert.equal(config.flags.salaries,false);assert.equal(config.flags.world,false);
@@ -21,3 +21,4 @@ require('./fiscal-map-2027.cjs');
 require('./area-reports-2027.cjs');
 
 require('./chart-paths.cjs');
+require('./history-prices.cjs');

@@ -1,5 +1,5 @@
 'use strict';
-// Presentation changes only: the accounting amounts and inflation factors are retained.
+// Presentation changes; the principal history reads its own documented price adjustment.
 const polishedDataLoader=ensureViewData;
 ensureViewData=async function(view,period){
  await polishedDataLoader(view,period);
@@ -24,8 +24,10 @@ explorerShell=function(){
  document.querySelector('.price-label').hidden=historyView||state.view==='project';
 };
 const polishedSyncRoute=syncRoute;
+const polishedReadRoute=readRoute;
+readRoute=function(){polishedReadRoute();if(state.view==='history'){const q=new URLSearchParams(location.hash.split('?')[1]||'');state.executionSeries=q.get('serie')==='currentPrimary'?'currentPrimary':'total';}};
 syncRoute=function(){
- polishedSyncRoute();if(state.view!=='landing')return;
+ polishedSyncRoute();if(state.view==='history'){const q=new URLSearchParams(location.hash.split('?')[1]||'');if(state.executionSeries==='currentPrimary')q.set('serie','currentPrimary');else q.delete('serie');history.replaceState(null,'','#evolucion'+(q.size?'?'+q:''));return;}if(state.view!=='landing')return;
  const q=new URLSearchParams();
  if(state.fiscalPerspective&&state.fiscalPerspective!=='purpose')q.set('mapa',state.fiscalPerspective);
  if(state.fiscalSelected)q.set('nodo',state.fiscalSelected);
@@ -35,33 +37,33 @@ syncRoute=function(){
 };
 
 function historyTwentyYears(){
- const a=state.executionHistory.rows.find(r=>r.year===2005),b=state.executionHistory.rows.find(r=>r.year===2025);
+ const rows=executionRows(),a=rows.find(r=>r.year===2005),b=rows.find(r=>r.year===2025);
  return {a,b,change:(b.real/a.real-1)*100};
 }
+document.addEventListener('change',e=>{if(e.target.id==='execution-series'){state.executionSeries=e.target.value==='currentPrimary'?'currentPrimary':'total';render();}});
 executionObservation=function(r){
  const label=r.kind==='legacy'?'Registro histórico · criterio distinto':r.kind==='budget'?'Presupuesto al 30/06/2026':r.kind==='project'?'Proyecto de presupuesto':'Gasto ejecutado'+(r.year===2025?' · cierre provisorio':'');
- return `<strong>${r.year} · ${E(label)}</strong><span>${money(r.real)}</span>${r.kind==='executed'||r.kind==='legacy'?`<small>Importe original: ${money(r.nominal)}</small>`:''}`;
+ return `<strong>${r.year} · ${E(label)}</strong><span>${money(r.real)}</span><small>${r.priceEstimated?'Valor estimado con supuesto de inflación · autorización, no ejecución. ':''}Importe original: ${money(r.nominal)}</small>`;
 };
 executionHistoryPanel=function(){
- const d=state.executionHistory,rows=executionRows(),{a,b,change}=historyTwentyYears();
+ const d=state.executionHistory,rows=executionRows(),{a,b,change}=historyTwentyYears(),current=state.executionSeries==='currentPrimary',seriesLabel=d.series[current?'currentPrimary':'total'].label;
  const W=1180,H=520,L=54,R=35,T=64,B=68,max=Math.max(25,Math.ceil(Math.max(...rows.map(r=>r.real))/5e12)*5);
  const x=year=>L+(year-1997)/30*(W-L-R),y=value=>H-B-value/1e12/max*(H-T-B);
  const actual=rows.filter(r=>r.kind==='executed'),chosen=rows.find(r=>r.year===Number(state.executionYear))||b;
  const point=r=>[x(r.year),y(r.real)];
  const bridges=[[rows[0],rows[1],'legacy-history-bridge'],[b,rows.find(r=>r.year===2026),'budget-history-bridge'],[rows.find(r=>r.year===2026),rows.find(r=>r.year===2027),'project-history-bridge']].filter(pair=>pair[0]&&pair[1]);
- const tip=r=>[String(r.year),money(r.real),r.kind==='legacy'?'Registro histórico · criterio distinto':r.kind==='budget'?'Presupuesto actualizado a junio':r.kind==='project'?'Proyecto 2027 · importe sin ajustar por inflación':r.year===2025?'Gasto ejecutado · cierre provisorio':'Gasto ejecutado'];
- return `<section class="chart-panel execution-history history-redesign"><div class="history-impact"><div><p class="eyebrow">2005 → 2025 · VEINTE AÑOS</p><strong>${signedPct(change)}</strong><p>Más gasto ejecutado, descontando la inflación.</p></div><div class="history-impact-values"><span>2005<b>$ ${fmt(a.real/1e12,2)} billones</b></span><i aria-hidden="true">→</i><span>2025<b>$ ${fmt(b.real/1e12,2)} billones</b></span></div></div>
- <p class="history-chart-unit">Billones de pesos · gasto histórico actualizado por inflación a abril–junio de 2026.</p>
- <div class="comparison-legend history-legend"><span><i style="background:#67339b"></i>Gasto ejecutado</span><span><i style="background:#95839e"></i>Presupuesto 2026</span><span><i style="background:#371953"></i>Proyecto 2027*</span></div>
- <div class="history-chart-scroll" tabindex="0" role="region" aria-label="Gráfico histórico; podés desplazarlo horizontalmente"><svg class="execution-chart polished-line-chart" viewBox="0 0 ${W} ${H}" role="group" aria-label="Gasto 1997–2027. Creció ${fmt(change,1)} por ciento entre 2005 y 2025, descontando la inflación. 2026 es presupuesto y 2027 una referencia nominal."><defs><marker id="history-growth-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#a88cbd" stroke-width="1.5"/></marker></defs>
+ const tip=r=>[String(r.year),money(r.real),r.kind==='legacy'?'Registro histórico · criterio distinto':r.kind==='budget'?'Presupuesto actualizado a junio':r.kind==='project'?'Proyecto 2027':r.year===2025?'Gasto ejecutado · cierre provisorio':'Gasto ejecutado',...(r.priceEstimated?['Estimado con supuesto de inflación · autorización, no ejecución']:[])];
+ return `<section class="chart-panel execution-history history-redesign"><div class="history-series-control"><label for="execution-series">Qué gasto querés ver<select id="execution-series"><option value="total" ${!current?'selected':''}>Gasto total</option><option value="currentPrimary" ${current?'selected':''}>Gasto corriente sin intereses</option></select></label><p>${current?'El funcionamiento cotidiano: sin inversión ni intereses de deuda.':'Funcionamiento, inversión e intereses de deuda.'}</p></div><div class="history-impact"><div><p class="eyebrow">2005 → 2025 · VEINTE AÑOS</p><strong>${signedPct(change)}</strong><p>Más gasto ejecutado, descontando la inflación.</p></div><div class="history-impact-values"><span>2005<b>$ ${fmt(a.real/1e12,2)} billones</b></span><i aria-hidden="true">→</i><span>2025<b>$ ${fmt(b.real/1e12,2)} billones</b></span></div></div>
+ <p class="history-chart-unit">${E(seriesLabel)} · billones de pesos actualizados por inflación a abril–junio de 2026.</p>
+ <div class="comparison-legend history-legend"><span><i style="background:#67339b"></i>Gasto ejecutado</span><span><i style="background:#95839e"></i>Presupuesto 2026*</span><span><i style="background:#371953"></i>Proyecto 2027*</span></div>
+ <div class="history-chart-scroll" tabindex="0" role="region" aria-label="Gráfico histórico; podés desplazarlo horizontalmente"><svg class="execution-chart polished-line-chart" viewBox="0 0 ${W} ${H}" role="group" aria-label="${E(seriesLabel)} 1997–2027. Creció ${fmt(change,1)} por ciento entre 2005 y 2025, descontando la inflación. 2026 y 2027 son autorizaciones con ajuste de precios estimado.">
  ${Array.from({length:max/5+1},(_,i)=>i*5).map(v=>`<line x1="${L}" x2="${W-R}" y1="${y(v*1e12)}" y2="${y(v*1e12)}" stroke="#e7e1ec"/><text x="${L-12}" y="${y(v*1e12)+5}" text-anchor="end">${v}</text>`).join('')}
- ${d.events.map((ev,i)=>`<g class="history-event-label"><line x1="${x(ev.year)}" x2="${x(ev.year)}" y1="${T}" y2="${H-B}" stroke="#b6a8bf" stroke-dasharray="3 6"/><a href="${E(ev.source)}" target="_blank" rel="noopener"><rect x="${x(ev.year)-(i?34:168)}" y="${T+(i?43:6)}" width="${i?210:164}" height="31" rx="6"/><text x="${x(ev.year)-(i?25:159)}" y="${T+(i?64:27)}">${ev.year} · ${i?'Funciones de seguridad':'Traspaso del Subte'}</text><title>${E(ev.description)}</title></a></g>`).join('')}
- <path class="history-growth-guide" d="M${x(a.year)+5},${y(a.real)-38} L${x(b.year)-9},${y(b.real)-48}" fill="none" stroke="#a88cbd" stroke-width="2" marker-end="url(#history-growth-arrow)"/><text class="history-growth-caption" x="${x(2011)}" y="${y(12e12)-45}" transform="rotate(-13 ${x(2011)} ${y(12e12)-45})">${signedPct(change)} · 2005–2025</text>
+ ${d.events.map((ev,i)=>{const label=ev.label||`${ev.year} · ${ev.name}`,width=i?246:164,top=Math.max(T,y(rows.find(r=>r.year===ev.year).real)-58);return `<g class="history-event-label"><line x1="${x(ev.year)}" x2="${x(ev.year)}" y1="${top+31}" y2="${H-B}" stroke="#b6a8bf" stroke-dasharray="3 6"/><a href="${E(ev.source)}" target="_blank" rel="noopener"><rect x="${x(ev.year)-(i?34:168)}" y="${top}" width="${width}" height="31" rx="6"/><text x="${x(ev.year)-(i?25:159)}" y="${top+21}">${E(label)}</text><title>${E(ev.description)}</title></a></g>`;}).join('')}
  <path class="history-actual-line" d="${monotonePath(actual.map(point))}" stroke="#67339b" stroke-width="4.5" fill="none"/>
  ${bridges.map(([a,b,cls])=>`<path class="${cls}" d="${monotonePath([point(a),point(b)])}" stroke="#95839e" stroke-width="4" stroke-dasharray="3 5" fill="none"/>`).join('')}
- ${rows.map(r=>`<g role="button" tabindex="0" data-execution-year="${r.year}" ${vizTip(tip(r))} aria-label="${E(tip(r).join(' · '))}">${r.kind==='project'?`<path class="project-history-marker" d="M${x(r.year)},${y(r.real)-8} l8,8 l-8,8 l-8,-8 Z" fill="#371953" stroke="white" stroke-width="2"/>`:`<circle cx="${x(r.year)}" cy="${y(r.real)}" r="${[2005,2025,2026].includes(r.year)?7:4.5}" fill="${r.kind==='budget'?'white':r.kind==='legacy'?'#996815':'#67339b'}" stroke="${r.kind==='budget'?'#95839e':'white'}" stroke-width="2"/>`}</g><text class="history-year-label" x="${x(r.year)}" y="${H-B+24}" transform="rotate(-48 ${x(r.year)} ${H-B+24})" text-anchor="end">${r.year}${r.kind==='project'?'*':''}</text>`).join('')}
+ ${rows.map(r=>`<g role="button" tabindex="0" data-execution-year="${r.year}" ${vizTip(tip(r))} aria-label="${E(tip(r).join(' · '))}">${r.kind==='project'?`<path class="project-history-marker" d="M${x(r.year)},${y(r.real)-8} l8,8 l-8,8 l-8,-8 Z" fill="#371953" stroke="white" stroke-width="2"/>`:`<circle cx="${x(r.year)}" cy="${y(r.real)}" r="${[2005,2025,2026].includes(r.year)?7:4.5}" fill="${r.kind==='budget'?'white':r.kind==='legacy'?'#996815':'#67339b'}" stroke="${r.kind==='budget'?'#95839e':'white'}" stroke-width="2"/>`}</g><text class="history-year-label" x="${x(r.year)}" y="${H-B+24}" transform="rotate(-48 ${x(r.year)} ${H-B+24})" text-anchor="end">${r.year}${r.priceEstimated?'*':''}</text>`).join('')}
  ${[a,b].map(r=>`<text class="history-anchor-label" x="${x(r.year)}" y="${y(r.real)+24}" text-anchor="middle">${fmt(r.real/1e12,2)}</text>`).join('')}</svg></div>
- <p class="history-mobile-hint">Deslizá el gráfico para recorrer los años.</p><p class="history-exception">*2027 está en pesos de ese año, sin deflactar. Los tramos punteados separan etapas distintas.</p>
+ <p class="history-mobile-hint">Deslizá el gráfico para recorrer los años.</p><p class="history-exception">*2026 y 2027: autorizaciones, no gasto ejecutado. Ajuste de precios estimado con inflación de ${fmt(d.priceAdjustment.assumptions['2026']*100,0)}% en 2026 y ${fmt(d.priceAdjustment.assumptions['2027']*100,0)}% en 2027. Los tramos punteados separan etapas distintas.</p>
  <div class="history-year-reading"><label for="execution-year">Elegí un año<select id="execution-year">${rows.slice().reverse().map(r=>`<option value="${r.year}" ${r.year===chosen.year?'selected':''}>${r.year}</option>`).join('')}</select></label><p class="point-readout" id="execution-point" aria-live="polite">${executionObservation(chosen)}</p></div>
  ${detailLink('historia','Fuentes y cómo se comparan los años')}
  <details class="history-values"><summary>Ver todos los importes y descargar</summary><div class="table-wrap"><table><caption>Valores originales y valores del gráfico</caption><thead><tr><th>Año</th><th>Tipo de dato</th><th>Pesos originales</th><th>Valor del gráfico</th></tr></thead><tbody>${rows.map(r=>`<tr><th>${r.year}</th><td>${E(executionLabel(r))}</td><td class="num">${money(r.nominal)}</td><td class="num">${money(r.real)}</td></tr>`).join('')}</tbody></table></div><p>${E(d.method)}</p><p>${d.notes.map(E).join(' ')}</p><a href="${E(d.source)}" target="_blank" rel="noopener">Serie oficial IDECBA ↗</a> · <a href="${Site.url('sources/serie-aif-idecba.xlsx')}" download>Cuadro consultado</a> · <a href="${Site.url('data/history/execution-history.csv')}" download>Serie CSV</a></details></section>`;
