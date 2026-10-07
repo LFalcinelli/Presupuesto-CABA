@@ -34,11 +34,15 @@ La migración del 30/09/2026 no cambia cifras ni criterios. La metadata de cada 
 ## Precios e historia
 
 - Detalles históricos, ingresos y sueldos conservan sus factores IPCBA y las notas de cada vista.
-- Historia principal: serie IDECBA basada en Cuentas de Inversión, gasto total 1997–2025. Hasta 1997 se conserva “etapa definitiva”; desde 1998, devengado. El punto 2026 es presupuesto y permanece separado.
-- Historia principal a precios del promedio abril–junio 2026, usando el empalme nacional/provincial existente. No recalcular en esta migración.
+- Historia principal: serie IDECBA basada en Cuentas de Inversión, gasto total y gasto corriente sin intereses 1997–2025. Conceptos 10) y 2) del cuadro SP_Fi_AX01 (filas físicas 28 y 9), millones convertidos a pesos. Hasta 1997 se conserva “etapa definitiva”; desde 1998, devengado. 2025 es provisorio. El gasto corriente del cuadro excluye intereses, que están en un renglón separado.
+- Revisión autorizada 06/10/2026, sólo para esta historia: IPCBA medio anual desde 2013; IPC-Provincias CIFRA 2007–2012 por cocientes de promedios anuales, anclado en IPCBA promedio 2013. El índice base es IPCBA abril–junio 2026 = 2.434,4066667. La serie CIFRA se descargó y verificó desde su propio sitio; no se le atribuye el Excel de nueve provincias aportado.
+- Para 1997–2006 se conservan las variaciones de promedios del empalme aportado. CIFRA empieza en enero 2007: no permite calcular por sí solo el puente anual 2006–2007. Ese único enlace usa los promedios 2006 y 2007 del archivo aportado; se conservan valores, celdas y hash. El tramo anterior no se presenta como un IPCBA oficial observado.
+- Autorizaciones 2026 y 2027: presupuestos originales $19.877.152.039.294 y $24.094.340.599.263, sin cambio. Se conserva IPCBA observado hasta agosto 2026; se proyectan septiembre–diciembre con tasa mensual constante que lleva diciembre a 1,30 veces diciembre 2025, y los doce meses de 2027 con tasa que lleva diciembre a 1,18 veces diciembre 2026. Son supuestos de escenario autorizados, no inflación observada. Factor = IPCBA base / promedio enero–diciembre observado/proyectado. Valores reales estimados: $19,30093 y $19,27218 billones. No equivalen a ejecución ni certifican que el gasto vaya a ser ése. La comparación específica 2027 vs 2026 mantiene su factor 1,18 y responde a otra aproximación.
+- Gasto corriente sin intereses 2026: $15.565.399.800.000 del mensaje 2027, cuadro 5.1, página PDF 157, publicado en millones con un decimal. 2027: corrientes exactos $19.768.623.479.401 menos intereses $591.887.305.621 = $19.176.736.173.780. El importe de Claude $19.176.736.200.000 reproduce el cuadro redondeado, no la precisión de la planilla. No sumar leyes o proyectos separados.
+- Variación 2005–2025 calculada desde los datos de cada serie; gasto total +118,9977%. No se fija el resultado en el componente. Se retira la flecha decorativa que no tocaba los datos y se resaltan ambos puntos.
 - Vistas históricas adicionales de presupuesto 2005–2026 conservan su criterio inicial hasta 2012 y actualizado al cierre desde 2013. Sus notas explican el tratamiento de 2026 y REM.
 - Comparación histórica en USD: TC oficial por período y ajuste por CPI-U de EE.UU.; no es PPA. Conservar las diferencias respecto de la serie principal.
-- Subte 2013 y transferencia policial 2016 son hitos de cobertura, sin atribuirles automáticamente todo el cambio del gasto.
+- Subte 2013 y transferencia policial 2016–2017 son hitos de cobertura, sin atribuirles automáticamente todo el cambio del gasto. Convenio policial en 2016; operación de la Policía de la Ciudad desde enero 2017. Los cambios de coparticipación no se agregan como cambios de funciones en este gráfico.
 
 ## Denominadores y comparaciones
 

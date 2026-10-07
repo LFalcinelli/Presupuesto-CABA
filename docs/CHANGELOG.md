@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-10-06 — Revisión del deflactor de la historia principal
+
+- Sólo la vista «30 años de gasto público»: IPCBA desde 2013, CIFRA original 2007–2012, empalme aportado antes de 2007 con puente documentado. El resultado total 2005–2025 pasa de +113,7% a +119,0%; no se conserva el +120,6% del cálculo provisorio sugerido.
+- 2026 y 2027 también en la base abril–junio 2026: $19,30 y $19,27 billones estimados, usando IPCBA observado hasta agosto y supuestos diciembre/diciembre de 30% y 18%. Nominales publicados intactos; no se atribuye a datos observados el tramo proyectado.
+- Selector recargable de gasto total/corriente sin intereses. 2026 corriente con precisión del mensaje; 2027 calculado desde la planilla exacta, sin redondear anticipadamente.
+- Se retira la flecha desanclada y se destacan los puntos 2005/2025. Seguridad rotulada 2016–2017. No se confunden eventos de financiamiento con nuevas funciones del gobierno.
+- JSON/CSV, constructor reproducible y pruebas de índices, proyecciones, universos y navegación. USD histórico y metodologías de otras vistas preservados. Sustituye el criterio nominal 2027 de la entrada anterior.
+- La primera lectura del enlace espera a que terminen los módulos de la interfaz; corrige una carrera de carga detectada al recargar Inicio con una selección del mapa.
+
 ## 2026-10-06 — Portada, gráficos y evolución histórica
 
 - Mapa interactivo completo trasladado a Inicio, entre el bloque de cifras y las preguntas. Sus selecciones, ramas y unidad de lectura conservan enlaces recargables desde #inicio.

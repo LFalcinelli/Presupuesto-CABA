@@ -7,7 +7,7 @@ function fiscalSummary(){
 }
 extraViews.summary=fiscalSummary;
 
-function executionLabel(r){return r.kind==='legacy'?'Registro histórico · criterio distinto':r.kind==='budget'?'Presupuesto actualizado a junio':r.kind==='project'?'Proyecto · importe sin ajustar por inflación':r.status;}
+function executionLabel(r){return r.kind==='legacy'?'Registro histórico · criterio distinto':r.kind==='budget'?'Presupuesto actualizado a junio · valor real estimado':r.kind==='project'?'Proyecto · valor real estimado':r.status;}
 function tenYearImpact(){
  const rows=state.executionHistory.rows,a=rows.find(r=>r.year===2015),b=rows.find(r=>r.year===2025);if(!a||!b||a.kind!=='executed'||b.kind!=='executed')return '';
  return `<aside class="history-impact"><strong>${signedPct((b.real/a.real-1)*100)} en diez años, descontando la inflación.</strong>Gasto ejecutado de 2025 frente al de 2015.<p>En ese período cambiaron las responsabilidades de la Ciudad. El crecimiento del gasto no indica por sí solo una mejora equivalente de los servicios. ${detailLink('historia','Ver hitos y método')}</p></aside>`;

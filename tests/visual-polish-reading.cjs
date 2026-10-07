@@ -23,7 +23,13 @@ module.exports=async({page,base})=>{
   for(const selector of ['.legacy-history-bridge','.budget-history-bridge','.project-history-bridge'])assert.equal(await page.locator(selector).getAttribute('stroke-dasharray'),'3 5');
   assert((await page.locator('.history-actual-line').getAttribute('d')).includes('C'));
   assert.equal(await page.locator('.execution-chart [data-execution-year]').count(),31);
-  await page.locator('#execution-year').selectOption('2005');assert((await page.locator('#execution-point').innerText()).includes('8.322.904.832.944'));
+  await page.locator('#execution-year').selectOption('2005');assert((await page.locator('#execution-point').innerText()).includes(new Intl.NumberFormat('es-AR',{maximumFractionDigits:0}).format(a.real)));
+  assert.equal(await page.locator('.history-growth-guide').count(),0);assert((await page.locator('.history-event-label').allTextContents()).join(' ').includes('2016–2017'));
+  await page.locator('#execution-series').selectOption('currentPrimary');await ready();assert(new URL(page.url()).hash.includes('serie=currentPrimary'));
+  const ca=h.series.currentPrimary.rows.find(r=>r.year===2005),cb=h.series.currentPrimary.rows.find(r=>r.year===2025),cg=new Intl.NumberFormat('es-AR',{minimumFractionDigits:1,maximumFractionDigits:1}).format((cb.real/ca.real-1)*100);
+  assert((await page.locator('.history-impact').innerText()).includes(cg));await page.locator('#execution-year').selectOption('2027');assert((await page.locator('#execution-point').innerText()).includes('autorización, no ejecución'));
+  await page.reload();await ready();assert.equal(await page.locator('#execution-series').inputValue(),'currentPrimary');assert((await page.locator('.history-chart-unit').innerText()).includes('Gasto corriente sin intereses'));
+  await page.locator('#execution-series').selectOption('total');await ready();assert(!new URL(page.url()).hash.includes('serie=currentPrimary'));
   const tips=await page.locator('.execution-chart [data-execution-year]').evaluateAll(es=>es.map(e=>e.getAttribute('data-viz-tip')||e.getAttribute('aria-label')).join(' '));assert(!tips.includes('trimestre'));
   await page.locator('[data-usd-history="7"]').click();await ready();if(await page.locator('[data-usd-group=""]').count()){await page.locator('[data-usd-group=""]').click();await ready();}
   await page.locator('[data-usd-group="3"]').click();await ready();assert.equal(await page.locator('.usd-paired-bars article').count(),8);

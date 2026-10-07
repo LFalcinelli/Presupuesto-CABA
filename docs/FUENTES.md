@@ -1,5 +1,7 @@
 # Fuentes oficiales
 
+Revisión de la historia principal, 06/10/2026: [IPC Provincias — CIFRA](https://centrocifra.org.ar/estadisticas/ipc-provincias/), [serie original 2007–2018](https://centrocifra.org.ar/wp-content/uploads/2023/08/IPC-Provincias-2007-2018.xlsx) y [nota metodológica](https://centrocifra.org.ar/wp-content/uploads/2023/08/Nota-metodologica-IPC-Provincias.pdf). Promedios 2007–2013 y hash retenidos en `execution-history.json`. IPCBA: descarga oficial empalmada ya disponible en `public/sources/IPCBA-serie-empalmada.xlsx`, contrastada con `data/history/ipcba.csv`; último mes observado agosto 2026. Policía: [GCBA, sistema de seguridad desde enero 2017](https://buenosaires.gob.ar/gcaba_historico/noticias/asi-funciona-el-sistema-integral-de-seguridad-publica). Presupuestos corrientes 2026/2027: mensaje del proyecto 2027, cuadro 5.1, página PDF 157; 2027 exacto calculado en planilla 7. Fuentes y limitación del enlace anterior a 2007 se documentan en metodología.
+
 La migración del 30/09/2026 conserva fuentes y cifras previamente verificadas. Las fechas de consulta originales están en cada dataset; la migración no equivale a una actualización estadística.
 
 ## Proyecto 2027 y referencia salarial
