@@ -28,6 +28,7 @@ near(total(2005).nominal,5815692930.42,.001);near(total(2025).nominal,1375170324
 assert.equal(total(2026).nominal,19877152039294);assert.equal(total(2027).nominal,project.summary.fiscalExpense.value);
 assert.equal(current(2026).nominal,15565399800000);assert.equal(current(2026).nominalPrecisionPesos,100000);
 assert.equal(current(2027).nominal,project.summary.currentExpense.value-project.summary.interest.value);
+for(const r of [current(2026),current(2027),total(2027)]){assert(r.source);assert.equal(r.sourceSha256,project.source.fileSha256);assert(r.pdfPage);}
 for(const [year,billions] of [[2013,15.53],[2017,19.09],[2023,19.18],[2024,17.35],[2025,17.65],[2026,19.30],[2027,19.27]])near(total(year).real/1e12,billions,.05);
 near(current(2023).real/1e12,15.24,.05);near(current(2027).real/1e12,15.34,.05);
 assert(total(2027).real<total(2026).real);assert.equal(h.events[1].label,'2016–2017 · Traspaso de la Policía');

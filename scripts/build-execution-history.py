@@ -94,13 +94,16 @@ for original in inputs['originals']:
 for y, total, current, kind, status, source in [
     (2026, 19877152039294, 15565399800000, 'budget', 'Presupuesto vigente — 30/06/2026', budget_source),
     (2027, project['summary']['fiscalExpense']['value'], project['summary']['currentExpense']['value']-project['summary']['interest']['value'],
-     'project', 'Proyecto de presupuesto 2027', project['source']['url'])]:
+     'project', 'Proyecto de presupuesto 2027', project['source']['url'] or project['source']['document'])]:
     common = {'year': y, 'factor': base/annual[str(y)], 'priceIndexAnnual': annual[str(y)], 'priceEstimated': True,
               'kind': kind, 'status': status, 'source': source}
-    rows.append({**common, 'nominal': total, 'real': total*common['factor']})
+    rows.append({**common, 'nominal': total, 'real': total*common['factor'],
+                 **({'sourceSha256': project['source']['fileSha256'], 'pdfPage': 3, 'reference': 'Artículo 1'} if y == 2027 else {})})
     current_rows.append({**common, 'nominal': current, 'real': current*common['factor'],
+                         'source': project['source']['document'], 'sourceSha256': project['source']['fileSha256'],
+                         'pdfPage': 157 if y == 2026 else 190,
                          'reference': 'Mensaje 2027, cuadro 5.1, PDF página 157; millones con un decimal' if y == 2026
-                         else 'Planilla 7: gastos corrientes menos intereses de deuda, valores exactos en pesos',
+                         else 'Planilla 16: gastos corrientes sin intereses; conciliado con corrientes del artículo 1 menos intereses de planilla 7',
                          'nominalPrecisionPesos': 100000 if y == 2026 else 1})
 
 data.update(schemaVersion=2, updated='2026-10-06', rows=rows,
