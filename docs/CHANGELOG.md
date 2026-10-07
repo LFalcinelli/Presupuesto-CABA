@@ -1,5 +1,16 @@
 # Cambios
 
+## 2026-10-07 — Gráficos abiertos y lectura ciudadana
+
+- Resumen 2027 integra la comparación con 2026; quedan tres pestañas y los enlaces anteriores siguen funcionando. Cuenta fiscal visible para 2025, enero–junio 2026 y proyecto 2027: flujos proporcionales de ingresos, gastos de capital e intereses, cuatro saldos y financiamiento separado cuando está disponible.
+- Historia: flecha anclada en los puntos 2005/2025; techo de 20 billones para total/corriente; nueva serie de capital con los mismos factores y base abril–junio 2026. Capital usa una escala de 5 billones para mantener legibilidad. No cambian nominales, deflactores ni etapas anteriores.
+- Comparación bilateral visible: dos presupuestos anuales 2026, tres indicadores de enero–marzo 2026 (tributos propios, capital y saldo financiero como proporciones), y empleo público 2024. Historia provincial con cinco recorridos individuales y techo 250 en base 2005 = 100.
+- Rectángulos mayores, navegación con un toque y detalle accesible. Cuando una categoría supera el 50%, se abre su interior sólo si los componentes están verificados y suman el total; porcentajes siempre sobre el total del gráfico. Ranking de variaciones e interanuales a la vista.
+- Menús más legibles, sin «Estás en». Guía específica de presupuesto por habitante y metodología organizada por temas, con el detalle técnico opcional. No se equipara presupuesto per cápita a impuestos individuales.
+- Obras: 309 proyectos del PDF oficial con componentes conciliados en 2027, 2028 y 2029. Nombres ampliados para lectura, originales conservados; detalle de cada componente y año. Constructor opcional desde el PDF con control de hash, sin publicarlo.
+- Referencias externas tomadas como conceptos de lectura (cuenta visible y comparación), sin copiar textos, estética, cifras ni métodos de inflación. Se mantienen ocultos salarios y comparación internacional.
+- Validación: conciliaciones de datos, enlaces antiguos, selección/recarga, interacción por teclado, cuenta fiscal y lectura móvil en 1440, 390 y 320 px; capturas de revisión.
+
 ## 2026-10-06 — Revisión del deflactor de la historia principal
 
 - Sólo la vista «30 años de gasto público»: IPCBA desde 2013, CIFRA original 2007–2012, empalme aportado antes de 2007 con puente documentado. El resultado total 2005–2025 pasa de +113,7% a +119,0%; no se conserva el +120,6% del cálculo provisorio sugerido.

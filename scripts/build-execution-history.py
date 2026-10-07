@@ -55,6 +55,14 @@ if args.cifra:
 else:
     inputs = data['priceAdjustment']['inputs']
 
+# Capital is taken from its own official row, not inferred from rounded subtotals.
+import openpyxl
+fiscal_sheet = openpyxl.load_workbook(ROOT / 'public/sources/serie-aif-idecba.xlsx', read_only=True, data_only=True)['SP_Fi_AX01']
+capital_row = next(i for i in range(1, 40) if str(fiscal_sheet.cell(i, 1).value).startswith('5) Gastos de capital'))
+for original in inputs['originals']:
+    cell = fiscal_sheet.cell(capital_row, 4 + original['year'] - 1997)
+    original.update(capital=cell.value * 1e6, capitalCell=cell.coordinate)
+
 with (ROOT / 'data/history/ipcba.csv').open(encoding='utf-8-sig') as f:
     observed = {r['mes']: float(r['IPCBA_base2021_100']) for r in csv.DictReader(f) if r['mes'] >= '2013-01'}
 last_observed = max(observed)
@@ -82,13 +90,13 @@ for year in range(2006, 1996, -1):
     annual[str(year)] = annual[str(year+1)] * legacy[str(year)]['index'] / legacy[str(year+1)]['index']
 
 budget_source = next(r['source'] for r in data['rows'] if r['year'] == 2026)
-rows, current_rows = [], []
+rows, current_rows, capital_rows = [], [], []
 for original in inputs['originals']:
     y = original['year']
     common = {'year': y, 'factor': base/annual[str(y)], 'priceIndexAnnual': annual[str(y)],
               'priceEstimated': False, 'kind': 'legacy' if y == 1997 else 'executed',
               'status': 'Registro histórico · criterio distinto' if y == 1997 else 'Gasto ejecutado' + (' · provisorio' if y == 2025 else '')}
-    for out, key, cell in [(rows, 'total', 'cell'), (current_rows, 'currentPrimary', 'currentCell')]:
+    for out, key, cell in [(rows, 'total', 'cell'), (current_rows, 'currentPrimary', 'currentCell'), (capital_rows, 'capital', 'capitalCell')]:
         nominal = original[key]
         out.append({**common, 'nominal': nominal, 'real': nominal*common['factor'], 'cell': original[cell]})
 for y, total, current, kind, status, source in [
@@ -105,10 +113,17 @@ for y, total, current, kind, status, source in [
                          'reference': 'Mensaje 2027, cuadro 5.1, PDF página 157; millones con un decimal' if y == 2026
                          else 'Planilla 16: gastos corrientes sin intereses; conciliado con corrientes del artículo 1 menos intereses de planilla 7',
                          'nominalPrecisionPesos': 100000 if y == 2026 else 1})
+    capital = 4033207400000 if y == 2026 else project['summary']['capitalExpense']['value']
+    capital_rows.append({**common, 'nominal': capital, 'real': capital * common['factor'],
+                         'source': project['source']['document'], 'sourceSha256': project['source']['fileSha256'],
+                         'pdfPage': 157 if y == 2026 else 3,
+                         'reference': 'Mensaje 2027, cuadro 5.1, gastos de capital; millones con un decimal' if y == 2026 else 'Artículo 1: gastos de capital',
+                         'nominalPrecisionPesos': 100000 if y == 2026 else 1})
 
-data.update(schemaVersion=2, updated='2026-10-06', rows=rows,
+data.update(schemaVersion=2, updated='2026-10-07', rows=rows,
             series={'total': {'label': 'Gasto total', 'definition': data['metric']},
-                    'currentPrimary': {'label': 'Gasto corriente sin intereses', 'definition': 'Gasto corriente, sin intereses ni gasto de capital', 'rows': current_rows}},
+                    'currentPrimary': {'label': 'Gasto corriente sin intereses', 'definition': 'Gasto corriente, sin intereses ni gasto de capital', 'rows': current_rows},
+                    'capital': {'label': 'Gasto de capital', 'definition': 'Gasto de capital según el clasificador oficial: inversión real, transferencias de capital e inversión financiera; sin amortización de deuda', 'rows': capital_rows}},
             priceAdjustment={'name': 'IPCBA / IPC-Provincias CIFRA / empalme histórico aportado', 'baseIndex': base,
                 'base': data['base'], 'annualAverage': annual, 'lastObservedMonth': last_observed,
                 'observedMonthly': observed, 'projectedMonthly': {k:v for k,v in months.items() if k > last_observed},
@@ -119,7 +134,7 @@ data.update(schemaVersion=2, updated='2026-10-06', rows=rows,
                                'file': 'sources/IPCBA-serie-empalmada.xlsx', 'sha256': sha(ROOT/'public/sources/IPCBA-serie-empalmada.xlsx'),
                                'sheet': 'Nivel_general_empalme', 'csvSha256': sha(ROOT/'data/history/ipcba.csv')},
                 'inputs': inputs},
-            method='1997–2025: cuadro IDECBA SP_Fi_AX01, conceptos 10) Gastos totales y 2) Gastos corrientes (que excluye intereses); millones convertidos a pesos. Toda la serie: nominal × IPCBA promedio abril–junio 2026 / índice promedio anual empalmado. Desde 2013, IPCBA; 2007–2012, IPC-Provincias CIFRA; tramo anterior y enlace 2006–2007, empalme aportado documentado. Los presupuestos 2026 y 2027 se ajustan por un promedio anual estimado con inflación diciembre/diciembre de 30% y 18%, respectivamente.',
+            method='1997–2025: cuadro IDECBA SP_Fi_AX01, conceptos 10) Gastos totales 2) Gastos corrientes (que excluye intereses) y 5) Gastos de capital; millones convertidos a pesos. Toda la serie: nominal × IPCBA promedio abril–junio 2026 / índice promedio anual empalmado. Desde 2013, IPCBA; 2007–2012, IPC-Provincias CIFRA; tramo anterior y enlace 2006–2007, empalme aportado documentado. Los presupuestos 2026 y 2027 se ajustan por un promedio anual estimado con inflación diciembre/diciembre de 30% y 18%, respectivamente.',
             notes=['1997 conserva la etapa definitiva de la convención antigua; desde 1998 se informa devengado. La conexión 1997–1998 permanece punteada.',
                    '2025 es provisorio en el cuadro oficial. Los hitos de nuevas responsabilidades no explican por sí solos toda la variación del gasto.',
                    '2026 es presupuesto anual actualizado al 30/06 y 2027 es proyecto: autorizaciones, no ejecución. Sus valores reales dependen de los supuestos de precios, conservan marcador distinto y conexión punteada.',
@@ -132,7 +147,7 @@ FILE.write_bytes((json.dumps(data, ensure_ascii=False, separators=(',', ':'))+'\
 with FILE.with_suffix('.csv').open('w', encoding='utf-8', newline='') as f:
     columns=['serie','year','nominal','real','factor','priceIndexAnnual','priceEstimated','kind','status']
     writer=csv.DictWriter(f, fieldnames=columns, lineterminator='\n');writer.writeheader()
-    for name, records in [('total',rows),('currentPrimary',current_rows)]:
+    for name, records in [('total',rows),('currentPrimary',current_rows),('capital',capital_rows)]:
         writer.writerows({'serie': name, **{k:r[k] for k in columns if k!='serie'}} for r in records)
 print(json.dumps({'baseIndex':base,'lastObserved':last_observed,'total2026':rows[-2]['real'], 'total2027':rows[-1]['real'],
                   'growth2005_2025':(rows[28]['real']/rows[8]['real']-1)*100},ensure_ascii=False))

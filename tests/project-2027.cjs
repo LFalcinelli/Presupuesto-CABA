@@ -9,6 +9,13 @@ assert.equal(v('primaryResult')-v('interest'),v('financialResult'));
 assert.equal(v('financialSources')+v('financialResult'),v('financialApplications'));
 assert.equal(v('economicPrimaryResult')-v('interest'),v('economicResult'));
 assert.equal(v('perCapita'),v('fiscalExpense')/p.population.value);
+const investments=read('data/budget/2027/investments.json');
+assert.equal(investments.projects.length,309);
+for(const project of investments.projects){
+ assert(project.displayName&&project.name);
+ assert(project.components.length&&project.components.every(c=>c.name&&c.pdfPages.length));
+ for(let year=0;year<3;year++)assert.equal(project.components.reduce((sum,c)=>sum+c.amounts[year],0),project.amounts[year],project.name);
+}
 for(const k of ['purposes','functions','jurisdictions','objects','economic'])assert.equal(p.breakdowns[k].reduce((a,r)=>a+r.value,0),v('fiscalExpense'),k);
 assert.equal(p.breakdowns.revenue.reduce((a,r)=>a+r.value,0),v('fiscalRevenue'));
 for(const purpose of p.breakdowns.purposes)assert.equal(p.breakdowns.functions.filter(f=>f.purpose===purpose.name).reduce((a,r)=>a+r.value,0),purpose.value);
@@ -19,7 +26,7 @@ assert.equal(c.totals.project,v('fiscalExpense'));assert(Math.abs(c.totals.realV
 assert(c.totals.nominalVariationPct>21&&c.totals.nominalVariationPct<22);assert(c.totals.realVariationPct>2&&c.totals.realVariationPct<3);
 for(const rows of Object.values(c.groups)){assert(Math.abs(rows.reduce((sum,r)=>sum+r.projectAdjusted,0)-c.totals.projectAdjusted)<.01);for(const r of rows){if(r.reference)assert(Math.abs(r.realVariationPct-(r.project/r.reference/c.deflator.factor-1)*100)<1e-9);else assert.equal(r.realVariationPct,null);}}
 for(const rows of Object.values(c.groups)){assert(Math.abs(rows.reduce((a,r)=>a+r.reference,0)-c.totals.reference)<1);assert.equal(rows.reduce((a,r)=>a+r.project,0),c.totals.project);}
-const config=read('config/site.json');assert.equal(config.featuredBudgetStatus,'project');assert.equal(config.currentExecutionPeriod,'2026-2');assert.equal(config.currentBudgetYear,2026);assert.deepEqual(config.projectViews,['summary','expenses','revenue','compare']);
+const config=read('config/site.json');assert.equal(config.featuredBudgetStatus,'project');assert.equal(config.currentExecutionPeriod,'2026-2');assert.equal(config.currentBudgetYear,2026);assert.deepEqual(config.projectViews,['summary','expenses','revenue']);
 assert(!fs.existsSync(path.resolve(__dirname,'../data/revenue/2027/tax-changes.json')));
 const salary=read('data/salaries/latest-reference.json');assert.equal(salary.latest.value,12474468.49);assert.equal(salary.ratio,salary.latest.value/salary.president.value);
 console.log('Proyecto 2027: universo, resultados, clasificaciones, comparación nominal/real estimada, trazabilidad y separación de ejecución verificados.');

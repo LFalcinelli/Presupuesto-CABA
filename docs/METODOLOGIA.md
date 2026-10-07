@@ -2,6 +2,13 @@
 
 La migración del 30/09/2026 no cambia cifras ni criterios. La metadata de cada dataset conserva fuente, unidades, corte, factores, notas y limitaciones particulares.
 
+## Lectura incorporada el 07/10/2026
+
+- El diagrama fiscal reparte flujos de la misma cuenta y período. Los resultados económicos, primario y financiero son saldos, no flujos adicionales. Si hay déficit, la diferencia se rotula «Faltante de ingresos» sin atribuirle una fuente de financiamiento no disponible. Los intereses se muestran una sola vez, aparte del gasto corriente sin intereses.
+- La comparación bilateral distingue presupuestos anuales 2026 de resultados enero–marzo 2026 y puestos públicos 2024. Tributos propios / ingresos corrientes, capital / gasto total y saldo financiero / ingresos totales son proporciones del trimestre. Empleo: puestos / población × 1.000; no equivale a cargos políticos.
+- Capital histórico: concepto 5 de SP_Fi_AX01, millones convertidos a pesos. 2026: cuadro 5.1 del Mensaje 2027, $4.033.207.400.000, precisión $100.000; 2027: artículo 1, $4.325.717.119.862. Mismos factores de precios que el total y el corriente; excluye amortización de deuda.
+- Nombres de obras ampliados sólo con denominaciones completas de componentes, contexto del programa y expansiones documentadas. El detalle conserva el nombre original y distingue los componentes: el proyecto Línea F incluye construcción e ingeniería, no se atribuye todo el importe a ingeniería. No se interpretan montos multianuales nominales como crecimiento real.
+
 ## Universo y etapas
 
 - CABA: Administración Gubernamental (central y descentralizada). Gasto corriente y de capital; figurativas y aplicaciones financieras separadas.

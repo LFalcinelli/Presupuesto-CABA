@@ -10,7 +10,7 @@ module.exports=async({page,browser,base})=>{
   await page.goto(base+'#explorar?periodo=2025-4');await ready();
   const closed=caif.periods['2025-4'];assert((await page.locator('.fiscal-main-result').innerText()).includes(number(Math.abs(closed.financialResult))));assert((await page.locator('.fiscal-main-result h2').innerText()).includes('déficit'));
   assert.equal(await page.locator('.fiscal-account-detail').count(),1);assert.equal(await page.locator('.fiscal-summary .fiscal-kpis').count(),0);
-  await page.locator('.fiscal-account-detail>summary').click();assert.equal(await page.locator('.fiscal-account-detail tbody tr').count(),10);
+  await page.locator('.fiscal-account-detail>summary').click();assert.equal(await page.locator('.fiscal-account-detail tbody tr').count(),11);
   assert((await page.locator('.fiscal-account-detail').innerText()).includes(number(closed.income)));assert((await page.locator('.fiscal-account-detail').innerText()).includes(number(closed.expense)));
   if(width<650){assert.equal(await page.locator('#period-tabs').isVisible(),false);await page.locator('#mobile-period').selectOption('2026-2');}else await page.locator('[data-period="2026-2"]').click();await ready();
   assert(page.url().includes('2026-2'));assert((await page.locator('.fiscal-main-result h2').innerText()).includes('superávit'));
@@ -25,9 +25,7 @@ module.exports=async({page,browser,base})=>{
    assert.deepEqual(await page.locator('.pair-identities h3').allTextContents(),['CABA',r.name]);
    const values=await page.locator('.pair-sheet>.pair-metrics>div').first().locator('dd').allTextContents();assert.deepEqual(values,['$ '+number(c.indicators.budgetPc),'$ '+number(r.indicators.budgetPc)]);
   }
-  await page.locator('.pair-additional>summary').filter({hasText:'Gastos e ingresos del cierre 2025'}).click();assert.equal(await page.locator('.pair-additional[open] .pair-metrics>div').count(),18);
-  assert((await page.locator('.pair-additional[open]').innerText()).includes('no al presupuesto 2026'));
-  await page.locator('.pair-additional>summary').filter({hasText:'Puestos públicos'}).click();assert((await page.locator('.pair-additional[open]').last().innerText()).includes('No equivale a cantidad de funcionarios políticos'));
+  assert.equal(await page.locator('.pair-panel').evaluate(e=>e.tagName),'SECTION');assert.equal(await page.locator('.pair-sheet>.pair-metrics>div').count(),6);assert((await page.locator('.pair-panel').innerText()).includes('2024'));assert((await page.locator('.pair-panel').innerText()).includes('Puestos públicos'));
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await page.goto(base+'#gastos?periodo=2026-2');await ready();
   assert(await page.locator('.treemap-figure figcaption').first().isVisible());
