@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-10-09 — Composición y cambios reales del gasto y los ingresos
+
+- Selector uniforme de finalidad y función, jurisdicciones, incisos y gasto corriente/capital en Gastos; cada rectángulo conserva su detalle navegable.
+- Proyecto 2027: gráficos de variación real en Gastos e Ingresos frente al presupuesto vigente al 30/06/2026, con el supuesto del 18%. Aperturas conciliadas por funciones, jurisdicciones, incisos, finalidad, clasificación económica y origen de ingresos.
+- Jurisdicción 31: Infraestructura y Movilidad e Infraestructura reunidas; no se representa el cambio de nombre como una desaparición y una creación.
+- Ingresos: un único recuadro de impuestos a la producción con sus componentes visibles, colores verdes y porcentajes del total. Sin niveles repetidos de recuadros anidados.
+- Comparaciones de ejecución: todas las funciones semestrales visibles; comparación anual comienza por finalidad/función y suma jurisdicciones.
+
+
 ## 2026-10-07 — Auditoría ciudadana y coherencia de lectura
 
 - Presupuestos y partidas históricos de CABA usan los factores de la serie principal; originales y etapas conservados. Comparación 2027/2026 con el supuesto del 18% y escenario anual visible.

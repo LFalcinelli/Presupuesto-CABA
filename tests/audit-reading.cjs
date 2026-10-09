@@ -28,7 +28,7 @@ module.exports=async({page,base})=>{
   if(route.includes('gastos'))assert((await page.locator('.period-price-reading').innerText()).includes('7,10 billones'));
   if(route.includes('ingresos'))assert((await page.locator('.period-price-reading').innerText()).includes('8,02 billones'));
  }
- await page.goto(base+'#metodologia?seccion=historia');await ready();assert.equal(await page.locator('.method-index a').count(),8);await cleanSources();assert((await page.locator('.method-page').textContent()).split(/\s+/).length<1300);assert((await page.locator('#updated-label').innerText()).includes('07/10/2026'));
+ await page.goto(base+'#metodologia?seccion=historia');await ready();assert.equal(await page.locator('.method-index a').count(),8);await cleanSources();assert((await page.locator('.method-page').textContent()).split(/\s+/).length<1300);assert((await page.locator('#updated-label').innerText()).includes('09/10/2026'));
  const out=process.env.QA_SCREENSHOTS;
  if(out){fs.mkdirSync(out,{recursive:true});for(const [name,route,width] of [['resumen-auditado','#proyecto-2027?vista=summary',1440],['metodologia-sencilla','#metodologia',1440],['ingresos-auditados-mobile','#proyecto-2027?vista=revenue',390]]){await page.setViewportSize({width,height:1100});await page.goto(base+route);await ready();await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:path.join(out,name+'.png'),animations:'disabled'});}}
  console.log('Auditoría: mismos precios en CABA, escenarios explícitos, fuentes públicas, rutas diferenciadas y comparación inicial verificadas.');

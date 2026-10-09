@@ -128,14 +128,14 @@ const readingFlatTreemap=compositionTreemap;
 function compositionDetail(row,denominator,options){
  const compared=state.view==='project'?Object.values(state.projectComparison.groups).flat().find(r=>r.name===row.name):null;
  const change=compared?`<h3>Frente al presupuesto actualizado de 2026</h3><p><strong>${signedPct(compared.realVariationPct)}</strong> después de descontar la inflación supuesta de 18%.</p><dl class="composition-comparison"><div><dt>2026, actualizado a junio</dt><dd>${money(compared.reference)}</dd></div><div><dt>2027, valor propuesto</dt><dd>${money(compared.project)}</dd></div></dl>`:'';
- return `<strong class="reading-amount">${money(row.value)}</strong><p>${pct(row.value/denominator*100)} del total de este gráfico.</p>${row.description?`<p>${E(row.description)}</p>`:''}${change}<p>${E(options.label||'Composición del gasto')}. ${state.view==='project'?'Importe solicitado para 2027; todavía no es gasto ejecutado.':'Conserva el período y la medida de la vista.'}</p>${detailLink(state.view==='project'?'presupuesto-2027':state.view==='income'?'ingresos':'ejecucion','Fuente y alcance')}`;
+ return `<strong class="reading-amount">${money(row.value)}</strong><p>${pct(row.value/denominator*100)} del total de este gráfico.</p>${row.description?`<p>${E(row.description)}</p>`:''}${change}<p>${E(options.label||'Composición del gasto')}. ${state.view==='project'?(state.projectTab==='revenue'?'Recurso estimado para 2027; todavía no fue recaudado.':'Importe solicitado para 2027; todavía no es gasto ejecutado.'):'Conserva el período y la medida de la vista.'}</p>${detailLink(state.view==='project'?'presupuesto-2027':state.view==='income'?'ingresos':'ejecucion','Fuente y alcance')}`;
 }
 compositionTreemap=function(items,options={}){
  const sum=items.reduce((s,r)=>s+(r.value>0?r.value:0),0),denominator=options.shareTotal||sum,branches=[],badgeContext=options.badgeContext||{next:0};
  const rows=items.map((row,index)=>{
-  const children=compositionChildren(row),valid=children.length>1&&Math.abs(children.reduce((s,r)=>s+r.value,0)-row.value)<=Math.max(1,row.value*1e-9),expand=row.value/sum>.5&&valid;
+  const children=options.incomeLayout?(row.children||[]):compositionChildren(row),valid=children.length>1&&Math.abs(children.reduce((s,r)=>s+r.value,0)-row.value)<=Math.max(1,row.value*1e-9),expand=row.value/sum>.5&&valid;
   let action=row.action;
-  if(!action){const area=state.view==='project'&&state.projectDimension==='jurisdictions'?state.areaReports.areas.find(r=>r.code===row.id):null;
+  if(!action){const area=state.view==='project'&&state.projectDimension==='jurisdictions'?state.areaReports.areas.find(r=>classificationName(r.name)===classificationName(row.name)):null;
    action=area?`data-area-report="${area.id}"`:readingAction(displayName(row.name),compositionDetail(row,denominator,options));
   }
   if(expand)branches.push({index,row,children,action});return {...row,badge:expand?null:++badgeContext.next,action:action+(expand?` data-treemap-branch="${index}"`:'')};
@@ -145,8 +145,9 @@ compositionTreemap=function(items,options={}){
  const pw=Math.max(248,Math.min(1120,window.innerWidth-100)),ph=options.height||(innerWidth<600?620:560);
  for(const branch of branches){const tile=root.querySelector(`[data-treemap-branch="${branch.index}"]`);if(!tile)continue;
   const block=document.createElement('div');block.className='treemap-branch';block.style.cssText=tile.style.cssText;
+  const branchWidth=(options.width||pw)*parseFloat(tile.style.width)/100,headingHeight=options.incomeLayout?Math.max(44,Math.ceil(displayName(branch.row.name).length/Math.max(20,branchWidth/8))*18+24):44;block.style.setProperty('--branch-heading-height',headingHeight+'px');
   block.innerHTML=`<button class="treemap-branch-title" ${branch.action}>${E(displayName(branch.row.name))} <strong>${pct(branch.row.value/denominator*100)}</strong> <span aria-hidden="true">↗</span></button><div class="treemap-branch-interior"></div>`;
-  const w=pw*parseFloat(tile.style.width)/100,h=ph*parseFloat(tile.style.height)/100-44;
+  const w=branchWidth,h=ph*parseFloat(tile.style.height)/100-headingHeight;
   const child=document.createElement('template');child.innerHTML=compositionTreemap(branch.children,{...options,badgeContext,showKey:false,shareTotal:denominator,width:w,height:h,label:branch.row.name});
   block.querySelector('.treemap-branch-interior').append(child.content.querySelector('.rect-treemap'));
   const labels=child.content.querySelector('.treemap-labels');if(labels){labels.classList.add('nested-treemap-labels');root.append(labels);}

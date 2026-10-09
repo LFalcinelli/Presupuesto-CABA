@@ -70,3 +70,14 @@ Los faltantes se mantienen como faltantes. No cambiar estos criterios sin autori
 - Partida de deuda menos intereses = otros costos financieros. No se confunde la finalidad completa con los intereses de la cuenta fiscal.
 - Presupuesto inicial opcional para CABA en mapa, lista y comparación bilateral. Los demás presupuestos conservan el estado aprobado o prorrogado verificado.
 - La serie IDECBA y las publicaciones trimestrales pueden contener diferencias de revisión y alcance. Se conservan sus originales; no se fuerza equivalencia para 2018/2024 sin cotejo de esas diferencias.
+
+
+### Aperturas comparables y cambio de nombre de Infraestructura (09/10/2026)
+
+El selector de composición agrupa exclusivamente filas fiscales del período: finalidad/función, jurisdicción, inciso o códigos económicos 21 (corriente) y 22 (capital). En cierres anuales se muestra devengado; en el avance, presupuesto vigente. El clic conserva la clasificación y el período.
+
+Las comparaciones 2027/2026 de funciones se concilian por denominación oficial, normalizando acentos y mayúsculas. Los identificadores de las filas del PDF 2027 no se interpretan como códigos oficiales 2026. Las jurisdicciones se vinculan con los códigos verificados de los informes por área; la jurisdicción 31 es Infraestructura en 2025 y Movilidad e Infraestructura en 2026–2027. El primer semestre conserva las dos filas de referencia originales en sourceRows y reúne sus importes sin modificar el factor IPCBA. Otros traspasos de competencias no se suponen equivalentes.
+
+Ingresos 2027/2026: Planillas 11 y 16 frente a la columna de presupuesto vigente del informe de recursos de junio 2026, excluyendo figurativas y fuentes financieras. Se vinculan las seis clases de recursos y los cuatro grupos tributarios; sus agregados concilian con los totales propios de ingresos, que son distintos del total de gastos. Fórmula real estimada: (proyecto 2027 / vigente 2026 / 1,18 − 1) × 100. No se usa lo recaudado en seis meses como base de un presupuesto anual.
+
+El recuadro de producción incluye Ingresos Brutos, Sellos, energía eléctrica y contribuciones especiales/ferroviarias según cada informe. Se desagrega una vez; cada participación mantiene el denominador del gráfico, sin sumar padres e hijos como partidas diferentes. Reconstrucción: scripts/build-composition-comparisons.py.
