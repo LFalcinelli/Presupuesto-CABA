@@ -1,5 +1,10 @@
 # Cambios
 
+## 2026-10-09 — Recaudación histórica
+
+- Última opción «Recaudación total» en el selector 1997–2027: recursos corrientes y de capital, sin endeudamiento, con el mismo ajuste por inflación de la historia del gasto.
+- Recaudación efectiva hasta 2025 e ingresos previstos para 2026–2027 diferenciados; comparación 2005–2025, consulta por año, tabla y CSV. Se conservan los datos y escalas de gasto.
+
 ## 2026-10-09 — Áreas de Gobierno (propuesta en rama)
 
 - Cuarta pestaña del Proyecto 2027: directorio de 22 jurisdicciones, búsqueda, tipos institucionales y fichas con URL propia.

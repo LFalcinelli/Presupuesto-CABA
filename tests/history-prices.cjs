@@ -34,4 +34,22 @@ near(current(2023).real/1e12,15.24,.05);near(current(2027).real/1e12,15.34,.05);
 assert(total(2027).real<total(2026).real);assert.equal(h.events[1].label,'2016–2017 · Traspaso de la Policía');
 assert.equal(p.ipcbaSource.sha256,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'public/sources/IPCBA-serie-empalmada.xlsx'))).digest('hex'));
 const capital=y=>h.series.capital.rows.find(r=>r.year===y);assert.equal(capital(2005).cell,'L20');assert.equal(capital(2026).nominal,4033207400000);assert.equal(capital(2027).nominal,project.summary.capitalExpense.value);
-console.log('Historia: fuentes, tres universos, empalme, factores y objetivos diciembre/diciembre verificados.');
+const revenue=y=>h.series.revenue.rows.find(r=>r.year===y),income=read('data/revenue/income-2026-2.json');
+assert.equal(h.series.revenue.rows.length,31);
+for(const r of h.series.revenue.rows){
+ near(r.factor,total(r.year).factor);near(r.real,r.nominal*r.factor,.01);
+ assert.equal(r.priceEstimated,r.year>=2026);assert.equal(r.kind,r.year<=2025?'executed':r.year===2026?'budget':'project');
+ if(r.year<=2025){assert.equal(r.cell,p.inputs.originals.find(o=>o.year===r.year).revenueCell);assert.equal(r.nominal,p.inputs.originals.find(o=>o.year===r.year).revenue);}
+}
+// Independently read from SP_Fi_AX01, concept 6) Recursos totales (1+4), millions converted to pesos.
+for(const [year,nominal,cell] of [[1997,2811371939.66,'D24'],[2005,6166999871.57,'L24'],[2025,13470177564055.33,'AF24']]){near(revenue(year).nominal,nominal,.01);assert.equal(revenue(year).cell,cell);}
+near(revenue(2025).nominal-total(2025).nominal,-281525677404,1);
+assert.equal(revenue(2026).nominal,income.total.v);assert.notEqual(revenue(2026).nominal,income.total.r);
+assert.equal(revenue(2027).nominal,project.summary.fiscalRevenue.value);
+assert.notEqual(revenue(2026).nominal,total(2026).nominal);assert.notEqual(revenue(2027).nominal,total(2027).nominal);
+assert.deepEqual(revenue(2026).pdfPages,[5,9]);assert.equal(revenue(2027).pdfPage,190);
+assert.equal(revenue(2026).sourceSha256,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'public/sources/recursos-2026-2.pdf'))).digest('hex'));
+assert.equal(revenue(2027).sourceSha256,project.source.fileSha256);
+const revenueCSV=fs.readFileSync(path.join(root,'data/history/execution-history.csv'),'utf8').trim().split('\n').filter(line=>line.startsWith('revenue,'));
+assert.equal(revenueCSV.length,31);for(const line of revenueCSV){const [,year,nominal,real]=line.split(',');assert.equal(Number(nominal),revenue(Number(year)).nominal);assert.equal(Number(real),revenue(Number(year)).real);}
+console.log('Historia: fuentes, cuatro universos, empalme, factores y objetivos diciembre/diciembre verificados.');

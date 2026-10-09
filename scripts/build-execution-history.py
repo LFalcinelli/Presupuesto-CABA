@@ -20,6 +20,8 @@ args = parser.parse_args()
 assert bool(args.cifra) == bool(args.legacy_prices), 'Supply both source workbooks.'
 data = json.loads(FILE.read_text(encoding='utf-8'))
 project = json.loads((ROOT / 'data/budget/2027/project.json').read_text(encoding='utf-8'))
+income = json.loads((ROOT / 'data/revenue/income-2026-2.json').read_text(encoding='utf-8'))
+assert abs(sum(r['v'] for r in income['rows'] if len(r['codes']) == 1) - income['total']['v']) < 1
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 
 if args.cifra:
@@ -59,9 +61,12 @@ else:
 import openpyxl
 fiscal_sheet = openpyxl.load_workbook(ROOT / 'public/sources/serie-aif-idecba.xlsx', read_only=True, data_only=True)['SP_Fi_AX01']
 capital_row = next(i for i in range(1, 40) if str(fiscal_sheet.cell(i, 1).value).startswith('5) Gastos de capital'))
+revenue_row = next(i for i in range(1, 40) if str(fiscal_sheet.cell(i, 1).value).startswith('6) Recursos totales'))
 for original in inputs['originals']:
     cell = fiscal_sheet.cell(capital_row, 4 + original['year'] - 1997)
     original.update(capital=cell.value * 1e6, capitalCell=cell.coordinate)
+    cell = fiscal_sheet.cell(revenue_row, 4 + original['year'] - 1997)
+    original.update(revenue=cell.value * 1e6, revenueCell=cell.coordinate)
 
 with (ROOT / 'data/history/ipcba.csv').open(encoding='utf-8-sig') as f:
     observed = {r['mes']: float(r['IPCBA_base2021_100']) for r in csv.DictReader(f) if r['mes'] >= '2013-01'}
@@ -90,7 +95,7 @@ for year in range(2006, 1996, -1):
     annual[str(year)] = annual[str(year+1)] * legacy[str(year)]['index'] / legacy[str(year+1)]['index']
 
 budget_source = next(r['source'] for r in data['rows'] if r['year'] == 2026)
-rows, current_rows, capital_rows = [], [], []
+rows, current_rows, capital_rows, revenue_rows = [], [], [], []
 for original in inputs['originals']:
     y = original['year']
     common = {'year': y, 'factor': base/annual[str(y)], 'priceIndexAnnual': annual[str(y)],
@@ -99,6 +104,11 @@ for original in inputs['originals']:
     for out, key, cell in [(rows, 'total', 'cell'), (current_rows, 'currentPrimary', 'currentCell'), (capital_rows, 'capital', 'capitalCell')]:
         nominal = original[key]
         out.append({**common, 'nominal': nominal, 'real': nominal*common['factor'], 'cell': original[cell]})
+    # The pre-1998 stage caveat in the official workbook refers to spending only.
+    nominal = original['revenue']
+    revenue_rows.append({**common, 'kind': 'executed',
+                         'status': 'Recaudación efectiva' + (' · provisorio' if y == 2025 else ''),
+                         'nominal': nominal, 'real': nominal*common['factor'], 'cell': original['revenueCell']})
 for y, total, current, kind, status, source in [
     (2026, 19877152039294, 15565399800000, 'budget', 'Presupuesto vigente — 30/06/2026', budget_source),
     (2027, project['summary']['fiscalExpense']['value'], project['summary']['currentExpense']['value']-project['summary']['interest']['value'],
@@ -119,11 +129,24 @@ for y, total, current, kind, status, source in [
                          'pdfPage': 157 if y == 2026 else 3,
                          'reference': 'Mensaje 2027, cuadro 5.1, gastos de capital; millones con un decimal' if y == 2026 else 'Artículo 1: gastos de capital',
                          'nominalPrecisionPesos': 100000 if y == 2026 else 1})
+    revenue = income['total']['v'] if y == 2026 else project['summary']['fiscalRevenue']['value']
+    revenue_rows.append({**common, 'nominal': revenue, 'real': revenue*common['factor'],
+                         'status': 'Ingresos previstos · vigente al 30/06/2026' if y == 2026 else 'Ingresos previstos · Proyecto 2027',
+                         'source': income['sourceFile'] if y == 2026 else project['source']['document'],
+                         'sourceSha256': sha(ROOT/'public/sources/recursos-2026-2.pdf') if y == 2026 else project['source']['fileSha256'],
+                         'sourceDataset': 'data/revenue/income-2026-2.json' if y == 2026 else 'data/budget/2027/project.json',
+                         **({'pdfPages': [5, 9], 'reference': 'Recursos corrientes y de capital, columna vigente; sin fuentes financieras'} if y == 2026
+                            else {'pdfPage': project['summary']['fiscalRevenue']['pdfPage'], 'reference': project['summary']['fiscalRevenue']['reference']})})
 
-data.update(schemaVersion=2, updated='2026-10-07', rows=rows,
+data.update(schemaVersion=2, updated='2026-10-09', rows=rows,
             series={'total': {'label': 'Gasto total', 'definition': data['metric']},
                     'currentPrimary': {'label': 'Gasto corriente sin intereses', 'definition': 'Gasto corriente, sin intereses ni gasto de capital', 'rows': current_rows},
-                    'capital': {'label': 'Gasto de capital', 'definition': 'Gasto de capital según el clasificador oficial: inversión real, transferencias de capital e inversión financiera; sin amortización de deuda', 'rows': capital_rows}},
+                    'capital': {'label': 'Gasto de capital', 'definition': 'Gasto de capital según el clasificador oficial: inversión real, transferencias de capital e inversión financiera; sin amortización de deuda', 'rows': capital_rows},
+                    'revenue': {'label': 'Recaudación total', 'definition': 'Ingresos corrientes y recursos de capital, sin contribuciones figurativas ni fuentes financieras', 'rows': revenue_rows,
+                                'method': '1997–2025: concepto 6) Recursos totales (1+4), cuadro IDECBA SP_Fi_AX01, fila física 24; millones convertidos a pesos. 2026: recursos vigentes al 30/06 de income-2026-2, no la recaudación parcial del semestre. 2027: recursos previstos, Planilla 16 del proyecto. Toda la serie usa el mismo ajuste por inflación que el gasto: IPCBA desde 2013, CIFRA 2007–2012 y empalme documentado anterior; base abril–junio 2026 y promedio anual de precios. Los promedios de 2026 y 2027 se estiman con inflación diciembre/diciembre de 30% y 18%.',
+                                'notes': ['Recaudación total comprende recursos corrientes y de capital; no sólo impuestos. Excluye endeudamiento y otras fuentes financieras.',
+                                          '2025 es provisorio. 2026 y 2027 son ingresos presupuestados, no recaudación efectiva. Sus importes reales dependen de los supuestos de inflación.',
+                                          'La salvedad de etapa definitiva en 1997 corresponde al gasto, no a los recursos. Los hitos de traspaso de funciones del gasto no se trasladan a esta serie.']}},
             priceAdjustment={'name': 'IPCBA / IPC-Provincias CIFRA / empalme histórico aportado', 'baseIndex': base,
                 'base': data['base'], 'annualAverage': annual, 'lastObservedMonth': last_observed,
                 'observedMonthly': observed, 'projectedMonthly': {k:v for k,v in months.items() if k > last_observed},
@@ -147,7 +170,7 @@ FILE.write_bytes((json.dumps(data, ensure_ascii=False, separators=(',', ':'))+'\
 with FILE.with_suffix('.csv').open('w', encoding='utf-8', newline='') as f:
     columns=['serie','year','nominal','real','factor','priceIndexAnnual','priceEstimated','kind','status']
     writer=csv.DictWriter(f, fieldnames=columns, lineterminator='\n');writer.writeheader()
-    for name, records in [('total',rows),('currentPrimary',current_rows),('capital',capital_rows)]:
+    for name, records in [('total',rows),('currentPrimary',current_rows),('capital',capital_rows),('revenue',revenue_rows)]:
         writer.writerows({'serie': name, **{k:r[k] for k in columns if k!='serie'}} for r in records)
 print(json.dumps({'baseIndex':base,'lastObserved':last_observed,'total2026':rows[-2]['real'], 'total2027':rows[-1]['real'],
                   'growth2005_2025':(rows[28]['real']/rows[8]['real']-1)*100},ensure_ascii=False))
