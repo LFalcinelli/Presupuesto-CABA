@@ -47,7 +47,7 @@ executionObservation=function(r){
 };
 executionHistoryPanel=function(){
  const d=state.executionHistory,rows=executionRows(),{a,b,change}=historyTwentyYears(),current=state.executionSeries==='currentPrimary',capital=state.executionSeries==='capital',seriesLabel=d.series[capital?'capital':current?'currentPrimary':'total'].label;
- const W=1180,H=520,L=54,R=35,T=64,B=68,max=capital?Math.max(5,Math.ceil(Math.max(...rows.map(r=>r.real))/1e12)):20,step=capital?1:5;
+ const W=1180,H=520,L=54,R=35,T=64,B=68,max=capital?4:current?16:20,step=capital?1:current?4:5;
  const x=year=>L+(year-1997)/30*(W-L-R),y=value=>H-B-value/1e12/max*(H-T-B);
  const actual=rows.filter(r=>r.kind==='executed'),chosen=rows.find(r=>r.year===Number(state.executionYear))||b;
  const point=r=>[x(r.year),y(r.real)];
