@@ -64,7 +64,8 @@
   "projectViews": [
     "summary",
     "expenses",
-    "revenue"
+    "revenue",
+    "areas"
   ],
   "lastReviewed": "2026-10-09"
 }

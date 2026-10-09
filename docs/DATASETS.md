@@ -78,6 +78,15 @@ La estructura 2027 debe añadir un archivo bajo `data/budget/2027/`, con metadat
 
 ## Informes por área · Proyecto 2027 · 05/10/2026
 
-`area-reports-2027` → `data/budget/2027/area-reports.json`: `areas` (22 jurisdicciones), `units` (394 unidades de la base 2026), `coverage`, `deflator`, `historyMethod`, `sources`. Las áreas contienen `current2026`, `project2027`, variaciones nominal/ajustada, ocho objetos y referencia a Planilla 4. Las unidades se identifican por sus cinco códigos completos, con `parent` y `project2027: null`; no heredan el importe del ministerio. Cada `history` tiene año, período, devengado nominal, factor IPCBA, valor actualizado y motivo de ausencia. Fuentes y SHA por período permiten conciliar contra los datasets originales. No contiene remuneraciones individuales ni datos de planta inferidos.
+`area-reports-2027` → `data/budget/2027/area-reports.json`: `areas` (22 jurisdicciones), `units` (394 unidades de la base 2026), `coverage`, `deflator`, `historyMethod`, `sources`. Las áreas contienen `current2026`, `project2027`, variaciones nominal/ajustada, ocho objetos y referencia a Planilla 4. Las unidades se identifican por sus cinco códigos completos, con `parent` y `project2027: null` en la vista base; `detail2027` enlaza la apertura verificada cuando se importa. No heredan el importe del ministerio. Cada `history` tiene año, período, devengado nominal, factor IPCBA, valor actualizado y motivo de ausencia. Fuentes y SHA por período permiten conciliar contra los datasets originales. No contiene remuneraciones individuales ni datos de planta inferidos.
 
 Reconstrucción opcional: `python scripts/build-area-reports-2027.py /ruta/al/PDF-oficial.pdf` (requiere pdfplumber). No se necesita Python para construir o publicar el sitio. El importador exige el SHA del PDF ya verificado y conserva los factores históricos existentes.
+
+
+## Áreas de Gobierno · 09/10/2026
+
+El agregado `area-reports-2027` suma `initial2026`, `executed2026`, `institutionType`, `officials` (valor nullable, raíz de padrón, corte, alcance y SHA) y `detailFile` opcional por área. Los campos monetarios anteriores no cambian. `coverage` distingue unidades de la vista base y unidades con detalle jurisdiccional.
+
+`government-area-31-2027` → `data/budget/2027/areas/31.json`: `stages`, `sources` (nombre, hash, año, estado y páginas; sin rutas locales), `financing`, `positions`, `units`, `programs`, `changes`, `readings`, `validation`. Cada programa conserva su clave jerárquica, montos 2027, objetos, metas, descripciones y páginas de ambos años; antecedentes homologados sin duplicar, variaciones nominal/real y diferencia absoluta. Los programas pendientes mantienen base y variaciones nulas. `unmatchedCurrent2026` conserva partidas del vigente aún sin homologación. `area-reviews/31.json` registra la revisión funcional; no usa similitud automática como decisión final.
+
+La ficha es reutilizable y se carga por `Site.url`; no procesa PDF en el navegador. Ruta: `#proyecto-2027?vista=areas&area=31`; admite `unidad`, `programa`, `base=initial`, `valores=nominal`, `ranking=programs` y `orden`. Los enlaces antiguos `informe=area-*` y los de unidades del piloto llevan a la nueva ficha; las demás unidades conservan el informe previo.

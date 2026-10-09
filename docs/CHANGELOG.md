@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-10-09 — Áreas de Gobierno (propuesta en rama)
+
+- Cuarta pestaña del Proyecto 2027: directorio de 22 jurisdicciones, búsqueda, tipos institucionales y fichas con URL propia.
+- Infraestructura: 13 unidades y 27 programas, etapas 2026/2027, composición, financiamiento, cargos, obras y mayores movimientos en pesos comparables.
+- Homologación documentada de recodificaciones y agrupaciones de funciones; antecedentes inciertos señalados sin inferir eliminaciones. Padrón 2026 integrado con alcance y sin duplicar personas.
+- Importador reproducible de PDF, tablas accesibles y pruebas de datos, enlaces y pantallas móviles. Se conserva el buscador y su historial. Los PDF de trabajo no se publican.
+- Entrega mediante Pull Request, sin publicación en producción en esta misión.
+
+
 ## 2026-10-09 — Composición y cambios reales del gasto y los ingresos
 
 - Selector uniforme de finalidad y función, jurisdicciones, incisos y gasto corriente/capital en Gastos; cada rectángulo conserva su detalle navegable.
