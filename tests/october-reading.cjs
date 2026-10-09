@@ -4,7 +4,7 @@ module.exports=async({page,base})=>{
  const ready=()=>page.waitForFunction(()=>document.querySelector('#content')?.getAttribute('aria-busy')==='false');
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:1100});
-  await page.goto(base+'#proyecto-2027?vista=compare');await ready();assert(page.url().includes('vista=summary'));assert.equal(await page.locator('.tabs [data-project-tab]').count(),3);assert.equal(await page.locator('.explorer-location').count(),0);
+  await page.goto(base+'#proyecto-2027?vista=compare');await ready();assert(page.url().includes('vista=summary'));assert.equal(await page.locator('.tabs [data-project-tab]').count(),4);assert.equal(await page.locator('.explorer-location').count(),0);
   assert.equal(await page.locator('.fiscal-flow-panel').count(),1);assert.equal(await page.locator('.fiscal-result-card').count(),4);assert(await page.locator('.fiscal-flow-panel').isVisible());assert((await page.locator('.flow-financing').innerText()).includes('918.357.557.463'));
   await page.locator('.fiscal-result-card.is-final').click();await page.locator('#reading-detail-dialog[open]').waitFor();assert((await page.locator('#reading-detail-body').innerText()).includes('1.316.442.866'));await page.keyboard.press('Escape');
   await page.goto(base+'#evolucion?periodo=2026-2&serie=capital');await ready();assert.equal(await page.locator('#execution-series').inputValue(),'capital');assert.equal(await page.locator('[data-execution-year]').count(),31);await page.locator('#execution-year').selectOption('2027');assert((await page.locator('#execution-point').innerText()).includes('3.459.982.968.167'));await page.reload();await ready();assert.equal(await page.locator('#execution-series').inputValue(),'capital');

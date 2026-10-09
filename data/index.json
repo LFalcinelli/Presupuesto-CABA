@@ -781,6 +781,20 @@
       "files": [
         "data/budget/2027/area-reports.json"
       ]
+    },
+    {
+      "id": "government-area-31-2027",
+      "name": "Áreas de Gobierno · Ministerio De Movilidad E Infraestructura",
+      "path": "data/budget/2027/areas/31.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-09",
+      "source": "PDF jurisdiccionales oficiales de 2026 y 2027; sin publicar documentos de trabajo.",
+      "type": "derived",
+      "description": "Detalle conciliado de 13 unidades y 27 programas; funciones revisadas y antecedentes pendientes diferenciados.",
+      "files": [
+        "data/budget/2027/areas/31.json",
+        "data/budget/2027/area-reviews/31.json"
+      ]
     }
   ],
   "resources": {

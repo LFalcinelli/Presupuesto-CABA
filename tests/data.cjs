@@ -22,3 +22,5 @@ require('./area-reports-2027.cjs');
 
 require('./chart-paths.cjs');
 require('./history-prices.cjs');
+
+require('./government-areas.cjs');

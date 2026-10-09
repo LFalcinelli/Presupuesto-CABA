@@ -38,7 +38,7 @@ assert.equal(infrastructure.length,1);assert(infrastructure[0].a>0&&infrastructu
 assert(Math.abs((infrastructure[0].b/infrastructure[0].a-1)*100-1.259216)<.0001);
 assert(c.groups.jurisdictions.find(r=>r.jurisdictionCode==='31').reference>1.8e12);
 assert.equal(c.groups.functions.length,20);assert.equal(c.groups.jurisdictions.length,22);
-const config=read('config/site.json');assert.equal(config.featuredBudgetStatus,'project');assert.equal(config.currentExecutionPeriod,'2026-2');assert.equal(config.currentBudgetYear,2026);assert.deepEqual(config.projectViews,['summary','expenses','revenue']);
+const config=read('config/site.json');assert.equal(config.featuredBudgetStatus,'project');assert.equal(config.currentExecutionPeriod,'2026-2');assert.equal(config.currentBudgetYear,2026);assert.deepEqual(config.projectViews,['summary','expenses','revenue','areas']);
 assert(!fs.existsSync(path.resolve(__dirname,'../data/revenue/2027/tax-changes.json')));
 const salary=read('data/salaries/latest-reference.json');assert.equal(salary.latest.value,12474468.49);assert.equal(salary.ratio,salary.latest.value/salary.president.value);
 console.log('Proyecto 2027: universo, resultados, clasificaciones, comparación nominal/real estimada, trazabilidad y separación de ejecución verificados.');

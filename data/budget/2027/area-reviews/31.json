@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "jurisdictionCode": "31",
+  "reviewedAt": "2026-10-09",
+  "method": "Comparación manual de objetivos y funciones de ambas fichas oficiales, además de códigos y nombres. La homologación agrupa funciones, no prueba igualdad de cada actividad.",
+  "matches": [
+    {
+      "target": "31-0-0-1057-3",
+      "sources": [
+        "31-0-0-1057-3"
+      ],
+      "status": "continues",
+      "evidence": "Apoyo técnico, administrativo y de gestión de Planeamiento Urbano; cambia la apertura de las dependencias.",
+      "pages2026": [
+        24
+      ],
+      "pages2027": [
+        24
+      ]
+    },
+    {
+      "target": "31-0-0-3116-38",
+      "sources": [
+        "31-0-0-3116-38"
+      ],
+      "status": "continues",
+      "evidence": "Implementación del Programa de Gestión de Riesgo Hídrico y obras de drenaje.",
+      "pages2026": [
+        43
+      ],
+      "pages2027": [
+        26
+      ]
+    },
+    {
+      "target": "31-0-0-3117-36",
+      "sources": [
+        "31-0-0-3117-36"
+      ],
+      "status": "continues",
+      "evidence": "Proyectos de infraestructura urbana, gubernamental, transporte e hidráulica.",
+      "pages2026": [
+        45
+      ],
+      "pages2027": [
+        37
+      ]
+    },
+    {
+      "target": "31-0-0-3125-1",
+      "sources": [
+        "31-0-0-3125-1"
+      ],
+      "status": "continues",
+      "evidence": "Apoyo técnico, administrativo y jurídico transversal al ministerio.",
+      "pages2026": [
+        18,
+        19
+      ],
+      "pages2027": [
+        18,
+        19
+      ]
+    },
+    {
+      "target": "31-0-0-3125-33",
+      "sources": [
+        "31-0-0-3125-33"
+      ],
+      "status": "continues",
+      "evidence": "Desarrollo de obras emblemáticas y planificación de infraestructura.",
+      "pages2026": [
+        21,
+        22
+      ],
+      "pages2027": [
+        21,
+        22
+      ]
+    },
+    {
+      "target": "31-0-0-3126-40",
+      "sources": [
+        "31-0-0-3126-40"
+      ],
+      "status": "continues",
+      "evidence": "Infraestructura, mantenimiento y funcionamiento de la red de Subterráneos; el listado de obras evoluciona.",
+      "pages2026": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "pages2027": [
+        39,
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "target": "31-0-0-3127-10",
+      "sources": [
+        "31-0-0-3127-10"
+      ],
+      "status": "continues",
+      "evidence": "Administración y servicios generales de la Subsecretaría de Proyectos y Obras.",
+      "pages2026": [
+        54
+      ],
+      "pages2027": [
+        44
+      ]
+    },
+    {
+      "target": "31-0-0-3130-11",
+      "sources": [
+        "31-0-0-3130-11"
+      ],
+      "status": "continues",
+      "evidence": "Soporte institucional y coordinación de políticas de la Secretaría de Transporte.",
+      "pages2026": [
+        56
+      ],
+      "pages2027": [
+        46
+      ]
+    },
+    {
+      "target": "31-0-0-3130-39",
+      "sources": [
+        "31-0-0-3130-39"
+      ],
+      "status": "continues",
+      "evidence": "Convenio para la liquidación y pago de compensaciones tarifarias al transporte.",
+      "pages2026": [
+        58
+      ],
+      "pages2027": [
+        51
+      ]
+    },
+    {
+      "target": "31-0-0-3134-50",
+      "sources": [
+        "31-0-0-3134-50"
+      ],
+      "status": "continues",
+      "evidence": "Operación, mantenimiento y modernización del sistema público de bicicletas.",
+      "pages2026": [
+        60
+      ],
+      "pages2027": [
+        53
+      ]
+    },
+    {
+      "target": "31-0-0-3134-51",
+      "sources": [
+        "31-0-0-3134-51"
+      ],
+      "status": "continues",
+      "evidence": "Regulación de taxis y otros servicios de transporte, BA Taxi y terminales de combis.",
+      "pages2026": [
+        62,
+        63
+      ],
+      "pages2027": [
+        55,
+        56
+      ]
+    },
+    {
+      "target": "31-0-0-3136-58",
+      "sources": [
+        "31-0-0-3136-58"
+      ],
+      "status": "continues",
+      "evidence": "Fiscalización y ordenamiento por Agentes de Tránsito; 2027 incorpora el objetivo de 500 nuevos agentes.",
+      "pages2026": [
+        65,
+        66
+      ],
+      "pages2027": [
+        58,
+        59
+      ]
+    },
+    {
+      "target": "31-0-0-3638-74",
+      "sources": [
+        "31-0-0-3638-74"
+      ],
+      "status": "continues",
+      "evidence": "Movilidad de bajas emisiones y transición energética; 2027 desarrolla el Trambus.",
+      "pages2026": [
+        77
+      ],
+      "pages2027": [
+        65,
+        66
+      ]
+    },
+    {
+      "target": "31-0-0-3642-2",
+      "sources": [
+        "31-0-0-3642-2"
+      ],
+      "status": "continues",
+      "evidence": "Conducción y administración de la Secretaría de Tránsito.",
+      "pages2026": [
+        85
+      ],
+      "pages2027": [
+        72
+      ]
+    },
+    {
+      "target": "31-0-0-3643-65",
+      "sources": [
+        "31-0-0-3643-65"
+      ],
+      "status": "continues",
+      "evidence": "Señalización vertical en la vía pública.",
+      "pages2026": [
+        87,
+        88
+      ],
+      "pages2027": [
+        74,
+        75
+      ]
+    },
+    {
+      "target": "31-0-0-3643-66",
+      "sources": [
+        "31-0-0-3643-66"
+      ],
+      "status": "continues",
+      "evidence": "Señalamiento horizontal y demarcación vial.",
+      "pages2026": [
+        90,
+        91
+      ],
+      "pages2027": [
+        77,
+        78
+      ]
+    },
+    {
+      "target": "31-0-0-3643-69",
+      "sources": [
+        "31-0-0-3643-69"
+      ],
+      "status": "continues",
+      "evidence": "Infraestructura y controles para la movilidad.",
+      "pages2026": [
+        93,
+        94
+      ],
+      "pages2027": [
+        80,
+        81
+      ]
+    },
+    {
+      "target": "31-0-0-3643-70",
+      "sources": [
+        "31-0-0-3643-70"
+      ],
+      "status": "continues",
+      "evidence": "Mantenimiento y modernización del sistema semafórico.",
+      "pages2026": [
+        96,
+        97,
+        98
+      ],
+      "pages2027": [
+        83,
+        84
+      ]
+    },
+    {
+      "target": "31-0-0-3643-71",
+      "sources": [
+        "31-0-0-3643-71"
+      ],
+      "status": "continues",
+      "evidence": "Administración del estacionamiento medido.",
+      "pages2026": [
+        100
+      ],
+      "pages2027": [
+        86
+      ]
+    },
+    {
+      "target": "31-0-0-3643-72",
+      "sources": [
+        "31-0-0-3643-72"
+      ],
+      "status": "continues",
+      "evidence": "Administración del servicio de acarreo de vehículos.",
+      "pages2026": [
+        102
+      ],
+      "pages2027": [
+        88
+      ]
+    },
+    {
+      "target": "31-0-0-3116-85",
+      "sources": [
+        "31-0-0-3116-35"
+      ],
+      "status": "recoded",
+      "evidence": "Ambas descripciones mantienen obras de ordenamiento vial, centros de transbordo y ciclovías en la Dirección General Obras. En 2027 se explicita Trambus; no se interpreta el cambio de código como creación de una función completamente nueva.",
+      "pages2026": [
+        38
+      ],
+      "pages2027": [
+        32
+      ]
+    },
+    {
+      "target": "31-0-0-3116-87",
+      "sources": [
+        "31-0-0-3116-37"
+      ],
+      "status": "recoded",
+      "evidence": "Se mantienen la ejecución e inspección de obras de ingeniería, arquitectura, conservación y mejora de espacios públicos en la Dirección General Obras. Se conserva la continuidad funcional pese al nuevo código.",
+      "pages2026": [
+        40,
+        41
+      ],
+      "pages2027": [
+        34,
+        35
+      ]
+    },
+    {
+      "target": "31-0-0-1057-75",
+      "sources": [
+        "31-0-0-1058-75",
+        "31-0-0-1059-76",
+        "31-0-0-1059-77",
+        "31-0-0-1060-78"
+      ],
+      "status": "reorganized",
+      "evidence": "La descripción 2027 incorpora expresamente planeamiento urbano, antropología, datos territoriales y proyectos de arquitectura dentro del programa 75 de la Subsecretaría. Se compara con la suma de los cuatro antecedentes. Que pierdan una partida propia no prueba que desaparezcan las dependencias.",
+      "pages2026": [
+        26,
+        27,
+        29,
+        30,
+        32,
+        33,
+        34,
+        36
+      ],
+      "pages2027": [
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "target": "31-0-0-3638-60",
+      "sources": [
+        "31-0-0-3638-60",
+        "31-0-0-3337-67",
+        "31-0-0-3338-61",
+        "31-0-0-3639-62"
+      ],
+      "status": "reorganized",
+      "evidence": "El programa 60 de 2027 describe diseño de sistemas de transporte, planificación de colectivos, parámetros operativos y seguridad vial educativa. Estas funciones se encontraban en los programas 60, 67, 61 y 62 de 2026. La comparación agrupa los antecedentes; no demuestra identidad de cada actividad.",
+      "pages2026": [
+        68,
+        69,
+        71,
+        72,
+        74,
+        75,
+        79
+      ],
+      "pages2027": [
+        61,
+        62,
+        63
+      ]
+    },
+    {
+      "target": "31-0-0-3640-63",
+      "sources": [
+        "31-0-0-3640-63",
+        "31-0-0-3641-68"
+      ],
+      "status": "reorganized",
+      "evidence": "La descripción 2027 del programa 63 añade explícitamente fiscalización y control del transporte con agentes y equipamiento. Se contrasta con 63 y 68 de 2026. La agrupación presupuestaria no acredita por sí sola una reducción de organismos.",
+      "pages2026": [
+        81,
+        83
+      ],
+      "pages2027": [
+        68
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "status": "recoded",
+      "title": "35 → 85 · Infraestructura de transporte",
+      "target": "31-0-0-3116-85",
+      "sources": [
+        "31-0-0-3116-35"
+      ],
+      "explanation": "Ambas descripciones mantienen obras de ordenamiento vial, centros de transbordo y ciclovías en la Dirección General Obras. En 2027 se explicita Trambus; no se interpreta el cambio de código como creación de una función completamente nueva.",
+      "pages2026": [
+        38
+      ],
+      "pages2027": [
+        32
+      ]
+    },
+    {
+      "status": "recoded",
+      "title": "37 → 87 · Ingeniería y arquitectura",
+      "target": "31-0-0-3116-87",
+      "sources": [
+        "31-0-0-3116-37"
+      ],
+      "explanation": "Se mantienen la ejecución e inspección de obras de ingeniería, arquitectura, conservación y mejora de espacios públicos en la Dirección General Obras. Se conserva la continuidad funcional pese al nuevo código.",
+      "pages2026": [
+        40,
+        41
+      ],
+      "pages2027": [
+        34,
+        35
+      ]
+    },
+    {
+      "status": "reorganized",
+      "title": "Planeamiento: cuatro programas en una apertura",
+      "target": "31-0-0-1057-75",
+      "sources": [
+        "31-0-0-1058-75",
+        "31-0-0-1059-76",
+        "31-0-0-1059-77",
+        "31-0-0-1060-78"
+      ],
+      "explanation": "La descripción 2027 incorpora expresamente planeamiento urbano, antropología, datos territoriales y proyectos de arquitectura dentro del programa 75 de la Subsecretaría. Se compara con la suma de los cuatro antecedentes. Que pierdan una partida propia no prueba que desaparezcan las dependencias.",
+      "pages2026": [
+        26,
+        27,
+        29,
+        30,
+        32,
+        33,
+        34,
+        36
+      ],
+      "pages2027": [
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "status": "reorganized",
+      "title": "Planificación de movilidad: funciones agrupadas",
+      "target": "31-0-0-3638-60",
+      "sources": [
+        "31-0-0-3638-60",
+        "31-0-0-3337-67",
+        "31-0-0-3338-61",
+        "31-0-0-3639-62"
+      ],
+      "explanation": "El programa 60 de 2027 describe diseño de sistemas de transporte, planificación de colectivos, parámetros operativos y seguridad vial educativa. Estas funciones se encontraban en los programas 60, 67, 61 y 62 de 2026. La comparación agrupa los antecedentes; no demuestra identidad de cada actividad.",
+      "pages2026": [
+        68,
+        69,
+        71,
+        72,
+        74,
+        75,
+        79
+      ],
+      "pages2027": [
+        61,
+        62,
+        63
+      ]
+    },
+    {
+      "status": "reorganized",
+      "title": "Fiscalización bajo Gestión de la Movilidad",
+      "target": "31-0-0-3640-63",
+      "sources": [
+        "31-0-0-3640-63",
+        "31-0-0-3641-68"
+      ],
+      "explanation": "La descripción 2027 del programa 63 añade explícitamente fiscalización y control del transporte con agentes y equipamiento. Se contrasta con 63 y 68 de 2026. La agrupación presupuestaria no acredita por sí sola una reducción de organismos.",
+      "pages2026": [
+        81,
+        83
+      ],
+      "pages2027": [
+        68
+      ]
+    },
+    {
+      "status": "pending",
+      "title": "Boleto Estudiantil: falta contrastar el antecedente funcional",
+      "target": "31-0-0-3130-28",
+      "sources": [],
+      "explanation": "El programa 28 aparece en el vigente de junio de 2026, pero no en el PDF del proyecto original 2026. Se preserva como pendiente la correspondencia funcional; no se lo presenta como una creación de 2027.",
+      "pages2026": [],
+      "pages2027": [
+        48,
+        49
+      ]
+    },
+    {
+      "status": "pending",
+      "title": "Innovación tecnológica: antecedente por verificar",
+      "target": "31-0-0-3640-79",
+      "sources": [],
+      "explanation": "El programa 79 figura en 2027. Sus objetivos tecnológicos pueden vincularse con actividades preexistentes; la documentación revisada no alcanza para clasificarlo como una función enteramente nueva.",
+      "pages2026": [],
+      "pages2027": [
+        70
+      ]
+    }
+  ],
+  "readings": [
+    {
+      "kind": "documented-fact",
+      "text": "Los programas 35 y 37 pasan a ser 85 y 87. Las descripciones sostienen su continuidad funcional con nuevos códigos.",
+      "references": [
+        "PDF jurisdiccional 2026, pp. 38, 40–41",
+        "PDF jurisdiccional 2027, pp. 32, 34–35"
+      ]
+    },
+    {
+      "kind": "documented-fact",
+      "text": "Planeamiento agrupa cuatro programas en una apertura. La documentación no permite afirmar que desaparezcan las dependencias.",
+      "references": [
+        "PDF jurisdiccional 2026, pp. 26–36",
+        "PDF jurisdiccional 2027, pp. 28–30"
+      ]
+    },
+    {
+      "kind": "documented-fact",
+      "text": "El programa de Agentes de Tránsito prevé incorporar 500 agentes. Es un objetivo del proyecto, no una incorporación ya comprobada.",
+      "references": [
+        "PDF jurisdiccional 2027, programa 58, pp. 58–59"
+      ]
+    }
+  ]
+}

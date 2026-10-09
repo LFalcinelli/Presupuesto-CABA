@@ -91,3 +91,12 @@ La migración del 30/09/2026 conserva fuentes y cifras previamente verificadas. 
 | `serie-aif-idecba.xlsx` | `80cd20fd09ae3c32bdd55a70c2b3dd668f8285a0c223fa43cb6c58395026ecf3` |
 
 Las fuentes internacionales, presupuestos provinciales, denominadores, cambios de cobertura y documentos de empleo se documentan por registro en los respectivos JSON. No mezclar sus años censales ni asumir igual alcance institucional.
+
+
+## Documentos jurisdiccionales · piloto de Áreas de Gobierno
+
+- Proyecto 2027, Jurisdicción 31: `31 - Ministerio de Movilidad e Infraestructura.pdf`, 89 páginas, SHA-256 `b672ab5e69430e682a6fef4bfa0f5ac380417f26e203df1f93a0c8613f96510c`. Financiamiento pp. 10–11, cargos p. 15, unidades/programas pp. 16–17, fichas financieras y descripciones desde p. 18.
+- Proyecto original 2026: `23_10_26 - 31 Ministerio de Infraestructura.pdf`, 103 páginas, SHA-256 `ad5abe23c0bf0a663dc3e51291b1d3f82c00c529bffe71edfa86c047c4cde90f`. El prefijo del nombre no se interpreta como fecha de corte. No sustituye el vigente 2026-2.
+- Insumos oficiales aportados para análisis. No se copian al repositorio ni a `public/sources`; URL pública exacta de estos dos archivos no verificada. Las páginas físicas, hashes y registros extraídos permiten trazarlos.
+- Denominaciones de fuentes de financiamiento contrastadas con [planilla jurisdiccional oficial del GCBA](https://buenosaires.gob.ar/sites/default/files/2023-11/35.%20Ministerio%20de%20Ambiente%20y%20Espacio%20P.pdf): 11 Tesoro, 12 recursos propios, 13 afectación específica, 14 transferencias afectadas, 15 transferencias internas, 22 financiamiento externo. No usar nomenclaturas nacionales para esos códigos.
+- Padrón de funcionarios y ejecución 2026: se reutilizan los archivos, URLs y hashes documentados en sus datasets canónicos.
