@@ -26,7 +26,7 @@ function areaSearchMarkup(){
 function areaDirection(rate){
  if(rate===null)return 'Sin una base comparable en 2026';
  if(Math.abs(rate)<.05)return 'Prácticamente al ritmo de la inflación';
- return `${fmt(Math.abs(rate),1)}% ${rate>0?'por encima':'por debajo'} de la inflación proyectada`;
+ return `${pct(Math.abs(rate))} ${rate>0?'por encima':'por debajo'} de la inflación proyectada`;
 }
 function areaComposition(report){
  const key=report.kind==='area'?'project2027':'current2026',rows=report.objects.filter(r=>r[key]>0),total=report[key];
