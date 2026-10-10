@@ -1,5 +1,15 @@
 # Cambios
 
+## 2026-10-10 — Áreas de Gobierno completas y lectura consistente
+
+- 22 fichas jurisdiccionales con 339 unidades y 499 programas fiscales: principales, financiación por programa, metas, cargos cuando están publicados, obras plurianuales y páginas de origen. Sumas conciliadas con Planilla 4.
+- Base votada 2026 por defecto y opción ampliada a junio; elección conservada entre listado, fichas y recargas. Destacados y variaciones recalculados con la base, sin textos cacheados.
+- Lectura separada de funcionamiento, inversión directa y transferencias; SBASE permanece con destino económico mixto sin desagregar. Servicios no personales y partidas principales visibles, sin inferir contratos ni empleados.
+- Cambios de dependencia de Higiene Urbana documentados; ampliaciones de Justicia y Desarrollo Económico descritas sin atribuir causas no demostradas. Diferencias entre planillas identificadas; 224 comparaciones de programas permanecen por verificar, sin inferir creaciones ni eliminaciones.
+- Porcentajes con una regla común en todo el sitio; datos y dinero sin redondear. Pruebas del sitio y de las 22 fichas con ambas bases, escritorio y 375 px.
+- Mantiene 18% supuesto; no se encontró una tasa macro numérica verificable en el documento general revisado. Entrega en rama y PR, según decisión 16.
+
+
 ## 2026-10-09 — Recaudación histórica
 
 - Última opción «Recaudación total» en el selector 1997–2027: recursos corrientes y de capital, sin endeudamiento, con el mismo ajuste por inflación de la historia del gasto.

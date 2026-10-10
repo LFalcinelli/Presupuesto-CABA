@@ -6,14 +6,14 @@ module.exports=async function({page,base}){
   assert((await page.locator('.gov-card').first().innerText()).includes('Educación'));
   await page.locator('#gov-directory-search').fill('infraestructura');assert.equal(await page.locator('.gov-card').count(),1);
   await page.locator('.gov-card').click();await page.locator('.gov-kpis').waitFor();assert(page.url().includes('area=31'));assert.equal(await page.locator('#area-report-dialog[open]').count(),0);
-  assert((await page.locator('.gov-kpis').innerText()).includes('−10,0%'));assert.equal(await page.locator('.gov-ranking article').count(),13);assert.equal(await page.locator('.gov-organization details').count(),7);
+  assert((await page.locator('.gov-kpis').innerText()).includes('+5,0%'));assert.equal(await page.locator('.gov-ranking article').count(),13);assert.equal(await page.locator('.gov-organization details').count(),7);
   await page.locator('[data-gov-scroll="gov-composition"]').click();assert(page.url().includes('vista=areas&area=31'));
   assert((await page.locator('.gov-positions').innerText()).includes('911'));assert((await page.locator('.gov-positions').innerText()).includes('no es la dotación total'));
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   if(process.env.QA_SCREENSHOTS&&width===1440){fs.mkdirSync(process.env.QA_SCREENSHOTS,{recursive:true});await page.screenshot({path:path.join(process.env.QA_SCREENSHOTS,'ficha-infraestructura-desktop.png')});}
-  await page.locator('#gov-prices').selectOption('nominal');await page.waitForFunction(()=>document.querySelector('.gov-kpis')?.textContent.includes('+6,2%'));
+  await page.locator('#gov-prices').selectOption('nominal');await page.waitForFunction(()=>document.querySelector('.gov-kpis')?.textContent.includes('+24%'));
   await page.locator('#gov-base').selectOption('initial');await page.waitForURL(/base=initial/);await page.reload();await page.locator('.gov-kpis').waitFor();assert.equal(await page.locator('#gov-base').inputValue(),'initial');assert.equal(await page.locator('#gov-prices').inputValue(),'nominal');
-  assert((await page.locator('.gov-kpis').innerText()).includes('+23,9%'));
+  assert((await page.locator('.gov-kpis').innerText()).includes('+24%'));
   await page.locator('#gov-base').selectOption('current');await page.locator('#gov-prices').selectOption('real');
   await page.locator('.gov-ranking [data-gov-unit="3126"]').click();await page.locator('.gov-unit-detail').waitFor();assert(page.url().includes('unidad=3126'));assert.equal(await page.locator('.gov-ranking article').count(),1);
   await page.locator('.gov-program-links [data-gov-program]').click();await page.locator('.gov-program-detail').waitFor();assert(page.url().includes('programa=31-0-0-3126-40'));await page.reload();await page.locator('.gov-program-detail').waitFor();
@@ -30,7 +30,7 @@ module.exports=async function({page,base}){
   await page.locator('#gov-directory-type').selectOption('Ministerio');assert.equal(await page.locator('.gov-card').count(),10);
   await page.locator('#gov-directory-type').selectOption('');await page.locator('#gov-directory-sort').selectOption('amount');
   if(process.env.QA_SCREENSHOTS&&width===1440)await page.screenshot({path:path.join(process.env.QA_SCREENSHOTS,'directorio-desktop.png')});
-  await page.locator('.gov-card[href$="area=40"]').click();await page.locator('.gov-coverage').waitFor();assert((await page.locator('.gov-kpis').innerText()).includes('+3,4%'));assert.equal(await page.locator('.gov-ranking').count(),0);
+  await page.locator('.gov-card[href*="area=40&"]').click();await page.locator('.gov-ranking').waitFor();assert((await page.locator('.gov-kpis').innerText()).includes('+3,4%'));assert.equal(await page.locator('.gov-ranking article').count(),62);
   await page.locator('.gov-source-details').filter({has:page.locator('.area-history')}).locator(':scope>summary').click();await page.locator('#area-history-year').selectOption('2013');assert((await page.locator('#area-history-value').innerText()).includes('2013'));
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
  }

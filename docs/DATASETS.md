@@ -87,6 +87,17 @@ Reconstrucción opcional: `python scripts/build-area-reports-2027.py /ruta/al/PD
 
 El agregado `area-reports-2027` suma `initial2026`, `executed2026`, `institutionType`, `officials` (valor nullable, raíz de padrón, corte, alcance y SHA) y `detailFile` opcional por área. Los campos monetarios anteriores no cambian. `coverage` distingue unidades de la vista base y unidades con detalle jurisdiccional.
 
-`government-area-31-2027` → `data/budget/2027/areas/31.json`: `stages`, `sources` (nombre, hash, año, estado y páginas; sin rutas locales), `financing`, `positions`, `units`, `programs`, `changes`, `readings`, `validation`. Cada programa conserva su clave jerárquica, montos 2027, objetos, metas, descripciones y páginas de ambos años; antecedentes homologados sin duplicar, variaciones nominal/real y diferencia absoluta. Los programas pendientes mantienen base y variaciones nulas. `unmatchedCurrent2026` conserva partidas del vigente aún sin homologación. `area-reviews/31.json` registra la revisión funcional; no usa similitud automática como decisión final.
+`government-area-<código>-2027` → `data/budget/2027/areas/<código>.json`, schemaVersion 2 para las 22 jurisdicciones: `stages`, `sources` (archivo, hash, año, estado y páginas; sin rutas locales), `financing`, `positions`, `economic`, `units`, `programs`, `changes`, `reorganization2026`, `sourceIssues`, `excludedFinancialPrograms`, `validation`. En total: 339 unidades y 499 programas dentro del agregado fiscal. Cada programa conserva incisos, principales y financiación (con páginas), metas, descripciones y antecedentes. `financialPages` incluye todas las fichas utilizadas; `derivedFromPages` identifica consolidaciones menos hijos explícitos. Los programas pendientes mantienen base nula.
 
-La ficha es reutilizable y se carga por `Site.url`; no procesa PDF en el navegador. Ruta: `#proyecto-2027?vista=areas&area=31`; admite `unidad`, `programa`, `base=initial`, `valores=nominal`, `ranking=programs` y `orden`. Los enlaces antiguos `informe=area-*` y los de unidades del piloto llevan a la nueva ficha; las demás unidades conservan el informe previo.
+`antecedents` identifica documentos 2026; `baselineKeys` identifica códigos efectivamente sumados del archivo de ejecución, incluidos códigos recodificados o transferidos. Se agregan todos los caracteres institucionales fiscales y no se duplica una base entre dos programas. Las variaciones y destacados se calculan en el navegador según la base; no se consumen frases o tasas cacheadas. Las revisiones explícitas se guardan en `area-reviews/<código>.json`; el método de contraste textual y sus límites figuran en METODOLOGIA.
+
+La ficha se carga por `Site.url`, sin PDF en el navegador. Ruta: `#proyecto-2027?vista=areas&area=31&base=initial`; admite `base=current`, `unidad`, `programa`, `valores=nominal`, `ranking=programs` y `orden`. La base inicial es predeterminada. Lista, ficha, recarga y enlace compartido conservan la elección. Los enlaces antiguos de áreas y unidades con apertura llevan a la ficha correspondiente.
+
+Preparación reproducible (PDF y caché fuera del repositorio):
+
+```text
+python scripts/government_documents.py --pdf-2026-dir <carpeta> --pdf-2027-dir <carpeta> --cache-dir <cache-externa> --output-dir <salida-externa>
+python scripts/import-all-government-areas.py --extracted-dir <salida-externa>
+```
+
+El constructor estático y CI no requieren Python ni acceso a las carpetas de fuentes.
