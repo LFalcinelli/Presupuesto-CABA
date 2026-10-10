@@ -34,7 +34,7 @@ module.exports=async function({page,base}){
   await page.locator('.gov-source-details').filter({has:page.locator('.area-history')}).locator(':scope>summary').click();await page.locator('#area-history-year').selectOption('2013');assert((await page.locator('#area-history-value').innerText()).includes('2013'));
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
  }
- await page.goto(base+'#proyecto-2027?vista=areas&area=90');await page.locator('.government-areas h1').waitFor();assert((await page.locator('.government-areas').innerText()).includes('Área no encontrada'));
+ await page.goto(base+'#proyecto-2027?vista=areas&area=90');await page.locator('.government-areas').filter({hasText:'Área no encontrada'}).waitFor();assert((await page.locator('.government-areas').innerText()).includes('Área no encontrada'));
  await page.goto(base+'#proyecto-2027?vista=summary&informe=area-31');await page.locator('.gov-kpis').waitFor();assert(page.url().includes('vista=areas&area=31'));
  await page.goto(base+'#proyecto-2027?vista=expenses&informe=ue-1-31-0-0-3126');await page.locator('.gov-unit-detail').waitFor();assert(page.url().includes('unidad=3126'));
  console.log('Áreas: directorio, búsqueda, clasificación, ficha, homologaciones, filtros, unidades, programas y enlaces antiguos verificados en 3 anchos.');
