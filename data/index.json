@@ -787,13 +787,285 @@
       "name": "Áreas de Gobierno · Ministerio De Movilidad E Infraestructura",
       "path": "data/budget/2027/areas/31.json",
       "period": "2027-project",
-      "lastUpdate": "2026-10-09",
-      "source": "PDF jurisdiccionales oficiales de 2026 y 2027; sin publicar documentos de trabajo.",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
       "type": "derived",
-      "description": "Detalle conciliado de 13 unidades y 27 programas; funciones revisadas y antecedentes pendientes diferenciados.",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
       "files": [
-        "data/budget/2027/areas/31.json",
-        "data/budget/2027/area-reviews/31.json"
+        "data/budget/2027/areas/31.json"
+      ]
+    },
+    {
+      "id": "government-area-1-2027",
+      "name": "Áreas de Gobierno · Legislatura De La Ciudad De Buenos Aires",
+      "path": "data/budget/2027/areas/1.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/1.json"
+      ]
+    },
+    {
+      "id": "government-area-2-2027",
+      "name": "Áreas de Gobierno · Auditoria General De La Ciudad De Buenos Aires",
+      "path": "data/budget/2027/areas/2.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/2.json"
+      ]
+    },
+    {
+      "id": "government-area-3-2027",
+      "name": "Áreas de Gobierno · Defensoria Del Pueblo",
+      "path": "data/budget/2027/areas/3.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/3.json"
+      ]
+    },
+    {
+      "id": "government-area-5-2027",
+      "name": "Áreas de Gobierno · Ministerio Publico",
+      "path": "data/budget/2027/areas/5.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/5.json"
+      ]
+    },
+    {
+      "id": "government-area-6-2027",
+      "name": "Áreas de Gobierno · Tribunal Superior De Justicia",
+      "path": "data/budget/2027/areas/6.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/6.json"
+      ]
+    },
+    {
+      "id": "government-area-7-2027",
+      "name": "Áreas de Gobierno · Consejo De La Magistratura",
+      "path": "data/budget/2027/areas/7.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/7.json"
+      ]
+    },
+    {
+      "id": "government-area-8-2027",
+      "name": "Áreas de Gobierno · Sindicatura General De La Ciudad De Buenos Aires",
+      "path": "data/budget/2027/areas/8.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/8.json"
+      ]
+    },
+    {
+      "id": "government-area-9-2027",
+      "name": "Áreas de Gobierno · Procuracion General De La Ciudad",
+      "path": "data/budget/2027/areas/9.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/9.json"
+      ]
+    },
+    {
+      "id": "government-area-20-2027",
+      "name": "Áreas de Gobierno · Jefatura De Gobierno",
+      "path": "data/budget/2027/areas/20.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/20.json"
+      ]
+    },
+    {
+      "id": "government-area-21-2027",
+      "name": "Áreas de Gobierno · Jefatura De Gabinete De Ministros",
+      "path": "data/budget/2027/areas/21.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/21.json"
+      ]
+    },
+    {
+      "id": "government-area-24-2027",
+      "name": "Áreas de Gobierno · Ministerio De Justicia",
+      "path": "data/budget/2027/areas/24.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/24.json"
+      ]
+    },
+    {
+      "id": "government-area-29-2027",
+      "name": "Áreas de Gobierno · Ministerio De Seguridad",
+      "path": "data/budget/2027/areas/29.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/29.json"
+      ]
+    },
+    {
+      "id": "government-area-35-2027",
+      "name": "Áreas de Gobierno · Ministerio De Espacio Publico E Higiene Urbana",
+      "path": "data/budget/2027/areas/35.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/35.json"
+      ]
+    },
+    {
+      "id": "government-area-40-2027",
+      "name": "Áreas de Gobierno · Ministerio De Salud",
+      "path": "data/budget/2027/areas/40.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/40.json"
+      ]
+    },
+    {
+      "id": "government-area-45-2027",
+      "name": "Áreas de Gobierno · Ministerio De Desarrollo Humano Y Hábitat",
+      "path": "data/budget/2027/areas/45.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/45.json"
+      ]
+    },
+    {
+      "id": "government-area-50-2027",
+      "name": "Áreas de Gobierno · Ministerio De Cultura",
+      "path": "data/budget/2027/areas/50.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/50.json"
+      ]
+    },
+    {
+      "id": "government-area-55-2027",
+      "name": "Áreas de Gobierno · Ministerio De Educación",
+      "path": "data/budget/2027/areas/55.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/55.json"
+      ]
+    },
+    {
+      "id": "government-area-60-2027",
+      "name": "Áreas de Gobierno · Ministerio De Hacienda Y Finanzas",
+      "path": "data/budget/2027/areas/60.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/60.json"
+      ]
+    },
+    {
+      "id": "government-area-75-2027",
+      "name": "Áreas de Gobierno · Ministerio De Desarrollo Económico",
+      "path": "data/budget/2027/areas/75.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/75.json"
+      ]
+    },
+    {
+      "id": "government-area-98-2027",
+      "name": "Áreas de Gobierno · Servicio De La Deuda Publica",
+      "path": "data/budget/2027/areas/98.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/98.json"
+      ]
+    },
+    {
+      "id": "government-area-99-2027",
+      "name": "Áreas de Gobierno · Obligaciones A Cargo Del Tesoro",
+      "path": "data/budget/2027/areas/99.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-10",
+      "source": "PDF jurisdiccionales oficiales 2026 y 2027 y ejecución al segundo trimestre 2026.",
+      "type": "derived",
+      "description": "Unidades, programas, incisos, principales, financiación, cargos y trazabilidad; continuidades sin confirmar identificadas.",
+      "files": [
+        "data/budget/2027/areas/99.json"
       ]
     }
   ],

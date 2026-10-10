@@ -2,7 +2,7 @@
 const $=s=>document.querySelector(s), E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=(n,d=0)=>new Intl.NumberFormat('es-AR',{maximumFractionDigits:d,minimumFractionDigits:d}).format(n);
 // Presentation only: source amounts and exported precision remain unchanged.
-const money=(n,currency='$')=>(n<0?'−':'')+currency+' '+fmt(Math.abs(n)), short=n=>(n<0?'−':'')+(Math.abs(n)>=1e12?'$ '+fmt(Math.abs(n)/1e12,2)+' billones':'$ '+fmt(Math.abs(n)/1e6,0)+' millones'), pct=n=>n===0?'0,0%':Math.abs(n)<.05?(n<0?'−':'')+'menos de 0,1%':fmt(n,1)+'%';
+const money=(n,currency='$')=>(n<0?'−':'')+currency+' '+fmt(Math.abs(n)), short=n=>(n<0?'−':'')+(Math.abs(n)>=1e12?'$ '+fmt(Math.abs(n)/1e12,2)+' billones':'$ '+fmt(Math.abs(n)/1e6,0)+' millones'), pct=n=>formatPercent(n);
 const naturalTick=n=>new Intl.NumberFormat('es-AR',{maximumFractionDigits:6}).format(n);
 const source='https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias';
 const labels=['Carácter','Jurisdicción','Subjurisdicción','Entidad','Unidad ejecutora','Programa','Finalidad','Función','Inciso','Clasificación económica'];

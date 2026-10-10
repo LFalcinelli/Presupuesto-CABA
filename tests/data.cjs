@@ -24,3 +24,5 @@ require('./chart-paths.cjs');
 require('./history-prices.cjs');
 
 require('./government-areas.cjs');
+
+require('./percentage-format.cjs');

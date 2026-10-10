@@ -39,7 +39,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-conduction
 function annualTick(i,length,width,year){if(i===0||i===length-1||length<=5)return true;const step=width>=950?2:width>=600?3:5;return i%step===0&&i<length-2;}
 
 
-function vizTip(lines){return `data-viz-tip="${E(JSON.stringify(lines))}"`;}
+function vizTip(lines){return `data-viz-tip="${E(JSON.stringify(lines.map(line=>formatPercentText(String(line)))))}"`;}
 let vizTooltip=null,vizOwner=null;
 function hideVizTip(){if(!vizTooltip)return;vizTooltip.classList.remove('visible');vizTooltip.setAttribute('aria-hidden','true');vizOwner?.removeAttribute('aria-describedby');vizOwner=null;}
 function showVizTip(el){

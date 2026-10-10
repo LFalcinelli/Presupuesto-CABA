@@ -1,7 +1,8 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 module.exports=async({page,base})=>{
  const h=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/history/execution-history.json'))),p=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/budget/2027/project.json')));
- const a=h.rows.find(r=>r.year===2005),b=h.rows.find(r=>r.year===2025),growth=new Intl.NumberFormat('es-AR',{minimumFractionDigits:1,maximumFractionDigits:1}).format((b.real/a.real-1)*100);
+ const percentValue=n=>new Intl.NumberFormat('es-AR',{minimumFractionDigits:Math.abs(n)>=10?0:1,maximumFractionDigits:Math.abs(n)>=10?0:1}).format(n);
+ const a=h.rows.find(r=>r.year===2005),b=h.rows.find(r=>r.year===2025),growth=percentValue((b.real/a.real-1)*100);
  const ready=()=>page.waitForFunction(()=>document.querySelector('#content')?.getAttribute('aria-busy')==='false');
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:1000});await page.goto(base+'#inicio');await ready();
@@ -26,12 +27,12 @@ module.exports=async({page,base})=>{
   await page.locator('#execution-year').selectOption('2005');assert((await page.locator('#execution-point').innerText()).includes(new Intl.NumberFormat('es-AR',{maximumFractionDigits:0}).format(a.real)));
   assert.equal(await page.locator('.history-growth-guide').count(),1);for(const [year,attr] of [[2005,'data-start'],[2025,'data-end']])assert.equal(await page.locator('.history-growth-guide').getAttribute(attr),await page.locator(`[data-execution-year="${year}"] circle`).evaluate(e=>e.getAttribute('cx')+','+e.getAttribute('cy')));assert((await page.locator('.history-event-label').allTextContents()).join(' ').includes('2016–2017'));
   await page.locator('#execution-series').selectOption('currentPrimary');await ready();assert(new URL(page.url()).hash.includes('serie=currentPrimary'));
-  const ca=h.series.currentPrimary.rows.find(r=>r.year===2005),cb=h.series.currentPrimary.rows.find(r=>r.year===2025),cg=new Intl.NumberFormat('es-AR',{minimumFractionDigits:1,maximumFractionDigits:1}).format((cb.real/ca.real-1)*100);
+  const ca=h.series.currentPrimary.rows.find(r=>r.year===2005),cb=h.series.currentPrimary.rows.find(r=>r.year===2025),cg=percentValue((cb.real/ca.real-1)*100);
   assert((await page.locator('.history-impact').innerText()).includes(cg));await page.locator('#execution-year').selectOption('2027');assert((await page.locator('#execution-point').innerText()).includes('autorización, no ejecución'));
   await page.reload();await ready();assert.equal(await page.locator('#execution-series').inputValue(),'currentPrimary');assert((await page.locator('.history-chart-unit').innerText()).includes('Gasto corriente sin intereses'));
   await page.locator('#execution-series').selectOption('revenue');await ready();assert(new URL(page.url()).hash.includes('serie=revenue'));
   assert.equal(await page.locator('#execution-series option').last().getAttribute('value'),'revenue');assert.equal(await page.locator('.history-page h1').innerText(),'30 años de recaudación.');
-  const ra=h.series.revenue.rows.find(r=>r.year===2005),rb=h.series.revenue.rows.find(r=>r.year===2025),rg=new Intl.NumberFormat('es-AR',{minimumFractionDigits:1,maximumFractionDigits:1}).format((rb.real/ra.real-1)*100);
+  const ra=h.series.revenue.rows.find(r=>r.year===2005),rb=h.series.revenue.rows.find(r=>r.year===2025),rg=percentValue((rb.real/ra.real-1)*100);
   assert((await page.locator('.history-impact').innerText()).includes(rg));assert((await page.locator('.history-impact').innerText()).includes('Más recaudación'));
   assert.equal(await page.locator('.history-year-label').count(),31);assert.equal(await page.locator('.execution-chart [data-execution-year]').count(),31);
   assert.equal(await page.locator('.history-event-label,.legacy-history-bridge').count(),0);assert((await page.locator('.history-legend').innerText()).includes('Recaudación efectiva'));
