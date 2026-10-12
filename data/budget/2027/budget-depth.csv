@@ -340,132 +340,259 @@ transfer-types,2027,Ciudad,Transferencias al sector privado para financiar gasto
 transfer-types,2027,Ciudad,Transferencias al Sector Público empresarial,998597795899,ARS,proyecto,"[{""areaCode"": ""21"", ""area"": ""Jefatura De Gabinete De Ministros"", ""programId"": ""21-0-0-786-43"", ""program"": ""Corporacion Buenos Aires Sur S.A.U"", ""sourceFile"": ""21 - Jefatura de Gabinete de Ministros.pdf"", ""pdfPages"": [58], ""value"": 27675310850, ""pdfPage"": 58}, {""areaCode"": ""31"", ""area"": ""Ministerio De Movilidad E Infraestructura"", ""programId"": ""31-0-0-3126-40"", ""program"": ""Subterráneos de Buenos Aires"", ""sourceFile"": ""31 - Ministerio de Movilidad e Infraestructura.pdf"", ""pdfPages"": [43], ""value"": 933485925130, ""pdfPage"": 43}, {""areaCode"": ""31"", ""area"": ""Ministerio De Movilidad E Infraestructura"", ""programId"": ""31-0-0-3643-72"", ""program"": ""Sistema de Gestión de Acarreo"", ""sourceFile"": ""31 - Ministerio de Movilidad e Infraestructura.pdf"", ""pdfPages"": [89], ""value"": 22657790192, ""pdfPage"": 89}, {""areaCode"": ""40"", ""area"": ""Ministerio De Salud"", ""programId"": ""40-0-0-7307-87"", ""program"": ""Facturación y Cobranza de los Efectores Públicos S.E."", ""sourceFile"": ""40 - Ministerio de Salud.pdf"", ""pdfPages"": [237], ""value"": 14522342724, ""pdfPage"": 237}, {""areaCode"": ""55"", ""area"": ""Ministerio De Educación"", ""programId"": ""55-0-0-570-43"", ""program"": ""Educacion de Gestion Privada"", ""sourceFile"": ""55 - Ministerio de Educación.pdf"", ""pdfPages"": [49], ""value"": 256427003, ""pdfPage"": 49}]",Inciso 5 / principal
 transfer-types,2027,Ciudad,Transf a instituciones provinciales y municipales para financiar gastos corrientes,21895482336,ARS,proyecto,"[{""areaCode"": ""24"", ""area"": ""Ministerio De Justicia"", ""programId"": ""24-0-926-3187-23"", ""program"": ""Gestión Electoral"", ""sourceFile"": ""24 - Ministerio de Justicia.pdf"", ""pdfPages"": [195], ""value"": 568502400, ""pdfPage"": 195}, {""areaCode"": ""31"", ""area"": ""Ministerio De Movilidad E Infraestructura"", ""programId"": ""31-0-0-3127-10"", ""program"": ""Actividades Comunes"", ""sourceFile"": ""31 - Ministerio de Movilidad e Infraestructura.pdf"", ""pdfPages"": [45], ""value"": 55946985, ""pdfPage"": 45}, {""areaCode"": ""75"", ""area"": ""Ministerio De Desarrollo Económico"", ""programId"": ""75-0-0-3199-103"", ""program"": ""Ente Público no Estatal Parque de la Innovación"", ""sourceFile"": ""75 - Ministerio de Desarrollo Económico.pdf"", ""pdfPages"": [67], ""value"": 7468128249, ""pdfPage"": 67}, {""areaCode"": ""75"", ""area"": ""Ministerio De Desarrollo Económico"", ""programId"": ""75-0-0-3200-16"", ""program"": ""Fomento al Desarrollo Socio-Economico"", ""sourceFile"": ""75 - Ministerio de Desarrollo Económico.pdf"", ""pdfPages"": [69], ""value"": 2720190212, ""pdfPage"": 69}, {""areaCode"": ""99"", ""area"": ""Obligaciones A Cargo Del Tesoro"", ""programId"": ""99-0-0-99-17"", ""program"": ""Aportes a Entes Públicos"", ""sourceFile"": ""99 - Obligaciones a cargo del Tesoro.pdf"", ""pdfPages"": [9], ""value"": 11082714490, ""pdfPage"": 9}]",Inciso 5 / principal
 transfer-types,2027,Ciudad,Transf.a instituciones provinciales y municipales para financiar gastos de capital,2278953301,ARS,proyecto,"[{""areaCode"": ""99"", ""area"": ""Obligaciones A Cargo Del Tesoro"", ""programId"": ""99-0-0-99-16"", ""program"": ""Otras Erogaciones no Asignables a Programas"", ""sourceFile"": ""99 - Obligaciones a cargo del Tesoro.pdf"", ""pdfPages"": [7], ""value"": 2278953301, ""pdfPage"": 7}]",Inciso 5 / principal
-transfers,2027,Legislatura De La Ciudad De Buenos Aires,Formación y Sanción de Leyes,7024209717,ARS,proyecto,01 - Legislatura de la Ciudad de Buenos Aires.pdf,8
-transfers,2027,Auditoria General De La Ciudad De Buenos Aires,Control Externo,50239550,ARS,proyecto,02 - Auditoría General de la Ciudad de Buenos Aires.pdf,11
-transfers,2027,Defensoria Del Pueblo,Defensa de los Derechos,93509764,ARS,proyecto,03 - Defensoría del Pueblo.pdf,17
-transfers,2027,Ministerio Publico,Asesoría General Tutelar,216810677,ARS,proyecto,05 - Ministerio Público.pdf,46
-transfers,2027,Ministerio Publico,Ministerio Público de la Defensa,277912057,ARS,proyecto,05 - Ministerio Público.pdf,94
-transfers,2027,Ministerio Publico,Posicionamiento Institucional y Gestión Administrativa,173965038,ARS,proyecto,05 - Ministerio Público.pdf,117
-transfers,2027,Ministerio Publico,Política Criminal Integral y Gestión Judicial,55771200,ARS,proyecto,05 - Ministerio Público.pdf,131
-transfers,2027,Ministerio Publico,Acceso a la Justicia y Protección Integral a la Víctima,82550000,ARS,proyecto,05 - Ministerio Público.pdf,148
-transfers,2027,Tribunal Superior De Justicia,Tutela Judicial,120286537,ARS,proyecto,06 - Tribunal Superior de Justicia.pdf,54
-transfers,2027,Tribunal Superior De Justicia,Centro de Formación Judicial,176313463,ARS,proyecto,06 - Tribunal Superior de Justicia.pdf,66
-transfers,2027,Consejo De La Magistratura,Actividades Específicas del Consejo de la Magistratura,1542322465,ARS,proyecto,07 - Consejo de la Magistratura.pdf,44
-transfers,2027,Consejo De La Magistratura,"Justicia Contenciosa, Administrativa, Tributaria y de Relaciones del Consumo",1000000,ARS,proyecto,07 - Consejo de la Magistratura.pdf,47
-transfers,2027,Consejo De La Magistratura,"Justicia Penal, Contravencional y de Faltas y Penal Juvenil",2000000,ARS,proyecto,07 - Consejo de la Magistratura.pdf,53
-transfers,2027,Consejo De La Magistratura,Actividades Operativas y Comunes del Poder Judicial,902905214,ARS,proyecto,07 - Consejo de la Magistratura.pdf,60
-transfers,2027,Consejo De La Magistratura,Centro de Justicia de la Mujer,78169453,ARS,proyecto,07 - Consejo de la Magistratura.pdf,78
-transfers,2027,Consejo De La Magistratura,Justicia Electoral,1000000,ARS,proyecto,07 - Consejo de la Magistratura.pdf,81
-transfers,2027,Jefatura De Gobierno,Gestión Animal,118943940,ARS,proyecto,20 - Jefatura de Gobierno.pdf,52
-transfers,2027,Jefatura De Gobierno,Actividades Comunes,2091525750,ARS,proyecto,20 - Jefatura de Gobierno.pdf,67
-transfers,2027,Jefatura De Gobierno,Áreas de Conservación,43000000,ARS,proyecto,20 - Jefatura de Gobierno.pdf,75
-transfers,2027,Jefatura De Gobierno,Conservación de la Biodiversidad y Patrimonio Histórico,25000000,ARS,proyecto,20 - Jefatura de Gobierno.pdf,79
-transfers,2027,Jefatura De Gobierno,Vida Independiente e Inclusión Económica,2091525742,ARS,proyecto,20 - Jefatura de Gobierno.pdf,88
-transfers,2027,Jefatura De Gobierno,Relaciones Internacionales,109214264,ARS,proyecto,20 - Jefatura de Gobierno.pdf,129
-transfers,2027,Jefatura De Gobierno,Actividades Comunes,2747410462,ARS,proyecto,20 - Jefatura de Gobierno.pdf,197
-transfers,2027,Jefatura De Gobierno,Servicios de Emergencia,27510650911,ARS,proyecto,20 - Jefatura de Gobierno.pdf,203
-transfers,2027,Jefatura De Gobierno,"Promocion Y Proteccion De Los Derechos De Niñas, Niños Y Adolescentes",430395133,ARS,proyecto,20 - Jefatura de Gobierno.pdf,209
-transfers,2027,Jefatura De Gobierno,"Programas Especiales De Proteccion Para Niños, Niñas Y Adolescentes",13780341997,ARS,proyecto,20 - Jefatura de Gobierno.pdf,214
-transfers,2027,Jefatura De Gobierno,Control e Intervencion de Jovenes en Conflicto con la Ley Penal,266306770,ARS,proyecto,20 - Jefatura de Gobierno.pdf,224
-transfers,2027,Jefatura De Gobierno,Competencias Comunales y Talleres,4825331652,ARS,proyecto,20 - Jefatura de Gobierno.pdf,240
-transfers,2027,Jefatura De Gobierno,Fondo de Emergencia para Subsidios por Inundacciones - Ley 1575,14140000000,ARS,proyecto,20 - Jefatura de Gobierno.pdf,260
-transfers,2027,Jefatura De Gabinete De Ministros,Deporte Social y Desarrollo Deportivo,2096189684,ARS,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,47
-transfers,2027,Jefatura De Gabinete De Ministros,Corporacion Buenos Aires Sur S.A.U,27675310850,ARS,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,58
-transfers,2027,Jefatura De Gabinete De Ministros,Operacion Del Reciclado,70964512624,ARS,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,78
-transfers,2027,Jefatura De Gabinete De Ministros,Autódromo de la Ciudad Autónoma de Buenos Aires,815758334,ARS,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,105
-transfers,2027,Ministerio De Justicia,Conducción y Administración de Programas de Empleo,1589960943,ARS,proyecto,24 - Ministerio de Justicia.pdf,24
-transfers,2027,Ministerio De Justicia,Administración Ex Cassaba,337643808,ARS,proyecto,24 - Ministerio de Justicia.pdf,54
-transfers,2027,Ministerio De Justicia,Ente Publico Espacio para la Memoria,354408976,ARS,proyecto,24 - Ministerio de Justicia.pdf,75
-transfers,2027,Ministerio De Justicia,"Fortalecimiento , Promocion y Difusión de DDHH",225200000,ARS,proyecto,24 - Ministerio de Justicia.pdf,81
-transfers,2027,Ministerio De Justicia,Servicio Penitenciario y de Reintegración Social,2592000000,ARS,proyecto,24 - Ministerio de Justicia.pdf,186
-transfers,2027,Ministerio De Justicia,Gestión Electoral,35814814764,ARS,proyecto,24 - Ministerio de Justicia.pdf,195
-transfers,2027,Ministerio De Seguridad,Policía de la Ciudad,27527564052,ARS,proyecto,29 - Ministerio de Seguridad.pdf,57
-transfers,2027,Ministerio De Seguridad,Planificación y Control Defensa Civil,729639746,ARS,proyecto,29 - Ministerio de Seguridad.pdf,73
-transfers,2027,Ministerio De Movilidad E Infraestructura,SBASE,933485925130,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,43
-transfers,2027,Ministerio De Movilidad E Infraestructura,Actividades Comunes,55946985,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,45
-transfers,2027,Ministerio De Movilidad E Infraestructura,Boleto Estudiantil,18473670662,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,50
-transfers,2027,Ministerio De Movilidad E Infraestructura,Empresas de colectivos,328217047247,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,52
-transfers,2027,Ministerio De Movilidad E Infraestructura,Regulacion y Operacion Servicios de Transporte,3645314440,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,57
-transfers,2027,Ministerio De Movilidad E Infraestructura,Sistema de Gestión de Acarreo,22657790192,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,89
-transfers,2027,Ministerio De Espacio Publico E Higiene Urbana,Actividades Centrales,2540095941,ARS,proyecto,35 - Ministerio de Espacio Público e Higiene Urbana.pdf,17
-transfers,2027,Ministerio De Salud,Actividades Centrales Ministerio de Salud,3747705508,ARS,proyecto,40 - Ministerio de Salud.pdf,40
-transfers,2027,Ministerio De Salud,Hospital de Pediatría Juan Pedro Garrahan,99008750000,ARS,proyecto,40 - Ministerio de Salud.pdf,42
-transfers,2027,Ministerio De Salud,Hospital General de Agudos Teodoro Álvarez,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,81
-transfers,2027,Ministerio De Salud,Hospital General de Agudos Cosme Argerich,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,83
-transfers,2027,Ministerio De Salud,Hospital de Oncología María Curie,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,115
-transfers,2027,Ministerio De Salud,Hospital General de Agudos Carlos Durand,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,85
-transfers,2027,Ministerio De Salud,Hospital General de Niños Pedro de Elizalde,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,126
-transfers,2027,Ministerio De Salud,Hospital General de Agudos Juan A.Fernández,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,88
-transfers,2027,Ministerio De Salud,Hospital de Rehabilitación Respiratoria Maria Ferrer,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,144
-transfers,2027,Ministerio De Salud,Hospital General de Niños Ricardo Gutiérrez,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,129
-transfers,2027,Ministerio De Salud,Hospital de Enfermedades Infectocontagiosas Francisco J.Muñiz,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,118
-transfers,2027,Ministerio De Salud,Hospital General de Agudos José María Penna,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,90
-transfers,2027,Ministerio De Salud,Hospital General de Agudos Parmenio Piñero,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,92
-transfers,2027,Ministerio De Salud,Hospital General de Agudos Ignacio Pirovano,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,94
-transfers,2027,Ministerio De Salud,Hospital General de Agudos José María Ramos Mejía,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,97
-transfers,2027,Ministerio De Salud,Hospital General de Agudos Bernardino Rivadavia,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,99
-transfers,2027,Ministerio De Salud,Hospital General de Agudos Donación Francisco Santojanni,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,102
-transfers,2027,Ministerio De Salud,Talleres Protegidos de Rehabilitación Psiquiátrica,554500917,ARS,proyecto,40 - Ministerio de Salud.pdf,158
-transfers,2027,Ministerio De Salud,Hospital General de Agudos Enrique Tornú,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,104
-transfers,2027,Ministerio De Salud,Hospital General de Agudos Abel Zubizarreta,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,109
-transfers,2027,Ministerio De Salud,Instituto de Rehabilitación Psicofísica,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,148
-transfers,2027,Ministerio De Salud,Atención de Salud Mental,21224850068,ARS,proyecto,40 - Ministerio de Salud.pdf,79
-transfers,2027,Ministerio De Salud,Ente Autárquico Instituto del Trasplante,346825000,ARS,proyecto,40 - Ministerio de Salud.pdf,200
-transfers,2027,Ministerio De Salud,Facturación y Cobranza de los Efectores Públicos S.E.,14522342724,ARS,proyecto,40 - Ministerio de Salud.pdf,237
-transfers,2027,Ministerio De Salud,Planificación Sanitaria y Gestión en Red,922854372,ARS,proyecto,40 - Ministerio de Salud.pdf,244
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Asistencia al Damnificado,43939210084,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,22
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Hogares beneficiarios de Ciudadanía Porteña,160975461421,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,32
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Organizaciones sociales de grupos comunitarios,367793115234,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,35
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Integración Económica y Social,5290091350,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,42
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Infraestructura y Vivienda,80000000,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,44
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Recuperacion de la Traza de la Ex-Au3,95582807,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,49
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Plan Integral de Estrategias Habitacionales,758879304,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,55
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Asistencia a Familias de Alta Vulnerabilidad Social,72055420144,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,58
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Asistencia Integral a los Sin Techo,44033240344,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,60
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Redes por la Inclusión,11953000000,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,65
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Red de Empresa,1167241218,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,69
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Intermediación Laboral,17239154756,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,71
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Asistencia Técnica y Fomento a la Comercialización de la Economía Social,2188590110,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,75
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Actividades Comunes,1695735087,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,77
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Desarrollo Integral de los Primeros Años,30954956806,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,80
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Promoción de las Adolescencias,4088450216,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,83
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Asistencia a Victimas de la Violencia,2319753936,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,86
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Actividades Comunes,2120329716,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,91
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Actividades Comunes,1695735087,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,101
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sistemas Alternativos a la Institucionalizacion,4000000000,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,103
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Polìticas Comunitarias para las Personas Mayores,1375883448,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,105
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Hogar de Residencia Permanente y Transitoria,9673755051,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,109
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Politicas Sociales en Adicciones y otras Practicas de Riesgo Adictivo,7301773778,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,119
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Actividades Centrales,12567402128,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,18
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Fortalecimiento a Organizaciones de la Sociedad Civil,3180685143,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,20
-transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Planes de Alquileres BA,191440757,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,139
-transfers,2027,Ministerio De Cultura,Enseñanza de las Artes,51335151,ARS,proyecto,50 - Ministerio de Cultura.pdf,76
-transfers,2027,Ministerio De Cultura,Administración y Actividades Artístico Culturales,575000000,ARS,proyecto,50 - Ministerio de Cultura.pdf,101
-transfers,2027,Ministerio De Cultura,Incentivo a la Producción Cultural,19266074059,ARS,proyecto,50 - Ministerio de Cultura.pdf,111
-transfers,2027,Ministerio De Cultura,Industrias Creativas,63476612,ARS,proyecto,50 - Ministerio de Cultura.pdf,119
-transfers,2027,Ministerio De Cultura,Premios y Subsidios,7483289450,ARS,proyecto,50 - Ministerio de Cultura.pdf,124
-transfers,2027,Ministerio De Cultura,Promoción de Actividades Culturales,287355705,ARS,proyecto,50 - Ministerio de Cultura.pdf,243
-transfers,2027,Ministerio De Cultura,Promoción de la Lectura,1021637150,ARS,proyecto,50 - Ministerio de Cultura.pdf,256
-transfers,2027,Ministerio De Cultura,Divulgación de las Expresiones Artísticas,297959809,ARS,proyecto,50 - Ministerio de Cultura.pdf,282
-transfers,2027,Ministerio De Educación,Habilidades para el Futuro,4694505448,ARS,proyecto,55 - Ministerio de Educación.pdf,40
-transfers,2027,Ministerio De Educación,Escuelas de gestión privada,635364980980,ARS,proyecto,55 - Ministerio de Educación.pdf,49
-transfers,2027,Ministerio De Educación,Actividades Comunes,28235785,ARS,proyecto,55 - Ministerio de Educación.pdf,70
-transfers,2027,Ministerio De Educación,Subsidio a Cooperadoras Escolares,4312981609,ARS,proyecto,55 - Ministerio de Educación.pdf,74
-transfers,2027,Ministerio De Educación,Escuelas Verdes,13420967,ARS,proyecto,55 - Ministerio de Educación.pdf,96
-transfers,2027,Ministerio De Educación,Becas Estudiantiles,36902523616,ARS,proyecto,55 - Ministerio de Educación.pdf,111
-transfers,2027,Ministerio De Educación,Actividades Comunes,1500000000,ARS,proyecto,55 - Ministerio de Educación.pdf,117
-transfers,2027,Ministerio De Educación,Educacion Primaria,996134654,ARS,proyecto,55 - Ministerio de Educación.pdf,153
-transfers,2027,Ministerio De Educación,Educacion Especial,38724745,ARS,proyecto,55 - Ministerio de Educación.pdf,161
-transfers,2027,Ministerio De Educación,Evaluacion Integral de la Calidad y Equidad Educativa,428860242,ARS,proyecto,55 - Ministerio de Educación.pdf,195
-transfers,2027,Ministerio De Hacienda Y Finanzas,Gestión de Recursos Humanos,1800000000,ARS,proyecto,60 - Ministerio de Hacienda y Finanzas.pdf,49
-transfers,2027,Ministerio De Desarrollo Económico,Proyectos de Industrias Creativas Audiovisuales y Software,2642104620,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,34
-transfers,2027,Ministerio De Desarrollo Económico,Ciencia y Tecnología,205567930,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,38
-transfers,2027,Ministerio De Desarrollo Económico,Ente Público no Estatal Parque de la Innovación,7468128249,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,67
-transfers,2027,Ministerio De Desarrollo Económico,Consejo Económico y Social (CESBA),2720190212,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,69
-transfers,2027,Obligaciones A Cargo Del Tesoro,Otras Erogaciones no Asignables a Programas,43987632576,ARS,proyecto,99 - Obligaciones a cargo del Tesoro.pdf,7
-transfers,2027,Obligaciones A Cargo Del Tesoro,Aportes a Entes Públicos,11082714490,ARS,proyecto,99 - Obligaciones a cargo del Tesoro.pdf,9
-transfers,2027,Obligaciones A Cargo Del Tesoro,Aportes con Fines Sociales,64415804763,ARS,proyecto,99 - Obligaciones a cargo del Tesoro.pdf,11
-debt-stock,2026,Ciudad,Stock total al 30/09 (provisorio),1994600000.0,USD,stock provisorio,3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf,Cuadro 2.7 / PDF p. 68
+transfers,2027,Legislatura De La Ciudad De Buenos Aires,Transferencia total / Formación y Sanción de Leyes,7024209717,ARS,proyecto,01 - Legislatura de la Ciudad de Buenos Aires.pdf,8
+transfers,2027,Legislatura De La Ciudad De Buenos Aires,Sin apertura corriente/capital / Formación y Sanción de Leyes,0,ARS,proyecto,01 - Legislatura de la Ciudad de Buenos Aires.pdf,8
+transfers,2027,Auditoria General De La Ciudad De Buenos Aires,Transferencia total / Control Externo,50239550,ARS,proyecto,02 - Auditoría General de la Ciudad de Buenos Aires.pdf,11
+transfers,2027,Auditoria General De La Ciudad De Buenos Aires,Sin apertura corriente/capital / Control Externo,0,ARS,proyecto,02 - Auditoría General de la Ciudad de Buenos Aires.pdf,11
+transfers,2027,Defensoria Del Pueblo,Transferencia total / Defensa de los Derechos,93509764,ARS,proyecto,03 - Defensoría del Pueblo.pdf,17
+transfers,2027,Defensoria Del Pueblo,Sin apertura corriente/capital / Defensa de los Derechos,28372972,ARS,proyecto,03 - Defensoría del Pueblo.pdf,17
+transfers,2027,Ministerio Publico,Transferencia total / Asesoría General Tutelar,216810677,ARS,proyecto,05 - Ministerio Público.pdf,46
+transfers,2027,Ministerio Publico,Sin apertura corriente/capital / Asesoría General Tutelar,0,ARS,proyecto,05 - Ministerio Público.pdf,46
+transfers,2027,Ministerio Publico,Transferencia total / Ministerio Público de la Defensa,277912057,ARS,proyecto,05 - Ministerio Público.pdf,94
+transfers,2027,Ministerio Publico,Sin apertura corriente/capital / Ministerio Público de la Defensa,0,ARS,proyecto,05 - Ministerio Público.pdf,94
+transfers,2027,Ministerio Publico,Transferencia total / Posicionamiento Institucional y Gestión Administrativa,173965038,ARS,proyecto,05 - Ministerio Público.pdf,117
+transfers,2027,Ministerio Publico,Sin apertura corriente/capital / Posicionamiento Institucional y Gestión Administrativa,0,ARS,proyecto,05 - Ministerio Público.pdf,117
+transfers,2027,Ministerio Publico,Transferencia total / Política Criminal Integral y Gestión Judicial,55771200,ARS,proyecto,05 - Ministerio Público.pdf,131
+transfers,2027,Ministerio Publico,Sin apertura corriente/capital / Política Criminal Integral y Gestión Judicial,0,ARS,proyecto,05 - Ministerio Público.pdf,131
+transfers,2027,Ministerio Publico,Transferencia total / Acceso a la Justicia y Protección Integral a la Víctima,82550000,ARS,proyecto,05 - Ministerio Público.pdf,148
+transfers,2027,Ministerio Publico,Sin apertura corriente/capital / Acceso a la Justicia y Protección Integral a la Víctima,0,ARS,proyecto,05 - Ministerio Público.pdf,148
+transfers,2027,Tribunal Superior De Justicia,Transferencia total / Tutela Judicial,120286537,ARS,proyecto,06 - Tribunal Superior de Justicia.pdf,54
+transfers,2027,Tribunal Superior De Justicia,Sin apertura corriente/capital / Tutela Judicial,0,ARS,proyecto,06 - Tribunal Superior de Justicia.pdf,54
+transfers,2027,Tribunal Superior De Justicia,Transferencia total / Centro de Formación Judicial,176313463,ARS,proyecto,06 - Tribunal Superior de Justicia.pdf,66
+transfers,2027,Tribunal Superior De Justicia,Sin apertura corriente/capital / Centro de Formación Judicial,0,ARS,proyecto,06 - Tribunal Superior de Justicia.pdf,66
+transfers,2027,Consejo De La Magistratura,Transferencia total / Actividades Específicas del Consejo de la Magistratura,1542322465,ARS,proyecto,07 - Consejo de la Magistratura.pdf,44
+transfers,2027,Consejo De La Magistratura,Sin apertura corriente/capital / Actividades Específicas del Consejo de la Magistratura,0,ARS,proyecto,07 - Consejo de la Magistratura.pdf,44
+transfers,2027,Consejo De La Magistratura,"Transferencia total / Justicia Contenciosa, Administrativa, Tributaria y de Relaciones del Consumo",1000000,ARS,proyecto,07 - Consejo de la Magistratura.pdf,47
+transfers,2027,Consejo De La Magistratura,"Sin apertura corriente/capital / Justicia Contenciosa, Administrativa, Tributaria y de Relaciones del Consumo",0,ARS,proyecto,07 - Consejo de la Magistratura.pdf,47
+transfers,2027,Consejo De La Magistratura,"Transferencia total / Justicia Penal, Contravencional y de Faltas y Penal Juvenil",2000000,ARS,proyecto,07 - Consejo de la Magistratura.pdf,53
+transfers,2027,Consejo De La Magistratura,"Sin apertura corriente/capital / Justicia Penal, Contravencional y de Faltas y Penal Juvenil",0,ARS,proyecto,07 - Consejo de la Magistratura.pdf,53
+transfers,2027,Consejo De La Magistratura,Transferencia total / Actividades Operativas y Comunes del Poder Judicial,902905214,ARS,proyecto,07 - Consejo de la Magistratura.pdf,60
+transfers,2027,Consejo De La Magistratura,Sin apertura corriente/capital / Actividades Operativas y Comunes del Poder Judicial,0,ARS,proyecto,07 - Consejo de la Magistratura.pdf,60
+transfers,2027,Consejo De La Magistratura,Transferencia total / Centro de Justicia de la Mujer,78169453,ARS,proyecto,07 - Consejo de la Magistratura.pdf,78
+transfers,2027,Consejo De La Magistratura,Sin apertura corriente/capital / Centro de Justicia de la Mujer,0,ARS,proyecto,07 - Consejo de la Magistratura.pdf,78
+transfers,2027,Consejo De La Magistratura,Transferencia total / Justicia Electoral,1000000,ARS,proyecto,07 - Consejo de la Magistratura.pdf,81
+transfers,2027,Consejo De La Magistratura,Sin apertura corriente/capital / Justicia Electoral,0,ARS,proyecto,07 - Consejo de la Magistratura.pdf,81
+transfers,2027,Jefatura De Gobierno,Transferencia total / Gestión Animal,118943940,ARS,proyecto,20 - Jefatura de Gobierno.pdf,52
+transfers,2027,Jefatura De Gobierno,Sin apertura corriente/capital / Gestión Animal,0,ARS,proyecto,20 - Jefatura de Gobierno.pdf,52
+transfers,2027,Jefatura De Gobierno,Transferencia total / Actividades Comunes,2091525750,ARS,proyecto,20 - Jefatura de Gobierno.pdf,67
+transfers,2027,Jefatura De Gobierno,Sin apertura corriente/capital / Actividades Comunes,0,ARS,proyecto,20 - Jefatura de Gobierno.pdf,67
+transfers,2027,Jefatura De Gobierno,Transferencia total / Áreas de Conservación,43000000,ARS,proyecto,20 - Jefatura de Gobierno.pdf,75
+transfers,2027,Jefatura De Gobierno,Sin apertura corriente/capital / Áreas de Conservación,0,ARS,proyecto,20 - Jefatura de Gobierno.pdf,75
+transfers,2027,Jefatura De Gobierno,Transferencia total / Conservación de la Biodiversidad y Patrimonio Histórico,25000000,ARS,proyecto,20 - Jefatura de Gobierno.pdf,79
+transfers,2027,Jefatura De Gobierno,Sin apertura corriente/capital / Conservación de la Biodiversidad y Patrimonio Histórico,0,ARS,proyecto,20 - Jefatura de Gobierno.pdf,79
+transfers,2027,Jefatura De Gobierno,Transferencia total / Vida Independiente e Inclusión Económica,2091525742,ARS,proyecto,20 - Jefatura de Gobierno.pdf,88
+transfers,2027,Jefatura De Gobierno,Sin apertura corriente/capital / Vida Independiente e Inclusión Económica,0,ARS,proyecto,20 - Jefatura de Gobierno.pdf,88
+transfers,2027,Jefatura De Gobierno,Transferencia total / Relaciones Internacionales,109214264,ARS,proyecto,20 - Jefatura de Gobierno.pdf,129
+transfers,2027,Jefatura De Gobierno,Sin apertura corriente/capital / Relaciones Internacionales,91970866,ARS,proyecto,20 - Jefatura de Gobierno.pdf,129
+transfers,2027,Jefatura De Gobierno,Transferencia total / Actividades Comunes,2747410462,ARS,proyecto,20 - Jefatura de Gobierno.pdf,197
+transfers,2027,Jefatura De Gobierno,Sin apertura corriente/capital / Actividades Comunes,1691572162,ARS,proyecto,20 - Jefatura de Gobierno.pdf,197
+transfers,2027,Jefatura De Gobierno,Transferencia total / Servicios de Emergencia,27510650911,ARS,proyecto,20 - Jefatura de Gobierno.pdf,203
+transfers,2027,Jefatura De Gobierno,Sin apertura corriente/capital / Servicios de Emergencia,0,ARS,proyecto,20 - Jefatura de Gobierno.pdf,203
+transfers,2027,Jefatura De Gobierno,"Transferencia total / Promocion Y Proteccion De Los Derechos De Niñas, Niños Y Adolescentes",430395133,ARS,proyecto,20 - Jefatura de Gobierno.pdf,209
+transfers,2027,Jefatura De Gobierno,"Sin apertura corriente/capital / Promocion Y Proteccion De Los Derechos De Niñas, Niños Y Adolescentes",0,ARS,proyecto,20 - Jefatura de Gobierno.pdf,209
+transfers,2027,Jefatura De Gobierno,"Transferencia total / Programas Especiales De Proteccion Para Niños, Niñas Y Adolescentes",13780341997,ARS,proyecto,20 - Jefatura de Gobierno.pdf,214
+transfers,2027,Jefatura De Gobierno,"Sin apertura corriente/capital / Programas Especiales De Proteccion Para Niños, Niñas Y Adolescentes",0,ARS,proyecto,20 - Jefatura de Gobierno.pdf,214
+transfers,2027,Jefatura De Gobierno,Transferencia total / Control e Intervencion de Jovenes en Conflicto con la Ley Penal,266306770,ARS,proyecto,20 - Jefatura de Gobierno.pdf,224
+transfers,2027,Jefatura De Gobierno,Sin apertura corriente/capital / Control e Intervencion de Jovenes en Conflicto con la Ley Penal,166306770,ARS,proyecto,20 - Jefatura de Gobierno.pdf,224
+transfers,2027,Jefatura De Gobierno,Transferencia total / Competencias Comunales y Talleres,4825331652,ARS,proyecto,20 - Jefatura de Gobierno.pdf,240
+transfers,2027,Jefatura De Gobierno,Sin apertura corriente/capital / Competencias Comunales y Talleres,0,ARS,proyecto,20 - Jefatura de Gobierno.pdf,240
+transfers,2027,Jefatura De Gobierno,Transferencia total / Fondo de Emergencia para Subsidios por Inundacciones - Ley 1575,14140000000,ARS,proyecto,20 - Jefatura de Gobierno.pdf,260
+transfers,2027,Jefatura De Gobierno,Sin apertura corriente/capital / Fondo de Emergencia para Subsidios por Inundacciones - Ley 1575,0,ARS,proyecto,20 - Jefatura de Gobierno.pdf,260
+transfers,2027,Jefatura De Gabinete De Ministros,Transferencia total / Deporte Social y Desarrollo Deportivo,2096189684,ARS,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,47
+transfers,2027,Jefatura De Gabinete De Ministros,Sin apertura corriente/capital / Deporte Social y Desarrollo Deportivo,0,ARS,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,47
+transfers,2027,Jefatura De Gabinete De Ministros,Transferencia total / Corporacion Buenos Aires Sur S.A.U,27675310850,ARS,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,58
+transfers,2027,Jefatura De Gabinete De Ministros,Sin apertura corriente/capital / Corporacion Buenos Aires Sur S.A.U,27675310850,ARS,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,58
+transfers,2027,Jefatura De Gabinete De Ministros,Transferencia total / Operacion Del Reciclado,70964512624,ARS,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,78
+transfers,2027,Jefatura De Gabinete De Ministros,Sin apertura corriente/capital / Operacion Del Reciclado,0,ARS,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,78
+transfers,2027,Jefatura De Gabinete De Ministros,Transferencia total / Autódromo de la Ciudad Autónoma de Buenos Aires,815758334,ARS,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,105
+transfers,2027,Jefatura De Gabinete De Ministros,Sin apertura corriente/capital / Autódromo de la Ciudad Autónoma de Buenos Aires,0,ARS,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,105
+transfers,2027,Ministerio De Justicia,Transferencia total / Conducción y Administración de Programas de Empleo,1589960943,ARS,proyecto,24 - Ministerio de Justicia.pdf,24
+transfers,2027,Ministerio De Justicia,Sin apertura corriente/capital / Conducción y Administración de Programas de Empleo,0,ARS,proyecto,24 - Ministerio de Justicia.pdf,24
+transfers,2027,Ministerio De Justicia,Transferencia total / Administración Ex Cassaba,337643808,ARS,proyecto,24 - Ministerio de Justicia.pdf,54
+transfers,2027,Ministerio De Justicia,Sin apertura corriente/capital / Administración Ex Cassaba,0,ARS,proyecto,24 - Ministerio de Justicia.pdf,54
+transfers,2027,Ministerio De Justicia,Transferencia total / Ente Publico Espacio para la Memoria,354408976,ARS,proyecto,24 - Ministerio de Justicia.pdf,75
+transfers,2027,Ministerio De Justicia,Sin apertura corriente/capital / Ente Publico Espacio para la Memoria,0,ARS,proyecto,24 - Ministerio de Justicia.pdf,75
+transfers,2027,Ministerio De Justicia,"Transferencia total / Fortalecimiento , Promocion y Difusión de DDHH",225200000,ARS,proyecto,24 - Ministerio de Justicia.pdf,81
+transfers,2027,Ministerio De Justicia,"Sin apertura corriente/capital / Fortalecimiento , Promocion y Difusión de DDHH",0,ARS,proyecto,24 - Ministerio de Justicia.pdf,81
+transfers,2027,Ministerio De Justicia,Transferencia total / Servicio Penitenciario y de Reintegración Social,2592000000,ARS,proyecto,24 - Ministerio de Justicia.pdf,186
+transfers,2027,Ministerio De Justicia,Sin apertura corriente/capital / Servicio Penitenciario y de Reintegración Social,0,ARS,proyecto,24 - Ministerio de Justicia.pdf,186
+transfers,2027,Ministerio De Justicia,Transferencia total / Gestión Electoral,35814814764,ARS,proyecto,24 - Ministerio de Justicia.pdf,195
+transfers,2027,Ministerio De Justicia,Sin apertura corriente/capital / Gestión Electoral,4407849900,ARS,proyecto,24 - Ministerio de Justicia.pdf,195
+transfers,2027,Ministerio De Seguridad,Transferencia total / Policía de la Ciudad,27527564052,ARS,proyecto,29 - Ministerio de Seguridad.pdf,57
+transfers,2027,Ministerio De Seguridad,Sin apertura corriente/capital / Policía de la Ciudad,0,ARS,proyecto,29 - Ministerio de Seguridad.pdf,57
+transfers,2027,Ministerio De Seguridad,Transferencia total / Planificación y Control Defensa Civil,729639746,ARS,proyecto,29 - Ministerio de Seguridad.pdf,73
+transfers,2027,Ministerio De Seguridad,Sin apertura corriente/capital / Planificación y Control Defensa Civil,0,ARS,proyecto,29 - Ministerio de Seguridad.pdf,73
+transfers,2027,Ministerio De Movilidad E Infraestructura,Transferencia total / SBASE,933485925130,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,43
+transfers,2027,Ministerio De Movilidad E Infraestructura,Sin apertura corriente/capital / SBASE,933485925130,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,43
+transfers,2027,Ministerio De Movilidad E Infraestructura,Transferencia total / Actividades Comunes,55946985,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,45
+transfers,2027,Ministerio De Movilidad E Infraestructura,Sin apertura corriente/capital / Actividades Comunes,0,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,45
+transfers,2027,Ministerio De Movilidad E Infraestructura,Transferencia total / Boleto Estudiantil,18473670662,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,50
+transfers,2027,Ministerio De Movilidad E Infraestructura,Sin apertura corriente/capital / Boleto Estudiantil,0,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,50
+transfers,2027,Ministerio De Movilidad E Infraestructura,Transferencia total / Empresas de colectivos,328217047247,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,52
+transfers,2027,Ministerio De Movilidad E Infraestructura,Sin apertura corriente/capital / Empresas de colectivos,0,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,52
+transfers,2027,Ministerio De Movilidad E Infraestructura,Transferencia total / Regulacion y Operacion Servicios de Transporte,3645314440,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,57
+transfers,2027,Ministerio De Movilidad E Infraestructura,Sin apertura corriente/capital / Regulacion y Operacion Servicios de Transporte,0,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,57
+transfers,2027,Ministerio De Movilidad E Infraestructura,Transferencia total / Sistema de Gestión de Acarreo,22657790192,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,89
+transfers,2027,Ministerio De Movilidad E Infraestructura,Sin apertura corriente/capital / Sistema de Gestión de Acarreo,22657790192,ARS,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,89
+transfers,2027,Ministerio De Espacio Publico E Higiene Urbana,Transferencia total / Actividades Centrales,2540095941,ARS,proyecto,35 - Ministerio de Espacio Público e Higiene Urbana.pdf,17
+transfers,2027,Ministerio De Espacio Publico E Higiene Urbana,Sin apertura corriente/capital / Actividades Centrales,2540095941,ARS,proyecto,35 - Ministerio de Espacio Público e Higiene Urbana.pdf,17
+transfers,2027,Ministerio De Salud,Transferencia total / Actividades Centrales Ministerio de Salud,3747705508,ARS,proyecto,40 - Ministerio de Salud.pdf,40
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Actividades Centrales Ministerio de Salud,0,ARS,proyecto,40 - Ministerio de Salud.pdf,40
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital de Pediatría Juan Pedro Garrahan,99008750000,ARS,proyecto,40 - Ministerio de Salud.pdf,42
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital de Pediatría Juan Pedro Garrahan,0,ARS,proyecto,40 - Ministerio de Salud.pdf,42
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Agudos Teodoro Álvarez,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,81
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Agudos Teodoro Álvarez,0,ARS,proyecto,40 - Ministerio de Salud.pdf,81
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Agudos Cosme Argerich,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,83
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Agudos Cosme Argerich,0,ARS,proyecto,40 - Ministerio de Salud.pdf,83
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital de Oncología María Curie,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,115
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital de Oncología María Curie,0,ARS,proyecto,40 - Ministerio de Salud.pdf,115
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Agudos Carlos Durand,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,85
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Agudos Carlos Durand,0,ARS,proyecto,40 - Ministerio de Salud.pdf,85
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Niños Pedro de Elizalde,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,126
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Niños Pedro de Elizalde,0,ARS,proyecto,40 - Ministerio de Salud.pdf,126
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Agudos Juan A.Fernández,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,88
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Agudos Juan A.Fernández,0,ARS,proyecto,40 - Ministerio de Salud.pdf,88
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital de Rehabilitación Respiratoria Maria Ferrer,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,144
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital de Rehabilitación Respiratoria Maria Ferrer,0,ARS,proyecto,40 - Ministerio de Salud.pdf,144
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Niños Ricardo Gutiérrez,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,129
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Niños Ricardo Gutiérrez,0,ARS,proyecto,40 - Ministerio de Salud.pdf,129
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital de Enfermedades Infectocontagiosas Francisco J.Muñiz,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,118
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital de Enfermedades Infectocontagiosas Francisco J.Muñiz,0,ARS,proyecto,40 - Ministerio de Salud.pdf,118
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Agudos José María Penna,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,90
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Agudos José María Penna,0,ARS,proyecto,40 - Ministerio de Salud.pdf,90
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Agudos Parmenio Piñero,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,92
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Agudos Parmenio Piñero,0,ARS,proyecto,40 - Ministerio de Salud.pdf,92
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Agudos Ignacio Pirovano,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,94
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Agudos Ignacio Pirovano,0,ARS,proyecto,40 - Ministerio de Salud.pdf,94
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Agudos José María Ramos Mejía,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,97
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Agudos José María Ramos Mejía,0,ARS,proyecto,40 - Ministerio de Salud.pdf,97
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Agudos Bernardino Rivadavia,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,99
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Agudos Bernardino Rivadavia,0,ARS,proyecto,40 - Ministerio de Salud.pdf,99
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Agudos Donación Francisco Santojanni,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,102
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Agudos Donación Francisco Santojanni,0,ARS,proyecto,40 - Ministerio de Salud.pdf,102
+transfers,2027,Ministerio De Salud,Transferencia total / Talleres Protegidos de Rehabilitación Psiquiátrica,554500917,ARS,proyecto,40 - Ministerio de Salud.pdf,158
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Talleres Protegidos de Rehabilitación Psiquiátrica,0,ARS,proyecto,40 - Ministerio de Salud.pdf,158
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Agudos Enrique Tornú,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,104
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Agudos Enrique Tornú,0,ARS,proyecto,40 - Ministerio de Salud.pdf,104
+transfers,2027,Ministerio De Salud,Transferencia total / Hospital General de Agudos Abel Zubizarreta,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,109
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Hospital General de Agudos Abel Zubizarreta,0,ARS,proyecto,40 - Ministerio de Salud.pdf,109
+transfers,2027,Ministerio De Salud,Transferencia total / Instituto de Rehabilitación Psicofísica,5000000,ARS,proyecto,40 - Ministerio de Salud.pdf,148
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Instituto de Rehabilitación Psicofísica,0,ARS,proyecto,40 - Ministerio de Salud.pdf,148
+transfers,2027,Ministerio De Salud,Transferencia total / Atención de Salud Mental,21224850068,ARS,proyecto,40 - Ministerio de Salud.pdf,79
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Atención de Salud Mental,0,ARS,proyecto,40 - Ministerio de Salud.pdf,79
+transfers,2027,Ministerio De Salud,Transferencia total / Ente Autárquico Instituto del Trasplante,346825000,ARS,proyecto,40 - Ministerio de Salud.pdf,200
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Ente Autárquico Instituto del Trasplante,0,ARS,proyecto,40 - Ministerio de Salud.pdf,200
+transfers,2027,Ministerio De Salud,Transferencia total / Facturación y Cobranza de los Efectores Públicos S.E.,14522342724,ARS,proyecto,40 - Ministerio de Salud.pdf,237
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Facturación y Cobranza de los Efectores Públicos S.E.,14522342724,ARS,proyecto,40 - Ministerio de Salud.pdf,237
+transfers,2027,Ministerio De Salud,Transferencia total / Planificación Sanitaria y Gestión en Red,922854372,ARS,proyecto,40 - Ministerio de Salud.pdf,244
+transfers,2027,Ministerio De Salud,Sin apertura corriente/capital / Planificación Sanitaria y Gestión en Red,0,ARS,proyecto,40 - Ministerio de Salud.pdf,244
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Asistencia al Damnificado,43939210084,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,22
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Asistencia al Damnificado,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,22
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Hogares beneficiarios de Ciudadanía Porteña,160975461421,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,32
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Hogares beneficiarios de Ciudadanía Porteña,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,32
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Organizaciones sociales de grupos comunitarios,367793115234,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,35
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Organizaciones sociales de grupos comunitarios,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,35
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Integración Económica y Social,5290091350,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,42
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Integración Económica y Social,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,42
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Infraestructura y Vivienda,80000000,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,44
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Infraestructura y Vivienda,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,44
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Recuperacion de la Traza de la Ex-Au3,95582807,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,49
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Recuperacion de la Traza de la Ex-Au3,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,49
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Plan Integral de Estrategias Habitacionales,758879304,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,55
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Plan Integral de Estrategias Habitacionales,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,55
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Asistencia a Familias de Alta Vulnerabilidad Social,72055420144,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,58
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Asistencia a Familias de Alta Vulnerabilidad Social,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,58
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Asistencia Integral a los Sin Techo,44033240344,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,60
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Asistencia Integral a los Sin Techo,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,60
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Redes por la Inclusión,11953000000,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,65
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Redes por la Inclusión,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,65
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Red de Empresa,1167241218,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,69
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Red de Empresa,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,69
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Intermediación Laboral,17239154756,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,71
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Intermediación Laboral,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,71
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Asistencia Técnica y Fomento a la Comercialización de la Economía Social,2188590110,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,75
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Asistencia Técnica y Fomento a la Comercialización de la Economía Social,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,75
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Actividades Comunes,1695735087,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,77
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Actividades Comunes,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,77
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Desarrollo Integral de los Primeros Años,30954956806,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,80
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Desarrollo Integral de los Primeros Años,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,80
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Promoción de las Adolescencias,4088450216,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,83
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Promoción de las Adolescencias,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,83
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Asistencia a Victimas de la Violencia,2319753936,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,86
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Asistencia a Victimas de la Violencia,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,86
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Actividades Comunes,2120329716,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,91
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Actividades Comunes,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,91
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Actividades Comunes,1695735087,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,101
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Actividades Comunes,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,101
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Sistemas Alternativos a la Institucionalizacion,4000000000,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,103
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Sistemas Alternativos a la Institucionalizacion,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,103
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Polìticas Comunitarias para las Personas Mayores,1375883448,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,105
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Polìticas Comunitarias para las Personas Mayores,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,105
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Hogar de Residencia Permanente y Transitoria,9673755051,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,109
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Hogar de Residencia Permanente y Transitoria,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,109
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Politicas Sociales en Adicciones y otras Practicas de Riesgo Adictivo,7301773778,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,119
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Politicas Sociales en Adicciones y otras Practicas de Riesgo Adictivo,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,119
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Actividades Centrales,12567402128,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,18
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Actividades Centrales,12567402128,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,18
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Fortalecimiento a Organizaciones de la Sociedad Civil,3180685143,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,20
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Fortalecimiento a Organizaciones de la Sociedad Civil,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,20
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Transferencia total / Planes de Alquileres BA,191440757,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,139
+transfers,2027,Ministerio De Desarrollo Humano Y Hábitat,Sin apertura corriente/capital / Planes de Alquileres BA,0,ARS,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,139
+transfers,2027,Ministerio De Cultura,Transferencia total / Enseñanza de las Artes,51335151,ARS,proyecto,50 - Ministerio de Cultura.pdf,76
+transfers,2027,Ministerio De Cultura,Sin apertura corriente/capital / Enseñanza de las Artes,0,ARS,proyecto,50 - Ministerio de Cultura.pdf,76
+transfers,2027,Ministerio De Cultura,Transferencia total / Administración y Actividades Artístico Culturales,575000000,ARS,proyecto,50 - Ministerio de Cultura.pdf,101
+transfers,2027,Ministerio De Cultura,Sin apertura corriente/capital / Administración y Actividades Artístico Culturales,0,ARS,proyecto,50 - Ministerio de Cultura.pdf,101
+transfers,2027,Ministerio De Cultura,Transferencia total / Incentivo a la Producción Cultural,19266074059,ARS,proyecto,50 - Ministerio de Cultura.pdf,111
+transfers,2027,Ministerio De Cultura,Sin apertura corriente/capital / Incentivo a la Producción Cultural,0,ARS,proyecto,50 - Ministerio de Cultura.pdf,111
+transfers,2027,Ministerio De Cultura,Transferencia total / Industrias Creativas,63476612,ARS,proyecto,50 - Ministerio de Cultura.pdf,119
+transfers,2027,Ministerio De Cultura,Sin apertura corriente/capital / Industrias Creativas,0,ARS,proyecto,50 - Ministerio de Cultura.pdf,119
+transfers,2027,Ministerio De Cultura,Transferencia total / Premios y Subsidios,7483289450,ARS,proyecto,50 - Ministerio de Cultura.pdf,124
+transfers,2027,Ministerio De Cultura,Sin apertura corriente/capital / Premios y Subsidios,0,ARS,proyecto,50 - Ministerio de Cultura.pdf,124
+transfers,2027,Ministerio De Cultura,Transferencia total / Promoción de Actividades Culturales,287355705,ARS,proyecto,50 - Ministerio de Cultura.pdf,243
+transfers,2027,Ministerio De Cultura,Sin apertura corriente/capital / Promoción de Actividades Culturales,0,ARS,proyecto,50 - Ministerio de Cultura.pdf,243
+transfers,2027,Ministerio De Cultura,Transferencia total / Promoción de la Lectura,1021637150,ARS,proyecto,50 - Ministerio de Cultura.pdf,256
+transfers,2027,Ministerio De Cultura,Sin apertura corriente/capital / Promoción de la Lectura,0,ARS,proyecto,50 - Ministerio de Cultura.pdf,256
+transfers,2027,Ministerio De Cultura,Transferencia total / Divulgación de las Expresiones Artísticas,297959809,ARS,proyecto,50 - Ministerio de Cultura.pdf,282
+transfers,2027,Ministerio De Cultura,Sin apertura corriente/capital / Divulgación de las Expresiones Artísticas,0,ARS,proyecto,50 - Ministerio de Cultura.pdf,282
+transfers,2027,Ministerio De Educación,Transferencia total / Habilidades para el Futuro,4694505448,ARS,proyecto,55 - Ministerio de Educación.pdf,40
+transfers,2027,Ministerio De Educación,Sin apertura corriente/capital / Habilidades para el Futuro,0,ARS,proyecto,55 - Ministerio de Educación.pdf,40
+transfers,2027,Ministerio De Educación,Transferencia total / Escuelas de gestión privada,635364980980,ARS,proyecto,55 - Ministerio de Educación.pdf,49
+transfers,2027,Ministerio De Educación,Sin apertura corriente/capital / Escuelas de gestión privada,256427003,ARS,proyecto,55 - Ministerio de Educación.pdf,49
+transfers,2027,Ministerio De Educación,Transferencia total / Actividades Comunes,28235785,ARS,proyecto,55 - Ministerio de Educación.pdf,70
+transfers,2027,Ministerio De Educación,Sin apertura corriente/capital / Actividades Comunes,0,ARS,proyecto,55 - Ministerio de Educación.pdf,70
+transfers,2027,Ministerio De Educación,Transferencia total / Subsidio a Cooperadoras Escolares,4312981609,ARS,proyecto,55 - Ministerio de Educación.pdf,74
+transfers,2027,Ministerio De Educación,Sin apertura corriente/capital / Subsidio a Cooperadoras Escolares,0,ARS,proyecto,55 - Ministerio de Educación.pdf,74
+transfers,2027,Ministerio De Educación,Transferencia total / Escuelas Verdes,13420967,ARS,proyecto,55 - Ministerio de Educación.pdf,96
+transfers,2027,Ministerio De Educación,Sin apertura corriente/capital / Escuelas Verdes,0,ARS,proyecto,55 - Ministerio de Educación.pdf,96
+transfers,2027,Ministerio De Educación,Transferencia total / Becas Estudiantiles,36902523616,ARS,proyecto,55 - Ministerio de Educación.pdf,111
+transfers,2027,Ministerio De Educación,Sin apertura corriente/capital / Becas Estudiantiles,0,ARS,proyecto,55 - Ministerio de Educación.pdf,111
+transfers,2027,Ministerio De Educación,Transferencia total / Actividades Comunes,1500000000,ARS,proyecto,55 - Ministerio de Educación.pdf,117
+transfers,2027,Ministerio De Educación,Sin apertura corriente/capital / Actividades Comunes,0,ARS,proyecto,55 - Ministerio de Educación.pdf,117
+transfers,2027,Ministerio De Educación,Transferencia total / Educacion Primaria,996134654,ARS,proyecto,55 - Ministerio de Educación.pdf,153
+transfers,2027,Ministerio De Educación,Sin apertura corriente/capital / Educacion Primaria,0,ARS,proyecto,55 - Ministerio de Educación.pdf,153
+transfers,2027,Ministerio De Educación,Transferencia total / Educacion Especial,38724745,ARS,proyecto,55 - Ministerio de Educación.pdf,161
+transfers,2027,Ministerio De Educación,Sin apertura corriente/capital / Educacion Especial,0,ARS,proyecto,55 - Ministerio de Educación.pdf,161
+transfers,2027,Ministerio De Educación,Transferencia total / Evaluacion Integral de la Calidad y Equidad Educativa,428860242,ARS,proyecto,55 - Ministerio de Educación.pdf,195
+transfers,2027,Ministerio De Educación,Sin apertura corriente/capital / Evaluacion Integral de la Calidad y Equidad Educativa,0,ARS,proyecto,55 - Ministerio de Educación.pdf,195
+transfers,2027,Ministerio De Hacienda Y Finanzas,Transferencia total / Gestión de Recursos Humanos,1800000000,ARS,proyecto,60 - Ministerio de Hacienda y Finanzas.pdf,49
+transfers,2027,Ministerio De Hacienda Y Finanzas,Sin apertura corriente/capital / Gestión de Recursos Humanos,0,ARS,proyecto,60 - Ministerio de Hacienda y Finanzas.pdf,49
+transfers,2027,Ministerio De Desarrollo Económico,Transferencia total / Proyectos de Industrias Creativas Audiovisuales y Software,2642104620,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,34
+transfers,2027,Ministerio De Desarrollo Económico,Sin apertura corriente/capital / Proyectos de Industrias Creativas Audiovisuales y Software,0,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,34
+transfers,2027,Ministerio De Desarrollo Económico,Transferencia total / Ciencia y Tecnología,205567930,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,38
+transfers,2027,Ministerio De Desarrollo Económico,Sin apertura corriente/capital / Ciencia y Tecnología,0,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,38
+transfers,2027,Ministerio De Desarrollo Económico,Transferencia total / Ente Público no Estatal Parque de la Innovación,7468128249,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,67
+transfers,2027,Ministerio De Desarrollo Económico,Sin apertura corriente/capital / Ente Público no Estatal Parque de la Innovación,0,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,67
+transfers,2027,Ministerio De Desarrollo Económico,Transferencia total / Consejo Económico y Social (CESBA),2720190212,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,69
+transfers,2027,Ministerio De Desarrollo Económico,Sin apertura corriente/capital / Consejo Económico y Social (CESBA),0,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,69
+transfers,2027,Obligaciones A Cargo Del Tesoro,Transferencia total / Otras Erogaciones no Asignables a Programas,43987632576,ARS,proyecto,99 - Obligaciones a cargo del Tesoro.pdf,7
+transfers,2027,Obligaciones A Cargo Del Tesoro,Sin apertura corriente/capital / Otras Erogaciones no Asignables a Programas,0,ARS,proyecto,99 - Obligaciones a cargo del Tesoro.pdf,7
+transfers,2027,Obligaciones A Cargo Del Tesoro,Transferencia total / Aportes a Entes Públicos,11082714490,ARS,proyecto,99 - Obligaciones a cargo del Tesoro.pdf,9
+transfers,2027,Obligaciones A Cargo Del Tesoro,Sin apertura corriente/capital / Aportes a Entes Públicos,0,ARS,proyecto,99 - Obligaciones a cargo del Tesoro.pdf,9
+transfers,2027,Obligaciones A Cargo Del Tesoro,Transferencia total / Aportes con Fines Sociales,64415804763,ARS,proyecto,99 - Obligaciones a cargo del Tesoro.pdf,11
+transfers,2027,Obligaciones A Cargo Del Tesoro,Sin apertura corriente/capital / Aportes con Fines Sociales,0,ARS,proyecto,99 - Obligaciones a cargo del Tesoro.pdf,11
+debt-stock,2026,Ciudad,Stock total al 30/09 (provisorio),1994600000.0,USD,stock provisorio,3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf,Cuadro 2.7 / PDF p. 68 / diferencia de redondeo US$100000
+debt-stock,2026,Ciudad,Deuda directa al 30/09 (provisorio),1954200000.0,USD,stock provisorio,3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf,Cuadro 2.7 / PDF p. 68 / diferencia de redondeo US$100000
+debt-stock,2026,Ciudad,Deuda indirecta AUSA al 30/09 (provisorio),40300000.0,USD,stock provisorio,3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf,Cuadro 2.7 / PDF p. 68 / diferencia de redondeo US$100000
 debt,2013,Ciudad,Intereses,777885833.9999999,ARS,executed,"{""file"": ""serie-aif-idecba.xlsx"", ""sheet"": ""SP_Fi_AX01"", ""interestCell"": ""T27"", ""incomeCell"": ""T3""}",mismo año
 debt,2013,Ciudad,Ingresos corrientes,47348933537.00001,ARS,executed,"{""file"": ""serie-aif-idecba.xlsx"", ""sheet"": ""SP_Fi_AX01"", ""interestCell"": ""T27"", ""incomeCell"": ""T3""}",mismo año
 debt,2013,Ciudad,Intereses / ingresos corrientes,1.6428793129884,%,executed,"{""file"": ""serie-aif-idecba.xlsx"", ""sheet"": ""SP_Fi_AX01"", ""interestCell"": ""T27"", ""incomeCell"": ""T3""}",mismo año
@@ -576,47 +703,47 @@ support,2027,Ministerio De Hacienda Y Finanzas,Actividades Comunes,29803238811,A
 support,2027,Ministerio De Desarrollo Económico,Actividades Comunes,2754329668,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,22
 support,2027,Ministerio De Desarrollo Económico,Actividades Centrales,27688315713,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,19
 support,2027,Ministerio De Desarrollo Económico,Actividades Comunes,2285512890,ARS,proyecto,75 - Ministerio de Desarrollo Económico.pdf,47
-positions,2026,Legislatura De La Ciudad De Buenos Aires,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,01 Legislatura.pdf,
-positions,2027,Legislatura De La Ciudad De Buenos Aires,Cargos presupuestados (cuadro parcial),,cargos,proyecto,01 - Legislatura de la Ciudad de Buenos Aires.pdf,
-positions,2026,Auditoria General De La Ciudad De Buenos Aires,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,13_10_26 - 02 Auditoría General.pdf,
-positions,2027,Auditoria General De La Ciudad De Buenos Aires,Cargos presupuestados (cuadro parcial),,cargos,proyecto,02 - Auditoría General de la Ciudad de Buenos Aires.pdf,
-positions,2026,Defensoria Del Pueblo,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,14_10_26 - 03 Defensoría.pdf,
-positions,2027,Defensoria Del Pueblo,Cargos presupuestados (cuadro parcial),,cargos,proyecto,03 - Defensoría del Pueblo.pdf,
-positions,2026,Ministerio Publico,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,14_10_26 - 05 Ministerio Público.pdf,
-positions,2027,Ministerio Publico,Cargos presupuestados (cuadro parcial),,cargos,proyecto,05 - Ministerio Público.pdf,
-positions,2026,Tribunal Superior De Justicia,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,14_10_26 - 06 Tribunal Superior de Justicia.pdf,
-positions,2027,Tribunal Superior De Justicia,Cargos presupuestados (cuadro parcial),,cargos,proyecto,06 - Tribunal Superior de Justicia.pdf,
-positions,2026,Consejo De La Magistratura,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,14_10_26 - 07 Consejo de la Magistratura.pdf,
-positions,2027,Consejo De La Magistratura,Cargos presupuestados (cuadro parcial),,cargos,proyecto,07 - Consejo de la Magistratura.pdf,
-positions,2026,Sindicatura General De La Ciudad De Buenos Aires,Cargos presupuestados (cuadro parcial),110,cargos,proyecto original,13_10_26 - 08 Sindicatura General.pdf,11
-positions,2027,Sindicatura General De La Ciudad De Buenos Aires,Cargos presupuestados (cuadro parcial),,cargos,proyecto,08 - Sindicatura General de la Ciudad de Buenos Aires.pdf,
-positions,2026,Procuracion General De La Ciudad,Cargos presupuestados (cuadro parcial),586,cargos,proyecto original,14_10_26 - 09 Procuración General.pdf,6
-positions,2027,Procuracion General De La Ciudad,Cargos presupuestados (cuadro parcial),,cargos,proyecto,09 - Procuración General de la Ciudad.pdf,
-positions,2026,Jefatura De Gobierno,Cargos presupuestados (cuadro parcial),2425,cargos,proyecto original,20 Jefatura de Gobierno.pdf,"15,30,81,107,127,151,162,254,286,294,302,310,318,326,334,342,350,358,366,374,382,390,398,424"
-positions,2027,Jefatura De Gobierno,Cargos presupuestados (cuadro parcial),3998,cargos,proyecto,20 - Jefatura de Gobierno.pdf,"16,44,97,123,137,169,189,191,232,283,291,299,307,315,323,331,339,347,355,363,371,379,387,395,424"
-positions,2026,Jefatura De Gabinete De Ministros,Cargos presupuestados (cuadro parcial),1214,cargos,proyecto original,21 Jefatura de Gabinete de ministros.pdf,"17,71,90"
-positions,2027,Jefatura De Gabinete De Ministros,Cargos presupuestados (cuadro parcial),1824,cargos,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,"27,112,131,157"
-positions,2026,Ministerio De Justicia,Cargos presupuestados (cuadro parcial),1488,cargos,proyecto original,14_10_26 - 24 Ministerio de Justicia.pdf,"16,148,185"
-positions,2027,Ministerio De Justicia,Cargos presupuestados (cuadro parcial),1398,cargos,proyecto,24 - Ministerio de Justicia.pdf,"14,138,181,192"
-positions,2026,Ministerio De Seguridad,Cargos presupuestados (cuadro parcial),960,cargos,proyecto original,22_10_26 - 29 Ministerio de Seguridad.pdf,10
-positions,2027,Ministerio De Seguridad,Cargos presupuestados (cuadro parcial),885,cargos,proyecto,29 - Ministerio de Seguridad.pdf,13
-positions,2026,Ministerio De Movilidad E Infraestructura,Cargos presupuestados (cuadro parcial),1022,cargos,proyecto original,23_10_26 - 31 Ministerio de Infraestructura.pdf,15
-positions,2027,Ministerio De Movilidad E Infraestructura,Cargos presupuestados (cuadro parcial),911,cargos,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,15
-positions,2026,Ministerio De Espacio Publico E Higiene Urbana,Cargos presupuestados (cuadro parcial),2049,cargos,proyecto original,16_10_26 - 35 Ministerio de Espacio Público e Higiene Urbana.pdf,"15,97,106"
-positions,2027,Ministerio De Espacio Publico E Higiene Urbana,Cargos presupuestados (cuadro parcial),481,cargos,proyecto,35 - Ministerio de Espacio Público e Higiene Urbana.pdf,"12,54"
-positions,2026,Ministerio De Salud,Cargos presupuestados (cuadro parcial),20587,cargos,proyecto original,14_10_26 -40 Ministerio de Salud.pdf,"24,25"
-positions,2027,Ministerio De Salud,Cargos presupuestados (cuadro parcial),20622,cargos,proyecto,40 - Ministerio de Salud.pdf,"30,31"
-positions,2026,Ministerio De Desarrollo Humano Y Hábitat,Cargos presupuestados (cuadro parcial),3479,cargos,proyecto original,21_10_26 - 45 Ministerio de Desarrollo Humano y Hábitat.pdf,"13,122"
-positions,2027,Ministerio De Desarrollo Humano Y Hábitat,Cargos presupuestados (cuadro parcial),3213,cargos,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,"13,124"
-positions,2026,Ministerio De Cultura,Cargos presupuestados (cuadro parcial),2689,cargos,proyecto original,15_10_26 - 50 Ministerio de Cultura.pdf,"40,267"
-positions,2027,Ministerio De Cultura,Cargos presupuestados (cuadro parcial),2565,cargos,proyecto,50 - Ministerio de Cultura.pdf,"39,276"
-positions,2026,Ministerio De Educación,Cargos presupuestados (cuadro parcial),6498,cargos,proyecto original,20_10_26 - 55 Ministerio de Educación.pdf,21
-positions,2027,Ministerio De Educación,Cargos presupuestados (cuadro parcial),6020,cargos,proyecto,55 - Ministerio de Educación.pdf,21
-positions,2026,Ministerio De Hacienda Y Finanzas,Cargos presupuestados (cuadro parcial),2601,cargos,proyecto original,14_10_26 - 24_10_26 - 60 Ministerio de  Hacienda y Finanzas.pdf,"10,84"
-positions,2027,Ministerio De Hacienda Y Finanzas,Cargos presupuestados (cuadro parcial),2549,cargos,proyecto,60 - Ministerio de Hacienda y Finanzas.pdf,"10,82"
-positions,2026,Ministerio De Desarrollo Económico,Cargos presupuestados (cuadro parcial),131,cargos,proyecto original,15_10_26 - 75 Ministerio de Desarrollo Económico.pdf,"10,73"
-positions,2027,Ministerio De Desarrollo Económico,Cargos presupuestados (cuadro parcial),116,cargos,proyecto,75 - Ministerio de Desarrollo Económico.pdf,"13,75"
-positions,2026,Servicio De La Deuda Publica,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,98 Servicio de la Deuda Pública.pdf,
-positions,2027,Servicio De La Deuda Publica,Cargos presupuestados (cuadro parcial),,cargos,proyecto,98 - Servicios de la Deuda Pública.pdf,
-positions,2026,Obligaciones A Cargo Del Tesoro,Cargos presupuestados (cuadro parcial),6,cargos,proyecto original,99 Obligaciones a cargo del Tesoro.pdf,4
-positions,2027,Obligaciones A Cargo Del Tesoro,Cargos presupuestados (cuadro parcial),7,cargos,proyecto,99 - Obligaciones a cargo del Tesoro.pdf,4
+positions,2026,Legislatura De La Ciudad De Buenos Aires,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,01 Legislatura.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2027,Legislatura De La Ciudad De Buenos Aires,Cargos presupuestados (cuadro parcial),,cargos,proyecto,01 - Legislatura de la Ciudad de Buenos Aires.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2026,Auditoria General De La Ciudad De Buenos Aires,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,13_10_26 - 02 Auditoría General.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2027,Auditoria General De La Ciudad De Buenos Aires,Cargos presupuestados (cuadro parcial),,cargos,proyecto,02 - Auditoría General de la Ciudad de Buenos Aires.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2026,Defensoria Del Pueblo,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,14_10_26 - 03 Defensoría.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2027,Defensoria Del Pueblo,Cargos presupuestados (cuadro parcial),,cargos,proyecto,03 - Defensoría del Pueblo.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2026,Ministerio Publico,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,14_10_26 - 05 Ministerio Público.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2027,Ministerio Publico,Cargos presupuestados (cuadro parcial),,cargos,proyecto,05 - Ministerio Público.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2026,Tribunal Superior De Justicia,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,14_10_26 - 06 Tribunal Superior de Justicia.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2027,Tribunal Superior De Justicia,Cargos presupuestados (cuadro parcial),,cargos,proyecto,06 - Tribunal Superior de Justicia.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2026,Consejo De La Magistratura,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,14_10_26 - 07 Consejo de la Magistratura.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2027,Consejo De La Magistratura,Cargos presupuestados (cuadro parcial),,cargos,proyecto,07 - Consejo de la Magistratura.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2026,Sindicatura General De La Ciudad De Buenos Aires,Cargos presupuestados (cuadro parcial),110,cargos,proyecto original,13_10_26 - 08 Sindicatura General.pdf,11 / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2027,Sindicatura General De La Ciudad De Buenos Aires,Cargos presupuestados (cuadro parcial),,cargos,proyecto,08 - Sindicatura General de la Ciudad de Buenos Aires.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2026,Procuracion General De La Ciudad,Cargos presupuestados (cuadro parcial),586,cargos,proyecto original,14_10_26 - 09 Procuración General.pdf,6 / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2027,Procuracion General De La Ciudad,Cargos presupuestados (cuadro parcial),,cargos,proyecto,09 - Procuración General de la Ciudad.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2026,Jefatura De Gobierno,Cargos presupuestados (cuadro parcial),2425,cargos,proyecto original,20 Jefatura de Gobierno.pdf,"15,30,81,107,127,151,162,254,286,294,302,310,318,326,334,342,350,358,366,374,382,390,398,424 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2027,Jefatura De Gobierno,Cargos presupuestados (cuadro parcial),3998,cargos,proyecto,20 - Jefatura de Gobierno.pdf,"16,44,97,123,137,169,189,191,232,283,291,299,307,315,323,331,339,347,355,363,371,379,387,395,424 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2026,Jefatura De Gabinete De Ministros,Cargos presupuestados (cuadro parcial),1214,cargos,proyecto original,21 Jefatura de Gabinete de ministros.pdf,"17,71,90 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Higiene urbana, reciclado, control de plagas y recolección aparecen en Espacio Público en el proyecto 2026 y en Gabinete en el proyecto 2027. El archivo de junio registra partidas en ambos códigos; la variación de la jurisdicción incluye un cambio de dependencia."
+positions,2027,Jefatura De Gabinete De Ministros,Cargos presupuestados (cuadro parcial),1824,cargos,proyecto,21 - Jefatura de Gabinete de Ministros.pdf,"27,112,131,157 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Higiene urbana, reciclado, control de plagas y recolección aparecen en Espacio Público en el proyecto 2026 y en Gabinete en el proyecto 2027. El archivo de junio registra partidas en ambos códigos; la variación de la jurisdicción incluye un cambio de dependencia."
+positions,2026,Ministerio De Justicia,Cargos presupuestados (cuadro parcial),1488,cargos,proyecto original,14_10_26 - 24 Ministerio de Justicia.pdf,"16,148,185 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / El archivo de junio registra nuevas partidas del servicio penitenciario. Las fichas 2027 abren tres programas; no permite atribuir toda la ampliación de 2026 a un único movimiento."
+positions,2027,Ministerio De Justicia,Cargos presupuestados (cuadro parcial),1398,cargos,proyecto,24 - Ministerio de Justicia.pdf,"14,138,181,192 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / El archivo de junio registra nuevas partidas del servicio penitenciario. Las fichas 2027 abren tres programas; no permite atribuir toda la ampliación de 2026 a un único movimiento."
+positions,2026,Ministerio De Seguridad,Cargos presupuestados (cuadro parcial),960,cargos,proyecto original,22_10_26 - 29 Ministerio de Seguridad.pdf,"10 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2027,Ministerio De Seguridad,Cargos presupuestados (cuadro parcial),885,cargos,proyecto,29 - Ministerio de Seguridad.pdf,"13 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2026,Ministerio De Movilidad E Infraestructura,Cargos presupuestados (cuadro parcial),1022,cargos,proyecto original,23_10_26 - 31 Ministerio de Infraestructura.pdf,"15 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2027,Ministerio De Movilidad E Infraestructura,Cargos presupuestados (cuadro parcial),911,cargos,proyecto,31 - Ministerio de Movilidad e Infraestructura.pdf,"15 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2026,Ministerio De Espacio Publico E Higiene Urbana,Cargos presupuestados (cuadro parcial),2049,cargos,proyecto original,16_10_26 - 35 Ministerio de Espacio Público e Higiene Urbana.pdf,"15,97,106 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Higiene urbana, reciclado, control de plagas y recolección aparecen en Espacio Público en el proyecto 2026 y en Gabinete en el proyecto 2027. El archivo de junio registra partidas en ambos códigos; la variación de la jurisdicción incluye un cambio de dependencia."
+positions,2027,Ministerio De Espacio Publico E Higiene Urbana,Cargos presupuestados (cuadro parcial),481,cargos,proyecto,35 - Ministerio de Espacio Público e Higiene Urbana.pdf,"12,54 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Higiene urbana, reciclado, control de plagas y recolección aparecen en Espacio Público en el proyecto 2026 y en Gabinete en el proyecto 2027. El archivo de junio registra partidas en ambos códigos; la variación de la jurisdicción incluye un cambio de dependencia."
+positions,2026,Ministerio De Salud,Cargos presupuestados (cuadro parcial),20587,cargos,proyecto original,14_10_26 -40 Ministerio de Salud.pdf,"24,25 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2027,Ministerio De Salud,Cargos presupuestados (cuadro parcial),20622,cargos,proyecto,40 - Ministerio de Salud.pdf,"30,31 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2026,Ministerio De Desarrollo Humano Y Hábitat,Cargos presupuestados (cuadro parcial),3479,cargos,proyecto original,21_10_26 - 45 Ministerio de Desarrollo Humano y Hábitat.pdf,"13,122 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2027,Ministerio De Desarrollo Humano Y Hábitat,Cargos presupuestados (cuadro parcial),3213,cargos,proyecto,45 - Ministerio de Desarrollo Humano y Hábitat.pdf,"13,124 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2026,Ministerio De Cultura,Cargos presupuestados (cuadro parcial),2689,cargos,proyecto original,15_10_26 - 50 Ministerio de Cultura.pdf,"40,267 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2027,Ministerio De Cultura,Cargos presupuestados (cuadro parcial),2565,cargos,proyecto,50 - Ministerio de Cultura.pdf,"39,276 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2026,Ministerio De Educación,Cargos presupuestados (cuadro parcial),6498,cargos,proyecto original,20_10_26 - 55 Ministerio de Educación.pdf,"21 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2027,Ministerio De Educación,Cargos presupuestados (cuadro parcial),6020,cargos,proyecto,55 - Ministerio de Educación.pdf,"21 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2026,Ministerio De Hacienda Y Finanzas,Cargos presupuestados (cuadro parcial),2601,cargos,proyecto original,14_10_26 - 24_10_26 - 60 Ministerio de  Hacienda y Finanzas.pdf,"10,84 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2027,Ministerio De Hacienda Y Finanzas,Cargos presupuestados (cuadro parcial),2549,cargos,proyecto,60 - Ministerio de Hacienda y Finanzas.pdf,"10,82 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2026,Ministerio De Desarrollo Económico,Cargos presupuestados (cuadro parcial),131,cargos,proyecto original,15_10_26 - 75 Ministerio de Desarrollo Económico.pdf,"10,73 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / El aumento se distribuye entre Turismo, industrias creativas, actividades centrales y Parque de la Innovación, entre otras partidas. Los documentos no identifican una reorganización que explique por sí sola la ampliación."
+positions,2027,Ministerio De Desarrollo Económico,Cargos presupuestados (cuadro parcial),116,cargos,proyecto,75 - Ministerio de Desarrollo Económico.pdf,"13,75 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / El aumento se distribuye entre Turismo, industrias creativas, actividades centrales y Parque de la Innovación, entre otras partidas. Los documentos no identifican una reorganización que explique por sí sola la ampliación."
+positions,2026,Servicio De La Deuda Publica,Cargos presupuestados (cuadro parcial),,cargos,proyecto original,98 Servicio de la Deuda Pública.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2027,Servicio De La Deuda Publica,Cargos presupuestados (cuadro parcial),,cargos,proyecto,98 - Servicios de la Deuda Pública.pdf, / Sin cuadro extraído / Sin cambio de dependencia documentado
+positions,2026,Obligaciones A Cargo Del Tesoro,Cargos presupuestados (cuadro parcial),6,cargos,proyecto original,99 Obligaciones a cargo del Tesoro.pdf,"4 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"
+positions,2027,Obligaciones A Cargo Del Tesoro,Cargos presupuestados (cuadro parcial),7,cargos,proyecto,99 - Obligaciones a cargo del Tesoro.pdf,"4 / No incluye autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente ni plantas transitorias. / Sin cambio de dependencia documentado"

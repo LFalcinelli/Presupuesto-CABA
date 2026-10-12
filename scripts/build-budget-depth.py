@@ -168,13 +168,17 @@ with target.with_suffix('.csv').open('w',encoding='utf8',newline='') as f:
     for r in services_rows:
         for field in ['project2027','initial2026','current2026']:w.writerow(['services',2027 if field=='project2027' else 2026,'Ciudad',r['name'],r[field],'ARS',field,json.dumps(r['references'] if field=='project2027' else source(snapshot),ensure_ascii=False),'Inciso 3 / principal / economía 21 o 22'])
     for r in transfer_types.values():w.writerow(['transfer-types',2027,'Ciudad',r['name'],r['value'],'ARS','proyecto',json.dumps(r['references'],ensure_ascii=False),'Inciso 5 / principal'])
-    for r in recipients:w.writerow(['transfers',2027,r['area'],r['recipient'] or r['program'],r['value'],'ARS','proyecto',r['sourceFile'],','.join(map(str,r['pdfPages']))])
-    if stock:w.writerow(['debt-stock',2026,'Ciudad','Stock total al 30/09 (provisorio)',stock['value'],'USD','stock provisorio',stock['source']['file'],'Cuadro 2.7 / PDF p. 68'])
+    for r in recipients:
+        for key,label in [('value','Transferencia total'),('unspecified','Sin apertura corriente/capital')]:
+            w.writerow(['transfers',2027,r['area'],label+' / '+(r['recipient'] or r['program']),r[key],'ARS','proyecto',r['sourceFile'],','.join(map(str,r['pdfPages']))])
+    if stock:
+        for key,label in [('value','Stock total'),('direct','Deuda directa'),('indirectAUSA','Deuda indirecta AUSA')]:
+            w.writerow(['debt-stock',2026,'Ciudad',label+' al 30/09 (provisorio)',stock[key],'USD','stock provisorio',stock['source']['file'],'Cuadro 2.7 / PDF p. 68 / diferencia de redondeo US$100000'])
     for r in debt:
         for key,label,unit in [('interest','Intereses','ARS'),('currentIncome','Ingresos corrientes','ARS'),('pct','Intereses / ingresos corrientes','%')]:
             w.writerow(['debt',r['year'],'Ciudad',label,r[key],unit,r['kind'],json.dumps(r['source'],ensure_ascii=False),'mismo año'])
     for a in support:
         for r in a['programs']:w.writerow(['support',2027,a['name'],r['program'],r['value'],'ARS','proyecto',r['sourceFile'],','.join(map(str,r['pdfPages']))])
     for r in positions:
-        for y in ['2026','2027']:w.writerow(['positions',y,r['name'],'Cargos presupuestados (cuadro parcial)',r['project'+y],'cargos','proyecto original' if y=='2026' else 'proyecto',r['source'+y]['file'],','.join(map(str,r['pdfPages'+y]))])
+        for y in ['2026','2027']:w.writerow(['positions',y,r['name'],'Cargos presupuestados (cuadro parcial)',r['project'+y],'cargos','proyecto original' if y=='2026' else 'proyecto',r['source'+y]['file'],','.join(map(str,r['pdfPages'+y]))+' / '+(r['exclusions'] or 'Sin cuadro extraído')+' / '+(r['scopeNote'] or 'Sin cambio de dependencia documentado')])
 print(json.dumps({'services':services_total,'transfers':transfer_total,'support':output['support']['total'],'positions2026':sum(r['project2026'] is not None for r in positions)},ensure_ascii=False))
