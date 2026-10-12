@@ -1,5 +1,16 @@
 # Cambios
 
+## 2026-10-12 — Móvil, temas y accesibilidad (PR 18)
+
+- Vista previa pública por PR en `/preview/pr-N/`, con producción compilada desde `main` y comprobación de que su portada se conserva. Se retienen las otras vistas previas entre publicaciones; sólo se despliegan PR del propietario desde este repositorio.
+- Navegación móvil en una fila desplazable, encabezado compacto que se oculta al bajar, selector de base plegado e índice de ficha fijo con controles de 44 px. Se elige la fila horizontal porque conserva los destinos visibles sin cubrir contenido con una barra inferior.
+- Inicio con dos composiciones compactas y detalle desplegable. Fichas con monto principal a todo el ancho y secciones secundarias plegadas; el proyecto ajustado muestra también su equivalente nominal. Ingresos con nombres sobre las barras, comparación provincial neutra y lista inicial en móvil.
+- Historia completa dentro del ancho móvil, etiquetas cada cinco años, unidad del eje y selector accesible de año. No cambian series, escalas ni ajustes de precios. Apariciones sin demora en móvil.
+- Tokens centralizados y selector claro/oscuro/automático persistente, adaptación al sistema y color de navegador. Superficies, diagramas, ejes, mapas, foco y variaciones usan la paleta del tema; el mapa oscuro aclara los valores mayores.
+- Espacios no separables para importes, diccionario de nombres para mostrar, tablas equivalentes de barras y anuncios de cambio de vista/base. Fecha de revisión generada al compilar.
+- Destacados: base ampliada explícita en Gabinete/Espacio Público; gramática de proporciones extremas; Gestión Electoral reunida con transferencias de Justicia. Autódromo distingue el original 2026 (programa 88, PDF p. 18) del ampliado de junio, que proviene de ejecución. La frase general sobre personal se reemplaza por ejecución del mismo semestre de 2025 cuando existe correspondencia exacta de jurisdicción.
+- Pruebas de 22 fichas × dos bases × dos temas × dos anchos, contraste AA de texto en las seis vistas de revisión y tokens, objetivos táctiles, texto al 200% a 320 px y preferencia automática. Entrega con 24 capturas antes/después; la versión anterior carecía de tema oscuro. Sin cambios en datos, montos, homologaciones, fuentes ni deflactores. PR sin fusionar hasta autorización.
+
 ## 2026-10-11 — Revisión integral de lectura ciudadana (PR 17)
 
 - Vocabulario central y guía con enlaces estables: votado, ampliado, ejecutado, funcionamiento, inversión, transferencias y servicios contratados. Se conservan los nombres oficiales en fuentes y tooltips.

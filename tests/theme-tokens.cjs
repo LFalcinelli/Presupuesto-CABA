@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),root=path.join(__dirname,'..');
+const css=fs.readFileSync(path.join(root,'src/theme-tokens.css'),'utf8'),themes=[...css.matchAll(/:root(?:\[data-theme="dark"\])?\{([^}]+)\}/g)].slice(0,2).map(m=>Object.fromEntries([...m[1].matchAll(/(--[\w-]+):([^;}]+)/g)].map(r=>[r[1],r[2]])));
+const l=hex=>(hex.length===4?hex.slice(1).split('').map(c=>c+c).join(''):hex.slice(1)).match(/../g).map(v=>parseInt(v,16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((s,v,i)=>s+v*[.2126,.7152,.0722][i],0),ratio=(a,b)=>(Math.max(l(a),l(b))+.05)/(Math.min(l(a),l(b))+.05);
+for(const theme of themes)for(const bg of ['--bg','--surface','--elevated']){
+ for(const fg of ['--ink','--muted','--violet','--variation-up','--variation-down','--income','--expense','--warning'])assert(ratio(theme[fg],theme[bg])>=4.5,fg+' AA on '+bg);
+ assert(ratio(theme['--focus'],theme[bg])>=3,'focus contrast');assert(ratio(theme['--plot'],theme[bg])>=3,'thin data bars contrast');
+}
+for(const file of fs.readdirSync(path.join(root,'src')).filter(f=>f.endsWith('.css')&&f!=='theme-tokens.css'))assert(!/:root\s*\{/.test(fs.readFileSync(path.join(root,'src',file),'utf8')),file+' duplicates theme tokens');
+const context=vm.createContext({});vm.runInContext(fs.readFileSync(path.join(root,'src/display-names.js'),'utf8'),context);
+for(const [raw,expected] of [['Educacion Media','Educación Media'],['Operacion del Reciclado','Operación del Reciclado'],['Vía Publica','Vía Pública'],['Ministerio de Espacio Publico','Ministerio de Espacio Público'],['Gestion del Transito y Señalizacion','Gestión del Tránsito y Señalización']])assert.equal(context.citizenDisplayName(raw),expected);
+console.log('Temas: tokens únicos, texto AA, barras/foco ≥3:1 y diccionario de nombres verificados.');

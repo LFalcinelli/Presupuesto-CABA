@@ -17,15 +17,15 @@ module.exports=async function({page,base}){
    for(const [key,rows] of Object.entries(comparison.groups))rows.forEach((r,i)=>{assert.equal(actual[key][i].a,expected(key,r,baseName));assert.equal(actual[key][i].b,r.project/comparison.deflator.factor);});
    assert.equal(await page.locator('.fiscal-result-card:visible').count(),1);assert.equal(await page.locator('.fiscal-steps-disclosure').getAttribute('open'),null);
    await page.locator('.fiscal-steps-disclosure>summary').click();assert.equal(await page.locator('.fiscal-result-card:visible').count(),4);
-   assert((await page.locator('.project-key-readings').innerText()).includes('99,8%'));
+   assert((await page.locator('.project-key-readings').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('99,8%'));
    for(const tab of ['expenses','revenue','areas','summary']){await page.locator(`.tabs [data-project-tab="${tab}"]`).click();await ready();assert(page.url().includes('base='+baseName));assert.equal(await page.locator(tab==='areas'?'#gov-base':'#project-review-base').inputValue(),baseName);}
   }
   await page.goto(base+'#proyecto-2027?vista=revenue');await ready();assert.equal(await page.locator('#project-review-base').inputValue(),'initial');
   assert.equal(await page.locator('.income-composition .treemap-tile').count(),0);assert.equal(await page.locator('.production-group').count(),1);
-  await page.locator('.review-bar-children button').filter({hasText:'Ingresos Brutos'}).click();await page.locator('#reading-detail-dialog[open]').waitFor();assert((await page.locator('#reading-detail-body').innerText()).includes('13.279.892.329.152'));await page.keyboard.press('Escape');
-  await page.goto(base+'#presupuesto-explicado?tema=servicios');await ready();assert(await page.locator('#pregunta-servicios').evaluate(n=>n.open));assert((await page.locator('#pregunta-servicios').innerText()).includes('publicidad'));
+  await page.locator('.review-bar-children button').filter({hasText:'Ingresos Brutos'}).click();await page.locator('#reading-detail-dialog[open]').waitFor();assert((await page.locator('#reading-detail-body').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('13.279.892.329.152'));await page.keyboard.press('Escape');
+  await page.goto(base+'#presupuesto-explicado?tema=servicios');await ready();assert(await page.locator('#pregunta-servicios').evaluate(n=>n.open));assert((await page.locator('#pregunta-servicios').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('publicidad'));
   await page.goto(base+'#comparar');await ready();assert.equal(await page.locator('#comparison-budget-base').inputValue(),'initial');assert.equal(await page.locator('#arg-indicator option[value="budgetArea"],#arg-indicator option[value="expenseArea"]').count(),0);assert.equal(await page.locator('#arg-indicator optgroup').count(),5);
-  assert((await page.locator('.pair-panel').innerText()).includes('Primer trimestre:'));
+  assert((await page.locator('.pair-panel').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Primer trimestre:'));
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
  }
  console.log('Revisión integral: bases verificadas independientemente en siete aperturas, elección conservada, saldos plegados, ingresos y glosario navegables; escritorio y 375 px.');

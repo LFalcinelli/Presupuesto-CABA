@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.join(__dirname,'..'),reports=JSON.parse(fs.readFileSync(path.join(root,'data/budget/2027/area-reports.json'),'utf8'));
 const fmt=(n,d=0)=>new Intl.NumberFormat('es-AR',{maximumFractionDigits:d,minimumFractionDigits:d}).format(n);
 const short=n=>(n<0?'−':'')+(Math.abs(n)>=1e12?'$ '+fmt(Math.abs(n)/1e12,2)+' billones':'$ '+fmt(Math.abs(n)/1e6,0)+' millones');
-const context=vm.createContext({Intl,state:{areaReports:reports},short,governmentTitle:name=>name.replace(/\b(De|La|Del|E|Y)\b/g,s=>s.toLowerCase())});
+const context=vm.createContext({Intl,state:{areaReports:reports,governmentSemester:JSON.parse(fs.readFileSync(path.join(root,'data/execution/semester-analysis.json'),'utf8'))},short,governmentTitle:name=>name.replace(/\b(De|La|Del|E|Y)\b/g,s=>s.toLowerCase())});
 for(const file of ['number-format.js','government-insights.js','government-readings.js'])vm.runInContext(fs.readFileSync(path.join(root,'src',file),'utf8'),context);
 const editorial=[];
 for(const area of reports.areas){
@@ -17,6 +17,7 @@ for(const area of reports.areas){
    assert((r.text.match(/[.!?](?:\s|$)/g)||[]).length<=2,label+' exceeds two sentences');
    assert(!/0,0%|cambia \+|cambió \+|sin base/i.test(r.text),label+' forbidden text');
    assert(r.references.length>=2&&r.references.every(Boolean),label+' missing source');
+   const headerBase=['21','35'].includes(area.code)?'current2026':base;if(r.comparisonBase&&r.comparisonBase!==headerBase)assert(/mismo semestre de 2025|frente al ampliado|frente al votado/.test(r.text),label+' unexplained base');assert(!/El (más del|menos de)/i.test(r.text));
    if(r.text.includes('100%')){
     const groups=[['1','2','3'],['4'],['5'],['6','7','8']];
     assert(groups.some(codes=>area.objects.filter(o=>codes.includes(o.code)).reduce((s,o)=>s+o.project2027,0)===area.project2027),label+' inexact 100%');
@@ -34,7 +35,7 @@ for(const area of reports.areas){
    }
    if(r.kind==='financing')assert(detail.financing.find(f=>f.code==='22').value/area.project2027>=.1);
    if(r.kind==='transfers')assert(detail.economic.transfers/area.project2027>=.1);
-   if(r.kind==='execution'){assert(!['98','99'].includes(area.code));assert(area.executed2026/area.current2026<.3);if((area.objects.find(o=>o.code==='1')?.project2027||0)/area.project2027>.7){assert(r.text.includes('mayoría de gasto en personal'));assert(!r.text.includes('obras'));}}
+   if(r.kind==='execution'){assert(!['98','99'].includes(area.code));assert(area.executed2026/area.current2026<.3);assert(r.text.includes('mismo semestre de 2025'));assert(!r.references.join(' ').includes('proyecto dividido'));const prior=context.state.governmentSemester.jurisdictions.find(r=>r.name===area.name);assert(Math.abs(prior.nominal2026-area.executed2026)<1);assert(r.text.includes(context.governmentVerb(100*(prior.b/prior.a-1))));}
   }
   if(['21','35'].includes(area.code)){assert.equal(readings[0].kind,'scope');assert(readings.find(r=>r.kind==='composition'));for(const r of readings)for(const m of r.movements)assert.equal(m.base,'current2026');}
   if(['24','75'].includes(area.code))assert(readings.some(r=>r.kind==='pending-cause'));
