@@ -98,3 +98,17 @@ El recuadro de producción incluye Ingresos Brutos, Sellos, energía eléctrica 
 ## Presentación de porcentajes · 10/10/2026
 
 Una única función de presentación: valor absoluto de al menos 10, entero; valores menores, un decimal. Empates se redondean alejándose de cero. Si un valor menor a 10 redondea a 10, se presenta sin decimal. Aplica a texto, gráficos, tablas, títulos accesibles y tooltips; los datos, factores y montos monetarios mantienen su precisión. Las frases estáticas heredadas se normalizan al renderizar, sin redondear anchos, coordenadas ni valores de descarga.
+
+## Lecturas de toda la Ciudad · v7 Parte B
+
+Ejecución: devengado dividido por crédito vigente del mismo corte. El cierre 2025 usa año completo; los semestres comparan enero–junio de 2025 y 2026, actualizados mediante los factores observados de los datasets originales a abril–junio de 2026. Se mantiene la cautela vigente: reorganizaciones documentadas, Gabinete/Espacio Público, nombres no confirmados y ampliaciones absolutas superiores al 25% no reciben una tasa interanual comparable. Sí se muestran sus importes y su ejecución sobre el vigente propio. Infraestructura conserva continuidad con Movilidad e Infraestructura.
+
+Aperturas: se cuentan claves completas, sólo en filas fiscales (jurisdicción; jurisdicción/subjurisdicción/entidad/unidad; esa clave más programa). No se cuentan personas, ni se interpreta un cambio de código como crecimiento real de estructura. 2013–2025 son aperturas presentes en ejecución, 2027 es proyecto; el tramo punteado separa etapas.
+
+Servicios: suma de principales del inciso 3 fiscal, conciliada con los agregados de toda la Ciudad. Variación real estimada = proyecto 2027 / base 2026 / 1,18 − 1; las dos bases son votado y ampliado a junio. No representa cantidad de contratos o proveedores. Transferencias: tipos explícitos del inciso 5 y receptores confirmados son dos desgloses del mismo total, nunca se suman entre sí. “Sin apertura corriente/capital” describe la clasificación económica, no ausencia de destinatario.
+
+Intereses: porcentaje de ingresos corrientes del mismo año, sin necesidad de deflactar. Hasta 2025 ejecutado (IDECBA); 2026 autorizado a junio y 2027 proyecto (punteados). El stock es el total provisorio publicado al 30/09/2026 en Cuadro 2.7, PDF p.68, en dólares al cierre. Se retiene el redondeo de la fuente. Las autorizaciones separadas de bonos/proyectos complementarios no se suman al stock ni al presupuesto 2027.
+
+Conducción y apoyo: únicamente programas cuyo nombre comienza con Actividades Centrales o Actividades Comunes; porcentaje sobre el gasto fiscal del área o de toda la Ciudad. No equivale a gasto prescindible. Cargos: cuadros parciales de cada proyecto; se verifican filas/escalafones y exclusiones. Se compara sólo donde hay ambos cuadros y continuidad de alcance. No es dotación efectivamente ocupada, padrón de autoridades ni empleo público total; no se publica agregado de la Ciudad.
+
+Pendientes: no se ofrece la línea “Sin Subte ni Policía” porque no existe una apertura anual aislada y verificada para ambas funciones en todos los años disponibles. Restar Transporte y Seguridad Interior completas incluiría otros servicios. No se imputan cifras. Tampoco se estima padrón histórico de funcionarios ni un total homogéneo de cargos a partir de cuadros parciales.

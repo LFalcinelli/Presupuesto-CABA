@@ -28,3 +28,4 @@ require('./government-insights.cjs');
 
 require('./percentage-format.cjs');
 require('./theme-tokens.cjs');
+require('./budget-depth.cjs');

@@ -1,5 +1,15 @@
 # Cambios
 
+## 2026-10-12 — v7 Parte B · lecturas de toda la Ciudad
+
+- Ejecución por jurisdicción en 2025 y primeros semestres 2025/2026; se bloquean variaciones de alcance no confirmado.
+- Conteos de aperturas fiscales 2013–2025 y proyecto 2027, distintos de personas; servicios contratados por principal, variaciones reales frente a las dos bases 2026 y concentración por área.
+- Transferencias por tipo y receptor verificado, con corriente/capital sin desagregar identificado; intereses/ingresos corrientes 2013–2027 y proyectos complementarios separados.
+- Programas de actividades centrales/comunes y cuadros parciales de cargos 2026/2027, sin inferir eficiencia ni dotación total.
+- Stock de deuda provisorio al 30/09/2026: US$1.994,6 millones, Cuadro 2.7, PDF p. 68. Pendientes explícitos: perímetro exclusivo Subte/Policía, padrón histórico y total homogéneo de cargos. No se imputan cifras.
+- PR independiente preparado por pedido del propietario; no se publica en producción sin autorización.
+
+
 ## 2026-10-12 — Correcciones v5 de móvil, contraste y destacados
 
 - Modo oscuro coherente en resultados fiscales, treemaps, pistas de barras, tablas, mapas y lecturas históricas; tinta de las celdas elegida por contraste sobre el fondo real. Se corrige también la anotación histórica en tema claro.
