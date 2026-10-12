@@ -12,7 +12,7 @@ module.exports=async({page,base})=>{
   assert(await page.locator('.project-hero').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.fiscal-map'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   assert(await page.locator('.fiscal-map').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.project-questions'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   if(width>1100)assert.equal(await page.locator('.hero-request>p:not(.eyebrow)').evaluate(e=>{const range=document.createRange();range.selectNodeContents(e);return range.getClientRects().length;}),1);
-  await page.goto(base+'#proyecto-2027?vista=expenses');await ready();
+  await page.goto(base+'#proyecto-2027?vista=expenses&grafico=treemap');await ready();
   assert.equal(await page.locator('.purpose-function-tile').count(),8);
   assert(await page.locator('.project-purpose-tree').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.area-search'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   const sum=await page.locator('.purpose-function-tile').evaluateAll(es=>es.reduce((v,e)=>v+Number(e.dataset.value),0));assert.equal(sum,p.breakdowns.purposes.find(r=>r.name==='Servicios Sociales').value);

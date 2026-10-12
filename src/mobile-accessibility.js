@@ -31,7 +31,7 @@ const accessibleMapRefresh=refreshFiscalMap;
 refreshFiscalMap=function(attribute,value){const fold=document.querySelector('.fm-mobile-details');if(fold)mobileFoldState.set('fm-mobile-details',fold.open);accessibleMapRefresh(attribute,value);accessibleEnhancements();if(attribute)document.querySelector(`[${attribute}="${value}"]`)?.focus({preventScroll:true});};
 function foldMobileSection(section,title,summary){
  if(!section||section.closest('.mobile-section'))return;
- if(section.tagName==='DETAILS'){section.classList.add('mobile-section');const s=section.querySelector(':scope>summary');if(s&&!s.querySelector('.mobile-fold-description'))s.insertAdjacentHTML('beforeend',`<span class="mobile-fold-description">${E(summary)}</span>`);return;}
+ if(section.tagName==='DETAILS'){section.classList.add('mobile-section');const s=section.querySelector(':scope>summary');if(s){const label=[...s.childNodes].find(n=>n.nodeType===3&&n.textContent.trim());if(label)label.textContent=title;}if(s&&!s.querySelector('.mobile-fold-description'))s.insertAdjacentHTML('beforeend',`<span class="mobile-fold-description">${E(summary)}</span>`);return;}
  const inner=section.querySelector(':scope>details');if(inner&&section.children.length===1){inner.querySelector(':scope>summary')?.remove();inner.replaceWith(...inner.childNodes);}
  const fold=document.createElement('details');fold.className='mobile-section';fold.dataset.section=section.id;fold.innerHTML=`<summary>${E(title)}<span class="mobile-fold-description">${E(summary)}</span></summary>`;section.before(fold);fold.append(section);if(section.querySelector('#gov-unit,#gov-program')||['gov-unit','gov-program'].includes(section.id))fold.open=true;
 }
@@ -39,6 +39,17 @@ function openMobileAncestors(node){for(let p=node?.parentElement;p;p=p.parentEle
 function accessibleEnhancements(){
  const key=state.view+'/'+(state.governmentArea||'');if(key!==mobileFoldKey){mobileFoldState.clear();mobileFoldKey=key;}
  const theme=document.querySelector('#theme-preference');if(theme)theme.value=CabaTheme.preference;
+ const toggle=document.querySelector('#theme-toggle');if(toggle){const labels={auto:'Automático',light:'Claro',dark:'Oscuro'};toggle.setAttribute('aria-label','Tema: '+labels[CabaTheme.preference]+'. Elegir tema');toggle.firstElementChild.textContent={auto:'◐',light:'☀',dark:'☾'}[CabaTheme.preference];}
+ for(const button of document.querySelectorAll('[data-theme-choice]'))button.setAttribute('aria-pressed',String(button.dataset.themeChoice===CabaTheme.preference));
+ const nav=document.querySelector('.gov-section-nav');if(nav){const labels={'gov-stages':'Etapas','gov-changes':'Dónde cambia','gov-composition':'En qué se usa','gov-financing':'Financiamiento','gov-ranking':'Unidades','gov-organization':'Organización'};for(const a of nav.querySelectorAll('[data-gov-scroll]'))a.textContent=labels[a.dataset.govScroll]||a.textContent;
+  const extras=[[document.querySelector('.gov-positions')?.closest('section'),'gov-positions-section','Cargos y obras'],[document.querySelector('.gov-sources'),'gov-sources-section','Fuentes']];for(const [node,id,label] of extras)if(node){node.id=id;if(!nav.querySelector(`[data-gov-scroll="${id}"]`))nav.insertAdjacentHTML('beforeend',`<a href="#${id}" data-gov-scroll="${id}">${label}</a>`);}
+ }
+ for(const tile of document.querySelectorAll('.purpose-function-tile,.purpose-rest-tile,.treemap-tile,.point-readout>span')){
+  const rgb=getComputedStyle(tile).backgroundColor.match(/[\d.]+/g)?.map(Number);if(!rgb||rgb.length<3||rgb[3]===0)continue;
+  const luminance=c=>c.slice(0,3).map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((s,v,i)=>s+v*[.2126,.7152,.0722][i],0);let l=luminance(rgb);const light=luminance([244,239,250]),dark=luminance([18,10,31]);if(Math.max((light+.05)/(l+.05),(l+.05)/(dark+.05))<4.5){const shaded=rgb.slice(0,3).map(v=>Math.round(v*.88));tile.style.backgroundColor='rgb('+shaded.join(',')+')';l=luminance(shaded);}tile.style.setProperty('--tile-ink',(light+.05)/(l+.05)>=(l+.05)/(dark+.05)?'#F4EFFA':'#120A1F');tile.classList.add('contrast-tile');
+ }
+ if(mobileView()){const tabs=document.querySelector('.mobile-explorer .tabs'),active=tabs?.querySelector('.active,[aria-selected="true"],[aria-pressed="true"]');if(tabs&&active)tabs.scrollLeft=Math.max(0,active.offsetLeft-tabs.offsetLeft-(tabs.clientWidth-active.offsetWidth)/2);}
+
  const controls=document.querySelector('#explorer-controls>.wrap'),period=controls?.querySelector('.compact-period'),tabs=controls?.querySelector('.controls');
  if(period&&tabs){controls.classList.add('mobile-explorer');period.querySelector('select')?.setAttribute('aria-label','Período de los datos');}
  if(mobileView()){
@@ -52,7 +63,7 @@ function accessibleEnhancements(){
    foldMobileSection(document.querySelector('#gov-financing'),'Cómo se financia','Origen de los recursos del área');
    foldMobileSection(document.querySelector('#gov-ranking'),'Unidades y programas',`${d?.units.length||0} unidades · ${d?.programs.length||0} programas para explorar`);
    foldMobileSection(document.querySelector('#gov-organization'),'Organización','Funciones, correspondencias y cambios documentados');
-   foldMobileSection(document.querySelector('.gov-positions')?.closest('section'),'Cargos, metas y obras','Dotación prevista y proyectos de inversión');
+   foldMobileSection(document.querySelector('.gov-positions')?.closest('section'),'Cargos y obras','Dotación prevista y proyectos de inversión');
    foldMobileSection(document.querySelector('.gov-sources'),'Fuentes y descargas','Documentos oficiales, páginas y criterios');
    for(const node of document.querySelectorAll('#gov-unit,#gov-program'))openMobileAncestors(node);
   }
@@ -87,9 +98,21 @@ explorerShell=function(){accessibleShell();
  }
 };
 document.addEventListener('change',e=>{if(e.target.id==='theme-preference')CabaTheme.set(e.target.value);});
+document.addEventListener('click',e=>{const choice=e.target.closest('[data-theme-choice]');if(choice){CabaTheme.set(choice.dataset.themeChoice);document.querySelector('.theme-menu').open=false;document.querySelector('#theme-toggle').focus();}});
 window.addEventListener('caba-theme',()=>{if(state.dataset&&document.querySelector('main').getAttribute('aria-busy')==='false'){state.navigationRequested=false;render();}});
 document.addEventListener('click',e=>{const link=e.target.closest('[data-gov-scroll]');if(link)openMobileAncestors(document.getElementById(link.dataset.govScroll));},true);
 document.addEventListener('toggle',e=>{const fold=e.target;if(fold.isConnected&&fold.matches('.fm-mobile-details,.mobile-section,.mobile-base'))mobileFoldState.set(fold.dataset.section||fold.className,fold.open);},true);
 let previousScroll=0;
 window.addEventListener('scroll',()=>{const current=scrollY;if(!mobileView()||current<180||current<previousScroll-3)document.documentElement.classList.remove('nav-hidden');else if(current>previousScroll+3)document.documentElement.classList.add('nav-hidden');previousScroll=current;},{passive:true});
 matchMedia('(max-width: 650px)').addEventListener('change',()=>{if(state.dataset){state.navigationRequested=false;render();}});
+
+function spendingChartMode(){return state.spendingChart||((innerWidth<=650)?'bars':'treemap');}
+function spendingChartControls(){const mode=spendingChartMode();return `<div class="spending-chart-choice" role="group" aria-label="Gráfico de composición"><button class="small-btn" data-spending-chart="bars" aria-pressed="${mode==='bars'}">Barras</button><button class="small-btn" data-spending-chart="treemap" aria-pressed="${mode==='treemap'}">Rectángulos</button></div>`;}
+const mobileCompositionTreemap=compositionTreemap;
+compositionTreemap=function(items,options={}){if(options.badgeContext)return reviewTreemap(items,options);const spending=state.view==='home'||state.view==='project'&&state.projectTab==='expenses';if(!spending)return mobileCompositionTreemap(items,options);return spendingChartControls()+(spendingChartMode()==='bars'?reviewCompositionBars(items,options):mobileCompositionTreemap(items,options));};
+const mobilePurposeTree=projectPurposeTree;
+projectPurposeTree=function(){if(spendingChartMode()!=='bars')return spendingChartControls()+mobilePurposeTree();const total=state.project.summary.fiscalExpense.value,items=state.project.breakdowns.purposes.map(r=>({...r,action:`data-project-purpose="${E(r.name)}"`,children:r.value/total>.5?state.project.breakdowns.functions.filter(f=>f.purpose===r.name).map(f=>({...f,action:`data-project-function="${E(f.id)}"` })):[]}));return spendingChartControls()+reviewCompositionBars(items,{label:'Destinos del gasto · parte del total',shareTotal:total});};
+const spendingReadRoute=readRoute,spendingSyncRoute=syncRoute;
+readRoute=function(){spendingReadRoute();const choice=new URLSearchParams(location.hash.split('?')[1]||'').get('grafico');state.spendingChart=['bars','treemap'].includes(choice)?choice:null;};
+syncRoute=function(){spendingSyncRoute();if(state.spendingChart&&(state.view==='home'||state.view==='project'&&state.projectTab==='expenses')){const q=new URLSearchParams(location.hash.split('?')[1]||'');q.set('grafico',state.spendingChart);history.replaceState(null,'',location.hash.split('?')[0]+'?'+q);}};
+document.addEventListener('click',e=>{const button=e.target.closest('[data-spending-chart]');if(button){state.spendingChart=button.dataset.spendingChart;state.navigationRequested=false;render();}});
