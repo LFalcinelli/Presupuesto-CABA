@@ -42,7 +42,7 @@ function incomeComposition(rows,{project=false,label='Composición de los ingres
   return [makeItem(row)];
  });
  const hasProduction=items.some(r=>r.children?.length||r.color==='#185d51');
- return `<div class="income-composition"><p class="composition-hint">${hasProduction?'<span class="production-key"></span>En verde: impuestos a la producción, el consumo y las transacciones. ':''}Cada porcentaje se refiere al total que estás mirando.</p>${compositionTreemap(items,{label,limit:26,showKey:false,incomeLayout:true})}</div>`;
+ return `<div class="income-composition"><p class="composition-hint">${hasProduction?'<span class="production-key"></span>En verde: impuestos a la producción, el consumo y las transacciones. ':''}Cada porcentaje se refiere al total que estás mirando.</p>${reviewCompositionBars(items,{label,shareTotal:sum})}</div>`;
 }
 
 document.addEventListener('change',e=>{

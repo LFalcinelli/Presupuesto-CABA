@@ -36,7 +36,7 @@ for(const area of reports.areas){
    if(r.kind==='transfers')assert(detail.economic.transfers/area.project2027>=.1);
    if(r.kind==='execution'){assert(!['98','99'].includes(area.code));assert(area.executed2026/area.current2026<.3);}
   }
-  if(['21','35'].includes(area.code)){assert.equal(readings[0].kind,'scope');assert(readings.find(r=>r.kind==='composition')?.text.includes('ampliado 2026'));for(const r of readings)for(const m of r.movements)assert.equal(m.base,'current2026');}
+  if(['21','35'].includes(area.code)){assert.equal(readings[0].kind,'scope');assert(readings.find(r=>r.kind==='composition'));for(const r of readings)for(const m of r.movements)assert.equal(m.base,'current2026');}
   if(['24','75'].includes(area.code))assert(readings.some(r=>r.kind==='pending-cause'));
   editorial.push(`${area.code} · ${area.name} · BASE ${base==='initial2026'?'VOTADO':'AMPLIADO'} 2026\n`+readings.map((r,i)=>`${i+1}. ${r.text}`).join('\n'));
  }
@@ -46,7 +46,17 @@ assert.equal(context.governmentShare(999,1000),'más del 99%');assert.equal(cont
 const mobility=reports.areas.find(a=>a.code==='31'),detail=JSON.parse(fs.readFileSync(path.join(root,mobility.detailFile),'utf8'));
 const text=context.governmentReadingItems(mobility,detail).map(r=>r.text).join('\n');
 assert(text.includes('$ 1,98 billones'));assert(text.includes('$ 699.111 millones'));assert(text.includes('$ 933.486 millones'));
-assert(text.includes('Desarrollos y Proyectos baja 17%'));assert(text.includes('Obras de Ingeniería y Arquitectura baja 79%'));
+assert(text.includes('Desarrollos y Proyectos baja 17%'));
+const works=detail.programs.find(p=>p.name==='Obras de Ingeniería y Arquitectura');assert(context.governmentFunctionalVerified(works));
+assert(!context.governmentFunctionalVerified({...works,comparisonStatus:'pending'}));
+for(const a of reports.areas)for(const b of ['initial2026','current2026']){
+ const d=JSON.parse(fs.readFileSync(path.join(root,a.detailFile),'utf8'));
+ for(const r of context.governmentReadingItems(a,d,b))for(const m of r.movements){
+  const p=d.programs.find(p=>p.id===m.id);
+  if(m.rate>100||m.rate< -50){assert(context.governmentFunctionalVerified(p));assert(r.text.includes(short(p[m.base])));assert(r.text.includes(short(p.project2027)));}
+ }
+ if(['98','99'].includes(a.code))assert(!context.governmentReadingItems(a,d,b).some(r=>r.kind==='composition'));
+}
 // AA contrast on the actual light panels and dark institutional surfaces.
 const luminance=hex=>{const c=hex.match(/\w\w/g).map(v=>parseInt(v,16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return c[0]*.2126+c[1]*.7152+c[2]*.0722;};
 for(const [fg,bg] of [['5f2b8a','ffffff'],['43586f','ffffff'],['5f2b8a','f7f3fb'],['43586f','f7f3fb'],['e2c9fb','291240'],['d3e0f0','371953']]){const a=luminance(fg),b=luminance(bg);assert((Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=4.5,fg+' AA contrast');}

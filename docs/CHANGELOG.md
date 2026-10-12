@@ -1,5 +1,16 @@
 # Cambios
 
+## 2026-10-11 — Revisión integral de lectura ciudadana (PR 17)
+
+- Vocabulario central y guía con enlaces estables: votado, ampliado, ejecutado, funcionamiento, inversión, transferencias y servicios contratados. Se conservan los nombres oficiales en fuentes y tooltips.
+- Votado 2026 como base por defecto en las cuatro vistas de Proyecto 2027 y en Comparar CABA; ampliado a junio seleccionable. La base se conserva en la URL y entre vistas. Resumen muestra ambas tasas sin alterar el factor 1,18.
+- Montos abreviados a primera vista, importes completos disponibles en desplegables o tooltips. Estimación con precios promedio anuales plegada. Proporciones pequeñas y casi completas identificadas sin aparentar cero o totalidad; intereses: 99,8% del saldo previo.
+- Ingresos con barras ordenadas, nombres visibles, apertura de Ingresos Brutos y Sellos y agrupación inferior al 1%. En gastos, las composiciones que necesitarían códigos o rótulos ocultos ofrecen barras navegables.
+- Cuenta fiscal con saldo final visible y pasos intermedios plegados en 2025, 2026 y 2027. Financiamiento distingue endeudamiento/otros pasivos de inversión financiera; no se denomina deuda nueva a todo el agregado.
+- Comparación provincial con indicadores agrupados, sin indicadores por superficie y con advertencia de estacionalidad del primer trimestre. Se mantienen fechas y universos de empleo y ejecución separados.
+- Destacados extremos sólo con continuidad funcional documentada y montos de ambas etapas; composición redactada en oraciones. Gestión Electoral incorpora el monto de la ficha financiera (Justicia, PDF p. 195), sin atribuirle toda la ampliación. Tesoro describe compromisos documentados (PDF p. 6); Tesoro y Deuda no usan la lectura de funcionamiento/inversión de los ministerios.
+- Pruebas de bases independientes para siete aperturas, continuidad de selección, glosario, diagramas, barras y responsive; se conservan conciliaciones y revisión de 22 áreas por dos bases. No cambian datasets, montos, homologaciones, fuentes ni deflactores. Entrega en PR, sin publicación automática.
+
 ## 2026-10-11 — Áreas de Gobierno: destacados y lectura de las fichas
 
 - Destacados con materialidad en pesos y peso del programa, cálculo compartido con el gráfico de movimientos y un máximo de cinco textos de 35 palabras en una columna; sin relleno ni bajas parciales de inversión que parezcan eliminar un programa.

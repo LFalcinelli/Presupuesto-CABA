@@ -8,7 +8,7 @@ module.exports=async({page,base})=>{
   await page.setViewportSize({width,height:1000});await page.goto(base+'#inicio');await ready();
   assert.equal(await page.locator('.fiscal-map').count(),1);
   assert.equal(await page.locator('.hero-request-value').innerText(),'≈ $ 24,1 billones de pesos');
-  assert((await page.locator('.hero-exact-value').innerText()).includes('24.094.340.599.263'));
+  assert((await page.locator('.hero-exact-value').textContent()).includes('24.094.340.599.263'));assert.equal(await page.locator('.hero-request>.review-exact').getAttribute('open'),null);
   assert(await page.locator('.project-hero').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.fiscal-map'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   assert(await page.locator('.fiscal-map').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.project-questions'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   if(width>1100)assert.equal(await page.locator('.hero-request>p:not(.eyebrow)').evaluate(e=>{const range=document.createRange();range.selectNodeContents(e);return range.getClientRects().length;}),1);
@@ -24,12 +24,12 @@ module.exports=async({page,base})=>{
   for(const selector of ['.legacy-history-bridge','.budget-history-bridge','.project-history-bridge'])assert.equal(await page.locator(selector).getAttribute('stroke-dasharray'),'3 5');
   assert((await page.locator('.history-actual-line').getAttribute('d')).includes('C'));
   assert.equal(await page.locator('.execution-chart [data-execution-year]').count(),31);
-  await page.locator('#execution-year').selectOption('2005');assert((await page.locator('#execution-point').innerText()).includes(new Intl.NumberFormat('es-AR',{maximumFractionDigits:0}).format(a.real)));
+  await page.locator('#execution-year').selectOption('2005');assert((await page.locator('#execution-point>span').getAttribute('title')).includes(new Intl.NumberFormat('es-AR',{maximumFractionDigits:0}).format(a.real)));
   assert.equal(await page.locator('.history-growth-guide').count(),1);for(const [year,attr] of [[2005,'data-start'],[2025,'data-end']])assert.equal(await page.locator('.history-growth-guide').getAttribute(attr),await page.locator(`[data-execution-year="${year}"] circle`).evaluate(e=>e.getAttribute('cx')+','+e.getAttribute('cy')));assert((await page.locator('.history-event-label').allTextContents()).join(' ').includes('2016–2017'));
   await page.locator('#execution-series').selectOption('currentPrimary');await ready();assert(new URL(page.url()).hash.includes('serie=currentPrimary'));
   const ca=h.series.currentPrimary.rows.find(r=>r.year===2005),cb=h.series.currentPrimary.rows.find(r=>r.year===2025),cg=percentValue((cb.real/ca.real-1)*100);
   assert((await page.locator('.history-impact').innerText()).includes(cg));await page.locator('#execution-year').selectOption('2027');assert((await page.locator('#execution-point').innerText()).includes('autorización, no ejecución'));
-  await page.reload();await ready();assert.equal(await page.locator('#execution-series').inputValue(),'currentPrimary');assert((await page.locator('.history-chart-unit').innerText()).includes('Gasto corriente sin intereses'));
+  await page.reload();await ready();assert.equal(await page.locator('#execution-series').inputValue(),'currentPrimary');assert((await page.locator('.history-chart-unit').innerText()).includes('Funcionamiento'));
   await page.locator('#execution-series').selectOption('revenue');await ready();assert(new URL(page.url()).hash.includes('serie=revenue'));
   assert.equal(await page.locator('#execution-series option').last().getAttribute('value'),'revenue');assert.equal(await page.locator('.history-page h1').innerText(),'30 años de recaudación.');
   const ra=h.series.revenue.rows.find(r=>r.year===2005),rb=h.series.revenue.rows.find(r=>r.year===2025),rg=percentValue((rb.real/ra.real-1)*100);
@@ -38,8 +38,8 @@ module.exports=async({page,base})=>{
   assert.equal(await page.locator('.history-event-label,.legacy-history-bridge').count(),0);assert((await page.locator('.history-legend').innerText()).includes('Recaudación efectiva'));
   for(const [year,attr] of [[2005,'data-start'],[2025,'data-end']])assert.equal(await page.locator('.history-growth-guide').getAttribute(attr),await page.locator(`[data-execution-year="${year}"] circle`).evaluate(e=>e.getAttribute('cx')+','+e.getAttribute('cy')));
   await page.locator('#execution-year').selectOption('1997');assert((await page.locator('#execution-point').innerText()).includes('Recaudación efectiva'));assert(!(await page.locator('#execution-point').innerText()).includes('criterio distinto'));
-  await page.locator('#execution-year').selectOption('2026');assert((await page.locator('#execution-point').innerText()).includes('19.881.406.042.845'));assert((await page.locator('#execution-point').innerText()).includes('ingresos previstos, no recaudación efectiva'));
-  await page.locator('#execution-year').selectOption('2027');assert((await page.locator('#execution-point').innerText()).includes('24.095.657.042.129'));
+  await page.locator('#execution-year').selectOption('2026');assert((await page.locator('#execution-point small span').getAttribute('title')).includes('19.881.406.042.845'));assert((await page.locator('#execution-point').innerText()).includes('ingresos previstos, no recaudación efectiva'));
+  await page.locator('#execution-year').selectOption('2027');assert((await page.locator('#execution-point small span').getAttribute('title')).includes('24.095.657.042.129'));
   await page.reload();await ready();assert.equal(await page.locator('#execution-series').inputValue(),'revenue');assert((await page.locator('.history-chart-unit').innerText()).includes('Recaudación total'));
   await page.locator('.history-values>summary').click();assert.equal(await page.locator('.history-values tbody tr').count(),31);assert((await page.locator('.history-values tbody tr').last().innerText()).includes('Ingresos previstos'));assert.equal(await page.locator('.history-values a[href^="https://"]').count(),3);
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));

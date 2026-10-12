@@ -33,9 +33,10 @@ function governmentTransferPrograms(detail){
 }
 function governmentExecutionContext(area){
  const personnel=area.objects.find(o=>o.code==='1')?.current2026||0;
- if(personnel/area.current2026>.7)return 'Las áreas con mayoría de gasto en personal suelen ejecutar en forma pareja durante el año.';
+ if(personnel/area.current2026>.7)return 'En áreas con mayoría de gasto en personal, la ejecución suele avanzar en forma pareja.';
  return 'La inflación y el calendario de pagos de las obras pueden concentrar gasto hacia fin de año; el semestre no anticipa el cierre.';
 }
+function governmentFunctionalVerified(p){return ['continues','recoded'].includes(p.comparisonStatus)&&/Contraste textual|funciones.*contrastad|Se conserva la continuidad funcional/i.test(p.comparisonEvidence||'');}
 function governmentReadingItems(area,detail,base='initial2026'){
  const readings=[],factor=state.areaReports.deflator.factor,scope=governmentScopeChange(area.code,detail);
  const calculation='Variaciones reales: proyecto dividido por '+factor+'; inflación supuesta, no observada. Montos del proyecto: pesos nominales de 2027.';
@@ -48,25 +49,28 @@ function governmentReadingItems(area,detail,base='initial2026'){
   const action=area.code==='21'?'Tras sumar':'Tras ceder',origin=area.code==='21'?'desde Espacio Público':'a Gabinete';
   add('scope',`${governmentVerb(rate(area,'initial2026'))} real frente al votado, tras ${action.toLowerCase().replace('tras ','')} higiene urbana, recolección, reciclado y plagas ${origin}. Frente al ampliado, que incorpora el traspaso, ${governmentVerb(rate(area,'current2026'))}.`,[source,...detail.reorganization2026.references.map(r=>r.file+', pp. '+r.pages.join(', '))]);
  }else{
-  add('overview',`Solicita ${short(area.project2027)}: ${governmentVerb(rate(area,'initial2026'))} real frente al votado 2026; ${governmentVerb(rate(area,'current2026'))} frente al ampliado.${detail.reorganization2026?.status==='pending-cause'?'':` Durante 2026 ${amplification<0?'se redujo':'se amplió'} ${short(Math.abs(amplification))} (${formatPercent(Math.abs(amplificationRate))}).`}`,[source,'La ampliación es nominal y corresponde al cambio entre el votado y junio de 2026.']);
+  add('overview',`El proyecto asigna ${short(area.project2027)}: ${governmentVerb(rate(area,'initial2026'))} frente al votado 2026; ${governmentVerb(rate(area,'current2026'))} frente al ampliado.${detail.reorganization2026?.status==='pending-cause'?'':` Durante 2026 ${amplification<0?'se redujo':'se amplió'} ${short(Math.abs(amplification))} (${formatPercent(Math.abs(amplificationRate))}).`}`,[source,'La ampliación es nominal y corresponde al cambio entre el votado y junio de 2026.']);
  }
  if(detail.reorganization2026?.status==='pending-cause'){
   add('pending-cause',`Durante 2026 el presupuesto ${amplification<0?'se redujo':'se amplió'} ${formatPercent(Math.abs(amplificationRate))} (${short(Math.abs(amplification))}). Los documentos no permiten atribuir toda esa variación a una causa confirmada.`,[source,...detail.reorganization2026.references.map(r=>r.file+', pp. '+r.pages.join(', '))]);
  }
  const componentBase=scope?'current2026':base,componentName=scope?'ampliado':name;
  const groups=[{label:'Funcionamiento',codes:['1','2','3']},{label:'Inversión directa',codes:['4']},{label:'Transferencias',codes:['5']},{label:'Otras partidas',codes:['6','7','8']}].map(g=>({...g,row:governmentObjectGroup(area,g.codes)})).filter(g=>g.row.project2027>0);
- if(groups.length>1){
-  const clauses=groups.map(g=>`${g.label}: ${governmentShare(g.row.project2027,area.project2027)}${rate(g.row,componentBase)===null||(g.label==='Transferencias'&&g.row.project2027/area.project2027<.1)||g.label==='Otras partidas'?'':`, ${governmentVerb(rate(g.row,componentBase))}`}`);
-  add('composition',clauses.join('; ')+`. Variaciones reales frente al ${componentName} 2026.`,[source,'Funcionamiento: incisos 1–3; inversión directa: 4; transferencias: 5; otras partidas: 6–8.']);
+ if(groups.length>1&&!['98','99'].includes(area.code)){
+  const shown=groups.filter(g=>g.label==='Funcionamiento'||g.label==='Inversión directa'||g.label==='Transferencias'&&g.row.project2027/area.project2027>=.1).slice(0,2);
+  const clauses=shown.map(g=>`El ${governmentShare(g.row.project2027,area.project2027)} ${g.label==='Funcionamiento'?'es funcionamiento (personal, insumos y servicios contratados)':g.label==='Inversión directa'?'se destina a obras y equipos':'son transferencias'}${rate(g.row,componentBase)===null?'':` y ${governmentVerb(rate(g.row,componentBase))}`}`);
+  add('composition',clauses.join('. ')+'.',[source,'Funcionamiento: incisos 1–3; inversión directa: 4; transferencias: 5; otras partidas: 6–8.']);
  }
+ if(area.code==='24'){const electoral=detail.programs.find(p=>p.name==='Gestión Electoral');if(electoral)add('electoral',`Incluye ${short(electoral.project2027)} para Gestión Electoral, de los cuales ${short(electoral.objects.find(o=>o.code==='5')?.project2027||0)} son transferencias (PDF, página 195).`,[`${detail.sources['2027'].file}, p. 195; Gestión Electoral, presupuesto financiero. No se atribuye toda la ampliación a este programa.`]);}
+ if(area.code==='99')add('treasury','Las partidas no asignables a programas cubren compromisos del Tesoro, incluidos subsidios al agua, energía y guarderías para el personal.',[`${detail.sources['2027'].file}, p. 6; descripción del programa 16.`]);
  const transfers=governmentTransferPrograms(detail),largestTransfer=transfers[0];
  const external=detail.financing.find(f=>f.code==='22'&&f.value/area.project2027>=.1);
- const candidates=governmentProgramMovements(detail,componentBase,factor).filter(p=>Number.isFinite(p.rate)&&Math.abs(p.rate)>=1&&governmentMaterialMovement(p,area,componentBase,factor)&&p.project2027/area.project2027<=.9&&!(largestTransfer&&detail.economic.transfers/area.project2027>=.1&&p.id===largestTransfer.id));
+ const candidates=governmentProgramMovements(detail,componentBase,factor).filter(p=>Number.isFinite(p.rate)&&Math.abs(p.rate)>=1&&governmentMaterialMovement(p,area,componentBase,factor)&&p.project2027/area.project2027<=.9&&(!(p.rate>100||p.rate< -50)||governmentFunctionalVerified(p))&&!(largestTransfer&&detail.economic.transfers/area.project2027>=.1&&p.id===largestTransfer.id));
  // Reserve room for substantial financing and transfers before adding program detail.
  const reserved=Number(Boolean(external))+Number(detail.economic.transfers/area.project2027>=.1);
  if(readings.length+reserved<5&&candidates.length){
   const p=candidates[0],same=candidates.filter(r=>Math.sign(r.delta)===Math.sign(p.delta)).slice(0,2);
-  const sentence=items=>items.map(r=>`${governmentTitle(r.name)} ${governmentVerb(r.rate)}`).join('; ')+` en términos reales frente al ${componentName} 2026.`;
+  const sentence=items=>items.map(r=>r.rate>100||r.rate< -50?`${governmentTitle(r.name)} pasa de ${short(r[componentBase])} en 2026 a ${short(r.project2027)} en 2027 (${governmentVerb(r.rate)}).`:`${governmentTitle(r.name)} ${governmentVerb(r.rate)}.`).join(' ');
   const chosen=sentence(same).split(/\s+/).length<=35?same:[p];
   add('program',sentence(chosen),chosen.flatMap(r=>[`${detail.sources['2027'].file}, pp. ${r.financialPages.join(', ')}.`,r.comparisonEvidence,'Base 2026: '+r.baselineKeys.join(', ')+'.']),chosen.map(r=>({id:r.id,base:componentBase,delta:r.delta,rate:r.rate})));
  }
@@ -74,7 +78,7 @@ function governmentReadingItems(area,detail,base='initial2026'){
   const programs=detail.programs.filter(p=>p.financing.some(f=>f.code==='22'&&f.value>0)).sort((a,b)=>b.financing.find(f=>f.code==='22').value-a.financing.find(f=>f.code==='22').value);
   // This is a financing composition, not a claim about a program's movement.
   const leading=programs.slice(0,2).map(p=>governmentTitle(p.name)).join(' y ');
-  add('financing',`El ${governmentShare(external.value,area.project2027)} (${short(external.value)}) se financiaría con deuda externa. Se concentra en ${leading}.`,[`${detail.sources['2027'].file}, financiación, p. ${external.pdfPage}; código 22.`,...programs.map(p=>`${p.name}: pp. ${p.financing.find(f=>f.code==='22').pdfPages.join(', ')}.`)]);
+  add('financing',`El ${governmentShare(external.value,area.project2027)} (${short(external.value)}) se cubriría con financiamiento externo (préstamos y deuda). Se concentra en ${leading}.`,[`${detail.sources['2027'].file}, financiación, p. ${external.pdfPage}; código 22.`,...programs.map(p=>`${p.name}: pp. ${p.financing.find(f=>f.code==='22').pdfPages.join(', ')}.`)]);
  }
  if(largestTransfer&&detail.economic.transfers/area.project2027>=.1){
   const recipient=governmentTransferRecipient(largestTransfer);

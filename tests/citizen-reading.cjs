@@ -8,7 +8,7 @@ module.exports=async({page,browser,base})=>{
   assert(await page.locator('.project-questions').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.fiscal-readings'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   assert(!await page.locator('.hero-data').innerText().then(t=>/paga.*impuestos/i.test(t)));
   await page.goto(base+'#explorar?periodo=2025-4');await ready();
-  const closed=caif.periods['2025-4'];assert((await page.locator('.fiscal-main-result').innerText()).includes(number(Math.abs(closed.financialResult))));assert((await page.locator('.fiscal-main-result h2').innerText()).includes('déficit'));
+  const closed=caif.periods['2025-4'];assert((await page.locator('.fiscal-main-result').innerText()).includes('281.526 millones'));assert((await page.locator('.fiscal-main-result h2').innerText()).includes('déficit'));
   assert.equal(await page.locator('.fiscal-account-detail').count(),1);assert.equal(await page.locator('.fiscal-summary .fiscal-kpis').count(),0);
   await page.locator('.fiscal-account-detail>summary').click();assert.equal(await page.locator('.fiscal-account-detail tbody tr').count(),11);
   assert((await page.locator('.fiscal-account-detail').innerText()).includes(number(closed.income)));assert((await page.locator('.fiscal-account-detail').innerText()).includes(number(closed.expense)));
@@ -21,14 +21,14 @@ module.exports=async({page,browser,base})=>{
   assert.deepEqual(await page.locator('.pair-identities h3').allTextContents(),['CABA','Buenos Aires']);
   assert(await page.locator('.pair-silhouette').evaluateAll(es=>es.every(e=>e.getAttribute('viewBox').split(' ').every(v=>Number.isFinite(+v))&&e.querySelector('path').getBBox().width>0)));
   for(const id of ['06','14']){
-   await page.locator('#pair-province').selectOption(id);const p=provinces.periods.find(p=>p.id==='2026-2'),r=p.rows.find(r=>r.id===id),c=p.rows.find(r=>r.id==='02');
+   await page.locator('#pair-province').selectOption(id);const p=provinces.periods.find(p=>p.id==='2026-2'),r=p.rows.find(r=>r.id===id),c=p.rows.find(r=>r.id==='02');const stages=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/budget/2027/stages.json')));
    assert.deepEqual(await page.locator('.pair-identities h3').allTextContents(),['CABA',r.name]);
-   const values=await page.locator('.pair-sheet>.pair-metrics>div').first().locator('dd').allTextContents();assert.deepEqual(values,['$ '+number(c.indicators.budgetPc),'$ '+number(r.indicators.budgetPc)]);
+   const values=await page.locator('.pair-sheet>.pair-metrics>div').first().locator('dd').allTextContents();assert.deepEqual(values,['$ '+number(stages.totals.initial/c.population),'$ '+number(r.indicators.budgetPc)]);
   }
-  assert.equal(await page.locator('.pair-panel').evaluate(e=>e.tagName),'SECTION');assert.equal(await page.locator('.pair-sheet>.pair-metrics>div').count(),6);assert((await page.locator('.pair-panel').innerText()).includes('2024'));assert((await page.locator('.pair-panel').innerText()).includes('Puestos públicos'));
+  assert.equal(await page.locator('.pair-panel').evaluate(e=>e.tagName),'SECTION');assert.equal(await page.locator('.pair-sheet>.pair-metrics>div').count(),5);assert((await page.locator('.pair-panel').innerText()).includes('2024'));assert((await page.locator('.pair-panel').innerText()).includes('Puestos públicos'));
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await page.goto(base+'#gastos?periodo=2026-2');await ready();
-  assert(await page.locator('.treemap-figure figcaption').first().isVisible());
+  assert(await page.locator('.review-composition figcaption,.treemap-figure figcaption').first().isVisible());
   const small=await page.locator('.rect-treemap').first().locator('.tile-no-label .tile-marker').allTextContents(),legend=await page.locator('.treemap-figure').first().locator('.treemap-labels b').allTextContents();assert.deepEqual(legend,small);
   for(const label of await page.locator('.treemap-labels button').all())assert(await label.innerText());
   if(width<650){assert(await page.locator('.main-nav .wrap').evaluate(e=>e.scrollWidth<=e.clientWidth+1));assert(await page.locator('#mobile-period').isVisible());}
