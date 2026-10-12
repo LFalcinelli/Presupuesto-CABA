@@ -34,7 +34,7 @@ for(const area of reports.areas){
    }
    if(r.kind==='financing')assert(detail.financing.find(f=>f.code==='22').value/area.project2027>=.1);
    if(r.kind==='transfers')assert(detail.economic.transfers/area.project2027>=.1);
-   if(r.kind==='execution'){assert(!['98','99'].includes(area.code));assert(area.executed2026/area.current2026<.3);}
+   if(r.kind==='execution'){assert(!['98','99'].includes(area.code));assert(area.executed2026/area.current2026<.3);if((area.objects.find(o=>o.code==='1')?.project2027||0)/area.project2027>.7){assert(r.text.includes('mayoría de gasto en personal'));assert(!r.text.includes('obras'));}}
   }
   if(['21','35'].includes(area.code)){assert.equal(readings[0].kind,'scope');assert(readings.find(r=>r.kind==='composition'));for(const r of readings)for(const m of r.movements)assert.equal(m.base,'current2026');}
   if(['24','75'].includes(area.code))assert(readings.some(r=>r.kind==='pending-cause'));

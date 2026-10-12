@@ -32,8 +32,8 @@ function governmentTransferPrograms(detail){
  return detail.programs.map(p=>({...p,transfer:p.objects.find(o=>o.code==='5')?.project2027||0})).filter(p=>p.transfer>0).sort((a,b)=>b.transfer-a.transfer);
 }
 function governmentExecutionContext(area){
- const personnel=area.objects.find(o=>o.code==='1')?.current2026||0;
- if(personnel/area.current2026>.7)return 'En áreas con mayoría de gasto en personal, la ejecución suele avanzar en forma pareja.';
+ const personnel=area.objects.find(o=>o.code==='1')?.project2027||0;
+ if(personnel/area.project2027>.7)return 'En áreas con mayoría de gasto en personal, la ejecución suele avanzar en forma pareja.';
  return 'La inflación y el calendario de pagos de las obras pueden concentrar gasto hacia fin de año; el semestre no anticipa el cierre.';
 }
 function governmentFunctionalVerified(p){return ['continues','recoded'].includes(p.comparisonStatus)&&/Contraste textual|funciones.*contrastad|Se conserva la continuidad funcional/i.test(p.comparisonEvidence||'');}
