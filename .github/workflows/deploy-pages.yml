@@ -8,14 +8,15 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: pages-${{ github.ref }}
-  cancel-in-progress: true
+  group: pages-publication
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       pages: read
+      actions: read
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
@@ -25,29 +26,70 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
+      - run: node tests/preview-package.cjs
       - run: npx playwright install --with-deps chromium
       - name: Comprobar navegación bajo el subpath
         run: |
           npm run dev > /tmp/preview.log 2>&1 &
           for i in $(seq 1 30); do curl --fail --silent http://127.0.0.1:8766/Presupuesto-CABA/ > /dev/null && break; sleep 1; done
           npm run test:smoke
+      - name: Recuperar las vistas previas publicadas
+        id: previous
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const {owner, repo} = context.repo;
+            const runs = await github.rest.actions.listWorkflowRuns({owner, repo, workflow_id: 'deploy-pages.yml', status: 'success', per_page: 10});
+            for (const run of runs.data.workflow_runs) {
+              const artifacts = await github.rest.actions.listWorkflowRunArtifacts({owner, repo, run_id: run.id});
+              if (artifacts.data.artifacts.some(a => a.name === 'github-pages' && !a.expired)) {
+                core.setOutput('run', String(run.id)); break;
+              }
+            }
+      - uses: actions/download-artifact@v5
+        if: steps.previous.outputs.run != ''
+        with:
+          name: github-pages
+          path: previous-pages
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.previous.outputs.run }}
+      - name: Extraer el artefacto anterior
+        if: steps.previous.outputs.run != ''
+        run: |
+          mkdir previous-site
+          tar -xf previous-pages/artifact.tar -C previous-site
+      - uses: actions/checkout@v6
+        if: github.event_name == 'pull_request'
+        with:
+          ref: main
+          path: production
+          persist-credentials: false
+      - name: Conservar la versión de producción
+        if: github.event_name == 'pull_request'
+        run: node production/scripts/build.mjs
+      - name: Preparar publicación y preview del PR
+        env:
+          PREVIEW_PR: ${{ github.event.pull_request.number }}
+          PREVIEW_SHA: ${{ github.event.pull_request.head.sha }}
+          PREVIEW_TRUSTED: ${{ github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login == github.repository_owner) }}
+        run: node scripts/package-pages.mjs
       - name: Preparar Pages
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login == github.repository_owner)
         uses: actions/configure-pages@v5
       - name: Subir sólo el sitio construido
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login == github.repository_owner)
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dist
+          path: site-package
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login == github.repository_owner)
     needs: build
     runs-on: ubuntu-latest
     permissions:
       pages: write
       id-token: write
     environment:
-      name: github-pages
+      name: ${{ github.event_name == 'pull_request' && 'github-pages-preview' || 'github-pages' }}
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
