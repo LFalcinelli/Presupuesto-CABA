@@ -32,6 +32,10 @@ function governmentTransferPrograms(detail){
  return detail.programs.map(p=>({...p,transfer:p.objects.find(o=>o.code==='5')?.project2027||0})).filter(p=>p.transfer>0).sort((a,b)=>b.transfer-a.transfer);
 }
 function governmentFunctionalVerified(p){return ['continues','recoded'].includes(p.comparisonStatus)&&/Contraste textual|funciones.*contrastad|Se conserva la continuidad funcional/i.test(p.comparisonEvidence||'');}
+// Do not infer an annual execution change across a changed institutional perimeter.
+function governmentExecutionComparable(area,detail){
+ return !['21','35'].includes(area.code)&&!detail.reorganization2026&&area.initial2026>0&&Math.abs(area.current2026/area.initial2026-1)<=.25;
+}
 function governmentReadingItems(area,detail,base='initial2026'){
  const readings=[],factor=state.areaReports.deflator.factor,scope=governmentScopeChange(area.code,detail);
  const calculation='Variaciones reales: proyecto dividido por '+factor+'; inflación supuesta, no observada. Montos del proyecto: pesos nominales de 2027.';
@@ -82,7 +86,7 @@ function governmentReadingItems(area,detail,base='initial2026'){
   if(area.code==='24'){const electoral=detail.programs.find(p=>p.name==='Gestión Electoral');if(electoral)text=`El ${governmentShare(detail.economic.transfers,area.project2027)} son transferencias (${short(detail.economic.transfers)}); ${short(electoral.objects.find(o=>o.code==='5')?.project2027||0)} corresponden a Gestión Electoral (PDF, p. 195).`;}
   add('transfers',text,[`${detail.sources['2027'].file}, inciso 5, pp. ${largestTransfer.financialPages.join(', ')}; descripción, pp. ${largestTransfer.descriptionPages.join(', ')}.`, 'No se equiparan las transferencias a empresas con inversión directa.']);
  }
- if(readings.length<5&&area.executed2026/area.current2026<.3&&!['98','99'].includes(area.code)){
+ if(readings.length<5&&governmentExecutionComparable(area,detail)&&area.executed2026/area.current2026<.3&&!['98','99'].includes(area.code)){
   const prior=state.governmentSemester?.jurisdictions.find(r=>r.name===area.name);
   if(prior&&Math.abs(prior.nominal2026-area.executed2026)<1){const change=100*(prior.b/prior.a-1);add('execution',`En enero–junio de 2026 el gasto ejecutado ${governmentVerb(change)} frente al mismo semestre de 2025, descontando la inflación observada del período.`,['Ejecución oficial: mismo semestre y jurisdicción; IPC de cada período, no el supuesto 2027.','Importes comparables: '+prior.a+' y '+prior.b+'.'],[],'semester2025');}
  }

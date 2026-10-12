@@ -10,7 +10,7 @@ module.exports=async function compositionReading(page,base){
     await page.locator('#spending-composition').selectOption(dimension);await ready();
     assert(await page.locator('.treemap-tile,.review-bar').count()>0);
     assert.equal(await page.locator('#spending-composition').inputValue(),dimension);
-    if(dimension==='economic')assert.equal(await page.locator('.chart-panel .rect-treemap').first().locator('.treemap-tile').count(),2);
+    if(dimension==='economic')assert.equal(await page.locator(width<=650?'.chart-panel .review-bars':'.chart-panel .rect-treemap').first().locator(width<=650?'.review-bar':'.treemap-tile').count(),2);
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${width} ${period} ${dimension}`);
    }
    await page.reload();await ready();assert.equal(await page.locator('#spending-composition').inputValue(),'economic');

@@ -1,5 +1,13 @@
 # Cambios
 
+## 2026-10-12 — Correcciones v5 de móvil, contraste y destacados
+
+- Modo oscuro coherente en resultados fiscales, treemaps, pistas de barras, tablas, mapas y lecturas históricas; tinta de las celdas elegida por contraste sobre el fondo real. Se corrige también la anotación histórica en tema claro.
+- Comparación interanual de ejecución bloqueada para Gabinete, Espacio Público, reorganizaciones documentadas y diferencias votado/ampliado superiores al 25%. Se retira el 264% de Gabinete; sólo Consejo de la Magistratura conserva esa lectura entre las fichas actuales.
+- Selector móvil de tema con icono de 44 px y tres opciones accesibles; pestaña activa visible, índice de ficha breve y títulos de desplegables encima de sus descripciones. Último KPI ocupa toda la fila y se evitan cortes dentro de montos fiscales.
+- Gastos en móvil abren con barras ordenadas; rectángulos permanecen seleccionables y la elección se conserva en la URL. Se corrige el renderizado recursivo de composiciones y el rótulo de conceptos menores.
+- Auditoría automatizada de 51 rutas en claro/oscuro, 375/1440 px y desplegables cerrados/abiertos (408 estados), junto con la suite funcional existente. No cambian datos, fuentes, importes, homologaciones ni deflactores.
+
 ## 2026-10-12 — Móvil, temas y accesibilidad (PR 18)
 
 - Vista previa pública por PR en `/preview/pr-N/`, con producción compilada desde `main` y comprobación de que su portada se conserva. Se retienen las otras vistas previas entre publicaciones; sólo se despliegan PR del propietario desde este repositorio.
