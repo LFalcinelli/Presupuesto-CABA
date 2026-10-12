@@ -34,6 +34,7 @@ function incomeComposition(rows,{project=false,label='Composición de los ingres
    item.name='Impuestos a la producción, el consumo y las transacciones';
    item.children=project?projectProduction.map((id,i)=>{const n=state.fiscalMap.nodes.find(r=>r.id===id);return rowItem({name:n.label,value:n.value},greens[i]);}):data.rows.filter(r=>r.codes.length===4&&r.codes.slice(0,3).join('.')==='1.11.3').map((r,i)=>rowItem(r,greens[i%greens.length]));
   }
+  if(project&&classificationName(row.name).includes('sobre el patrimonio'))item.children=['tax_inmuebles','tax_vehiculos'].map((id,i)=>{const n=state.fiscalMap.nodes.find(r=>r.id===id);return rowItem({name:id==='tax_inmuebles'?'Inmuebles (ABL e Inmobiliario)':'Patentes / vehículos',value:n.value},greens[i]);});
   return item;
  };
  const items=rows.flatMap(row=>{

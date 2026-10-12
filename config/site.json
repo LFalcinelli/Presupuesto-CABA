@@ -67,5 +67,8 @@
     "revenue",
     "areas"
   ],
-  "lastReviewed": "2026-10-09"
+  "lastReviewed": "2026-10-09",
+  "feedback": {
+    "destination": null
+  }
 }

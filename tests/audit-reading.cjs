@@ -7,9 +7,9 @@ module.exports=async({page,base})=>{
  assert.equal(budget.rows.at(-1).nominal,19877152039294);
  const ready=()=>page.waitForFunction(()=>document.querySelector('#content')?.getAttribute('aria-busy')==='false');
  const cleanSources=async()=>{
-  const hrefs=await page.locator('#content a[href]').evaluateAll(es=>es.map(e=>e.getAttribute('href')));
+  const hrefs=await page.locator('#content a[href]:not([data-citizen-download])').evaluateAll(es=>es.map(e=>e.getAttribute('href')));
   assert(!hrefs.some(h=>/\.(?:json|csv|xlsx?|zip)(?:[?#]|$)/i.test(h)),hrefs.join('\n'));
-  assert.equal(await page.locator('#content [download]').count(),0);
+  assert.equal(await page.locator('#content [download]:not([data-citizen-download])').count(),0);
   const text=await page.locator('#content').textContent();assert(!/archivo aportado|aportado por el usuario|\.xlsx|solapa Análisis|BASE 2T Gestion|benchmark ex ante/.test(text),'No internal source wording: '+text.match(/.{0,80}(?:archivo aportado|aportado por el usuario|\.xlsx|solapa Análisis|BASE 2T Gestion|benchmark ex ante).{0,80}/)?.[0]);
  };
  await page.setViewportSize({width:1440,height:1100});await page.goto(base+'#inicio');await ready();

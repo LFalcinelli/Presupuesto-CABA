@@ -101,3 +101,9 @@ python scripts/import-all-government-areas.py --extracted-dir <salida-externa>
 ```
 
 El constructor estático y CI no requieren Python ni acceso a las carpetas de fuentes.
+
+## Referencias ciudadanas v7
+
+`data/revenue/tax-reference-2027.json` y CSV: tributos propios, promedio por habitante, apertura recaudada de Inmuebles 2025 y totales votado/ampliado 2026; archivo y página.
+
+`data/budget/2027/program-index.json` y CSV: índice liviano de 499 programas de las 22 jurisdicciones; ID, área, unidad, importe, fuente y página. Se deriva con `node scripts/build-citizen-references.mjs` sin nuevos documentos. El navegador carga el detalle financiero del área sólo al seleccionarla.

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "year": 2027,
+  "status": "project",
+  "population": 3121707,
+  "ownTaxes": 16868229003433,
+  "ownTaxesPerCapita": 5403527.302028345,
+  "source": {
+    "file": "3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf",
+    "pdfPage": 183,
+    "table": "Planilla 11",
+    "dataset": "data/budget/2027/fiscal-map.json"
+  },
+  "note": "Promedio por habitante. No es lo que paga cada vecino: Ingresos Brutos puede trasladarse a precios y también aportan quienes no viven en la Ciudad.",
+  "noteSources": [
+    "https://www.agip.gob.ar/impuestos/ingresos-brutos",
+    "https://www.argentina.gob.ar/normativa/nacional/ley-27743-401268/texto"
+  ],
+  "taxes": [
+    {
+      "id": "tax_iibb",
+      "name": "Ingresos Brutos",
+      "value": 13279892329152
+    },
+    {
+      "id": "tax_inmuebles",
+      "name": "Inmuebles / ABL",
+      "value": 1454917576507
+    },
+    {
+      "id": "tax_vehiculos",
+      "name": "Patentes / vehículos",
+      "value": 491794782935
+    },
+    {
+      "id": "tax_sellos",
+      "name": "Sellos",
+      "value": 1448901025940
+    },
+    {
+      "id": "tax_electricidad",
+      "name": "Energía eléctrica",
+      "value": 131857355845
+    },
+    {
+      "id": "tax_ferroviaria",
+      "name": "Contribución ferroviaria",
+      "value": 48732934632
+    },
+    {
+      "id": "tax_otros",
+      "name": "Otros tributos locales",
+      "value": 12132998422
+    }
+  ],
+  "property2025": {
+    "year": 2025,
+    "status": "collected-provisional",
+    "sourceFile": "4TO_TRIM_2025.pdf",
+    "localSource": "sources/recursos-2025-4.pdf",
+    "pdfPage": 5,
+    "total": 825862645668.11,
+    "items": [
+      {
+        "code": "1.11.2.3.1",
+        "name": "Impuesto Inmobiliario",
+        "value": 316645429417.39
+      },
+      {
+        "code": "1.11.2.3.2",
+        "name": "Tasa ret. de Alumbrado, Barrido y Limpieza, Conserv. y Mant. de Sumideros",
+        "value": 493365179191.32
+      },
+      {
+        "code": "1.11.2.3.5",
+        "name": "Contribución Ley N° 23.514 s/Impuesto Inmobiliario",
+        "value": 15834930460.03
+      },
+      {
+        "code": "1.11.2.3.6",
+        "name": "Contribución de Mejoras Ley N° 23.514",
+        "value": 17106599.37
+      }
+    ]
+  },
+  "budget2026": {
+    "initial": 17344864165159,
+    "current": 19877152039294,
+    "period": "2026-2",
+    "source": {
+      "sourceFile": "2026.02 - Ejecución Presupuestaria.xlsx",
+      "sourceUrl": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/presupuesto-ejecutado/presupuesto-ejecutado-2026-2.xlsx",
+      "sha256": "aed96a5f4085484d75fb56792cd4390d4eb74b12f8709452ad0d4ab585496c51"
+    },
+    "change": 2532287874135,
+    "changePct": 14.599640850584814
+  }
+}
