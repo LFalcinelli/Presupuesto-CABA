@@ -15,3 +15,10 @@ function formatPercentText(text){
   return formatPercent(value,{signed:sign==='+'});
  });
 }
+
+function formatShare(value){
+ if(!Number.isFinite(value))return 'Sin dato';
+ if(value>0&&value<.05)return 'menos de 0,1%';
+ if(value<100&&value>99.49)return 'más del 99%';
+ return formatPercent(value);
+}

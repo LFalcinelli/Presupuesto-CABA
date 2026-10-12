@@ -14,10 +14,10 @@ module.exports=async function({page,base}){
    for(const a of reports.areas){
     await page.goto(base+'#proyecto-2027?vista=areas&area='+a.code+'&base='+comparison);await page.locator(`.gov-kpis[data-gov-area="${a.code}"][data-gov-base="${comparison}"]`).waitFor();
     assert.equal(await page.locator('#gov-base').inputValue(),comparison);
-    assert.equal(await page.locator('.gov-economic-grid article').count(),3);
+    assert.equal(await page.locator('.gov-composition-stack').count(),['98','99'].includes(a.code)?0:1);if(!['98','99'].includes(a.code)){const groupCount=[['1','2','3'],['4'],['5'],['6','7','8']].filter(codes=>a.objects.some(o=>codes.includes(o.code)&&o.project2027>0)).length;assert.equal(await page.locator('.gov-composition-stack>i').count(),groupCount);assert(await page.locator('.gov-composition-stack').evaluate(n=>Math.abs([...n.children].reduce((sum,c)=>sum+c.getBoundingClientRect().width,0)+3*(n.children.length-1)-n.getBoundingClientRect().width)<1));}
     const detail=JSON.parse(fs.readFileSync(path.join(__dirname,'..',a.detailFile),'utf8'));
     assert.equal(await page.locator('.gov-ranking article').count(),detail.units.length);
-    assert((await page.locator('.gov-readings>ol>li').count())>=5);assert((await page.locator('.gov-readings>ol>li').count())<=7);
+    assert((await page.locator('.gov-readings>ol>li').count())>=1);assert((await page.locator('.gov-readings>ol>li').count())<=5);assert.equal(await page.locator('.gov-ranking article:visible').count(),Math.min(8,detail.units.length));
     const invalid=await page.evaluate(()=>{
      const bad=[];for(const node of document.querySelectorAll('main *')){
       const values=[...node.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent);
@@ -26,8 +26,10 @@ module.exports=async function({page,base}){
      }return [...new Set(bad)];
     });assert.deepEqual(invalid,[],a.code+' percentage formatting');
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),a.code+' overflow '+width);
-    const before=await page.locator('.gov-readings>ol').innerText();await page.locator('#gov-base').selectOption(comparison==='initial'?'current':'initial');await page.waitForFunction(v=>document.querySelector('.gov-kpis article:nth-child(2)>span')?.textContent.includes(v),comparison==='initial'?'ampliado':'votado');
-    if(a.initial2026!==a.current2026&&(a.economic.currentCore||a.economic.investmentCore))assert.notEqual(await page.locator('.gov-readings>ol').innerText(),before,a.code+' stale readings');
+    const renderedMovements=await page.locator('#gov-changes .gov-contribution').evaluateAll(nodes=>nodes.map(n=>({id:n.dataset.govProgram,base:n.dataset.movementBase,rate:n.dataset.movementRate,delta:Number(n.dataset.movementDelta)})));
+    for(const m of renderedMovements){const p=detail.programs.find(p=>p.id===m.id);assert.equal(m.base,['21','35'].includes(a.code)?'current2026':comparison+'2026');assert.equal(m.delta,p.project2027/reports.deflator.factor-p[m.base]);if(m.rate!=='')assert.equal(Number(m.rate),100*(p.project2027/reports.deflator.factor/p[m.base]-1));}
+    const before=await page.locator('.gov-readings>ol').innerText();if(detail.units.length>8){await page.locator('.gov-ranking-rest>summary').click();assert.equal(await page.locator('.gov-ranking article:visible').count(),detail.units.length);}await page.locator('#gov-base').selectOption(comparison==='initial'?'current':'initial');await page.locator(`.gov-kpis[data-gov-area="${a.code}"][data-gov-base="${comparison==='initial'?'current':'initial'}"]`).waitFor();
+    if(!['21','35'].includes(a.code)&&a.initial2026!==a.current2026&&(a.economic.currentCore||a.economic.investmentCore))assert.notEqual(await page.locator('.gov-readings>ol').innerText(),before,a.code+' stale readings');
     if(process.env.QA_SCREENSHOTS&&['31','40','21'].includes(a.code)&&comparison==='initial'){
      fs.mkdirSync(process.env.QA_SCREENSHOTS,{recursive:true});await page.locator('.gov-readings').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(process.env.QA_SCREENSHOTS,`area-${a.code}-${width}.png`)});
     }

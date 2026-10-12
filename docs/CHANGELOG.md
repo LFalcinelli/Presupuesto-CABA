@@ -1,5 +1,25 @@
 # Cambios
 
+## 2026-10-11 — Revisión integral de lectura ciudadana (PR 17)
+
+- Vocabulario central y guía con enlaces estables: votado, ampliado, ejecutado, funcionamiento, inversión, transferencias y servicios contratados. Se conservan los nombres oficiales en fuentes y tooltips.
+- Votado 2026 como base por defecto en las cuatro vistas de Proyecto 2027 y en Comparar CABA; ampliado a junio seleccionable. La base se conserva en la URL y entre vistas. Resumen muestra ambas tasas sin alterar el factor 1,18.
+- Montos abreviados a primera vista, importes completos disponibles en desplegables o tooltips. Estimación con precios promedio anuales plegada. Proporciones pequeñas y casi completas identificadas sin aparentar cero o totalidad; intereses: 99,8% del saldo previo.
+- Ingresos con barras ordenadas, nombres visibles, apertura de Ingresos Brutos y Sellos y agrupación inferior al 1%. En gastos, las composiciones que necesitarían códigos o rótulos ocultos ofrecen barras navegables.
+- Cuenta fiscal con saldo final visible y pasos intermedios plegados en 2025, 2026 y 2027. Financiamiento distingue endeudamiento/otros pasivos de inversión financiera; no se denomina deuda nueva a todo el agregado.
+- Comparación provincial con indicadores agrupados, sin indicadores por superficie y con advertencia de estacionalidad del primer trimestre. Se mantienen fechas y universos de empleo y ejecución separados.
+- Destacados extremos sólo con continuidad funcional documentada y montos de ambas etapas; composición redactada en oraciones. Gestión Electoral incorpora el monto de la ficha financiera (Justicia, PDF p. 195), sin atribuirle toda la ampliación. Tesoro describe compromisos documentados (PDF p. 6); Tesoro y Deuda no usan la lectura de funcionamiento/inversión de los ministerios.
+- Pruebas de bases independientes para siete aperturas, continuidad de selección, glosario, diagramas, barras y responsive; se conservan conciliaciones y revisión de 22 áreas por dos bases. No cambian datasets, montos, homologaciones, fuentes ni deflactores. Entrega en PR, sin publicación automática.
+
+## 2026-10-11 — Áreas de Gobierno: destacados y lectura de las fichas
+
+- Destacados con materialidad en pesos y peso del programa, cálculo compartido con el gráfico de movimientos y un máximo de cinco textos de 35 palabras en una columna; sin relleno ni bajas parciales de inversión que parezcan eliminar un programa.
+- Encabezados, directorio y aperturas muestran montos nominales del proyecto. Variaciones reales con el supuesto vigente del 18%; equivalencia de 2026 identificada debajo del monto. Un único selector de base evita mezclar modos de precios.
+- Gabinete y Espacio Público identifican el traspaso de funciones en tarjetas y primera lectura; composición y movimientos usan el ampliado para incorporar ese cambio. Justicia y Desarrollo Económico mantienen la causa de la ampliación por verificar.
+- Comparación y mayores movimientos primero; composición fusionada en una barra apilada, incisos plegados, destinatarios documentados y financiamiento sustancial visible. Ocho unidades/programas iniciales, resto accesible. Directorio sin resumen repetido ni microtextos de composición.
+- Variaciones con violeta y gris azulado en todas las vistas; se conservan los colores que identifican ingresos, egresos y saldos fiscales. Contraste AA y controles automáticos de las 44 variantes editoriales, además de pruebas de escritorio y móvil.
+- Usa los datos cargados: no reextrae documentos ni cambia fuentes, importes, homologaciones o deflactores. Entrega en PR para revisión editorial, sin publicación automática.
+
 ## 2026-10-10 — Áreas de Gobierno completas y lectura consistente
 
 - 22 fichas jurisdiccionales con 339 unidades y 499 programas fiscales: principales, financiación por programa, metas, cargos cuando están publicados, obras plurianuales y páginas de origen. Sumas conciliadas con Planilla 4.
