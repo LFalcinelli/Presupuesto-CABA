@@ -18,24 +18,24 @@ module.exports=async function compositionReading(page,base){
   for(const period of ['2026-2','2025-4']){
    await page.goto(base+'#ingresos?periodo='+period);await ready();
    assert.equal(await page.locator('.income-composition .production-group').count(),1);
-   assert((await page.locator('.production-group>.review-bar').innerText()).includes('producción'));
+   assert((await page.locator('.production-group>.review-bar').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('producción'));
    const iibb=page.locator('.income-composition [data-income="1.11.3.6"]').first();
    assert((await iibb.getAttribute('aria-label')).includes('Ingresos Brutos'));
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-   if(width===390){await iibb.click();await ready();assert(page.url().includes('rubro=1.11.3.6'));assert((await page.locator('#content h1').innerText()).includes('Ingresos Brutos'));}
+   if(width===390){await iibb.click();await ready();assert(page.url().includes('rubro=1.11.3.6'));assert((await page.locator('#content h1').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Ingresos Brutos'));}
   }
   for(const kind of ['expenses','revenue']){
    await page.goto(base+'#proyecto-2027?vista='+kind);await ready();
    const changes=page.locator('[data-budget-changes]');assert(await changes.isVisible());
-   assert((await changes.innerText()).includes('2026 votado'));
-   assert((await page.locator('.review-base-control').innerText()).includes('18%'));
+   assert((await changes.innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('2026 votado'));
+   assert((await page.locator('.review-base-control').textContent().then(text=>text.replace(/\u00a0/g,' '))).includes('18%'));
    if(kind==='expenses'){
     for(const dimension of ['functions','jurisdictions','objects','economic']){
      await page.locator('#project-dimension').selectOption(dimension);await ready();
      if(dimension==='functions')assert.equal(await changes.locator('.change-row').count(),20);
      if(dimension==='jurisdictions'){
       assert.equal(await changes.locator('.change-row').count(),22);
-      assert((await changes.innerText()).includes('Movilidad'));
+      assert((await changes.innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Movilidad'));
      }
     }
    }else{
@@ -43,12 +43,12 @@ module.exports=async function compositionReading(page,base){
     assert.equal(await page.locator('.income-composition .production-group').count(),1);
     assert.equal(await page.locator('.review-bar-children button').filter({hasText:'Sellos'}).count(),1);
     assert(await page.locator('.review-bar-children').evaluate(e=>e.scrollWidth<=e.clientWidth+1));
-    if(width===390){await page.locator('.review-bar-children button').first().click();await page.locator('#reading-detail-dialog[open]').waitFor();assert((await page.locator('#reading-detail-body').innerText()).includes('Recurso estimado'));await page.locator('[data-reading-close]').click();}
+    if(width===390){await page.locator('.review-bar-children button').first().click();await page.locator('#reading-detail-dialog[open]').waitFor();assert((await page.locator('#reading-detail-body').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Recurso estimado'));await page.locator('[data-reading-close]').click();}
     await page.locator('#project-revenue-mode').selectOption('taxRevenue');await ready();
     assert.equal(await changes.locator('.change-row').count(),4);
    }
    await page.locator('#budget-change-mode').selectOption('amount');await ready();
-   assert((await changes.locator('figcaption').innerText()).includes('billones'));
+   assert((await changes.locator('figcaption').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('billones'));
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${width} ${kind}`);
   }
  }

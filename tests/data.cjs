@@ -27,3 +27,4 @@ require('./government-areas.cjs');
 require('./government-insights.cjs');
 
 require('./percentage-format.cjs');
+require('./theme-tokens.cjs');

@@ -23,6 +23,8 @@ const build=hash.digest('hex').slice(0,12);
 const config=JSON.parse(fs.readFileSync(path.join(root,'config/site.json'),'utf8'));
 const resources=JSON.parse(fs.readFileSync(path.join(root,'data/index.json'),'utf8')).resources;
 const index=path.join(output,'index.html');let html=fs.readFileSync(index,'utf8');
+const reviewed=new Intl.DateTimeFormat('es-AR',{timeZone:'America/Argentina/Buenos_Aires',day:'2-digit',month:'2-digit',year:'numeric'}).format(new Date());
+html=html.replace('<meta name="site-reviewed" content="">',`<meta name="site-reviewed" content="${reviewed}">`);
 html=html.replace(/<meta name="site-build"[^>]*>/,`<meta name="site-build" content="${build}">`);
 html=html.replace(/((?:src|href)="\.\/[^"?]+\.(?:js|css))(?:\?v=[^"]*)?"/g,`$1?v=${build}"`);
 html=html.replace(/https:\/\/lfalcinelli\.github\.io\/Presupuesto-CABA\//g,config.publicUrl);
