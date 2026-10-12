@@ -1,0 +1,9 @@
+/* Changes are descriptive. Fiscal income, expense and balance colors keep their meaning. */
+:root{--variation-up:#5f2b8a;--variation-down:#43586f}
+.variation-up,.government-areas .variation-up{color:var(--variation-up)}
+.variation-down,.government-areas .variation-down{color:var(--variation-down)}
+.change-track .increase,.real-change-track i:not(.negative){background:var(--variation-up)}
+.change-track .decrease,.real-change-track i.negative{background:var(--variation-down)}
+:is(.hero,.panorama) .variation-up{color:#e2c9fb}
+:is(.hero,.panorama) .variation-down{color:#d3e0f0}
+@media(forced-colors:active){.gov-change-track i,.change-track .increase,.change-track .decrease{background:CanvasText}}

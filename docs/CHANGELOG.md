@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-10-11 — Áreas de Gobierno: destacados y lectura de las fichas
+
+- Destacados con materialidad en pesos y peso del programa, cálculo compartido con el gráfico de movimientos y un máximo de cinco textos de 35 palabras en una columna; sin relleno ni bajas parciales de inversión que parezcan eliminar un programa.
+- Encabezados, directorio y aperturas muestran montos nominales del proyecto. Variaciones reales con el supuesto vigente del 18%; equivalencia de 2026 identificada debajo del monto. Un único selector de base evita mezclar modos de precios.
+- Gabinete y Espacio Público identifican el traspaso de funciones en tarjetas y primera lectura; composición y movimientos usan el ampliado para incorporar ese cambio. Justicia y Desarrollo Económico mantienen la causa de la ampliación por verificar.
+- Comparación y mayores movimientos primero; composición fusionada en una barra apilada, incisos plegados, destinatarios documentados y financiamiento sustancial visible. Ocho unidades/programas iniciales, resto accesible. Directorio sin resumen repetido ni microtextos de composición.
+- Variaciones con violeta y gris azulado en todas las vistas; se conservan los colores que identifican ingresos, egresos y saldos fiscales. Contraste AA y controles automáticos de las 44 variantes editoriales, además de pruebas de escritorio y móvil.
+- Usa los datos cargados: no reextrae documentos ni cambia fuentes, importes, homologaciones o deflactores. Entrega en PR para revisión editorial, sin publicación automática.
+
 ## 2026-10-10 — Áreas de Gobierno completas y lectura consistente
 
 - 22 fichas jurisdiccionales con 339 unidades y 499 programas fiscales: principales, financiación por programa, metas, cargos cuando están publicados, obras plurianuales y páginas de origen. Sumas conciliadas con Planilla 4.
