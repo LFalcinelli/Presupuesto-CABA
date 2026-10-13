@@ -1,5 +1,13 @@
 # Cambios
 
+## 2026-10-13 — v10 · verificación de cuadros de cargos
+
+- Auditoría de los 16 PDF de los ocho pares publicados: 2.501 páginas, 24 cuadros, extracción independiente por celdas y suma de unidades únicas. No se encuentran cuadros omitidos ni duplicados contados; se conservan las cifras y las ocho comparaciones parciales.
+- Encabezados de los diez escalafones sin cambios entre años. El informe `VERIFICACION_CARGOS_2026_2027.md` detalla páginas, unidades presupuestadas sin fila de cargos, cambios de unidades incluidas y límites de lectura. Son seis bajas y dos subas; no se interpretan como movimientos de personas.
+- Obligaciones del Tesoro muestra «+1 cargo», con comprobación en ambos temas y anchos. Tablas y CSV de lectura no contienen el plural incorrecto. No se modifica el dataset ni la revisión restrictiva de Jefatura.
+- Se corrige el fondo de las tablas al pasar el cursor en modo oscuro, un defecto de contraste reproducido en producción durante las pruebas. La comprobación visual cubre filas bajo el cursor en Cargos e Intereses.
+- Entrega mediante PR con vista previa; producción pendiente de autorización expresa, según el alcance de v10.
+
 ## 2026-10-13 — v9 · cierre y publicación de la Parte B
 
 - Jefatura de Gobierno deja de mostrar una variación comparable de cargos: los cuadros no abren las mismas unidades y hay recodificaciones. Se conserva la extracción original y se aplica una revisión de presentación más restrictiva, con motivo y páginas.
