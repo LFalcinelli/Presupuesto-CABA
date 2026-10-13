@@ -1,5 +1,12 @@
 # Cambios
 
+## 2026-10-13 — v9 · cierre y publicación de la Parte B
+
+- Jefatura de Gobierno deja de mostrar una variación comparable de cargos: los cuadros no abren las mismas unidades y hay recodificaciones. Se conserva la extracción original y se aplica una revisión de presentación más restrictiva, con motivo y páginas.
+- Ocho pares de cargos comparables, con exclusiones visibles tomadas de sus propias notas y flechas en las tasas. Seguridad aclara que el cuadro no informa la dotación policial.
+- Ejecución 2025 conserva el nombre histórico de Infraestructura junto al actual, también en la ficha y CSV de lectura. El cotejo de las 22 denominaciones sólo identifica ese cambio.
+- Cifras, fuentes y CSV originales intactos; suite completa y capturas de Ejecución/Cargos en ambos temas. Publicación de B autorizada expresamente por el propietario al finalizar.
+
 ## 2026-10-12 — v8 · presentación combinada de A y B
 
 - Se integra main (Parte A publicada) en el PR 21, conservando ambas entregas y sin fusionar el borrador a producción.

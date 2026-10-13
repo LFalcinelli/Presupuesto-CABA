@@ -19,3 +19,5 @@ assert.equal(d.support.total,d.support.rows.reduce((s,r)=>s+r.value,0));for(cons
 assert.equal(d.positions.rows.filter(r=>r.project2026!==null).length,15);assert.equal(d.positions.cityTotal,null);for(const r of d.positions.rows){if(r.project2026!==null)assert.equal(r.project2026,Object.values(r.units2026).reduce((s,v)=>s+v,0));if(r.comparable){assert(r.project2026!==null&&r.project2027!==null);assert(!r.scopeNote);assert.equal(r.change,r.project2027-r.project2026);}else assert.equal(r.change,null);}
 assert.equal(d.comparablePerimeter.available,false);assert.deepEqual(d.comparablePerimeter.rows,[]);
 console.log('Lecturas: ejecución, aperturas, 9 servicios, transferencias, intereses, apoyo y cargos conciliados; faltantes conservados.');
+
+assert.equal(names.budgetDepthHistoricalName('31','Min.Infraestructura','Ministerio De Movilidad E Infraestructura',2025),'Ministerio de Movilidad e Infraestructura (en 2025: Ministerio de Infraestructura)');

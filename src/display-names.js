@@ -5,3 +5,8 @@ const institutionDisplayNames={'min.infraestructura':'Ministerio de Movilidad e 
 function citizenDisplayName(raw){const text=String(raw??''),key=text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();return institutionDisplayNames[key]||text.replace(/[\p{L}]+/gu,word=>{const fixed=displayWordAccents[word.toLowerCase()];return fixed?(word===word.toUpperCase()?fixed.toUpperCase():word[0]===word[0].toLowerCase()?fixed.toLowerCase():fixed):word;});}
 
 function budgetDepthDisplayName(raw){return citizenDisplayName(String(raw??'').replace(/\bDe\b/g,'de').replace(/\bLa\b/g,'la').replace(/\bDel\b/g,'del').replace(/\bE\b/g,'e').replace(/\bY\b/g,'y'));}
+
+function budgetDepthHistoricalName(code,raw,current,year){
+ const old=String(code)==='31'&&Number(year)===2025?'Ministerio de Infraestructura':budgetDepthDisplayName(raw),now=budgetDepthDisplayName(current||raw),key=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+ return key(old)===key(now)?old:`${now} (en ${year}: ${old})`;
+}

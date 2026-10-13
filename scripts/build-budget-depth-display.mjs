@@ -15,10 +15,12 @@ function parseCSV(text){
  if(cell||row.length){row.push(cell);rows.push(row);}return rows;
 }
 const rows=parseCSV(fs.readFileSync('data/budget/2027/budget-depth.csv','utf8'));
-const headers=rows[0],area=headers.indexOf('area'),concept=headers.indexOf('concept');
-for(const row of rows.slice(1)){row[area]=display(row[area]);row[concept]=display(row[concept]);}
+const headers=rows[0],area=headers.indexOf('area'),concept=headers.indexOf('concept'),year=headers.indexOf('year'),location=headers.indexOf('location');
+const areas=JSON.parse(fs.readFileSync('data/budget/2027/area-reports.json','utf8')).areas;
+const historical=(code,raw)=>context.budgetDepthHistoricalName(code,raw,areas.find(a=>a.code===code)?.name,2025);
+for(const row of rows.slice(1)){row[area]=display(row[area]);row[concept]=display(row[concept]);if(row[year]==='2025'){const code=row[location].match(/Jur (\d+)/)?.[1];if(code)row[area]=historical(code,row[area]);}if(row[0]==='positions'&&row[area]==='Jefatura de Gobierno')row[concept]+=' · cambio de unidades incluidas por verificar';}
 const data=JSON.parse(fs.readFileSync('data/budget/2027/budget-depth.json','utf8'));
-for(const row of data.execution.annual2025)rows.push(['execution-voted-ratio','2025',display(row.name),'Ejecutado frente a lo votado',row.s>0?String(row.d/row.s*100):'','%','cierre anual',data.execution.sources['2025-4'].sourceFile,'Jur '+row.code+' / devengado dividido por sanción']);
+for(const row of data.execution.annual2025)rows.push(['execution-voted-ratio','2025',historical(row.code,row.name),'Ejecutado frente a lo votado',row.s>0?String(row.d/row.s*100):'','%','cierre anual',data.execution.sources['2025-4'].sourceFile,'Jur '+row.code+' / devengado dividido por sanción']);
 const quote=value=>/[",\r\n]/.test(value)?'"'+value.replaceAll('"','""')+'"':value;
 fs.writeFileSync('data/budget/2027/budget-depth-display.csv',rows.map(row=>row.map(quote).join(',')).join('\n')+'\n');
 console.log('CSV de lectura generado; fuentes y cifras originales intactas.');
