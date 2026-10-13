@@ -1,0 +1,23 @@
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const crypto=require('node:crypto'),vm=require('node:vm');
+for(const [file,hash] of [['budget-depth.json','21e53a11399b34696efc91a349eeb204f30af3a85f2e234943e35a653287a8d7'],['budget-depth.csv','20a19680b42f9111d5c56796f1f0bdc9c3dfb11f00885d246e16a1a36917b37f']])assert.equal(crypto.createHash('sha256').update(fs.readFileSync('data/budget/2027/'+file)).digest('hex'),hash,'V8 conserva cifras y fuentes');
+const names=vm.createContext({});vm.runInContext(fs.readFileSync('src/display-names.js','utf8'),names);
+for(const [raw,label] of [['Min.Infraestructura','Ministerio de Movilidad e Infraestructura'],['Tribunal superior de Justicia','Tribunal Superior de Justicia'],['Defensoria del Pueblo','Defensoría del Pueblo']])assert.equal(names.budgetDepthDisplayName(raw),label);
+assert(fs.readFileSync('data/budget/2027/budget-depth-display.csv','utf8').includes('Ministerio de Movilidad e Infraestructura'));
+const read=p=>JSON.parse(fs.readFileSync(p)),d=read('data/budget/2027/budget-depth.json'),areas=read('data/budget/2027/area-reports.json').areas;
+for(const [key,field] of [['s','s'],['v','v'],['d','d']])assert(Math.abs(d.execution.annual2025.reduce((s,r)=>s+r[key],0)-d.execution.totals2025[field])<1);
+for(const r of d.execution.annual2025)assert(Math.abs(r.executionPct-r.d/r.v*100)<1e-10);
+for(const r of d.execution.semesters){if(r.realVariationPct!==null){assert(r.comparable);assert(!['21','35'].includes(r.code));assert(Math.abs(r.realVariationPct-(r.real2026/r.real2025-1)*100)<1e-10);}else assert(!r.comparable||r.executed2025===0);}
+assert.deepEqual(d.structure.rows.map(r=>r.year),[...Array.from({length:13},(_,i)=>2013+i),2027]);
+for(const r of d.structure.rows.filter(r=>r.kind==='executed')){const rows=read(`data/budget/${r.year}/${r.year}-4.json`).rows.filter(r=>r.fiscal);assert.equal(r.jurisdictions,new Set(rows.map(r=>r.codes[1])).size);assert.equal(r.units,new Set(rows.map(r=>r.codes.slice(0,5).join('-'))).size);assert.equal(r.programs,new Set(rows.map(r=>r.codes.slice(0,6).join('-'))).size);}
+assert.equal(d.structure.rows.at(-1).units,339);assert.equal(d.structure.rows.at(-1).programs,499);
+for(const field of ['project2027','initial2026','current2026'])assert(Math.abs(d.services.rows.reduce((s,r)=>s+(r[field]||0),0)-areas.reduce((s,a)=>s+a.objects.find(r=>r.code==='3')[field],0))<1);
+for(const r of d.services.rows){assert.equal(r.areas.reduce((s,r)=>s+r.value,0),r.project2027);assert.equal(r.references.reduce((s,r)=>s+r.value,0),r.project2027);for(const base of ['initial2026','current2026'])r[base]>0?assert(Math.abs(r[base+'RealVariationPct']-(r.project2027/1.18/r[base]-1)*100)<1e-10):assert.equal(r[base+'RealVariationPct'],null);}
+assert.equal(d.transfers.total,areas.reduce((s,a)=>s+a.objects.find(r=>r.code==='5').project2027,0));assert.equal(d.transfers.types.reduce((s,r)=>s+r.value,0),d.transfers.total);assert.equal(d.transfers.recipients.reduce((s,r)=>s+r.value,0),d.transfers.total);assert.equal(d.transfers.recipients.reduce((s,r)=>s+r.unspecified,0),d.transfers.unspecified);
+assert.equal(d.debt.rows.length,15);for(const r of d.debt.rows)assert(Math.abs(r.pct-r.interest/r.currentIncome*100)<1e-10);assert.equal(d.debt.rows.at(-1).source.pdfPage,190);assert.equal(d.debt.stock.value,1994600000);assert.equal(d.debt.stock.source.pdfPage,68);assert(Math.abs(d.debt.stock.value-d.debt.stock.direct-d.debt.stock.indirectAUSA)<=150000);
+assert.equal(d.support.total,d.support.rows.reduce((s,r)=>s+r.value,0));for(const r of d.support.rows)assert.equal(r.value,r.programs.reduce((s,p)=>s+p.value,0));
+assert.equal(d.positions.rows.filter(r=>r.project2026!==null).length,15);assert.equal(d.positions.cityTotal,null);for(const r of d.positions.rows){if(r.project2026!==null)assert.equal(r.project2026,Object.values(r.units2026).reduce((s,v)=>s+v,0));if(r.comparable){assert(r.project2026!==null&&r.project2027!==null);assert(!r.scopeNote);assert.equal(r.change,r.project2027-r.project2026);}else assert.equal(r.change,null);}
+assert.equal(d.comparablePerimeter.available,false);assert.deepEqual(d.comparablePerimeter.rows,[]);
+console.log('Lecturas: ejecución, aperturas, 9 servicios, transferencias, intereses, apoyo y cargos conciliados; faltantes conservados.');
+
+assert.equal(names.budgetDepthHistoricalName('31','Min.Infraestructura','Ministerio De Movilidad E Infraestructura',2025),'Ministerio de Movilidad e Infraestructura (en 2025: Ministerio de Infraestructura)');

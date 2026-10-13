@@ -1095,6 +1095,21 @@
         "data/budget/2027/program-index.json",
         "data/budget/2027/program-index.csv"
       ]
+    },
+    {
+      "id": "budget-depth-2027",
+      "name": "Lecturas presupuestarias de toda la Ciudad",
+      "path": "data/budget/2027/budget-depth.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-12",
+      "source": "Ejecución oficial, IDECBA y 22 documentos jurisdiccionales; archivo y página/celda en cada registro.",
+      "type": "derived",
+      "description": "Ejecución por área, aperturas históricas, servicios por principal, transferencias, intereses, conducción y cuadros parciales de cargos.",
+      "files": [
+        "data/budget/2027/budget-depth.json",
+        "data/budget/2027/budget-depth.csv",
+        "data/budget/2027/budget-depth-display.csv"
+      ]
     }
   ],
   "resources": {

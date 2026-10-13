@@ -1,5 +1,31 @@
 # Cambios
 
+## 2026-10-13 — v9 · cierre y publicación de la Parte B
+
+- Jefatura de Gobierno deja de mostrar una variación comparable de cargos: los cuadros no abren las mismas unidades y hay recodificaciones. Se conserva la extracción original y se aplica una revisión de presentación más restrictiva, con motivo y páginas.
+- Ocho pares de cargos comparables, con exclusiones visibles tomadas de sus propias notas y flechas en las tasas. Seguridad aclara que el cuadro no informa la dotación policial.
+- Ejecución 2025 conserva el nombre histórico de Infraestructura junto al actual, también en la ficha y CSV de lectura. El cotejo de las 22 denominaciones sólo identifica ese cambio.
+- Cifras, fuentes y CSV originales intactos; suite completa y capturas de Ejecución/Cargos en ambos temas. Publicación de B autorizada expresamente por el propietario al finalizar.
+
+## 2026-10-12 — v8 · presentación combinada de A y B
+
+- Se integra main (Parte A publicada) en el PR 21, conservando ambas entregas y sin fusionar el borrador a producción.
+- Ejecución 2025 ordenada por ejecutado/votado; ampliado al cierre como medida secundaria, con advertencia y etiquetas de cambios de dependencia de 2026.
+- Aperturas: el proyecto 2027 queda como punto aislado; la línea de ejecución termina en 2025. No hay un conteo homogéneo de proyecto 2026 cargado en estos datasets; no se infiere eliminación de unidades.
+- Cargos: nueve pares comparables visibles, cantidades de ambos proyectos y variaciones; las trece áreas restantes indican por qué no reciben comparación.
+- Nombres centralizados en las nuevas vistas y un CSV de lectura separado; JSON/CSV de fuente sin cambios. Singular de programa corregido.
+- Otros servicios: las 290 fichas financieras no abren partidas parciales; se aclara en el detalle sin inferir una composición.
+- Suite completa sobre A+B, prueba del corte entre fuentes y capturas de las siete lecturas a 375 px en ambos temas.
+
+## 2026-10-12 — v7 Parte B · lecturas de toda la Ciudad
+
+- Ejecución por jurisdicción en 2025 y primeros semestres 2025/2026; se bloquean variaciones de alcance no confirmado.
+- Conteos de aperturas fiscales 2013–2025 y proyecto 2027, distintos de personas; servicios contratados por principal, variaciones reales frente a las dos bases 2026 y concentración por área.
+- Transferencias por tipo y receptor verificado, con corriente/capital sin desagregar identificado; intereses/ingresos corrientes 2013–2027 y proyectos complementarios separados.
+- Programas de actividades centrales/comunes y cuadros parciales de cargos 2026/2027, sin inferir eficiencia ni dotación total.
+- Stock de deuda provisorio al 30/09/2026: US$1.994,6 millones, Cuadro 2.7, PDF p. 68. Pendientes explícitos: perímetro exclusivo Subte/Policía, padrón histórico y total homogéneo de cargos. No se imputan cifras.
+- PR independiente preparado por pedido del propietario; no se publica en producción sin autorización.
+
 ## 2026-10-12 — v7 Parte A · preparación del stream
 
 - Saldos fiscales separados de ingresos y gastos, con colores coherentes en claro y oscuro; tabla histórica móvil compacta, barras de gasto violetas y selector de tema con un único icono.

@@ -224,7 +224,7 @@ function sourcePageFor(href){
 }
 function cleanCitizenSources(fragment){
  for(const a of [...fragment.querySelectorAll('a[href]')]){
-  const href=a.getAttribute('href');if(href.startsWith('#')||a.hasAttribute('data-citizen-download'))continue;
+  const href=a.getAttribute('href');if(href.startsWith('#')||a.hasAttribute('data-citizen-download')||a.hasAttribute('data-depth-download'))continue;
   if(/\.(?:json|csv)(?:[?#]|$)/i.test(href)||a.hasAttribute('download')&&!/\.(?:pdf|xlsx?|zip)(?:[?#]|$)/i.test(href)){a.remove();continue;}
   if(/\.(?:xlsx?|zip|pdf)(?:[?#]|$)/i.test(href)){
    // Keep the official organigram's document link: it has a direct visual purpose.
