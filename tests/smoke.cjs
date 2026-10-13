@@ -66,6 +66,7 @@ const routes=['#inicio','#proyecto-2027?vista=summary','#proyecto-2027?vista=exp
  await require('./october-reading.cjs')({page,base});
  await require('./audit-reading.cjs')({page,base});
  await require('./composition-reading.cjs')(page,base);
+ await require('./pre-stream-reading.cjs')({page,base});
  await require('./budget-depth-reading.cjs')({page,base});
  await require('./theme-route-reading.cjs')({page,base});
  const catalog=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/index.json')));

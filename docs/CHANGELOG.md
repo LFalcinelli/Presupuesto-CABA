@@ -1,5 +1,15 @@
 # Cambios
 
+## 2026-10-12 — v8 · presentación combinada de A y B
+
+- Se integra main (Parte A publicada) en el PR 21, conservando ambas entregas y sin fusionar el borrador a producción.
+- Ejecución 2025 ordenada por ejecutado/votado; ampliado al cierre como medida secundaria, con advertencia y etiquetas de cambios de dependencia de 2026.
+- Aperturas: el proyecto 2027 queda como punto aislado; la línea de ejecución termina en 2025. No hay un conteo homogéneo de proyecto 2026 cargado en estos datasets; no se infiere eliminación de unidades.
+- Cargos: nueve pares comparables visibles, cantidades de ambos proyectos y variaciones; las trece áreas restantes indican por qué no reciben comparación.
+- Nombres centralizados en las nuevas vistas y un CSV de lectura separado; JSON/CSV de fuente sin cambios. Singular de programa corregido.
+- Otros servicios: las 290 fichas financieras no abren partidas parciales; se aclara en el detalle sin inferir una composición.
+- Suite completa sobre A+B, prueba del corte entre fuentes y capturas de las siete lecturas a 375 px en ambos temas.
+
 ## 2026-10-12 — v7 Parte B · lecturas de toda la Ciudad
 
 - Ejecución por jurisdicción en 2025 y primeros semestres 2025/2026; se bloquean variaciones de alcance no confirmado.
@@ -8,6 +18,14 @@
 - Programas de actividades centrales/comunes y cuadros parciales de cargos 2026/2027, sin inferir eficiencia ni dotación total.
 - Stock de deuda provisorio al 30/09/2026: US$1.994,6 millones, Cuadro 2.7, PDF p. 68. Pendientes explícitos: perímetro exclusivo Subte/Policía, padrón histórico y total homogéneo de cargos. No se imputan cifras.
 - PR independiente preparado por pedido del propietario; no se publica en producción sin autorización.
+
+## 2026-10-12 — v7 Parte A · preparación del stream
+
+- Saldos fiscales separados de ingresos y gastos, con colores coherentes en claro y oscuro; tabla histórica móvil compacta, barras de gasto violetas y selector de tema con un único icono.
+- Impuestos propios 2027 por habitante ($5,40 millones), apertura de Inmuebles recaudada en 2025 y Patentes visibles; importes, páginas y cálculos descargables. Se evita presentar un promedio como impuesto individual o asegurar traslado íntegro a precios.
+- Directorio ordenable por ampliación nominal durante 2026 (+14,6% en toda la Ciudad). Se conservan las advertencias de cambios de alcance.
+- Buscador de los 499 programas, además de áreas y unidades; fichas enlazables con programa seleccionado. Canal de aportes preparado y oculto por falta de destino.
+- PR independiente con vista previa; no se modifica producción sin autorización.
 
 
 ## 2026-10-12 — Correcciones v5 de móvil, contraste y destacados

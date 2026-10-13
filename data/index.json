@@ -1069,6 +1069,34 @@
       ]
     },
     {
+      "id": "tax-reference-2027",
+      "name": "Impuestos por habitante y apertura de Inmuebles",
+      "path": "data/revenue/tax-reference-2027.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-12",
+      "source": "Documentos oficiales ya cargados; página y archivo en cada registro.",
+      "type": "derived",
+      "description": "Impuestos por habitante y apertura de Inmuebles",
+      "files": [
+        "data/revenue/tax-reference-2027.json",
+        "data/revenue/tax-reference-2027.csv"
+      ]
+    },
+    {
+      "id": "program-index-2027",
+      "name": "Índice de programas 2027",
+      "path": "data/budget/2027/program-index.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-12",
+      "source": "Documentos oficiales ya cargados; página y archivo en cada registro.",
+      "type": "derived",
+      "description": "Índice de programas 2027",
+      "files": [
+        "data/budget/2027/program-index.json",
+        "data/budget/2027/program-index.csv"
+      ]
+    },
+    {
       "id": "budget-depth-2027",
       "name": "Lecturas presupuestarias de toda la Ciudad",
       "path": "data/budget/2027/budget-depth.json",
@@ -1079,7 +1107,8 @@
       "description": "Ejecución por área, aperturas históricas, servicios por principal, transferencias, intereses, conducción y cuadros parciales de cargos.",
       "files": [
         "data/budget/2027/budget-depth.json",
-        "data/budget/2027/budget-depth.csv"
+        "data/budget/2027/budget-depth.csv",
+        "data/budget/2027/budget-depth-display.csv"
       ]
     }
   ],
