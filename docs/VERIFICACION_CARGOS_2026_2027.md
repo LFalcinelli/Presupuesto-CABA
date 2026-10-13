@@ -37,7 +37,7 @@ Las páginas son las posiciones del PDF, contadas desde 1. «Sin fila» identifi
 
 Los 24 cuadros conservan las mismas diez columnas, en el mismo orden: AAE, AAS, ACI, EME, GGU, IVE, SGM, TIC, Carrera de Enfermería y Técnico-Profesional de Salud, y Otros Ordenamientos Escalafonarios. También conservan la columna Total. La disposición gráfica y el código Ent cambian, pero no desaparece ninguna columna del cálculo. «Otros ordenamientos» está incluido en ambas sumas.
 
-Las notas de ambos años excluyen autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente y plantas transitorias. Salud incluye la nota de enfermería de la Ley 6767 en ambos años. Seguridad no informa con estos cuadros la dotación policial.
+Las notas de ambos años excluyen autoridades superiores, plantas de gabinete, carrera gerencial, carrera profesional hospitalaria, personal docente y plantas transitorias. Salud 2026 agrega la nota «Incluye Personal de Enfermería - Ley N° 6767» en p. 25. En 2027 se conserva la columna de enfermería/técnico-profesional, pero esa aclaración al pie no está impresa. Se registra la diferencia de nota sin inferir una equivalencia normativa completa ni excluir esa columna de la suma. Seguridad no informa con estos cuadros la dotación policial.
 
 Que los encabezados sean iguales descarta una pérdida mecánica de columnas en la extracción; no demuestra que cada persona mantenga su escalafón ni que todas las funciones tengan idéntico alcance. Hay cambios de códigos, agrupaciones y unidades incluidas. No se atribuyen las diferencias a despidos, eficiencia ni reducción de la planta real. Jefatura de Gobierno conserva su exclusión de la comparación, según la revisión anterior.
 
