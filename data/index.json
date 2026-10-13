@@ -1067,6 +1067,34 @@
       "files": [
         "data/budget/2027/areas/99.json"
       ]
+    },
+    {
+      "id": "tax-reference-2027",
+      "name": "Impuestos por habitante y apertura de Inmuebles",
+      "path": "data/revenue/tax-reference-2027.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-12",
+      "source": "Documentos oficiales ya cargados; página y archivo en cada registro.",
+      "type": "derived",
+      "description": "Impuestos por habitante y apertura de Inmuebles",
+      "files": [
+        "data/revenue/tax-reference-2027.json",
+        "data/revenue/tax-reference-2027.csv"
+      ]
+    },
+    {
+      "id": "program-index-2027",
+      "name": "Índice de programas 2027",
+      "path": "data/budget/2027/program-index.json",
+      "period": "2027-project",
+      "lastUpdate": "2026-10-12",
+      "source": "Documentos oficiales ya cargados; página y archivo en cada registro.",
+      "type": "derived",
+      "description": "Índice de programas 2027",
+      "files": [
+        "data/budget/2027/program-index.json",
+        "data/budget/2027/program-index.csv"
+      ]
     }
   ],
   "resources": {

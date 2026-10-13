@@ -7,21 +7,21 @@ ensureViewData=async function(view,period){
 };
 function areaReportName(name){return name.replace(/^Htal\.\s*/i,'Hospital ');}
 function areaSearchNorm(text){return text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}
-function areaReportFind(id){return [...(state.areaReports?.areas||[]),...(state.areaReports?.units||[])].find(r=>r.id===id);}
+function areaReportFind(id){return [...(state.areaReports?.areas||[]),...(state.areaReports?.units||[]),...(state.programIndex?.programs||[])].find(r=>r.id===id);}
 function areaSearchResults(query){
- const words=areaSearchNorm(query).split(' ').filter(Boolean),all=[...state.areaReports.areas,...state.areaReports.units];
+ const words=areaSearchNorm(query).split(' ').filter(Boolean),all=[...state.areaReports.areas,...state.areaReports.units,...(state.programIndex?.programs||[])];
  return all.filter(r=>words.every(w=>areaSearchNorm(areaReportName(r.name)+' '+(r.parentName||'')).includes(w))).sort((a,b)=>{
   const exact=r=>areaSearchNorm(areaReportName(r.name)).includes(areaSearchNorm(query));
-  return Number(exact(b))-Number(exact(a))||Number(a.kind==='unit')-Number(b.kind==='unit')||a.name.localeCompare(b.name,'es');
+  return Number(exact(b))-Number(exact(a))||({area:0,unit:1,program:2}[a.kind])-({area:0,unit:1,program:2}[b.kind])||a.name.localeCompare(b.name,'es');
  });
 }
 function areaResultMarkup(query){
- if(areaSearchNorm(query).length<2)return '<p class="area-search-hint">Podés buscar un ministerio, un hospital o el nombre de otra unidad ejecutora.</p>';
+ if(areaSearchNorm(query).length<2)return '<p class="area-search-hint">Podés buscar un ministerio, un hospital o un programa como Servicios de Higiene Urbana.</p>';
  const results=areaSearchResults(query),shown=results.slice(0,12);
- return `<p class="area-search-count" role="status">${results.length?`${results.length} coincidencias${results.length>12?' · se muestran las primeras 12; precisá el nombre para encontrar más':''}`:'No encontramos ese nombre. Probá con otra palabra.'}</p><div class="area-search-list">${shown.map(r=>`<button data-area-report="${E(r.id)}"><span><b>${E(areaReportName(r.name))}</b><small>${r.kind==='area'?'Área · presupuesto 2027 disponible':`Unidad ejecutora · ${E(r.parentName)} · ${r.detail2027?'detalle 2027 disponible':'base 2026'}`}</small></span><span aria-hidden="true">↗</span></button>`).join('')}</div>`;
+ return `<p class="area-search-count" role="status">${results.length?`${results.length} coincidencias${results.length>12?' · se muestran las primeras 12; precisá el nombre para encontrar más':''}`:'No encontramos ese nombre. Probá con otra palabra.'}</p><div class="area-search-list">${shown.map(r=>`<button data-area-report="${E(r.id)}"><span><b>${E(areaReportName(r.name))}</b><small>${r.kind==='program'?`Programa · ${E(r.parentName)} · proyecto 2027`:r.kind==='area'?'Área · presupuesto 2027 disponible':`Unidad ejecutora · ${E(r.parentName)} · ${r.detail2027?'detalle 2027 disponible':'base 2026'}`}</small></span><span aria-hidden="true">↗</span></button>`).join('')}</div>`;
 }
 function areaSearchMarkup(){
- return `<section class="area-search" aria-labelledby="area-search-title"><div><p class="eyebrow">INFORME POR ÁREA</p><h2 id="area-search-title">¿Qué cambia en el área que te interesa?</h2><p>Buscá su presupuesto, en qué se usaría y su gasto de años anteriores.</p></div><label for="area-report-search">Nombre del área o unidad ejecutora</label><div class="area-input-row"><input id="area-report-search" type="search" placeholder="Por ejemplo: Salud, Educación o Ramos Mejía" autocomplete="off" aria-controls="area-report-results"><button id="area-search-clear" aria-label="Borrar búsqueda" hidden>×</button></div><div class="area-search-examples" aria-label="Ejemplos"><button data-area-report="area-40">Salud ↗</button><button data-area-report="area-55">Educación ↗</button><button data-area-report="area-29">Seguridad ↗</button></div><div id="area-report-results">${areaResultMarkup('')}</div></section>`;
+ return `<section class="area-search" aria-labelledby="area-search-title"><div><p class="eyebrow">INFORME POR ÁREA</p><h2 id="area-search-title">¿Qué cambia en el área que te interesa?</h2><p>Buscá su presupuesto, en qué se usaría y su gasto de años anteriores.</p></div><label for="area-report-search">Nombre del área, unidad ejecutora o programa</label><div class="area-input-row"><input id="area-report-search" type="search" placeholder="Por ejemplo: Salud, Educación o Ramos Mejía" autocomplete="off" aria-controls="area-report-results"><button id="area-search-clear" aria-label="Borrar búsqueda" hidden>×</button></div><div class="area-search-examples" aria-label="Ejemplos"><button data-area-report="area-40">Salud ↗</button><button data-area-report="area-55">Educación ↗</button><button data-area-report="area-29">Seguridad ↗</button></div><div id="area-report-results">${areaResultMarkup('')}</div></section>`;
 }
 function areaDirection(rate){
  if(rate===null)return 'Sin una base comparable en 2026';

@@ -42,7 +42,7 @@ module.exports=async function compositionReading(page,base){
     assert.equal(await changes.locator('.change-row').count(),6);
     assert.equal(await page.locator('.income-composition .production-group').count(),1);
     assert.equal(await page.locator('.review-bar-children button').filter({hasText:'Sellos'}).count(),1);
-    assert(await page.locator('.review-bar-children').evaluate(e=>e.scrollWidth<=e.clientWidth+1));
+    assert(await page.locator('.production-group .review-bar-children').evaluate(e=>e.scrollWidth<=e.clientWidth+1));
     if(width===390){await page.locator('.review-bar-children button').first().click();await page.locator('#reading-detail-dialog[open]').waitFor();assert((await page.locator('#reading-detail-body').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Recurso estimado'));await page.locator('[data-reading-close]').click();}
     await page.locator('#project-revenue-mode').selectOption('taxRevenue');await ready();
     assert.equal(await changes.locator('.change-row').count(),4);

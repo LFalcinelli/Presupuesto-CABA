@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-10-12 — v7 Parte A · preparación del stream
+
+- Saldos fiscales separados de ingresos y gastos, con colores coherentes en claro y oscuro; tabla histórica móvil compacta, barras de gasto violetas y selector de tema con un único icono.
+- Impuestos propios 2027 por habitante ($5,40 millones), apertura de Inmuebles recaudada en 2025 y Patentes visibles; importes, páginas y cálculos descargables. Se evita presentar un promedio como impuesto individual o asegurar traslado íntegro a precios.
+- Directorio ordenable por ampliación nominal durante 2026 (+14,6% en toda la Ciudad). Se conservan las advertencias de cambios de alcance.
+- Buscador de los 499 programas, además de áreas y unidades; fichas enlazables con programa seleccionado. Canal de aportes preparado y oculto por falta de destino.
+- PR independiente con vista previa; no se modifica producción sin autorización.
+
+
 ## 2026-10-12 — Correcciones v5 de móvil, contraste y destacados
 
 - Modo oscuro coherente en resultados fiscales, treemaps, pistas de barras, tablas, mapas y lecturas históricas; tinta de las celdas elegida por contraste sobre el fondo real. Se corrige también la anotación histórica en tema claro.

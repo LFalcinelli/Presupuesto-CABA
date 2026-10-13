@@ -104,3 +104,10 @@ Las fuentes internacionales, presupuestos provinciales, denominadores, cambios d
 - Ampliación del 10/10/2026: 22 PDF jurisdiccionales 2027 y sus 22 antecedentes 2026. Nombres, número de páginas y SHA-256 en `sources` de cada `areas/<código>.json`; cada programa conserva páginas de narrativa, ficha financiera y financiación. No se publican los PDF de preparación ni se atribuyen URLs no verificadas.
 - Diferencias documentales y datos sin confirmar: `sourceIssues`, programas `pending` y `unmatched2026`. Jefatura de Gobierno conserva las diferencias de la planilla por unidad 2026 frente a sus fichas; Salud conserva las páginas de consolidación y subprogramas.
 - Mensaje general 2027, PDF pp. 31–32 (numeración impresa 20–21): escenario macroeconómico cualitativo. No se localizó una tasa numérica de inflación anual o diciembre/diciembre en la revisión de este documento. El 18% sigue identificado como supuesto elegido para la comparación.
+
+## Referencias ciudadanas v7
+
+- Tributos propios 2027 y sus siete componentes: Planilla 11, p. 183, del proyecto general ya registrado. Divisor: 3.121.707 habitantes usados por el sitio; no se interpreta como carga individual.
+- Inmuebles recaudado 2025: `4TO_TRIM_2025.pdf`, p. 5, descarga pública existente `sources/recursos-2025-4.pdf`. Incluye Inmobiliario, ABL y las dos contribuciones Ley 23.514.
+- Ampliación 2026: sancionado y vigente del archivo oficial del segundo trimestre, sumados sobre las 22 jurisdicciones fiscales.
+- Índice de programas: fuentes jurisdiccionales 2027 y página financiera conservadas por registro; no se añaden fuentes brutas. AGIP explica el alcance de Ingresos Brutos; la incidencia en precios se expresa como posibilidad.
