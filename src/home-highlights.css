@@ -21,3 +21,4 @@ body>header .theme-menu{margin:0;padding:0;border:0;background:transparent}body>
 .hero-references.home-tax-only{width:min(680px,100%)}
 
 #home-highlight-body footer{display:block;padding:8px 0 0;background:transparent;margin:14px 0 0;border-top:1px solid var(--line)}
+.highlight-method-detail .highlight-group h3{display:block;font-size:19px;line-height:1.4}.highlight-method-detail .highlight-group h3>strong{display:block;margin-top:6px;white-space:normal}
