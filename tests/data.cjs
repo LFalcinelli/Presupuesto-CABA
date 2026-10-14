@@ -35,3 +35,5 @@ require('./budget-depth.cjs');
 require('./budget-search.cjs');
 
 require('./home-highlights.cjs');
+
+require('./brand-icons.cjs');

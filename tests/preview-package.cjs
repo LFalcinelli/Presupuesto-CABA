@@ -3,7 +3,7 @@ const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'caba-preview-')),script=path.res
 try{
  for(const dir of ['production/dist','dist/config','previous-site/preview/pr-4'])fs.mkdirSync(path.join(tmp,dir),{recursive:true});
  fs.writeFileSync(path.join(tmp,'production/dist/index.html'),'PRODUCCIÓN PUBLICADA');
- fs.writeFileSync(path.join(tmp,'dist/index.html'),'<html><head><link rel="canonical" href="https://example.com/site/"></head><body>EN REVISIÓN</body></html>');
+ fs.writeFileSync(path.join(tmp,'dist/index.html'),'<html><head><link rel="canonical" href="https://example.com/site/"><meta property="og:image" content="https://example.com/site/assets/social-preview-official.png"></head><body>EN REVISIÓN</body></html>');
  fs.writeFileSync(path.join(tmp,'dist/config/site.json'),JSON.stringify({publicUrl:'https://example.com/site/'}));
  fs.writeFileSync(path.join(tmp,'previous-site/preview/pr-4/index.html'),'PREVIEW ANTERIOR');
  const run=trusted=>execFileSync(process.execPath,[script],{cwd:tmp,env:{...process.env,PREVIEW_PR:'18',PREVIEW_SHA:'abc',PREVIEW_TRUSTED:String(trusted),GITHUB_STEP_SUMMARY:''},encoding:'utf8'});
@@ -14,6 +14,7 @@ try{
  const preview=path.join(output,'preview/pr-18');
  assert.equal(JSON.parse(fs.readFileSync(path.join(preview,'config/site.json'))).publicUrl,'https://example.com/site/preview/pr-18/');
  assert(fs.readFileSync(path.join(preview,'index.html'),'utf8').includes('noindex,nofollow'));
+ assert(fs.readFileSync(path.join(preview,'index.html'),'utf8').includes('https://example.com/site/preview/pr-18/assets/social-preview-official.png'));
  assert.equal(JSON.parse(fs.readFileSync(path.join(preview,'preview.json'))).sha,'abc');
  console.log('Preview: producción intacta, PR separado, versiones anteriores conservadas y PR externo sin permisos de publicación.');
 }finally{fs.rmSync(tmp,{recursive:true,force:true});}
