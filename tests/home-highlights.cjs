@@ -19,3 +19,5 @@ const currentRows=hist.series.currentPrimary.rows,realAt=y=>currentRows.find(r=>
 assert.equal(card(2).providers.amount,600000000000);assert(card(2).financialResult2027>0);assert(card(2).semesters.every(r=>r.financialResult>0));assert.equal(card(2).interest2027+card(2).financialResult2027,card(2).primaryResult2027);
 for(const c of [card(3),card(4)])for(const g of c.groups)for(const r of g.components){if(r.realVariationInitial!==null&&r.realVariationInitial!==undefined)assert(Math.abs(r.realVariationInitial-(r.grossAmount??r.amount)/r.initial2026/1.18*100+100)<1e-10);for(const id of r.programIds)assert(index.entries.some(e=>e.id===id));}
 console.log('Viñetas: fuentes, sumas exactas, PASO estimada, récord real y programas sin doble conteo verificados.');
+
+assert.equal(card(1).components.reduce((v,r)=>v+r.amount,0),card(1).amount);assert.equal(card(2).closing2026Review.verifiedDeficit,false);assert.equal(card(2).closing2026Review.forecastFinancialResult,null);assert.equal(card(2).closing2026Review.budgetFinancialResult,4254000000);assert.deepEqual(card(2).closing2026Review.source.pdfPages,[66,153,157]);

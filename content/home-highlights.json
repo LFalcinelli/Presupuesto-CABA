@@ -1,11 +1,58 @@
 {
   "title": "¿En qué quiere gastar tus impuestos la Ciudad en 2027?",
-  "subtitle": "Lo que se puede recortar",
-  "subtext": "Para bajarte los impuestos",
+  "subtitle": "LO QUE SE PUEDE RECORTAR PARA BAJARTE LOS IMPUESTOS",
+  "subtext": "",
   "cards": [
-    {"id":1,"title":"RÉCORD HISTÓRICO DE GASTO","text":"La Ciudad propone para 2027 el gasto corriente más alto de su historia. Y recorta la inversión.","link":"¿En qué se va?","topic":"personal"},
-    {"id":2,"title":"LAS CUENTAS NO CIERRAN","text":"2025 terminó en rojo, en 2026 sobra cada vez menos y para 2027 pide {bonds} en bonos para pagar deudas con proveedores.","link":"¿Qué muestran las cuentas?","topic":"deuda"},
-    {"id":3,"title":"PLATA PARA PUBLICIDAD, EVENTOS Y PASO","text":"{total} en mostrarse, entretener y votar dos veces.","link":"¿En qué se gasta?","topic":"publicidad"},
-    {"id":4,"title":"LA MISMA TAREA, MUCHAS OFICINAS","text":"{total} en conducción, vivienda y agenda verde repartidos en varias estructuras.","link":"¿Cuántas oficinas hacen lo mismo?","topic":"burocracia"}
-  ]
+    {
+      "id": 1,
+      "title": "RÉCORD HISTÓRICO DE GASTO",
+      "text": "La Ciudad propone para 2027 el gasto corriente más alto de su historia. Y recorta la inversión.",
+      "link": "¿En qué se va?",
+      "topic": "personal"
+    },
+    {
+      "id": 2,
+      "title": "CON DÉFICIT Y DEUDA",
+      "text": "Las cuentas no cierran: 2025 terminó en rojo, en 2026 sobra cada vez menos y se piden bonos para pagar proveedores.",
+      "link": "¿Qué muestran las cuentas?",
+      "topic": "deuda"
+    },
+    {
+      "id": 3,
+      "title": "PLATA PARA PUBLICIDAD, EVENTOS Y PASO",
+      "text": "{total} en pauta publicitaria, eventos y elecciones.",
+      "link": "¿En qué se gasta?",
+      "topic": "publicidad"
+    },
+    {
+      "id": 4,
+      "title": "LA MISMA TAREA, MUCHAS OFICINAS",
+      "text": "{total} en burocracia, edificación de villas y áreas de agenda verde repetidas en varias estructuras.",
+      "link": "¿Cuántas oficinas hacen lo mismo?",
+      "topic": "burocracia"
+    }
+  ],
+  "closing2026Review": {
+    "status": "no-verified-deficit-projection",
+    "verifiedDeficit": false,
+    "forecastFinancialResult": null,
+    "budgetFinancialResult": 4254000000,
+    "budgetStage": "Crédito vigente al 30/06/2026",
+    "finding": "No se encontró una proyección oficial de déficit al cierre de 2026. El Cuadro 5.1 muestra un saldo presupuestario positivo de $4.254,0 millones para el vigente a junio, no una estimación de cierre. El mismo valor aparece en el Cuadro 2.6. Para 2027, el Mensaje prevé un superávit financiero de $1.316,4 millones.",
+    "source": {
+      "document": "3083 - PDLEY 36 - MJE 42 (Presupuesto 2027).pdf",
+      "fileSha256": "feb7581d738222e3b2a14dab1558f820c027efb7131087c2a69edff8f722513b",
+      "pdfPages": [
+        66,
+        153,
+        157
+      ],
+      "printedPages": [
+        55,
+        142,
+        146
+      ],
+      "reference": "Cuadros 2.6 y 5.1; capítulo 5.1"
+    }
+  }
 }
