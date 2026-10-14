@@ -15,6 +15,7 @@ assert.equal(publicity.amount,233014989972);assert.equal(events.amount,110658651
 assert.equal(events.components.filter(c=>c.programIds.includes('program-50-0-0-3190-81')).length,1,'Usina counted once');
 assert.equal(paso.amount,paso.estimate.electoralTotal*.35);assert.equal(Math.round(paso.amount/1e6),28845);assert.equal(paso.estimate.electoralTotal,82414878498);assert.match(paso.method,/no separa PASO/);
 assert.equal(card(1).amount,hist.series.currentPrimary.rows.at(-1).nominal);assert.equal(card(1).perCapita,card(1).amount/card(1).population.value);assert(card(1).abovePreviousRecord>0&&card(1).abovePreviousRecord<1);
+const currentRows=hist.series.currentPrimary.rows,realAt=y=>currentRows.find(r=>r.year===y).real;assert.equal(card(1).realGrowth2025,(realAt(2027)/realAt(2025)-1)*100);assert.equal(card(1).realGrowth2025.toFixed(1),'8.3');
 assert.equal(card(2).providers.amount,600000000000);assert(card(2).financialResult2027>0);assert(card(2).semesters.every(r=>r.financialResult>0));assert.equal(card(2).interest2027+card(2).financialResult2027,card(2).primaryResult2027);
 for(const c of [card(3),card(4)])for(const g of c.groups)for(const r of g.components){if(r.realVariationInitial!==null&&r.realVariationInitial!==undefined)assert(Math.abs(r.realVariationInitial-(r.grossAmount??r.amount)/r.initial2026/1.18*100+100)<1e-10);for(const id of r.programIds)assert(index.entries.some(e=>e.id===id));}
 console.log('Viñetas: fuentes, sumas exactas, PASO estimada, récord real y programas sin doble conteo verificados.');

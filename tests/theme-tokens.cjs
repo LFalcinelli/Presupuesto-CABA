@@ -6,6 +6,7 @@ for(const theme of themes)for(const bg of ['--bg','--surface','--elevated']){
  assert(ratio(theme['--focus'],theme[bg])>=3,'focus contrast');assert(ratio(theme['--plot'],theme[bg])>=3,'thin data bars contrast');
 }
 for(const file of fs.readdirSync(path.join(root,'src')).filter(f=>f.endsWith('.css')&&f!=='theme-tokens.css'))assert(!/:root\s*\{/.test(fs.readFileSync(path.join(root,'src',file),'utf8')),file+' duplicates theme tokens');
-const context=vm.createContext({});vm.runInContext(fs.readFileSync(path.join(root,'src/display-names.js'),'utf8'),context);
+const context=vm.createContext({});vm.runInContext(fs.readFileSync(path.join(root,'src/citizen-vocabulary.js'),'utf8'),context);vm.runInContext(fs.readFileSync(path.join(root,'src/display-names.js'),'utf8'),context);
 for(const [raw,expected] of [['Educacion Media','Educación Media'],['Operacion del Reciclado','Operación del Reciclado'],['Vía Publica','Vía Pública'],['Ministerio de Espacio Publico','Ministerio de Espacio Público'],['Gestion del Transito y Señalizacion','Gestión del Tránsito y Señalización']])assert.equal(context.citizenDisplayName(raw),expected);
+for(const raw of ['Deuda Pública - Intereses y Gastos','Servicio de la deuda','Intereses y gastos de la deuda','Deuda pública · intereses y otros gastos'])assert.equal(context.citizenDisplayName(raw),'Intereses y otros gastos de la deuda');assert.equal(context.citizenDisplayName('Intereses de la deuda'),'Intereses de la deuda');assert.equal(context.citizenVocabularyText('Gasto corriente sin intereses'),'Gasto corriente (sin intereses)');
 console.log('Temas: tokens únicos, texto AA, barras/foco ≥3:1 y diccionario de nombres verificados.');

@@ -9,23 +9,26 @@ const citizenGlossary={
  services:{label:'Servicios contratados',official:'Servicios no personales · inciso 3. Luz, agua y gas; limpieza y mantenimiento; recolección; alquileres; consultorías; publicidad y otros servicios que el Estado contrata a terceros.',question:'servicios'},
  equipment:{label:'Obras y equipamiento',official:'Bienes de uso · inciso 4',question:'funcionamiento'},
  transfers:{label:'Transferencias',official:'Transferencias · inciso 5',question:'transferencias'},
- operation:{label:'Funcionamiento',official:'Gastos corrientes sin intereses; en la cuenta fiscal incluye transferencias corrientes',question:'funcionamiento'},
+ operation:{label:'Gasto corriente (sin intereses)',official:'Incluye sueldos, insumos, servicios contratados y transferencias corrientes; excluye inversión e intereses de la deuda',question:'funcionamiento'},
  investment:{label:'Inversión',official:'Gastos de capital',question:'funcionamiento'},
  federal:{label:'Coparticipación federal',official:'Tributos de jurisdicción nacional',question:'coparticipacion'},
  property:{label:'Intereses y rentas cobrados',official:'Rentas de la propiedad',question:'rentas'}
 };
 const citizenVocabularyRules=[
+ [/Deuda p[uú]blica\s*[-·:]\s*intereses y (?:otros )?gastos|Deuda: intereses y gastos|Intereses y (?:otros )?(?:costos|gastos) de la deuda/gi,'Intereses y otros gastos de la deuda'],
+ [/^Servicio de la deuda$/i,'Intereses y otros gastos de la deuda'],
  [/presupuesto (?:inicial|aprobado|sancionado)/gi,'presupuesto votado'],
  [/presupuesto (?:actualizado|vigente)/gi,'presupuesto ampliado'],
  [/crédito inicial/gi,'presupuesto votado'],[/\bactualizado(?=\s*(?:[·;]|$))/gi,'ampliado'],
  [/crédito vigente/gi,'presupuesto ampliado'],[/\bsancionado\b/gi,'votado'],[/\bsanción\b/gi,'presupuesto votado'],
- [/gastos? devengados?/gi,'gasto ejecutado'],[/gastos? habituales(?:,? sin intereses)?/gi,'funcionamiento'],
- [/gastos? corrientes? sin intereses/gi,'funcionamiento'],[/gastos? de capital/gi,'inversión'],
+ [/gastos? devengados?/gi,'gasto ejecutado'],[/gastos? habituales(?:,? sin intereses)?/gi,'gasto corriente (sin intereses)'],
+ [/gastos? corrientes? sin intereses/gi,'gasto corriente (sin intereses)'],[/gastos? de capital/gi,'inversión'],
  [/servicios no personales/gi,'servicios contratados'],[/bienes de consumo/gi,'insumos'],[/bienes de uso/gi,'obras y equipamiento'],
  [/gastos en personal/gi,'sueldos del personal'],[/tributos de jurisdicción nacional/gi,'coparticipación federal'],[/rentas de la propiedad/gi,'intereses y rentas cobrados'],
  [/\bvigente\b/gi,'ampliado'],[/\bvigentes\b/gi,'ampliados'],[/\bactualizado(?= (?:a junio|al (?:30|31)))/gi,'ampliado'],
  [/Qué destinos ganan o pierden frente a la inflación/g,'Qué destinos suben o bajan, descontando la inflación']
 ];
+function fiscalDebtLabel(name){return /^(?:servicio de la deuda|deuda p[uú]blica\s*[-·:]\s*intereses y (?:otros )?gastos|deuda: intereses y gastos|intereses y (?:otros )?(?:gastos|costos) de la deuda)$/i.test(name.trim())?'Intereses y otros gastos de la deuda':name;}
 function citizenVocabularyText(text){
  let result=text;
  for(const [pattern,value] of citizenVocabularyRules)result=result.replace(pattern,match=>/^[A-ZÁÉÍÓÚ]/.test(match)?value[0].toUpperCase()+value.slice(1):value);

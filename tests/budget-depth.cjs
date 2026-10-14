@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const crypto=require('node:crypto'),vm=require('node:vm');
 for(const [file,hash] of [['budget-depth.json','21e53a11399b34696efc91a349eeb204f30af3a85f2e234943e35a653287a8d7'],['budget-depth.csv','20a19680b42f9111d5c56796f1f0bdc9c3dfb11f00885d246e16a1a36917b37f']])assert.equal(crypto.createHash('sha256').update(fs.readFileSync('data/budget/2027/'+file)).digest('hex'),hash,'V8 conserva cifras y fuentes');
-const names=vm.createContext({});vm.runInContext(fs.readFileSync('src/display-names.js','utf8'),names);
+const names=vm.createContext({});vm.runInContext(fs.readFileSync('src/citizen-vocabulary.js','utf8'),names);vm.runInContext(fs.readFileSync('src/display-names.js','utf8'),names);
 for(const [raw,label] of [['Min.Infraestructura','Ministerio de Movilidad e Infraestructura'],['Tribunal superior de Justicia','Tribunal Superior de Justicia'],['Defensoria del Pueblo','Defensoría del Pueblo']])assert.equal(names.budgetDepthDisplayName(raw),label);
 assert(fs.readFileSync('data/budget/2027/budget-depth-display.csv','utf8').includes('Ministerio de Movilidad e Infraestructura'));
 const read=p=>JSON.parse(fs.readFileSync(p)),d=read('data/budget/2027/budget-depth.json'),areas=read('data/budget/2027/area-reports.json').areas;
