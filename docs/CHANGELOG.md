@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-10-14 — v12 · cuatro lecturas de Inicio
+
+- Nuevo bloque de cuatro viñetas, buscador global compacto y pop-ups accesibles compartibles. El Inicio anterior conserva sus contenidos; título principal único, animación suave de 240 ms/10 px sin contenido oculto y respeto de reducir movimiento.
+- Archivo generado único con componentes, programas, exclusiones, fuentes, fórmulas y hashes. Publicidad/comunicación $233.015 M; eventos sin duplicar Usina $110.659 M; PASO estimada $28.845 M; viñeta 3 $372.519 M. Las diferencias respecto de la propuesta se documentan en INICIO_VINETAS.md.
+- Operación del Reciclado encabeza agenda verde, sin doble conteo en conducción. Agenda verde $489.472 M al sumar pesos exactos; la suma de filas redondeadas da $489.473 M. Viñeta 4 $2.113.626 M (≈ $2,11 billones).
+- Récord acotado a gasto corriente sin intereses real de la serie disponible; cierre, semestres y proyecto separados. Los bonos a proveedores y Belgrano Sur siguen fuera del gasto presupuestario. PASO se explica como supuesto de simulación del 35%, sin fuente histórica verificada ni ahorro garantizado.
+- Evolución abre en gasto corriente sin intereses y respeta las series explícitas en URL, también gasto total. Se completa el gráfico de barras de personal por las 22 áreas solicitado en v11.
+- Pruebas de datos, doble conteo, dos temas, 375/1440 px, teclado, enlaces recargables, búsqueda, scroll rápido y movimiento reducido incorporadas al CI. Publicación directa autorizada por el propietario.
+
 ## 2026-10-14 — v11 · buscador, personal y publicidad
 
 - Buscador global accesible con lupa, `/`, panel móvil, filtros, más resultados, etiquetas temáticas editables y enlaces compartibles. Motor común en Resumen y Áreas; entradas 2026/2027 deduplicadas por códigos y correspondencias, con continuidades pendientes sin inferir eliminaciones.

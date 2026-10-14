@@ -25,9 +25,9 @@ explorerShell=function(){
 };
 const polishedSyncRoute=syncRoute;
 const polishedReadRoute=readRoute;
-readRoute=function(){polishedReadRoute();if(state.view==='history'){const q=new URLSearchParams(location.hash.split('?')[1]||'');state.executionSeries=['currentPrimary','capital','revenue'].includes(q.get('serie'))?q.get('serie'):'total';}};
+readRoute=function(){polishedReadRoute();if(state.view==='history'){const q=new URLSearchParams(location.hash.split('?')[1]||'');state.executionSeries=['total','currentPrimary','capital','revenue'].includes(q.get('serie'))?q.get('serie'):'currentPrimary';}};
 syncRoute=function(){
- polishedSyncRoute();if(state.view==='history'){const q=new URLSearchParams(location.hash.split('?')[1]||'');if(['currentPrimary','capital','revenue'].includes(state.executionSeries))q.set('serie',state.executionSeries);else q.delete('serie');history.replaceState(null,'','#evolucion'+(q.size?'?'+q:''));return;}if(state.view!=='landing')return;
+ polishedSyncRoute();if(state.view==='history'){const q=new URLSearchParams(location.hash.split('?')[1]||'');if(['total','currentPrimary','capital','revenue'].includes(state.executionSeries))q.set('serie',state.executionSeries);else q.delete('serie');history.replaceState(null,'','#evolucion'+(q.size?'?'+q:''));return;}if(state.view!=='landing')return;
  const q=new URLSearchParams();
  if(state.fiscalPerspective&&state.fiscalPerspective!=='purpose')q.set('mapa',state.fiscalPerspective);
  if(state.fiscalSelected)q.set('nodo',state.fiscalSelected);
@@ -143,7 +143,7 @@ enhanceVisuals=function(view){
  polishedEnhance(view);if(view==='landing')mountFiscalMap();polishChartLines();
  revealObserver?.disconnect();
  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver'in window))return;
- revealObserver=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('reveal-visible');revealObserver.unobserve(entry.target);}},{threshold:.06});
+ revealObserver=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('reveal-visible');revealObserver.unobserve(entry.target);}},{threshold:0,rootMargin:'0px 0px 20px 0px'});
  for(const element of document.querySelectorAll('.citizen-home > section,.history-page > .chart-panel,.project-spending > .treemap-figure')){
   if(element.getBoundingClientRect().top>innerHeight){element.classList.add('reveal-ready');revealObserver.observe(element);}
  }

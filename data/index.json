@@ -1149,6 +1149,18 @@
       "files": [
         "data/revenue/increases-2027.json"
       ]
+    },
+    {
+      "id": "home-highlights-2027",
+      "name": "Lecturas de Inicio 2027",
+      "path": "data/home-highlights-2027.json",
+      "period": "2027",
+      "type": "derived",
+      "description": "Viñetas: componentes, fórmulas, exclusiones, estimación PASO y fuentes conciliadas.",
+      "files": [
+        "data/home-highlights-2027.json"
+      ],
+      "source": "Proyecto 2027 y fichas jurisdiccionales; ejecución GCBA 2025/2026; serie oficial IDECBA. Referencias completas en inputs y componentes."
     }
   ],
   "resources": {

@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 module.exports=async({page,base})=>{
  const h=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/history/execution-history.json'))),p=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/budget/2027/project.json')));
  const percentValue=n=>new Intl.NumberFormat('es-AR',{minimumFractionDigits:Math.abs(n)>=10?0:1,maximumFractionDigits:Math.abs(n)>=10?0:1}).format(n);
- const a=h.rows.find(r=>r.year===2005),b=h.rows.find(r=>r.year===2025),growth=percentValue((b.real/a.real-1)*100);
+ const a=h.series.currentPrimary.rows.find(r=>r.year===2005),b=h.series.currentPrimary.rows.find(r=>r.year===2025),growth=percentValue((b.real/a.real-1)*100);
  const ready=()=>page.waitForFunction(()=>document.querySelector('#content')?.getAttribute('aria-busy')==='false');
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:1000});await page.goto(base+'#inicio');await ready();
@@ -43,7 +43,7 @@ module.exports=async({page,base})=>{
   await page.reload();await ready();assert.equal(await page.locator('#execution-series').inputValue(),'revenue');assert((await page.locator('.history-chart-unit').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Recaudación total'));
   await page.locator('.history-values>summary').click();assert.equal(await page.locator('.history-compact tbody tr').count(),31);assert((await page.locator('.history-compact tbody tr').last().innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Propuesto'));assert(await page.locator('.history-values a[href$="sources/serie-aif-idecba.xlsx"]').count());
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-  await page.locator('#execution-series').selectOption('total');await ready();assert(!new URL(page.url()).hash.includes('serie='));assert.equal(await page.locator('.history-event-label a').count(),2);
+  await page.locator('#execution-series').selectOption('total');await ready();assert(new URL(page.url()).hash.includes('serie=total'));await page.reload();await ready();assert.equal(await page.locator('#execution-series').inputValue(),'total');assert.equal(await page.locator('.history-event-label a').count(),2);
   const tips=await page.locator('.execution-chart [data-execution-year]').evaluateAll(es=>es.map(e=>e.getAttribute('data-viz-tip')||e.getAttribute('aria-label')).join(' '));assert(!tips.includes('trimestre'));
   await page.locator('.dollar-perspective>summary').click();await page.locator('[data-usd-history="7"]').click();await ready();if(await page.locator('[data-usd-group=""]').count()){await page.locator('[data-usd-group=""]').click();await ready();}
   await page.locator('[data-usd-group="3"]').click();await ready();assert.equal(await page.locator('.usd-paired-bars article').count(),8);
