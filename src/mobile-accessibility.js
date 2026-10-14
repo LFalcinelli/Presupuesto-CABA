@@ -106,7 +106,7 @@ let previousScroll=0;
 window.addEventListener('scroll',()=>{const current=scrollY;if(!mobileView()||current<180||current<previousScroll-3)document.documentElement.classList.remove('nav-hidden');else if(current>previousScroll+3)document.documentElement.classList.add('nav-hidden');previousScroll=current;},{passive:true});
 matchMedia('(max-width: 650px)').addEventListener('change',()=>{if(state.dataset){state.navigationRequested=false;render();}});
 
-function spendingChartMode(){return state.spendingChart||((innerWidth<=650)?'bars':'treemap');}
+function spendingChartMode(){return state.spendingChart||'bars';}
 function spendingChartControls(){const mode=spendingChartMode();return `<div class="spending-chart-choice" role="group" aria-label="Gráfico de composición"><button class="small-btn" data-spending-chart="bars" aria-pressed="${mode==='bars'}">Barras</button><button class="small-btn" data-spending-chart="treemap" aria-pressed="${mode==='treemap'}">Rectángulos</button></div>`;}
 const mobileCompositionTreemap=compositionTreemap;
 compositionTreemap=function(items,options={}){if(options.badgeContext)return reviewTreemap(items,options);const spending=state.view==='home'||state.view==='project'&&state.projectTab==='expenses';if(!spending)return mobileCompositionTreemap(items,options);return spendingChartControls()+(spendingChartMode()==='bars'?reviewCompositionBars(items,options):mobileCompositionTreemap(items,options));};

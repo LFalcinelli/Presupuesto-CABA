@@ -13,7 +13,7 @@ function fiscalModel(){
  return {d,by,left,right,view};
 }
 function fiscalNode(n,model,depth=0){
- const {d,by}=model,total=n.side==='income'?d.totals.revenue:d.totals.expense,share=n.value/total*100,open=(state.fiscalExpanded||[]).includes(n.id),children=(n.children||[]).map(id=>by[id]).filter(Boolean),label=fiscalShortLabels[n.id]||n.label;
+ const {d,by}=model,total=n.side==='income'?d.totals.revenue:d.totals.expense,share=n.value/total*100,open=(state.fiscalExpanded||[]).includes(n.id),children=(n.children||[]).map(id=>by[id]).filter(Boolean).sort((a,b)=>b.value-a.value),label=fiscalShortLabels[n.id]||n.label;
  return `<article class="fm-node ${depth?'fm-child':'fm-root'} ${state.fiscalSelected===n.id?'selected':''}" data-fm-node="${n.id}" style="--branch:${n.color};--node-share:${share}%;--port-height:${share*1.2}px"><div class="fm-node-head"><button class="fm-select" data-fm-select="${n.id}" aria-pressed="${state.fiscalSelected===n.id}"><span>${E(label)}</span><strong>${state.fiscalReading==='hundred'?`$ ${fmt(share,1)}`:short(n.value)}</strong></button>${children.length?`<button class="fm-expand" data-fm-expand="${n.id}" aria-expanded="${open}" aria-controls="fm-children-${n.id}" aria-label="${open?'Cerrar':'Abrir'} componentes de ${E(label)}">${open?'−':'+'}</button>`:''}<i class="fm-port" aria-hidden="true"></i></div><div class="fm-share" aria-hidden="true"><i style="width:${share}%"></i></div>${children.length?`<div class="fm-children" id="fm-children-${n.id}" ${open?'':'hidden'}>${children.map(c=>fiscalNode(c,model,depth+1)).join('')}</div>`:''}</article>`;
 }
 function fiscalDetail(model){

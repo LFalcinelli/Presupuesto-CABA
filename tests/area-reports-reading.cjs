@@ -7,7 +7,7 @@ module.exports=async function({page,base}){
   await page.reload();await page.locator('.gov-kpis').waitFor();assert.equal(await page.locator('.government-areas h1').innerText().then(text=>text.replace(/\u00a0/g,' ')),'Ministerio de Salud');
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await page.goto(base+'#proyecto-2027?vista=summary');await page.locator('#area-report-search').waitFor();
-  await page.locator('#area-report-search').fill('ramos mejia');await page.locator('#area-report-results [data-area-report]').first().click();await page.locator('.gov-unit-detail').waitFor();
+  await page.locator('#area-report-search').fill('ramos mejia');await page.locator('#area-report-results [data-search-result]').first().click();await page.locator('.search-report [data-search-exit]').first().click();await page.locator('.gov-unit-detail').waitFor();
   assert((await page.locator('.gov-unit-detail h2').innerText().then(text=>text.replace(/\u00a0/g,' '))).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes('ramos mejia'));
   assert.equal(await page.locator('#area-report-dialog[open]').count(),0);assert(page.url().includes('area=40'));
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
