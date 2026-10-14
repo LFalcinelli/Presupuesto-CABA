@@ -3,7 +3,7 @@
 const fiscalPerspectives={purpose:'Para qué',who:'Quién',object:'Qué compra',economic:'Cómo se compone'};
 const fiscalColors=['#693ba0','#9272b3','#b099cd','#546b93','#657e7a','#aa8152','#938994'];
 const fiscalIncomeColors=['#216c59','#548f7d','#8db3a5','#537f91','#9ab3bd','#6e9286','#819d7d'];
-const fiscalShortLabels={rec_tributos_propios:'Impuestos propios',rec_rentas:'Rentas e intereses',fin_deuda:'Deuda: intereses y gastos',econ_corrientes:'Funcionamiento y servicios',econ_capital:'Inversión de capital',econ_intereses:'Intereses de la deuda'};
+const fiscalShortLabels={rec_tributos_propios:'Impuestos propios',rec_rentas:'Rentas e intereses',fin_deuda:'Intereses y otros gastos de la deuda',econ_corrientes:'Gasto corriente (sin intereses)',econ_capital:'Inversión de capital',econ_intereses:'Intereses de la deuda'};
 function fiscalModel(){
  const d=state.fiscalMap,by=Object.fromEntries(d.nodes.map(n=>[n.id,{...n}])),view=fiscalPerspectives[state.fiscalPerspective]?state.fiscalPerspective:'purpose';
  const left=d.nodes.filter(n=>n.parent==='rec_total'),allRight=d.nodes.filter(n=>n.parent==='gasto_total'&&n.view===view&&n.value>0).sort((a,b)=>b.value-a.value);

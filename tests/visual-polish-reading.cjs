@@ -18,7 +18,7 @@ module.exports=async({page,base})=>{
   const sum=await page.locator('.purpose-function-tile').evaluateAll(es=>es.reduce((v,e)=>v+Number(e.dataset.value),0));assert.equal(sum,p.breakdowns.purposes.find(r=>r.name==='Servicios Sociales').value);
   for(const tile of await page.locator('.purpose-function-tile,.purpose-rest-tile').all())assert(await tile.evaluate(e=>e.scrollHeight<=e.clientHeight+2),'Every function label fits');
   await page.locator('[data-project-function="13"]').click();await page.locator('#project-detail-dialog[open]').waitFor();assert((await page.locator('#project-dialog-body').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Educación'));await page.keyboard.press('Escape');
-  await page.locator('[data-project-debt]').click();await ready();assert((await page.locator('.project-spending').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Deuda'));
+  await page.locator('[data-project-debt]').click();await ready();assert((await page.locator('.project-spending').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Intereses y otros gastos de la deuda'));
   await page.goto(base+'#evolucion?periodo=2026-2');await ready();assert.equal(await page.locator('.explorer-location').count(),0);assert.equal(await page.locator('.price-label').isVisible(),false);
   assert((await page.locator('.history-impact').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes(growth));assert.equal(await page.locator('.history-year-label').count(),width<=650?8:31);assert.equal(await page.locator('.history-event-label a').count(),2);
   for(const selector of ['.legacy-history-bridge','.budget-history-bridge','.project-history-bridge'])assert.equal(await page.locator(selector).getAttribute('stroke-dasharray'),'3 5');
@@ -29,7 +29,7 @@ module.exports=async({page,base})=>{
   await page.locator('#execution-series').selectOption('currentPrimary');await ready();assert(new URL(page.url()).hash.includes('serie=currentPrimary'));
   const ca=h.series.currentPrimary.rows.find(r=>r.year===2005),cb=h.series.currentPrimary.rows.find(r=>r.year===2025),cg=percentValue((cb.real/ca.real-1)*100);
   assert((await page.locator('.history-impact').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes(cg));await page.locator('#execution-year').selectOption('2027');assert((await page.locator('#execution-point').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('autorización, no ejecución'));
-  await page.reload();await ready();assert.equal(await page.locator('#execution-series').inputValue(),'currentPrimary');assert((await page.locator('.history-chart-unit').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Funcionamiento'));
+  await page.reload();await ready();assert.equal(await page.locator('#execution-series').inputValue(),'currentPrimary');assert((await page.locator('.history-chart-unit').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Gasto corriente (sin intereses)'));
   await page.locator('#execution-series').selectOption('revenue');await ready();assert(new URL(page.url()).hash.includes('serie=revenue'));
   assert.equal(await page.locator('#execution-series option').last().getAttribute('value'),'revenue');assert.equal(await page.locator('.history-page h1').innerText().then(text=>text.replace(/\u00a0/g,' ')),'30 años de recaudación.');
   const ra=h.series.revenue.rows.find(r=>r.year===2005),rb=h.series.revenue.rows.find(r=>r.year===2025),rg=percentValue((rb.real/ra.real-1)*100);

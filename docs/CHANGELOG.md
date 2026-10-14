@@ -1,5 +1,13 @@
 # Cambios
 
+## 2026-10-14 — precisión y lectura del Inicio
+
+- Viñeta 1: +8,3% real frente a 2025 en tarjeta y pop-up, a partir del mismo campo calculado sobre currentPrimary. Se retira la baja de inversión de esa fila, conservándola en el texto y el detalle.
+- Gasto corriente (sin intereses) conserva su nombre en Evolución e incluye transferencias corrientes; Funcionamiento queda para el grupo de incisos 1–3 de las fichas. Intereses de la deuda (21410000) e Intereses y otros gastos de la deuda (inciso 7) se distinguen en Resumen, Áreas, CAIF y visualizaciones.
+- Logo original intacto a 88/64 px; encabezado de 104/80 px y selector de tema sin relleno heredado. Rótulos de las filas a 12 px; se mantiene el bloque compacto.
+- Pop-ups con importes abreviados y exactos en ayuda/descarga; límite de bonos mencionado una sola vez. Una sola portada: nombre pequeño sobre la pregunta, sin repetir la introducción anterior; el bloque de presupuesto y el resto de Inicio se conservan.
+- Pruebas de igualdad tarjeta/pop-up, fórmula histórica, rótulos de deuda, encabezado, tipografía, ambas paletas y 375/1440 px. Entrega mediante PR y vista previa, sin fusionar hasta nueva autorización.
+
 ## 2026-10-14 — logo oficial e íconos de Inicio
 
 - Encabezado con el PNG oficial blanco aportado, conservado byte a byte, a 64/48 px y enlazado a Inicio. Se retiran el águila anterior y el texto reconstruido. Favicon, Apple y redes derivan del logo completo, sin recoloración, recorte ni redibujo.
