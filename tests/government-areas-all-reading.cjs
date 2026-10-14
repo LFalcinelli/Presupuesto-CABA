@@ -20,7 +20,7 @@ module.exports=async function({page,base}){
     assert.equal(await page.locator('.gov-composition-stack').count(),['98','99'].includes(a.code)?0:1);if(!['98','99'].includes(a.code)){const groupCount=[['1','2','3'],['4'],['5'],['6','7','8']].filter(codes=>a.objects.some(o=>codes.includes(o.code)&&o.project2027>0)).length;assert.equal(await page.locator('.gov-composition-stack>i').count(),groupCount);assert(await page.locator('.gov-composition-stack').evaluate(n=>Math.abs([...n.children].reduce((sum,c)=>sum+c.getBoundingClientRect().width,0)+3*(n.children.length-1)-n.getBoundingClientRect().width)<1));}
     const detail=JSON.parse(fs.readFileSync(path.join(__dirname,'..',a.detailFile),'utf8'));
     assert.equal(await page.locator('.gov-ranking article').count(),detail.units.length);
-    assert((await page.locator('.gov-readings>ol>li').count())>=1);assert((await page.locator('.gov-readings>ol>li').count())<=5);if(width<=650)await page.locator('.mobile-section[data-section="gov-ranking"]>summary').click();assert.equal(await page.locator('.gov-ranking article:visible').count(),Math.min(8,detail.units.length));
+    assert((await page.locator('.gov-readings>ol>li').count())>=1);assert((await page.locator('.gov-readings>ol>li').count())<=6);if(width<=650)await page.locator('.mobile-section[data-section="gov-ranking"]>summary').click();assert.equal(await page.locator('.gov-ranking article:visible').count(),Math.min(8,detail.units.length));
     const invalid=await page.evaluate(()=>{
      const bad=[];for(const node of document.querySelectorAll('main *')){
       const values=[...node.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent);

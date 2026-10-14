@@ -31,3 +31,5 @@ require('./theme-tokens.cjs');
 require('./pre-stream.cjs');
 
 require('./budget-depth.cjs');
+
+require('./budget-search.cjs');

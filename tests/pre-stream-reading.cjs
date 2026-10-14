@@ -14,7 +14,7 @@ module.exports=async function({page,base}){
  }
  await page.goto(base+'#proyecto-2027?vista=areas&ordenAreas=amplification');await page.evaluate(()=>render());assert.equal(await page.locator('#gov-directory-sort').inputValue(),'amplification');assert.match(await page.locator('.gov-card-change').first().textContent(),/durante 2026/);
  for(const query of ['servicios de higiene urbana','AUTODROMO','Gestion Electoral']){
-  await page.goto(base+'#proyecto-2027?vista=summary');await page.evaluate(()=>render());await page.locator('#area-report-search').fill(query);const button=page.locator('#area-report-results button').filter({hasText:'Programa ·'}).first();assert.match(await button.innerText(),/Programa/);await button.click();await page.waitForSelector('#gov-program');assert.match(await page.locator('#gov-program').getAttribute('class'),/search-selected-program/);assert(new URLSearchParams((await page.url()).split('?')[1]).has('programa'));
+  await page.goto(base+'#proyecto-2027?vista=summary');await page.evaluate(()=>render());await page.locator('#area-report-search').fill(query);const button=page.locator('#area-report-results button').filter({hasText:'Programa ·'}).first();assert.match(await button.innerText(),/Programa/);await button.click();await page.locator('.search-report [data-search-exit]').first().click();await page.waitForSelector('#gov-program');assert.match(await page.locator('#gov-program').getAttribute('class'),/search-selected-program/);assert(new URLSearchParams((await page.url()).split('?')[1]).has('programa'));
  }
  console.log('Pre-stream: saldos separados y colores, tabla, tema, barras, ampliación y búsqueda de programas verificados.');
 };

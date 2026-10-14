@@ -1,5 +1,13 @@
 # Cambios
 
+## 2026-10-14 — v11 · buscador, personal y publicidad
+
+- Buscador global accesible con lupa, `/`, panel móvil, filtros, más resultados, etiquetas temáticas editables y enlaces compartibles. Motor común en Resumen y Áreas; entradas 2026/2027 deduplicadas por códigos y correspondencias, con continuidades pendientes sin inferir eliminaciones.
+- Partidas principales verificadas con el Excel oficial 2026 y las fichas 2027. Publicidad y propaganda suma $133.915.908.563 en 26 programas; primer destacado adicional de las áreas y ranking en Servicios. Personal suma $9.950.480.728.332 en ocho partidas, con vista propia, ambas bases, áreas, gabinete y fuentes; sin salarios individuales.
+- Cinco aumentos relevantes de ingresos, ordenados por aumento real frente al votado y con comparación frente al ampliado. Se conserva el supuesto de inflación de 18% y las advertencias de clasificación y traspasos.
+- Barras como opción inicial de gasto en ambos anchos; selección de Rectángulos en URL, ramas del mapa ordenadas por importe, montos abreviados y tarjeta de personal con base votada.
+- Fuentes originales, deflactores históricos y revisiones de cargos intactos. Pruebas de búsquedas, duplicados, teclado, enlace recargable, continuidad, contraste y fichas incorporadas al CI. Publicación al finalizar autorizada expresamente por el propietario.
+
 ## 2026-10-13 — v10 · verificación de cuadros de cargos
 
 - Auditoría de los 16 PDF de los ocho pares publicados: 2.501 páginas, 24 cuadros, extracción independiente por celdas y suma de unidades únicas. No se encuentran cuadros omitidos ni duplicados contados; se conservan las cifras y las ocho comparaciones parciales.

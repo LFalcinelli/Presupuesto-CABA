@@ -1110,6 +1110,45 @@
         "data/budget/2027/budget-depth.csv",
         "data/budget/2027/budget-depth-display.csv"
       ]
+    },
+    {
+      "id": "search-index-2027",
+      "name": "Buscador integrado 2026–2027",
+      "path": "data/budget/2027/search-index.json",
+      "period": "2026-2027",
+      "lastUpdate": "2026-10-13",
+      "source": "Ejecución oficial 2026 y documentos jurisdiccionales 2027; referencias en cada registro.",
+      "type": "derived",
+      "description": "Buscador integrado 2026–2027",
+      "files": [
+        "data/budget/2027/search-index.json"
+      ]
+    },
+    {
+      "id": "principals-2027",
+      "name": "Partidas principales de gastos 2026–2027",
+      "path": "data/budget/2027/principals.json",
+      "period": "2026-2027",
+      "lastUpdate": "2026-10-13",
+      "source": "Ejecución oficial 2026 y documentos jurisdiccionales 2027; referencias en cada registro.",
+      "type": "derived",
+      "description": "Partidas principales de gastos 2026–2027",
+      "files": [
+        "data/budget/2027/principals.json"
+      ]
+    },
+    {
+      "id": "revenue-increases-2027",
+      "name": "Cambios de ingresos por rubro 2027",
+      "path": "data/revenue/increases-2027.json",
+      "period": "2026-2027",
+      "lastUpdate": "2026-10-13",
+      "source": "Planillas 11/16 del Proyecto 2027 e informe oficial de ejecución 2026, páginas en cada registro.",
+      "type": "derived",
+      "description": "Rubros sin superponer subtotales. Aumento real = proyecto 2027 / 1,18 − base 2026. Umbral de presencia: $50.000 millones o 1% de los recursos; orden por aumento real en pesos de 2026.",
+      "files": [
+        "data/revenue/increases-2027.json"
+      ]
     }
   ],
   "resources": {
