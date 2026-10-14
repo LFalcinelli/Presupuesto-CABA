@@ -33,3 +33,5 @@ require('./pre-stream.cjs');
 require('./budget-depth.cjs');
 
 require('./budget-search.cjs');
+
+require('./home-highlights.cjs');

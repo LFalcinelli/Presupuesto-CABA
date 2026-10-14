@@ -1,0 +1,11 @@
+{
+  "title": "¿En qué quiere gastar tus impuestos la Ciudad en 2027?",
+  "subtitle": "Lo que se puede recortar",
+  "subtext": "Para bajarte los impuestos",
+  "cards": [
+    {"id":1,"title":"RÉCORD HISTÓRICO DE GASTO","text":"La Ciudad propone para 2027 el gasto corriente más alto de su historia. Y recorta la inversión.","link":"¿En qué se va?","topic":"personal"},
+    {"id":2,"title":"LAS CUENTAS NO CIERRAN","text":"2025 terminó en rojo, en 2026 sobra cada vez menos y para 2027 pide {bonds} en bonos para pagar deudas con proveedores.","link":"¿Qué muestran las cuentas?","topic":"deuda"},
+    {"id":3,"title":"PLATA PARA PUBLICIDAD, EVENTOS Y PASO","text":"{total} en mostrarse, entretener y votar dos veces.","link":"¿En qué se gasta?","topic":"publicidad"},
+    {"id":4,"title":"LA MISMA TAREA, MUCHAS OFICINAS","text":"{total} en conducción, vivienda y agenda verde repartidos en varias estructuras.","link":"¿Cuántas oficinas hacen lo mismo?","topic":"burocracia"}
+  ]
+}
