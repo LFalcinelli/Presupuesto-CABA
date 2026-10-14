@@ -1,5 +1,11 @@
 # Cambios
 
+## 2026-10-14 — ABL en los aumentos de ingresos 2027
+
+- Se suma ABL e Inmobiliario a «Lo que más aumenta en 2027», conservando los cinco rubros destacados y el orden por aumento real en pesos frente al votado 2026.
+- Se reutiliza el rubro Inmuebles del dataset conciliado: +11,9303% real y $131.420 millones frente al votado; +7,5771% y $86.844 millones frente al ampliado a junio. Mismo factor 1,18, importes y fuentes (Planilla 11, PDF p. 183; recursos 2026, p. 5), sin cambios de datos o metodología.
+- Se aclara que es recaudación prevista conjunta de ABL e Inmobiliario, no un aumento uniforme de las boletas. Se comprueban presencia, orden, cifras, contraste y lectura a 375/1440 px en ambos temas.
+
 ## 2026-10-14 — Inicio con listas y lectura concentrada
 
 - Título principal y encabezado de la segunda fila en mayúsculas y centrados. Textos y rótulos de las viñetas actualizados; montos existentes conservados, incluidos Turismo y la estimación PASO.
