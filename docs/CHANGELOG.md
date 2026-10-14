@@ -1,5 +1,11 @@
 # Cambios
 
+## 2026-10-14 — logo oficial e íconos de Inicio
+
+- Encabezado con el PNG oficial blanco aportado, conservado byte a byte, a 64/48 px y enlazado a Inicio. Se retiran el águila anterior y el texto reconstruido. Favicon, Apple y redes derivan del logo completo, sin recoloración, recorte ni redibujo.
+- Doce franjas suaves con once SVG locales de Lucide, también en títulos de los pop-ups. Un ícono por fila en Las cuentas no cierran; 30 px en escritorio, 24 en móvil, con colores institucionales y de déficit según tema. Textos, cifras, fuentes y cálculos de las viñetas intactos.
+- Licencia, commit y hashes de los SVG documentados y distribuidos localmente. Se comprueban nitidez, proporción, integridad del original, contraste de íconos ≥3:1, móvil sin desbordes y recursos de identidad disponibles, con capturas en ambos temas y anchos.
+
 ## 2026-10-14 — v12 · cuatro lecturas de Inicio
 
 - Nuevo bloque de cuatro viñetas, buscador global compacto y pop-ups accesibles compartibles. El Inicio anterior conserva sus contenidos; título principal único, animación suave de 240 ms/10 px sin contenido oculto y respeto de reducir movimiento.

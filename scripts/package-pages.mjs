@@ -13,11 +13,11 @@ if(pr){
  const preview=path.join(output,'preview','pr-'+pr);
  fs.mkdirSync(preview,{recursive:true});fs.cpSync(path.join(root,'dist'),preview,{recursive:true});
  const configFile=path.join(preview,'config/site.json'),config=JSON.parse(fs.readFileSync(configFile,'utf8'));
- const publicUrl=config.publicUrl+'preview/pr-'+pr+'/';config.publicUrl=publicUrl;
+ const productionPublicUrl=config.publicUrl,publicUrl=productionPublicUrl+'preview/pr-'+pr+'/';config.publicUrl=publicUrl;
  fs.writeFileSync(configFile,JSON.stringify(config,null,2)+'\n');
  const index=path.join(preview,'index.html');let html=fs.readFileSync(index,'utf8');
  html=html.replace('</head>','<meta name="robots" content="noindex,nofollow"></head>');
- html=html.replace(/(<link rel="canonical" href=")[^"]+/, '$1'+publicUrl);
+ html=html.replaceAll(productionPublicUrl,publicUrl);
  html=html.replace('<body>','<body><aside class="preview-banner" style="padding:8px 16px;background:#371859;color:white;font:14px sans-serif;text-align:center">Vista previa del PR '+pr+' · versión en revisión</aside>');
  fs.writeFileSync(index,html);
  fs.writeFileSync(path.join(preview,'preview.json'),JSON.stringify({pr:Number(pr),sha:process.env.PREVIEW_SHA,url:publicUrl},null,2)+'\n');
