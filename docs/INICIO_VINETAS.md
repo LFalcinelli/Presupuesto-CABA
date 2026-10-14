@@ -27,7 +27,7 @@ Publicidad suma la principal global más once unidades de comunicación, restand
 
 Eventos cuenta Usina del Arte y Festivales de la Ciudad por programa, una vez cada uno. Sumar la dirección completa y nuevamente Usina duplicaría $1.402 millones. Turismo excluye $14.800 millones de publicidad, ya contados en la primera fila. La categoría incluye servicios de seguridad: no todo es entretenimiento.
 
-PASO aplica un **supuesto del 35%** a $82.414.878.498 del Instituto de Gestión Electoral y la Unidad de Enlace Electoral. El proyecto no separa PASO y generales. No hay una referencia histórica verificada en los archivos para justificar ese porcentaje; se lo informa como supuesto de simulación, no como ahorro garantizado. La tarjeta conserva la fila abreviada solicitada; el pop-up explica la estimación.
+PASO aplica un **supuesto del 35%** a $82.414.878.498 del Instituto de Gestión Electoral y la Unidad de Enlace Electoral. El proyecto no separa PASO y generales. No hay una referencia histórica verificada en los archivos para justificar ese porcentaje; se lo informa como supuesto de simulación, no como ahorro garantizado. La tarjeta conserva la fila abreviada solicitada; el pop-up identifica la estimación en una línea y enlaza su criterio completo en la metodología.
 
 Conducción: $1.531.861.910.181 de Actividades Centrales/Comunes − $88.413.959.280 de programas ya comprendidos en vivienda, agenda verde o las ocho unidades adicionales + $41.574.522.418 de esas unidades completas. Los programas de comunicación de la viñeta 3 pueden estar aquí: por eso no se suman ambas viñetas.
 
@@ -47,3 +47,11 @@ Los intereses solos crecen 98,1% real frente al votado 2026 (código económico 
 - Evolución abre en gasto corriente sin intereses; cualquier serie explícita en la URL, incluido gasto total, prevalece.
 
 Pruebas: conciliaciones, exclusión de doble conteo, fuentes, dos temas, 375/1440 px, teclado, vínculos recargables, buscador y movimiento reducido. Se completa además la representación con barras de las 22 áreas en Sueldos del personal, pedida en la iteración anterior.
+
+## Lectura del Inicio y cierre 2026
+
+Los pop-ups priorizan nombres, importes y enlaces, con una frase breve. El detalle anterior se conserva en `#metodologia?seccion=inicio`. Se incorpora la composición corriente publicada en el mapa fiscal, conciliada exactamente con el total de la primera viñeta. No cambian los importes existentes.
+
+No se encontró una proyección oficial de déficit al cierre 2026 en el Mensaje y sus cuadros. El Cuadro 5.1 (PDF p. 157, impresa 146) presenta +$4.254,0 millones en el **crédito vigente al 30/06**, no una proyección de cierre. El Cuadro 2.6 (PDF p. 66, impresa 55) confirma ese corte y muestra +$917.460,1 millones ejecutados en el semestre. En PDF p. 153 (impresa 142), el resultado financiero previsto para 2027 es positivo en $1.316,4 millones. Por ello se mantiene el semestre y no se presenta la deuda para proveedores como evidencia de déficit 2027. La revisión, el hash del documento y sus páginas están en los datos derivados; la fila alternativa requiere bandera y cifra negativa verificada.
+
+`flags.homePerCapita` y `flags.homeBudget2026` permiten reactivar las tarjetas inferiores sin reconstruirlas; ambos son falsos. `flags.homeClosing2026Projection` es falso y no habilita una cifra no verificada. Los bonos pagan obligaciones devengadas y pendientes: siguen fuera de los agregados del presupuesto.

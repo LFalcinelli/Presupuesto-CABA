@@ -1,5 +1,13 @@
 # Cambios
 
+## 2026-10-14 — Inicio con listas y lectura concentrada
+
+- Título principal y encabezado de la segunda fila en mayúsculas y centrados. Textos y rótulos de las viñetas actualizados; montos existentes conservados, incluidos Turismo y la estimación PASO.
+- Pop-ups con una frase breve, total y componentes ordenados por importe, con enlaces. Los criterios completos, exclusiones y estimaciones se conservan en la metodología específica de Inicio.
+- Revisión del Mensaje 2027: no se encontró proyección oficial de déficit al cierre 2026. Cuadro 5.1 (PDF p. 157, impresa 146) informa +$4.254,0 M para el vigente al 30/06; no es cierre previsto. Cuadro 2.6 (p. 66) confirma el corte; p. 153 prevé superávit 2027. Se conserva el semestre en la tarjeta y queda preparada una fila condicionada a una estimación negativa verificada.
+- Se retira el segundo botón del bloque violeta. Presupuesto por habitante y presupuesto 2026 quedan ocultos con banderas reversibles; impuestos propios por habitante se presenta solo, a la izquierda y sin columnas vacías. Se conservan su nota y sus fuentes.
+- Vista previa y pruebas completas antes de fusionar. Publicación directa autorizada por el propietario en su mensaje posterior.
+
 ## 2026-10-14 — precisión y lectura del Inicio
 
 - Viñeta 1: +8,3% real frente a 2025 en tarjeta y pop-up, a partir del mismo campo calculado sobre currentPrimary. Se retira la baja de inversión de esa fila, conservándola en el texto y el detalle.
