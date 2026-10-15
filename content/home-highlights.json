@@ -1,34 +1,34 @@
 {
   "title": "¿En qué quiere gastar tus impuestos la Ciudad en 2027?",
   "subtitle": "LO QUE SE PUEDE RECORTAR PARA BAJARTE LOS IMPUESTOS",
-  "subtext": "",
+  "subtext": "No se suma con la tarjeta siguiente.",
   "cards": [
     {
       "id": 1,
-      "title": "RÉCORD HISTÓRICO DE GASTO",
-      "text": "La Ciudad propone para 2027 el gasto corriente más alto de su historia. Y recorta la inversión.",
+      "title": "Récord de gasto corriente sin intereses (proyecto)",
+      "text": "El proyecto propone el mayor gasto corriente sin intereses de la serie disponible. La inversión baja {capitalChange} real frente al ampliado 2026.",
       "link": "¿En qué se va?",
       "topic": "personal"
     },
     {
       "id": 2,
-      "title": "CON DÉFICIT Y DEUDA",
-      "text": "Las cuentas no cierran: 2025 terminó en rojo, en 2026 sobra cada vez menos y se piden bonos para pagar proveedores.",
+      "title": "Las cuentas quedan al límite",
+      "text": "2025 cerró con déficit; el semestre 2026 tuvo superávit y el proyecto 2027 prevé un saldo positivo muy pequeño.",
       "link": "¿Qué muestran las cuentas?",
       "topic": "deuda"
     },
     {
       "id": 3,
       "title": "PLATA PARA PUBLICIDAD, EVENTOS Y PASO",
-      "text": "{total} en pauta publicitaria, eventos y elecciones.",
+      "text": "{total} en publicidad y comunicación de gobierno, eventos y una estimación electoral.",
       "link": "¿En qué se gasta?",
       "topic": "publicidad"
     },
     {
       "id": 4,
-      "title": "LA MISMA TAREA, MUCHAS OFICINAS",
-      "text": "{total} en burocracia, edificación de villas y áreas de agenda verde repetidas en varias estructuras.",
-      "link": "¿Cuántas oficinas hacen lo mismo?",
+      "title": "Cuánto cuesta la estructura del Estado",
+      "text": "{total} en programas centrales, vivienda social e integración urbana y ambiente distribuidos en varias estructuras.",
+      "link": "Ver las áreas y los programas",
       "topic": "burocracia"
     }
   ],
@@ -54,5 +54,22 @@
       ],
       "reference": "Cuadros 2.6 y 5.1; capítulo 5.1"
     }
+  },
+  "editorialLabel": "Nuestra lectura · La Libertad Avanza CABA",
+  "projectTotalLabel": "Proyecto 2027: ≈ $24,1 billones · pendiente de aprobación",
+  "selectionReview": {
+    "status": "propuesta para aprobación en PR; no publicada en producción",
+    "supportLabel": "Programas centrales y comunes de las áreas de gobierno",
+    "reasonLabel": "Incluye Jefaturas, Procuración y Tribunal; no se los rotula como ministerios.",
+    "excludedSupport": [
+      {
+        "id": "program-40-0-0-401-1",
+        "reason": "Compra centralizada de medicamentos e insumos y servicios sanitarios; predominio de bienes y servicios para la prestación final."
+      },
+      {
+        "id": "program-29-0-0-1050-8",
+        "reason": "Servicios de resguardo y seguridad de personas y patrimonio; la descripción identifica una prestación operativa, con predominio de servicios contratados."
+      }
+    ]
   }
 }

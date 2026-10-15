@@ -3,7 +3,6 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -33,6 +32,30 @@ jobs:
           npm run dev > /tmp/preview.log 2>&1 &
           for i in $(seq 1 30); do curl --fail --silent http://127.0.0.1:8766/Presupuesto-CABA/ > /dev/null && break; sleep 1; done
           npm run test:smoke
+      - uses: actions/checkout@v6
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'feature/v13-')
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: baseline
+          persist-credentials: false
+      - name: Capturas antes y después del bloque v13
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'feature/v13-')
+        env:
+          HEAD_BRANCH: ${{ github.head_ref }}
+        run: |
+          case "$HEAD_BRANCH" in *v13-a-*) export QA_BLOCK=A;; *v13-b-*) export QA_BLOCK=B;; *v13-c-*) export QA_BLOCK=C;; esac
+          export QA_DIR="$GITHUB_WORKSPACE/qa-v13"
+          node baseline/scripts/build.mjs
+          PORT=8767 node baseline/scripts/serve.mjs > /tmp/baseline.log 2>&1 &
+          for i in $(seq 1 30); do curl --fail --silent http://127.0.0.1:8767/Presupuesto-CABA/ > /dev/null && break; sleep 1; done
+          QA_PHASE=before SITE_URL=http://127.0.0.1:8767/Presupuesto-CABA/ node scripts/capture-v13.cjs
+          QA_PHASE=after SITE_URL=http://127.0.0.1:8766/Presupuesto-CABA/ node scripts/capture-v13.cjs
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'feature/v13-')
+        with:
+          name: capturas-v13-antes-despues
+          path: qa-v13/
+          retention-days: 30
       - name: Recuperar las vistas previas publicadas
         id: previous
         uses: actions/github-script@v8

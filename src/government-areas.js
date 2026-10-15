@@ -18,7 +18,7 @@ readRoute=function(){
  governmentAreaRead();const q=new URLSearchParams(location.hash.split('?')[1]||'');
  state.governmentArea=state.view==='project'&&/^\d{1,2}$/.test(q.get('area')||'')?String(Number(q.get('area'))):null;
  state.governmentUnit=q.get('unidad')||null;state.governmentProgram=q.get('programa')||null;
- state.governmentPrices='real';state.governmentBase=q.get('base')==='current'?'current':'initial';
+ state.governmentPrices='real';state.governmentBase=q.get('base')==='initial'?'initial':'current';
  state.governmentRanking=q.get('ranking')==='programs'?'programs':'units';
  state.governmentSort=['increase','decrease'].includes(q.get('orden'))?q.get('orden'):'amount';
  const legacy=state.areaReportId;
