@@ -258,8 +258,9 @@ function cleanCitizenSources(fragment){
  v=v.replace(/308[2-5]\s*-\s*[^\n]*?\.pdf/gi,'Documento oficial del proyecto').replace(/\s*\(?código\s*21410000\)?/gi,'').replace(/\s*[·;]?\s*PDF\s*(?:pp?\.?|páginas?)\s*\d+(?:[–—,\-\s]*\d+)*/gi,'').replace(/\s*[·;]?\s*Planilla\s*(?:N[°º]?\s*)?\d+(?:,?\s*página\s*\d+)?/gi,'').replace(/\s*[·;]?\s*página(?:s)?\s*(?:física(?:s)?\s*)?\d+(?:[–—,\-\s]*\d+)*\s*(?:del PDF)?/gi,'').replace(/\bBASE 2T Gestion 2026\b/gi,'Ejecución de enero–junio 2026').replace(/\b(?:Desc_Ppal|Sanción\/Vigente)\b/g,'clasificación oficial').replace(/\b2T\s*2026\b/g,'abril–junio de 2026');
  if(v!==n.nodeValue)n.nodeValue=v;
  }
- for(const a of sourceNodes('a[href]')){const href=a.getAttribute('href');if(!a.children.length){const v=a.textContent.replace(/[↗→]\s*$/,'').trim()+(href.startsWith('#')?' →':' ↗');if(a.textContent!==v)a.textContent=v;}}
+ for(const a of sourceNodes('a[href]')){if(a.classList.contains('glossary-term'))continue;const href=a.getAttribute('href');if(!a.children.length){const v=a.textContent.replace(/[↗→]\s*$/,'').trim()+(href.startsWith('#')?' →':' ↗');if(a.textContent!==v)a.textContent=v;}}
 
+ for(const p of sourceNodes('p')){for(const edge of ['lastChild','firstChild'])while(p[edge]?.nodeType===3&&/^[\s·|]*$/.test(p[edge].nodeValue))p[edge].remove();}
 }
 const auditPolishMarkup=polishMarkup;
 polishMarkup=function(html,view){
