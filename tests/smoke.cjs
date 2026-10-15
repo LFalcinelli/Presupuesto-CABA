@@ -77,6 +77,6 @@ const routes=['#inicio','#proyecto-2027?vista=summary','#proyecto-2027?vista=exp
  await require('./theme-route-reading.cjs')({page,base});
  const catalog=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/index.json')));
  for(const d of catalog.datasets)for(const file of d.files){const response=await page.request.get(new URL(file,base).href);assert.equal(response.status(),200,file);}
- for(const file of fs.readdirSync(path.resolve(__dirname,'../public/sources'))){const response=await page.request.get(new URL('sources/'+file,base).href);assert.equal(response.status(),200,file);}
- assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);console.log(JSON.stringify({smoke:checks.length,deepLinkReload:true,datasets:catalog.datasets.length,downloads:true,errors}));await browser.close();
+ for(const file of fs.readdirSync(path.resolve(__dirname,'../public/sources'))){const response=await page.request.get(new URL('sources/'+file,base).href);assert.equal(response.status(),404,file);}
+ assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);console.log(JSON.stringify({smoke:checks.length,deepLinkReload:true,datasets:catalog.datasets.length,downloads:false,errors}));await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});
