@@ -1,0 +1,36 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {auditTheme}=require('./theme-route-reading.cjs');
+module.exports=async({page,base})=>{
+ const ready=()=>page.waitForFunction(()=>document.querySelector('main')?.getAttribute('aria-busy')==='false');
+ const navigate=async route=>{await page.goto(base+route,{waitUntil:'domcontentloaded'});await ready();};
+ const capture=async(name,selector)=>{if(!process.env.LAYOUT_QA_DIR)return;await ready();await page.evaluate(()=>document.fonts.ready);fs.mkdirSync(process.env.LAYOUT_QA_DIR,{recursive:true});const options={path:path.join(process.env.LAYOUT_QA_DIR,name+'.png'),animations:'disabled',style:(selector?'.main-nav{visibility:hidden!important}':'')+'#view-loading{visibility:hidden!important}'};if(selector)await page.locator(selector).screenshot(options);else await page.screenshot(options);};
+ const contrast=async(label)=>{assert.deepEqual(await auditTheme(page),{text:[],surfaces:[]},label);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),label+' overflow');};
+ const readingInView=()=>page.waitForFunction(()=>{const section=document.getElementById('budget-depth'),nav=document.querySelector('.main-nav');if(!section||state.budgetDepthJump)return false;const top=section.getBoundingClientRect().top,bottom=Math.max(0,nav.getBoundingClientRect().bottom);return top>=bottom-1&&top<=200;});
+ await page.emulateMedia({reducedMotion:'reduce'});
+ for(const theme of ['light','dark'])for(const width of [375,1440]){
+  await page.setViewportSize({width,height:1000});await page.waitForTimeout(220);await navigate('#explorar?periodo=2026-2');await page.reload({waitUntil:'domcontentloaded'});await ready();await page.evaluate(t=>CabaTheme.set(t),theme);await page.evaluate(()=>render());await ready();
+  assert.equal(await page.locator('.amplification-overview').count(),1);assert.equal(await page.locator('.fiscal-summary').evaluate(n=>n.firstElementChild.className),'amplification-overview');
+  const overview=await page.locator('.amplification-overview').innerText();for(const text of ['Presupuesto de toda la Ciudad · 2026','17,34','19,88','+15%'])assert(overview.includes(text),text);
+  assert.equal(await page.locator('#explorer-controls [data-view="areas"],#explorer-controls [data-project-tab="areas"]').count(),0);await contrast('summary '+theme+' '+width);await capture(`summary-${theme}-${width}`);
+  for(const route of ['#explorar?periodo=2025-4','#proyecto-2027?vista=summary']){await navigate(route);assert.equal(await page.locator('.amplification-overview').count(),0);}
+  await navigate('#proyecto-2027?vista=areas');assert.equal(await page.locator('.amplification-overview').count(),0);assert.equal(await page.locator('.gov-cards>.gov-card').count(),22);
+  assert.equal(await page.locator('.government-areas').evaluate(n=>[...n.children].filter(c=>c.tagName!=='DIALOG'&&!c.hidden).at(-1).id),'budget-depth');
+  assert(await page.locator('#budget-depth').evaluate(n=>!!(document.getElementById('gov-directory-results').compareDocumentPosition(n)&Node.DOCUMENT_POSITION_FOLLOWING)));
+  assert(await page.locator('.gov-directory-tools').evaluate(n=>!!(n.compareDocumentPosition(document.querySelector('.gov-cards'))&Node.DOCUMENT_POSITION_FOLLOWING)));
+  assert.match(await page.locator('.gov-directory-total').innerText(),/22 jurisdicciones/);assert.match(await page.locator('.gov-directory-total').innerText(),/24,09/);await contrast('areas '+theme+' '+width);await capture(`areas-top-${theme}-${width}`);
+  await page.locator('#gov-directory-sort').selectOption('amplification');await ready();assert.equal(await page.locator('.gov-cards>.gov-card').count(),22);assert.match(await page.locator('.gov-card-change').first().innerText(),/durante 2026/);assert.match(await page.locator('.gov-directory-total').innerText(),/24,09/);
+  await page.evaluate(()=>{const n=document.getElementById('budget-depth');window.scrollTo(0,scrollY+n.getBoundingClientRect().top-280);});await capture(`areas-end-${theme}-${width}`);
+  for(const view of ['execution','structure','services','transfers','debt','support','positions']){
+   await navigate('#proyecto-2027?vista=areas&mirada='+view+'&base=current');await readingInView();assert.equal(await page.locator('#depth-view').inputValue(),view);assert.equal(new URLSearchParams(page.url().split('?')[1]).get('mirada'),view);
+  }
+  await page.reload({waitUntil:'domcontentloaded'});await ready();await readingInView();assert.equal(await page.locator('#depth-view').inputValue(),'positions');await contrast('direct reading '+theme+' '+width);
+  if(width===375)await page.locator('#depth-view').selectOption('execution');else await page.locator('[data-depth-view="execution"]').click();await ready();await readingInView();assert.equal(new URLSearchParams(page.url().split('?')[1]).get('mirada'),'execution');await page.reload({waitUntil:'domcontentloaded'});await ready();await readingInView();assert.equal(await page.locator('#depth-view').inputValue(),'execution');
+  await navigate('#evolucion');assert.equal(await page.locator('details.dollar-perspective,.dollar-perspective>summary').count(),0);assert(await page.locator('.usd-total-reading').isVisible());assert(await page.locator('.usd-paired-bars').isVisible());assert.equal(await page.locator('#contraste-dolares').evaluate(n=>{for(let p=n.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS'&&!p.open)return true;return false;}),false);
+  assert(await page.locator('.usd-category-heading').evaluateAll(rows=>rows.every(row=>[...row.children].every(c=>c.getBoundingClientRect().right<=row.getBoundingClientRect().right+1&&c.scrollWidth<=c.clientWidth+1))),'USD labels and percentages fit');await contrast('history '+theme+' '+width);await capture(`history-usd-${theme}-${width}`,'.dollar-perspective');
+  await page.locator('.historical-extras>summary').click();assert.equal(await page.locator('#budget-observation,#budget-point,[data-budget-point]').count(),0);assert.equal(await page.getByRole('heading',{name:/El presupuesto, de 2005/}).count(),0);assert.equal(await page.getByText('Ver los 22 presupuestos y sus fuentes',{exact:true}).count(),0);
+  assert(await page.getByText('Ver la evolución del presupuesto por habitante',{exact:true}).isVisible());assert(await page.getByRole('heading',{name:'Compará dos años desde 2005'}).isVisible());assert(await page.request.get(new URL('data/history/budget-history-long.json',base).href).then(r=>r.ok()));
+  await contrast('history extras '+theme+' '+width);await capture(`history-extras-${theme}-${width}`,'.historical-extras');
+ }
+ console.log('Disposición: ampliación solo en Resumen 2026; 22 áreas antes de lecturas; siete enlaces con scroll y recarga; dólares visibles y extras conservados. Ambos temas, 375/1440 px, sin desbordes ni contraste insuficiente.');
+};
+if(require.main===module)(async()=>{const {chromium}=require('playwright'),browser=await chromium.launch({channel:process.env.BROWSER_CHANNEL||undefined,headless:true}),page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));try{await module.exports({page,base:process.env.SITE_URL||'http://127.0.0.1:8766/Presupuesto-CABA/'});assert.deepEqual(errors,[]);}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1});

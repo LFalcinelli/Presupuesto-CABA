@@ -45,7 +45,7 @@ module.exports=async({page,base})=>{
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await page.locator('#execution-series').selectOption('total');await ready();assert(new URL(page.url()).hash.includes('serie=total'));await page.reload();await ready();assert.equal(await page.locator('#execution-series').inputValue(),'total');assert.equal(await page.locator('.history-event-label a').count(),2);
   const tips=await page.locator('.execution-chart [data-execution-year]').evaluateAll(es=>es.map(e=>e.getAttribute('data-viz-tip')||e.getAttribute('aria-label')).join(' '));assert(!tips.includes('trimestre'));
-  await page.locator('.dollar-perspective>summary').click();await page.locator('[data-usd-history="7"]').click();await ready();if(await page.locator('[data-usd-group=""]').count()){await page.locator('[data-usd-group=""]').click();await ready();}
+  assert.equal(await page.locator('details.dollar-perspective,.dollar-perspective>summary').count(),0);assert(await page.locator('.usd-total-reading').isVisible());await page.locator('[data-usd-history="7"]').click();await ready();if(await page.locator('[data-usd-group=""]').count()){await page.locator('[data-usd-group=""]').click();await ready();}
   await page.locator('[data-usd-group="3"]').click();await ready();assert.equal(await page.locator('.usd-paired-bars article').count(),8);
   await page.locator('[data-usd-history="8"]').click();await ready();assert.equal(await page.locator('.usd-paired-bars article').count(),8);
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
