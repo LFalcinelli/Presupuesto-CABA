@@ -4,26 +4,29 @@ import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import vm from 'node:vm';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const config=JSON.parse(fs.readFileSync(path.join(root,'config/site.json'),'utf8'));
 const output=path.join(root,'dist');
 if(path.dirname(output)!==root||path.basename(output)!=='dist')throw Error('Destino inválido');
 if(fs.existsSync(output)&&fs.lstatSync(output).isSymbolicLink())throw Error('dist no puede ser un enlace');
 fs.rmSync(output,{recursive:true,force:true});fs.mkdirSync(output);
 for(const file of fs.readdirSync(path.join(root,'src'))){
+ if(file==='world-comparison.js'&&!config.flags.world||file==='optional-salaries.js'&&!config.flags.salaries)continue;
  if(!/\.(js|css|html)$/.test(file))throw Error('Archivo de interfaz inesperado: '+file);
  fs.copyFileSync(path.join(root,'src',file),path.join(output,file));
 }
 for(const folder of ['public','config','content','data']){
  const destination=folder==='public'?output:path.join(output,folder);
- fs.cpSync(path.join(root,folder),destination,{recursive:true,filter:source=>!source.split(path.sep).includes('raw')&&!/[/\\]public[/\\]sources[/\\].*\.(xlsx?|pdf)$/i.test(source)});
+ fs.cpSync(path.join(root,folder),destination,{recursive:true,filter:source=>!source.split(path.sep).includes('raw')&&!['eagle.svg','favicon.svg','social-preview.svg','social-preview.png','social-preview-official.svg'].includes(path.basename(source))&&!/[/\\]public[/\\]sources[/\\].*\.(xlsx?|pdf)$/i.test(source)});
 }
 const files=fs.readdirSync(output,{recursive:true}).filter(f=>fs.statSync(path.join(output,f)).isFile()).sort();
 const hash=crypto.createHash('sha256');
 for(const file of files){if(file==='index.html')continue;hash.update(file.replaceAll('\\','/')).update(fs.readFileSync(path.join(output,file)));}
 const build=hash.digest('hex').slice(0,12);
-const config=JSON.parse(fs.readFileSync(path.join(root,'config/site.json'),'utf8'));
+
 const resources=JSON.parse(fs.readFileSync(path.join(root,'data/index.json'),'utf8')).resources;
 const index=path.join(output,'index.html');let html=fs.readFileSync(index,'utf8');
 const reviewed=new Intl.DateTimeFormat('es-AR',{timeZone:'America/Argentina/Buenos_Aires',day:'2-digit',month:'2-digit',year:'numeric'}).format(new Date());
+for(const [file,enabled] of [['world-comparison.js',config.flags.world],['optional-salaries.js',config.flags.salaries]])if(!enabled)html=html.replace(new RegExp('<script[^>]+src="\\./'+file.replaceAll('.','\\.')+'[^"]*"[^>]*><\\/script>','g'),'');
 html=html.replace('<meta name="site-reviewed" content="">',`<meta name="site-reviewed" content="${reviewed}">`);
 html=html.replace(/<meta name="site-build"[^>]*>/,`<meta name="site-build" content="${build}">`);
 html=html.replace(/((?:src|href)="\.\/[^"?]+\.(?:js|css))(?:\?v=[^"]*)?"/g,`$1?v=${build}"`);
