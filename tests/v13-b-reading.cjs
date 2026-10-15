@@ -1,0 +1,19 @@
+const assert=require('node:assert/strict'),{auditTheme}=require('./theme-route-reading.cjs');
+module.exports=async({page,base})=>{
+ const ready=()=>page.waitForFunction(()=>document.querySelector('main')?.getAttribute('aria-busy')==='false');
+ for(const theme of ['light','dark'])for(const width of [375,1440]){
+  await page.setViewportSize({width,height:1000});await page.goto(base+'#inicio');await ready();await page.evaluate(t=>CabaTheme.set(t),theme);await page.evaluate(()=>render());const initial=await page.locator('.hero-data').innerText();
+  await page.goto(base+'#buscar?q=pauta');await ready();await page.locator('#budget-search-dialog[open] [data-search-result]').first().waitFor();assert.equal(await page.locator('.hero-data').innerText(),initial);assert.equal(await page.locator('.hero-person:visible,.hero-current:visible').count(),0);await page.keyboard.press('Escape');assert.equal(await page.locator('#budget-search-dialog[open]').count(),0);
+  await page.locator('#global-search-trigger').click();await page.locator('#budget-search-input').fill('pauta');await page.keyboard.press('Escape');assert.equal(await page.locator('#budget-search-dialog[open]').count(),0);assert(await page.locator('#global-search-trigger').evaluate(n=>n===document.activeElement));
+  await page.locator('#global-search-trigger').click();await page.goto(base+'#proyecto-2027?vista=revenue');await ready();assert.equal(await page.locator('#budget-search-dialog[open]').count(),0);
+  const rows=await page.locator('.revenue-increases>ul>li').evaluateAll(ns=>ns.map(n=>n.dataset.revenueCode));const ordered=await page.evaluate(()=>state.revenueIncreases.rows.filter(r=>(r.project2027>=5e10||r.project2027/state.revenueIncreases.total>=.01)&&r.realDifferenceCurrent>0).sort((a,b)=>b.realDifferenceCurrent-a.realDifferenceCurrent).slice(0,5).map(r=>r.code));assert.deepEqual(rows,ordered);
+  for(const route of ['#proyecto-2027?vista=areas&area=98','#metodologia?seccion=presupuesto-2027','#inicio?vineta=3','#evolucion','#comparar?presupuesto=inicial&vista=ranking']){
+   await page.goto(base+route);await ready();await page.evaluate(()=>{for(const d of document.querySelectorAll('main details'))d.open=true;cleanCitizenSources(document.querySelector('main'));for(const d of document.querySelectorAll('dialog[open]'))cleanCitizenSources(d)});
+   const hrefs=await page.locator('main a[href],dialog[open] a[href]').evaluateAll(ns=>ns.map(n=>n.getAttribute('href')));assert(!hrefs.some(h=>/\.(csv|xlsx?|zip|json)([?#]|$)/i.test(h)),hrefs.join('\n'));const text=await page.locator('main').innerText();assert(!/código 21410000|PDF p\.|BASE 2T|Desc_Ppal|archivo aportado/i.test(text));assert.deepEqual(await auditTheme(page),{text:[],surfaces:[]});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.keyboard.press('Escape');
+  }
+ }
+ const found=await page.evaluate(()=>['pauta','publicidad','propaganda'].map(q=>budgetSearch(q).filter(r=>/señalizaci|senalizaci|posicionamiento.*educ|iluminaci|alumbrado/i.test(r.name)).map(r=>r.name)));assert.deepEqual(found,[[],[],[]]);
+ for(const file of ['IPCBA-serie-empalmada.xlsx','serie-aif-idecba.xlsx','recursos-2026-2.pdf'])assert.equal((await page.request.get(base+'sources/'+file)).status(),404);
+ console.log('v13 B: Inicio uniforme, Escape y navegación cierran la búsqueda, ranking estricto, descargas técnicas ausentes también en pop-ups, contraste y fuentes.');
+};
+if(require.main===module)(async()=>{const{chromium}=require('playwright'),b=await chromium.launch({headless:true,channel:process.env.BROWSER_CHANNEL||undefined}),page=await b.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));try{await module.exports({page,base:process.env.SITE_URL||'http://127.0.0.1:8766/Presupuesto-CABA/'});assert.deepEqual(errors,[]);}finally{await b.close()}})().catch(e=>{console.error(e);process.exitCode=1});

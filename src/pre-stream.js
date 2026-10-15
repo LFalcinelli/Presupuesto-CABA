@@ -6,7 +6,7 @@ function themeIcon(theme){
 }
 const preStreamLoad=ensureViewData;
 ensureViewData=async function(view,period){
- const existingViews=['landing','project','method'].includes(view);
+ const existingViews=['landing','search','project','method'].includes(view);
  await Promise.all([preStreamLoad(view,period),...(existingViews||view==='summary'&&period==='2026-2'?[
  dataFile('tax-reference-2027').then(d=>state.taxReferences=d)]:[]),...(existingViews?[
  dataFile('program-index-2027').then(d=>state.programIndex=d)]:[])]);
@@ -37,7 +37,7 @@ const preStreamPolish=polishMarkup;
 polishMarkup=function(html,view){
  const t=document.createElement('template');t.innerHTML=preStreamPolish(html,view);
  if(view==='summary'&&state.period==='2026-2')t.content.querySelector('.fiscal-summary')?.insertAdjacentHTML('afterbegin',amplificationOverview());
- if(view==='landing'&&state.taxReferences){const d=state.taxReferences,per=t.content.querySelector('.hero-person');if(per){per.insertAdjacentHTML('afterend',`<article class="hero-own-taxes"><h2>Impuestos de la Ciudad por habitante</h2><strong>≈ $ ${fmt(d.ownTaxesPerCapita/1e6,1)} millones</strong><small>Por año · proyecto 2027</small><p>${E(d.note)}</p><a href="#metodologia?seccion=presupuesto-2027">Cálculo y fuentes ↗</a></article>`);}}
+ if(['landing','search'].includes(view)&&state.taxReferences){const d=state.taxReferences,per=t.content.querySelector('.hero-person');if(per){per.insertAdjacentHTML('afterend',`<article class="hero-own-taxes"><h2>Impuestos de la Ciudad por habitante</h2><strong>≈ $ ${fmt(d.ownTaxesPerCapita/1e6,1)} millones</strong><small>Por año · proyecto 2027</small><p>${E(d.note)}</p><a href="#metodologia?seccion=presupuesto-2027">Cálculo y fuentes ↗</a></article>`);}}
  const fiche=t.content.querySelector('.government-areas');if(fiche&&state.governmentArea)fiche.insertAdjacentHTML('beforeend',feedbackLink(state.governmentAreaDetail?.name));
  const program=t.content.querySelector('#gov-program');if(program){program.classList.add('search-selected-program');program.setAttribute('aria-label','Programa seleccionado: '+program.querySelector('h2').textContent);}
  return t.innerHTML;

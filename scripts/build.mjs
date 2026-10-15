@@ -14,7 +14,7 @@ for(const file of fs.readdirSync(path.join(root,'src'))){
 }
 for(const folder of ['public','config','content','data']){
  const destination=folder==='public'?output:path.join(output,folder);
- fs.cpSync(path.join(root,folder),destination,{recursive:true,filter:source=>!source.split(path.sep).includes('raw')});
+ fs.cpSync(path.join(root,folder),destination,{recursive:true,filter:source=>!source.split(path.sep).includes('raw')&&!/[/\\]public[/\\]sources[/\\].*\.(xlsx?|pdf)$/i.test(source)});
 }
 const files=fs.readdirSync(output,{recursive:true}).filter(f=>fs.statSync(path.join(output,f)).isFile()).sort();
 const hash=crypto.createHash('sha256');

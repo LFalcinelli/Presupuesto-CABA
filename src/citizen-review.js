@@ -7,7 +7,7 @@ const reviewExplorerShell=explorerShell;
 explorerShell=function(){reviewExplorerShell();citizenGlossaryMarkup(document.querySelector('#explorer-controls'));};
 ensureViewData=async function(view,period){
  await reviewLoad(view,period);
- if(view==='landing')state.projectStages=await dataFile('stages-2027');
+ if(['landing','search'].includes(view))state.projectStages=await dataFile('stages-2027');
  if(view==='project')await Promise.all([dataFile('2026-2').then(d=>state.reviewBudget=d),dataFile('income-2026-2').then(d=>state.reviewIncome=d)]);
 };
 const reviewReadRoute=readRoute,reviewSyncRoute=syncRoute;
@@ -149,7 +149,7 @@ polishMarkup=function(html,view){
  const t=document.createElement('template');t.innerHTML=reviewMarkup(html,view);
  for(const node of t.content.querySelectorAll('[data-scenario-pct]')){const v=Number(node.dataset.scenarioPct);node.textContent=(v<0?'−':v>0?'+':'')+fmt(Math.abs(v),1)+'%';}
  for(const node of t.content.querySelectorAll('[data-precise-share]'))node.textContent=fmt(Number(node.dataset.preciseShare),1)+'%';
- if(view==='landing'){
+ if(['landing','search'].includes(view)){
   const c=t.content.querySelector('.hero-current');c.innerHTML=`<p>Presupuesto 2026</p><strong><span class="review-budget-stage">Votado $ ${fmt(state.projectStages.totals.initial/1e12,1)} billones</span><span class="review-budget-stage">Ampliado a junio $ ${fmt(state.projectStages.totals.current/1e12,1)} billones</span></strong><button class="text-link" data-view="home" data-snapshot="2026-2">Ver el presupuesto 2026 ↗</button>`;
   const exact=t.content.querySelector('.hero-exact-value');if(exact){const d=document.createElement('details');d.className='review-exact';d.innerHTML='<summary>Importe exacto</summary>';exact.replaceWith(d);d.append(exact);}
   const per=t.content.querySelector('.hero-person strong');if(per)per.textContent='≈ $ '+fmt(state.project.summary.perCapita.value/1e6,1)+' millones';

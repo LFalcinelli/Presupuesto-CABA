@@ -18,3 +18,5 @@ const ad=principals.rows.find(r=>norm(r.name)==='publicidad y propaganda');asser
 const income=read('data/revenue/increases-2027.json');for(const r of income.rows){assert(Math.abs(r.realDifferenceInitial-(r.project2027/1.18-r.initial2026))<.01);assert(Math.abs(r.realDifferenceCurrent-(r.project2027/1.18-r.current2026))<.01);}
 assert.equal(index.structure.officials,2595);assert.equal(index.structure.programs,499);
 console.log('Buscador: temas, raíces, errores de tipeo, unicidad por códigos y continuidad; publicidad/personal e ingresos conciliados.');
+
+for(const q of ['pauta','publicidad','propaganda'])assert(!search(q).some(r=>/senalizaci|se\u00f1alizaci|iluminaci|alumbrado|posicionamiento.*educ/i.test(r.name)),'Sin asociaciones incidentales: '+q);

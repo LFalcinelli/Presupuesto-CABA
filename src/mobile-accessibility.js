@@ -1,8 +1,6 @@
 'use strict';
 const mobileView=()=>matchMedia('(max-width: 650px)').matches;
 const mobileFoldState=new Map();let mobileFoldKey='';
-const themedDisplayName=displayName;
-displayName=name=>citizenDisplayName(themedDisplayName(name));
 governmentTitle=name=>displayName(name);
 function nonBreakingMoneyText(text){return text.replace(/(\$|USD)\s+(?=\d)/g,'$1\u00a0').replace(/(\d)\s+(mil millones|millones|billones)/g,'$1\u00a0$2');}
 const accessibleLanguage=citizenLanguage;

@@ -10,7 +10,7 @@ Site.ready=Promise.all([Site.load('config/site.json'),Site.load('data/index.json
 // Some legacy controls replace a small fragment without going through the main render.
 // Normalize their links centrally as well; no change to labels, routing or calculations.
 Site.ready.then(()=>{
- const normalize=node=>{if(node.nodeType!==1)return;for(const el of [node,...node.querySelectorAll('[href],[src]')])for(const attr of ['href','src']){const value=el.getAttribute(attr);if(value?.startsWith('/')&&!value.startsWith('//'))el.setAttribute(attr,Site.url(value));}};
+ const normalize=node=>{if(node.nodeType===3){if(node.parentElement?.closest('main,dialog,#explorer-controls')&&typeof cleanCitizenSources==='function')cleanCitizenSources(node.parentElement);return;}if(node.nodeType!==1)return;if(typeof cleanCitizenSources==='function'&&(node.matches('main,dialog,#explorer-controls')||node.closest('main,dialog,#explorer-controls')))cleanCitizenSources(node);for(const el of [node,...node.querySelectorAll('[href],[src]')])for(const attr of ['href','src']){const value=el.getAttribute(attr);if(value?.startsWith('/')&&!value.startsWith('//'))el.setAttribute(attr,Site.url(value));}};
  normalize(document.body);
  new MutationObserver(records=>{for(const record of records){if(record.type==='attributes')normalize(record.target);else for(const node of record.addedNodes)normalize(node);}}).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['href','src']});
 });

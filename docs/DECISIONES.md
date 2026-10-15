@@ -24,3 +24,5 @@
 19. Viñetas: selección editorial identificada, estimación PASO neta de publicidad y condicionada a su realización; medios públicos separados; Turismo y seguridad de eventos fuera de entretenimiento. Revisión propuesta de centrales/comunes en REVISION_V13_ESTRUCTURA.md: no prueba duplicación o ahorro; requiere aprobación antes de publicar.
 20. Despublicar retratos sin uso: se conservan fuera del artefacto web, en archive/portraits; la vista de sueldos apagada deja de requerirlos. Metadatos con nombres neutrales.
 21. Dólares: el dataset sólo ofrece 2026 ampliado. Se conserva el gráfico, se indican las etapas distintas y se añade el cambio real en pesos de los mismos años. Los PR encadenados deben obtener vista previa sin fusionar; el workflow admite bases de ramas, conservando producción desde main y sus controles de confianza.
+
+22. v13 B: Inicio coherente en búsquedas y enlaces; cierre de búsqueda con Escape/navegación, asociaciones temáticas explícitas, ranking sin forzar ABL. Descargas técnicas fuera de la interfaz; trazabilidad en GitHub. Se conservan los originales y cifras de datos.

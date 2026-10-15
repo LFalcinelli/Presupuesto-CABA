@@ -194,7 +194,7 @@ comparisonState=function(){
  const periods=original.periods.map(p=>p.kind!=='budget'?p:{...p,rows:p.rows.map(r=>{
   if(r.id!=='02')return r;
   const value=state.projectStages.totals.initial;
-  return {...r,values:{...r.values,budget:value},indicators:{...r.indicators,budgetPc:value/r.population,budgetArea:value/r.areaKm2},budget:{...r.budget,value,status:'Presupuesto aprobado 2026',technicalMetric:'Presupuesto aprobado inicialmente',stage:'approved',cutDate:null,source:publicSourcePages.approved,reference:'Presupuesto 2026',method:'Autorización inicial votada por la Legislatura, antes de las modificaciones de 2026.'}};
+  return {...r,status:'Presupuesto votado 2026',values:{...r.values,budget:value},indicators:{...r.indicators,budgetPc:value/r.population,budgetArea:value/r.areaKm2},budget:{...r.budget,value,status:'Presupuesto aprobado 2026',technicalMetric:'Presupuesto aprobado inicialmente',stage:'approved',cutDate:null,source:publicSourcePages.approved,reference:'Presupuesto 2026',method:'Autorización inicial votada por la Legislatura, antes de las modificaciones de 2026.'}};
  })});
  state.comparisons={...original,periods};
  try{return readingComparisonState();}finally{state.comparisons=original;}
@@ -223,21 +223,22 @@ function sourcePageFor(href){
  return state.view==='compare'?publicSourcePages.provincial:state.view==='history'?publicSourcePages.accounts:publicSourcePages.execution;
 }
 function cleanCitizenSources(fragment){
- for(const a of [...fragment.querySelectorAll('a[href]')]){
-  const href=a.getAttribute('href');if(href.startsWith('#')||a.hasAttribute('data-citizen-download')||a.hasAttribute('data-depth-download'))continue;
-  if(/\.(?:json|csv)(?:[?#]|$)/i.test(href)||a.hasAttribute('download')&&!/\.(?:pdf|xlsx?|zip)(?:[?#]|$)/i.test(href)){a.remove();continue;}
+ const sourceNodes=selector=>[...(fragment.matches?.(selector)?[fragment]:[]),...fragment.querySelectorAll(selector)];
+ for(const a of [...sourceNodes('a[href]')]){
+  const href=a.getAttribute('href');if(href.startsWith('#'))continue;
+  if(/\.(?:json|csv|xlsx?|zip)(?:[?#]|$)/i.test(href)||a.hasAttribute('download')&&!/\.(?:pdf|xlsx?|zip)(?:[?#]|$)/i.test(href)){a.remove();continue;}
   if(/\.(?:xlsx?|zip|pdf)(?:[?#]|$)/i.test(href)){
    // Keep the official organigram's document link: it has a direct visual purpose.
    if(/organigrama/i.test(href))continue;
-   a.href=sourcePageFor(href);a.removeAttribute('download');a.textContent='Consultar la publicación oficial ↗';
+   if(!/presupuesto-ejecutado|recursos-\d|caif-context|IPCBA|serie-empalmada|SP_Fi_AX01|serie-aif-idecba|CIFRA|presupuesto-sancionado/i.test(href)){a.replaceWith(document.createTextNode(a.textContent.replace(/Descargar/gi,'')));continue;}a.href=sourcePageFor(href);a.removeAttribute('download');a.textContent='GCBA · ejecuciones presupuestarias ↗';
   }
  }
- for(const p of fragment.querySelectorAll('p')){
+ for(const p of sourceNodes('p')){
   if(!/\.xlsx|\.csv|solapa.*Análisis|Hoja.*celdas|archivo aportado|aportado por el usuario|benchmark ex ante/.test(p.textContent))continue;
   const link=p.querySelector('[data-method-section],[data-view="method"]')?.outerHTML||detailLink(state.view==='project'?'presupuesto-2027':state.view==='compare'?'provincias':state.view==='history'?'historia':'ejecucion','Fuente y método');
   p.innerHTML=`${state.view==='project'?'Gobierno de la Ciudad · Proyecto de Presupuesto 2027.':state.view==='compare'?'Publicación oficial de la jurisdicción; fechas y alcance identificados en cada ficha.':state.view==='history'?'Cuentas anuales y publicaciones oficiales de presupuesto.':'Dirección General de Contaduría · ejecución presupuestaria del período.'} ${link}`;
  }
- for(const node of fragment.querySelectorAll('p,small,span,strong,summary,th,td,h3,h4,.tile-name,.change-name')){
+ for(const node of sourceNodes('p,small,span,strong,summary,th,td,h3,h4,.tile-name,.change-name')){
   if(node.children.length)continue;
   let text=node.textContent;
   if(/Fuente:.*\.xlsx|GCBA.*\.xlsx|solapa.*(?:Análisis|filas)|Hoja.*celdas|archivo aportado|PDF aportado|aportado por el usuario|benchmark ex ante/i.test(text)){
@@ -246,12 +247,19 @@ function cleanCitizenSources(fragment){
   if(/^Sin base$/.test(text)){node.title='No hay una partida equivalente en el año de referencia para calcular la variación.';text='Sin comparación';}
   text=text.replace(/\b(?:2026\.02 - Ejecución Presupuestaria\.xlsx|BASE 2T Gestion 2026)\b/g,'Ejecución presupuestaria al segundo trimestre de 2026').replace(/ y descargar| y descargas| y la descarga/g,'').replace(/Otras formas de explorar y descargar/g,'Otras formas de explorar').replace(/datos descargables/g,'datos documentados').replace(/Deuda Pública - Intereses y Gastos|Deuda: intereses y gastos/g,'Intereses y otros gastos de la deuda').replace(/PDF aportado/g,'documento oficial');
   if(/^(?:Ministerio|Servicios|Ingresos|Recursos|Gastos|Administracion|Jurisdiccion|Sobre la produccion)/.test(text)||node.matches('.tile-name,.change-name'))text=displayName(text);
-  if(/^[\s·]*$/.test(text)){node.remove();continue;}node.textContent=text;
+  if(/^[\s·]*$/.test(text)){if(!node.id)node.remove();continue;}if(node.textContent!==text)node.textContent=text;
  }
- for(const p of fragment.querySelectorAll('p')){
+ for(const p of sourceNodes('p')){
   const hasText=[...p.childNodes].some(n=>n.nodeType===Node.TEXT_NODE&&n.textContent.trim().replace(/[·\s]/g,''));
-  if(!p.children.length&&!hasText)p.remove();
+  if(!p.id&&!p.children.length&&!hasText)p.remove();
  }
+ const walker=document.createTreeWalker(fragment,NodeFilter.SHOW_TEXT),texts=[];while(walker.nextNode())texts.push(walker.currentNode);
+ for(const n of texts){if(n.parentElement?.closest('script,style,svg,select,option'))continue;let v=n.nodeValue;
+ v=v.replace(/308[2-5]\s*-\s*[^\n]*?\.pdf/gi,'Documento oficial del proyecto').replace(/\s*\(?código\s*21410000\)?/gi,'').replace(/\s*[·;]?\s*PDF\s*(?:pp?\.?|páginas?)\s*\d+(?:[–—,\-\s]*\d+)*/gi,'').replace(/\s*[·;]?\s*Planilla\s*(?:N[°º]?\s*)?\d+(?:,?\s*página\s*\d+)?/gi,'').replace(/\s*[·;]?\s*página(?:s)?\s*(?:física(?:s)?\s*)?\d+(?:[–—,\-\s]*\d+)*\s*(?:del PDF)?/gi,'').replace(/\bBASE 2T Gestion 2026\b/gi,'Ejecución de enero–junio 2026').replace(/\b(?:Desc_Ppal|Sanción\/Vigente)\b/g,'clasificación oficial').replace(/\b2T\s*2026\b/g,'abril–junio de 2026');
+ if(v!==n.nodeValue)n.nodeValue=v;
+ }
+ for(const a of sourceNodes('a[href]')){const href=a.getAttribute('href');if(!a.children.length){const v=a.textContent.replace(/[↗→]\s*$/,'').trim()+(href.startsWith('#')?' →':' ↗');if(a.textContent!==v)a.textContent=v;}}
+
 }
 const auditPolishMarkup=polishMarkup;
 polishMarkup=function(html,view){
