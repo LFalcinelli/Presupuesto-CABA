@@ -7,7 +7,7 @@ module.exports=async({page,base})=>{
   for(const view of ['execution','structure','services','transfers','debt','support','positions']){
    if(width===375)await page.locator('#depth-view').selectOption(view);else await page.locator(`[data-depth-view="${view}"]`).click();await page.waitForFunction(v=>state.budgetDepthView===v&&document.querySelector('main')?.getAttribute('aria-busy')==='false',view);
    assert.equal(await page.locator('.budget-depth').count(),1);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),theme+' '+width+' '+view);
-   assert.equal(await page.locator('a[data-depth-download][download]').count(),2);for(const mode of ['source','display']){const link=await page.locator(`a[data-depth-download="${mode}"]`).getAttribute('href');assert.equal((await page.request.get(link)).status(),200);}
+   assert.equal(await page.locator('a[data-depth-download][download]').count(),0);
    if(view==='execution'){
     await page.locator('#depth-execution-order').selectOption('high');await page.waitForFunction(()=>document.querySelector('[data-execution-area]')?.dataset.executionArea==='75');assert.match(await page.locator('.depth-voted-ranks article').first().innerText(),/223% de lo que votó la Legislatura/);
     await page.locator('#depth-execution-order').selectOption('low');await page.waitForFunction(()=>document.querySelector('[data-execution-area]')?.dataset.executionArea==='31');assert.match(await page.locator('.depth-voted-ranks article').first().innerText(),/en 2025: Ministerio de Infraestructura/);

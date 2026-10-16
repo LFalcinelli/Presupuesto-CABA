@@ -2,14 +2,244 @@
   "schemaVersion": 1,
   "note": "Asociaciones temáticas para encontrar información, no equivalencias de funciones ni juicios sobre el gasto. Las expresiones se aplican a nombres normalizados sin tildes.",
   "topics": [
-    {"id":"communication","label":"publicidad y comunicación","keywords":["pauta","publicidad","propaganda","publicitario","comunicación","comunicacional","medios","prensa","difusión","campaña","marketing","redes","anuncios","avisos","radio","televisión","señal","cable","opinión pública","encuestas","posicionamiento","contenidos","imagen"],"namePatterns":["comunicaci|comunicacional|medios|prensa|difusion|radio|senal|cable|opinion|posicionamiento|contenidos|activos digitales"],"principalNames":["Publicidad y propaganda"]},
-    {"id":"events","label":"eventos y entretenimiento","keywords":["eventos","evento","ferias","feria","festival","festivales","eventos masivos","recitales","shows","espectáculos","celebraciones","fiestas","noches","entretenimiento","turismo","autódromo","carreras","gastronomía","Navidad","maratón"],"namePatterns":["eventos|feria|festival|celebracion|autodromo|usina del arte|turismo|gastronom|espectaculo|noches culturales"]},
-    {"id":"green","label":"ambiente y agenda verde","keywords":["ambiente","ambiental","verde","sostenible","sustentable","sostenibilidad","clima","climático","cambio climático","economía circular","reciclado","reciclaje","residuos","biodiversidad","conservación","ecoparque","espacios verdes","arbolado","transición energética","energía","renovable","emisiones"],"namePatterns":["ambient|sostenib|circular|recicla|ecoparque|espacios verdes|arbolado|conservacion|transicion energetica|redes ambientales"]},
-    {"id":"gender","label":"género y diversidad","keywords":["género","mujer","mujeres","feminismo","feminista","diversidad","diversidades","LGBT","LGBTIQ","igualdad","violencia de género","autonomía","cuidados","masculinidades"],"namePatterns":["genero|mujer|diversidad|igualdad"],"descriptionPatterns":["violencia de genero|igualdad de oportunidades|diversidad sexual"]},
-    {"id":"administration","label":"administración y conducción","keywords":["burocracia","burocrático","administración","administrativo","gasto administrativo","gastos generales","actividades centrales","actividades comunes","conducción","apoyo","gestión administrativa","mesa de entradas","estructura"],"namePatterns":["actividades centrales|actividades comunes|gestion administrativa|posicionamiento institucional|mesa de entradas|secretaria general|vicejefatura"],"reading":"support"},
-    {"id":"debt","label":"deuda e intereses","keywords":["deuda","intereses","bonos","préstamos","endeudamiento"],"namePatterns":["deuda|intereses|credito publico|endeudamiento|prestamo"],"reading":"debt"},
-    {"id":"elections","label":"elecciones","keywords":["elecciones","PASO","electoral","votación"],"namePatterns":["eleccion|electoral|votacion"]},
-    {"id":"staff","label":"personal y remuneraciones","keywords":["sueldos","salarios","personal","empleados","planta","contratados","gabinete"],"namePatterns":["personal|remuneracion|recursos humanos|gabinete de autoridades|asignaciones familiares|beneficios y compensaciones|servicios extraordinarios|contratos por tiempo"],"reading":"personnel"},
-    {"id":"transfers","label":"subsidios y transferencias","keywords":["subsidios","transferencias","ayudas","planes sociales"],"namePatterns":["transferencia|subsidio|ciudadania portena|grupos comunitarios|asistencia alimentaria|ayuda social"],"reading":"transfers"}
+    {
+      "id": "communication",
+      "label": "publicidad y comunicación",
+      "keywords": [
+        "pauta",
+        "publicidad",
+        "propaganda",
+        "publicitario",
+        "comunicación",
+        "comunicacional",
+        "medios",
+        "prensa",
+        "difusión",
+        "campaña",
+        "marketing",
+        "redes",
+        "anuncios",
+        "avisos",
+        "radio",
+        "televisión",
+        "señal",
+        "cable",
+        "opinión pública",
+        "encuestas",
+        "posicionamiento",
+        "contenidos",
+        "imagen"
+      ],
+      "namePatterns": [
+        "publicidad|propaganda|prensa|comunicacion institucional|comunicacion estrategica|medios publicos|radio de la ciudad|canal de la ciudad"
+      ],
+      "principalNames": [
+        "Publicidad y propaganda"
+      ],
+      "entryIds": [
+        "program-20-21-0-1041-19",
+        "program-20-25-0-246-30",
+        "program-20-25-0-3410-36",
+        "program-20-25-0-3414-38",
+        "program-20-29-0-2505-17",
+        "program-20-29-0-2512-22",
+        "unit-20-21-0-1041",
+        "unit-20-25-0-246",
+        "unit-20-25-0-3400",
+        "unit-20-25-0-3410",
+        "unit-20-25-0-3414",
+        "unit-20-29-0-214",
+        "unit-20-29-0-2500",
+        "unit-20-29-0-2505",
+        "unit-20-29-0-2512",
+        "program-24-0-0-1038-102",
+        "program-29-0-0-3202-27",
+        "program-45-0-245-7327-110",
+        "program-50-0-0-512-35",
+        "program-50-0-0-525-38",
+        "program-50-0-0-525-43",
+        "program-50-0-0-535-54",
+        "program-50-0-0-535-66",
+        "program-2026-20-25-0-249-29",
+        "program-2026-20-25-0-3402-17",
+        "program-2026-20-25-0-3403-18",
+        "program-2026-20-25-0-3407-22",
+        "program-2026-35-0-0-8729-16",
+        "unit-2026-20-25-0-249",
+        "unit-2026-20-25-0-3402",
+        "unit-2026-20-25-0-3403",
+        "unit-2026-20-25-0-3407",
+        "unit-2026-20-25-0-3408",
+        "unit-2026-35-0-0-8729"
+      ]
+    },
+    {
+      "id": "events",
+      "label": "eventos y entretenimiento",
+      "keywords": [
+        "eventos",
+        "evento",
+        "ferias",
+        "feria",
+        "festival",
+        "festivales",
+        "eventos masivos",
+        "recitales",
+        "shows",
+        "espectáculos",
+        "celebraciones",
+        "fiestas",
+        "noches",
+        "entretenimiento",
+        "turismo",
+        "autódromo",
+        "carreras",
+        "gastronomía",
+        "Navidad",
+        "maratón"
+      ],
+      "namePatterns": [
+        "eventos|feria|festival|celebracion|autodromo|usina del arte|turismo|gastronom|espectaculo|noches culturales"
+      ]
+    },
+    {
+      "id": "green",
+      "label": "ambiente y agenda verde",
+      "keywords": [
+        "ambiente",
+        "ambiental",
+        "verde",
+        "sostenible",
+        "sustentable",
+        "sostenibilidad",
+        "clima",
+        "climático",
+        "cambio climático",
+        "economía circular",
+        "reciclado",
+        "reciclaje",
+        "residuos",
+        "biodiversidad",
+        "conservación",
+        "ecoparque",
+        "espacios verdes",
+        "arbolado",
+        "transición energética",
+        "energía",
+        "renovable",
+        "emisiones"
+      ],
+      "namePatterns": [
+        "ambient|sostenib|circular|recicla|ecoparque|espacios verdes|arbolado|conservacion|transicion energetica|redes ambientales"
+      ]
+    },
+    {
+      "id": "gender",
+      "label": "género y diversidad",
+      "keywords": [
+        "género",
+        "mujer",
+        "mujeres",
+        "feminismo",
+        "feminista",
+        "diversidad",
+        "diversidades",
+        "LGBT",
+        "LGBTIQ",
+        "igualdad",
+        "violencia de género",
+        "autonomía",
+        "cuidados",
+        "masculinidades"
+      ],
+      "namePatterns": [
+        "genero|mujer|diversidad|igualdad"
+      ],
+      "descriptionPatterns": [
+        "violencia de genero|igualdad de oportunidades|diversidad sexual"
+      ]
+    },
+    {
+      "id": "administration",
+      "label": "administración y conducción",
+      "keywords": [
+        "burocracia",
+        "burocrático",
+        "administración",
+        "administrativo",
+        "gasto administrativo",
+        "gastos generales",
+        "actividades centrales",
+        "actividades comunes",
+        "conducción",
+        "apoyo",
+        "gestión administrativa",
+        "mesa de entradas",
+        "estructura"
+      ],
+      "namePatterns": [
+        "actividades centrales|actividades comunes|gestion administrativa|posicionamiento institucional|mesa de entradas|secretaria general|vicejefatura"
+      ],
+      "reading": "support"
+    },
+    {
+      "id": "debt",
+      "label": "deuda e intereses",
+      "keywords": [
+        "deuda",
+        "intereses",
+        "bonos",
+        "préstamos",
+        "endeudamiento"
+      ],
+      "namePatterns": [
+        "deuda|intereses|credito publico|endeudamiento|prestamo"
+      ],
+      "reading": "debt"
+    },
+    {
+      "id": "elections",
+      "label": "elecciones",
+      "keywords": [
+        "elecciones",
+        "PASO",
+        "electoral",
+        "votación"
+      ],
+      "namePatterns": [
+        "eleccion|electoral|votacion"
+      ]
+    },
+    {
+      "id": "staff",
+      "label": "personal y remuneraciones",
+      "keywords": [
+        "sueldos",
+        "salarios",
+        "personal",
+        "empleados",
+        "planta",
+        "contratados",
+        "gabinete"
+      ],
+      "namePatterns": [
+        "personal|remuneracion|recursos humanos|gabinete de autoridades|asignaciones familiares|beneficios y compensaciones|servicios extraordinarios|contratos por tiempo"
+      ],
+      "reading": "personnel"
+    },
+    {
+      "id": "transfers",
+      "label": "subsidios y transferencias",
+      "keywords": [
+        "subsidios",
+        "transferencias",
+        "ayudas",
+        "planes sociales"
+      ],
+      "namePatterns": [
+        "transferencia|subsidio|ciudadania portena|grupos comunitarios|asistencia alimentaria|ayuda social"
+      ],
+      "reading": "transfers"
+    }
   ]
 }

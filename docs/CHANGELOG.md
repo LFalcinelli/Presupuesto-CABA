@@ -291,3 +291,6 @@
 - PASO neta de publicidad, estimación visible y condicionada a su realización; pesos relativos calculados sobre impuestos propios, sin sumar las viñetas.
 - Retratos retirados del artefacto; pie y metadatos neutrales; etapas distintas de la comparación USD explícitas y variación en pesos junto a ellas.
 - PR encadenado sobre el 29; sin fusionar ni cambiar producción.
+
+## 2026-10-15 — v13 B · fuentes y búsqueda (propuesta)
+Inicio coherente en búsquedas y enlaces; cierre de búsqueda con Escape/navegación, asociaciones temáticas explícitas, ranking sin forzar ABL. Descargas técnicas fuera de la interfaz; trazabilidad en GitHub. Se conservan los originales y cifras de datos.
