@@ -26,3 +26,5 @@
 21. Dólares: el dataset sólo ofrece 2026 ampliado. Se conserva el gráfico, se indican las etapas distintas y se añade el cambio real en pesos de los mismos años. Los PR encadenados deben obtener vista previa sin fusionar; el workflow admite bases de ramas, conservando producción desde main y sus controles de confianza.
 
 22. v13 B: Inicio coherente en búsquedas y enlaces; cierre de búsqueda con Escape/navegación, asociaciones temáticas explícitas, ranking sin forzar ABL. Descargas técnicas fuera de la interfaz; trazabilidad en GitHub. Se conservan los originales y cifras de datos.
+
+23. v13 C: Ayudas de términos con botón, Escape y retorno de foco incluso dentro de pop-ups; alternativa tabular del mapa. Logo derivado a 348×192, original intacto; favicon optimizado. Módulos desactivados de mundo y salarios fuera de la carga inicial; originales conservados. El versionado de todos los JS/CSS ya era correcto y se agrega un control de regresión. La consolidación general de postprocesadores se difiere: su condición de igualdad visual exige aislar ese cambio de las nuevas ayudas, sin una refactorización amplia en este pedido.

@@ -38,3 +38,5 @@ require('./home-highlights.cjs');
 
 require('./brand-icons.cjs');
 require('./v13-a.cjs');
+
+require('./v13-c.cjs');

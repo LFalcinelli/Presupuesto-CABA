@@ -294,3 +294,8 @@
 
 ## 2026-10-15 — v13 B · fuentes y búsqueda (propuesta)
 Inicio coherente en búsquedas y enlaces; cierre de búsqueda con Escape/navegación, asociaciones temáticas explícitas, ranking sin forzar ABL. Descargas técnicas fuera de la interfaz; trazabilidad en GitHub. Se conservan los originales y cifras de datos.
+
+## 2026-10-15 — v13 C · accesibilidad y recursos (propuesta)
+Ayudas de términos con botón, Escape y retorno de foco incluso dentro de pop-ups; alternativa tabular del mapa. Logo derivado a 348×192, original intacto; favicon optimizado. Módulos desactivados de mundo y salarios fuera de la carga inicial; originales conservados. El versionado de todos los JS/CSS ya era correcto y se agrega un control de regresión. La consolidación general de postprocesadores se difiere: su condición de igualdad visual exige aislar ese cambio de las nuevas ayudas, sin una refactorización amplia en este pedido.
+
+- Se evita el doble redondeo del peso de las viñetas sobre impuestos propios. El contraste visible en dólares expresa sus montos en US$ millones, sin cambiar valores de origen. Las ayudas en línea mantienen un área táctil de al menos 24 px.

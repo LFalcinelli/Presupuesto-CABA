@@ -1,0 +1,6 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const root=path.resolve(__dirname,'..'),index=fs.readFileSync(path.join(root,'dist/index.html'),'utf8'),build=index.match(/name="site-build" content="([^"]+)"/)[1];
+for(const m of index.matchAll(/(?:href|src)="(\.\/[^\"]+\.(?:js|css)(?:\?[^\"]*)?)"/g)){const url=new URL(m[1],'https://example.test/');assert.equal(url.searchParams.get('v'),build,m[1]);assert(fs.existsSync(path.join(root,'dist',url.pathname.slice(1))));}
+assert(!index.includes('world-comparison.js'));assert(!index.includes('optional-salaries.js'));assert(!fs.existsSync(path.join(root,'dist/world-comparison.js')));assert(!fs.existsSync(path.join(root,'dist/optional-salaries.js')));
+const original=fs.readFileSync(path.join(root,'public/assets/lla-caba-oficial.png')),brand=JSON.parse(fs.readFileSync(path.join(root,'content/branding.json')));assert.equal(crypto.createHash('sha256').update(original).digest('hex'),brand.sha256);const small=fs.readFileSync(path.join(root,'public/assets/lla-caba-header.png'));assert(small.readUInt32BE(20)>=176);assert(small.length<original.length/2);
+console.log('v13 C: todos los JS/CSS versionados, módulos desactivados fuera del artefacto, original intacto y logo de encabezado 2×.');
