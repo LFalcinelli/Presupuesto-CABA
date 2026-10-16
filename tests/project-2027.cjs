@@ -21,7 +21,7 @@ assert.equal(p.breakdowns.revenue.reduce((a,r)=>a+r.value,0),v('fiscalRevenue'))
 for(const purpose of p.breakdowns.purposes)assert.equal(p.breakdowns.functions.filter(f=>f.purpose===purpose.name).reduce((a,r)=>a+r.value,0),purpose.value);
 for(const m of [...Object.values(s),...Object.values(p.breakdowns).flat(),...p.creditAuthorizations]){assert(m.pdfPage>=1&&m.pdfPage<=297&&m.reference&&m.source);assert.equal(m.status,'project');assert(m.unit&&m.universe&&Number.isFinite(m.value));}
 const c=read('data/budget/2027/comparison-2026.json');assert.equal(c.inflationAdjusted,true);assert.equal(c.totals.reference,19877152039294);
-assert.equal(c.deflator.percentage,18);assert.equal(c.deflator.factor,1.18);assert.equal(c.deflator.basis,'projection');assert.equal(c.deflator.sourceType,'user-provided');
+assert.equal(c.deflator.percentage,18);assert.equal(c.deflator.factor,1.18);assert.equal(c.deflator.basis,'site-assumption');assert.equal(c.deflator.sourceType,'site-assumption');
 assert.equal(c.totals.project,v('fiscalExpense'));assert(Math.abs(c.totals.realVariationPct-2.725645358423656)<1e-9);
 assert(c.totals.nominalVariationPct>21&&c.totals.nominalVariationPct<22);assert(c.totals.realVariationPct>2&&c.totals.realVariationPct<3);
 const income2026=read('data/revenue/income-2026-2.json');

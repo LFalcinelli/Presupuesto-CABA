@@ -10,32 +10,13 @@ El gasto corriente se refiere a corriente **sin intereses**, incluidos sueldos, 
 
 Las cuentas comparan separadamente cierre 2025, primeros semestres 2024–2026 y proyecto 2027. Se informa el superávit semestral 2026 y el pequeño superávit financiero proyectado 2027. Los bonos a proveedores y el préstamo Belgrano Sur son proyectos complementarios separados de los agregados fiscales.
 
-## Cifras conciliadas
+## Selección revisada v13 (propuesta, sin publicar en producción)
 
-| Selección | Pesos exactos | Millones, total redondeado |
-| --- | ---: | ---: |
-| Publicidad y comunicación | 233.014.989.972 | 233.015 |
-| Eventos, turismo y entretenimiento | 110.658.651.557 | 110.659 |
-| PASO, estimación propia | 28.845.207.474,30 | 28.845 |
-| Viñeta 3 | 372.518.849.003,30 | 372.519 |
-| Conducción y burocracia | 1.485.022.473.319 | 1.485.022 |
-| Vivienda | 139.130.862.941 | 139.131 |
-| Agenda verde | 489.472.307.922 | 489.472 |
-| Viñeta 4 | 2.113.625.644.182 | 2.113.626 |
+Publicidad y comunicación de gobierno: $233.015 millones; los medios públicos se identifican por separado en el desglose. Eventos: $44.004 millones, excluyendo Turismo y seguridad de eventos. PASO: ≈ $28.765 millones, supuesto del 35% del presupuesto electoral neto de publicidad ya contada y condicionado a que se realicen. Total viñeta 3: $305.784 millones, 1,8% de los impuestos propios previstos.
 
-Publicidad suma la principal global más once unidades de comunicación, restando la publicidad que esas unidades ya contienen. El total verificado difiere de los $232.784 millones propuestos en $231 millones al redondear. No se fuerza la suma a un importe sin respaldo.
+Viñeta 4: ≈ $1,76 billones en programas centrales/comunes, vivienda y ambiente. Se excluyen Salud 401-1 (insumos y servicios sanitarios) y Seguridad 1050-8 (resguardo operativo), y dejan de agregarse unidades completas que también contienen otros programas. La tabla y el criterio propuesto están en [REVISION_V13_ESTRUCTURA.md](REVISION_V13_ESTRUCTURA.md) y requieren aprobación antes de fusionar. Se usa «áreas de gobierno» porque también incluye Jefaturas, Procuración y Tribunal. No se infiere duplicación o ahorro del nombre de un programa, del porcentaje de servicios, ni de esta suma.
 
-Eventos cuenta Usina del Arte y Festivales de la Ciudad por programa, una vez cada uno. Sumar la dirección completa y nuevamente Usina duplicaría $1.402 millones. Turismo excluye $14.800 millones de publicidad, ya contados en la primera fila. La categoría incluye servicios de seguridad: no todo es entretenimiento.
-
-PASO aplica un **supuesto del 35%** a $82.414.878.498 del Instituto de Gestión Electoral y la Unidad de Enlace Electoral. El proyecto no separa PASO y generales. No hay una referencia histórica verificada en los archivos para justificar ese porcentaje; se lo informa como supuesto de simulación, no como ahorro garantizado. La tarjeta conserva la fila abreviada solicitada; el pop-up identifica la estimación en una línea y enlaza su criterio completo en la metodología.
-
-Conducción: $1.531.861.910.181 de Actividades Centrales/Comunes − $88.413.959.280 de programas ya comprendidos en vivienda, agenda verde o las ocho unidades adicionales + $41.574.522.418 de esas unidades completas. Los programas de comunicación de la viñeta 3 pueden estar aquí: por eso no se suman ambas viñetas.
-
-Operación del Reciclado ($154.961.548.685) es el mayor componente de la agenda verde. Reciclado y Economía Circular ($98.466.239.126) es otro programa con distinto código. Ninguno se vuelve a contar en conducción. La suma exacta de agenda verde redondea a $489.472 millones; la suma de sus filas redondeadas da $489.473 millones. Se prioriza sumar valores exactos y redondear al final.
-
-Las comparaciones por componente se publican solo cuando hay una base votada 2026 y continuidad verificada. Para componentes netos de publicidad se enlaza la ficha completa, sin aplicar a esa selección un porcentaje que corresponde a otro universo. La coincidencia de funciones temáticas no demuestra que las estructuras sean redundantes.
-
-Los intereses solos crecen 98,1% real frente al votado 2026 (código económico 21410000). El 93% propuesto corresponde al inciso 7 completo, que también incluye otros gastos de deuda; no se lo etiqueta como intereses solos. El pop-up usa el universo de intereses, coherente con el resultado primario y financiero.
+El capital usa el mismo escenario de 18% frente al ampliado que Resumen: −9,1%. El récord corriente usa la historia anual estimada y explicita su sensibilidad, el máximo ejecutado 2023 y los traspasos. Las viñetas 3 y 4 no se suman entre sí. Los pesos originales de todos los programas permanecen intactos.
 
 ## Interacción
 

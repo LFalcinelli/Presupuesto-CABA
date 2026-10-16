@@ -27,7 +27,7 @@ module.exports=async function compositionReading(page,base){
   for(const kind of ['expenses','revenue']){
    await page.goto(base+'#proyecto-2027?vista='+kind);await ready();
    const changes=page.locator('[data-budget-changes]');assert(await changes.isVisible());
-   assert((await changes.innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('2026 votado'));
+   assert((await changes.innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('2026 ampliado'));
    assert((await page.locator('.review-base-control').textContent().then(text=>text.replace(/\u00a0/g,' '))).includes('18%'));
    if(kind==='expenses'){
     for(const dimension of ['functions','jurisdictions','objects','economic']){

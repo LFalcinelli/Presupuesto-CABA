@@ -283,3 +283,11 @@
 - 22 áreas con presupuesto 2027/2026, lectura por encima/debajo de inflación proyectada (18%), composición y partidas. 394 unidades de 2026 con presupuesto propio e historial, sin inventar la apertura 2027 que falta.
 - Historial 2013–2025 con factores IPCBA existentes, selector anual, huecos de identidad y etapas separadas. No se infiere cantidad de empleados ni contratos.
 - Validación independiente de todos los importes y años; búsqueda, teclado, recarga de enlaces y móvil en 1440/390/320 px.
+
+## 2026-10-15 — v13 A · credibilidad (propuesta)
+
+- Ampliado por defecto y cuatro escenarios coherentes con sus bases; el votado real se mantiene por aclaración del propietario. Supuesto del sitio de 18%, sin atribución privada visible.
+- Viñetas con autoría editorial, total temprano, saldo positivo 2027, deuda separada, publicidad/medios distinguidos, exclusiones en eventos y revisión de programas centrales. Criterio y composición por programa en REVISION_V13_ESTRUCTURA.md, pendientes de aprobación.
+- PASO neta de publicidad, estimación visible y condicionada a su realización; pesos relativos calculados sobre impuestos propios, sin sumar las viñetas.
+- Retratos retirados del artefacto; pie y metadatos neutrales; etapas distintas de la comparación USD explícitas y variación en pesos junto a ellas.
+- PR encadenado sobre el 29; sin fusionar ni cambiar producción.

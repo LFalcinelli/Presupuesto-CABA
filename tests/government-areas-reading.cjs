@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 module.exports=async function({page,base}){
  for(const width of [1440,390,320]){
-  await page.setViewportSize({width,height:1000});await page.goto(base+'#proyecto-2027?vista=areas');await page.locator('.gov-cards').waitFor();
+  await page.setViewportSize({width,height:1000});await page.goto(base+'#proyecto-2027?vista=areas&base=initial');await page.locator('.gov-cards').waitFor();
   assert.equal(await page.locator('.tabs [data-project-tab]').count(),4);assert.equal(await page.locator('.gov-card').count(),22);
   assert((await page.locator('.gov-card').first().innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Educación'));
   await page.locator('#gov-directory-search').fill('infraestructura');assert.equal(await page.locator('.gov-card').count(),1);

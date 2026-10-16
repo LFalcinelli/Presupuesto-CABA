@@ -37,3 +37,4 @@ require('./budget-search.cjs');
 require('./home-highlights.cjs');
 
 require('./brand-icons.cjs');
+require('./v13-a.cjs');

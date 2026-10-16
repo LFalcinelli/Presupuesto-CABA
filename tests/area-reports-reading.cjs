@@ -3,7 +3,7 @@ module.exports=async function({page,base}){
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:950});await page.goto(base+'#proyecto-2027?vista=summary');await page.waitForFunction(()=>document.querySelector('#content')?.getAttribute('aria-busy')==='false'&&document.querySelector('.tabs [data-project-tab="summary"]')?.getAttribute('aria-pressed')==='true'&&document.querySelector('.area-search'));
   await page.locator('.area-search-examples [data-area-report="area-40"]').click();await page.locator('.gov-kpis').waitFor();
-  assert((await page.locator('.gov-kpis').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('+18%'));assert(page.url().includes('vista=areas&area=40'));
+  assert((await page.locator('.gov-kpis').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('+3,4%'));assert(page.url().includes('vista=areas&area=40'));
   await page.reload();await page.locator('.gov-kpis').waitFor();assert.equal(await page.locator('.government-areas h1').innerText().then(text=>text.replace(/\u00a0/g,' ')),'Ministerio de Salud');
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await page.goto(base+'#proyecto-2027?vista=summary');await page.locator('#area-report-search').waitFor();

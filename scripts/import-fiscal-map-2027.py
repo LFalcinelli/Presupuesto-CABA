@@ -37,7 +37,7 @@ def main():
     wb = openpyxl.load_workbook(book_path, data_only=True, read_only=True)
     sheets = {s.title: list(s.values) for s in wb}
     assert len(sheets) == 9
-    source = {**project['source'], 'workbook': book_path.name,
+    source = {**project['source'], 'workbook': 'Mapa fiscal 2027, elaboración propia',
               'workbookSha256': hashlib.sha256(book_path.read_bytes()).hexdigest()}
     nodes = []
     def node(id, parent, label, official, value, side, view, sheet, row, page, reference):

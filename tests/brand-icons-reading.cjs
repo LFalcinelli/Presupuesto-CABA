@@ -2,9 +2,9 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {auditTheme}=require('./theme-route-reading.cjs');
 module.exports=async({page,base})=>{
  const ready=()=>page.waitForFunction(()=>document.querySelector('main')?.getAttribute('aria-busy')==='false');
- const expected=[['coins','users','trending-up'],['trending-down','hourglass','file-text'],['megaphone','ticket','vote'],['users','house','leaf']],out=process.env.BRAND_QA_DIR;
+ const expected=[['coins','users','trending-up'],['trending-down','hourglass','coins','file-text'],['megaphone','ticket','vote'],['users','house','leaf']],out=process.env.BRAND_QA_DIR;
  if(out)fs.mkdirSync(out,{recursive:true});await page.emulateMedia({reducedMotion:'reduce'});
- const contrast=async selector=>page.locator(selector).evaluateAll(es=>{const rgb=s=>(s.match(/[\d.]+/g)||[]).slice(0,3).map(Number),lum=a=>a.map(x=>x/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4).reduce((s,x,i)=>s+x*[.2126,.7152,.0722][i],0);return es.map(e=>{let bg=e.parentElement;while(bg&&getComputedStyle(bg).backgroundColor==='rgba(0, 0, 0, 0)')bg=bg.parentElement;const color=getComputedStyle(e).color,a=lum(rgb(color)),b=lum(rgb(getComputedStyle(bg).backgroundColor));return {icon:e.dataset.icon,color,ratio:(Math.max(a,b)+.05)/(Math.min(a,b)+.05)};});});
+ const contrast=async selector=>page.locator(selector).evaluateAll(es=>{const rgb=s=>(s.match(/[\d.]+/g)||[]).slice(0,3).map(Number),lum=a=>a.map(x=>x/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4).reduce((s,x,i)=>s+x*[.2126,.7152,.0722][i],0);return es.map(e=>{let bg=e.parentElement;while(bg&&getComputedStyle(bg).backgroundColor==='rgba(0, 0, 0, 0)')bg=bg.parentElement;const color=getComputedStyle(e).color,a=lum(rgb(color)),b=lum(rgb(getComputedStyle(bg).backgroundColor));return {icon:e.dataset.icon,deficit:e.classList.contains('deficit-icon'),color,ratio:(Math.max(a,b)+.05)/(Math.min(a,b)+.05)};});});
  const records=[];
  for(const theme of ['light','dark'])for(const width of [1440,375]){
   await page.setViewportSize({width,height:900});await page.goto(base+'#inicio');await ready();await page.evaluate(t=>CabaTheme.set(t),theme);await page.evaluate(()=>render());await ready();await page.evaluate(()=>document.fonts.ready);
@@ -13,7 +13,7 @@ module.exports=async({page,base})=>{
   assert.deepEqual(await page.locator('.highlight-metric-row .highlight-row-icon').evaluateAll(es=>es.map(e=>e.dataset.icon)),expected.flat());
   await page.waitForFunction(()=>[...document.querySelectorAll('.highlight-metric-row svg use')].every(e=>e.getBBox().width>0));
   for(const svg of await page.locator('.highlight-metric-row .highlight-row-icon').all()){assert.equal(await svg.getAttribute('aria-hidden'),'true');assert.equal(await svg.getAttribute('focusable'),'false');const box=await svg.boundingBox();assert.equal(box.width,width===375?24:30);}
-  const checks=await contrast('.highlight-metric-row .highlight-row-icon');for(const c of checks){assert(c.ratio>=3,JSON.stringify(c));assert.equal(c.color,expected[1].includes(c.icon)?theme==='light'?'rgb(173, 53, 89)':'rgb(242, 155, 134)':theme==='light'?'rgb(55, 24, 89)':'rgb(199, 179, 240)');}
+  const checks=await contrast('.highlight-metric-row .highlight-row-icon');for(const c of checks){assert(c.ratio>=3,JSON.stringify(c));assert.equal(c.color,c.deficit?theme==='light'?'rgb(173, 53, 89)':'rgb(242, 155, 134)':theme==='light'?'rgb(55, 24, 89)':'rgb(199, 179, 240)');}
   records.push({theme,width,icons:checks,logo:dims});
   assert(await page.locator('.highlight-row-copy>strong').evaluateAll(es=>es.every(e=>e.scrollWidth<=e.clientWidth+1)),'amounts fit');
   if(width===375){const line=page.locator('[data-highlight-card="2"] li:nth-child(2) strong');assert(await line.evaluate(e=>e.getBoundingClientRect().height<=parseFloat(getComputedStyle(e).lineHeight)+1),'semester amount stays on one line');}

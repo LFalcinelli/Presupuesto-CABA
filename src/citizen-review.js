@@ -13,15 +13,15 @@ ensureViewData=async function(view,period){
 const reviewReadRoute=readRoute,reviewSyncRoute=syncRoute;
 readRoute=function(){
  reviewReadRoute();const q=new URLSearchParams(location.hash.split('?')[1]||'');
- if(state.view==='project')state.projectBase=state.governmentBase=q.get('base')==='current'?'current':'initial';
+ if(state.view==='project')state.projectBase=state.governmentBase=q.get('base')==='initial'?'initial':'current';
  state.compareBudgetBase=q.get('presupuesto')==='ampliado'?'current':q.get('presupuesto')==='inicial'?'initial':state.compareBudgetBase||'initial';
  if(state.view==='compare'&&!q.has('presupuesto'))state.compareBudgetBase='initial';
  state.glossaryTopic=state.view==='explained'?q.get('tema'):null;
 };
 syncRoute=function(){
- if(state.view==='project')state.governmentBase=state.projectBase||state.governmentBase||'initial';
+ if(state.view==='project')state.governmentBase=state.projectBase||state.governmentBase||'current';
  reviewSyncRoute();const q=new URLSearchParams(location.hash.split('?')[1]||'');
- if(state.view==='project'){q.set('base',state.projectBase||'initial');history.replaceState(null,'','#proyecto-2027?'+q);}
+ if(state.view==='project'){q.set('base',state.projectBase||'current');history.replaceState(null,'','#proyecto-2027?'+q);}
  if(state.view==='compare'){q.set('presupuesto',state.compareBudgetBase==='current'?'ampliado':'inicial');history.replaceState(null,'','#comparar?'+q);}
  if(state.view==='explained'&&state.glossaryTopic)history.replaceState(null,'','#presupuesto-explicado?tema='+state.glossaryTopic);
 };
@@ -43,10 +43,9 @@ function reviewComparisonRows(key,selected=null){return (state.projectComparison
 const reviewOverview=projectOverview;
 projectOverview=function(){
  const t=document.createElement('template');t.innerHTML=reviewOverview();
- const totals=state.projectStages.totals,factor=state.projectComparison.deflator.factor,rates=['initial','current'].map(b=>(totals.project/factor/totals[b]-1)*100);
- const cards=t.content.querySelectorAll('.project-reading-cards article');
+ const totals=state.projectStages.totals,rows=budgetPriceScenarios(),selected=rows.find(r=>r.base===state.projectBase)||rows[1],other=rows.find(r=>r!==selected),cards=t.content.querySelectorAll('.project-reading-cards article');
  cards[0].innerHTML=`<span>Presupuesto solicitado</span><strong>≈ $ ${fmt(totals.project/1e12,1)} billones</strong><details class="review-exact"><summary>Importe exacto</summary>${money(totals.project)}</details>`;
- cards[1].innerHTML=`<span>Frente al presupuesto votado 2026</span><strong class="variation-up">▲ ${signedPct(rates[0])}</strong><small>Descontando la inflación supuesta del 18%; frente al ampliado a junio: <b>${signedPct(rates[1])}</b>.</small>${annualPriceScenario(true)}`;
+ cards[1].innerHTML=`<span>Frente al ${selected.label} 2026</span><strong>${scenarioPercent(selected.real)} real</strong><small>Supuesto del sitio: 18% de inflación diciembre a diciembre 2027.</small><p class="budget-scenario" data-scenario-base="${selected.base}">Con precios promedio anuales estimados: <b>${scenarioPercent(selected.annual)}</b> frente al ${selected.label}.</p><p class="budget-scenario" data-scenario-base="${other.base}">Frente al ${other.label}: <b>${scenarioPercent(other.real)} real</b> con 18%; <b>${scenarioPercent(other.annual)}</b> con precios promedio anuales.</p>${annualPriceScenario()}`;
  cards[2].innerHTML=`<span>Saldo final previsto</span><strong>${short(state.project.summary.financialResult.value)}</strong><small>Casi equilibrio, después de pagar los intereses.</small>`;
  return citizenBaseControl()+t.innerHTML;
 };
@@ -60,13 +59,15 @@ projectKeyReadings=function(){
  return t.innerHTML;
 };
 const reviewAnnualScenario=annualPriceScenario;
-annualPriceScenario=function(compact=false){const text=reviewAnnualScenario(false).replace('class="annual-price-scenario"','class="annual-price-description"');return text?`<details class="annual-price-scenario"><summary>Por qué cambia la estimación</summary>${text}</details>`:'';};
+function scenarioPercent(v){return `<span data-scenario-pct="${v}">${signedPct(v)}</span>`;}
+function budgetPriceScenarios(){const rows=state.executionHistory?.rows,a=rows?.find(r=>r.year===2026),b=rows?.find(r=>r.year===2027),d=state.projectStages;if(!a||!b||!d)return [];return ['initial','current'].map(base=>({base,label:base==='current'?'ampliado a junio':'votado',real:(d.totals.project/1.18/d.totals[base]-1)*100,annual:(d.totals.project*b.factor/(d.totals[base]*a.factor)-1)*100}));}
+annualPriceScenario=function(){const rows=budgetPriceScenarios();if(!rows.length)return '';return `<details class="annual-price-scenario"><summary>Los dos escenarios y sus bases</summary><p>El 18% es un supuesto del sitio. El otro escenario usa precios promedio anuales estimados, como Evolución.</p><div class="table-wrap"><table><thead><tr><th>Base 2026</th><th>Con 18%</th><th>Precios promedio anuales</th></tr></thead><tbody>${rows.map(r=>`<tr><th>${E(r.label)}</th><td>${scenarioPercent(r.real)} real</td><td>${scenarioPercent(r.annual)} real</td></tr>`).join('')}</tbody></table></div>${detailLink('historia','Cómo se estiman los precios')}</details>`;};
 function variationLabel(value){return Number.isFinite(value)?`<span class="variation-${value<0?'down':'up'}">${value>0?'▲ ':value<0?'▼ ':''}${signedPct(value)}</span>`:'Sin comparación';}
 projectCompare=function(){
  const key=state.projectCompareDimension==='objects'?'objects':'purposes',rows=reviewComparisonRows(key),mode=state.projectChangeMode||'amount',nominal=state.projectPrices==='nominal';
  if(nominal)rows.forEach(r=>r.b=r.original);
  rows.sort((a,b)=>Math.abs(b.b-b.a)-Math.abs(a.b-a.a));
- const d=state.projectStages,base=state.projectBase||'initial',rate=(d.totals.project/(nominal?1:state.projectComparison.deflator.factor)/d.totals[base]-1)*100;
+ const d=state.projectStages,base=state.projectBase||'current',rate=(d.totals.project/(nominal?1:state.projectComparison.deflator.factor)/d.totals[base]-1)*100;
  return `${projectStageJourney()}<section class="stage-comparison"><h2>¿Qué destinos suben o bajan?</h2><div class="tools"><label>Comparar con<select id="project-compare-base"><option value="initial" ${base==='initial'?'selected':''}>Presupuesto votado 2026</option><option value="current" ${base==='current'?'selected':''}>Presupuesto ampliado a junio 2026</option></select></label><label>Comparar destinos<select id="project-compare-dimension"><option value="purposes">Para qué se usa</option><option value="objects" ${key==='objects'?'selected':''}>Qué se paga</option></select></label>${comparisonToggle(mode,'data-project-change-mode',nominal)}</div><p class="project-comparison-result">${nominal?'Cambio sin descontar inflación':'Cambio descontando la inflación'}: <strong>${variationLabel(rate)}</strong></p>${changeDumbbell(rows,{mode,nominal,reference:base==='current'?'2026 ampliado':'2026 votado',project:nominal?'2027 propuesto':'2027 ajustado'})}<details class="exact-values"><summary>Importes exactos y otras opciones</summary><label>Mirar los valores<select id="project-compare-prices"><option value="real" ${!nominal?'selected':''}>Descontando inflación supuesta de 18%</option><option value="nominal" ${nominal?'selected':''}>Sin descontar inflación</option></select></label><div class="table-wrap"><table><thead><tr><th>Destino</th><th>2026 votado</th><th>2026 ampliado a junio</th><th>Proyecto 2027</th></tr></thead><tbody>${d.groups[key].map(r=>`<tr><th>${E(r.name)}</th><td>${money(r.initial)}</td><td>${money(r.current)}</td><td>${money(r.project)}</td></tr>`).join('')}</tbody></table></div></details>${detailLink('presupuesto-2027','Fuentes y supuesto de inflación')}</section>`;
 };
 projectBudgetChanges=function(key,kind='expense'){
@@ -146,6 +147,7 @@ extraViews.explained=function(){
 const reviewMarkup=polishMarkup;
 polishMarkup=function(html,view){
  const t=document.createElement('template');t.innerHTML=reviewMarkup(html,view);
+ for(const node of t.content.querySelectorAll('[data-scenario-pct]')){const v=Number(node.dataset.scenarioPct);node.textContent=(v<0?'−':v>0?'+':'')+fmt(Math.abs(v),1)+'%';}
  for(const node of t.content.querySelectorAll('[data-precise-share]'))node.textContent=fmt(Number(node.dataset.preciseShare),1)+'%';
  if(view==='landing'){
   const c=t.content.querySelector('.hero-current');c.innerHTML=`<p>Presupuesto 2026</p><strong><span class="review-budget-stage">Votado $ ${fmt(state.projectStages.totals.initial/1e12,1)} billones</span><span class="review-budget-stage">Ampliado a junio $ ${fmt(state.projectStages.totals.current/1e12,1)} billones</span></strong><button class="text-link" data-view="home" data-snapshot="2026-2">Ver el presupuesto 2026 ↗</button>`;

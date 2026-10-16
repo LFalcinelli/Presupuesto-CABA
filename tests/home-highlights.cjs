@@ -9,11 +9,11 @@ for(const c of d.cards.filter(c=>c.groups)){
  const ledger=new Set();for(const g of c.groups){assert.equal(sum(g.components),g.amount);for(const r of g.components){assert(Math.abs(sum(r.ledger)-r.amount)<.01);for(const l of r.ledger){assert(!ledger.has(l.key),l.key);ledger.add(l.key);}if(r.programIds.length)assert.equal(new Set(r.programIds).size,r.programIds.length);}}
 }
 const fourthIds=card(4).groups.flatMap(g=>g.components.flatMap(c=>c.programIds));assert.equal(new Set(fourthIds).size,fourthIds.length,'no program repeats across green/housing/support');
-const green=card(4).groups.find(g=>g.id==='green');assert.equal(green.components[0].id,'program-21-0-0-2701-24');assert.equal(green.amount,489472307922);assert.equal(card(4).amount,2113625644182);
+const green=card(4).groups.find(g=>g.id==='green');assert.equal(green.components[0].id,'program-21-0-0-2701-24');assert.equal(green.amount,489472307922);assert.equal(card(4).amount,1764672567429);
 const publicity=card(3).groups.find(g=>g.id==='publicity'),events=card(3).groups.find(g=>g.id==='events'),paso=card(3).groups.find(g=>g.id==='paso');
-assert.equal(publicity.amount,233014989972);assert.equal(events.amount,110658651557);assert.equal(Math.round(card(3).amount/1e6),372519);
+assert.equal(publicity.amount,233014989972);assert.equal(events.amount,44004161420);assert.equal(Math.round(card(3).amount/1e6),305784);
 assert.equal(events.components.filter(c=>c.programIds.includes('program-50-0-0-3190-81')).length,1,'Usina counted once');
-assert.equal(paso.amount,paso.estimate.electoralTotal*.35);assert.equal(Math.round(paso.amount/1e6),28845);assert.equal(paso.estimate.electoralTotal,82414878498);assert.match(paso.method,/no separa PASO/);
+assert.equal(paso.amount,paso.estimate.netElectoralTotal*.35);assert.equal(Math.round(paso.amount/1e6),28765);assert.equal(paso.estimate.electoralTotal,82414878498);assert.match(paso.method,/no separa PASO/);
 assert.equal(card(1).amount,hist.series.currentPrimary.rows.at(-1).nominal);assert.equal(card(1).perCapita,card(1).amount/card(1).population.value);assert(card(1).abovePreviousRecord>0&&card(1).abovePreviousRecord<1);
 const currentRows=hist.series.currentPrimary.rows,realAt=y=>currentRows.find(r=>r.year===y).real;assert.equal(card(1).realGrowth2025,(realAt(2027)/realAt(2025)-1)*100);assert.equal(card(1).realGrowth2025.toFixed(1),'8.3');
 assert.equal(card(2).providers.amount,600000000000);assert(card(2).financialResult2027>0);assert(card(2).semesters.every(r=>r.financialResult>0));assert.equal(card(2).interest2027+card(2).financialResult2027,card(2).primaryResult2027);

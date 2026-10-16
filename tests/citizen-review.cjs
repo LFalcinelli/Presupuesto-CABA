@@ -20,7 +20,7 @@ module.exports=async function({page,base}){
    assert((await page.locator('.project-key-readings').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('99,8%'));
    for(const tab of ['expenses','revenue','areas','summary']){await page.locator(`.tabs [data-project-tab="${tab}"]`).click();await ready();assert(page.url().includes('base='+baseName));assert.equal(await page.locator(tab==='areas'?'#gov-base':'#project-review-base').inputValue(),baseName);}
   }
-  await page.goto(base+'#proyecto-2027?vista=revenue');await ready();assert.equal(await page.locator('#project-review-base').inputValue(),'initial');
+  await page.goto(base+'#proyecto-2027?vista=revenue');await ready();assert.equal(await page.locator('#project-review-base').inputValue(),'current');
   assert.equal(await page.locator('.income-composition .treemap-tile').count(),0);assert.equal(await page.locator('.production-group').count(),1);
   await page.locator('.review-bar-children button').filter({hasText:'Ingresos Brutos'}).click();await page.locator('#reading-detail-dialog[open]').waitFor();assert((await page.locator('#reading-detail-body').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('13.279.892.329.152'));await page.keyboard.press('Escape');
   await page.goto(base+'#presupuesto-explicado?tema=servicios');await ready();assert(await page.locator('#pregunta-servicios').evaluate(n=>n.open));assert((await page.locator('#pregunta-servicios').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('publicidad'));
