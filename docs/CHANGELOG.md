@@ -1,5 +1,12 @@
 # Cambios
 
+## 2026-10-15 — disposición de Resumen, Áreas y Evolución
+
+- El mismo bloque «Presupuesto de toda la Ciudad · 2026» pasa del directorio de Áreas 2027 al comienzo de Resumen en Avance 2026. Se conserva la opción de ordenar áreas por ampliación durante 2026 y el total del directorio; no se agrega una pestaña Áreas a 2026.
+- «Otras lecturas del presupuesto» queda después de las 22 tarjetas. Los enlaces con `mirada`, incluida Ejecución, conservan la lectura elegida y desplazan hasta ella al abrir o recargar.
+- La comparación en dólares se muestra abierta, con tablas y fuentes de detalle plegables. El desplegable de comparaciones históricas deja de mostrar el gráfico 2005–2026, su selector y su método; conserva habitantes, partidas y comparación entre años. El dataset permanece disponible.
+- Datos y textos conservados, salvo la línea introductoria del desplegable. Controles de orden, enlaces, scroll, lectura y contraste en claro/oscuro a 375/1440 px; entrega mediante PR con vista previa, sin fusionar.
+
 ## 2026-10-14 — ABL en los aumentos de ingresos 2027
 
 - Se suma ABL e Inmobiliario a «Lo que más aumenta en 2027», conservando los cinco rubros destacados y el orden por aumento real en pesos frente al votado 2026.
