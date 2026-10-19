@@ -1,6 +1,9 @@
 const assert=require('node:assert/strict'),{auditTheme}=require('./theme-route-reading.cjs');
 module.exports=async({page,browser,base})=>{
  const ready=()=>page.waitForFunction(()=>document.querySelector('main')?.getAttribute('aria-busy')==='false');
+ await page.goto(base+'#inicio');await ready();assert(await page.locator('.project-questions').isHidden());
+ await page.evaluate(async()=>{state.config.flags.homeProjectRoutes=true;await render();});assert(await page.locator('.project-questions').isVisible());assert.equal(await page.locator('.project-questions .question-card').count(),4);
+ await page.evaluate(async()=>{state.config.flags.homeProjectRoutes=false;await render();});assert(await page.locator('.project-questions').isHidden());
  const routes=['#proyecto-2027?vista=areas','#evolucion?serie=currentPrimary','#gastos?periodo=2026-2','#proyecto-2027?vista=revenue'];
  for(const width of [375,1440])for(const theme of ['light','dark']){
   await page.setViewportSize({width,height:1000});await page.emulateMedia({reducedMotion:'reduce'});await page.goto(base+'#inicio');await ready();await page.evaluate(t=>CabaTheme.set(t),theme);

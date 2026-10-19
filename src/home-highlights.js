@@ -50,7 +50,7 @@ methodPage=function(html){
 
 Site.markupPasses.push(function homeHighlightsPass(t,view){
 
- if(['landing','search'].includes(view)){const per=t.content.querySelector('.hero-person'),budget=t.content.querySelector('.hero-current');per.hidden=state.config.flags.homePerCapita===false;budget.hidden=state.config.flags.homeBudget2026===false;const alone=per.hidden&&budget.hidden;t.content.querySelector('.hero-references').classList.toggle('home-tax-only',alone);t.content.querySelector('.hero-data').classList.toggle('home-tax-layout',alone);}
+ if(['landing','search'].includes(view)){const per=t.content.querySelector('.hero-person'),budget=t.content.querySelector('.hero-current');per.hidden=state.config.flags.homePerCapita===false;budget.hidden=state.config.flags.homeBudget2026===false;const questions=t.content.querySelector('.project-questions');if(questions)questions.hidden=state.config.flags.homeProjectRoutes===false;const alone=per.hidden&&budget.hidden;t.content.querySelector('.hero-references').classList.toggle('home-tax-only',alone);t.content.querySelector('.hero-data').classList.toggle('home-tax-layout',alone);}
 
 });
 

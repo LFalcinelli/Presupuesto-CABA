@@ -1,4 +1,5 @@
 /* Reading hierarchy is token-driven. Editorial titles and values are unchanged. */
+.project-questions[hidden]{display:none}
 main :is(.panel,.project-page,.government-areas,.history-page,.fiscal-summary) h1{font-size:var(--type-h1)}
 main :is(.panel,section)>h2{font-size:var(--type-h2)}
 main :is(.note,.gov-note,.history-exception,.chart-unit,.period-price-reading,.history-chart-unit,.point-readout small){font-size:var(--type-note);line-height:1.65}

@@ -314,3 +314,7 @@ Ayudas de términos con botón, Escape y retorno de foco incluso dentro de pop-u
 - Paleta y tamaños en theme-tokens.css; estilos de treemap reunidos, sin alterar su geometría. Dos !important retirados de rótulos históricos con selectores equivalentes. Logo optimizado existente conservado; original intacto.
 - Orden real de carga y globales documentados en PRODUCTO.md, con plan futuro propuesto y no aplicado. Se retira mayorPortrait por ausencia de referencias; mayorInfo sigue disponible para el módulo salarial desactivado.
 - Comparación de 56 estados: mismos importes visibles, gráficos, tarjetas y destinos. Las fuentes oficiales conservan sus enlaces; no se ofrecen descargas.
+
+## 2026-10-19 · Publicación de v14 autorizada
+- Por pedido del propietario, se oculta el bloque del Inicio «Elegí cómo recorrer el gasto» mediante flags.homeProjectRoutes=false. Se conserva el código para reactivarlo; los accesos a gastos, ingresos y personal siguen en Explorar los datos.
+- Se autoriza integrar y publicar conjuntamente la serie Gasto corriente / PBG y el pulido. No cambian cifras ni metodología en este ajuste.
