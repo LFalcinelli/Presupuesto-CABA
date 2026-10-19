@@ -1,6 +1,7 @@
 'use strict';
 // Citizen labels are presentation only. Official names remain in data and sources.
 const citizenGlossary={
+ pbg:{label:"PBG",official:"Producto Geográfico Bruto: el valor que produce la economía de la Ciudad durante un año. A precios básicos, excluye los impuestos sobre los productos y suma las subvenciones.",question:"clasificaciones"},
  voted:{label:'Presupuesto votado',official:'Sanción / presupuesto inicial',question:'etapas'},
  expanded:{label:'Presupuesto ampliado',official:'Crédito vigente: incluye ampliaciones y demás modificaciones al corte',question:'etapas'},
  executed:{label:'Gasto ejecutado',official:'Gasto devengado: obligación de pago reconocida',question:'ejecutado'},

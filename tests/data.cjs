@@ -40,3 +40,5 @@ require('./brand-icons.cjs');
 require('./v13-a.cjs');
 
 require('./v13-c.cjs');
+
+require('./pbg-caba.cjs');

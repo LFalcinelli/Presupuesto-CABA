@@ -1,0 +1,522 @@
+{
+  "updated": "2026-10-19",
+  "metric": "PBG de CABA a precios básicos, pesos corrientes",
+  "unit": "pesos",
+  "numerator": "execution-history.series.currentPrimary.rows[].nominal (referencia; no duplicado)",
+  "sources": {
+    "annual": {
+      "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+      "url": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx",
+      "sha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "file": "annual.xlsx"
+    },
+    "legacy": {
+      "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-bruto-geografico-a-precios-de-productor-y-valor-agregado-bruto-a-precios-basicos-por-categoria-de-la-clanae-millones-de-pesos-a-precios-corrientes-ciudad-de-buenos-aires-anos-19932009/",
+      "url": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2009/05/PBG_C_93_09.xls",
+      "sha256": "2110e7a135e0fb32f793388622b7b774137bbfe11c857498843393116dc37d5e",
+      "file": "legacy.xls"
+    },
+    "quarterNominal": {
+      "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-trimestral-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-1er-trimestre-2024-2do-trimestre-2025/",
+      "url": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2026/03/PGB_C_Trimestral.xlsx",
+      "sha256": "aa4d0c63ac820810b7d765a14969009f187b2055a99c7f1a0f7974d142398a31",
+      "file": "quarterNominal.xlsx"
+    },
+    "quarterReal": {
+      "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-trimestral-a-precios-basicos-millones-de-pesos-a-precios-de-2004-por-categoria-de-la-clanae-ciudad-de-buenos-aires-1er-trimestre-2024-2do-trimestre-2025/",
+      "url": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2026/03/PGB_K_Trimestral.xlsx",
+      "sha256": "74692a1410a3e63710d8632b49e10197e6c8bb86b192efd5c3836a00ac9997cd",
+      "file": "quarterReal.xlsx"
+    },
+    "rem": {
+      "page": "https://www.bcra.gob.ar/publicaciones/relevamiento-de-expectativas-de-mercado-rem-septiembre-de-2026/",
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/informes/relevamiento-expectativas-mercado-tablas-2026-09.xlsx",
+      "sha256": "2c182bc0747534ae36b0f0ccf7bb91c50186465b4837aff50088a0b99c252ba8",
+      "file": "rem.xlsx"
+    }
+  },
+  "link": {
+    "anchorYear": 2004,
+    "ratio2004": 0.9594849443417607,
+    "annualRatios": {
+      "2004": 0.9594849443417607,
+      "2005": 0.9887860790652147,
+      "2006": 0.9882506320551855,
+      "2007": 0.9979306575599507,
+      "2008": 0.9768791372600911,
+      "2009": 0.9792912960092405
+    },
+    "minimum": 0.9594849443417607,
+    "maximum": 0.9979306575599507,
+    "relativeRange": 0.040069115669725264,
+    "exceedsThreePercent": true,
+    "anchorPublished": 91224021840.64119,
+    "anchorLegacy": 95076032592.90741
+  },
+  "quarterlyControl": {
+    "annual2024": 96597590462598.36,
+    "quarterly2024": [
+      72769588931119.8,
+      88949672301552.03,
+      106058168964325.44,
+      118612931653397.45
+    ],
+    "quarterly2025": [
+      127916288956045.56,
+      138917595804000.6,
+      151911625564125.25,
+      160292753007050.22
+    ],
+    "discrepancy": 3.0000000000000133,
+    "scale": 0.24999999999999914,
+    "note": "Los trimestres se publican a tasa anualizada: su promedio reproduce el anual. Se aplica el cociente anual 2024 / suma trimestral 2024, conforme al control autorizado."
+  },
+  "assumptions": {
+    "growth": {
+      "2026": 0.005526322663353067,
+      "2027": 0.024743414793892658
+    },
+    "priceIndexAnnual": {
+      "2025": 1896.3691666666666,
+      "2026": 2507.0851686388037,
+      "2027": 3043.52787039399
+    },
+    "priceAssumptions": {
+      "2026": 0.3,
+      "2027": 0.18
+    },
+    "realGrowth2026Source": {
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-trimestral-a-precios-basicos-millones-de-pesos-a-precios-de-2004-por-categoria-de-la-clanae-ciudad-de-buenos-aires-1er-trimestre-2024-2do-trimestre-2025/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2026/03/PGB_K_Trimestral.xlsx"
+      },
+      "sourceSha256": "74692a1410a3e63710d8632b49e10197e6c8bb86b192efd5c3836a00ac9997cd",
+      "sourceSheet": "PGB_K_Trimestral",
+      "cell": "N4:O4 / H4:I4",
+      "formula": "sum(H1_2026) / sum(H1_2025) - 1"
+    },
+    "realGrowth2027Source": {
+      "source": {
+        "page": "https://www.bcra.gob.ar/publicaciones/relevamiento-de-expectativas-de-mercado-rem-septiembre-de-2026/",
+        "file": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/informes/relevamiento-expectativas-mercado-tablas-2026-09.xlsx"
+      },
+      "sourceSha256": "2c182bc0747534ae36b0f0ccf7bb91c50186465b4837aff50088a0b99c252ba8",
+      "sourceSheet": "Cuadros de resultados",
+      "cell": "D110",
+      "formula": "median_percent / 100",
+      "remMonth": "2026-09",
+      "published": "2026-10-06",
+      "scope": "PIB nacional como aproximación de CABA; pronóstico, no dato observado"
+    },
+    "nominalControl2026": {
+      "estimatedAnnualGrowth": 0.3293509378537187,
+      "observedH1Growth": 0.3002385064861983,
+      "differencePoints": 2.9112431367520397
+    }
+  },
+  "rows": [
+    {
+      "year": 1997,
+      "pbgNominal": 62061523295.638054,
+      "status": "empalmado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-bruto-geografico-a-precios-de-productor-y-valor-agregado-bruto-a-precios-basicos-por-categoria-de-la-clanae-millones-de-pesos-a-precios-corrientes-ciudad-de-buenos-aires-anos-19932009/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2009/05/PBG_C_93_09.xls"
+      },
+      "sourceSha256": "2110e7a135e0fb32f793388622b7b774137bbfe11c857498843393116dc37d5e",
+      "sourceSheet": "PBG_C_93_09",
+      "cell": "F5",
+      "formula": "VAB_base1993 * link.ratio2004"
+    },
+    {
+      "year": 1998,
+      "pbgNominal": 65481127514.493515,
+      "status": "empalmado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-bruto-geografico-a-precios-de-productor-y-valor-agregado-bruto-a-precios-basicos-por-categoria-de-la-clanae-millones-de-pesos-a-precios-corrientes-ciudad-de-buenos-aires-anos-19932009/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2009/05/PBG_C_93_09.xls"
+      },
+      "sourceSha256": "2110e7a135e0fb32f793388622b7b774137bbfe11c857498843393116dc37d5e",
+      "sourceSheet": "PBG_C_93_09",
+      "cell": "G5",
+      "formula": "VAB_base1993 * link.ratio2004"
+    },
+    {
+      "year": 1999,
+      "pbgNominal": 65050510252.531105,
+      "status": "empalmado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-bruto-geografico-a-precios-de-productor-y-valor-agregado-bruto-a-precios-basicos-por-categoria-de-la-clanae-millones-de-pesos-a-precios-corrientes-ciudad-de-buenos-aires-anos-19932009/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2009/05/PBG_C_93_09.xls"
+      },
+      "sourceSha256": "2110e7a135e0fb32f793388622b7b774137bbfe11c857498843393116dc37d5e",
+      "sourceSheet": "PBG_C_93_09",
+      "cell": "H5",
+      "formula": "VAB_base1993 * link.ratio2004"
+    },
+    {
+      "year": 2000,
+      "pbgNominal": 64307581718.43761,
+      "status": "empalmado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-bruto-geografico-a-precios-de-productor-y-valor-agregado-bruto-a-precios-basicos-por-categoria-de-la-clanae-millones-de-pesos-a-precios-corrientes-ciudad-de-buenos-aires-anos-19932009/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2009/05/PBG_C_93_09.xls"
+      },
+      "sourceSha256": "2110e7a135e0fb32f793388622b7b774137bbfe11c857498843393116dc37d5e",
+      "sourceSheet": "PBG_C_93_09",
+      "cell": "I5",
+      "formula": "VAB_base1993 * link.ratio2004"
+    },
+    {
+      "year": 2001,
+      "pbgNominal": 59911421163.72002,
+      "status": "empalmado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-bruto-geografico-a-precios-de-productor-y-valor-agregado-bruto-a-precios-basicos-por-categoria-de-la-clanae-millones-de-pesos-a-precios-corrientes-ciudad-de-buenos-aires-anos-19932009/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2009/05/PBG_C_93_09.xls"
+      },
+      "sourceSha256": "2110e7a135e0fb32f793388622b7b774137bbfe11c857498843393116dc37d5e",
+      "sourceSheet": "PBG_C_93_09",
+      "cell": "J5",
+      "formula": "VAB_base1993 * link.ratio2004"
+    },
+    {
+      "year": 2002,
+      "pbgNominal": 65962524943.148865,
+      "status": "empalmado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-bruto-geografico-a-precios-de-productor-y-valor-agregado-bruto-a-precios-basicos-por-categoria-de-la-clanae-millones-de-pesos-a-precios-corrientes-ciudad-de-buenos-aires-anos-19932009/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2009/05/PBG_C_93_09.xls"
+      },
+      "sourceSha256": "2110e7a135e0fb32f793388622b7b774137bbfe11c857498843393116dc37d5e",
+      "sourceSheet": "PBG_C_93_09",
+      "cell": "K5",
+      "formula": "VAB_base1993 * link.ratio2004"
+    },
+    {
+      "year": 2003,
+      "pbgNominal": 75778575809.78557,
+      "status": "empalmado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-bruto-geografico-a-precios-de-productor-y-valor-agregado-bruto-a-precios-basicos-por-categoria-de-la-clanae-millones-de-pesos-a-precios-corrientes-ciudad-de-buenos-aires-anos-19932009/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2009/05/PBG_C_93_09.xls"
+      },
+      "sourceSha256": "2110e7a135e0fb32f793388622b7b774137bbfe11c857498843393116dc37d5e",
+      "sourceSheet": "PBG_C_93_09",
+      "cell": "L5",
+      "formula": "VAB_base1993 * link.ratio2004"
+    },
+    {
+      "year": 2004,
+      "pbgNominal": 91224021840.64119,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "B4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2005,
+      "pbgNominal": 112624879066.68214,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "C4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2006,
+      "pbgNominal": 144302130276.20108,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "D4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2007,
+      "pbgNominal": 182446084480.15332,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "E4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2008,
+      "pbgNominal": 228068569954.90515,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "F4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2009,
+      "pbgNominal": 261653355858.58798,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "G4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2010,
+      "pbgNominal": 326296684460.8729,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "H4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2011,
+      "pbgNominal": 419458973569.18335,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "I4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2012,
+      "pbgNominal": 516482285995.7191,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "J4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2013,
+      "pbgNominal": 648919966059.6166,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "K4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2014,
+      "pbgNominal": 848856551363.0015,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "L4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2015,
+      "pbgNominal": 1104026428463.2502,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "M4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2016,
+      "pbgNominal": 1496817791995.9727,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "N4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2017,
+      "pbgNominal": 1947434874442.8835,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "O4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2018,
+      "pbgNominal": 2669365736939.068,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "P4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2019,
+      "pbgNominal": 3799006812399.217,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "Q4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2020,
+      "pbgNominal": 4698493627738.591,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "R4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2021,
+      "pbgNominal": 7699651848170.325,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "S4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2022,
+      "pbgNominal": 14113589975201.773,
+      "status": "observado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "T4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2023,
+      "pbgNominal": 33894111455287.793,
+      "status": "provisorio",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "U4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2024,
+      "pbgNominal": 96597590462598.36,
+      "status": "provisorio",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-anos-20042013/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx"
+      },
+      "sourceSha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b",
+      "sourceSheet": "PGB_C_04_09 ",
+      "cell": "V4",
+      "formula": "published_millions * 1000000"
+    },
+    {
+      "year": 2025,
+      "pbgNominal": 144759565832804.9,
+      "status": "provisorio",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-trimestral-a-precios-basicos-millones-de-pesos-a-precios-corrientes-por-categoria-de-la-clanae-ciudad-de-buenos-aires-1er-trimestre-2024-2do-trimestre-2025/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2026/03/PGB_C_Trimestral.xlsx"
+      },
+      "sourceSha256": "aa4d0c63ac820810b7d765a14969009f187b2055a99c7f1a0f7974d142398a31",
+      "sourceSheet": "PGB_C_Trimestral",
+      "cell": "H4:K4",
+      "formula": "sum(quarterly2025) * quarterlyControl.scale"
+    },
+    {
+      "year": 2026,
+      "pbgNominal": 192436264603136.34,
+      "status": "estimado",
+      "source": {
+        "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-trimestral-a-precios-basicos-millones-de-pesos-a-precios-de-2004-por-categoria-de-la-clanae-ciudad-de-buenos-aires-1er-trimestre-2024-2do-trimestre-2025/",
+        "file": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2026/03/PGB_K_Trimestral.xlsx"
+      },
+      "sourceSha256": "74692a1410a3e63710d8632b49e10197e6c8bb86b192efd5c3836a00ac9997cd",
+      "sourceSheet": "PGB_K_Trimestral",
+      "cell": "N4:O4 / H4:I4",
+      "formula": "pbgNominal[2025] * (1 + growth[2026]) * priceIndexAnnual[2026] / priceIndexAnnual[2025]"
+    },
+    {
+      "year": 2027,
+      "pbgNominal": 239392339887638.5,
+      "status": "estimado",
+      "source": {
+        "page": "https://www.bcra.gob.ar/publicaciones/relevamiento-de-expectativas-de-mercado-rem-septiembre-de-2026/",
+        "file": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/informes/relevamiento-expectativas-mercado-tablas-2026-09.xlsx"
+      },
+      "sourceSha256": "2c182bc0747534ae36b0f0ccf7bb91c50186465b4837aff50088a0b99c252ba8",
+      "sourceSheet": "Cuadros de resultados",
+      "cell": "D110",
+      "formula": "pbgNominal[2026] * (1 + growth[2027]) * priceIndexAnnual[2027] / priceIndexAnnual[2026]"
+    }
+  ]
+}

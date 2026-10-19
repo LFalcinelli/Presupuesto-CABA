@@ -25,9 +25,9 @@ explorerShell=function(){
 };
 const polishedSyncRoute=syncRoute;
 const polishedReadRoute=readRoute;
-readRoute=function(){polishedReadRoute();if(state.view==='history'){const q=new URLSearchParams(location.hash.split('?')[1]||'');state.executionSeries=['total','currentPrimary','capital','revenue'].includes(q.get('serie'))?q.get('serie'):'currentPrimary';}};
+readRoute=function(){polishedReadRoute();if(state.view==='history'){const q=new URLSearchParams(location.hash.split('?')[1]||'');state.executionSeries=['total','currentPrimary','currentPrimaryPbg','capital','revenue'].includes(q.get('serie'))?q.get('serie'):'currentPrimary';}};
 syncRoute=function(){
- polishedSyncRoute();if(state.view==='history'){const q=new URLSearchParams(location.hash.split('?')[1]||'');if(['total','currentPrimary','capital','revenue'].includes(state.executionSeries))q.set('serie',state.executionSeries);else q.delete('serie');history.replaceState(null,'','#evolucion'+(q.size?'?'+q:''));return;}if(state.view!=='landing')return;
+ polishedSyncRoute();if(state.view==='history'){const q=new URLSearchParams(location.hash.split('?')[1]||'');if(['total','currentPrimary','currentPrimaryPbg','capital','revenue'].includes(state.executionSeries))q.set('serie',state.executionSeries);else q.delete('serie');history.replaceState(null,'','#evolucion'+(q.size?'?'+q:''));return;}if(state.view!=='landing')return;
  const q=new URLSearchParams();
  if(state.fiscalPerspective&&state.fiscalPerspective!=='purpose')q.set('mapa',state.fiscalPerspective);
  if(state.fiscalSelected)q.set('nodo',state.fiscalSelected);
@@ -40,7 +40,7 @@ function historyTwentyYears(){
  const rows=executionRows(),a=rows.find(r=>r.year===2005),b=rows.find(r=>r.year===2025);
  return {a,b,change:(b.real/a.real-1)*100};
 }
-document.addEventListener('change',e=>{if(e.target.id==='execution-series'){state.executionSeries=['currentPrimary','capital','revenue'].includes(e.target.value)?e.target.value:'total';render();}});
+document.addEventListener('change',e=>{if(e.target.id==='execution-series'){state.executionSeries=['currentPrimary','currentPrimaryPbg','capital','revenue'].includes(e.target.value)?e.target.value:'total';render();}});
 function historyRevenueLabel(r){return r.kind==='budget'?'Ingresos previstos · vigente al 30/06/2026':r.kind==='project'?'Ingresos previstos · Proyecto 2027':'Recaudación efectiva'+(r.year===2025?' · cierre provisorio':'');}
 executionObservation=function(r){
  const revenue=state.executionSeries==='revenue',label=revenue?historyRevenueLabel(r):r.kind==='legacy'?'Registro histórico · criterio distinto':r.kind==='budget'?'Presupuesto al 30/06/2026':r.kind==='project'?'Proyecto de presupuesto':'Gasto ejecutado'+(r.year===2025?' · cierre provisorio':'');

@@ -299,3 +299,8 @@ Inicio coherente en búsquedas y enlaces; cierre de búsqueda con Escape/navegac
 Ayudas de términos con botón, Escape y retorno de foco incluso dentro de pop-ups; alternativa tabular del mapa. Logo derivado a 348×192, original intacto; favicon optimizado. Módulos desactivados de mundo y salarios fuera de la carga inicial; originales conservados. El versionado de todos los JS/CSS ya era correcto y se agrega un control de regresión. La consolidación general de postprocesadores se difiere: su condición de igualdad visual exige aislar ese cambio de las nuevas ayudas, sin una refactorización amplia en este pedido.
 
 - Se evita el doble redondeo del peso de las viñetas sobre impuestos propios. El contraste visible en dólares expresa sus montos en US$ millones, sin cambiar valores de origen. Las ayudas en línea mantienen un área táctil de al menos 24 px.
+
+## 2026-10-19 · v14 Parte 1 (vista previa)
+- Quinta opción histórica Gasto corriente / PBG, con URL compartible, tabla equivalente, ficha por año y comparación 2005–2025 en puntos porcentuales.
+- Denominador reproducible, fuentes y huellas verificadas; autorizaciones con estimaciones diferenciadas. Permanecen intactas las cuatro series previas y todos los importes y factores existentes.
+- PR separado de pulido, pendiente de autorización para fusionar.
