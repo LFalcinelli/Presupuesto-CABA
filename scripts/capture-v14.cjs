@@ -4,9 +4,10 @@ const dir=path.resolve(process.env.QA_DIR||'../outputs/v14/captures',phase);fs.m
 const routes=part==='pbg'?['#evolucion?serie=currentPrimary','#evolucion?serie=currentPrimaryPbg','#metodologia?seccion=historia']:['#inicio','#proyecto-2027?vista=summary','#proyecto-2027?vista=expenses','#proyecto-2027?vista=revenue','#proyecto-2027?vista=areas','#explorar?periodo=2026-2','#gastos?periodo=2026-2','#ingresos?periodo=2026-2','#explorar?periodo=2025-4','#gastos?periodo=2025-4','#ingresos?periodo=2025-4','#evolucion?serie=currentPrimaryPbg','#comparar','#metodologia?seccion=historia'];
 (async()=>{const b=await chromium.launch({headless:true,channel:process.env.BROWSER_CHANNEL||undefined}),p=await b.newPage(),records=[],errors=[];p.on('pageerror',e=>errors.push(e.message));const ready=()=>p.waitForFunction(()=>document.querySelector('main')?.getAttribute('aria-busy')==='false');
 try{
+ await p.emulateMedia({reducedMotion:'reduce'});
  for(const width of [375,1440])for(const theme of ['light','dark'])for(const [i,route] of routes.entries()){
-  await p.setViewportSize({width,height:1000});await p.goto(base+route);await ready();await p.evaluate(t=>{CabaTheme.set(t);render();},theme);await ready();await p.evaluate(()=>document.fonts.ready);
-  await p.screenshot({path:path.join(dir,`${String(i+1).padStart(2,'0')}-${theme}-${width}.png`),fullPage:true});
+  await p.setViewportSize({width,height:1000});await p.goto(base+route);await ready();await p.evaluate(async t=>{CabaTheme.set(t);await render();},theme);await ready();await p.evaluate(()=>document.fonts.ready);
+  await p.screenshot({path:path.join(dir,`${String(i+1).padStart(2,'0')}-${theme}-${width}.png`),fullPage:true,animations:'disabled'});
   const record=await p.evaluate(()=>{const root=document.querySelector('main'),clone=root.cloneNode(true);clone.querySelectorAll('details').forEach(n=>n.open=true);clone.querySelectorAll('.page-index').forEach(n=>n.remove());document.body.append(clone);const text=clone.innerText;clone.remove();return {money:[...(text.replaceAll('\u00a0',' ').matchAll(/(?:≈\s*)?[−-]?\$\s*[\d.,]+(?:\s*(?:billones|millones))?/g))].map(m=>m[0].replace(/\s+/g,' ').trim()).sort(),charts:root.querySelectorAll('svg').length,cards:root.querySelectorAll('article').length,links:[...root.querySelectorAll('a[href]')].filter(a=>!a.closest('.page-index')).map(a=>({text:a.textContent.trim(),href:a.getAttribute('href')}))};});records.push({route,width,theme,...record});
  }
  const timings=[];

@@ -6,6 +6,7 @@ module.exports=async({page,base})=>{
   assert.deepEqual(await page.locator('#execution-series option').evaluateAll(ns=>ns.map(n=>n.value)),['total','currentPrimary','currentPrimaryPbg','capital','revenue']);
   assert.equal(await page.locator('#execution-series').inputValue(),'currentPrimaryPbg');await page.reload();await ready();assert(page.url().includes('serie=currentPrimaryPbg'));
   assert.equal(await page.locator('[data-pbg-year]').count(),31);assert.equal(await page.locator('.project-history-bridge').getAttribute('stroke-dasharray'),'3 5');
+  const events=await page.locator(width<=650?'.history-mobile-events':'.history-event-label').allTextContents();assert.match(events.join(' '),/Subte/);assert.match(events.join(' '),/Policía/);
   assert((await page.locator('.history-chart-scroll').innerHTML()).includes('2027*'));assert((await page.locator('.history-impact').innerText()).includes('puntos porcentuales'));
   await page.locator('#execution-year').selectOption('2027');assert.match(await page.locator('#execution-point').innerText(),/PBG nominal.*estimado/);assert.match(await page.locator('#execution-point').innerText(),/Proyecto 2027/);
   const differences=await page.evaluate(()=>executionRows().map(r=>Math.abs(r.real-r.nominal/r.pbg.pbgNominal*100)));assert(differences.every(d=>d<1e-9));
