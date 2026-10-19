@@ -2,7 +2,7 @@ const assert=require('node:assert/strict');
 module.exports=async function({page,base}){
  for(const theme of ['light','dark'])for(const width of [375,1440]){
   await page.setViewportSize({width,height:1000});await page.goto(base+'#inicio');await page.waitForFunction(()=>document.querySelector('main')?.getAttribute('aria-busy')==='false');await page.evaluate(t=>CabaTheme.set(t),theme);await page.evaluate(()=>render());
-  assert.match(await page.locator('.hero-own-taxes').innerText(),/5,4 millones/);assert.equal(await page.locator('[data-feedback]:visible').count(),0);
+  assert.match(await page.locator('.hero-own-taxes').innerText(),/5,4\s+millones/);assert.equal(await page.locator('[data-feedback]:visible').count(),0);
   assert.equal(await page.locator('#theme-toggle').getAttribute('aria-label'),'Tema: '+(theme==='dark'?'oscuro':'claro')+' (cambiar)');assert.equal(await page.locator('#theme-toggle svg').count(),1);
   for(const route of ['#explorar?periodo=2025-4','#explorar?periodo=2026-2','#proyecto-2027?vista=summary']){
    await page.goto(base+route);await page.evaluate(()=>render());
