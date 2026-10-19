@@ -36,5 +36,5 @@ function formatMoney(value,{style='exact',currency='$'}={}){
 }
 function formatBillions(value,digits=0){return formatNumber(value/1e12,digits);}
 function nonBreakingMoneyText(text){
- return text.replace(/≈\s*([−-]?)\$\s*([\d.,]+)\s*billones(?: de pesos)?/g,(_,sign,number)=>formatMoney(Number(number.replaceAll('.','').replace(',','.'))*1e12*(sign?-1:1),{style:'approx'})).replace(/(\$|USD)\s+(?=\d)/g,'$1\u00a0').replace(/(\d)\s+(mil millones|millones|billones)/g,'$1\u00a0$2');
+ return text.replace(/≈\s*([−-]?)\$\s*([\d.,]+)\s*billones/g,(_,sign,number)=>formatMoney(Number(number.replaceAll('.','').replace(',','.'))*1e12*(sign?-1:1),{style:'approx'})).replace(/(\$|USD)\s+(?=\d)/g,'$1\u00a0').replace(/(\d)\s+(mil millones|millones|billones)/g,'$1\u00a0$2');
 }
