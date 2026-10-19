@@ -1,7 +1,8 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const read=p=>JSON.parse(fs.readFileSync(p)),index=read('data/budget/2027/search-index.json'),principals=read('data/budget/2027/principals.json'),areas=read('data/budget/2027/area-reports.json');
-const context=vm.createContext({state:{budgetSearchIndex:index,searchTopics:read('content/search-topics.json')},citizenGlossary:{}});
+const context=vm.createContext({Site:{featureFunctions:{}},state:{budgetSearchIndex:index,searchTopics:read('content/search-topics.json')},citizenGlossary:{}});
 vm.runInContext(fs.readFileSync('src/budget-search.js','utf8').split('let budgetSearchPromise;')[0],context);
+vm.runInContext(fs.readFileSync('src/lazy-search.js','utf8'),context);
 const search=q=>context.budgetSearch(q),norm=context.searchNorm;
 for(const q of ['pauta','publicidad','propaganda']){const rows=search(q);assert(rows.some(r=>r.kind==='principal'&&norm(r.name)==='publicidad y propaganda'));assert(rows.filter(r=>['unit','program'].includes(r.kind)&&r.related.some(t=>t.id==='communication')).length>=10,q);}
 assert(search('ambiente').filter(r=>r.kind==='unit'&&r.related.some(t=>t.id==='green')).length>=8);

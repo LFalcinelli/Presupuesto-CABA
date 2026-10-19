@@ -33,15 +33,15 @@ const preStreamRevenue=projectRevenue;
 projectRevenue=function(){return preStreamRevenue()+propertyReference();};
 const preStreamMethod=projectMethod;
 projectMethod=function(){return preStreamMethod()+`<h3>Impuestos propios por habitante</h3><p>Los tributos propios previstos para 2027 (${short(state.taxReferences?.ownTaxes||0)}) se dividen por los ${fmt(state.project.population.value)} habitantes usados por el sitio. Se excluyen los impuestos nacionales y otros ingresos. Es un promedio de recaudación prevista, no una factura individual. Ingresos Brutos alcanza a personas humanas y jurídicas; su incidencia puede trasladarse a precios.</p><p>Planilla 11, página 183, del proyecto 2027. Apertura de Inmuebles recaudada: informe del cuarto trimestre 2025, página 5. <a href="${Site.url('data/revenue/tax-reference-2027.csv')}" data-citizen-download download>Cifras, cálculo y fuentes (CSV)</a> · <a href="https://www.agip.gob.ar/impuestos/ingresos-brutos" target="_blank" rel="noopener">Ingresos Brutos · AGIP ↗</a></p><h3>Buscar programas</h3><p>El índice reúne las aperturas de los 22 documentos jurisdiccionales 2027. Cada resultado conserva archivo y página y abre la ficha del área con el programa seleccionado.</p><p><a href="${Site.url('data/budget/2027/program-index.csv')}" data-citizen-download download>Programas y fuentes (CSV)</a></p>`;};
-const preStreamPolish=polishMarkup;
-polishMarkup=function(html,view){
- const t=document.createElement('template');t.innerHTML=preStreamPolish(html,view);
+
+Site.markupPasses.push(function preStreamPass(t,view){
+
  if(view==='summary'&&state.period==='2026-2')t.content.querySelector('.fiscal-summary')?.insertAdjacentHTML('afterbegin',amplificationOverview());
  if(['landing','search'].includes(view)&&state.taxReferences){const d=state.taxReferences,per=t.content.querySelector('.hero-person');if(per){per.insertAdjacentHTML('afterend',`<article class="hero-own-taxes"><h2>Impuestos de la Ciudad por habitante</h2><strong>≈ $ ${fmt(d.ownTaxesPerCapita/1e6,1)} millones</strong><small>Por año · proyecto 2027</small><p>${E(d.note)}</p><a href="#metodologia?seccion=presupuesto-2027">Cálculo y fuentes ↗</a></article>`);}}
  const fiche=t.content.querySelector('.government-areas');if(fiche&&state.governmentArea)fiche.insertAdjacentHTML('beforeend',feedbackLink(state.governmentAreaDetail?.name));
  const program=t.content.querySelector('#gov-program');if(program){program.classList.add('search-selected-program');program.setAttribute('aria-label','Programa seleccionado: '+program.querySelector('h2').textContent);}
- return t.innerHTML;
-};
+
+});
 const preStreamEnhance=enhanceVisuals;
 enhanceVisuals=function(view){preStreamEnhance(view);const footer=document.querySelector('footer .wrap');if(footer){footer.querySelector('[data-feedback]')?.remove();footer.insertAdjacentHTML('beforeend',feedbackLink());}};
 const preStreamRead=readRoute,preStreamSync=syncRoute;

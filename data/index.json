@@ -360,6 +360,19 @@
       ]
     },
     {
+      "id": "pbg-caba",
+      "name": "PBG de CABA a precios básicos",
+      "path": "data/history/pbg-caba.json",
+      "period": "1997–2027",
+      "lastUpdate": "2026-10-19",
+      "source": "https://www.estadisticaciudad.gob.ar/eyc/categoria-banco-datos/producto-geografico-bruto-pgb/",
+      "type": "calculation",
+      "description": "Denominador del gasto corriente / PBG; base 2004, enlace base 1993 y estimaciones 2026–2027 documentadas. No duplica el gasto.",
+      "files": [
+        "data/history/pbg-caba.json"
+      ]
+    },
+    {
       "id": "government-directory",
       "name": "Government directory",
       "path": "data/government/government-directory.json",

@@ -7,6 +7,6 @@ methodPage=function(html){
  const page=t.content.querySelector('.method-page,.panel');if(page&&!page.querySelector('.technical-provenance'))page.insertAdjacentHTML('beforeend','<p class="technical-provenance"><a href="https://github.com/LFalcinelli/Presupuesto-CABA/tree/main/data" target="_blank" rel="noopener">Datos, cálculos y trazabilidad técnica en GitHub ↗</a></p>');
  return t.innerHTML;
 };
-function headlineMoney(value){const sign=value<0?'−':'',v=Math.abs(value),unit=v>=1e12?'billones':'millones',div=v>=1e12?1e12:1e6;return '≈ '+sign+'$\u00a0'+fmt(v/div,1)+'\u00a0'+unit;}
+function headlineMoney(value){return formatMoney(value,{style:'approx'});}
 
 const sourceSearchDetail=showSearchDetail;showSearchDetail=function(id){sourceSearchDetail(id);const r=state.budgetSearchIndex.entries.find(r=>r.id===id),n=document.querySelector('.search-report-amount');if(r&&n)n.textContent=headlineMoney(searchAmount(r));};

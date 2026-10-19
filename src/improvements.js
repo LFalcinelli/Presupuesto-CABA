@@ -13,7 +13,6 @@ const mayorInfo={
   jorge:{name:'Jorge Macri',dates:'Desde diciembre de 2023',start:'2023-12',end:'2026-07',color:'#9c7800',image:'jorge-macri',crop:'220 10 285 320',width:788,height:591}
 };
 const dateOrdinal=date=>{const[y,m]=date.split('-').map(Number);return y*12+m-1};
-function mayorPortrait(id){const m=mayorInfo[id];return `<svg viewBox="${m.crop}" aria-hidden="true"><title>${E(m.name||'Gestión')}</title></svg>`}
 
 function signedPct(n){return formatPercent(n,{signed:true});}
 function signedMoney(n){return `${n>0?'+':n<0?'−':''}${short(Math.abs(n))}`}

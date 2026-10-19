@@ -23,7 +23,7 @@ module.exports=async({page,browser,base})=>{
   for(const id of ['06','14']){
    await page.locator('#pair-province').selectOption(id);const p=provinces.periods.find(p=>p.id==='2026-2'),r=p.rows.find(r=>r.id===id),c=p.rows.find(r=>r.id==='02');const stages=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/budget/2027/stages.json')));
    assert.deepEqual(await page.locator('.pair-identities h3').allTextContents(),['CABA',r.name]);
-   const values=await page.locator('.pair-sheet>.pair-metrics>div').first().locator('dd').allTextContents();assert.deepEqual(values,['$ '+number(stages.totals.initial/c.population),'$ '+number(r.indicators.budgetPc)]);
+   const values=await page.locator('.pair-sheet>.pair-metrics>div').first().locator('dd').allTextContents();assert.deepEqual(values,['$\u00a0'+number(stages.totals.initial/c.population),'$\u00a0'+number(r.indicators.budgetPc)]);
   }
   assert.equal(await page.locator('.pair-panel').evaluate(e=>e.tagName),'SECTION');assert.equal(await page.locator('.pair-sheet>.pair-metrics>div').count(),5);assert((await page.locator('.pair-panel').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('2024'));assert((await page.locator('.pair-panel').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Puestos públicos'));
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));

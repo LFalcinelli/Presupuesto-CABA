@@ -28,13 +28,16 @@ function fiscalMapMarkup(){
 }
 let fiscalObserver,fiscalContextObserver;
 function drawFiscalRibbons(){
- const flow=document.querySelector('.fm-flow'),svg=flow?.querySelector('svg'),pool=document.querySelector('#fm-pool');if(!svg||!pool||innerWidth<850){if(svg)svg.innerHTML='';return;}
+ const flow=document.querySelector('.fm-flow'),svg=flow?.querySelector('svg'),pool=document.querySelector('#fm-pool');if(!svg||!pool||innerWidth<850){if(svg?.childElementCount)svg.replaceChildren();return;}
  const box=flow.getBoundingClientRect(),p=pool.getBoundingClientRect(),m=fiscalModel(),scale=120/m.d.totals.revenue,center=p.top-box.top+p.height/2;
- svg.setAttribute('viewBox',`0 0 ${box.width} ${box.height}`);svg.innerHTML='';
+ // Read all geometry before writing SVG; coordinates and formulas are unchanged.
+ const branches=[];
  for(const [side,roots,total] of [['income',m.left,m.d.totals.revenue],['spend',m.right,m.d.totals.expense]]){
   let offset=center-total*scale/2;
-  for(const root of roots){const el=flow.querySelector(`.fm-root[data-fm-node="${root.id}"] .fm-node-head`);if(!el)continue;const r=el.getBoundingClientRect(),h=root.value*scale,y=r.top-box.top+r.height/2,x1=side==='income'?r.right-box.left:p.right-box.left,x2=side==='income'?p.left-box.left:r.left-box.left,y1=side==='income'?y-h/2:offset,y2=side==='income'?offset:y-h/2,mid=(x1+x2)/2;const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',`M${x1},${y1} C${mid},${y1} ${mid},${y2} ${x2},${y2} L${x2},${y2+h} C${mid},${y2+h} ${mid},${y1+h} ${x1},${y1+h} Z`);path.setAttribute('fill',m.by[root.id].color);path.dataset.fmBranch=root.id;svg.append(path);offset+=h;}
+  for(const root of roots){const el=flow.querySelector(`.fm-root[data-fm-node="${root.id}"] .fm-node-head`);if(!el)continue;const r=el.getBoundingClientRect(),h=root.value*scale,y=r.top-box.top+r.height/2,x1=side==='income'?r.right-box.left:p.right-box.left,x2=side==='income'?p.left-box.left:r.left-box.left,y1=side==='income'?y-h/2:offset,y2=side==='income'?offset:y-h/2,mid=(x1+x2)/2;branches.push({id:root.id,color:m.by[root.id].color,d:`M${x1},${y1} C${mid},${y1} ${mid},${y2} ${x2},${y2} L${x2},${y2+h} C${mid},${y2+h} ${mid},${y1+h} ${x1},${y1+h} Z`});offset+=h;}
  }
+ const signature=JSON.stringify([box.width,box.height,branches]);if(svg._fiscalSignature===signature)return;svg._fiscalSignature=signature;
+ const fragment=document.createDocumentFragment();for(const branch of branches){const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',branch.d);path.setAttribute('fill',branch.color);path.dataset.fmBranch=branch.id;fragment.append(path);}svg.setAttribute('viewBox',`0 0 ${box.width} ${box.height}`);svg.replaceChildren(fragment);
 }
 function fiscalHighlight(id){
  const el=document.querySelector('.fm-flow');if(!el)return;const m=fiscalModel(),active=new Set();

@@ -1,0 +1,41 @@
+/* Tile rules in original stylesheet order; geometry remains inline. */
+.treemap-tile{position:absolute;border:2px solid white;color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:8px;text-align:center;overflow:hidden;border-radius:4px;font-size:clamp(.78rem,1.25vw,1rem);line-height:1.2}
+.treemap-tile strong{font-size:1.2em;margin-top:5px}
+.treemap-tile:focus-visible{outline:3px solid #161019;outline-offset:-5px;z-index:2}
+@media(max-width:600px){.treemap-tile{padding:4px;font-size:.78rem}}
+@media(max-width:600px){.treemap-tile{overflow-wrap:anywhere}}
+.treemap-tile .tile-amount{font-size:.8rem;display:block;margin-top:.3rem;line-height:1.2;color:white;font-weight:600;}
+.treemap-tile.mobile-compact .tile-amount,.treemap-tile.tiny-tile .tile-amount{display:none;}
+@media(min-width:1000px){.treemap-tile.mobile-compact:not(.tiny-tile) .tile-amount{display:block;}}
+@media(min-width:1000px){.treemap-tile .tile-name{font-size:.875rem;}}
+@media(max-width:600px){.treemap-tile.tiny-tile strong{display:none;}}
+@media(max-width:600px){.treemap-tile.mobile-compact strong{white-space:nowrap;font-size:.74rem;}}
+@media(max-width:600px){.treemap-tile .tile-number{font-size:.75rem;}}
+@media(max-width:600px){.treemap-tile .tile-name{font-size:.75rem;}}
+.treemap-tile{padding:9px!important;overflow:hidden;box-sizing:border-box}
+.treemap-tile .tile-name{font-size:clamp(11px,1.1vw,15px);line-height:1.25;overflow-wrap:anywhere;display:block!important}
+.treemap-tile .tile-amount{display:block!important;color:var(--palette-fff);font-size:12px}
+.treemap-tile strong{font-size:15px!important}
+.treemap-tile:hover{filter:brightness(1.1)}
+.treemap-tile:focus-visible{z-index:3;outline:3px solid #111;outline-offset:-4px}
+@media(max-width:600px){.treemap-tile{padding:6px!important}}
+@media(max-width:600px){.treemap-tile .tile-name{font-size:11px!important}}
+@media(max-width:600px){.treemap-tile strong{font-size:12px!important}}
+@media(max-width:600px){.treemap-tile .tile-amount{font-size:10px!important}}
+.treemap-tile{color:var(--palette-fff)!important;border:2px solid white}
+.treemap-tile .tile-name,.treemap-tile strong{color:var(--palette-fff)!important}
+.treemap-tile .tile-name{font-weight:600}
+.government-directory .treemap-tile .tile-name{font-size:14px!important}
+@media(max-width:650px){.government-directory .treemap-tile .tile-name{font-size:13px!important}}
+.treemap-tile .tile-marker{position:absolute;top:5px;left:6px}
+.treemap-tile:not(.tile-no-label) .tile-marker{display:none}
+.treemap-tile{padding:12px!important;transition:filter .16s ease,box-shadow .16s ease}
+.treemap-tile:hover{filter:brightness(1.12);box-shadow:inset 0 0 0 2px var(--palette-fff)}
+.treemap-tile .tile-name{font-size:16px!important;line-height:1.35;max-width:100%;overflow-wrap:normal}
+.treemap-tile strong{font-size:18px!important}
+.treemap-tile .tile-amount{font-size:13px}
+.treemap-branch-interior .treemap-tile .tile-name{font-size:14px!important}
+.treemap-branch-interior .treemap-tile strong{font-size:15px!important}
+.treemap-tile:not(.tile-no-label)>.tile-marker{display:none}
+.income-composition .treemap-tile{border:2px solid white!important}
+.income-composition .treemap-tile.tile-compact{flex-direction:row!important;justify-content:space-between!important;gap:8px;padding:5px 10px!important;text-align:left}

@@ -2,7 +2,7 @@
 methodSections.inicio='Viñetas del Inicio';
 // All amounts and selections come from the reproducible highlights dataset.
 const highlightsLoad=ensureViewData;
-ensureViewData=async function(view,period){if(view==='history'&&!['total','currentPrimary','capital','revenue'].includes(state.executionSeries))state.executionSeries='currentPrimary';await Promise.all([highlightsLoad(view,period),...((['landing','search'].includes(view)||view==='method'&&state.methodSection==='inicio')?[dataFile('home-highlights-2027').then(d=>state.homeHighlights=d)]:[])]);};
+ensureViewData=async function(view,period){if(view==='history'&&!['total','currentPrimary','currentPrimaryPbg','capital','revenue'].includes(state.executionSeries))state.executionSeries='currentPrimary';await Promise.all([highlightsLoad(view,period),...((['landing','search'].includes(view)||view==='method'&&state.methodSection==='inicio')?[dataFile('home-highlights-2027').then(d=>state.homeHighlights=d)]:[])]);};
 function highlightAmount(v,{millions=false}={}){return '$'+fmt(v/(millions||Math.abs(v)<1e12?1e6:1e12),millions||Math.abs(v)<1e12?0:2)+(millions||Math.abs(v)<1e12?' millones':' billones');}
 function highlightGrowth(c){return fmt(c.realGrowth2025,1);}
 function highlightRows(c){if(c.id===1)return [['GASTO CORRIENTE SIN INTERESES 2027',c.display],['GASTO CORRIENTE POR PORTEÑO','$'+fmt(c.perCapita/1e6,1)+' millones al año'],['FRENTE A 2025','▲'+highlightGrowth(c)+'% real']];if(c.id===2)return [['2025 · DÉFICIT','−'+highlightAmount(Math.abs(c.annual2025.financialResult))],['1er SEMESTRE 2026 · SUPERÁVIT','$'+fmt(c.semesters.at(-1).financialRatio,1)+' de cada $100'],['2027 · SALDO PREVISTO','+'+highlightAmount(c.financialResult2027)+' ($'+fmt(c.financialResult2027/c.expense2027*100000,0)+' de cada $100.000)'],['2027 · BONOS PARA PROVEEDORES','Hasta '+highlightAmount(c.providers.amount)+' · proyecto separado']];return c.groups.map(g=>[g.label,g.id==='paso'?'≈ '+g.display+' · estimado':g.display]);}
@@ -47,12 +47,12 @@ methodPage=function(html){
  const d=state.homeHighlights,r=d.cards[1].closing2026Review;
  return `<section class="panel method-page"><div class="method-welcome"><h1>Datos detrás de las viñetas.</h1><p>Criterios, componentes, estimaciones y fuentes de las cuatro lecturas del Inicio.</p><button class="small-btn" data-view="landing">Volver al inicio ↗</button></div><section class="method-section" id="metodo-inicio"><h2>Criterios y fuentes</h2><p>${E(d.rounding)}</p><h3>Revisión del cierre 2026</h3><p>${E(r.finding)}</p><p>El presupuesto vigente a junio y el cierre anual son etapas distintas; el semestre no permite anticipar el resultado de todo el año.</p><p><a href="${E(publicSourcePages.legislature)}" target="_blank" rel="noopener">Legislatura · documentos oficiales ↗</a></p>${d.cards.map(c=>`<details class="highlight-method-detail"><summary>${E(c.title)}</summary>${highlightMethodBody(c).replace(/<footer>[\s\S]*?<\/footer>$/,'').replace('id="home-highlight-title"',`id="highlight-method-title-${c.id}"`)}</details>`).join('')}<p><a href="${Site.url('data/home-highlights-2027.json')}" download>Componentes, cálculos y fuentes (JSON) ↗</a></p></section></section>`;
 };
-const highlightsPolish=polishMarkup;
-polishMarkup=function(html,view){
- const t=document.createElement('template');t.innerHTML=highlightsPolish(html,view);
- if(['landing','search'].includes(view)){const per=t.content.querySelector('.hero-person'),budget=t.content.querySelector('.hero-current');per.hidden=state.config.flags.homePerCapita===false;budget.hidden=state.config.flags.homeBudget2026===false;const alone=per.hidden&&budget.hidden;t.content.querySelector('.hero-references').classList.toggle('home-tax-only',alone);t.content.querySelector('.hero-data').classList.toggle('home-tax-layout',alone);}
- return t.innerHTML;
-};
+
+Site.markupPasses.push(function homeHighlightsPass(t,view){
+
+ if(['landing','search'].includes(view)){const per=t.content.querySelector('.hero-person'),budget=t.content.querySelector('.hero-current');per.hidden=state.config.flags.homePerCapita===false;budget.hidden=state.config.flags.homeBudget2026===false;const questions=t.content.querySelector('.project-questions');if(questions)questions.hidden=state.config.flags.homeProjectRoutes===false;const alone=per.hidden&&budget.hidden;t.content.querySelector('.hero-references').classList.toggle('home-tax-only',alone);t.content.querySelector('.hero-data').classList.toggle('home-tax-layout',alone);}
+
+});
 
 const compactHighlightsEnhance=enhanceVisuals;
 enhanceVisuals=function(view){compactHighlightsEnhance(view);if(view==='project'&&state.projectPiece==='providers'){const card=document.querySelector('.companion-grid article');if(card){openMobileAncestors(card);card.scrollIntoView({block:'start',behavior:'instant'});}}};

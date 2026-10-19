@@ -1,6 +1,16 @@
 'use strict';
 // Citizen labels are presentation only. Official names remain in data and sources.
 const citizenGlossary={
+ deflator:{label:"Deflactor",official:"Índice que permite expresar los importes de distintos años con el mismo nivel de precios y descontar la inflación.",question:"inflacion"},
+figurative:{"label":"Gastos figurativos","aliases":["figurativos","figurativas","gasto figurativo"],"official":"Transferencias entre entidades del propio sector público. Se excluyen de los totales para no contar dos veces el mismo dinero.","question":"clasificaciones"},
+applications:{"label":"Aplicaciones financieras","official":"Pagos de capital de deuda y otras operaciones financieras; se muestran separados de los gastos corrientes y de capital.","question":"saldo"},
+ipc:{"label":"IPCBA","official":"Índice de Precios al Consumidor de la Ciudad. Permite comparar importes descontando la inflación.","question":"inflacion"},
+rem:{"label":"REM","official":"Relevamiento de Expectativas de Mercado del Banco Central. Reúne pronósticos sobre precios y actividad; no son datos observados.","question":"inflacion"},
+object:{"label":"Inciso","aliases":["incisos"],"official":"Una agrupación según qué se paga: personal, insumos, servicios, obras y equipamiento, entre otros.","question":"clasificaciones"},
+unit:{"label":"Unidad ejecutora","aliases":["unidades ejecutoras"],"official":"Dependencia responsable de administrar programas y su presupuesto.","question":"clasificaciones"},
+linked:{"label":"Empalme","aliases":["empalmado","empalmada","empalmados","empalmadas"],"official":"Unión de series estadísticas de distintas bases o fuentes, usando los períodos en que se superponen.","question":"inflacion"},
+dnap:{"label":"DNAP","official":"Dirección Nacional de Asuntos Provinciales: organismo nacional que reúne información fiscal de las provincias.","question":"clasificaciones"},
+ pbg:{label:"PBG",official:"Producto Bruto Geográfico: el valor que produce la economía de la Ciudad durante un año. A precios básicos, excluye los impuestos sobre los productos y suma las subvenciones.",question:"clasificaciones"},
  voted:{label:'Presupuesto votado',official:'Sanción / presupuesto inicial',question:'etapas'},
  expanded:{label:'Presupuesto ampliado',official:'Crédito vigente: incluye ampliaciones y demás modificaciones al corte',question:'etapas'},
  executed:{label:'Gasto ejecutado',official:'Gasto devengado: obligación de pago reconocida',question:'ejecutado'},
@@ -35,15 +45,17 @@ function citizenVocabularyText(text){
  return result.replace(/^(Personal|Gastos de personal)$/i,'Sueldos del personal').replace(/^Actualizado$/i,'Ampliado').replace(/^Inicial$/i,'Votado').replace(/^Aprobado inicialmente$/i,'Presupuesto votado');
 }
 function citizenGlossaryMarkup(fragment){
+ const terms=typeof readingTerms==='undefined'?citizenGlossary:readingTerms,seen=new Set([...fragment.querySelectorAll('[data-term]')].map(n=>n.dataset.term));
+ const patterns=Object.entries(terms).map(([id,g])=>({id,g,regex:new RegExp('(?<![A-Za-zÁÉÍÓÚÜÑáéíóúüñ])('+[g.label,...(g.aliases||[])].map(s=>s.replace(/[.*+?^$(){}|[\]\\]/g,'\\$&')).sort((a,b)=>b.length-a.length).join('|')+')(?![A-Za-zÁÉÍÓÚÜÑáéíóúüñ])','iu')}));
  const walker=document.createTreeWalker(fragment,NodeFilter.SHOW_TEXT),nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
- for(const node of nodes){if(node.parentElement?.closest('script,style,.method-section,.gov-source-details,.exact-values,.fiscal-account-detail'))continue;node.nodeValue=citizenVocabularyText(node.nodeValue);}
- // Native accessible tooltips on the first reading, with a stable link to its explanation.
- for(const entry of Object.values(citizenGlossary)){
-  const node=nodes.find(n=>n.parentElement&&!n.parentElement.closest('a,button,select,option,summary,svg,details,h1,h2,h3,.method-section,.gov-source-details')&&n.nodeValue.toLowerCase().includes(entry.label.toLowerCase()));
-  if(!node||!node.parentNode)continue;
-  const start=node.nodeValue.toLowerCase().indexOf(entry.label.toLowerCase()),text=node.nodeValue;
-  const link=document.createElement('a');link.className='glossary-term';link.href='#presupuesto-explicado?tema='+entry.question;link.dataset.glossary=entry.question;link.title=entry.official;link.textContent=text.slice(start,start+entry.label.length);
-  node.replaceWith(document.createTextNode(text.slice(0,start)),link,document.createTextNode(text.slice(start+entry.label.length)));
+ for(const node of nodes){if(!node.parentNode||node.parentElement?.closest('script,style,svg,a,button,select,option,[data-term-popup]'))continue;
+  let text=node.nodeValue;if(!node.parentElement?.closest('.method-section,.gov-source-details,.exact-values,.fiscal-account-detail'))text=citizenVocabularyText(text);text=text.replace(/\bCAIF\b/g,'Cuenta de ingresos, gastos y financiamiento');
+  if(node.parentElement?.closest('h1')){if(text!==node.nodeValue)node.nodeValue=text;continue;}
+  const matches=patterns.filter(p=>!seen.has(p.id)).map(p=>({...p,match:p.regex.exec(text)})).filter(p=>p.match).sort((a,b)=>a.match.index-b.match.index||b.match[0].length-a.match[0].length);
+  if(!matches.length){if(text!==node.nodeValue)node.nodeValue=text;continue;}
+  const out=document.createDocumentFragment();let end=0;
+  for(const {id,match} of matches){if(match.index<end)continue;out.append(document.createTextNode(text.slice(end,match.index)));const button=document.createElement('button');button.type='button';button.className='glossary-term';button.dataset.term=id;button.setAttribute('aria-haspopup','dialog');button.setAttribute('aria-expanded','false');button.textContent=match[0];out.append(button);seen.add(id);end=match.index+match[0].length;}
+  out.append(document.createTextNode(text.slice(end)));node.replaceWith(out);
  }
  return fragment;
 }

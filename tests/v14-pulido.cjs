@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const ctx=vm.createContext({Intl,Number});vm.runInContext(fs.readFileSync('src/number-format.js','utf8'),ctx);
+const value=24094340599263;
+assert.equal(ctx.formatMoney(value,{style:'approx'}),'≈ $\u00a024,1\u00a0billones');assert.equal(ctx.formatMoney(value,{style:'card'}),'$\u00a024,09\u00a0billones');assert.equal(ctx.formatMoney(value),'$\u00a024.094.340.599.263');assert.equal(ctx.formatBillions(value,2),'24,09');
+assert.equal(ctx.nonBreakingMoneyText('≈ $ 24,1 billones de pesos'),'≈ $\u00a024,1\u00a0billones de pesos');
+const sources=fs.readdirSync('src').filter(f=>f.endsWith('.js')).map(f=>[f,fs.readFileSync('src/'+f,'utf8')]);
+assert(!sources.some(([f,s])=>f!=='number-format.js'&&/fmt\([^\n]*?\/1e12/.test(s)),'Uncentralized billions');
+assert(!sources.some(([,s])=>s.includes('=polishMarkup;')||s.includes('=citizenLanguage;')),'Repeated markup wrapper');
+assert(sources.find(([f])=>f==='project-2027.js')[1].includes('for(const pass of Site.markupPasses)'));
+const css=fs.readdirSync('src').filter(f=>f.endsWith('.css')).map(f=>[f,fs.readFileSync('src/'+f,'utf8').replace(/\/\*[\s\S]*?\*\//g,'')]);
+assert.deepEqual(css.filter(([,s])=>s.includes('.treemap-tile')).map(([f])=>f),['treemap-tile.css']);
+assert(!sources.some(([,s])=>/function mayorPortrait\(/.test(s)));
+for(const group of ['areas','comparison','search','investments'])assert(fs.existsSync('src/lazy-'+group+'.js'));
+console.log('v14 pulido: formato monetario único, render sin capas redundantes, módulos diferidos y estilos de treemap en un archivo.');

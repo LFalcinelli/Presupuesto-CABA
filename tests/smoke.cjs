@@ -75,6 +75,8 @@ const routes=['#inicio','#proyecto-2027?vista=summary','#proyecto-2027?vista=exp
  await require('./v13-a-reading.cjs')({page,base});
  await require('./v13-b-reading.cjs')({page,base});
  await require('./v13-c-reading.cjs')({page,base});
+ await require('./pbg-reading.cjs')({page,base});
+ await require('./v14-reading.cjs')({page,browser,base});
  await require('./theme-route-reading.cjs')({page,base});
  const catalog=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/index.json')));
  for(const d of catalog.datasets)for(const file of d.files){const response=await page.request.get(new URL(file,base).href);assert.equal(response.status(),200,file);}
