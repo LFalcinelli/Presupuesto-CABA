@@ -12,7 +12,10 @@ module.exports=async({page,browser,base})=>{
  }
  const context=await browser.newContext(),p=await context.newPage(),requests=[];p.on('request',r=>requests.push(r.url()));
  try{await p.goto(base+'#inicio');await p.waitForFunction(()=>document.querySelector('main')?.getAttribute('aria-busy')==='false');assert(!requests.some(u=>/lazy-(?:areas|comparison|search|investments)\.js/.test(u)));
-  await p.route('**/lazy-comparison.js*',async route=>{await new Promise(resolve=>setTimeout(resolve,650));await route.continue();});await p.goto(base+'#comparar');await p.locator('#view-loading').waitFor({state:'visible'});assert.equal(await p.locator('main').getAttribute('aria-busy'),'true');await p.waitForFunction(()=>document.querySelector('main')?.getAttribute('aria-busy')==='false');assert(await p.locator('#view-loading').isHidden());assert(requests.some(u=>/lazy-comparison\.js\?v=/.test(u)));
+  let release;const delayedFeature=new Promise(resolve=>release=resolve);
+  await p.route('**/lazy-comparison.js*',async route=>{await delayedFeature;await route.continue();});
+  try{await p.evaluate(()=>{location.hash='#comparar';});await p.locator('#view-loading').waitFor({state:'visible'});assert.equal(await p.locator('main').getAttribute('aria-busy'),'true');}finally{release();}
+  await p.waitForFunction(()=>document.querySelector('main')?.getAttribute('aria-busy')==='false');assert(await p.locator('#view-loading').isHidden());assert(requests.some(u=>/lazy-comparison\.js\?v=/.test(u)));
  }finally{await context.close();}
  await page.emulateMedia({reducedMotion:'no-preference'});
  console.log('v14: índices compartibles y recargables sin romper rutas; guía diferenciada, marcadores huecos, siete ayudas en un mismo párrafo y carga tardía visible.');
