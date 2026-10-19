@@ -301,6 +301,7 @@ Ayudas de términos con botón, Escape y retorno de foco incluso dentro de pop-u
 - Se evita el doble redondeo del peso de las viñetas sobre impuestos propios. El contraste visible en dólares expresa sus montos en US$ millones, sin cambiar valores de origen. Las ayudas en línea mantienen un área táctil de al menos 24 px.
 
 ## 2026-10-19 · v14 Parte 1 (vista previa)
+- Control visual adicional: rótulos Subte y Policía en escritorio y móvil, y capturas del estado final con movimiento reducido; sus animaciones siguen disponibles en la web.
 - Quinta opción histórica Gasto corriente / PBG, con URL compartible, tabla equivalente, ficha por año y comparación 2005–2025 en puntos porcentuales.
 - Denominador reproducible, fuentes y huellas verificadas; autorizaciones con estimaciones diferenciadas. Permanecen intactas las cuatro series previas y todos los importes y factores existentes.
 - PR separado de pulido, pendiente de autorización para fusionar.
