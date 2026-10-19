@@ -2,9 +2,9 @@
 const mobileView=()=>matchMedia('(max-width: 650px)').matches;
 const mobileFoldState=new Map();let mobileFoldKey='';
 governmentTitle=name=>displayName(name);
-function nonBreakingMoneyText(text){return text.replace(/(\$|USD)\s+(?=\d)/g,'$1\u00a0').replace(/(\d)\s+(mil millones|millones|billones)/g,'$1\u00a0$2');}
-const accessibleLanguage=citizenLanguage;
-citizenLanguage=function(html,view){return accessibleLanguage(html,view).split(/(<[^>]*>)/).map(part=>part.startsWith('<')?part:nonBreakingMoneyText(part)).join('');};
+
+
+
 const accessibleLoad=ensureViewData;
 ensureViewData=async function(view,period){await accessibleLoad(view,period);if(view==='project'&&state.projectTab==='areas')state.governmentSemester=await dataFile('semester-analysis');};
 const mobileReadRoute=readRoute;

@@ -55,7 +55,7 @@ caifPanel=function(){const d=state.caif?.periods?.[state.period];return d?fiscal
 
 function projectOverview(){
  const s=state.project.summary,d=state.projectComparison,rate=d.totals.realVariationPct;
- return `<section class="project-overview"><p class="project-intro">Qué se propone gastar, cómo cambia frente a 2026 y qué saldo dejaría.</p><div class="project-reading-cards"><article><span>Presupuesto solicitado</span><strong>≈ $ ${fmt(s.fiscalExpense.value/1e12,1)} billones</strong><small>${money(s.fiscalExpense.value)}</small></article><article><span>Frente a 2026, descontando la inflación</span><strong>${signedPct(rate)}</strong><small>Presupuesto actualizado al 30 de junio · supuesto: 18% de inflación</small>${annualPriceScenario(true)}</article><article><span>Después de los gastos e intereses</span><strong>${short(s.financialResult.value)}</strong><small>$ ${fmt(s.financialResult.value/s.fiscalRevenue.value*100000,2)} por cada $100.000 de ingresos previstos</small></article></div></section>
+ return `<section class="project-overview"><p class="project-intro">Qué se propone gastar, cómo cambia frente a 2026 y qué saldo dejaría.</p><div class="project-reading-cards"><article><span>Presupuesto solicitado</span><strong>≈ $ ${formatBillions(s.fiscalExpense.value,1)} billones</strong><small>${money(s.fiscalExpense.value)}</small></article><article><span>Frente a 2026, descontando la inflación</span><strong>${signedPct(rate)}</strong><small>Presupuesto actualizado al 30 de junio · supuesto: 18% de inflación</small>${annualPriceScenario(true)}</article><article><span>Después de los gastos e intereses</span><strong>${short(s.financialResult.value)}</strong><small>$ ${fmt(s.financialResult.value/s.fiscalRevenue.value*100000,2)} por cada $100.000 de ingresos previstos</small></article></div></section>
  ${areaSearchMarkup()}${projectKeyReadings()}${fiscalFlow(projectFiscalAccount())}<section class="project-comparison-inline" id="cambios-2027"><p class="eyebrow">2027 FRENTE A 2026</p>${projectCompare()}</section>${investmentExplorer()}${companionProjects()}${areaDialogMarkup()}<dialog class="project-dialog" id="project-detail-dialog" aria-labelledby="project-dialog-title"><button class="dialog-close" data-project-dialog-close aria-label="Cerrar detalle">×</button><div id="project-dialog-body"></div></dialog>`;
 }
 projectSummary=projectOverview;
@@ -262,10 +262,10 @@ function cleanCitizenSources(fragment){
 
  for(const p of sourceNodes('p')){for(const edge of ['lastChild','firstChild'])while(p[edge]?.nodeType===3&&/^[\s·|]*$/.test(p[edge].nodeValue))p[edge].remove();}
 }
-const auditPolishMarkup=polishMarkup;
-polishMarkup=function(html,view){
- const t=document.createElement('template');t.innerHTML=auditPolishMarkup(html,view);
- cleanCitizenSources(t.content);
+
+Site.markupPasses.push(function citizenReadingPass(t,view){
+
+
  if(view==='landing')t.content.querySelector('.fm-method')?.insertAdjacentHTML('afterbegin','<p class="fm-debt-note">La partida de deuda incluye intereses y otros costos; por eso supera el importe de intereses de la cuenta fiscal.</p>');
  if(view==='compare'){
   const c=comparisonState();if(c.p.kind==='budget'){
@@ -273,8 +273,8 @@ polishMarkup=function(html,view){
    const note=t.content.querySelector('.comparison-context');if(note)note.textContent=state.compareBudgetBase==='initial'?'CABA aprobado inicialmente; las provincias muestran su aprobado o prorrogado verificado. Tierra del Fuego: prorrogado.':'CABA incluye modificaciones al 30/06/2026; las provincias muestran su aprobado o prorrogado verificado. Tierra del Fuego: prorrogado.';
   }
  }
- return t.innerHTML;
-};
+
+});
 const auditEnhance=enhanceVisuals;
 enhanceVisuals=function(view){
  auditEnhance(view);

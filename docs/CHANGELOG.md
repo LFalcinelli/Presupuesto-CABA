@@ -304,3 +304,12 @@ Ayudas de términos con botón, Escape y retorno de foco incluso dentro de pop-u
 - Quinta opción histórica Gasto corriente / PBG, con URL compartible, tabla equivalente, ficha por año y comparación 2005–2025 en puntos porcentuales.
 - Denominador reproducible, fuentes y huellas verificadas; autorizaciones con estimaciones diferenciadas. Permanecen intactas las cuatro series previas y todos los importes y factores existentes.
 - PR separado de pulido, pendiente de autorización para fusionar.
+
+## 2026-10-19 · v14 Parte 2 (vista previa)
+- Sin cambios en datos, cifras, etapas, bases ni textos editoriales de las viñetas. Cuatro índices compactos con enlaces compartibles; ningún bloque retirado ni cambiado a plegado.
+- Anotación histórica recta y discontinua, separada de los datos; círculo y rombo huecos para autorizaciones. Se mantiene la interpolación monótona existente, que ya evita extremos inexistentes.
+- Dinero y nombres centralizados; fuentes con rótulos propios, flechas internas/externas consistentes y ayudas contextuales para las variantes de jerga. El estado de continuidad del buscador queda sólo en el detalle, en lenguaje sencillo.
+- Siete pasadas de presentación sobre un único fragmento; cuatro implementaciones diferidas, formateadores reutilizados y limpieza dinámica agrupada. El mapa lee su geometría antes de dibujar; se evita repetir escrituras que fuerzan maquetación. Aviso de carga tras 400 ms.
+- Paleta y tamaños en theme-tokens.css; estilos de treemap reunidos, sin alterar su geometría. Dos !important retirados de rótulos históricos con selectores equivalentes. Logo optimizado existente conservado; original intacto.
+- Orden real de carga y globales documentados en PRODUCTO.md, con plan futuro propuesto y no aplicado. Se retira mayorPortrait por ausencia de referencias; mayorInfo sigue disponible para el módulo salarial desactivado.
+- Comparación de 56 estados: mismos importes visibles, gráficos, tarjetas y destinos. Las fuentes oficiales conservan sus enlaces; no se ofrecen descargas.

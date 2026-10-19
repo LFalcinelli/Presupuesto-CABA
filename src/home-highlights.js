@@ -47,12 +47,12 @@ methodPage=function(html){
  const d=state.homeHighlights,r=d.cards[1].closing2026Review;
  return `<section class="panel method-page"><div class="method-welcome"><h1>Datos detrás de las viñetas.</h1><p>Criterios, componentes, estimaciones y fuentes de las cuatro lecturas del Inicio.</p><button class="small-btn" data-view="landing">Volver al inicio ↗</button></div><section class="method-section" id="metodo-inicio"><h2>Criterios y fuentes</h2><p>${E(d.rounding)}</p><h3>Revisión del cierre 2026</h3><p>${E(r.finding)}</p><p>El presupuesto vigente a junio y el cierre anual son etapas distintas; el semestre no permite anticipar el resultado de todo el año.</p><p><a href="${E(publicSourcePages.legislature)}" target="_blank" rel="noopener">Legislatura · documentos oficiales ↗</a></p>${d.cards.map(c=>`<details class="highlight-method-detail"><summary>${E(c.title)}</summary>${highlightMethodBody(c).replace(/<footer>[\s\S]*?<\/footer>$/,'').replace('id="home-highlight-title"',`id="highlight-method-title-${c.id}"`)}</details>`).join('')}<p><a href="${Site.url('data/home-highlights-2027.json')}" download>Componentes, cálculos y fuentes (JSON) ↗</a></p></section></section>`;
 };
-const highlightsPolish=polishMarkup;
-polishMarkup=function(html,view){
- const t=document.createElement('template');t.innerHTML=highlightsPolish(html,view);
+
+Site.markupPasses.push(function homeHighlightsPass(t,view){
+
  if(['landing','search'].includes(view)){const per=t.content.querySelector('.hero-person'),budget=t.content.querySelector('.hero-current');per.hidden=state.config.flags.homePerCapita===false;budget.hidden=state.config.flags.homeBudget2026===false;const alone=per.hidden&&budget.hidden;t.content.querySelector('.hero-references').classList.toggle('home-tax-only',alone);t.content.querySelector('.hero-data').classList.toggle('home-tax-layout',alone);}
- return t.innerHTML;
-};
+
+});
 
 const compactHighlightsEnhance=enhanceVisuals;
 enhanceVisuals=function(view){compactHighlightsEnhance(view);if(view==='project'&&state.projectPiece==='providers'){const card=document.querySelector('.companion-grid article');if(card){openMobileAncestors(card);card.scrollIntoView({block:'start',behavior:'instant'});}}};

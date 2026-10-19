@@ -121,3 +121,6 @@ Las fuentes internacionales, presupuestos provinciales, denominadores, cambios d
 
 ## PBG de CABA (v14 · consulta 19/10/2026)
 Página oficial: https://www.estadisticaciudad.gob.ar/eyc/categoria-banco-datos/producto-geografico-bruto-pgb/ . Se verificaron sus enlaces a PGB_C_04_09.xlsx (anual 2004–2024), PBG_C_93_09.xls (VAB a precios básicos 1993–2009), PGB_C_Trimestral.xlsx y PGB_K_Trimestral.xlsx (2024–2T2026). Se usan los archivos actualmente enlazados, aunque sus directorios indiquen fechas antiguas. Crecimiento 2027: BCRA, REM septiembre 2026, publicado el 06/10/2026, Cuadros de resultados D110: mediana 2,474341479389266% de variación media anual del PIB real nacional. Página: https://www.bcra.gob.ar/publicaciones/relevamiento-de-expectativas-de-mercado-rem-septiembre-de-2026/ . Las huellas SHA256, celdas, hojas y URLs originales están en pbg-caba.json; los libros brutos no se publican.
+
+## v14 Parte 2 · Rótulos de publicaciones
+Se conservan los destinos verificados. Las referencias genéricas se rotulan con la institución y publicación; los enlaces internos usan → y los externos ↗. La palabra «aportado» se reemplaza en la presentación por «serie histórica empalmada (ver metodología)»; los registros técnicos originales se conservan en el repositorio. No se agregan fuentes ni descargas al sitio.

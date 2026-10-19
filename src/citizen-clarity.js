@@ -41,7 +41,8 @@ function provincePair(id,c=comparisonState()){
 }
 document.addEventListener('change',e=>{if(e.target.id==='pair-province')selectProvince(e.target.value,true);});
 const clarityEnhance=enhanceVisuals;
-enhanceVisuals=function(view){clarityEnhance(view);document.documentElement.style.setProperty('--nav-height',Math.ceil(document.querySelector('.main-nav').getBoundingClientRect().height)+'px');for(const svg of document.querySelectorAll('[data-fit-province]')){const b=svg.querySelector('path').getBBox(),pad=Math.max(b.width,b.height)*.08;svg.setAttribute('viewBox',`${b.x-pad} ${b.y-pad} ${b.width+2*pad} ${b.height+2*pad}`);}};
+enhanceVisuals=function(view){clarityEnhance(view);const boxes=[...document.querySelectorAll('[data-fit-province]')].map(svg=>{const b=svg.querySelector('path').getBBox(),pad=Math.max(b.width,b.height)*.08;return {svg,box:`${b.x-pad} ${b.y-pad} ${b.width+2*pad} ${b.height+2*pad}`};});for(const {svg,box} of boxes)if(svg.getAttribute('viewBox')!==box)svg.setAttribute('viewBox',box);};
+document.addEventListener('DOMContentLoaded',()=>{const nav=document.querySelector('.main-nav');if(!nav)return;const observer=new ResizeObserver(entries=>{const height=Math.ceil(entries[0].borderBoxSize?.[0]?.blockSize||nav.getBoundingClientRect().height)+'px';if(document.documentElement.style.getPropertyValue('--nav-height')!==height)document.documentElement.style.setProperty('--nav-height',height);});observer.observe(nav);});
 
 const clarityExplorerShell=explorerShell;
 explorerShell=function(){

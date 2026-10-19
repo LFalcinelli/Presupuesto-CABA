@@ -3,7 +3,7 @@
 .fiscal-balance.is-deficit,.fiscal-balance.is-deficit strong{color:var(--expense)!important}.fiscal-balance.is-surplus,.fiscal-balance.is-surplus strong{color:var(--income)!important}
 .flow-mobile-labels[data-fiscal-group="income"] strong{color:var(--income)!important}.flow-mobile-labels[data-fiscal-group="expense"] strong{color:var(--expense)!important}
 .expense-composition .production-group{background:var(--elevated)!important;border-color:var(--line)!important}.expense-composition .production-group .review-bar-track>i{background:var(--violet)!important}
-html[data-theme="dark"] .hero-request .text-link,html[data-theme="dark"] .hero-request button.text-link{background:transparent!important;border:0!important;box-shadow:none!important;color:#f4effa!important}
+html[data-theme="dark"] .hero-request .text-link,html[data-theme="dark"] .hero-request button.text-link{background:transparent!important;border:0!important;box-shadow:none!important;color:var(--palette-f4effa)!important}
 #theme-toggle{display:grid!important;place-items:center!important;padding:0!important;width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important}
 #theme-toggle::before,#theme-toggle::after{content:none!important;display:none!important}#theme-toggle>span{display:grid;place-items:center;line-height:1}#theme-toggle svg{display:block}
 .hero-references{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-current{grid-column:1/-1}

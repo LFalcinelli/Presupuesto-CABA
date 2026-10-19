@@ -1,8 +1,8 @@
 'use strict';
 const $=s=>document.querySelector(s), E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fmt=(n,d=0)=>new Intl.NumberFormat('es-AR',{maximumFractionDigits:d,minimumFractionDigits:d}).format(n);
+const fmt=(n,d=0)=>formatNumber(n,d);
 // Presentation only: source amounts and exported precision remain unchanged.
-const money=(n,currency='$')=>(n<0?'−':'')+currency+'\u00a0'+fmt(Math.abs(n)), short=n=>(n<0?'−':'')+(Math.abs(n)>=1e12?'$\u00a0'+fmt(Math.abs(n)/1e12,2)+'\u00a0billones':'$\u00a0'+fmt(Math.abs(n)/1e6,0)+'\u00a0millones'), pct=n=>formatShare(n);
+const money=(n,currency='$')=>formatMoney(n,{currency}), short=n=>formatMoney(n,{style:'card'}), pct=n=>formatShare(n);
 const naturalTick=n=>new Intl.NumberFormat('es-AR',{maximumFractionDigits:6}).format(n);
 const source='https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias';
 const labels=['Carácter','Jurisdicción','Subjurisdicción','Entidad','Unidad ejecutora','Programa','Finalidad','Función','Inciso','Clasificación económica'];

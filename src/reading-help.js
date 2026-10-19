@@ -1,6 +1,6 @@
 'use strict';
 // Inline explanations work with keyboard/touch, including inside modal reports.
-const readingTerms={...citizenGlossary,figurative:{label:'Gastos figurativos',official:'Transferencias entre entidades del propio sector público. Se excluyen de los totales para no contar dos veces el mismo dinero.',question:'clasificaciones'},applications:{label:'Aplicaciones financieras',official:'Pagos de capital de deuda y otras operaciones financieras; se muestran separados de los gastos corrientes y de capital.',question:'saldo'},ipc:{label:'IPCBA',official:'Índice de Precios al Consumidor de la Ciudad. Permite comparar importes descontando la inflación.',question:'inflacion'},rem:{label:'REM',official:'Relevamiento de Expectativas de Mercado del Banco Central. Reúne pronósticos; no es inflación observada.',question:'inflacion'},object:{label:'Inciso',official:'Una agrupación según qué se paga: personal, insumos, servicios, obras y equipamiento, entre otros.',question:'clasificaciones'},unit:{label:'Unidad ejecutora',official:'Dependencia responsable de administrar programas y su presupuesto.',question:'clasificaciones'},linked:{label:'Empalme',official:'Unión de series estadísticas de distintas bases o fuentes, usando los períodos en que se superponen.',question:'inflacion'}};
+const readingTerms={...citizenGlossary};
 Object.assign(readingTerms,{
  voted:{...readingTerms.voted,official:'El gasto autorizado inicialmente por la Legislatura, antes de las modificaciones del año.'},
  expanded:{...readingTerms.expanded,official:'La autorización de gasto con las ampliaciones y demás cambios registrados hasta la fecha indicada.'},
@@ -13,20 +13,8 @@ Object.assign(readingTerms,{
  federal:{...readingTerms.federal,official:'La parte de los impuestos nacionales que recibe la Ciudad según el régimen de distribución.'},
  property:{...readingTerms.property,official:'Ingresos por intereses y otros rendimientos de activos del Estado; no son los intereses que paga por deuda.'}
 });
-const existingGlossaryMarkup=citizenGlossaryMarkup;
-citizenGlossaryMarkup=function(fragment){
- existingGlossaryMarkup(fragment);
- const simpleWalker=document.createTreeWalker(fragment,NodeFilter.SHOW_TEXT);while(simpleWalker.nextNode()){const n=simpleWalker.currentNode;if(!n.parentElement?.closest('script,style,svg,button,a,select,option'))n.nodeValue=n.nodeValue.replace(/\bCAIF\b/g,'Cuenta de ingresos, gastos y financiamiento');}
- for(const a of fragment.querySelectorAll('a.glossary-term')){const entry=Object.entries(readingTerms).find(([,g])=>g.label.toLowerCase()===a.textContent.replace(/[\u2192\u2197]\s*$/,'').trim().toLowerCase());if(!entry)continue;const b=document.createElement('button');b.type='button';b.className='glossary-term';b.dataset.term=entry[0];b.setAttribute('aria-expanded','false');b.setAttribute('aria-haspopup','dialog');b.textContent=a.textContent.replace(/[\u2192\u2197]\s*$/,'').trim();a.replaceWith(b);}
- const walker=document.createTreeWalker(fragment,NodeFilter.SHOW_TEXT),nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
- for(const [id,g] of Object.entries(readingTerms)){
-  const node=nodes.find(n=>n.isConnected!==false&&n.parentElement&&!n.parentElement.closest('a,button,select,option,summary,svg,script,style,[data-term-popup],h1')&&n.nodeValue.toLowerCase().includes(g.label.toLowerCase()));
-  // Template fragments are disconnected by design.
-  const target=node||nodes.find(n=>n.parentElement&&!n.parentElement.closest('a,button,select,option,summary,svg,script,style,[data-term-popup],h1')&&n.nodeValue.toLowerCase().includes(g.label.toLowerCase()));if(!target?.parentNode)continue;
-  const start=target.nodeValue.toLowerCase().indexOf(g.label.toLowerCase()),text=target.nodeValue,b=document.createElement('button');b.type='button';b.className='glossary-term';b.dataset.term=id;b.setAttribute('aria-haspopup','dialog');b.setAttribute('aria-expanded','false');b.textContent=text.slice(start,start+g.label.length);target.replaceWith(document.createTextNode(text.slice(0,start)),b,document.createTextNode(text.slice(start+g.label.length)));
- }
- return fragment;
-};
+
+
 let termOrigin,termPanel;
 function closeReadingTerm(restore=true){if(!termPanel)return;termPanel.remove();termPanel=null;if(termOrigin){termOrigin.setAttribute('aria-expanded','false');termOrigin.removeAttribute('aria-controls');if(restore&&termOrigin.isConnected)termOrigin.focus({preventScroll:true});}termOrigin=null;}
 function openReadingTerm(button){const g=readingTerms[button.dataset.term];if(!g)return;const same=termOrigin===button;closeReadingTerm(false);if(same)return;termOrigin=button;termPanel=document.createElement('div');termPanel.id='reading-term-popup';termPanel.className='reading-term-popup';termPanel.dataset.termPopup='';termPanel.setAttribute('role','dialog');termPanel.setAttribute('aria-labelledby','reading-term-title');termPanel.setAttribute('popover','manual');termPanel.innerHTML=`<button type="button" data-term-close aria-label="Cerrar explicación">×</button><h3 id="reading-term-title">${E(g.label)}</h3><p>${E(g.official)}</p><a href="#presupuesto-explicado?tema=${g.question}">Seguir leyendo →</a>`;(button.closest('dialog')||document.body).append(termPanel);button.setAttribute('aria-expanded','true');button.setAttribute('aria-controls',termPanel.id);termPanel.showPopover?.();const box=button.getBoundingClientRect(),w=termPanel.getBoundingClientRect().width,h=termPanel.getBoundingClientRect().height;termPanel.style.left=Math.max(12,Math.min(innerWidth-w-12,box.left))+'px';termPanel.style.top=Math.max(12,Math.min(innerHeight-h-12,box.bottom+8))+'px';termPanel.querySelector('button').focus({preventScroll:true});}
