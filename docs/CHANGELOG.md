@@ -1,5 +1,12 @@
 # Cambios
 
+## 2026-10-21 · v15 B · Destacados y lenguaje
+
+- Sustituye las lecturas mezcladas por destacados con titular, cifra y una sola base ampliada 2026; publicidad última. Añade 25 lecturas curadas de cinco áreas, con rutas de origen, fórmulas y verificación de continuidad.
+- Simplifica términos, desarrolla siglas, concentra la fecha del padrón en el directorio y quita personas inexistentes del rótulo de estructura. Conserva etiquetas oficiales en ayudas y fuentes.
+- Corrige el signo $ y «nbsp;» en Ingresos 2026 mediante una sustitución con función, que evita interpretar $& como patrón de JavaScript. Los importes permanecen iguales.
+- No se adoptan tasas, costos por beneficiario ni traspasos sin respaldo en los datos disponibles. Detalle en DESTACADOS_V15.md. PR encadenado al de Inicio; pendiente de autorización de fusión.
+
 ## 2026-10-21 · v15 A · Inicio y escenarios
 
 - Oculta los dos bloques inferiores mediante banderas; conserva el acceso superior al proyecto. Actualiza el encabezado del mapa y las viñetas 1, 2 y 4.
