@@ -79,7 +79,8 @@ function expandCitizenAcronyms(root){
    if(seen.has(abbr))continue;const re=new RegExp('\\b'+abbr+'s?\\b','i'),match=re.exec(text);if(!match)continue;
    const preceding=node.previousSibling?.textContent||node.parentElement?.previousSibling?.textContent||'';
    if(text.slice(0,match.index).trimEnd().endsWith('(')||text.toLowerCase().includes(full.toLowerCase())||preceding.trimEnd().endsWith('(')&&preceding.toLowerCase().includes(full.toLowerCase())){seen.add(abbr);continue;}
-   text=text.slice(0,match.index)+full+' ('+abbr+')'+text.slice(match.index+match[0].length);seen.add(abbr);
+   const plural=abbr==='CeSAC'&&match[0].toLowerCase().endsWith('s'),expanded=plural?'Centros de Salud y Acción Comunitaria':full;
+   text=text.slice(0,match.index)+expanded+' ('+abbr+(plural?'s':'')+')'+text.slice(match.index+match[0].length);seen.add(abbr);
   }
   if(text!==node.nodeValue)node.nodeValue=text;
  }
