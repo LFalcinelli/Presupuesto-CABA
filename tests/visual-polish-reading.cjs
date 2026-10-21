@@ -5,14 +5,14 @@ module.exports=async({page,base})=>{
  const a=h.series.currentPrimary.rows.find(r=>r.year===2005),b=h.series.currentPrimary.rows.find(r=>r.year===2025),growth=percentValue((b.real/a.real-1)*100);
  const ready=()=>page.waitForFunction(()=>document.querySelector('#content')?.getAttribute('aria-busy')==='false');
  for(const width of [1440,390,320]){
-  await page.setViewportSize({width,height:1000});await page.goto(base+'#inicio');await ready();
+  await page.setViewportSize({width,height:1000});await page.goto(base+'#inicio');await ready();await page.evaluate(async()=>{state.config.flags.homeProjectHero=true;await render();});await ready();
   assert.equal(await page.locator('.fiscal-map').count(),1);
   assert.equal(await page.locator('.hero-request-value').innerText().then(text=>text.replace(/\u00a0/g,' ')),'≈ $ 24,1 billones de pesos');
   assert((await page.locator('.hero-exact-value').textContent()).includes('24.094.340.599.263'));assert.equal(await page.locator('.hero-request>.review-exact').getAttribute('open'),null);
   assert(await page.locator('.project-hero').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.fiscal-map'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   assert(await page.locator('.fiscal-map').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.project-questions'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   if(width>1100)assert.equal(await page.locator('.hero-request>p:not(.eyebrow)').evaluate(e=>{const range=document.createRange();range.selectNodeContents(e);return range.getClientRects().length;}),1);
-  await page.goto(base+'#proyecto-2027?vista=expenses&grafico=treemap');await ready();
+  await page.evaluate(()=>{state.config.flags.homeProjectHero=false;});await page.goto(base+'#proyecto-2027?vista=expenses&grafico=treemap');await ready();
   assert.equal(await page.locator('.purpose-function-tile').count(),8);
   assert(await page.locator('.project-purpose-tree').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.area-search'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   const sum=await page.locator('.purpose-function-tile').evaluateAll(es=>es.reduce((v,e)=>v+Number(e.dataset.value),0));assert.equal(sum,p.breakdowns.purposes.find(r=>r.name==='Servicios Sociales').value);

@@ -1,5 +1,11 @@
 # Cambios
 
+## 2026-10-21 · v15 A · Inicio y escenarios
+
+- Oculta los dos bloques inferiores mediante banderas; conserva el acceso superior al proyecto. Actualiza el encabezado del mapa y las viñetas 1, 2 y 4.
+- Añade escenarios condicionales de cierre 2026 y gasto 2027, reproducibles desde los datos existentes, con estimación y supuestos visibles. No cambia importes anteriores ni agrega deuda complementaria a los agregados.
+- Capturas antes/después y controles de rutas equivalentes, banderas, teclado, contraste y desbordamiento. Entrega en PR con vista previa; sin autorización de fusión.
+
 ## 2026-10-15 — disposición de Resumen, Áreas y Evolución
 
 - El mismo bloque «Presupuesto de toda la Ciudad · 2026» pasa del directorio de Áreas 2027 al comienzo de Resumen en Avance 2026. Se conserva la opción de ordenar áreas por ampliación durante 2026 y el total del directorio; no se agrega una pestaña Áreas a 2026.

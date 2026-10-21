@@ -24,3 +24,7 @@ body>header .theme-menu{margin:0;padding:0;border:0;background:transparent}body>
 .highlight-method-detail .highlight-group h3{display:block;font-size:19px;line-height:1.4}.highlight-method-detail .highlight-group h3>strong{display:block;margin-top:6px;white-space:normal}
 
 .highlight-project-total{font-weight:700;color:var(--violet);font-size:clamp(16px,2vw,20px);margin:0 0 10px}.highlight-editorial{margin-bottom:14px}.highlight-scale{font-size:13px!important;color:var(--muted)}.budget-scenario{font-size:14px;line-height:1.6}.highlight-metric-row strong{overflow-wrap:anywhere}
+.project-hero[hidden],.hero-request[hidden],.hero-references[hidden]{display:none!important}
+.highlight-project-total a{display:inline-block;font-size:14px;padding:6px 0;margin-left:12px}
+.home-highlight-card .highlight-row-note{display:block;font-size:12px;line-height:1.45;color:var(--muted);margin-top:5px}
+.highlight-scenarios{border-top:1px solid var(--line);margin-top:20px}.highlight-scenario-formula{font-size:13px!important;overflow-wrap:anywhere}

@@ -36,3 +36,15 @@ Los pop-ups priorizan nombres, importes y enlaces, con una frase breve. El detal
 No se encontró una proyección oficial de déficit al cierre 2026 en el Mensaje y sus cuadros. El Cuadro 5.1 (PDF p. 157, impresa 146) presenta +$4.254,0 millones en el **crédito vigente al 30/06**, no una proyección de cierre. El Cuadro 2.6 (PDF p. 66, impresa 55) confirma ese corte y muestra +$917.460,1 millones ejecutados en el semestre. En PDF p. 153 (impresa 142), el resultado financiero previsto para 2027 es positivo en $1.316,4 millones. Por ello se mantiene el semestre y no se presenta la deuda para proveedores como evidencia de déficit 2027. La revisión, el hash del documento y sus páginas están en los datos derivados; la fila alternativa requiere bandera y cifra negativa verificada.
 
 `flags.homePerCapita` y `flags.homeBudget2026` permiten reactivar las tarjetas inferiores sin reconstruirlas; ambos son falsos. `flags.homeClosing2026Projection` es falso y no habilita una cifra no verificada. Los bonos pagan obligaciones devengadas y pendientes: siguen fuera de los agregados del presupuesto.
+
+## v15 · Escenarios y lectura del Inicio (21/10/2026)
+
+Esta revisión reemplaza la restricción anterior de habilitar únicamente una proyección oficial en la fila alternativa 2026. `homeClosing2026Projection=true` habilita ahora escenarios del sitio, identificados como estimados; en false conserva las cuatro filas verificadas anteriores.
+
+Resultado 2026 = $917.460.104.312,12 + (−$281.525.677.404,28 − $893.310.178.262,92) × 1,2821207463749955 = −$588.821.319.824,02. Los ingresos estimados son los anuales 2025 multiplicados por el mismo factor: $17.270.394.112.230,30. Ratio: −3,4094%. No se supone que el semestre negativo se repita sin escalarlo.
+
+Escenario 2027 = $1.316.442.866 − $24.094.340.599.263 × ($13.751.703.241.459,58 / $13.599.424.725.109 − 1) = −$268.478.089.848,83. El cálculo usa la precisión original, no los importes redondeados del prompt. No es una predicción, mantiene los ingresos 2027 y no supone que la deuda adicional se gaste.
+
+`build-home-highlights.mjs` reproduce los escenarios desde CAIF y votado/ejecutado, con fórmulas y rutas de origen. Los importes existentes no cambian. La tarjeta usa los mismos resultados que su ventana y metodología. Los títulos fuertes son lectura editorial solicitada; los escenarios futuros llevan identificación visible y condición explícita.
+
+`homeProjectHero=false` y `homeOwnTaxes=false` ocultan los bloques originales sin borrarlos. El acceso superior «Ver el proyecto» permanece. La viñeta 4 redondea su escala al 10% de los impuestos propios; la ventana conserva el ratio con un decimal y la base tributaria.

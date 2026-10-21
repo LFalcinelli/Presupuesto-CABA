@@ -49,7 +49,7 @@ function citizenGlossaryMarkup(fragment){
  const patterns=Object.entries(terms).map(([id,g])=>({id,g,regex:new RegExp('(?<![A-Za-zÁÉÍÓÚÜÑáéíóúüñ])('+[g.label,...(g.aliases||[])].map(s=>s.replace(/[.*+?^$(){}|[\]\\]/g,'\\$&')).sort((a,b)=>b.length-a.length).join('|')+')(?![A-Za-zÁÉÍÓÚÜÑáéíóúüñ])','iu')}));
  const walker=document.createTreeWalker(fragment,NodeFilter.SHOW_TEXT),nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
  for(const node of nodes){if(!node.parentNode||node.parentElement?.closest('script,style,svg,a,button,select,option,[data-term-popup]'))continue;
-  let text=node.nodeValue;if(!node.parentElement?.closest('.method-section,.gov-source-details,.exact-values,.fiscal-account-detail'))text=citizenVocabularyText(text);text=text.replace(/\bCAIF\b/g,'Cuenta de ingresos, gastos y financiamiento');
+  let text=node.nodeValue;if(!node.parentElement?.closest('.method-section,.gov-source-details,.exact-values,.fiscal-account-detail,[data-highlight-card="1"] h2,[data-highlight-card="1"] .highlight-row-copy>span'))text=citizenVocabularyText(text);text=text.replace(/\bCAIF\b/g,'Cuenta de ingresos, gastos y financiamiento');
   if(node.parentElement?.closest('h1')){if(text!==node.nodeValue)node.nodeValue=text;continue;}
   const matches=patterns.filter(p=>!seen.has(p.id)).map(p=>({...p,match:p.regex.exec(text)})).filter(p=>p.match).sort((a,b)=>a.match.index-b.match.index||b.match[0].length-a.match[0].length);
   if(!matches.length){if(text!==node.nodeValue)node.nodeValue=text;continue;}

@@ -33,7 +33,7 @@ jobs:
           for i in $(seq 1 30); do curl --fail --silent http://127.0.0.1:8766/Presupuesto-CABA/ > /dev/null && break; sleep 1; done
           npm run test:smoke
       - uses: actions/checkout@v6
-        if: github.event_name == 'pull_request' && (startsWith(github.head_ref, 'feature/v13-') || startsWith(github.head_ref, 'feature/v14-'))
+        if: github.event_name == 'pull_request' && (startsWith(github.head_ref, 'feature/v13-') || startsWith(github.head_ref, 'feature/v14-') || startsWith(github.head_ref, 'feature/v15-'))
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           path: baseline
@@ -74,6 +74,24 @@ jobs:
         with:
           name: capturas-v14-antes-despues
           path: qa-v14/
+          retention-days: 30
+      - name: Capturas antes y después de v15
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'feature/v15-')
+        env:
+          HEAD_BRANCH: ${{ github.head_ref }}
+        run: |
+          case "$HEAD_BRANCH" in *v15-a-*) export QA_PART=a;; *v15-b-*) export QA_PART=b;; esac
+          export QA_DIR="$GITHUB_WORKSPACE/qa-v15"
+          node baseline/scripts/build.mjs
+          PORT=8767 node baseline/scripts/serve.mjs > /tmp/baseline.log 2>&1 &
+          for i in $(seq 1 30); do curl --fail --silent http://127.0.0.1:8767/Presupuesto-CABA/ > /dev/null && break; sleep 1; done
+          QA_PHASE=before SITE_URL=http://127.0.0.1:8767/Presupuesto-CABA/ node scripts/capture-v15.cjs
+          QA_PHASE=after SITE_URL=http://127.0.0.1:8766/Presupuesto-CABA/ node scripts/capture-v15.cjs
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'feature/v15-')
+        with:
+          name: capturas-v15-antes-despues
+          path: qa-v15/
           retention-days: 30
       - name: Recuperar las vistas previas publicadas
         id: previous
