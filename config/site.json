@@ -55,8 +55,10 @@
     "world": false,
     "homePerCapita": false,
     "homeBudget2026": false,
-    "homeClosing2026Projection": false,
-    "homeProjectRoutes": false
+    "homeClosing2026Projection": true,
+    "homeProjectRoutes": false,
+    "homeProjectHero": false,
+    "homeOwnTaxes": false
   },
   "publicUrl": "https://lfalcinelli.github.io/Presupuesto-CABA/",
   "legacyPublication": "https://lla-caba-gasto-publico.lucianofalcinelli.chatgpt.site/",

@@ -12,3 +12,5 @@
 @media(max-width:650px){.gov-economic-grid{grid-template-columns:1fr}.gov-economic-grid article{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid var(--palette-e7dfed);padding:20px 0;gap:12px}.gov-economic-grid article>h3{font-size:1rem}.gov-economic-grid article>strong{text-align:right;font-size:1.1rem}.gov-economic-grid article>b{text-align:right}.gov-transfers li,.gov-financing-programs li{grid-template-columns:1fr}.gov-transfers li strong,.gov-financing-programs li strong{font-size:1rem}.gov-composition-stack{height:28px}.gov-ranking-rest{padding:16px 12px}}
 
 .gov-recipient-note{display:block;font-size:.86rem;line-height:1.7;margin-top:7px;color:var(--gov-muted)}
+
+.gov-reading-title{font-weight:750;color:var(--ink)}.gov-readings>ol>li{line-height:1.65;padding-block:9px}.gov-reading-title+.glossary-term{margin-left:4px}

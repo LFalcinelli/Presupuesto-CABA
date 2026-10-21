@@ -1174,6 +1174,18 @@
         "data/home-highlights-2027.json"
       ],
       "source": "Proyecto 2027 y fichas jurisdiccionales; ejecución GCBA 2025/2026; serie oficial IDECBA. Referencias completas en inputs y componentes."
+    },
+    {
+      "id": "area-highlights-2027",
+      "name": "Destacados verificados de cinco áreas 2027",
+      "path": "data/budget/2027/area-highlights.json",
+      "period": "2027-project",
+      "type": "derived",
+      "description": "Textos con cifras, rutas de origen y fórmulas reproducibles; una sola base ampliada 2026.",
+      "source": "Documentos jurisdiccionales y ejecución 2026 ya conciliados; referencias por lectura.",
+      "files": [
+        "data/budget/2027/area-highlights.json"
+      ]
     }
   ],
   "resources": {

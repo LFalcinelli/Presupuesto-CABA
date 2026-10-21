@@ -9,6 +9,7 @@ ensureViewData=async function(view,period){
  const legacy=state.areaReportId,report=areaReportFind(legacy);
  if(view==='project'&&legacy?.startsWith('ue-')&&report?.detail2027){state.governmentArea=report.codes[1];state.governmentUnit=report.codes[4];state.projectTab='areas';state.areaReportId=null;}
  if(view==='project'&&state.projectTab==='areas'&&state.governmentArea){
+  state.areaHighlights=await dataFile('area-highlights-2027');
   const area=state.areaReports.areas.find(a=>a.code===state.governmentArea);
   if(area?.detailFile){if(!governmentAreaCache.has(area.detailFile))governmentAreaCache.set(area.detailFile,Site.load(area.detailFile).catch(e=>{governmentAreaCache.delete(area.detailFile);throw e;}));state.governmentAreaDetail=await governmentAreaCache.get(area.detailFile);}else state.governmentAreaDetail=null;
  }
@@ -57,7 +58,7 @@ extraViews.project=function(){
 function governmentTitle(name){return name.replace(/\bDe\b/g,'de').replace(/\bLa\b/g,'la').replace(/\bDel\b/g,'del').replace(/\bE\b/g,'e').replace(/\bY\b/g,'y');}
 function governmentPeople(area,compact=false){
  const n=area.officials?.value;
- return `<span>${n===null||n===undefined?'Sin dato verificable':`<b>${fmt(n)}</b> funcionarios relevados`}</span><small>Padrón 2026 · corte exacto no publicado${compact?'':'; no es dotación de 2027.'}</small>`;
+ return `<span>${n===null||n===undefined?'Sin dato verificable':`<b>${fmt(n)}</b> funcionarios`}</span>${compact?'':'<small>Padrón 2026 · corte exacto no publicado; no es dotación de 2027.</small>'}`;
 }
 function governmentAreaCards(...args){return Site.featureFunctions.governmentAreaCards.apply(this,args);}
 function governmentAreaDirectory(...args){return Site.featureFunctions.governmentAreaDirectory.apply(this,args);}

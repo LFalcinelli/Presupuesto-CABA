@@ -6,8 +6,8 @@ import assert from 'node:assert/strict';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
-const files=['content/home-highlights.json','data/budget/2027/search-index.json','data/budget/2027/principals.json','data/budget/2027/budget-depth.json','data/budget/2027/project.json','data/budget/2027/companions.json','data/history/execution-history.json','data/fiscal-results/caif.json','data/budget/2026/2026-2.json','data/budget/2027/fiscal-map.json','data/budget/2027/comparison-2026.json','data/revenue/tax-reference-2027.json'];
-const [copy,index,principals,depth,project,companions,hist,caif,execution,fiscalMap,comparison,taxReference]=files.map(read);
+const files=['content/home-highlights.json','data/budget/2027/search-index.json','data/budget/2027/principals.json','data/budget/2027/budget-depth.json','data/budget/2027/project.json','data/budget/2027/companions.json','data/history/execution-history.json','data/fiscal-results/caif.json','data/budget/2026/2026-2.json','data/budget/2027/fiscal-map.json','data/budget/2027/comparison-2026.json','data/revenue/tax-reference-2027.json','data/execution/approved-vs-executed.json'];
+const [copy,index,principals,depth,project,companions,hist,caif,execution,fiscalMap,comparison,taxReference,approvedExecution]=files.map(read);
 const entries=new Map(index.entries.map(r=>[r.id,r]));
 const programs=index.entries.filter(r=>r.kind==='program'&&r.project2027!==null);
 const sum=rows=>rows.reduce((s,r)=>s+r.amount,0);
@@ -77,6 +77,14 @@ Object.assign(cards[0],{components:currentComponents,amount:cur27.nominal,displa
 cards[0].text=cards[0].text.replace('{capitalChange}',new Intl.NumberFormat('es-AR',{maximumFractionDigits:1}).format(Math.abs(cards[0].realCapitalChange2026))+'%');
 Object.assign(cards[1],{closing2026Review:copy.closing2026Review,annual2025:caif.periods['2025-4'],semesters:caif.context.semesters,financialResult2027:s.financialResult.value,primaryResult2027:s.primaryResult.value,interest2027:s.interest.value,interestInitial2026:interestInitial,interestRealChangeInitial:(s.interest.value/interestInitial/1.18-1)*100,interestSharePrimary:s.interest.value/s.primaryResult.value*100,expense2027:s.fiscalExpense.value,providers:provider,belgrano,stock:depth.debt.stock,source:project.source});
 cards[1].text=cards[1].text.replace('{bonds}',million(provider.amount));
+// Scenarios requested in v15. These are conditional site estimates, never official forecasts.
+const annual25=caif.periods['2025-4'],half26=caif.periods['2026-2'],half25=caif.context.semesters.find(r=>r.year===2025),execution25=approvedExecution.periods.find(r=>r.period==='2025-4');
+const secondHalf25=annual25.financialResult-half25.financialResult,incomeFactor=half26.income/half25.income,estimatedIncome26=annual25.income*incomeFactor;
+const result26=half26.financialResult+secondHalf25*incomeFactor,overspend25=execution25.executed/execution25.initial-1;
+cards[1].scenarios={
+ closing2026:{result:result26,income:estimatedIncome26,ratio:result26/estimatedIncome26*100,secondHalf2025:secondHalf25,incomeFactor,formula:'Resultado H1 2026 + (resultado anual 2025 − resultado H1 2025) × (ingresos H1 2026 / ingresos H1 2025)',incomeFormula:'Ingresos anuales 2025 × (ingresos H1 2026 / ingresos H1 2025)',assumption:'Segundo semestre 2025 escalado por el crecimiento de ingresos del primer semestre. No es una proyección oficial ni ajusta cada partida.',sources:['data/fiscal-results/caif.json:periods.2026-2','data/fiscal-results/caif.json:periods.2025-4','data/fiscal-results/caif.json:context.semesters[year=2025]']},
+ spending2027:{result:s.financialResult.value-s.fiscalExpense.value*overspend25,overspend2025:overspend25,executed2025:execution25.executed,approved2025:execution25.initial,formula:'Saldo financiero 2027 − gasto fiscal 2027 × (ejecutado 2025 / votado 2025 − 1)',assumption:'Mismo desvío porcentual del gasto ejecutado frente al votado 2025, con ingresos 2027 sin cambios. No asegura un déficit ni agrega los proyectos de deuda al gasto.',sources:['data/execution/approved-vs-executed.json:periods[period=2025-4]','data/budget/2027/project.json:summary.financialResult','data/budget/2027/project.json:summary.fiscalExpense']}
+};
 Object.assign(cards[2],{groups:[publicity,events,paso],amount:sum([publicity,events,paso]),method:'Selección editorial, no clasificación oficial. Incluye una estimación PASO y costos de servicios. No demuestra que el total pueda eliminarse sin efectos.'});
 cards[2].ownTaxShare=cards[2].amount/taxReference.ownTaxes*100;cards[2].ownTaxes=taxReference.ownTaxes;cards[2].display=million(cards[2].amount);cards[2].text=cards[2].text.replace('{total}',cards[2].display);
 Object.assign(cards[3],{groups:[support,housing,green],amount:sum([support,housing,green]),method:'Agrupación editorial para examinar funciones. No prueba que toda la estructura sea redundante. No se suman las viñetas 3 y 4: algunas partidas de publicidad están dentro de programas de conducción.'});

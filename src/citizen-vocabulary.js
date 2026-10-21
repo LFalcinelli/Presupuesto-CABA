@@ -6,8 +6,8 @@ figurative:{"label":"Gastos figurativos","aliases":["figurativos","figurativas",
 applications:{"label":"Aplicaciones financieras","official":"Pagos de capital de deuda y otras operaciones financieras; se muestran separados de los gastos corrientes y de capital.","question":"saldo"},
 ipc:{"label":"IPCBA","official":"Índice de Precios al Consumidor de la Ciudad. Permite comparar importes descontando la inflación.","question":"inflacion"},
 rem:{"label":"REM","official":"Relevamiento de Expectativas de Mercado del Banco Central. Reúne pronósticos sobre precios y actividad; no son datos observados.","question":"inflacion"},
-object:{"label":"Inciso","aliases":["incisos"],"official":"Una agrupación según qué se paga: personal, insumos, servicios, obras y equipamiento, entre otros.","question":"clasificaciones"},
-unit:{"label":"Unidad ejecutora","aliases":["unidades ejecutoras"],"official":"Dependencia responsable de administrar programas y su presupuesto.","question":"clasificaciones"},
+object:{"label":"Qué se paga","aliases":["Inciso","incisos"],"official":"Una agrupación según qué se paga: personal, insumos, servicios, obras y equipamiento, entre otros.","question":"clasificaciones"},
+unit:{"label":"Oficina","aliases":["Oficinas","Unidad ejecutora","unidades ejecutoras"],"official":"Unidad ejecutora: dependencia responsable de administrar programas y su presupuesto.","question":"clasificaciones"},
 linked:{"label":"Empalme","aliases":["empalmado","empalmada","empalmados","empalmadas"],"official":"Unión de series estadísticas de distintas bases o fuentes, usando los períodos en que se superponen.","question":"inflacion"},
 dnap:{"label":"DNAP","official":"Dirección Nacional de Asuntos Provinciales: organismo nacional que reúne información fiscal de las provincias.","question":"clasificaciones"},
  pbg:{label:"PBG",official:"Producto Bruto Geográfico: el valor que produce la economía de la Ciudad durante un año. A precios básicos, excluye los impuestos sobre los productos y suma las subvenciones.",question:"clasificaciones"},
@@ -25,12 +25,21 @@ dnap:{"label":"DNAP","official":"Dirección Nacional de Asuntos Provinciales: or
  property:{label:'Intereses y rentas cobrados',official:'Rentas de la propiedad',question:'rentas'}
 };
 const citizenVocabularyRules=[
+ [/tributos de jurisdicción nacional/gi,'coparticipación federal'],
+ [/\bunidades ejecutoras\b/gi,'oficinas'],[/\bunidad ejecutora\b/gi,'oficina'],
+ [/\bjurisdicciones\b/gi,'áreas de gobierno'],[/\bjurisdicción\b/gi,'área de gobierno'],
+ [/presupuesto por finalidad y función/gi,'destinos del presupuesto'],[/por finalidad y función/gi,'según para qué se gasta'],[/\bfinalidad y función\b/gi,'para qué se gasta'],[/^incisos?$/gi,'qué se paga'],[/\bpor incisos?\b/gi,'según qué se paga'],
+ [/\bincisos? (?=\d)/gi,'tipo de gasto '],[/\baperturas\b/gi,'detalles'],[/\bapertura\b/gi,'detalle'],
+ [/\bhomologados\b/gi,'comparados'],[/\bhomologado\b/gi,'comparado'],[/\bhomologadas\b/gi,'comparadas'],[/\bhomologada\b/gi,'comparada'],
+ [/pesos nominales(?: de cada (?:año|período))?/gi,'pesos de cada año, sin ajustar por inflación'],[/\bnominales?\b/gi,'sin ajustar por inflación'],
+ [/^funcionamiento$/gi,'sueldos, insumos y servicios'],
+
  [/Deuda p[uú]blica\s*[-·:]\s*intereses y (?:otros )?gastos|Deuda: intereses y gastos|Intereses y (?:otros )?(?:costos|gastos) de la deuda/gi,'Intereses y otros gastos de la deuda'],
  [/^Servicio de la deuda$/i,'Intereses y otros gastos de la deuda'],
  [/presupuesto (?:inicial|aprobado|sancionado)/gi,'presupuesto votado'],
  [/presupuesto (?:actualizado|vigente)/gi,'presupuesto ampliado'],
  [/crédito inicial/gi,'presupuesto votado'],[/\bactualizado(?=\s*(?:[·;]|$))/gi,'ampliado'],
- [/crédito vigente/gi,'presupuesto ampliado'],[/\bsancionado\b/gi,'votado'],[/\bsanción\b/gi,'presupuesto votado'],
+ [/crédito vigente/gi,'presupuesto ampliado'],[/\bsancionado\b/gi,'votado'],[/\bsanción\b(?! de leyes)/gi,'presupuesto votado'],
  [/gastos? devengados?/gi,'gasto ejecutado'],[/gastos? habituales(?:,? sin intereses)?/gi,'gasto corriente (sin intereses)'],
  [/gastos? corrientes? sin intereses/gi,'gasto corriente (sin intereses)'],[/gastos? de capital/gi,'inversión'],
  [/servicios no personales/gi,'servicios contratados'],[/bienes de consumo/gi,'insumos'],[/bienes de uso/gi,'obras y equipamiento'],
@@ -49,7 +58,7 @@ function citizenGlossaryMarkup(fragment){
  const patterns=Object.entries(terms).map(([id,g])=>({id,g,regex:new RegExp('(?<![A-Za-zÁÉÍÓÚÜÑáéíóúüñ])('+[g.label,...(g.aliases||[])].map(s=>s.replace(/[.*+?^$(){}|[\]\\]/g,'\\$&')).sort((a,b)=>b.length-a.length).join('|')+')(?![A-Za-zÁÉÍÓÚÜÑáéíóúüñ])','iu')}));
  const walker=document.createTreeWalker(fragment,NodeFilter.SHOW_TEXT),nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
  for(const node of nodes){if(!node.parentNode||node.parentElement?.closest('script,style,svg,a,button,select,option,[data-term-popup]'))continue;
-  let text=node.nodeValue;if(!node.parentElement?.closest('.method-section,.gov-source-details,.exact-values,.fiscal-account-detail'))text=citizenVocabularyText(text);text=text.replace(/\bCAIF\b/g,'Cuenta de ingresos, gastos y financiamiento');
+  let text=node.nodeValue;if(!node.parentElement?.closest('.method-section,.gov-source-details,.exact-values,.fiscal-account-detail,#home-highlight-title,[data-highlight-card="1"] h2,[data-highlight-card="1"] .highlight-row-copy>span'))text=citizenVocabularyText(text);text=text.replace(/\bCAIF\b/g,'Cuenta de ingresos, gastos y financiamiento');
   if(node.parentElement?.closest('h1')){if(text!==node.nodeValue)node.nodeValue=text;continue;}
   const matches=patterns.filter(p=>!seen.has(p.id)).map(p=>({...p,match:p.regex.exec(text)})).filter(p=>p.match).sort((a,b)=>a.match.index-b.match.index||b.match[0].length-a.match[0].length);
   if(!matches.length){if(text!==node.nodeValue)node.nodeValue=text;continue;}
@@ -58,4 +67,21 @@ function citizenGlossaryMarkup(fragment){
   out.append(document.createTextNode(text.slice(end)));node.replaceWith(out);
  }
  return fragment;
+}
+
+// Expand only the first occurrence in a reading. Leave chart labels and native controls compact.
+const citizenAcronyms={SBASE:'Subterráneos de Buenos Aires',IVC:'Instituto de la Vivienda',FACOEP:'Facturación y Cobranza de Efectores Públicos',BID:'Banco Interamericano de Desarrollo',CeSAC:'Centro de Salud y Acción Comunitaria',SAME:'Sistema de Atención Médica de Emergencias',PBG:'producto bruto de la Ciudad',REM:'Relevamiento de Expectativas de Mercado',IPCBA:'Índice de Precios al Consumidor de la Ciudad'};
+function expandCitizenAcronyms(root){
+ const seen=new Set(),walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+ for(const node of nodes){if(node.parentElement?.closest('script,style,svg,select,option,input,[data-term-popup],.gov-source-details,.exact-values'))continue;
+  let text=node.nodeValue;
+  for(const [abbr,full] of Object.entries(citizenAcronyms)){
+   if(seen.has(abbr))continue;const re=new RegExp('\\b'+abbr+'s?\\b','i'),match=re.exec(text);if(!match)continue;
+   const preceding=node.previousSibling?.textContent||node.parentElement?.previousSibling?.textContent||'';
+   if(text.slice(0,match.index).trimEnd().endsWith('(')||text.toLowerCase().includes(full.toLowerCase())||preceding.trimEnd().endsWith('(')&&preceding.toLowerCase().includes(full.toLowerCase())){seen.add(abbr);continue;}
+   const plural=abbr==='CeSAC'&&match[0].toLowerCase().endsWith('s'),expanded=plural?'Centros de Salud y Acción Comunitaria':full;
+   text=text.slice(0,match.index)+expanded+' ('+abbr+(plural?'s':'')+')'+text.slice(match.index+match[0].length);seen.add(abbr);
+  }
+  if(text!==node.nodeValue)node.nodeValue=text;
+ }
 }

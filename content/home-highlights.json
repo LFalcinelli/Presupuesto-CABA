@@ -5,15 +5,15 @@
   "cards": [
     {
       "id": 1,
-      "title": "Récord de gasto corriente sin intereses (proyecto)",
+      "title": "Récord de gasto corriente sin intereses · proyecto 2027",
       "text": "El proyecto propone el mayor gasto corriente sin intereses de la serie disponible. La inversión baja {capitalChange} real frente al ampliado 2026.",
       "link": "¿En qué se va?",
       "topic": "personal"
     },
     {
       "id": 2,
-      "title": "Las cuentas quedan al límite",
-      "text": "2025 cerró con déficit; el semestre 2026 tuvo superávit y el proyecto 2027 prevé un saldo positivo muy pequeño.",
+      "title": "CON DÉFICIT Y MÁS DEUDA",
+      "text": "2025 cerró en rojo, 2026 va a un déficit mayor y 2027 pide más deuda. Escenarios estimados para 2026–2027.",
       "link": "¿Qué muestran las cuentas?",
       "topic": "deuda"
     },
@@ -26,8 +26,8 @@
     },
     {
       "id": 4,
-      "title": "Cuánto cuesta la estructura del Estado",
-      "text": "{total} en programas centrales, vivienda social e integración urbana y ambiente distribuidos en varias estructuras.",
+      "title": "LA MISMA TAREA, MUCHAS OFICINAS",
+      "text": "{total} que se van en estructura y burocracia, urbanización de villas y agenda verde.",
       "link": "Ver las áreas y los programas",
       "topic": "burocracia"
     }
@@ -59,7 +59,7 @@
   "projectTotalLabel": "Proyecto 2027: ≈ $24,1 billones · pendiente de aprobación",
   "selectionReview": {
     "status": "propuesta para aprobación en PR; no publicada en producción",
-    "supportLabel": "Programas centrales y comunes de las áreas de gobierno",
+    "supportLabel": "ESTRUCTURA DE GOBIERNO Y BUROCRACIA",
     "reasonLabel": "Incluye Jefaturas, Procuración y Tribunal; no se los rotula como ministerios.",
     "excludedSupport": [
       {

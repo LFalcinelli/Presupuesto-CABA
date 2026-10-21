@@ -1,0 +1,1264 @@
+{
+  "schemaVersion": 1,
+  "comparisonBase": "current2026",
+  "inflationFactor": 1.18,
+  "entries": [
+    {
+      "area": "40",
+      "order": 1,
+      "title": "Hospitales de atención general",
+      "text": "Los 14 hospitales de agudos suman $1,76 billones en 2027; su comparación funcional sigue por confirmar.",
+      "kind": "largest",
+      "figures": [
+        {
+          "value": 106896641423,
+          "path": "data/budget/2027/areas/40.json#/programs/3/project2027"
+        },
+        {
+          "value": 193999891906,
+          "path": "data/budget/2027/areas/40.json#/programs/5/project2027"
+        },
+        {
+          "value": 174671120855,
+          "path": "data/budget/2027/areas/40.json#/programs/9/project2027"
+        },
+        {
+          "value": 185457742417,
+          "path": "data/budget/2027/areas/40.json#/programs/11/project2027"
+        },
+        {
+          "value": 123148358424,
+          "path": "data/budget/2027/areas/40.json#/programs/18/project2027"
+        },
+        {
+          "value": 139169849549,
+          "path": "data/budget/2027/areas/40.json#/programs/19/project2027"
+        },
+        {
+          "value": 127610902023,
+          "path": "data/budget/2027/areas/40.json#/programs/20/project2027"
+        },
+        {
+          "value": 165577047013,
+          "path": "data/budget/2027/areas/40.json#/programs/23/project2027"
+        },
+        {
+          "value": 128081914087,
+          "path": "data/budget/2027/areas/40.json#/programs/24/project2027"
+        },
+        {
+          "value": 168187424586,
+          "path": "data/budget/2027/areas/40.json#/programs/27/project2027"
+        },
+        {
+          "value": 85115235656,
+          "path": "data/budget/2027/areas/40.json#/programs/31/project2027"
+        },
+        {
+          "value": 67187384968,
+          "path": "data/budget/2027/areas/40.json#/programs/33/project2027"
+        },
+        {
+          "value": 52973498769,
+          "path": "data/budget/2027/areas/40.json#/programs/34/project2027"
+        },
+        {
+          "value": 42297052666,
+          "path": "data/budget/2027/areas/40.json#/programs/40/project2027"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Hospitales de agudos",
+          "op": "sum",
+          "inputs": [
+            106896641423,
+            193999891906,
+            174671120855,
+            185457742417,
+            123148358424,
+            139169849549,
+            127610902023,
+            165577047013,
+            128081914087,
+            168187424586,
+            85115235656,
+            67187384968,
+            52973498769,
+            42297052666
+          ],
+          "value": 1760374064342
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "40 - Ministerio de Salud.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/40.json#/programs/3/project2027",
+        "data/budget/2027/areas/40.json#/programs/5/project2027",
+        "data/budget/2027/areas/40.json#/programs/9/project2027",
+        "data/budget/2027/areas/40.json#/programs/11/project2027",
+        "data/budget/2027/areas/40.json#/programs/18/project2027",
+        "data/budget/2027/areas/40.json#/programs/19/project2027",
+        "data/budget/2027/areas/40.json#/programs/20/project2027",
+        "data/budget/2027/areas/40.json#/programs/23/project2027",
+        "data/budget/2027/areas/40.json#/programs/24/project2027",
+        "data/budget/2027/areas/40.json#/programs/27/project2027",
+        "data/budget/2027/areas/40.json#/programs/31/project2027",
+        "data/budget/2027/areas/40.json#/programs/33/project2027",
+        "data/budget/2027/areas/40.json#/programs/34/project2027",
+        "data/budget/2027/areas/40.json#/programs/40/project2027"
+      ],
+      "movements": []
+    },
+    {
+      "area": "40",
+      "order": 2,
+      "title": "Compras y servicios centrales",
+      "text": "Actividades Centrales recibe $321.234 millones; incluye $151.385 millones en productos químicos y medicinales, sin equivaler a toda la compra de medicamentos.",
+      "kind": "central",
+      "figures": [
+        {
+          "value": 321233931057,
+          "path": "data/budget/2027/areas/40.json#/programs/0/project2027"
+        },
+        {
+          "value": 151385098563,
+          "path": "data/budget/2027/areas/40.json#/programs/0/principals/7/value"
+        }
+      ],
+      "calculations": [],
+      "comparisonBase": "current2026",
+      "references": [
+        "40 - Ministerio de Salud.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/40.json#/programs/0/project2027",
+        "data/budget/2027/areas/40.json#/programs/0/principals/7/value"
+      ],
+      "movements": []
+    },
+    {
+      "area": "40",
+      "order": 3,
+      "title": "Químicos con baja ejecución",
+      "text": "Productos químicos, combustibles y lubricantes: $494.608 millones (+7,2% real); a junio de 2026 se usó el 23,3% del ampliado.",
+      "kind": "execution",
+      "figures": [
+        {
+          "value": 494608202905,
+          "path": "data/budget/2027/principals.json#/rows/11/areas/0/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/40.json#/deflator/factor"
+        },
+        {
+          "value": 390942610837,
+          "path": "data/budget/2027/principals.json#/rows/11/areas/0/current2026"
+        },
+        {
+          "value": 91012691174.51,
+          "path": "data/budget/2027/principals.json#/rows/11/areas/0/executed2026"
+        },
+        {
+          "value": 390942610837,
+          "path": "data/budget/2027/principals.json#/rows/11/areas/0/current2026"
+        },
+        {
+          "value": 494608202905,
+          "path": "data/budget/2027/principals.json#/rows/11/areas/0/project2027"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            494608202905,
+            1.18,
+            390942610837
+          ],
+          "value": 7.217653529728163
+        },
+        {
+          "name": "Ejecución 2026",
+          "op": "share",
+          "inputs": [
+            91012691174.51,
+            390942610837
+          ],
+          "value": 23.280320090883343
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "40 - Ministerio de Salud.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/principals.json#/rows/11/areas/0/project2027",
+        "data/budget/2027/areas/40.json#/deflator/factor",
+        "data/budget/2027/principals.json#/rows/11/areas/0/current2026",
+        "data/budget/2027/principals.json#/rows/11/areas/0/executed2026",
+        "data/budget/2027/principals.json#/rows/11/areas/0/current2026",
+        "data/budget/2027/principals.json#/rows/11/areas/0/project2027"
+      ],
+      "movements": []
+    },
+    {
+      "area": "40",
+      "order": 4,
+      "title": "Obras y su ejecución",
+      "text": "Construcciones: $349.707 millones (+28% real); a junio de 2026 se ejecutó el 29,4% del ampliado.",
+      "kind": "works",
+      "figures": [
+        {
+          "value": 349707193493,
+          "path": "data/budget/2027/principals.json#/rows/27/areas/3/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/40.json#/deflator/factor"
+        },
+        {
+          "value": 231552823284,
+          "path": "data/budget/2027/principals.json#/rows/27/areas/3/current2026"
+        },
+        {
+          "value": 68164102569.65,
+          "path": "data/budget/2027/principals.json#/rows/27/areas/3/executed2026"
+        },
+        {
+          "value": 231552823284,
+          "path": "data/budget/2027/principals.json#/rows/27/areas/3/current2026"
+        },
+        {
+          "value": 349707193493,
+          "path": "data/budget/2027/principals.json#/rows/27/areas/3/project2027"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Variación real",
+          "op": "rate",
+          "inputs": [
+            349707193493,
+            1.18,
+            231552823284
+          ],
+          "value": 27.98895050414034
+        },
+        {
+          "name": "Ejecución 2026",
+          "op": "share",
+          "inputs": [
+            68164102569.65,
+            231552823284
+          ],
+          "value": 29.437819674539917
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "40 - Ministerio de Salud.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/principals.json#/rows/27/areas/3/project2027",
+        "data/budget/2027/areas/40.json#/deflator/factor",
+        "data/budget/2027/principals.json#/rows/27/areas/3/current2026",
+        "data/budget/2027/principals.json#/rows/27/areas/3/executed2026",
+        "data/budget/2027/principals.json#/rows/27/areas/3/current2026",
+        "data/budget/2027/principals.json#/rows/27/areas/3/project2027"
+      ],
+      "movements": []
+    },
+    {
+      "area": "40",
+      "order": 5,
+      "title": "La planta está incompleta",
+      "text": "El cuadro de 20.622 cargos excluye la carrera profesional hospitalaria; no permite contar todos los médicos.",
+      "kind": "coverage",
+      "figures": [
+        {
+          "value": 20622,
+          "path": "data/budget/2027/areas/40.json#/positions/value"
+        }
+      ],
+      "calculations": [],
+      "comparisonBase": "current2026",
+      "references": [
+        "40 - Ministerio de Salud.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/40.json#/positions/value"
+      ],
+      "movements": []
+    },
+    {
+      "area": "29",
+      "order": 1,
+      "title": "La Policía concentra el gasto",
+      "text": "La Policía recibe $2,46 billones, el 92% del área; su continuidad presupuestaria está pendiente de verificar.",
+      "kind": "largest",
+      "figures": [
+        {
+          "value": 2463336565797,
+          "path": "data/budget/2027/areas/29.json#/programs/15/project2027"
+        },
+        {
+          "value": 2463336565797,
+          "path": "data/budget/2027/areas/29.json#/programs/15/project2027"
+        },
+        {
+          "value": 2677004026889,
+          "path": "data/budget/2027/areas/29.json#/stages/project2027"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Participación",
+          "op": "share",
+          "inputs": [
+            2463336565797,
+            2677004026889
+          ],
+          "value": 92.01841091960152
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "29 - Ministerio de Seguridad.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/29.json#/programs/15/project2027",
+        "data/budget/2027/areas/29.json#/programs/15/project2027",
+        "data/budget/2027/areas/29.json#/stages/project2027"
+      ],
+      "movements": []
+    },
+    {
+      "area": "29",
+      "order": 2,
+      "title": "Vestuario en emergencias urbanas",
+      "text": "Guardia de Auxilio: $41.557 millones; textiles y vestuario suman $36.904 millones, el 89% del programa.",
+      "kind": "program",
+      "figures": [
+        {
+          "value": 41557212301,
+          "path": "data/budget/2027/areas/29.json#/programs/18/project2027"
+        },
+        {
+          "value": 36903530206,
+          "path": "data/budget/2027/areas/29.json#/programs/18/principals/5/value"
+        },
+        {
+          "value": 36903530206,
+          "path": "data/budget/2027/areas/29.json#/programs/18/principals/5/value"
+        },
+        {
+          "value": 41557212301,
+          "path": "data/budget/2027/areas/29.json#/programs/18/project2027"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Vestuario",
+          "op": "share",
+          "inputs": [
+            36903530206,
+            41557212301
+          ],
+          "value": 88.80174622567736
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "29 - Ministerio de Seguridad.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/29.json#/programs/18/project2027",
+        "data/budget/2027/areas/29.json#/programs/18/principals/5/value",
+        "data/budget/2027/areas/29.json#/programs/18/principals/5/value",
+        "data/budget/2027/areas/29.json#/programs/18/project2027"
+      ],
+      "movements": []
+    },
+    {
+      "area": "29",
+      "order": 3,
+      "title": "Servicios en capital humano",
+      "text": "Servicios profesionales, técnicos y operativos: $16.137 millones; el programa completo aumenta +152% real, sin probar que sean contratados fuera de planta.",
+      "kind": "program",
+      "figures": [
+        {
+          "value": 16137248203,
+          "path": "data/budget/2027/areas/29.json#/programs/1/principals/9/value"
+        },
+        {
+          "value": 17932350909,
+          "path": "data/budget/2027/areas/29.json#/programs/1/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/29.json#/deflator/factor"
+        },
+        {
+          "value": 6038834163,
+          "path": "data/budget/2027/areas/29.json#/programs/1/current2026"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            17932350909,
+            1.18,
+            6038834163
+          ],
+          "value": 151.65300354018018
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "29 - Ministerio de Seguridad.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/29.json#/programs/1/principals/9/value",
+        "data/budget/2027/areas/29.json#/programs/1/project2027",
+        "data/budget/2027/areas/29.json#/deflator/factor",
+        "data/budget/2027/areas/29.json#/programs/1/current2026"
+      ],
+      "movements": []
+    },
+    {
+      "area": "29",
+      "order": 4,
+      "title": "Menos para equipamiento",
+      "text": "Maquinaria y equipos: $45.803 millones (−42% real); a junio de 2026 se usó el 7,7% del ampliado.",
+      "kind": "execution",
+      "figures": [
+        {
+          "value": 45803388222,
+          "path": "data/budget/2027/principals.json#/rows/22/areas/1/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/29.json#/deflator/factor"
+        },
+        {
+          "value": 67356489549,
+          "path": "data/budget/2027/principals.json#/rows/22/areas/1/current2026"
+        },
+        {
+          "value": 5185301619.48,
+          "path": "data/budget/2027/principals.json#/rows/22/areas/1/executed2026"
+        },
+        {
+          "value": 67356489549,
+          "path": "data/budget/2027/principals.json#/rows/22/areas/1/current2026"
+        },
+        {
+          "value": 45803388222,
+          "path": "data/budget/2027/principals.json#/rows/22/areas/1/project2027"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Variación real",
+          "op": "rate",
+          "inputs": [
+            45803388222,
+            1.18,
+            67356489549
+          ],
+          "value": -42.37165422884416
+        },
+        {
+          "name": "Ejecución 2026",
+          "op": "share",
+          "inputs": [
+            5185301619.48,
+            67356489549
+          ],
+          "value": 7.698295523117834
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "29 - Ministerio de Seguridad.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/principals.json#/rows/22/areas/1/project2027",
+        "data/budget/2027/areas/29.json#/deflator/factor",
+        "data/budget/2027/principals.json#/rows/22/areas/1/current2026",
+        "data/budget/2027/principals.json#/rows/22/areas/1/executed2026",
+        "data/budget/2027/principals.json#/rows/22/areas/1/current2026",
+        "data/budget/2027/principals.json#/rows/22/areas/1/project2027"
+      ],
+      "movements": []
+    },
+    {
+      "area": "29",
+      "order": 5,
+      "title": "Fondos al sector privado",
+      "text": "La Policía prevé entregar $27.528 millones al sector privado en 2027; la clasificación no identifica un destinatario.",
+      "kind": "transfers",
+      "figures": [
+        {
+          "value": 27527564052,
+          "path": "data/budget/2027/areas/29.json#/programs/15/principals/25/value"
+        }
+      ],
+      "calculations": [],
+      "comparisonBase": "current2026",
+      "references": [
+        "29 - Ministerio de Seguridad.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/29.json#/programs/15/principals/25/value"
+      ],
+      "movements": []
+    },
+    {
+      "area": "55",
+      "order": 1,
+      "title": "Primaria casi sin cambio",
+      "text": "Primaria recibe $717.441 millones (−0,6% real); Inicial cambia −0,3% real frente al ampliado 2026.",
+      "kind": "largest",
+      "figures": [
+        {
+          "value": 717441316203,
+          "path": "data/budget/2027/areas/55.json#/programs/25/project2027"
+        },
+        {
+          "value": 717441316203,
+          "path": "data/budget/2027/areas/55.json#/programs/25/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/55.json#/deflator/factor"
+        },
+        {
+          "value": 611605824054,
+          "path": "data/budget/2027/areas/55.json#/programs/25/current2026"
+        },
+        {
+          "value": 300173981533,
+          "path": "data/budget/2027/areas/55.json#/programs/24/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/55.json#/deflator/factor"
+        },
+        {
+          "value": 255092552882,
+          "path": "data/budget/2027/areas/55.json#/programs/24/current2026"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            717441316203,
+            1.18,
+            611605824054
+          ],
+          "value": -0.58938428738875
+        },
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            300173981533,
+            1.18,
+            255092552882
+          ],
+          "value": -0.27747684567472897
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "55 - Ministerio de Educación.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/55.json#/programs/25/project2027",
+        "data/budget/2027/areas/55.json#/programs/25/project2027",
+        "data/budget/2027/areas/55.json#/deflator/factor",
+        "data/budget/2027/areas/55.json#/programs/25/current2026",
+        "data/budget/2027/areas/55.json#/programs/24/project2027",
+        "data/budget/2027/areas/55.json#/deflator/factor",
+        "data/budget/2027/areas/55.json#/programs/24/current2026"
+      ],
+      "movements": []
+    },
+    {
+      "area": "55",
+      "order": 2,
+      "title": "Fondos para escuelas privadas",
+      "text": "Se prevén $635.109 millones para escuelas privadas; es el aporte a esas instituciones, separado de los gastos administrativos del programa.",
+      "kind": "transfers",
+      "figures": [
+        {
+          "value": 635108553977,
+          "path": "data/budget/2027/areas/55.json#/programs/2/principals/12/value"
+        }
+      ],
+      "calculations": [],
+      "comparisonBase": "current2026",
+      "references": [
+        "55 - Ministerio de Educación.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/55.json#/programs/2/principals/12/value"
+      ],
+      "movements": []
+    },
+    {
+      "area": "55",
+      "order": 3,
+      "title": "Comedores y servicios escolares",
+      "text": "Asistencia Alimentaria: $438.359 millones (−18% real), con 270.509 becas; Servicios a las Escuelas suma $113.928 millones, sin continuidad confirmada.",
+      "kind": "program",
+      "figures": [
+        {
+          "value": 438359406116,
+          "path": "data/budget/2027/areas/55.json#/programs/3/project2027"
+        },
+        {
+          "value": 438359406116,
+          "path": "data/budget/2027/areas/55.json#/programs/3/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/55.json#/deflator/factor"
+        },
+        {
+          "value": 451047099661,
+          "path": "data/budget/2027/areas/55.json#/programs/3/current2026"
+        },
+        {
+          "value": 270509,
+          "path": "data/budget/2027/areas/55.json#/programs/3/targets/0/officialText",
+          "extract": "270.509"
+        },
+        {
+          "value": 113927760666,
+          "path": "data/budget/2027/areas/55.json#/programs/4/project2027"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            438359406116,
+            1.18,
+            451047099661
+          ],
+          "value": -17.638086485555426
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "55 - Ministerio de Educación.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/55.json#/programs/3/project2027",
+        "data/budget/2027/areas/55.json#/programs/3/project2027",
+        "data/budget/2027/areas/55.json#/deflator/factor",
+        "data/budget/2027/areas/55.json#/programs/3/current2026",
+        "data/budget/2027/areas/55.json#/programs/3/targets/0/officialText",
+        "data/budget/2027/areas/55.json#/programs/4/project2027"
+      ],
+      "movements": []
+    },
+    {
+      "area": "55",
+      "order": 4,
+      "title": "Presupuesto para edificios escolares",
+      "text": "Mejora y Cuidado de Edificios Escolares recibe $390.262 millones en 2027; su comparación funcional con 2026 sigue por verificar.",
+      "kind": "works",
+      "figures": [
+        {
+          "value": 390261822463,
+          "path": "data/budget/2027/areas/55.json#/programs/1/project2027"
+        }
+      ],
+      "calculations": [],
+      "comparisonBase": "current2026",
+      "references": [
+        "55 - Ministerio de Educación.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/55.json#/programs/1/project2027"
+      ],
+      "movements": []
+    },
+    {
+      "area": "55",
+      "order": 5,
+      "title": "Los cargos docentes quedan fuera",
+      "text": "El cuadro de 6.020 cargos excluye al personal docente; no representa la planta completa de las escuelas.",
+      "kind": "coverage",
+      "figures": [
+        {
+          "value": 6020,
+          "path": "data/budget/2027/areas/55.json#/positions/value"
+        }
+      ],
+      "calculations": [],
+      "comparisonBase": "current2026",
+      "references": [
+        "55 - Ministerio de Educación.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/55.json#/positions/value"
+      ],
+      "movements": []
+    },
+    {
+      "area": "45",
+      "order": 1,
+      "title": "Comedores comunitarios en baja",
+      "text": "Grupos comunitarios: $371.389 millones (−11% real); presupuesto dividido por la meta diaria y 365 días: ≈ $8.140 por persona, sin ser un beneficio individual.",
+      "kind": "largest",
+      "figures": [
+        {
+          "value": 371389209958,
+          "path": "data/budget/2027/areas/45.json#/programs/4/project2027"
+        },
+        {
+          "value": 125000,
+          "path": "data/budget/2027/areas/45.json#/programs/4/targets/0/officialText",
+          "extract": "125.000"
+        },
+        {
+          "value": 371389209958,
+          "path": "data/budget/2027/areas/45.json#/programs/4/project2027"
+        },
+        {
+          "value": 371389209958,
+          "path": "data/budget/2027/areas/45.json#/programs/4/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/45.json#/deflator/factor"
+        },
+        {
+          "value": 352106684039,
+          "path": "data/budget/2027/areas/45.json#/programs/4/current2026"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Presupuesto por persona y día",
+          "op": "divide",
+          "inputs": [
+            371389209958,
+            125000,
+            365
+          ],
+          "value": 8140.037478531507
+        },
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            371389209958,
+            1.18,
+            352106684039
+          ],
+          "value": -10.613279191935533
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "45 - Ministerio de Desarrollo Humano y Hábitat.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/45.json#/programs/4/project2027",
+        "data/budget/2027/areas/45.json#/programs/4/targets/0/officialText",
+        "data/budget/2027/areas/45.json#/programs/4/project2027",
+        "data/budget/2027/areas/45.json#/programs/4/project2027",
+        "data/budget/2027/areas/45.json#/deflator/factor",
+        "data/budget/2027/areas/45.json#/programs/4/current2026"
+      ],
+      "movements": []
+    },
+    {
+      "area": "45",
+      "order": 2,
+      "title": "Aumenta la atención en calle",
+      "text": "Asistencia Integral a los Sin Techo: $112.340 millones (+87% real); ≈ $1,6 millones por persona prevista al mes; no es un pago individual.",
+      "kind": "program",
+      "figures": [
+        {
+          "value": 112340388888,
+          "path": "data/budget/2027/areas/45.json#/programs/13/project2027"
+        },
+        {
+          "value": 5900,
+          "path": "data/budget/2027/areas/45.json#/programs/13/targets/0/officialText",
+          "extract": "5.900"
+        },
+        {
+          "value": 112340388888,
+          "path": "data/budget/2027/areas/45.json#/programs/13/project2027"
+        },
+        {
+          "value": 112340388888,
+          "path": "data/budget/2027/areas/45.json#/programs/13/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/45.json#/deflator/factor"
+        },
+        {
+          "value": 51025129918,
+          "path": "data/budget/2027/areas/45.json#/programs/13/current2026"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Presupuesto por plaza y mes",
+          "op": "divide",
+          "inputs": [
+            112340388888,
+            5900,
+            12
+          ],
+          "value": 1586728.6566101694
+        },
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            112340388888,
+            1.18,
+            51025129918
+          ],
+          "value": 86.58202252420999
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "45 - Ministerio de Desarrollo Humano y Hábitat.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/45.json#/programs/13/project2027",
+        "data/budget/2027/areas/45.json#/programs/13/targets/0/officialText",
+        "data/budget/2027/areas/45.json#/programs/13/project2027",
+        "data/budget/2027/areas/45.json#/programs/13/project2027",
+        "data/budget/2027/areas/45.json#/deflator/factor",
+        "data/budget/2027/areas/45.json#/programs/13/current2026"
+      ],
+      "movements": []
+    },
+    {
+      "area": "45",
+      "order": 3,
+      "title": "Ciudadanía Porteña recibe más",
+      "text": "Ciudadanía Porteña: $164.841 millones (+13% real); presupuesto dividido por 54.500 hogares y 12 meses: ≈ $252.051 mensuales, sin equivaler al beneficio cobrado.",
+      "kind": "program",
+      "figures": [
+        {
+          "value": 164841221079,
+          "path": "data/budget/2027/areas/45.json#/programs/3/project2027"
+        },
+        {
+          "value": 54500,
+          "path": "data/budget/2027/areas/45.json#/programs/3/targets/0/officialText",
+          "extract": "54.500"
+        },
+        {
+          "value": 164841221079,
+          "path": "data/budget/2027/areas/45.json#/programs/3/project2027"
+        },
+        {
+          "value": 164841221079,
+          "path": "data/budget/2027/areas/45.json#/programs/3/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/45.json#/deflator/factor"
+        },
+        {
+          "value": 123186237431,
+          "path": "data/budget/2027/areas/45.json#/programs/3/current2026"
+        },
+        {
+          "value": 54500,
+          "path": "data/budget/2027/areas/45.json#/programs/3/targets/0/officialText",
+          "extract": "54.500"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Presupuesto por hogar y mes",
+          "op": "divide",
+          "inputs": [
+            164841221079,
+            54500,
+            12
+          ],
+          "value": 252050.79675688074
+        },
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            164841221079,
+            1.18,
+            123186237431
+          ],
+          "value": 13.40223792872699
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "45 - Ministerio de Desarrollo Humano y Hábitat.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/45.json#/programs/3/project2027",
+        "data/budget/2027/areas/45.json#/programs/3/targets/0/officialText",
+        "data/budget/2027/areas/45.json#/programs/3/project2027",
+        "data/budget/2027/areas/45.json#/programs/3/project2027",
+        "data/budget/2027/areas/45.json#/deflator/factor",
+        "data/budget/2027/areas/45.json#/programs/3/current2026",
+        "data/budget/2027/areas/45.json#/programs/3/targets/0/officialText"
+      ],
+      "movements": []
+    },
+    {
+      "area": "45",
+      "order": 4,
+      "title": "Obras con una baja real",
+      "text": "Infraestructura Social propone $7.768 millones, −28% real frente al ampliado 2026 para intervenciones en edificios del Ministerio.",
+      "kind": "works",
+      "figures": [
+        {
+          "value": 7767926564,
+          "path": "data/budget/2027/areas/45.json#/programs/9/project2027"
+        },
+        {
+          "value": 7767926564,
+          "path": "data/budget/2027/areas/45.json#/programs/9/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/45.json#/deflator/factor"
+        },
+        {
+          "value": 9154655092,
+          "path": "data/budget/2027/areas/45.json#/programs/9/current2026"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            7767926564,
+            1.18,
+            9154655092
+          ],
+          "value": -28.09135300671225
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "45 - Ministerio de Desarrollo Humano y Hábitat.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/45.json#/programs/9/project2027",
+        "data/budget/2027/areas/45.json#/programs/9/project2027",
+        "data/budget/2027/areas/45.json#/deflator/factor",
+        "data/budget/2027/areas/45.json#/programs/9/current2026"
+      ],
+      "movements": []
+    },
+    {
+      "area": "45",
+      "order": 5,
+      "title": "Programas laborales, por separado",
+      "text": "Economía Social propone $684 millones e Intermediación Laboral $17.694 millones; los nombres no prueban un traspaso de recursos entre ambos.",
+      "kind": "program",
+      "figures": [
+        {
+          "value": 684439856,
+          "path": "data/budget/2027/areas/45.json#/programs/18/project2027"
+        },
+        {
+          "value": 17693540724,
+          "path": "data/budget/2027/areas/45.json#/programs/17/project2027"
+        }
+      ],
+      "calculations": [],
+      "comparisonBase": "current2026",
+      "references": [
+        "45 - Ministerio de Desarrollo Humano y Hábitat.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/45.json#/programs/18/project2027",
+        "data/budget/2027/areas/45.json#/programs/17/project2027"
+      ],
+      "movements": []
+    },
+    {
+      "area": "31",
+      "order": 1,
+      "title": "El Subte reúne casi la mitad",
+      "text": "Subterráneos de Buenos Aires (SBASE) recibe $967.863 millones (+6,3% real), el 49% del área.",
+      "kind": "largest",
+      "figures": [
+        {
+          "value": 967862518433,
+          "path": "data/budget/2027/areas/31.json#/programs/8/project2027"
+        },
+        {
+          "value": 967862518433,
+          "path": "data/budget/2027/areas/31.json#/programs/8/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/31.json#/deflator/factor"
+        },
+        {
+          "value": 771552839316,
+          "path": "data/budget/2027/areas/31.json#/programs/8/current2026"
+        },
+        {
+          "value": 967862518433,
+          "path": "data/budget/2027/areas/31.json#/programs/8/project2027"
+        },
+        {
+          "value": 1977474831688,
+          "path": "data/budget/2027/areas/31.json#/stages/project2027"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            967862518433,
+            1.18,
+            771552839316
+          ],
+          "value": 6.3080104760487865
+        },
+        {
+          "name": "Participación",
+          "op": "share",
+          "inputs": [
+            967862518433,
+            1977474831688
+          ],
+          "value": 48.94436596226204
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "31 - Ministerio de Movilidad e Infraestructura.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/31.json#/programs/8/project2027",
+        "data/budget/2027/areas/31.json#/programs/8/project2027",
+        "data/budget/2027/areas/31.json#/deflator/factor",
+        "data/budget/2027/areas/31.json#/programs/8/current2026",
+        "data/budget/2027/areas/31.json#/programs/8/project2027",
+        "data/budget/2027/areas/31.json#/stages/project2027"
+      ],
+      "movements": []
+    },
+    {
+      "area": "31",
+      "order": 2,
+      "title": "La Línea F baja",
+      "text": "Desarrollos y Proyectos, que incluye la Línea F, propone $368.930 millones: −30% real frente al ampliado 2026.",
+      "kind": "program",
+      "figures": [
+        {
+          "value": 368930498582,
+          "path": "data/budget/2027/areas/31.json#/programs/7/project2027"
+        },
+        {
+          "value": 368930498582,
+          "path": "data/budget/2027/areas/31.json#/programs/7/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/31.json#/deflator/factor"
+        },
+        {
+          "value": 446333194274,
+          "path": "data/budget/2027/areas/31.json#/programs/7/current2026"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            368930498582,
+            1.18,
+            446333194274
+          ],
+          "value": -29.9507702068726
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "31 - Ministerio de Movilidad e Infraestructura.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/31.json#/programs/7/project2027",
+        "data/budget/2027/areas/31.json#/programs/7/project2027",
+        "data/budget/2027/areas/31.json#/deflator/factor",
+        "data/budget/2027/areas/31.json#/programs/7/current2026"
+      ],
+      "movements": []
+    },
+    {
+      "area": "31",
+      "order": 3,
+      "title": "Menos para riesgo hídrico",
+      "text": "Riesgo hídrico propone $14.155 millones, −42% real; la emergencia hídrica se tramita en un proyecto separado.",
+      "kind": "program",
+      "figures": [
+        {
+          "value": 14155481603,
+          "path": "data/budget/2027/areas/31.json#/programs/2/project2027"
+        },
+        {
+          "value": 14155481603,
+          "path": "data/budget/2027/areas/31.json#/programs/2/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/31.json#/deflator/factor"
+        },
+        {
+          "value": 20847989007,
+          "path": "data/budget/2027/areas/31.json#/programs/2/current2026"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            14155481603,
+            1.18,
+            20847989007
+          ],
+          "value": -42.458858521212186
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "31 - Ministerio de Movilidad e Infraestructura.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/31.json#/programs/2/project2027",
+        "data/budget/2027/areas/31.json#/programs/2/project2027",
+        "data/budget/2027/areas/31.json#/deflator/factor",
+        "data/budget/2027/areas/31.json#/programs/2/current2026"
+      ],
+      "movements": []
+    },
+    {
+      "area": "31",
+      "order": 4,
+      "title": "Subsidios para el transporte",
+      "text": "El convenio de subsidios al transporte recibe $328.217 millones, −2,1% real frente al presupuesto ampliado 2026.",
+      "kind": "transfers",
+      "figures": [
+        {
+          "value": 328217047247,
+          "path": "data/budget/2027/areas/31.json#/programs/12/project2027"
+        },
+        {
+          "value": 328217047247,
+          "path": "data/budget/2027/areas/31.json#/programs/12/project2027"
+        },
+        {
+          "value": 1.18,
+          "path": "data/budget/2027/areas/31.json#/deflator/factor"
+        },
+        {
+          "value": 284185988764,
+          "path": "data/budget/2027/areas/31.json#/programs/12/current2026"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Cambio real",
+          "op": "rate",
+          "inputs": [
+            328217047247,
+            1.18,
+            284185988764
+          ],
+          "value": -2.123943108673809
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "31 - Ministerio de Movilidad e Infraestructura.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/31.json#/programs/12/project2027",
+        "data/budget/2027/areas/31.json#/programs/12/project2027",
+        "data/budget/2027/areas/31.json#/deflator/factor",
+        "data/budget/2027/areas/31.json#/programs/12/current2026"
+      ],
+      "movements": []
+    },
+    {
+      "area": "31",
+      "order": 5,
+      "title": "Parte se financiaría con deuda",
+      "text": "El 35% del área, $699.111 millones, se cubriría con financiamiento externo; no es gasto adicional.",
+      "kind": "financing",
+      "figures": [
+        {
+          "value": 699110799657,
+          "path": "data/budget/2027/areas/31.json#/financing/5/value"
+        },
+        {
+          "value": 1977474831688,
+          "path": "data/budget/2027/areas/31.json#/stages/project2027"
+        }
+      ],
+      "calculations": [
+        {
+          "name": "Financiación externa",
+          "op": "share",
+          "inputs": [
+            699110799657,
+            1977474831688
+          ],
+          "value": 35.3537141638475
+        }
+      ],
+      "comparisonBase": "current2026",
+      "references": [
+        "31 - Ministerio de Movilidad e Infraestructura.pdf · cuadros de programas y partidas.",
+        "Ejecución oficial al 30/06/2026.",
+        "data/budget/2027/areas/31.json#/financing/5/value",
+        "data/budget/2027/areas/31.json#/stages/project2027"
+      ],
+      "movements": []
+    }
+  ],
+  "inputs": [
+    {
+      "file": "data/budget/2027/principals.json",
+      "sha256": "77d1415c0704318f7f468335659dc02e13aebc2f3f2ef6ae30c137735a3d48b4"
+    },
+    {
+      "file": "data/budget/2027/area-reports.json",
+      "sha256": "d23f1c8df7aecbe6bc63a10f082b6f3caeccbfba35bded226c894be8b16e6260"
+    },
+    {
+      "file": "data/budget/2027/areas/40.json",
+      "sha256": "8b398d3f4332d406faf67eaf29a79c8392b90ea3fd5ef2c1f3bd6637331b507d"
+    },
+    {
+      "file": "data/budget/2027/areas/29.json",
+      "sha256": "e6448c081150e73792afc0bb624aaff6894776b903ec11adae875a7060ef2125"
+    },
+    {
+      "file": "data/budget/2027/areas/55.json",
+      "sha256": "8e62861df7b29952902b4a5c717250f482c9eb2e6683c283741c8041c4cf0121"
+    },
+    {
+      "file": "data/budget/2027/areas/45.json",
+      "sha256": "499df2625a17bcb71133f58bd69847dace5dadb0212aa16d1cb893dcef0907d9"
+    },
+    {
+      "file": "data/budget/2027/areas/31.json",
+      "sha256": "0979433f955245638f3246ecf0652c202d7cd411ed54d2ce5d51d41092a42c5f"
+    }
+  ]
+}

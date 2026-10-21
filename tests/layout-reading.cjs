@@ -17,7 +17,7 @@ module.exports=async({page,base})=>{
   assert.equal(await page.locator('.government-areas').evaluate(n=>[...n.children].filter(c=>c.tagName!=='DIALOG'&&!c.hidden).at(-1).id),'budget-depth');
   assert(await page.locator('#budget-depth').evaluate(n=>!!(document.getElementById('gov-directory-results').compareDocumentPosition(n)&Node.DOCUMENT_POSITION_FOLLOWING)));
   assert(await page.locator('.gov-directory-tools').evaluate(n=>!!(n.compareDocumentPosition(document.querySelector('.gov-cards'))&Node.DOCUMENT_POSITION_FOLLOWING)));
-  assert.match(await page.locator('.gov-directory-total').innerText(),/22 jurisdicciones/);assert.match(await page.locator('.gov-directory-total').innerText(),/24,09/);await contrast('areas '+theme+' '+width);await capture(`areas-top-${theme}-${width}`);
+  assert.match(await page.locator('.gov-directory-total').innerText(),/22 áreas de gobierno/);assert.match(await page.locator('.gov-directory-total').innerText(),/24,09/);await contrast('areas '+theme+' '+width);await capture(`areas-top-${theme}-${width}`);
   await page.locator('#gov-directory-sort').selectOption('amplification');await ready();assert.equal(await page.locator('.gov-cards>.gov-card').count(),22);assert.match(await page.locator('.gov-card-change').first().innerText(),/durante 2026/);assert.match(await page.locator('.gov-directory-total').innerText(),/24,09/);
   await page.evaluate(()=>{const n=document.getElementById('budget-depth');window.scrollTo(0,scrollY+n.getBoundingClientRect().top-280);});await capture(`areas-end-${theme}-${width}`);
   for(const view of ['execution','structure','services','transfers','debt','support','positions']){
