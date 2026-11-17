@@ -24,9 +24,9 @@ main [id^="page-"],#budget-depth{scroll-margin-top:150px}
 @media(max-width:650px){.history-chart-scroll .project-history-marker,.history-chart-scroll [data-execution-year="2026"] circle{stroke-width:2}}
 /* The three execution tabs fit without a horizontal gesture on small screens. */
 @media(max-width:650px){
-  #explorer-controls>.mobile-explorer:has(.tabs [data-view="income"]) .compact-period{flex-basis:100%;max-width:none;margin-bottom:6px}
-  #explorer-controls>.mobile-explorer:has(.tabs [data-view="income"])>.controls{flex-basis:100%;padding:0}
-  #explorer-controls .mobile-explorer .controls:has(.tabs [data-view="income"])::after{display:none}
-  #explorer-controls .mobile-explorer .tabs:has(>[data-view="income"]){display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;overflow:visible;padding:0}
-  #explorer-controls .mobile-explorer .tabs:has(>[data-view="income"])>button{min-width:0;padding-inline:5px;white-space:normal}
+  #explorer-controls>.mobile-explorer:has(.tabs:not([hidden]) [data-view="income"]) .compact-period{flex-basis:100%;max-width:none;margin-bottom:6px}
+  #explorer-controls>.mobile-explorer:has(.tabs:not([hidden]) [data-view="income"])>.controls{flex-basis:100%;padding:0}
+  #explorer-controls .mobile-explorer .controls:has(.tabs:not([hidden]) [data-view="income"])::after{display:none}
+  #explorer-controls .mobile-explorer .tabs:not([hidden]):has(>[data-view="income"]){display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;overflow:visible;padding:0}
+  #explorer-controls .mobile-explorer .tabs:not([hidden]):has(>[data-view="income"])>button{min-width:0;padding-inline:5px;white-space:normal}
 }

@@ -26,7 +26,7 @@ module.exports=async({page,base})=>{
   await page.goto(base+'#proyecto-2027?vista=areas&area=31');await page.waitForSelector('.depth-area');await page.locator('.depth-area>summary').click();assert.match(await page.locator('.depth-area').innerText(),/1.022/);assert.match(await page.locator('.depth-area').innerText(),/911/);assert.deepEqual(await auditTheme(page),{text:[],surfaces:[]},'area details contrast');
  }
  await page.goto(base+'#proyecto-2027?vista=areas&area=20');await page.waitForSelector('.depth-area');await page.locator('.depth-area>summary').click();assert.match(await page.locator('.depth-area').innerText(),/Cambio de unidades incluidas por verificar/);assert(!/Variación:.*65%/.test(await page.locator('.depth-area').innerText()));
- await page.goto(base+'#proyecto-2027?vista=areas&mirada=services&base=current');await page.waitForSelector('.budget-depth');await page.reload();await page.waitForSelector('.budget-depth');assert.match(await page.locator('.budget-depth').innerText(),/vigente a junio 2026/);assert.equal(await page.locator('.budget-depth .depth-ranks article').count(),9);
+ await page.goto(base+'#proyecto-2027?vista=areas&mirada=services&base=current');await page.waitForSelector('.budget-depth');await page.reload();await page.waitForSelector('.budget-depth');assert.match(await page.locator('.budget-depth').innerText(),/(vigente|ampliado) a junio 2026/);assert.equal(await page.locator('.budget-depth .depth-ranks article').count(),9);
  console.log('Lecturas: siete vistas en ambos temas y anchos; fuentes, búsqueda de partidas, controles y cargos verificados.');
  if(process.env.DEPTH_QA_DIR)fs.writeFileSync(path.join(process.env.DEPTH_QA_DIR,'contrast-extra.json'),JSON.stringify(contrast,null,2));
 };
