@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
+import {advanceHomeReading} from './advance-home-reading.mjs';
 
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const compact=new Set(['data/history/execution-history.json','data/provinces/comparisons-argentina.json','data/execution/approved-vs-executed.json']);
@@ -108,17 +109,8 @@ approved.periods.unshift({period:'2026-3',year:2026,quarter:3,initial:a.fiscalTo
 write(ap,approved);
 
 // A comparable 4th quarter scenario using the same method as the former H2 estimate.
-const home='data/home-highlights-2027.json', cards=read(home), k=cards.cards[1], f=a.fiscal;
-const incomeFactor=f.income/f.previousIncome, priorQ4=k.annual2025.financialResult-f.previousFinancialResult;
-const result=f.financialResult+priorQ4*incomeFactor;
-const annualIncome=k.annual2025.income*incomeFactor;
-k.text='2025 cerró con déficit. A septiembre de 2026 hubo superávit, aunque quedó una parte menor de los ingresos.';
-k.advance2026={...f,period:'2026-3',source:reference};
-k.scenarios.closing2026={result,income:annualIncome,ratio:result/annualIncome*100,
- priorQ4,incomeFactor,formula:'Saldo enero–septiembre 2026 + saldo octubre–diciembre 2025 × (ingresos enero–septiembre 2026 / 2025)',
- incomeFormula:'Ingresos anuales 2025 × razón de ingresos de enero a septiembre (2026 / 2025)',
- assumption:'Repite el saldo del último trimestre de 2025, escalado por el crecimiento de los ingresos. Estimación del sitio.',
- sources:[Q,'data/fiscal-results/caif.json:periods.2025-4']};
+const home='data/home-highlights-2027.json', cards=read(home);
+advanceHomeReading(cards.cards[1],a);
 const capital=c.groups.economic.find(r=>r.id==='capital'), hcap=h.series.capital.rows.find(r=>r.year===2026);
 cards.cards[0].text=cards.cards[0].text.replace(/La inversión baja [\d,]+% real frente al (?:ampliado|vigente) 2026\./,
  'La inversión baja '+new Intl.NumberFormat('es-AR',{maximumFractionDigits:1}).format(Math.abs(capital.realVariationPct))+'% real frente al vigente 2026.');

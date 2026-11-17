@@ -46,7 +46,7 @@ projectKeyReadings=function(){
  const t=document.createElement('template');t.innerHTML=reviewKeyReadings();const card=t.content.querySelector('article'),r=reviewComparisonRows('purposes').find(r=>/deuda/i.test(r.name));
  card.querySelector('h3').innerHTML=`${variationLabel((r.b/r.a-1)*100)} frente al ${state.projectBase==='current'?'ampliado':'votado'} 2026`;
  const absorbed=state.project.summary.interest.value/state.project.summary.primaryResult.value*100,interestBase=state.reviewBudget.rows.filter(r=>r.fiscal&&r.codes.at(-1)==='21410000').reduce((sum,r)=>sum+r[state.projectBase==='current'?'v':'s'],0),interestChange=(state.project.summary.interest.value/state.projectComparison.deflator.factor/interestBase-1)*100;
- card.querySelector('p:not(.eyebrow)').innerHTML=`Intereses de la deuda: consumirían el <b data-precise-share="${absorbed}">${fmt(absorbed,1)}%</b> del saldo primario previsto. ${state.projectBase!=='current'?`Frente a lo votado en 2026: <b>${signedPct(interestChange)} real</b>.`:''}`;
+ card.querySelector('p:not(.eyebrow)').innerHTML=`Intereses de la deuda${state.projectBase!=='current'?`: <b>${signedPct(interestChange)} real frente al votado 2026</b>.` : '.'} Absorberían el <b data-precise-share="${absorbed}">${fmt(absorbed,1)}%</b> del saldo primario.`;
  return t.innerHTML;
 };
 function scenarioPercent(v){return `<span data-scenario-pct="${v}">${signedPct(v)}</span>`;}
