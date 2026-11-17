@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-17 · Avance 2026, enero a septiembre
+
+- Nuevo corte inicial de Avance 2026: saldo, deuda, gastos e ingresos al 30/09. Se conserva el enlace al corte de junio.
+- Se incorpora el informe de Contaduría (Exp. 3561/2026) con páginas por fila. Los gastos se exploran por finalidad/función, área/unidad/programa, inciso/partida, carácter económico y ubicación.
+- Comparaciones enero–septiembre contra el mismo período de 2025, ajustadas con el promedio observado del IPCBA. Presupuestos anuales 2027/2026 conservan el ajuste promedio anual de la versión publicada.
+- Septiembre actualiza las bases agregadas de Proyecto 2027, las fichas de Áreas, Comparar CABA y los puntos de gasto total, capital e ingresos en Evolución. Las vistas que necesitan el detalle cruzado o el código exacto de intereses distinguen el corte de junio.
+- Inicio muestra el saldo observado de 2026. El escenario de cierre se recalcula con el cuarto trimestre de 2025 y se identifica como estimación.
+- Menos texto repetido en tarjetas y gráficos. Las fórmulas y supuestos quedan en Fuentes y metodología.
+
 ## 2026-11-17 · Inflación promedio anual
 
 - Por pedido del dueño, todas las comparaciones a precios constantes usan la inflación promedio anual del IPCBA (promedio contra promedio). 2014–2025 ya la usaban y no cambian. 2026 pasa a 32,3% estimado (IPCBA observado hasta octubre) y 2027 a 21,3% estimado; antes se derivaban de supuestos diciembre/diciembre de 30% y 18% (32,2% y 21,4%).

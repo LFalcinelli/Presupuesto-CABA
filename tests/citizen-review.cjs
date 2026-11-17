@@ -1,11 +1,12 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 module.exports=async function({page,base}){
- const root=path.join(__dirname,'..'),load=p=>JSON.parse(fs.readFileSync(path.join(root,p))),stages=load('data/budget/2027/stages.json'),comparison=load('data/budget/2027/comparison-2026.json'),budget=load('data/budget/2026/2026-2.json'),income=load('data/revenue/income-2026-2.json');
+ const root=path.join(__dirname,'..'),load=p=>JSON.parse(fs.readFileSync(path.join(root,p))),stages=load('data/budget/2027/stages.json'),comparison=load('data/budget/2027/comparison-2026.json'),budget=load('data/budget/2026/2026-3.json'),income=load('data/revenue/income-2026-3.json');
  const expected=(key,r,base)=>{
   if(base==='current')return r.reference;
   if(['purposes','objects'].includes(key))return stages.groups[key].find(s=>s.name===r.name).initial;
   if(['revenue','taxRevenue'].includes(key))return income.rows.find(s=>s.codes.join('.')===r.referenceCode).s;
-  const dim={functions:7,jurisdictions:1,economic:9}[key];return budget.rows.filter(s=>s.fiscal&&(key==='economic'?s.codes[9].startsWith(r.id==='current'?'21':'22'):key==='jurisdictions'?s.codes[1]===r.jurisdictionCode:s.codes[7]===r.id)).reduce((sum,s)=>sum+s.s,0);
+  const norm=s=>s.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+  return budget.groups[key].filter(s=>key==='economic'?s.codes[0].startsWith(r.id==='current'?'21':'22'):key==='jurisdictions'?s.codes[0]===r.jurisdictionCode:norm(s.name)===norm(r.name)).reduce((sum,s)=>sum+s.s,0);
  };
  const ready=()=>page.waitForFunction(()=>document.querySelector('#content')?.getAttribute('aria-busy')==='false');
  for(const width of [1440,375]){

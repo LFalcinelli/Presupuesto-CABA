@@ -2,7 +2,7 @@
 function governmentRealChange(row,base=governmentBasis()){
  return row[base]>0?100*(row.project2027/state.areaReports.deflator.factor/row[base]-1):null;
 }
-function governmentBaseName(){return state.governmentBase==='current'?'ampliado':'votado';}
+function governmentBaseName(cut='junio'){return state.governmentBase==='current'?'vigente a '+cut:'votado';}
 function governmentObjectGroup(area,codes){
  const rows=area.objects.filter(o=>codes.includes(o.code));
  return Object.fromEntries(['project2027','initial2026','current2026','executed2026'].map(s=>[s,rows.reduce((n,o)=>n+(o[s]||0),0)]));

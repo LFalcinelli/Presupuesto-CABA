@@ -1,0 +1,229 @@
+códigos,rubro,página,votado,vigente,realizado
+1,RECURSOS CORRIENTES,5,17348458144970.00,19875356180473.00,12665309523328.10
+1.11,Ingresos Tributarios,5,14196627270606.00,15791387269499.00,10167499193279.20
+1.11.2,Sobre el Patrimonio,5,1699443181662.00,1761941216046.00,1285880172253.03
+1.11.2.3,Inmuebles,5,1101560928757.00,1146137355092.00,813874594705.80
+1.11.2.3.1,Impuesto Inmobiliario,5,487293683252.00,507097766472.00,311262374307.40
+1.11.2.3.2,"Tasa ret. de Alumbrado, Barrido y Limpieza, Conserv. y Mant. de Sumideros",5,593457894849.00,617546428947.00,487036142166.03
+1.11.2.3.5,Contribucion Ley N° 23.514 s/Impuesto Inmobiliario,5,20794141356.00,21477622069.00,15563098243.63
+1.11.2.3.6,Contribucion de Mejoras Ley N° 23.514,5,15209300.00,15537604.00,12979988.74
+1.11.2.4,Vehiculos,5,597882252905.00,615803860954.00,472005577547.23
+1.11.2.4.1,Patentes sobre vehiculos en general,5,513165452429.00,528529158239.00,404573378414.47
+1.11.2.4.2,Contribucion Ley N° 23.514 Patentes de Vehículos,5,51316545243.00,52945782338.00,42950483778.20
+1.11.2.4.3,Patentes sobre vehículsos en general - Ley 4472 - Fondo SUBTE,5,33400255233.00,34328920377.00,24481715354.56
+1.11.3,"Sobre la produccion, el consumo y las transacciones",5,10892741567760.00,12205980330205.00,7632976644352.54
+1.11.3.4,Consumo de Energia Electrica,5,79856303807.00,101854010821.00,65214261181.34
+1.11.3.4.1,Contribucion a cargo de las Cias. de Electricidad,5,79856303807.00,101854010821.00,65214261181.34
+1.11.3.5,Sellos,5,981346102910.00,1127797679674.00,703355473011.09
+1.11.3.5.1,Impuesto de Sellos Ley N° 874,5,843013583784.00,969640834973.00,611554040934.70
+1.11.3.5.2,Impuesto de Sellos - Ley 4472 - Fondo SUBTE,5,138332519126.00,158156844701.00,91801432076.39
+1.11.3.6,Impuesto sobre los Ingresos Brutos,5,9796992100718.00,10938684590051.00,6833054286934.55
+1.11.3.6.1,Impuestos sobre los Ingresos Brutos,5,9779306441801.00,10920895397952.00,6817226913048.80
+1.11.3.6.2,Imp. s/ los Ingresos Brutos - Ley N° 6026 Participación Cultural,5,10740268287.00,10843801469.00,9405613885.75
+1.11.3.6.4,Imp. s/los Ingresos Brutos - Ley N° 6711 - FIDeS,5,6945390630.00,6945390630.00,6421760000.00
+1.11.3.7,Contribuciones Especiales,5,34547060325.00,37644049659.00,31352623225.56
+1.11.3.7.1,Contribución Especial Ferroviaria - Ley 4472 - AUSA,5,34547060325.00,37644049659.00,31352623225.56
+1.11.5,Otros Tributos Locales,5,10225521184.00,13169089774.00,6754585714.02
+1.11.5.1,Otros Impuestos Locales,5,10225521184.00,13169089774.00,6754585714.02
+1.11.5.1.1,Contribucion por Publicidad,5,9651458691.00,12462049703.00,6492327216.79
+1.11.5.1.2,Grandes Generadores de Residuos Àridos y Húmedos,6,574062493.00,707040071.00,262258497.23
+1.11.7,Tributos de Jurisdiccion Nacional,6,1594217000000.00,1810296633474.00,1241887790959.65
+1.11.7.1,Coparticipacion Federal de Impuestos,6,1594217000000.00,1810296633474.00,1241887790959.65
+1.11.7.1.1,Regimen de Coparticipacion Federal Ley Nº 23.548,6,1594217000000.00,1217135566701.00,795791451485.38
+1.11.7.1.2,Coparticipación Federal - Ley Nº 26.075 Financiamiento Educativo,6,0.00,593161066773.00,446096339474.27
+1.12,Ingresos no Tributarios,6,368094362491.00,461836343957.00,831361714915.34
+1.12.1,Tasas,6,128942393450.00,143403751208.00,114593777987.65
+1.12.1.1,"Servicios de fiscalizacion, habilitacion o certificacion",6,128942393450.00,143403751208.00,114593777987.65
+1.12.1.1.1,Construccion Sustentable,6,45408469042.00,47607924226.00,39210292180.61
+1.12.1.1.2,Uso y Ocupacion de la Via Publica,6,3032621615.00,8807981645.00,12454891255.57
+1.12.1.1.3,"Inspeccion, registro y fiscalizacion de instalaciones",6,35468212.00,64420728.00,35327523.16
+1.12.1.1.4,Inspeccion y Verificacion de Obras,6,754876381.00,1371078015.00,1007934462.30
+1.12.1.1.5,Otorgamiento Licencias para conducir,6,10338503463.00,12846927746.00,7687902438.34
+1.12.1.1.6,Tasa de Justicia,6,305925459.00,555650808.00,421500091.02
+1.12.1.1.7,Fondo p/ estudios y control de concesiones - Aplicacion Ley N° 17.520,6,1200000.00,2179553.00,0.00
+1.12.1.1.10,Registro ascenores y conservador - AGC,6,0.00,0.00,294064914.99
+1.12.1.1.11,Registros y Certificaciones Agencia de Protección Ambiental - Ley Nº 2628,6,49908696.00,90648903.00,14021217.08
+1.12.1.1.12,Rubrica Libros Laborales,6,4503509158.00,4805400342.00,2665881920.00
+1.12.1.1.13,Tasa de Seguridad y Control de la CABA.,6,997219262.00,1811244120.00,363401840.00
+1.12.1.1.14,Registro de Verificación de Autopartes . Art. 13 Ley 3708,6,163328180.00,296652118.00,155647261.59
+1.12.1.1.15,Registro y homologación de acuerdos laborales,6,317177985.00,472634353.00,381484884.49
+1.12.1.1.18,Derecho para el Desarrollo Urbano y el Hábitat Sustentable,6,61029000206.00,61029000206.00,48431748648.21
+1.12.1.1.999,Otras tasas,6,2005185791.00,3642008445.00,1469679350.29
+1.12.2,Derechos,6,39758860015.00,47646395091.00,31110633228.01
+1.12.2.1,Derechos de Timbre,6,12599204480.00,14867249250.00,8492114939.69
+1.12.2.1.1,Derechos de Timbre rentas generales,6,10616374735.00,12527480571.00,6935474471.12
+1.12.2.1.2,Aplicacion Ordenanza N° 51.667 Dto. N° 257/98,6,399593133.00,471525858.00,422652716.00
+1.12.2.1.3,Certificado de Habilitaciòn- AGC,7,709624409.00,837367389.00,3308240.00
+1.12.2.1.4,Derechos de Timbre D.G. Higiene y Seguridad Alimentaria,7,99912449.00,117898180.00,50712710.00
+1.12.2.1.5,Derechos de Timbre D.G. Interpretación Urbanística,7,680387754.00,802867700.00,1024958802.57
+1.12.2.1.6,Derechos de Timbre transferencia titularidad taxis - Fondo Ley 3622,7,93312000.00,110109552.00,55008000.00
+1.12.2.2,Derechos de cementerio,7,5370379899.00,6162712700.00,3712744981.80
+1.12.2.2.1,Derechos de cementerio,7,5370379899.00,6162712700.00,3712744981.80
+1.12.2.3,Derechos de Abasto,7,4321339.00,5241094.00,3336506.47
+1.12.2.3.1,Derechos de Abasto,7,4321339.00,5241094.00,3336506.47
+1.12.2.4,Servicios Especiales,7,4051568639.00,4913905466.00,2884423251.70
+1.12.2.4.1,Servicios Especiales de Administracion Central,7,267998207.00,325039009.00,116775586.76
+1.12.2.4.3,Recupero Ap. y Rot Via Pùblica y Veredas - Leyes N° 5901-5902,7,3783570432.00,4588866457.00,2676138507.55
+1.12.2.4.7,Recupero de costos - Servicios Agencia de Sistemas de Información,7,0.00,0.00,78709157.39
+1.12.2.4.8,Recupero de costos - Servicios DG. Unidad Informática de Adm. Financiera,7,0.00,0.00,12800000.00
+1.12.2.5,Concesiones,7,12487948933.00,15335409863.00,11019660605.86
+1.12.2.5.999,Otras concesiones,7,12487948933.00,15335409863.00,11019660605.86
+1.12.2.9,Otros derechos,7,5245436725.00,6361876718.00,4998352942.49
+1.12.2.9.1,Derechos de uso Urbano - Visit BA,7,5245436725.00,6361876718.00,4998352942.49
+1.12.5,Alquileres,7,81705000.00,93759557.00,993477424.02
+1.12.5.1,Alquileres de inmuebles,7,81705000.00,93759557.00,993477424.02
+1.12.5.1.1,Alquileres de inmuebles,7,0.00,0.00,786188633.06
+1.12.5.1.2,Cánon locativo,7,81705000.00,93759557.00,207288790.96
+1.12.6,Multas,7,155315175607.00,220846982267.00,199427341889.62
+1.12.6.1,Multas del Tesoro,7,153444274123.00,218721468514.00,197394858633.37
+1.12.6.1.1,Multas por infracciones varias,7,153444274123.00,218721468514.00,197394468324.37
+1.12.6.1.5,Multas por Infracciones Especiales - UACFE - DGAI,7,0.00,0.00,390309.00
+1.12.6.2,Multas afectadas,7,1870901484.00,2125513753.00,2032483256.25
+1.12.6.2.1,Multas Ley N° 1472 art.29 - Codigo Contravencional,7,137740003.00,156485135.00,124045546.31
+1.12.6.2.2,Multas Ley N° 265 - Policia de Trabajo,8,1249561481.00,1419615162.00,984432944.62
+1.12.6.2.5,Multas art.14 Ley 2876 - Defensa al Consumidor y Lealtad Comercial,8,483600000.00,549413456.00,893443405.07
+1.12.6.2.8,Multas Ley N° 3341 - Fondo de Protección Ambiental,8,0.00,0.00,12640736.35
+1.12.6.2.9,Multas Ley N° 6357 - Oficina de Integridad Pública,8,0.00,0.00,17920623.90
+1.12.9,Otros ingresos no tributarios,8,43996228419.00,49845455834.00,485236484386.04
+1.12.9.1,Especificados,8,42787951013.00,48450080868.00,484979274922.13
+1.12.9.1.1,Afectaciones y devoluciones,8,5880849563.00,6748495818.00,7347237867.90
+1.12.9.1.2,"Estacionamiento - Playas, franquicias y acarreo",8,179474756.00,183996920.00,107315745.60
+1.12.9.1.3,Tarjetas de matafuegos,8,1326065503.00,1521709985.00,587422990.00
+1.12.9.1.7,Ingresos por Juicios,8,282852372.00,324583724.00,1030390302.88
+1.12.9.1.11,Diferencia de Cambio,8,0.00,557092844.00,447832444511.40
+1.12.9.1.12,Ingresos por venta de rezagos - Ley Nº 5511,8,0.00,0.00,475080394.84
+1.12.9.1.13,Depósito. por Recursos ante el Tribunal Superior,8,0.00,0.00,125291901.14
+1.12.9.1.15,Comisiones BCBA - Convenio pago haberes,8,25168586918.00,28881899074.00,18401500972.69
+1.12.9.1.16,Indemnizaciones por siniestros - Seguros,8,0.00,39557375.00,1029969282.88
+1.12.9.1.17,Amort.Bono Consenso Fiscal,8,320939848.00,320939848.00,238750536.09
+1.12.9.1.18,Aportes Patrocinio - Ley N° 6.163,8,0.00,0.00,546300000.00
+1.12.9.1.22,Estacionamiento Medido,8,8913601917.00,9138194915.00,5811784783.71
+1.12.9.1.23,Servicio de Acarreo,8,715580136.00,733610365.00,1445785633.00
+1.12.9.2,No especificados,8,1208277406.00,1395374966.00,257209463.91
+1.12.9.2.1,Ingresos no especificados,8,1208277406.00,1395374966.00,257209463.91
+1.14,Venta de Bienes y Servicios de la Administracion Publica,8,238223033499.00,277535747602.00,206409555853.26
+1.14.2,Venta de servicios,8,238223033499.00,277535747602.00,206409555853.26
+1.14.2.1,Espectaculos en sala de teatro,8,38482479748.00,40160091301.00,34961392709.60
+1.14.2.1.1,Teatro Colon,8,36206352497.00,37548149767.00,32905899138.74
+1.14.2.1.2,Complejo Teatral Ciudad de Buenos Aires,8,1647500500.00,1890568720.00,1683754949.00
+1.14.2.1.3,Centro Cultural General San Martin,8,154800000.00,177638816.00,52701220.63
+1.14.2.1.4,Centro Cultural Recoleta,9,473826751.00,543733998.00,319037401.23
+1.14.2.2,Funciones teatrales en participacion con artistas y/o sus empresarios,9,152295000.00,174764234.00,127992978.60
+1.14.2.2.2,Complejo Teatral Ciudad de Buenos Aires - Cine,9,152295000.00,174764234.00,127992978.60
+1.14.2.9,Venta de otros servicios,9,199588258751.00,237200892067.00,171320170165.06
+1.14.2.9.1,Museos,9,308722000.00,352221875.00,363730921.08
+1.14.2.9.2,Festivales de la Ciudad,9,719600000.00,820993842.00,361561356.60
+1.14.2.9.3,Turismo - Ley N° 600,9,2000052708.00,2651036559.00,2420376873.53
+1.14.2.9.4,Aportes por prestaciones medicas,9,0.00,0.00,157226419.19
+1.14.2.9.5,LS1 Radio de la Ciudad,9,4030000.00,4597839.00,2287727.00
+1.14.2.9.6,Parque de Diversiones Ciudad de Buenos Aires,9,233158605.00,266011366.00,20312146.06
+1.14.2.9.7,Complejo Golf - Velodromo,9,348685878.00,397816785.00,335992393.67
+1.14.2.9.8,Planetario de la Ciudad de Buenos Aires,9,897510500.00,1023972476.00,919419335.48
+1.14.2.9.9,BAset - Set de filmación,9,360000000.00,410725102.00,392529939.03
+1.14.2.9.10,Ingresos Parques Deportivos- Tesoro,9,1870148583.00,2133658241.00,1576177610.00
+1.14.2.9.11,Casa de la Cultura,9,3000000.00,3422709.00,8399444.50
+1.14.2.9.13,Patrimonio e Instituto Histórico,9,77215000.00,88094830.00,98110709.52
+1.14.2.9.14,Enseñanza Artística,9,12017778.00,13711120.00,0.00
+1.14.2.9.15,Música,9,41232085.00,47041812.00,17684541.25
+1.14.2.9.17,Señal de Cable Ciudad Abierta,9,4525631.00,5163306.00,0.00
+1.14.2.9.20,Fondo de Garantia Turistica. D. G. Cementerios,9,8021375821.00,9151612221.00,6940289247.14
+1.14.2.9.21,Ecoparque - Ex jardín Zoológico,9,126538665.00,144368350.00,2092082449.49
+1.14.2.9.22,Servicio de Policía Adicional,9,50951874441.00,66391766755.00,48282113330.86
+1.14.2.9.23,Prestaciones Médicas Ley 5622 - FACOEP S.E.,9,110957021885.00,130087159975.00,101246238509.87
+1.14.2.9.24,Prest. Médicas Ley 5622 - PAMI-PFIS - FACOEP S.E.,9,18705802833.00,18705802833.00,0.00
+1.14.2.9.25,Museo de Arte Moderno - MAMBA,9,340050652.00,387964829.00,184643403.49
+1.14.2.9.26,Servicio Sistema de alarmas y afines,9,1215742319.00,1387044132.00,1144646457.00
+1.14.2.9.27,Serv. PRG. Bs. As. CIUDAD BICI - Ley 6352,9,918278344.00,1047666573.00,789636925.60
+1.14.2.9.28,Servicio Auxiliar de Policía Complementaria - Ag. Tránsito Transporte,10,581299038.00,663205851.00,1552906773.00
+1.14.2.9.29,Servicio Auxiliar de Policía Complementaria - Ag. Tránsito MJYS,10,181970281.00,207610450.00,401875771.00
+1.14.2.9.31,Honorarios Registro Único Notarial de la CABA,10,0.00,0.00,674064780.92
+1.14.2.9.32,Servicios de Higiene en eventos masivos,10,0.00,0.00,450878500.07
+1.14.2.9.33,"Ingresos servicio bus eléctrico ""miniMUBE"" - eBus",10,0.00,0.00,116943120.62
+1.14.2.9.55,Servicios de capacitación y formación en Seguridad,10,702742153.00,801760673.00,768535596.81
+1.14.2.9.56,Servicios Sindicatura General de la Ciudad,10,5663551.00,6461563.00,1505882.28
+1.16,Rentas de la Propiedad,10,551579459778.00,599312946017.00,344064673483.62
+1.16.2,Intereses por depósitos,10,355187165957.00,398950803873.00,71103355970.24
+1.16.2.1,Intereses por depósitos internos,10,355187165957.00,398950803873.00,71103355970.24
+1.16.2.1.1,Intereses por depósitos internos,10,355187165957.00,398870803873.00,71004440447.67
+1.16.2.1.6,Intereses por depósitos internos - Tribunal Superior de Justicia,10,0.00,80000000.00,98915522.57
+1.16.3,Intereses por titulos y valores,10,61706841.00,61706841.00,109797131540.35
+1.16.3.1,Intereses por titulos y valores internos,10,61706841.00,61706841.00,109797131540.35
+1.16.3.1.1,Intereses por titulos y valores internos,10,61706841.00,61706841.00,48089305.48
+1.16.3.1.2,Intereses Títulos y valores Nacionales,10,0.00,0.00,109749042234.87
+1.16.4,Beneficios por inversiones empresariales,10,196330586980.00,200300435303.00,163164185973.03
+1.16.4.1,Empresas no financieras,10,0.00,0.00,14249373828.00
+1.16.4.1.1,Dividendos LOTBA SE,10,0.00,0.00,14249373828.00
+1.16.4.2,Empresas financieras,10,196330586980.00,200300435303.00,148914812145.03
+1.16.4.2.2,Dividendos Banco Ciudad - Ley 6503 - Obras nuevas,10,196330586980.00,200300435303.00,148914812145.03
+1.17,Transferencias Corrientes,10,1993934018596.00,2745283873398.00,1115974385796.70
+1.17.1,Del sector privado,10,630487017.00,766673779.00,2076889957.18
+1.17.1.1,De unidades familiares,10,0.00,0.00,1230190328.48
+1.17.1.1.1,Ley N° 52 Herencias Vacantes - Fondo Educativo Permanente,10,0.00,0.00,1230190328.48
+1.17.1.2,De instituciones privadas sin fines de lucro,10,630487017.00,766673779.00,846699628.70
+1.17.1.2.1,"Legados, donaciones y subsidios Salud",10,0.00,0.00,19720681.39
+1.17.1.2.3,Fondos carrera investigador - Ministerio de Salud,11,630487017.00,723507539.00,792875462.31
+1.17.1.2.8,Convenio Secretaría de Gobierno y Vínculo Ciudadano ACA - Licencias moto,11,0.00,43166240.00,34103485.00
+1.17.4,De instituciones publicas no financieras locales,11,160764118963.00,172016444572.00,113171222323.90
+1.17.4.1,De empresas públicas no financieras,11,160764118963.00,172016444572.00,113171222323.90
+1.17.4.1.1,Transferencia LOTBA S.E. - Lotería de la Ciudad de Bs. As.,11,145212115373.00,156464440982.00,101856289858.19
+1.17.4.1.5,Transferencia LOTBA s.E. - canon juego on line,11,15552003590.00,15552003590.00,11314932465.71
+1.17.5,Del gobierno e instituciones nacionales,11,1832539412616.00,2572352923919.00,1000560356110.94
+1.17.5.1,De la administracion nacional,11,1832539412616.00,2572352923919.00,1000560356110.94
+1.17.5.1.2,Apuestas en hipódromos y agencias,11,64983187.00,68354258.00,88386757.13
+1.17.5.1.8,Ingresos por Prestaciones a la Tercera Edad,11,1033684620.00,1087308090.00,317888900.34
+1.17.5.1.12,Fondo de Incentivo Docente Ley N° 25.053,11,0.00,0.00,32352517.99
+1.17.5.1.16,Red de Formación Docente,11,130224000.00,490741908.00,927098380.71
+1.17.5.1.17,Promoción y Evaluación de la Calidad Educativa,11,270000000.00,309835144.00,123649057.00
+1.17.5.1.20,Fondos FO.NA.VI,11,14651000000.00,16812572939.00,7816953364.14
+1.17.5.1.32,Fortalecimiento Educación Tecnologica - SED,11,430000000.00,493441155.00,72892549.50
+1.17.5.1.36,INCUCAI - Programa Federal de Procuración de Organos,11,448000000.00,521006558.00,740166083.00
+1.17.5.1.40,Plan Finalización de Estudios,11,470000000.00,539342658.00,142602000.00
+1.17.5.1.44,Plan Nacer,11,7693480000.00,8947217712.00,2242777117.19
+1.17.5.1.45,Registro Nacional de las Personas - Aplicación Ley N° 17.671,11,297832025.00,313282373.00,3500.00
+1.17.5.1.48,Convenio Superintendencia Riesgo de Trabajo - Ley N° 1.015 y complementarios,11,197739000.00,207996917.00,174637116.00
+1.17.5.1.50,Seguro Materno Infantil - Plan Nacer - Decreto N° 1044-GCBA-2008,11,946200000.00,1100393762.00,218957084.52
+1.17.5.1.51,Instituto Nacional de Formación Docente,11,80000000.00,91803006.00,57541817.00
+1.17.5.1.60,Convenio Nacional Plan Primera Infancia,11,0.00,0.00,51426977.88
+1.17.5.1.74,INCUCAI - Cofinanciamiento Trasplantes CPH - Res N° 11-INCUCAI-20,11,140000000.00,162814549.00,0.00
+1.17.5.1.80,Transf. Programa de Sustentabilidad de Servicios de Trasplantes,11,0.00,0.00,825303488.00
+1.17.5.1.83,Transferencias directas Nación a Escuelas,11,0.00,181464980.00,181464979.20
+1.17.5.1.85,Convenio Nac-GCBA Educacion - Prg. Univ. Jornada Ext o Completa,12,0.00,0.00,201786849.20
+1.17.5.1.87,"Trf. a cta. de costos, costas, acc. e ints. Exp CSJN N° 1865/2020",12,1805025964286.00,2540257438323.00,985968374853.74
+1.17.5.1.999,Otros de administración nacional,12,0.00,0.00,376092718.40
+1.17.6,De gobiernos e instituciones provinciales y municipales,12,0.00,0.00,5527332.04
+1.17.6.1,De gobiernos provinciales,12,0.00,0.00,5527332.04
+1.17.6.1.2,Convenio PG-Fiscalía Pcia. de Río Negro - Capacitación IA,12,0.00,0.00,5527332.04
+1.17.7,Del sector externo,12,0.00,147831128.00,160390072.64
+1.17.7.1,De gobiernos extranjeros,12,0.00,33774465.00,46333408.78
+1.17.7.1.14,Transferencia Convocatoria ITALIAN COUNCIL,12,0.00,33774465.00,33774465.28
+1.17.7.1.15,Trf. SITRA-ENABEL - Apoyo implementación de estrategias de Economía Circular,12,0.00,0.00,12558943.50
+1.17.7.2,De organismos internacionales,12,0.00,3131663.00,3131663.86
+1.17.7.2.26,Conv. Cons. CONEXUS-DG Antropología Urbana (Proy. Respirar RELL) - Prg Horizonte 2020 (UE),12,0.00,3131663.00,3131663.86
+1.17.7.3,Del sector privado extranjero,12,0.00,110925000.00,110925000.00
+1.17.7.3.2,Trf. Vital Strategies Inc. - Premio Silver Award BP Speed Challenge,12,0.00,110925000.00,110925000.00
+2,RECURSOS DE CAPITAL,12,2299507383.00,6696796325.00,5320349896.92
+2.21,Recursos Propios de Capital,12,0.00,0.00,2678714467.92
+2.21.1,Venta de activos,12,0.00,0.00,2678714467.92
+2.21.1.1,Venta de tierras y terrenos,12,0.00,0.00,2220581525.50
+2.21.1.1.4,Venta de tierras y terrenos Ley N° 3396 - Fondo de Renovación Urbana Ex AU3,12,0.00,0.00,2220581525.50
+2.21.1.2,Venta de edificios e instalaciones,12,0.00,0.00,458132942.42
+2.21.1.2.2,Venta de Inmuebles - Subasta Dirección General Administración de Bienes,12,0.00,0.00,26400000.00
+2.21.1.2.11,Venta de Inmuebles Ley N° 6138 - Centralidades administrativas,12,0.00,0.00,39239420.07
+2.21.1.2.13,Venta de Inmuebles Ley N° 6287 art 1° y 5° - Afectación obras,12,0.00,0.00,300830632.00
+2.21.1.2.18,Venta de Inmuelbles Ley N° 6680 - Hospitales de Niños y materno infantil,12,0.00,0.00,91662890.35
+2.22,Transferencias de Capital,12,0.00,3447181460.00,1029029131.19
+2.22.5,Del gobierno e instituciones nacionales,12,0.00,3127681460.00,895324380.00
+2.22.5.4,De otras entidades públicas nacionales,12,0.00,3127681460.00,895324380.00
+2.22.5.4.3,Convenio PFBA-GCBA - obras Playa Ferroviaria PALERMO,13,0.00,3127681460.00,895324380.00
+2.22.7,Del sector externo,13,0.00,319500000.00,133704751.19
+2.22.7.2,De organismos internacionales,13,0.00,319500000.00,133704751.19
+2.22.7.2.4,Convenio UEMI-GCBA - eBRT 2030 Ciudad de Demostración,13,0.00,319500000.00,133704751.19
+2.33,Recuperación de Préstamos de Corto Plazo,13,1944000.00,1944000.00,0.00
+2.33.1,Del sector privado,13,1944000.00,1944000.00,0.00
+2.33.1.1,Del sector privado,13,1944000.00,1944000.00,0.00
+2.33.1.1.1,PROMUDEMI - Recupero de préstamos,13,1944000.00,1944000.00,0.00
+2.34,Recuperación de Préstamos de Largo Plazo,13,2297563383.00,3247670865.00,1612606297.81
+2.34.1,Del sector privado,13,2297563383.00,3247670865.00,1612606297.81
+2.34.1.1,Del sector privado,13,2297563383.00,3247670865.00,1612606297.81
+2.34.1.1.1,Recupero de préstamos - Instituto de Vivienda de la Ciudad,13,2215814430.00,3132116407.00,1537635281.65
+2.34.1.1.7,Recupero créditos hipotecarios Ley N° 6129 - Reurb. Barrio Mugica,13,81748953.00,115554458.00,74971016.16
