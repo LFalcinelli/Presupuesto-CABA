@@ -3,19 +3,41 @@
 Requires openpyxl and xlrd. DIR contains manifest.json and the five official
 workbooks (annual, legacy, quarterNominal, quarterReal, rem). Raw files stay
 outside public/ and outside the repository. No expenditure or price data change.
+
+Sin los libros: python scripts/build-pbg-caba.py --reprice recalcula sólo 2026 y 2027
+con los priceIndexAnnual vigentes de execution-history y el crecimiento real ya guardado.
 """
 import argparse
 import hashlib
 import json
 from pathlib import Path
 
-import xlrd
-import openpyxl
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def reprice(path):
+    """Actualiza sólo los campos que dependen de los precios promedio anuales."""
+    result = json.loads(path.read_text(encoding='utf-8'))
+    history = json.loads((ROOT / 'data/history/execution-history.json').read_text(encoding='utf-8'))
+    prices = {r['year']: r['priceIndexAnnual'] for r in history['rows'] if r['year'] >= 2025}
+    a = result['assumptions']
+    rows = {r['year']: r for r in result['rows']}
+    rows[2026]['pbgNominal'] = rows[2025]['pbgNominal'] * (1 + a['growth']['2026']) * prices[2026] / prices[2025]
+    rows[2027]['pbgNominal'] = rows[2026]['pbgNominal'] * (1 + a['growth']['2027']) * prices[2027] / prices[2026]
+    a['priceIndexAnnual'] = {str(k): v for k, v in prices.items()}
+    a['priceAssumptions'] = history['priceAdjustment']['assumptions']
+    a['priceAssumptionType'] = history['priceAdjustment']['assumptionType']
+    control = a['nominalControl2026']
+    control['estimatedAnnualGrowth'] = rows[2026]['pbgNominal'] / rows[2025]['pbgNominal'] - 1
+    control['differencePoints'] = (control['estimatedAnnualGrowth'] - control['observedH1Growth']) * 100
+    result['updated'] = history['updated']
+    return result
+
+
 def build(source_dir):
+    import xlrd
+    import openpyxl
     sources = json.loads((source_dir / 'manifest.json').read_text(encoding='utf-8'))
     for source in sources.values():
         assert hashlib.sha256((source_dir / source['file']).read_bytes()).hexdigest() == source['sha256']
@@ -69,14 +91,16 @@ def build(source_dir):
     return dict(updated='2026-10-19', metric='PBG de CABA a precios básicos, pesos corrientes', unit='pesos', numerator='execution-history.series.currentPrimary.rows[].nominal (referencia; no duplicado)', sources=sources,
         link=dict(anchorYear=2004, ratio2004=link, annualRatios=ratios, minimum=min(ratios.values()), maximum=max(ratios.values()), relativeRange=spread, exceedsThreePercent=spread > .03, anchorPublished=observed[2004], anchorLegacy=old[2004]),
         quarterlyControl=dict(annual2024=observed[2024], quarterly2024=quarterly2024, quarterly2025=quarterly2025, discrepancy=discrepancy, scale=scale, note='Los trimestres se publican a tasa anualizada: su promedio reproduce el anual. Se aplica el cociente anual 2024 / suma trimestral 2024, conforme al control autorizado.'),
-        assumptions=dict(growth={'2026':g2026,'2027':g2027}, priceIndexAnnual=prices, priceAssumptions=history['priceAdjustment']['assumptions'], realGrowth2026Source=provenance('quarterReal','N4:O4 / H4:I4','sum(H1_2026) / sum(H1_2025) - 1'), realGrowth2027Source={**provenance('rem','D110','median_percent / 100'),'remMonth':'2026-09','published':'2026-10-06','scope':'PIB nacional como aproximación de CABA; pronóstico, no dato observado'}, nominalControl2026=dict(estimatedAnnualGrowth=nominalEstimated, observedH1Growth=nominalH1, differencePoints=(nominalEstimated-nominalH1)*100)), rows=rows)
+        assumptions=dict(growth={'2026':g2026,'2027':g2027}, priceIndexAnnual=prices, priceAssumptions=history['priceAdjustment']['assumptions'], priceAssumptionType=history['priceAdjustment'].get('assumptionType'), realGrowth2026Source=provenance('quarterReal','N4:O4 / H4:I4','sum(H1_2026) / sum(H1_2025) - 1'), realGrowth2027Source={**provenance('rem','D110','median_percent / 100'),'remMonth':'2026-09','published':'2026-10-06','scope':'PIB nacional como aproximación de CABA; pronóstico, no dato observado'}, nominalControl2026=dict(estimatedAnnualGrowth=nominalEstimated, observedH1Growth=nominalH1, differencePoints=(nominalEstimated-nominalH1)*100)), rows=rows)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--sources', type=Path, required=True)
+    parser.add_argument('--sources', type=Path)
+    parser.add_argument('--reprice', action='store_true')
     parser.add_argument('--output', type=Path, default=ROOT/'data/history/pbg-caba.json')
     args = parser.parse_args()
-    result = build(args.sources)
+    assert bool(args.sources) != args.reprice, 'Usar --sources DIR o --reprice.'
+    result = reprice(args.output) if args.reprice else build(args.sources)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     print(json.dumps({key:result[key] for key in ['link','quarterlyControl','assumptions']},ensure_ascii=False))

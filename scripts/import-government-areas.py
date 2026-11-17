@@ -186,10 +186,11 @@ def serial(value):
 
 
 def rates(row):
+    factor = read('data/budget/2027/area-reports.json')['deflator']['factor']
     base = row.get('current2026')
     row['nominalVariationPct'] = (row['project2027']/float(base)-1)*100 if base else None
-    row['realVariationPct'] = (row['project2027']/1.18/float(base)-1)*100 if base else None
-    row['realChangeAmount'] = row['project2027']/1.18-float(base) if base is not None else None
+    row['realVariationPct'] = (row['project2027']/factor/float(base)-1)*100 if base else None
+    row['realChangeAmount'] = row['project2027']/factor-float(base) if base is not None else None
 
 
 def people_metadata(reports):
@@ -328,8 +329,8 @@ def main():
     largest_unit = max(units, key=lambda u:u['project2027'])
     largest_object = max(area['objects'], key=lambda o:o['project2027'])
     detail['readings'] = [
-        {'kind':'calculation', 'text':f'El proyecto queda {percent(area["realVariationPct"])} por {"debajo" if area["realVariationPct"]<0 else "encima"} de la inflación supuesta frente al vigente de junio de 2026.',
-         'references':['Planilla 4 del documento general, p. 173', 'Ejecución 2026-2; factor 1,18']},
+        {'kind':'calculation', 'text':f'El proyecto queda {percent(area["realVariationPct"])} por {"debajo" if area["realVariationPct"]<0 else "encima"} de la inflación promedio anual estimada frente al vigente de junio de 2026.',
+         'references':['Planilla 4 del documento general, p. 173', 'Ejecución 2026-2; factor ' + str(reports['deflator']['factor']).replace('.', ',')]},
         {'kind':'calculation', 'text':f'{largest_unit["name"]} concentra {percent(largest_unit["project2027"]/area["project2027"]*100)} del presupuesto del área.',
          'references':[f'Planilla por unidad, p. {largest_unit["pdfPage"]}']},
         {'kind':'calculation', 'text':f'La categoría {largest_object["name"]} representa {percent(largest_object["project2027"]/area["project2027"]*100)} del presupuesto. La clasificación describe el destino del dinero; no informa por sí sola cantidad de empleados ni de contratos.',

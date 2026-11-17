@@ -22,7 +22,7 @@ module.exports=async function({page,base}){
     assert.equal(await page.locator('.gov-ranking article').count(),detail.units.length);
     assert((await page.locator('.gov-readings>ol>li').count())>=1);assert((await page.locator('.gov-readings>ol>li').count())<=6);if(width<=650)await page.locator('.mobile-section[data-section="gov-ranking"]>summary').click();assert.equal(await page.locator('.gov-ranking article:visible').count(),Math.min(8,detail.units.length));
     const invalid=await page.evaluate(()=>{
-     const bad=[];for(const node of document.querySelectorAll('main *')){
+     const bad=[];for(const node of document.querySelectorAll('main *')){if(node.closest('[data-precise-share]'))continue;
       const values=[...node.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent);
       for(const attr of ['aria-label','title','data-viz-tip'])if(node.hasAttribute(attr))values.push(node.getAttribute(attr));
       for(const v of values)for(const m of v.matchAll(/([−+\-]?)(\d+(?:\.\d{3})*),(\d+)\s*%/g))if(Number(m[2].replaceAll('.',''))>=10||m[3].length!==1)bad.push(m[0]);

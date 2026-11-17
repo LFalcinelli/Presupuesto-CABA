@@ -16,7 +16,7 @@ const cultural=search('Transformación Cultural').filter(r=>norm(r.name)==='tran
 assert(search('publicidd').some(r=>r.kind==='principal'&&norm(r.name)==='publicidad y propaganda'));
 for(const inc of ['1','3'])for(const key of ['project2027','initial2026','current2026'])assert(Math.abs(principals.rows.filter(r=>r.objectCode===inc).reduce((s,r)=>s+r[key],0)-areas.areas.reduce((s,a)=>s+a.objects.find(o=>o.code===inc)[key],0))<2);
 const ad=principals.rows.find(r=>norm(r.name)==='publicidad y propaganda');assert.equal(ad.project2027,133915908563);assert.equal(ad.programs.length,26);assert.equal(ad.areas.reduce((s,a)=>s+a.project2027,0),ad.project2027);
-const income=read('data/revenue/increases-2027.json');for(const r of income.rows){assert(Math.abs(r.realDifferenceInitial-(r.project2027/1.18-r.initial2026))<.01);assert(Math.abs(r.realDifferenceCurrent-(r.project2027/1.18-r.current2026))<.01);}
+const income=read('data/revenue/increases-2027.json');for(const r of income.rows){assert(Math.abs(r.realDifferenceInitial-(r.project2027/1.213-r.initial2026))<.01);assert(Math.abs(r.realDifferenceCurrent-(r.project2027/1.213-r.current2026))<.01);}
 assert.equal(index.structure.officials,2595);assert.equal(index.structure.programs,499);
 console.log('Buscador: temas, raíces, errores de tipeo, unicidad por códigos y continuidad; publicidad/personal e ingresos conciliados.');
 

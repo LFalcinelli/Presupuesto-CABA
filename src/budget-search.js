@@ -13,7 +13,7 @@ function searchName(r){return budgetDepthDisplayName(r.name);}
 function searchLabel(r){return searchName(r)+(r.kind==='program'?' — '+budgetDepthDisplayName(r.unitName||r.areaName):'');}
 const searchKinds={all:'Todo',area:'Áreas',unit:'Unidades',program:'Programas',principal:'Partidas'};
 function searchStatus(r,{detail=false}={}){if(r.project2027===null)return detail?'Último dato: 2026 · No se pudo confirmar a qué programa de 2026 corresponde':'Último dato: 2026';if(r.project2027===0)return 'Sin presupuesto en 2027 · último dato: 2026';if(r.comparisonStatus==='pending')return detail?'No se pudo confirmar a qué programa de 2026 corresponde':'';if(r.comparisonStatus==='recoded')return 'Cambio de código documentado';if(r.comparisonStatus==='reorganized')return 'Cambio de funciones';return '';}
-function searchRate(value,base){return base>0?(value/1.18/base-1)*100:null;}
+function searchRate(value,base){const factor=state.budgetSearchIndex?.deflator??state.projectComparison?.deflator?.factor;return base>0&&factor?(value/factor/base-1)*100:null;}
 function searchChange(r,base,label){const rate=searchRate(r.project2027,r[base]);return r.project2027===null||['pending','continuity-pending','reorganized'].includes(r.comparisonStatus)?'<span>'+label+': continuidad o alcance por verificar</span>':'<span>'+label+': <b class="'+(rate<0?'variation-down':'variation-up')+'">'+(rate===null?'Sin base comparable':(rate<0?'▼ ':rate>0?'▲ ':'')+signedPct(rate)+' real')+'</b></span>';}
 const searchTypeLabels={area:'Área',unit:'Unidad ejecutora',program:'Programa',principal:'Partida',glossary:'Guía'};
 function searchRowsMarkup(...args){return Site.featureFunctions.searchRowsMarkup.apply(this,args);}

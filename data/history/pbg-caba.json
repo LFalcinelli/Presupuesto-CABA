@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-11-17",
   "metric": "PBG de CABA a precios básicos, pesos corrientes",
   "unit": "pesos",
   "numerator": "execution-history.series.currentPrimary.rows[].nominal (referencia; no duplicado)",
@@ -78,12 +78,12 @@
     },
     "priceIndexAnnual": {
       "2025": 1896.3691666666666,
-      "2026": 2507.0851686388037,
-      "2027": 3043.52787039399
+      "2026": 2508.8964075,
+      "2027": 3043.2913422975003
     },
     "priceAssumptions": {
-      "2026": 0.3,
-      "2027": 0.18
+      "2026": 0.323,
+      "2027": 0.213
     },
     "realGrowth2026Source": {
       "source": {
@@ -109,10 +109,11 @@
       "scope": "PIB nacional como aproximación de CABA; pronóstico, no dato observado"
     },
     "nominalControl2026": {
-      "estimatedAnnualGrowth": 0.3293509378537187,
+      "estimatedAnnualGrowth": 0.33031132488361603,
       "observedH1Growth": 0.3002385064861983,
-      "differencePoints": 2.9112431367520397
-    }
+      "differencePoints": 3.007281839741771
+    },
+    "priceAssumptionType": "annualAverage"
   },
   "rows": [
     {
@@ -494,7 +495,7 @@
     },
     {
       "year": 2026,
-      "pbgNominal": 192436264603136.34,
+      "pbgNominal": 192575289812615.72,
       "status": "estimado",
       "source": {
         "page": "https://www.estadisticaciudad.gob.ar/eyc/banco-datos/producto-geografico-bruto-trimestral-a-precios-basicos-millones-de-pesos-a-precios-de-2004-por-categoria-de-la-clanae-ciudad-de-buenos-aires-1er-trimestre-2024-2do-trimestre-2025/",
@@ -507,7 +508,7 @@
     },
     {
       "year": 2027,
-      "pbgNominal": 239392339887638.5,
+      "pbgNominal": 239373735486141.6,
       "status": "estimado",
       "source": {
         "page": "https://www.bcra.gob.ar/publicaciones/relevamiento-de-expectativas-de-mercado-rem-septiembre-de-2026/",

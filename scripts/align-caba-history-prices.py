@@ -14,8 +14,8 @@ canonical = json.loads((HISTORY / 'execution-history.json').read_text(encoding='
 factors = {row['year']: row['factor'] for row in canonical['rows']}
 description = ('Mismos precios promedio anuales que la serie principal de CABA: '
                'IPCBA desde 2013, CIFRA 2007–2012 y empalme histórico anterior. '
-               'Base promedio abril–junio 2026. Para 2026 se proyectan los meses '
-               'faltantes con inflación diciembre/diciembre de 30%. '
+               'Base promedio abril–junio 2026. Para 2026 se usa la inflación promedio '
+               'anual estimada de 32,3% (IPCBA observado hasta octubre). '
                'Se conservan los presupuestos y las etapas originales.')
 
 def save(path, value):
@@ -23,7 +23,7 @@ def save(path, value):
 
 budget_path = HISTORY / 'budget-history-long.json'
 budget = json.loads(budget_path.read_text(encoding='utf-8'))
-budget['updated'] = '2026-10-07'
+budget['updated'] = '2026-11-17'
 budget['deflatorFile'] = 'data/history/execution-history.json'
 budget['method'] = description
 budget['priceAdjustment'] = {'canonical': 'data/history/execution-history.json',
@@ -40,7 +40,7 @@ save(budget_path, budget)
 
 category_path = HISTORY / 'category-history.json'
 categories = json.loads(category_path.read_text(encoding='utf-8'))
-categories['updated'] = '2026-10-07'
+categories['updated'] = '2026-11-17'
 categories['method'] = description
 categories['priceAdjustment'] = budget['priceAdjustment']
 for series in categories['series']:

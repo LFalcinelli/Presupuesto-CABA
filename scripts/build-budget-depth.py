@@ -110,7 +110,7 @@ services_rows=[]
 for key,r in services.items():
     b=baseline.get(key);r['areas']=[{'code':code,'name':next(a['name'] for a in reports['areas'] if a['code']==code),'value':v} for code,v in sorted(r['areas'].items(),key=lambda x:-x[1])]
     for field in ['initial2026','current2026']:
-        r[field]=float(b[field]) if b else None;r[field+'RealVariationPct']=(r['project2027']/1.18/float(b[field])-1)*100 if b and b[field]>0 else None
+        r[field]=float(b[field]) if b else None;r[field+'RealVariationPct']=(r['project2027']/reports['deflator']['factor']/float(b[field])-1)*100 if b and b[field]>0 else None
     services_rows.append(r)
 unmatched=set(baseline)-set(services)
 for key in unmatched:
@@ -146,7 +146,7 @@ if args.budget_pdf:
 output={'schemaVersion' :1,'updated':'2026-10-12','fiscalScope':'Gastos fiscales; sin aplicaciones financieras ni partidas figurativas.',
  'execution':{'annual2025':annual,'semesters':semesters,'sources':{p:source(snapshots[p]) for p in ['2025-4','2025-2','2026-2']},'totals2025':snapshots['2025-4']['fiscalTotals'],'semesterFactors':factors},
  'structure':{'rows':structure,'note':'Un cambio de código o de nombre puede contar como unidad nueva; mide cantidad de aperturas presupuestarias, no personas.'},
- 'services':{'total':services_total,'initial2026':float(services2026['initial2026']),'current2026':float(services2026['current2026']),'rows':sorted(services_rows,key=lambda r:-r['project2027']),'source2026':source(snapshot),'sourceColumns':['Inciso','Ppal','Desc_Ppal','Eco','Sanción','Vigente_Trim2_CONT'],'factor':1.18,'note':'El presupuesto no informa la cantidad de contratos ni de proveedores.'},
+ 'services':{'total':services_total,'initial2026':float(services2026['initial2026']),'current2026':float(services2026['current2026']),'rows':sorted(services_rows,key=lambda r:-r['project2027']),'source2026':source(snapshot),'sourceColumns':['Inciso','Ppal','Desc_Ppal','Eco','Sanción','Vigente_Trim2_CONT'],'factor':reports['deflator']['factor'],'note':'El presupuesto no informa la cantidad de contratos ni de proveedores.'},
  'transfers':{'total':transfer_total,'types':sorted(transfer_types.values(),key=lambda r:-r['value']),'recipients':sorted(recipients,key=lambda r:-r['value']),'unspecified':sum(d['economic']['transferUnspecified'] for d in details.values()),'note':'Sin desagregación corriente/capital no significa sin receptor: son dos aperturas distintas.'},
  'debt':{'rows':debt,'stock':stock,'note':'Intereses divididos por ingresos corrientes del mismo año. 2026: autorizado a junio; 2027: proyecto. No incluye las autorizaciones de los proyectos complementarios.'},
  'support':{'total':sum(r['value'] for r in support),'rows':support,'note':'Agrupa los programas que el presupuesto clasifica como de conducción y apoyo. No mide eficiencia ni indica qué gasto es prescindible.'},

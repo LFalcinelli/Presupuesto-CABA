@@ -47,8 +47,9 @@ function area(code){
  build('Fondos al sector privado','transfers',({p,principal})=>`La Policía prevé entregar ${money(principal(p('Policía de la Ciudad'),'sector privado'))} al sector privado en 2027; la clasificación no identifica un destinatario.`);
 }
 {
- const{build}=area('55');
- build('Primaria casi sin cambio','largest',({p,amount,rate})=>{const r=p('Educacion Primaria');return `Primaria recibe ${money(amount(r))} (${percent(rate(r))} real); Inicial cambia ${percent(rate(p('Educacion Inicial')))} real frente al ampliado 2026.`;});
+ const{build,p}=area('55'),primary=p('Educacion Primaria'),primaryRate=(primary.project2027/read('data/budget/2027/areas/55.json').deflator.factor/primary.current2026-1)*100;
+ // El titular sigue a la cifra: «casi sin cambio» sólo si la variación real no supera ±1%.
+ build(Math.abs(primaryRate)<1?'Primaria casi sin cambio':primaryRate<0?'Primaria baja en términos reales':'Primaria sube en términos reales','largest',({p,amount,rate})=>{const r=p('Educacion Primaria');return `Primaria recibe ${money(amount(r))} (${percent(rate(r))} real); Inicial cambia ${percent(rate(p('Educacion Inicial')))} real frente al ampliado 2026.`;});
  build('Fondos para escuelas privadas','transfers',({p,principal})=>`Se prevén ${money(principal(p('Gestion Privada'),'sector privado'))} para escuelas privadas; es el aporte a esas instituciones, separado de los gastos administrativos del programa.`);
  build('Comedores y servicios escolares','program',({p,amount,rate,target})=>{const r=p('Asistencia Alimentaria');return `Asistencia Alimentaria: ${money(amount(r))} (${percent(rate(r))} real), con ${number(target(r,'270.509'))} becas; Servicios a las Escuelas suma ${money(amount(p('Servicios a las Escuelas')))}, sin continuidad confirmada.`;});
  build('Presupuesto para edificios escolares','works',({p,amount})=>`Mejora y Cuidado de Edificios Escolares recibe ${money(amount(p('Mejora y Cuidado')))} en 2027; su comparación funcional con 2026 sigue por verificar.`);

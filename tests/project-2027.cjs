@@ -21,17 +21,17 @@ assert.equal(p.breakdowns.revenue.reduce((a,r)=>a+r.value,0),v('fiscalRevenue'))
 for(const purpose of p.breakdowns.purposes)assert.equal(p.breakdowns.functions.filter(f=>f.purpose===purpose.name).reduce((a,r)=>a+r.value,0),purpose.value);
 for(const m of [...Object.values(s),...Object.values(p.breakdowns).flat(),...p.creditAuthorizations]){assert(m.pdfPage>=1&&m.pdfPage<=297&&m.reference&&m.source);assert.equal(m.status,'project');assert(m.unit&&m.universe&&Number.isFinite(m.value));}
 const c=read('data/budget/2027/comparison-2026.json');assert.equal(c.inflationAdjusted,true);assert.equal(c.totals.reference,19877152039294);
-assert.equal(c.deflator.percentage,18);assert.equal(c.deflator.factor,1.18);assert.equal(c.deflator.basis,'site-assumption');assert.equal(c.deflator.sourceType,'site-assumption');
-assert.equal(c.totals.project,v('fiscalExpense'));assert(Math.abs(c.totals.realVariationPct-2.725645358423656)<1e-9);
-assert(c.totals.nominalVariationPct>21&&c.totals.nominalVariationPct<22);assert(c.totals.realVariationPct>2&&c.totals.realVariationPct<3);
+assert.equal(c.deflator.percentage,21.3);assert.equal(c.deflator.factor,1.213);assert.equal(c.deflator.basis,'annual-average');assert.equal(c.deflator.sourceType,'owner-estimate');
+assert.equal(c.totals.project,v('fiscalExpense'));assert(Math.abs(c.totals.realVariationPct-(24094340599263/19877152039294/1.213-1)*100)<1e-9);
+assert(c.totals.nominalVariationPct>21&&c.totals.nominalVariationPct<22);assert(c.totals.realVariationPct>-0.1&&c.totals.realVariationPct<0);
 const income2026=read('data/revenue/income-2026-2.json');
 for(const [key,rows] of Object.entries(c.groups)){
  const expected=key==='revenue'?v('fiscalRevenue'):key==='taxRevenue'?p.breakdowns.taxRevenue.reduce((sum,r)=>sum+r.value,0):c.totals.project;
  const reference=key==='revenue'?income2026.total.v:key==='taxRevenue'?income2026.rows.find(r=>r.codes.join('.')==='1.11').v:c.totals.reference;
- assert(Math.abs(rows.reduce((sum,r)=>sum+r.projectAdjusted,0)-expected/1.18)<.02,key);
+ assert(Math.abs(rows.reduce((sum,r)=>sum+r.projectAdjusted,0)-expected/1.213)<.02,key);
  assert(Math.abs(rows.reduce((sum,r)=>sum+r.reference,0)-reference)<2,key);
  assert.equal(rows.reduce((sum,r)=>sum+r.project,0),expected,key);
- for(const r of rows){if(r.reference)assert(Math.abs(r.realVariationPct-(r.project/r.reference/1.18-1)*100)<1e-9);else assert.equal(r.realVariationPct,null);}
+ for(const r of rows){if(r.reference)assert(Math.abs(r.realVariationPct-(r.project/r.reference/1.213-1)*100)<1e-9);else assert.equal(r.realVariationPct,null);}
 }
 const semester=read('data/execution/semester-analysis.json'),infrastructure=semester.jurisdictions.filter(r=>r.jurisdictionCode==='31');
 assert.equal(infrastructure.length,1);assert(infrastructure[0].a>0&&infrastructure[0].b>0);assert.equal(semester.jurisdictions.filter(r=>r.name.includes('Infraestructura')).length,1);
