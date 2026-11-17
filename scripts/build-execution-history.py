@@ -72,19 +72,17 @@ with (ROOT / 'data/history/ipcba.csv').open(encoding='utf-8-sig') as f:
     observed = {r['mes']: float(r['IPCBA_base2021_100']) for r in csv.DictReader(f) if r['mes'] >= '2013-01'}
 last_observed = max(observed)
 assert last_observed.startswith('2026-'), 'Review forecast logic after 2026.'
-assumptions = data.get('priceAdjustment', {}).get('assumptions', {'2026': .30, '2027': .18})
-months = dict(observed)
-last_month = int(last_observed[-2:])
-target_2026 = observed['2025-12'] * (1 + assumptions['2026'])
-remaining = 12 - last_month
-rate_2026 = (target_2026 / observed[last_observed])**(1/remaining) if remaining else 1
-assert rate_2026 >= 1, 'Inflation target contradicts observed accumulation: revise the assumption.'
-for month in range(last_month+1, 13):
-    months[f'2026-{month:02}'] = observed[last_observed] * rate_2026**(month-last_month)
-for month in range(1, 13):
-    months[f'2027-{month:02}'] = months['2026-12'] * (1+assumptions['2027'])**(month/12)
+# Pedido del dueño del 17/11/2026: los presupuestos 2026 y 2027 se ajustan con la
+# inflación promedio anual (promedio anual contra promedio anual) que fija el dueño.
+# 2026: 32,3% estimado con IPCBA observado hasta octubre (ipcba.csv termina en 2026-10);
+# noviembre y diciembre quedan al ritmo implícito en el 32,3% (≈1,7% mensual). 2027: 21,3% estimado.
+ANNUAL_AVERAGE = {'2026': .323, '2027': .213}
+stored = data.get('priceAdjustment', {})
+assumptions = stored.get('assumptions') if stored.get('assumptionType') == 'annualAverage' else ANNUAL_AVERAGE
 base = mean(observed[f'2026-{m:02}'] for m in [4, 5, 6])
-annual = {str(y): mean(months[f'{y}-{m:02}'] for m in range(1, 13)) for y in range(2013, 2028)}
+annual = {str(y): mean(observed[f'{y}-{m:02}'] for m in range(1, 13)) for y in range(2013, 2026)}
+for year in ['2026', '2027']:
+    annual[year] = annual[str(int(year) - 1)] * (1 + assumptions[year])
 cifra_annual = {str(y): mean(inputs['cifraMonthly'][f'{y}-{m:02}'] for m in range(1, 13)) for y in range(2007, 2014)}
 for year in range(2012, 2006, -1):
     annual[str(year)] = annual[str(year+1)] * cifra_annual[str(year)] / cifra_annual[str(year+1)]
@@ -138,29 +136,33 @@ for y, total, current, kind, status, source in [
                          **({'pdfPages': [5, 9], 'reference': 'Recursos corrientes y de capital, columna vigente; sin fuentes financieras'} if y == 2026
                             else {'pdfPage': project['summary']['fiscalRevenue']['pdfPage'], 'reference': project['summary']['fiscalRevenue']['reference']})})
 
-data.update(schemaVersion=2, updated='2026-10-09', rows=rows,
+data.update(schemaVersion=2, updated='2026-11-17', rows=rows,
             series={'total': {'label': 'Gasto total', 'definition': data['metric']},
                     'currentPrimary': {'label': 'Gasto corriente sin intereses', 'definition': 'Gasto corriente, sin intereses ni gasto de capital', 'rows': current_rows},
                     'capital': {'label': 'Gasto de capital', 'definition': 'Gasto de capital según el clasificador oficial: inversión real, transferencias de capital e inversión financiera; sin amortización de deuda', 'rows': capital_rows},
                     'revenue': {'label': 'Recaudación total', 'definition': 'Ingresos corrientes y recursos de capital, sin contribuciones figurativas ni fuentes financieras', 'rows': revenue_rows,
-                                'method': '1997–2025: concepto 6) Recursos totales (1+4), cuadro IDECBA SP_Fi_AX01, fila física 24; millones convertidos a pesos. 2026: recursos vigentes al 30/06 de income-2026-2, no la recaudación parcial del semestre. 2027: recursos previstos, Planilla 16 del proyecto. Toda la serie usa el mismo ajuste por inflación que el gasto: IPCBA desde 2013, CIFRA 2007–2012 y empalme documentado anterior; base abril–junio 2026 y promedio anual de precios. Los promedios de 2026 y 2027 se estiman con inflación diciembre/diciembre de 30% y 18%.',
+                                'method': '1997–2025: concepto 6) Recursos totales (1+4), cuadro IDECBA SP_Fi_AX01, fila física 24; millones convertidos a pesos. 2026: recursos vigentes al 30/06 de income-2026-2, no la recaudación parcial del semestre. 2027: recursos previstos, Planilla 16 del proyecto. Toda la serie usa el mismo ajuste por inflación que el gasto: IPCBA desde 2013, CIFRA 2007–2012 y empalme documentado anterior; base abril–junio 2026 y promedio anual de precios. Los promedios de 2026 y 2027 se estiman con inflación promedio anual de 32,3% (IPCBA observado hasta octubre de 2026) y 21,3%.',
                                 'notes': ['Recaudación total comprende recursos corrientes y de capital; no sólo impuestos. Excluye endeudamiento y otras fuentes financieras.',
-                                          '2025 es provisorio. 2026 y 2027 son ingresos presupuestados, no recaudación efectiva. Sus importes reales dependen de los supuestos de inflación.',
+                                          '2025 es provisorio. 2026 y 2027 son ingresos presupuestados, no recaudación efectiva. Sus importes reales dependen de la inflación promedio anual estimada.',
                                           'La salvedad de etapa definitiva en 1997 corresponde al gasto, no a los recursos. Los hitos de traspaso de funciones del gasto no se trasladan a esta serie.']}},
             priceAdjustment={'name': 'IPCBA / IPC-Provincias CIFRA / empalme histórico aportado', 'baseIndex': base,
                 'base': data['base'], 'annualAverage': annual, 'lastObservedMonth': last_observed,
-                'observedMonthly': observed, 'projectedMonthly': {k:v for k,v in months.items() if k > last_observed},
-                'assumptions': assumptions, 'assumptionStatus': 'Supuestos de escenario autorizados por el usuario; no inflación observada ni pronóstico propio de IDECBA',
-                'projectionMethod': 'Conservar meses observados; llevar diciembre 2026 a diciembre 2025 × 1,30 con tasa mensual constante en el tramo restante. Diciembre 2027 = diciembre 2026 × 1,18 con tasa mensual constante en los doce meses. Usar promedio enero–diciembre para los presupuestos anuales.',
+                'observedMonthly': observed,
+                'assumptions': assumptions, 'assumptionType': 'annualAverage',
+                'assumptionStatus': 'Inflación promedio anual estimada fijada por el dueño el 17/11/2026: 32,3% en 2026 (IPCBA observado hasta octubre de 2026) y 21,3% en 2027; noviembre y diciembre de 2026 quedan al ritmo implícito en el 32,3% (≈1,7% mensual); no es inflación observada completa ni pronóstico propio de IDECBA',
+                'projectionMethod': 'Promedio anual contra promedio anual. Índice promedio 2026 = índice promedio 2025 × 1,323; índice promedio 2027 = índice promedio 2026 × 1,213. Los meses observados se conservan como respaldo; no se proyecta una trayectoria mensual.',
                 'linkMethod': 'IPCBA promedio anual desde 2013. CIFRA 2007–2012 por cocientes de promedios anuales, anclado en IPCBA 2013. Para 1997–2006 conservar cocientes del empalme aportado; el enlace 2006–2007 usa el promedio 2007 de ese archivo, porque CIFRA no contiene 2006.',
                 'ipcbaSource': {'url': 'https://www.estadisticaciudad.gob.ar/eyc/categoria-banco-datos/series-empalmadas/',
                                'file': 'sources/IPCBA-serie-empalmada.xlsx', 'sha256': sha(ROOT/'public/sources/IPCBA-serie-empalmada.xlsx'),
-                               'sheet': 'Nivel_general_empalme', 'csvSha256': sha(ROOT/'data/history/ipcba.csv')},
+                               'sheet': 'Nivel_general_empalme', 'csvSha256': sha(ROOT/'data/history/ipcba.csv'),
+                               'lastMonthsSource': {'months': ['2026-09', '2026-10'],
+                                                    'citation': 'IDECBA, Informe de resultado 2069, «IPCBA. Ciudad de Buenos Aires. Octubre de 2026», 06/11/2026, cuadro C.1.A (base 2021=100)',
+                                                    'note': 'Nivel general: septiembre 2.644,33 (1,8% mensual) y octubre 2.695,00 (1,9% mensual; 26,1% acumulado en el año y 32,5% interanual). El mismo cuadro coincide con enero–agosto de 2026 y con 2025 de la serie empalmada.'}},
                 'inputs': inputs},
-            method='1997–2025: cuadro IDECBA SP_Fi_AX01, conceptos 10) Gastos totales 2) Gastos corrientes (que excluye intereses) y 5) Gastos de capital; millones convertidos a pesos. Toda la serie: nominal × IPCBA promedio abril–junio 2026 / índice promedio anual empalmado. Desde 2013, IPCBA; 2007–2012, IPC-Provincias CIFRA; tramo anterior y enlace 2006–2007, empalme aportado documentado. Los presupuestos 2026 y 2027 se ajustan por un promedio anual estimado con inflación diciembre/diciembre de 30% y 18%, respectivamente.',
+            method='1997–2025: cuadro IDECBA SP_Fi_AX01, conceptos 10) Gastos totales 2) Gastos corrientes (que excluye intereses) y 5) Gastos de capital; millones convertidos a pesos. Toda la serie: nominal × IPCBA promedio abril–junio 2026 / índice promedio anual empalmado. Desde 2013, IPCBA; 2007–2012, IPC-Provincias CIFRA; tramo anterior y enlace 2006–2007, empalme aportado documentado. Los presupuestos 2026 y 2027 se ajustan con la inflación promedio anual estimada: 32,3% en 2026 (IPCBA observado hasta octubre) y 21,3% en 2027.',
             notes=['1997 conserva la etapa definitiva de la convención antigua; desde 1998 se informa devengado. La conexión 1997–1998 permanece punteada.',
                    '2025 es provisorio en el cuadro oficial. Los hitos de nuevas responsabilidades no explican por sí solos toda la variación del gasto.',
-                   '2026 es presupuesto anual actualizado al 30/06 y 2027 es proyecto: autorizaciones, no ejecución. Sus valores reales dependen de los supuestos de precios, conservan marcador distinto y conexión punteada.',
+                   '2026 es presupuesto anual actualizado al 30/06 y 2027 es proyecto: autorizaciones, no ejecución. Sus valores reales dependen de la inflación promedio anual estimada, conservan marcador distinto y conexión punteada.',
                    'El gasto corriente sin intereses excluye la inversión y los intereses; no equivale al gasto primario total, que también incluye capital.',
                    'CIFRA no tiene dato de 2006. Ese enlace conserva el cociente 2006–2007 del archivo aportado; no se atribuye a CIFRA ni se presenta toda la serie como un IPCBA oficial observado.',
                    'El dato corriente 2026 del mensaje está publicado en millones con un decimal. El dato 2027 se calcula con los importes exactos de la planilla, sin añadir proyectos separados.'])

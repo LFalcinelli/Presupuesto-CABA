@@ -40,7 +40,7 @@ function governmentReadingItems(area,detail){
  const base='current2026',factor=state.areaReports.deflator.factor;
  const curated=state.areaHighlights?.entries.filter(r=>r.area===area.code);
  if(curated?.length)return curated.map(r=>({...r,movements:r.movements||[],comparisonBase:base}));
- const readings=[],source=detail.sources['2027'].file,common='Ampliado al 30/06/2026; proyecto dividido por '+factor+' para comparar, con inflación supuesta del 18%.';
+ const readings=[],source=detail.sources['2027'].file,common='Ampliado al 30/06/2026; proyecto dividido por '+String(factor).replace('.',',')+' para comparar, con inflación promedio anual estimada para 2027.';
  const add=(kind,title,text,rows=[],movements=[])=>readings.push({kind,title,text,references:[source,...rows.map(r=>'Programa '+r.id+'; pp. '+r.financialPages.join(', ')+'. '+r.comparisonEvidence),common],movements,comparisonBase:base});
  const name=p=>governmentTitle(p.name).replace(/Subterráneos de Buenos Aires/gi,'Subterráneos de Buenos Aires (SBASE)').replace(/Desarrollos y Proyectos/gi,'Desarrollos y Proyectos (Línea F)');
  const rate=p=>p[base]>0&&['continues','recoded'].includes(p.comparisonStatus)?100*(p.project2027/factor/p[base]-1):null;

@@ -6,7 +6,7 @@ assert.equal(detail.stages.project2027,1977474831688);assert.equal(detail.stages
 assert.equal(detail.units.length,13);assert.equal(detail.programs.length,27);assert.equal(detail.positions.value,911);assert.equal(detail.positions.pdfPage,15);assert(detail.positions.exclusions.includes('Autoridades')||detail.positions.exclusions.includes('autoridades'));
 assert.equal(detail.sources['2027'].sha256,'b672ab5e69430e682a6fef4bfa0f5ac380417f26e203df1f93a0c8613f96510c');
 assert.equal(detail.sources['2026'].sha256,'ad5abe23c0bf0a663dc3e51291b1d3f82c00c529bffe71edfa86c047c4cde90f');
-assert.equal(detail.deflator.factor,1.18);assert.equal(detail.originalEqualsApproved,true);
+assert.equal(detail.deflator.factor,1.213);assert.equal(detail.originalEqualsApproved,true);
 close(detail.units.reduce((s,r)=>s+r.project2027,0),detail.stages.project2027);
 close(detail.programs.reduce((s,r)=>s+r.project2027,0),detail.stages.project2027);
 close(detail.financing.reduce((s,r)=>s+r.value,0),detail.stages.project2027);
@@ -43,7 +43,7 @@ assert.equal(detail.readings,undefined);assert(!detail.changes.some(c=>['created
 assert(!/\b[A-Z]:[\\/]|Users[\\/]|Downloads[\\/]/i.test(JSON.stringify(detail)),'No local working paths');
 const baselines=new Set();let unitCount=0,programCount=0;
 for(const a of reports.areas){
- const d=read(a.detailFile);assert.equal(d.deflator.factor,1.18);assert.equal(d.validation.status,'reconciled');
+ const d=read(a.detailFile);assert.equal(d.deflator.factor,1.213);assert.equal(d.validation.status,'reconciled');
  close(d.stages.project2027,a.project2027);close(d.units.reduce((s,u)=>s+u.project2027,0),a.project2027);close(d.programs.reduce((s,p)=>s+p.project2027,0),a.project2027);close(d.financing.reduce((s,p)=>s+p.value,0),a.project2027);
  unitCount+=d.units.length;programCount+=d.programs.length;
  for(const p of d.programs){
@@ -57,10 +57,10 @@ for(const a of reports.areas){
  }
  for(const base of ['initial2026','current2026']){
   const field=base==='initial2026'?'s':'v',matchedKeys=new Set(d.programs.flatMap(p=>p.baselineKeys));
-  const pendingProjects=d.programs.filter(p=>p.comparisonStatus==='pending').reduce((s,p)=>s+p.project2027/1.18,0);
+  const pendingProjects=d.programs.filter(p=>p.comparisonStatus==='pending').reduce((s,p)=>s+p.project2027/1.213,0);
   const unmatchedLocal=snapshot.rows.filter(r=>r.fiscal&&r.codes[1]===a.code&&!matchedKeys.has(r.codes.slice(1,6).join('-'))).reduce((s,r)=>s+r[field],0);
   const incomingScope=snapshot.rows.filter(r=>r.fiscal&&r.codes[1]!==a.code&&matchedKeys.has(r.codes.slice(1,6).join('-'))).reduce((s,r)=>s+r[field],0);
-  const total=d.stages.project2027/1.18-d.stages[base],matched=d.programs.filter(p=>p[base]!==null).reduce((s,p)=>s+p.project2027/1.18-p[base],0),pending=pendingProjects-unmatchedLocal+incomingScope;
+  const total=d.stages.project2027/1.213-d.stages[base],matched=d.programs.filter(p=>p[base]!==null).reduce((s,p)=>s+p.project2027/1.213-p[base],0),pending=pendingProjects-unmatchedLocal+incomingScope;
   close(total,matched+pending,'Delta reconciliation '+a.code+' '+base);
  }
  for(const o of a.objects)close(d.programs.reduce((s,p)=>s+p.objects.find(r=>r.code===o.code).project2027,0),o.project2027);

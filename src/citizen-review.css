@@ -2,3 +2,5 @@
 @media(max-width:650px){.review-base-control{display:block;padding:16px;margin:16px 0 24px}.review-base-control label{min-width:0}.review-base-control p{margin-top:14px}.review-bar{gap:8px 12px;grid-template-columns:minmax(0,1fr) minmax(90px,auto)}.review-bar-name,.review-bar-value{font-size:15px}.review-bar-children{padding-left:8px}.production-group{padding-left:10px}.fiscal-steps-disclosure .fiscal-result-steps{grid-template-columns:1fr}.review-glossary details{scroll-margin-top:160px}.hero-current strong{font-size:22px!important}}
 .hero-current strong,.hero-current .review-budget-stage{white-space:normal!important;overflow-wrap:normal}.hero-current{min-width:0}
 .review-bar.highlight-personal{outline:3px solid var(--palette-67339b);outline-offset:3px;border-radius:5px}
+/* Tasas de inflación con un decimal dentro de un texto: heredan el estilo del párrafo. */
+span[data-precise-share],.project-reading-cards span[data-scenario-pct]{display:inline!important;font:inherit!important;color:inherit!important;text-transform:inherit!important;letter-spacing:inherit!important;margin:0!important;padding:0!important}

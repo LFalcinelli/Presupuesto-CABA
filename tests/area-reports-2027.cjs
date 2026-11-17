@@ -10,7 +10,7 @@ function aggregate(dataset,dimension){
  }return map;
 }
 const actualAreas=aggregate(current,'area'),actualUnits=aggregate(current,'unit'),seen=new Set();
-assert.equal(reports.source.fileSha256,project.source.fileSha256);assert.equal(reports.deflator.factor,1.18);
+assert.equal(reports.source.fileSha256,project.source.fileSha256);assert.equal(reports.deflator.factor,1.213);
 assert.equal(reports.areas.length,22);assert.equal(reports.units.length,actualUnits.size);assert.equal(reports.coverage.units2027,0);
 close(reports.areas.reduce((s,r)=>s+r.project2027,0),project.summary.fiscalExpense.value,'2027 total');
 close(reports.units.reduce((s,r)=>s+r.current2026,0),current.fiscalTotals.v,'2026 unit coverage');
@@ -19,7 +19,7 @@ for(const r of [...reports.areas,...reports.units]){
  assert.equal(r.name,a.name);close(r.current2026,a.v,r.id);close(r.objects.reduce((s,o)=>s+o.current2026,0),r.current2026,r.id+' object total');
  assert.equal(r.objects.length,8);for(const o of r.objects)close(o.current2026,a.objects[Number(o.code)-1],r.id+' object '+o.code);
  if(r.kind==='unit'){assert.equal(r.project2027,null);assert(!('realVariationPct' in r));assert(reports.areas.some(p=>p.id===r.parent));assert(r.objects.every(o=>!('project2027' in o)));}
- else{const p=project.breakdowns.jurisdictions.find(p=>norm(p.name)===norm(r.name));assert.equal(r.project2027,p.value);assert.equal(r.pdfPage,173);close(r.objects.reduce((s,o)=>s+o.project2027,0),r.project2027,r.id+' 2027 objects');assert(Math.abs(r.realVariationPct-(r.project2027/1.18/r.current2026-1)*100)<1e-10);for(const o of r.objects)assert.equal(o.realVariationPct===null,o.current2026===0);}
+ else{const p=project.breakdowns.jurisdictions.find(p=>norm(p.name)===norm(r.name));assert.equal(r.project2027,p.value);assert.equal(r.pdfPage,173);close(r.objects.reduce((s,o)=>s+o.project2027,0),r.project2027,r.id+' 2027 objects');assert(Math.abs(r.realVariationPct-(r.project2027/1.213/r.current2026-1)*100)<1e-10);for(const o of r.objects)assert.equal(o.realVariationPct===null,o.current2026===0);}
  assert.deepEqual(r.history.map(h=>h.year),Array.from({length:13},(_,i)=>i+2013));
 }
 for(const year of Array.from({length:13},(_,i)=>i+2013)){
