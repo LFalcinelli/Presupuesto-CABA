@@ -74,7 +74,8 @@ last_observed = max(observed)
 assert last_observed.startswith('2026-'), 'Review forecast logic after 2026.'
 # Pedido del dueño del 17/11/2026: los presupuestos 2026 y 2027 se ajustan con la
 # inflación promedio anual (promedio anual contra promedio anual) que fija el dueño.
-# 2026: 32,3% estimado con IPCBA observado hasta octubre; 2027: 21,3% estimado.
+# 2026: 32,3% estimado con IPCBA observado hasta octubre (ipcba.csv termina en 2026-10);
+# noviembre y diciembre quedan al ritmo implícito en el 32,3% (≈1,7% mensual). 2027: 21,3% estimado.
 ANNUAL_AVERAGE = {'2026': .323, '2027': .213}
 stored = data.get('priceAdjustment', {})
 assumptions = stored.get('assumptions') if stored.get('assumptionType') == 'annualAverage' else ANNUAL_AVERAGE
@@ -148,12 +149,15 @@ data.update(schemaVersion=2, updated='2026-11-17', rows=rows,
                 'base': data['base'], 'annualAverage': annual, 'lastObservedMonth': last_observed,
                 'observedMonthly': observed,
                 'assumptions': assumptions, 'assumptionType': 'annualAverage',
-                'assumptionStatus': 'Inflación promedio anual estimada fijada por el dueño el 17/11/2026: 32,3% en 2026 (IPCBA observado hasta octubre de 2026) y 21,3% en 2027; no es inflación observada completa ni pronóstico propio de IDECBA',
+                'assumptionStatus': 'Inflación promedio anual estimada fijada por el dueño el 17/11/2026: 32,3% en 2026 (IPCBA observado hasta octubre de 2026) y 21,3% en 2027; noviembre y diciembre de 2026 quedan al ritmo implícito en el 32,3% (≈1,7% mensual); no es inflación observada completa ni pronóstico propio de IDECBA',
                 'projectionMethod': 'Promedio anual contra promedio anual. Índice promedio 2026 = índice promedio 2025 × 1,323; índice promedio 2027 = índice promedio 2026 × 1,213. Los meses observados se conservan como respaldo; no se proyecta una trayectoria mensual.',
                 'linkMethod': 'IPCBA promedio anual desde 2013. CIFRA 2007–2012 por cocientes de promedios anuales, anclado en IPCBA 2013. Para 1997–2006 conservar cocientes del empalme aportado; el enlace 2006–2007 usa el promedio 2007 de ese archivo, porque CIFRA no contiene 2006.',
                 'ipcbaSource': {'url': 'https://www.estadisticaciudad.gob.ar/eyc/categoria-banco-datos/series-empalmadas/',
                                'file': 'sources/IPCBA-serie-empalmada.xlsx', 'sha256': sha(ROOT/'public/sources/IPCBA-serie-empalmada.xlsx'),
-                               'sheet': 'Nivel_general_empalme', 'csvSha256': sha(ROOT/'data/history/ipcba.csv')},
+                               'sheet': 'Nivel_general_empalme', 'csvSha256': sha(ROOT/'data/history/ipcba.csv'),
+                               'lastMonthsSource': {'months': ['2026-09', '2026-10'],
+                                                    'citation': 'IDECBA, Informe de resultado 2069, «IPCBA. Ciudad de Buenos Aires. Octubre de 2026», 06/11/2026, cuadro C.1.A (base 2021=100)',
+                                                    'note': 'Nivel general: septiembre 2.644,33 (1,8% mensual) y octubre 2.695,00 (1,9% mensual; 26,1% acumulado en el año y 32,5% interanual). El mismo cuadro coincide con enero–agosto de 2026 y con 2025 de la serie empalmada.'}},
                 'inputs': inputs},
             method='1997–2025: cuadro IDECBA SP_Fi_AX01, conceptos 10) Gastos totales 2) Gastos corrientes (que excluye intereses) y 5) Gastos de capital; millones convertidos a pesos. Toda la serie: nominal × IPCBA promedio abril–junio 2026 / índice promedio anual empalmado. Desde 2013, IPCBA; 2007–2012, IPC-Provincias CIFRA; tramo anterior y enlace 2006–2007, empalme aportado documentado. Los presupuestos 2026 y 2027 se ajustan con la inflación promedio anual estimada: 32,3% en 2026 (IPCBA observado hasta octubre) y 21,3% en 2027.',
             notes=['1997 conserva la etapa definitiva de la convención antigua; desde 1998 se informa devengado. La conexión 1997–1998 permanece punteada.',

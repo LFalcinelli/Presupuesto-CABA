@@ -5,6 +5,7 @@
 - Por pedido del dueño, todas las comparaciones a precios constantes usan la inflación promedio anual del IPCBA (promedio contra promedio). 2014–2025 ya la usaban y no cambian. 2026 pasa a 32,3% estimado (IPCBA observado hasta octubre) y 2027 a 21,3% estimado; antes se derivaban de supuestos diciembre/diciembre de 30% y 18% (32,2% y 21,4%).
 - La comparación del Proyecto 2027 con 2026 divide por 1,213 en lugar de 1,18: frente al ampliado pasa de +2,7% a −0,1% y frente al votado de +17,7% a +14,5%. Se regeneraron comparación, áreas, fichas, servicios, buscador, aumentos de ingresos, destacados de Áreas y viñetas de Inicio, más la serie de Evolución, presupuestos históricos y PBG.
 - Se retira la «otra estimación con precios promedio anuales»: ahora coincide con la principal. Un titular de Áreas cambia por su regla («Primaria casi sin cambio» → «Primaria baja en términos reales», −3,3%) y deja de mostrarse la discrepancia de intereses (+93%, ahora verificado). Decisión 28; nuevo `scripts/reprice-2027-comparisons.py` y opción `--reprice` del PBG para recalcular sin los PDF ni libros externos.
+- `ipcba.csv` incorpora septiembre (2.644,33) y octubre de 2026 (2.695,00) del IDECBA, Informe de resultado 2069 (06/11/2026). IPCBA observado hasta octubre de 2026; noviembre y diciembre al ritmo implícito en el 32,3% (≈1,7% mensual). El promedio 2026 y la base abril–junio no cambian, por lo que no se mueve ninguna cifra real.
 
 ## 2026-10-21 · v15 B · Destacados y lenguaje
 

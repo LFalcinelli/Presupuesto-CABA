@@ -4,9 +4,17 @@ const h=read('data/history/execution-history.json'),p=h.priceAdjustment,project=
 const near=(a,b,tolerance=1e-9)=>assert(Math.abs(a-b)<=tolerance,`${a} differs from ${b}`);
 const average=values=>values.reduce((a,b)=>a+b,0)/values.length;
 assert.equal(h.schemaVersion,2);assert.equal(h.rows.length,31);assert.equal(h.series.currentPrimary.rows.length,31);assert.equal(h.series.capital.rows.length,31);
-assert.equal(p.lastObservedMonth,'2026-08');assert.deepEqual(p.assumptions,{'2026':.323,'2027':.213});assert.equal(p.assumptionType,'annualAverage');assert.equal(p.projectedMonthly,undefined);
+assert.equal(p.lastObservedMonth,'2026-10');assert.deepEqual(p.assumptions,{'2026':.323,'2027':.213});assert.equal(p.assumptionType,'annualAverage');assert.equal(p.projectedMonthly,undefined);
 const csv=fs.readFileSync(path.join(root,'data/history/ipcba.csv'),'utf8').replace(/^\uFEFF/,'').trim().split(/\r?\n/).slice(1);
 for(const line of csv){const [month,value]=line.split(',');if(month>='2013-01')assert.equal(p.observedMonthly[month],Number(value));}
+// IPCBA observado hasta octubre de 2026: IDECBA, Informe de resultado 2069 (06/11/2026), cuadro C.1.A.
+assert.equal(csv.at(-1),'2026-10,2695.00');assert.equal(csv.at(-2),'2026-09,2644.33');
+assert.equal(p.observedMonthly['2026-10'],2695);assert.equal(p.observedMonthly['2026-09'],2644.33);assert.equal(p.observedMonthly['2026-08'],2596.6);assert.equal(p.observedMonthly['2025-12'],2137.99);
+assert.deepEqual(p.ipcbaSource.lastMonthsSource.months,['2026-09','2026-10']);assert.match(p.ipcbaSource.lastMonthsSource.citation,/Informe de resultado 2069/);
+assert.equal(Math.round((p.observedMonthly['2026-10']/p.observedMonthly['2025-12']-1)*1000)/10,26.1);assert.equal(Math.round((p.observedMonthly['2026-10']/p.observedMonthly['2025-10']-1)*1000)/10,32.5);
+// Promedio 2026/2025 usado: 1,323. Con noviembre y diciembre a ≈1,7% mensual el promedio observado+implícito redondea a 32,3%.
+near(p.annualAverage[2026]/p.annualAverage[2025],1.323,1e-12);
+{const obs=Array.from({length:10},(_,i)=>p.observedMonthly[`2026-${String(i+1).padStart(2,'0')}`]),nov=obs[9]*1.017;assert.equal(Math.round((average([...obs,nov,nov*1.017])/p.annualAverage[2025]-1)*1000)/10,32.3);}
 near(p.baseIndex,2434.406666666667);
 assert.equal(p.inputs.cifraSource.url,'https://centrocifra.org.ar/wp-content/uploads/2023/08/IPC-Provincias-2007-2018.xlsx');
 const cifraMean=y=>average(Array.from({length:12},(_,i)=>p.inputs.cifraMonthly[`${y}-${String(i+1).padStart(2,'0')}`]));
