@@ -5,7 +5,7 @@ module.exports=async({page,base})=>{
   await page.setViewportSize({width,height:1000});await page.emulateMedia({reducedMotion:'reduce'});
   let home;
   for(const route of ['#inicio','#buscar?q=salud','#inicio?vineta=2']){
-   await page.goto(base+route);await ready();await page.evaluate(async t=>{CabaTheme.set(t);await render();},theme);await ready();
+   await page.goto(base+route);await ready();await page.evaluate(async t=>{CabaTheme.set(t);state.config.flags.homeEditorialHighlights=true;await render();},theme);await ready();
    assert(await page.locator('.hero-request').isHidden());assert(await page.locator('.hero-own-taxes').isHidden());assert(await page.locator('.project-hero').isHidden());
    const text=await page.locator('.home-highlights').textContent();if(!home)home=text;else assert.equal(text,home);
    assert.equal(await page.locator('.highlight-project-total a').getAttribute('href'),'#proyecto-2027?vista=summary');

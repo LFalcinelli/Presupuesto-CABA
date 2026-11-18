@@ -1291,6 +1291,7 @@
     "data/series.csv": "data/budget/series.csv",
     "data/project-2027.json": "data/budget/2027/project.json",
     "data/project-comparison-2026.json": "data/budget/2027/comparison-2026.json",
-    "data/salary-latest-reference.json": "data/salaries/latest-reference.json"
+    "data/salary-latest-reference.json": "data/salaries/latest-reference.json",
+    "data/home-execution.json": "data/fiscal-results/home-execution.json"
   }
 }

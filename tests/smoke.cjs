@@ -69,6 +69,7 @@ const routes=['#inicio','#explorar?periodo=2026-3','#ingresos?periodo=2026-3','#
  await require('./pre-stream-reading.cjs')({page,base});
  await require('./budget-depth-reading.cjs')({page,base});
  await require('./budget-search-reading.cjs')({page,base});
+ await require('./home-execution-reading.cjs')({page,base});
  await require('./home-highlights-reading.cjs')({page,base});
  await require('./brand-icons-reading.cjs')({page,base});
  await require('./layout-reading.cjs')({page,base});

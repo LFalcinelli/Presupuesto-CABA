@@ -1,6 +1,7 @@
 'use strict';
 // This edition adds focused views without changing the accounting engine.
 function homeFiscalReadings(){
+ if(!state.config.flags.homeEditorialHighlights)return '';
  const f=state.homeHighlights?.cards[1]?.advance2026;
  return f?`<aside class="home-section fiscal-readings"><p class="eyebrow">NUEVO · ENERO–SEPTIEMBRE 2026</p><h2>Las cuentas de la Ciudad, a septiembre</h2><p>Ingresaron <b>${short(f.income)}</b> y se gastaron <b>${short(f.expense)}</b>.</p><a class="text-link" href="#explorar?periodo=2026-3">Ver la ejecución de 2026 →</a></aside>`:'';
 }

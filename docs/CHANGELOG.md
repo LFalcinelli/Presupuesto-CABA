@@ -1,5 +1,12 @@
 # Cambios
 
+## 2026-11-18 · Portada de ejecución y tipografía
+
+- Inicio prioriza el tercer trimestre de 2026 con dos gráficos: saldo acumulado por año y variaciones reales de ingresos y gastos frente al mismo corte de 2025.
+- Los puntos de 2023–2026 se calculan con cortes oficiales. El saldo se ajusta trimestre por trimestre a precios de julio–septiembre de 2026. La portada ofrece selector de corte, tablas y fuentes.
+- Las viñetas 2027 quedan ocultas con una bandera reversible. Se conservan sus enlaces directos. El proyecto, el mapa fiscal y el buscador siguen accesibles desde Inicio.
+- Se adopta DM Sans local, la familia de Presupuesto PBA, con su licencia OFL.
+
 ## 2026-11-17 · Avance 2026, enero a septiembre
 
 - Nuevo corte inicial de Avance 2026: saldo, deuda, gastos e ingresos al 30/09. Se conserva el enlace al corte de junio.

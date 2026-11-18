@@ -56,6 +56,7 @@
     "government": true,
     "salaries": false,
     "world": false,
+    "homeEditorialHighlights": false,
     "homePerCapita": false,
     "homeBudget2026": false,
     "homeClosing2026Projection": true,

@@ -1,5 +1,13 @@
 # Metodología canónica
 
+## Saldo trimestral de la portada
+
+La serie 2023–2026 usa ingresos realizados menos gasto devengado, incluidos los intereses, sin partidas figurativas ni financiamiento. Son resultados provisorios de la Administración Gubernamental. La observación de cada corte y su fuente están en `data/fiscal-results/quarterly-balances.json`. Junio y diciembre de 2025 y junio de 2026 se enlazan a la CAIF ya contrastada. Septiembre de 2025 y 2026 se enlaza a los totales del avance.
+
+Se toma la diferencia nominal entre dos cortes sucesivos, se multiplica por el cociente entre el IPCBA promedio de julio–septiembre 2026 y el IPCBA promedio del trimestre de origen, y luego se acumula. Ese procedimiento separa los flujos por trimestre y mantiene una base de precios común. Septiembre de 2023 y 2024 sale de los totales oficiales. El gráfico de 2026 termina en septiembre.
+
+El gráfico de variaciones compara los acumulados de enero–septiembre de 2025 y 2026 con el cociente de IPCBA promedio de esos nueve meses, igual que Avance 2026. El saldo por cada $100 se calcula con los totales publicados de cada corte. El comando `node scripts/build-home-execution.mjs` reproduce los dos gráficos a partir de las fuentes registradas.
+
 ## Avance a septiembre de 2026
 
 El saldo financiero resta gasto devengado de ingresos realizados, ambos acumulados enero–septiembre. Se excluyen partidas figurativas, fuentes y aplicaciones financieras. La comparación real con 2025 usa la razón entre los promedios mensuales del IPCBA de enero a septiembre de cada año. Los totales 2025 se toman del informe oficial; las aperturas de gasto de su CSV redondean cada registro al peso. Las aperturas 2026 se concilian con el total publicado, con diferencias de centavos por redondeo.

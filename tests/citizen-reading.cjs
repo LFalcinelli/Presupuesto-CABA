@@ -5,7 +5,7 @@ module.exports=async({page,browser,base})=>{
  const ready=()=>page.waitForFunction(()=>document.querySelector('#content')?.getAttribute('aria-busy')==='false');
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:1000});await page.goto(base+'#inicio');await ready();
-  assert(await page.locator('.project-questions').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.fiscal-readings'))&Node.DOCUMENT_POSITION_FOLLOWING)));
+  assert(await page.locator('.home-execution').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.fiscal-map'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   assert(!await page.locator('.hero-data').innerText().then(text=>text.replace(/\u00a0/g,' ')).then(t=>/paga.*impuestos/i.test(t)));
   await page.goto(base+'#explorar?periodo=2025-4');await ready();
   const closed=caif.periods['2025-4'];assert((await page.locator('.fiscal-main-result').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('281.526 millones'));assert((await page.locator('.fiscal-main-result h2').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('déficit'));
