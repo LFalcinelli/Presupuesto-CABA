@@ -15,6 +15,7 @@ module.exports=async({page,base})=>{
   else await page.locator('#period-tabs [data-project-tab="summary"]').click();
   await ready();
   assert.match(await page.locator('.project-reading-cards article').first().innerText(),/24,1\s+billones/);
+  assert(await page.locator('.project-reading-cards article>strong').evaluateAll(nodes=>nodes.every(el=>el.scrollWidth<=el.clientWidth+1)),'Los montos caben en las tarjetas');
   assert(await page.locator('.project-overview').evaluate(el=>Boolean(el.compareDocumentPosition(document.querySelector('.page-index'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   assert(await page.locator('.fiscal-flow-panel').evaluate(el=>Boolean(el.compareDocumentPosition(document.querySelector('.area-search'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   if(width<=650){

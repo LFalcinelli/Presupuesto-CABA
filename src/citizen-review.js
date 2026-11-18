@@ -37,7 +37,8 @@ projectOverview=function(){
  const totals=state.projectStages.totals,rows=budgetPriceScenarios(),selected=rows.find(r=>r.base===state.projectBase)||rows[1],other=rows.find(r=>r!==selected),cards=t.content.querySelectorAll('.project-reading-cards article');
  cards[0].innerHTML=`<span>Presupuesto solicitado</span><strong>≈ $ ${formatBillions(totals.project,1)} billones</strong><details class="review-exact"><summary>Importe exacto</summary>${money(totals.project)}</details>`;
  cards[1].innerHTML=`<span>Frente al ${selected.label} 2026</span><strong>${scenarioPercent(selected.real)} real</strong><p class="budget-scenario" data-scenario-base="${other.base}">Frente al ${other.label}: <b>${scenarioPercent(other.real)} real</b>.</p>`;
- cards[2].innerHTML=`<span>Saldo final previsto</span><strong>${short(state.project.summary.financialResult.value).replace(/\u00a0/g,' ')}</strong><small>Casi equilibrio, después de pagar los intereses.</small>`;
+ const balance=short(state.project.summary.financialResult.value).replace(/\u00a0(?=(?:millones|billones)$)/,'<wbr> ');
+ cards[2].innerHTML=`<span>Saldo final previsto</span><strong>${balance}</strong><small>Casi equilibrio, después de pagar los intereses.</small>`;
  const overview=t.content.querySelector('.project-overview');
  overview.id='resumen-2027';
  overview.querySelector('.project-intro')?.remove();
