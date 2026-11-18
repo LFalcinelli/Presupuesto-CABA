@@ -18,11 +18,11 @@ module.exports=async({page,browser,base})=>{
   const semester=await page.locator('.semester-bars').innerText().then(text=>text.replace(/\u00a0/g,' '));for(const r of caif.context.semesters){assert(semester.includes(String(r.year)));assert(semester.includes(new Intl.NumberFormat('es-AR',{minimumFractionDigits:1,maximumFractionDigits:1}).format(r.financialRatio)));}
   if(width<650)await page.locator('#mobile-period').selectOption('history');else await page.locator('#period-tabs [data-view="history"]').click();await ready();assert.equal(await page.locator('.tabs').isVisible(),false);
   assert((await page.locator('.history-impact').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('descontando la inflación'));await page.locator('#execution-year').selectOption('1997');assert((await page.locator('#execution-point').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('criterio distinto'));assert(!(await page.locator('#execution-point').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Etapa definitiva'));
-  await page.goto(base+'#comparar');await ready();assert.equal(await page.locator('#pair-province').inputValue(),'06');
+  await page.goto(base+'#comparar');await ready();assert.equal(await page.locator('#province-select').inputValue(),'06');
   assert.deepEqual(await page.locator('.pair-identities h3').allTextContents(),['CABA','Buenos Aires']);
   assert(await page.locator('.pair-silhouette').evaluateAll(es=>es.every(e=>e.getAttribute('viewBox').split(' ').every(v=>Number.isFinite(+v))&&e.querySelector('path').getBBox().width>0)));
   for(const id of ['06','14']){
-   await page.locator('#pair-province').selectOption(id);const p=provinces.periods.find(p=>p.id==='2026-2'),r=p.rows.find(r=>r.id===id),c=p.rows.find(r=>r.id==='02');const stages=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/budget/2027/stages.json')));
+   await page.locator('#province-select').selectOption(id);const p=provinces.periods.find(p=>p.id==='2026-2'),r=p.rows.find(r=>r.id===id),c=p.rows.find(r=>r.id==='02');const stages=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/budget/2027/stages.json')));
    assert.deepEqual(await page.locator('.pair-identities h3').allTextContents(),['CABA',r.name]);
    const values=await page.locator('.pair-sheet>.pair-metrics>div').first().locator('dd').allTextContents();assert.deepEqual(values,['$\u00a0'+number(stages.totals.initial/c.population),'$\u00a0'+number(r.indicators.budgetPc)]);
   }

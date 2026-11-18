@@ -7,6 +7,7 @@ function nationalRealPoint(r,h){return `<strong>${r.year}</strong> · ${h.ids.ma
 function nationalRealHistory(...args){return Site.featureFunctions.nationalRealHistory.apply(this,args);}
 document.addEventListener('change',e=>{if(e.target.id==='real-history-basis'){state.realHistoryBasis=e.target.value;render()}if(e.target.id==='real-history-year'){state.realHistoryYear=Number(e.target.value);const h=nationalRealState(),r=h.rows.find(r=>r.year===state.realHistoryYear);if(r)$('#real-history-point').innerHTML=nationalRealPoint(r,h)}});
 function comparisonState(){
+ if(!state.selectedProvince)state.selectedProvince='06';
  const d=state.comparisons,ind=d.indicators.find(i=>i.id===state.compareIndicator)||d.indicators.find(i=>i.id===d.defaultIndicator),available=d.periods.filter(p=>ind.availablePeriods?.includes(p.id)||(!ind.availablePeriods&&p.rows.some(r=>Number.isFinite(r.indicators[ind.id])))),p=available.find(p=>p.id===state.comparePeriod)||available.find(p=>p.id===d.defaultPeriod)||available[0];
  const rows=p.rows.filter(r=>Number.isFinite(r.indicators[ind.id])).sort((a,b)=>b.indicators[ind.id]-a.indicators[ind.id]),values=rows.map(r=>r.indicators[ind.id]).sort((a,b)=>a-b),middle=Math.floor(values.length/2),median=values.length%2?values[middle]:(values[middle-1]+values[middle])/2;
  state.comparePeriod=p.id;state.compareIndicator=ind.id;

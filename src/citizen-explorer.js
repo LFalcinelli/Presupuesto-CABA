@@ -35,6 +35,52 @@ function historyUSDPanel(){const d=state.historyUSD;if(!d)return '';const a=d.se
 document.addEventListener('click',e=>{const b=e.target.closest('[data-usd-history]');if(b){state.historyUSDDim=b.dataset.usdHistory;render()}});
 Object.assign(extraViews,{income:incomeCitizen,home:budgetOverview,structure,explained:explainedCitizen,method:methodCitizen,history:historyCitizen,salaries:originalSalary});
 document.addEventListener('click',e=>{const b=e.target.closest('[data-structure-path]');if(b){state.structurePath=JSON.parse(b.dataset.structurePath);state.view='structure';render()}});
-function decorateTables(){document.querySelectorAll('#content table').forEach(table=>{const headers=[...table.querySelectorAll('thead th')].map(th=>th.textContent);table.querySelectorAll('tbody tr').forEach(tr=>[...tr.children].forEach((td,i)=>td.setAttribute('data-label',headers[i]||'')))});document.querySelectorAll('#content svg[role="img"]').forEach(svg=>svg.setAttribute('focusable','false'))}
+let tableScrollSequence=0;
+function updateTableScroll(wrapper){
+ const overflowing=wrapper.clientWidth>0&&wrapper.scrollWidth> wrapper.clientWidth+2;
+ wrapper.classList.toggle('table-overflow',overflowing);
+ wrapper.classList.toggle('table-at-end',wrapper.scrollLeft+wrapper.clientWidth>=wrapper.scrollWidth-2);
+ wrapper.classList.toggle('table-at-start',wrapper.scrollLeft<=2);
+ wrapper.tabIndex=overflowing?0:-1;
+ const hint=document.getElementById(wrapper.dataset.tableScroll);
+ if(hint)hint.hidden=!overflowing;
+}
+const tableScrollObserver=new ResizeObserver(entries=>{
+ for(const {target} of entries)updateTableScroll(target);
+});
+function decorateTables(){
+ tableScrollObserver.disconnect();
+ document.querySelectorAll('#content table').forEach(table=>{
+  const headers=[...table.querySelectorAll('thead th')].map(th=>th.textContent);
+  table.querySelectorAll('tbody tr').forEach(tr=>[...tr.children].forEach((td,i)=>td.setAttribute('data-label',headers[i]||'')));
+  if(table.closest('.sr-only'))return;
+  let wrapper=table.closest('.table-wrap');
+  if(!wrapper){
+   wrapper=document.createElement('div');
+   wrapper.className='table-wrap';
+   table.before(wrapper);
+   wrapper.append(table);
+  }
+  if(!wrapper.dataset.tableScroll){
+   const hint=document.createElement('p');
+   hint.id='table-scroll-hint-'+(++tableScrollSequence);
+   hint.className='table-scroll-hint';
+   hint.textContent='Deslizá o usá las flechas para ver todas las columnas →';
+   hint.hidden=true;
+   wrapper.before(hint);
+   wrapper.dataset.tableScroll=hint.id;
+   wrapper.setAttribute('role','region');
+   wrapper.setAttribute('aria-describedby',hint.id);
+   const title=table.caption?.textContent.trim()||table.closest('section')?.querySelector('h2,h3')?.textContent.trim()||'Datos del presupuesto';
+   wrapper.setAttribute('aria-label','Tabla · '+title);
+  }
+  updateTableScroll(wrapper);
+  tableScrollObserver.observe(wrapper);
+ });
+ document.querySelectorAll('#content svg[role="img"]').forEach(svg=>svg.setAttribute('focusable','false'));
+}
+document.addEventListener('scroll',event=>{
+ if(event.target.matches?.('.table-wrap[data-table-scroll]'))updateTableScroll(event.target);
+},true);
 
 function longMethodNote(){return `<details><summary>Serie larga, presupuestos provinciales y territorio</summary><p>La evolución del presupuesto de CABA comienza en 2005: aprobado hasta 2012, actualizado al cierre anual desde 2013 y actualizado a junio para 2026. El color identifica cada etapa. La comparación entre años ofrece finalidades, funciones, objeto del gasto y gastos corrientes/capital desde 2005. La evolución real provincial abarca 2005–2025; utiliza gastos realizados de DNAP. El contraste en dólares compara el mínimo de la serie 2005–2026 con 2026; ajusta el dólar por CPI-U estadounidense, no por inflación argentina.</p><p>Ambas series usan un IPC empalmado: archivo aportado de nueve provincias hasta abril de 2016, tramo INDEC GBA hasta noviembre de 2016 y niveles originales del IPC nacional desde diciembre de 2016. No se presenta el empalme antiguo como un IPC nacional oficial homogéneo. Se conserva el promedio abril–junio de 2026 como base.</p><p>El presupuesto por habitante divide una autorización anual por el Censo 2022. El presupuesto por km² usa superficies IGN; Tierra del Fuego utiliza 21.571 km² del sector argentino de la Isla Grande e Isla de los Estados, sin superficie antártica ni islas del Atlántico Sur. La elección sirve a la homogeneidad del indicador y no modifica el alcance jurídico de la Provincia. No es una medida de eficiencia.</p><p><a href="/data/budget-history-long.json" download>Presupuestos 2005–2026 y fuentes</a> · <a href="/data/inflation-long.json" download>Índices y método de empalme</a> · <a href="/data/national-spending-history.csv" download>Gasto real provincial</a></p></details>`}

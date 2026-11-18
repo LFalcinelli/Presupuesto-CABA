@@ -50,7 +50,8 @@ explorerShell=function(){
  const project=state.view==='project',history=state.view==='history',current=project?'project':history?'history':state.period;
  const periods=[['project','Proyecto 2027'],...state.config.featuredPeriods.map(id=>[id,periodName(summaryFor(id))]),['history','Evolución 1997–2027']];
  document.querySelector('.compact-period')?.remove();document.querySelector('.explorer-location')?.remove();
- const periodTabs=document.querySelector('#period-tabs');periodTabs.insertAdjacentHTML('beforebegin',`<label class="compact-period">Período de los datos<select id="mobile-period">${periods.map(([id,label])=>`<option value="${id}" ${id===current?'selected':''}>${E(label)}</option>`).join('')}</select></label>`);
+ const descriptions={project:'propuesta',history:'serie histórica',[state.config.currentExecutionPeriod]:'ejecución acumulada','2025-4':'año completo'};
+ const periodTabs=document.querySelector('#period-tabs');periodTabs.insertAdjacentHTML('beforebegin',`<label class="compact-period">Qué querés consultar<select id="mobile-period">${periods.map(([id,label])=>`<option value="${id}" ${id===current?'selected':''}>${E(label)}${descriptions[id]?' · '+descriptions[id]:''}</option>`).join('')}</select></label>`);
  const tab=document.querySelector('.tabs .active')?.textContent||'Gastos';
  periodTabs.insertAdjacentHTML('afterend',`<p class="explorer-location"><span>Estás en</span> ${E(periods.find(([id])=>id===current)?.[1]||periodName(summaryFor(state.period)))}${history?'':` <span>›</span> <strong>${E(tab)}</strong>`}</p>`);
  document.querySelector('.tabs').hidden=history;

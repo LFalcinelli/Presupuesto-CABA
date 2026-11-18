@@ -7,6 +7,14 @@
 - Las viñetas 2027 quedan ocultas con una bandera reversible. Se conservan sus enlaces directos. El proyecto, el mapa fiscal y el buscador siguen accesibles desde Inicio.
 - Se adopta DM Sans local, la familia de Presupuesto PBA, con su licencia OFL.
 
+### Recorridos y lectura
+
+- La navegación recupera los nombres completos en escritorio al volver desde móvil. El selector distingue propuesta, ejecución y cierre anual. En móvil, las cuatro pestañas de Proyecto 2027 caben en una fila.
+- Resumen 2027 abre con el monto, la variación y el saldo, seguido de la cuenta fiscal. La búsqueda de áreas y los puntos de análisis se reubican más abajo. Se agregan accesos compartibles a comparación, áreas y obras.
+- Comparar abre con CABA frente a Buenos Aires, el indicador y las etapas elegidas. El mapa, la lista y la evolución quedan a continuación. Una sola selección de provincia actualiza ambas lecturas y conserva el foco. El indicador elegido encabeza la tabla bilateral.
+- Las tablas que necesitan desplazamiento horizontal muestran una ayuda, admiten teclado e identifican la primera columna. Las tablas que caben conservan su presentación compacta. Se corrige el contraste de la referencia provincial en oscuro.
+- Los accesos de sección conservan provincia, base y demás opciones de la URL.
+
 ## 2026-11-17 · Avance 2026, enero a septiembre
 
 - Nuevo corte inicial de Avance 2026: saldo, deuda, gastos e ingresos al 30/09. Se conserva el enlace al corte de junio.
