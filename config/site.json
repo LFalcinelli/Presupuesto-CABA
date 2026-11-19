@@ -1,13 +1,14 @@
 {
   "schemaVersion": 1,
-  "defaultPeriod": "2026-2",
+  "defaultPeriod": "2026-3",
   "featuredPeriods": [
-    "2026-2",
+    "2026-3",
     "2025-4"
   ],
   "incomePeriods": [
     "2025-4",
-    "2026-2"
+    "2026-2",
+    "2026-3"
   ],
   "analysisPeriods": {
     "2026-2": "semester-analysis"
@@ -23,11 +24,12 @@
   "caifFile": "caif",
   "snapshotPrices": "nominal",
   "currentBudgetYear": 2026,
-  "currentBudgetPeriod": "2026-2",
-  "currentExecutionPeriod": "2026-2",
+  "currentBudgetPeriod": "2026-3",
+  "currentExecutionPeriod": "2026-3",
   "currentBudgetFile": "data/budget/2026/current.json",
-  "lastUpdate": "2026-09-30",
+  "lastUpdate": "2026-11-17",
   "availablePeriods": [
+    "2026-3",
     "2025-4",
     "2026-2",
     "2013-4",
@@ -45,14 +47,16 @@
     "2025-2"
   ],
   "periodLabels": {
-    "2026-2": "Avance 2026",
-    "2025-4": "Cierre 2025"
+    "2026-2": "Junio 2026",
+    "2025-4": "Cierre 2025",
+    "2026-3": "Avance 2026"
   },
   "flags": {
     "compare": true,
     "government": true,
     "salaries": false,
     "world": false,
+    "homeEditorialHighlights": false,
     "homePerCapita": false,
     "homeBudget2026": false,
     "homeClosing2026Projection": true,
@@ -73,7 +77,7 @@
     "revenue",
     "areas"
   ],
-  "lastReviewed": "2026-10-09",
+  "lastReviewed": "2026-11-17",
   "feedback": {
     "destination": null
   }

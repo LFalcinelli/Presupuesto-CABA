@@ -1,0 +1,333 @@
+{
+  "year": 2026,
+  "quarter": 3,
+  "date": "2026-09-30",
+  "source": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias",
+  "ipcSource": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2026/10/ir_2026_2064.pdf",
+  "scope": "Administración Gubernamental · Consolidado General · ingresos realizados menos gastos devengados, antes de figurativas y sin financiamiento · cifras provisorias",
+  "baseIndex": 2598.11,
+  "series": [
+    {
+      "year": 2023,
+      "points": [
+        {
+          "quarter": 1,
+          "nominal": 172120491746.92,
+          "real": 1703897774100.17,
+          "ipc": 262.45,
+          "source": "Contaduría · informe al 31/03/2023, totales por carácter económico; CAIF, fila IX",
+          "url": "https://buenosaires.gob.ar/sites/default/files/2023-05/1ER-TRIMESTRE-2023_0.pdf"
+        },
+        {
+          "quarter": 2,
+          "nominal": 229795176761.12,
+          "real": 2165888573704.23,
+          "ipc": 324.34666666666664,
+          "source": "Contaduría · CAIF al 30/06/2023, fila IX",
+          "url": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias"
+        },
+        {
+          "quarter": 3,
+          "nominal": 381893369070.19,
+          "real": 3115529708352.09,
+          "ipc": 416.1233333333333,
+          "source": "Contaduría · informe al 30/09/2023, totales por carácter económico",
+          "url": "https://buenosaires.gob.ar/sites/default/files/2023-11/3ER-TRIM-2023.pdf"
+        },
+        {
+          "quarter": 4,
+          "nominal": 279846251575.71,
+          "real": 2662886649582.37,
+          "ipc": 585.7366666666667,
+          "source": "Contaduría · informe al 31/12/2023, pp. 13 y 18",
+          "url": "https://buenosaires.gob.ar/sites/default/files/2024-02/4TO%20TRIM%202023.pdf"
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "points": [
+        {
+          "quarter": 1,
+          "nominal": 643642140478.96,
+          "real": 1751576125747.82,
+          "ipc": 954.7133333333335,
+          "source": "Contaduría · CAIF al 31/03/2024, fila IX",
+          "url": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias"
+        },
+        {
+          "quarter": 2,
+          "nominal": 804895105523.59,
+          "real": 2090110278721.12,
+          "ipc": 1237.55,
+          "source": "Contaduría · informe al 30/06/2024, pp. 5, 12 y 20; CAIF, fila IX",
+          "url": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias"
+        },
+        {
+          "quarter": 3,
+          "nominal": 964532157044.01,
+          "real": 2382719892289.58,
+          "ipc": 1417.4333333333334,
+          "source": "Contaduría · informe al 30/09/2024, pp. 12 y 17",
+          "url": "https://buenosaires.gob.ar/sites/default/files/2024-11/3ER_TRIMESTRE_2024.pdf"
+        },
+        {
+          "quarter": 4,
+          "nominal": 373752109798.98,
+          "real": 1406072827777.66,
+          "ipc": 1571.6133333333335,
+          "source": "Contaduría · informe al 31/12/2024, pp. 12 y 17",
+          "url": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "points": [
+        {
+          "quarter": 1,
+          "nominal": 877285929985,
+          "real": 1329453128433.55,
+          "ipc": 1714.4533333333336,
+          "source": "Contaduría · CAIF al 31/03/2025, fila IX",
+          "url": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias"
+        },
+        {
+          "quarter": 2,
+          "nominal": 893310178262.92,
+          "real": 1352144042510.29,
+          "ipc": 1834.7766666666666,
+          "source": "Contaduría · informe al 30/06/2025, pp. 5, 10 y 18; CAIF, fila IX",
+          "url": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias"
+        },
+        {
+          "quarter": 3,
+          "nominal": 923174164295.89,
+          "real": 1391901056359.82,
+          "ipc": 1951.6033333333335,
+          "source": "Contaduría · informe al 30/09/2025, p. 13 y gasto por carácter económico",
+          "url": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias"
+        },
+        {
+          "quarter": 4,
+          "nominal": -281525677404.28,
+          "real": -109527344207.32,
+          "ipc": 2084.6433333333334,
+          "source": "Contaduría · informe al 31/12/2025, ingresos realizados y gasto devengado",
+          "url": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "points": [
+        {
+          "quarter": 1,
+          "nominal": 820806179095.25,
+          "real": 941892346931.16,
+          "ipc": 2264.1066666666666,
+          "source": "Contaduría · informe al 31/03/2026, pp. 13 y 16; CAIF, fila IX",
+          "url": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias"
+        },
+        {
+          "quarter": 2,
+          "nominal": 917460104312.12,
+          "real": 1045045831138.9,
+          "ipc": 2434.4066666666668,
+          "source": "Contaduría · informe al 30/06/2026, ingresos realizados y gasto devengado",
+          "url": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias"
+        },
+        {
+          "quarter": 3,
+          "nominal": 984124721728.2,
+          "real": 1111710448554.98,
+          "ipc": 2598.11,
+          "source": "Contaduría · Exp. 3561/2026, pp. 13 y 20",
+          "url": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias"
+        }
+      ]
+    }
+  ],
+  "samePeriod": [
+    {
+      "year": 2024,
+      "income": 6592227585694.37,
+      "financialResult": 964532157044.01,
+      "source": "https://buenosaires.gob.ar/sites/default/files/2024-11/3ER_TRIMESTRE_2024.pdf",
+      "financialRatio": 14.631354037853871
+    },
+    {
+      "year": 2025,
+      "income": 9711037305964.69,
+      "financialResult": 923174164295.89,
+      "source": "https://buenosaires.gob.ar/sites/default/files/2025-11/3ER_TRIMESTRE_2025.pdf",
+      "financialRatio": 9.506442362535877
+    },
+    {
+      "year": 2026,
+      "income": 12670629873225,
+      "financialResult": 984124721728.2,
+      "source": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias",
+      "financialRatio": 7.76697552982593
+    }
+  ],
+  "annualClosing": {
+    "year": 2025,
+    "income": 13470177564055.3,
+    "expense": 13751703241459.58,
+    "financialResult": -281525677404.28,
+    "financialRatio": -2.0899923261258375
+  },
+  "components": {
+    "income": [
+      {
+        "name": "Ingresos Tributarios",
+        "codes": [
+          "1",
+          "11"
+        ],
+        "current": 10167499193279.2,
+        "previous": 8075709198734.11,
+        "page": 5
+      },
+      {
+        "name": "Transferencias Corrientes",
+        "codes": [
+          "1",
+          "17"
+        ],
+        "current": 1115974385796.7,
+        "previous": 943315137848.08,
+        "page": 10
+      },
+      {
+        "name": "Ingresos no Tributarios",
+        "codes": [
+          "1",
+          "12"
+        ],
+        "current": 831361714915.34,
+        "previous": 213267697152.58,
+        "page": 6
+      },
+      {
+        "name": "Rentas de la Propiedad",
+        "codes": [
+          "1",
+          "16"
+        ],
+        "current": 344064673483.62,
+        "previous": 325568178134.19,
+        "page": 10
+      },
+      {
+        "name": "Venta de Bienes y Servicios de la Administracion Publica",
+        "codes": [
+          "1",
+          "14"
+        ],
+        "current": 206409555853.26,
+        "previous": 140850664361.63,
+        "page": 8
+      },
+      {
+        "name": "RECURSOS DE CAPITAL",
+        "codes": [
+          "2"
+        ],
+        "current": 5320349896.92,
+        "previous": 12326429734.1,
+        "page": 12
+      }
+    ],
+    "expense": [
+      {
+        "name": "Gastos En Personal",
+        "codes": [
+          "1"
+        ],
+        "current": 5428303759789.99,
+        "previous": 4068349017344,
+        "page": 73
+      },
+      {
+        "name": "Servicios No Personales",
+        "codes": [
+          "3"
+        ],
+        "current": 3163156645725.14,
+        "previous": 2413134379877,
+        "page": 73
+      },
+      {
+        "name": "Transferencias",
+        "codes": [
+          "5"
+        ],
+        "current": 1648226303018.89,
+        "previous": 1262806932592,
+        "page": 74
+      },
+      {
+        "name": "Bienes De Uso",
+        "codes": [
+          "4"
+        ],
+        "current": 843306912335.95,
+        "previous": 690924508949,
+        "page": 74
+      },
+      {
+        "name": "Bienes De Consumo",
+        "codes": [
+          "2"
+        ],
+        "current": 328807136389.99,
+        "previous": 272612715428,
+        "page": 73
+      },
+      {
+        "name": "Activos Financieros",
+        "codes": [
+          "6"
+        ],
+        "current": 135901748260.51,
+        "previous": 22936209734,
+        "page": 74
+      },
+      {
+        "name": "Servicio De La Deuda Y Disminución De Otros Pasivos",
+        "codes": [
+          "7"
+        ],
+        "current": 115955848216.92,
+        "previous": 57090258240,
+        "page": 75
+      },
+      {
+        "name": "Otros Gastos",
+        "codes": [
+          "8"
+        ],
+        "current": 22846797759.46,
+        "previous": 9119745,
+        "page": 75
+      }
+    ]
+  },
+  "comparison": {
+    "factor": 1.3264578094228148,
+    "income": {
+      "previous": 9711037305964.69,
+      "current": 12670629873225
+    },
+    "expense": {
+      "previous": 8787863141668.8,
+      "current": 11686505151496.8
+    },
+    "balance": {
+      "previous": 923174164295.89,
+      "current": 984124721728.2
+    }
+  }
+}

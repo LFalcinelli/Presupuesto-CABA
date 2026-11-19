@@ -22,3 +22,55 @@ main [id^="page-"],#budget-depth{scroll-margin-top:150px}
 @media(max-width:650px){.page-index{position:static;padding:10px 14px;margin:16px 0 24px;box-shadow:none}.page-index>summary{min-height:24px}.page-index nav{display:grid;gap:2px}.page-index a{min-height:38px}.history-growth-caption,.history-event-label>a{display:none}main [id^="page-"],#budget-depth{scroll-margin-top:30px}}
 
 @media(max-width:650px){.history-chart-scroll .project-history-marker,.history-chart-scroll [data-execution-year="2026"] circle{stroke-width:2}}
+/* Keep execution tabs readable and the structure shortcut on its own line. */
+.project-overview{margin-top:20px}
+.project-overview>.project-reading-cards{margin-top:0}
+.project-overview .project-reading-cards>article:first-child{background:var(--elevated);border-color:var(--reference)}
+.project-overview .project-reading-cards>article:first-child>strong{font-size:var(--type-card-value);line-height:1.15}
+.project-overview .project-reading-cards .review-exact{padding:0;border:0;margin:8px 0 0}
+.project-overview .project-reading-cards .review-exact summary{min-height:36px}
+.project-overview .project-reading-cards>article{padding:20px}
+.project-overview .project-reading-cards>article>strong{margin:12px 0}
+.project-overview .review-base-control{margin:12px 0 0}
+.project-overview+.page-index{position:static;box-shadow:none}
+.comparison-landscape{margin-top:36px;padding-top:28px;border-top:1px solid var(--line)}
+.comparison-landscape-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.comparison-landscape-heading h2{margin:0}
+.comparisons #province-pair{margin-top:24px}
+.comparisons .compare-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px;padding:16px;border:1px solid var(--line);border-radius:10px;background:var(--elevated)}
+.comparisons .compare-controls label{min-width:0}
+.comparisons .compare-controls select{width:100%;max-width:100%;min-height:44px}
+.comparisons .page-index{position:static;box-shadow:none}
+.pair-budget-stage{display:block;font-size:.875rem;font-weight:650;color:var(--muted);margin-top:8px}
+.province-difference span{color:var(--muted)}
+.table-scroll-hint{margin:12px 0 6px;font-size:.875rem;font-weight:600;color:var(--violet)}
+.table-scroll-hint[hidden]{display:none}
+.table-wrap.table-overflow{position:relative;overflow-x:auto;overscroll-behavior-x:contain;border-inline:1px solid var(--line);border-radius:4px}
+.table-overflow:not(.table-at-end){box-shadow:inset -12px 0 12px -12px var(--reference)}
+.table-overflow:not(.table-at-start){box-shadow:inset 12px 0 12px -12px var(--reference)}
+.table-overflow :is(thead th:first-child,tbody th[scope="row"]){position:sticky;left:0;z-index:1;background:var(--surface);box-shadow:1px 0 var(--line)}
+.table-overflow thead th:first-child{z-index:2}
+.table-overflow tbody th[scope="row"]{max-width:180px;white-space:normal;overflow-wrap:anywhere}
+@media(max-width:650px){
+ .comparisons .compare-controls{grid-template-columns:minmax(0,1fr);gap:12px}
+ .comparisons .compare-controls label{width:100%}
+ .project-overview .project-reading-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .project-overview .project-reading-cards>article{min-width:0;padding:14px}
+ .project-overview .project-reading-cards>article:first-child{grid-column:1/-1}
+ .project-overview .project-reading-cards>article:not(:first-child)>strong{font-size:1.4rem;line-height:1.2;overflow-wrap:normal;white-space:normal}
+ .project-overview .project-reading-cards>article small{font-size:.85rem;line-height:1.4}
+ .table-overflow :is(thead th:first-child,tbody th[scope="row"]){max-width:44vw}
+}
+@media(max-width:650px){
+  #explorer-controls>.mobile-explorer:has(.tabs:not([hidden]) [data-project-tab]) .compact-period{flex-basis:100%;max-width:none;margin-bottom:6px}
+  #explorer-controls>.mobile-explorer:has(.tabs:not([hidden]) [data-project-tab])>.controls{flex-basis:100%;padding:0}
+  #explorer-controls .mobile-explorer .controls:has(.tabs:not([hidden]) [data-project-tab])::after{display:none}
+  #explorer-controls .mobile-explorer .tabs:not([hidden]):has(>[data-project-tab]){display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;overflow:visible;padding:0}
+  #explorer-controls .mobile-explorer .tabs:not([hidden]):has(>[data-project-tab])>button{min-width:0;padding-inline:4px;white-space:normal}
+  #explorer-controls>.mobile-explorer:has(.tabs:not([hidden]) [data-view="income"]) .compact-period{flex-basis:100%;max-width:none;margin-bottom:6px}
+  #explorer-controls>.mobile-explorer:has(.tabs:not([hidden]) [data-view="income"])>.controls{flex-basis:100%;padding:0}
+  #explorer-controls .mobile-explorer .controls:has(.tabs:not([hidden]) [data-view="income"])::after{display:none}
+  #explorer-controls .mobile-explorer .tabs:not([hidden]):has(>[data-view="income"]){display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;overflow:visible;padding:0}
+  #explorer-controls .mobile-explorer .tabs:not([hidden]):has(>[data-view="income"])>button{min-width:0;padding-inline:5px;white-space:normal}
+  #explorer-controls .mobile-explorer .tabs:not([hidden]):has(>[data-view="income"])>[data-view="structure"]{grid-column:1/-1}
+}

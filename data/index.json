@@ -1186,6 +1186,34 @@
       "files": [
         "data/budget/2027/area-highlights.json"
       ]
+    },
+    {
+      "id": "2026-3",
+      "name": "Gastos · enero a septiembre 2026",
+      "path": "data/budget/2026/2026-3.json",
+      "period": "2026-3",
+      "lastUpdate": "2026-11-17",
+      "source": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias",
+      "type": "official",
+      "description": "DG Contaduría · Ejecución al 30/09/2026 · Exp. 3561/2026",
+      "files": [
+        "data/budget/2026/2026-3.json",
+        "data/budget/2026/2026-3.csv"
+      ]
+    },
+    {
+      "id": "income-2026-3",
+      "name": "Ingresos · enero a septiembre 2026",
+      "path": "data/revenue/income-2026-3.json",
+      "period": "2026-3",
+      "lastUpdate": "2026-11-17",
+      "source": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias",
+      "type": "official",
+      "description": "DG Contaduría · Ejecución al 30/09/2026 · Exp. 3561/2026",
+      "files": [
+        "data/revenue/income-2026-3.json",
+        "data/revenue/income-2026-3.csv"
+      ]
     }
   ],
   "resources": {
@@ -1263,6 +1291,7 @@
     "data/series.csv": "data/budget/series.csv",
     "data/project-2027.json": "data/budget/2027/project.json",
     "data/project-comparison-2026.json": "data/budget/2027/comparison-2026.json",
-    "data/salary-latest-reference.json": "data/salaries/latest-reference.json"
+    "data/salary-latest-reference.json": "data/salaries/latest-reference.json",
+    "data/home-execution.json": "data/fiscal-results/home-execution.json"
   }
 }

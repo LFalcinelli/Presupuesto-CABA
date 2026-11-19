@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
+import {advanceHomeReading,advancePath} from './advance-home-reading.mjs';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
@@ -75,17 +76,17 @@ const cards=copy.cards.map(c=>({...c}));
 const publicMedia=new Set(units('20',[2500,2501]));for(const c of publicity.components)c.kind=publicMedia.has(c.id)?'public-media':'government-communication';
 Object.assign(cards[0],{components:currentComponents,amount:cur27.nominal,display:'$'+new Intl.NumberFormat('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2}).format(cur27.nominal/1e12)+' billones',perCapita:cur27.nominal/project.population.value,perCapitaLabel:'GASTO CORRIENTE POR PORTEÑO',realGrowth2025:(cur27.real/cur25.real-1)*100,realCapitalChange2026:comparison.groups.economic.find(r=>r.id==='capital').realVariationPct,capitalComparisons:{current:comparison.groups.economic.find(r=>r.id==='capital').realVariationPct,initial:(comparison.groups.economic.find(r=>r.id==='capital').project/F/execution.rows.filter(r=>r.fiscal&&r.codes[9].startsWith('22')).reduce((s,r)=>s+r.s,0)-1)*100},previousRecordYear:previousRecord.year,abovePreviousRecord:(cur27.real/previousRecord.real-1)*100,
  history:current.filter(r=>[2005,2023,2025,2026,2027].includes(r.year)),capital:capital.filter(r=>[2026,2027].includes(r.year)),population:project.population,definition:'Gasto corriente sin intereses: sueldos, insumos, servicios contratados y transferencias corrientes. No es solo el agrupamiento de funcionamiento, que excluye transferencias.',method:'Importes históricos a precios de abril–junio de 2026, con los índices y supuestos de la serie histórica. 2026 y 2027 son autorizaciones, no ejecución. Es la misma inflación promedio anual estimada que usa la comparación de presupuestos 2027 y 2026.',source:hist.source,priceAdjustment:hist.priceAdjustment});
-cards[0].text=cards[0].text.replace('{capitalChange}',new Intl.NumberFormat('es-AR',{maximumFractionDigits:1}).format(Math.abs(cards[0].realCapitalChange2026))+'%');
+cards[0].text=cards[0].text.replace('{capitalChange}',new Intl.NumberFormat('es-AR',{maximumFractionDigits:1}).format(Math.abs(cards[0].realCapitalChange2026))+'%').replace('frente al ampliado 2026','frente al vigente 2026');
 Object.assign(cards[1],{closing2026Review:copy.closing2026Review,annual2025:caif.periods['2025-4'],semesters:caif.context.semesters,financialResult2027:s.financialResult.value,primaryResult2027:s.primaryResult.value,interest2027:s.interest.value,interestInitial2026:interestInitial,interestRealChangeInitial:(s.interest.value/interestInitial/F-1)*100,interestSharePrimary:s.interest.value/s.primaryResult.value*100,expense2027:s.fiscalExpense.value,providers:provider,belgrano,stock:depth.debt.stock,source:project.source});
 cards[1].text=cards[1].text.replace('{bonds}',million(provider.amount));
 // Scenarios requested in v15. These are conditional site estimates, never official forecasts.
-const annual25=caif.periods['2025-4'],half26=caif.periods['2026-2'],half25=caif.context.semesters.find(r=>r.year===2025),execution25=approvedExecution.periods.find(r=>r.period==='2025-4');
-const secondHalf25=annual25.financialResult-half25.financialResult,incomeFactor=half26.income/half25.income,estimatedIncome26=annual25.income*incomeFactor;
-const result26=half26.financialResult+secondHalf25*incomeFactor,overspend25=execution25.executed/execution25.initial-1;
+const execution25=approvedExecution.periods.find(r=>r.period==='2025-4');
+const overspend25=execution25.executed/execution25.initial-1;
 cards[1].scenarios={
- closing2026:{result:result26,income:estimatedIncome26,ratio:result26/estimatedIncome26*100,secondHalf2025:secondHalf25,incomeFactor,formula:'Resultado H1 2026 + (resultado anual 2025 − resultado H1 2025) × (ingresos H1 2026 / ingresos H1 2025)',incomeFormula:'Ingresos anuales 2025 × (ingresos H1 2026 / ingresos H1 2025)',assumption:'Segundo semestre 2025 escalado por el crecimiento de ingresos del primer semestre. No es una proyección oficial ni ajusta cada partida.',sources:['data/fiscal-results/caif.json:periods.2026-2','data/fiscal-results/caif.json:periods.2025-4','data/fiscal-results/caif.json:context.semesters[year=2025]']},
  spending2027:{result:s.financialResult.value-s.fiscalExpense.value*overspend25,overspend2025:overspend25,executed2025:execution25.executed,approved2025:execution25.initial,formula:'Saldo financiero 2027 − gasto fiscal 2027 × (ejecutado 2025 / votado 2025 − 1)',assumption:'Mismo desvío porcentual del gasto ejecutado frente al votado 2025, con ingresos 2027 sin cambios. No asegura un déficit ni agrega los proyectos de deuda al gasto.',sources:['data/execution/approved-vs-executed.json:periods[period=2025-4]','data/budget/2027/project.json:summary.financialResult','data/budget/2027/project.json:summary.fiscalExpense']}
 };
+advanceHomeReading(cards[1],read(advancePath));
+files.push(advancePath);
 Object.assign(cards[2],{groups:[publicity,events,paso],amount:sum([publicity,events,paso]),method:'Selección editorial, no clasificación oficial. Incluye una estimación PASO y costos de servicios. No demuestra que el total pueda eliminarse sin efectos.'});
 cards[2].ownTaxShare=cards[2].amount/taxReference.ownTaxes*100;cards[2].ownTaxes=taxReference.ownTaxes;cards[2].display=million(cards[2].amount);cards[2].text=cards[2].text.replace('{total}',cards[2].display);
 Object.assign(cards[3],{groups:[support,housing,green],amount:sum([support,housing,green]),method:'Agrupación editorial para examinar funciones. No prueba que toda la estructura sea redundante. No se suman las viñetas 3 y 4: algunas partidas de publicidad están dentro de programas de conducción.'});

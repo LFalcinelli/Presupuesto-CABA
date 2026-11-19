@@ -20,11 +20,11 @@ for(const k of ['purposes','functions','jurisdictions','objects','economic'])ass
 assert.equal(p.breakdowns.revenue.reduce((a,r)=>a+r.value,0),v('fiscalRevenue'));
 for(const purpose of p.breakdowns.purposes)assert.equal(p.breakdowns.functions.filter(f=>f.purpose===purpose.name).reduce((a,r)=>a+r.value,0),purpose.value);
 for(const m of [...Object.values(s),...Object.values(p.breakdowns).flat(),...p.creditAuthorizations]){assert(m.pdfPage>=1&&m.pdfPage<=297&&m.reference&&m.source);assert.equal(m.status,'project');assert(m.unit&&m.universe&&Number.isFinite(m.value));}
-const c=read('data/budget/2027/comparison-2026.json');assert.equal(c.inflationAdjusted,true);assert.equal(c.totals.reference,19877152039294);
+const c=read('data/budget/2027/comparison-2026.json');assert.equal(c.inflationAdjusted,true);assert.equal(c.totals.reference,19878243196345);
 assert.equal(c.deflator.percentage,21.3);assert.equal(c.deflator.factor,1.213);assert.equal(c.deflator.basis,'annual-average');assert.equal(c.deflator.sourceType,'owner-estimate');
-assert.equal(c.totals.project,v('fiscalExpense'));assert(Math.abs(c.totals.realVariationPct-(24094340599263/19877152039294/1.213-1)*100)<1e-9);
+assert.equal(c.totals.project,v('fiscalExpense'));assert(Math.abs(c.totals.realVariationPct-(24094340599263/19878243196345/1.213-1)*100)<1e-9);
 assert(c.totals.nominalVariationPct>21&&c.totals.nominalVariationPct<22);assert(c.totals.realVariationPct>-0.1&&c.totals.realVariationPct<0);
-const income2026=read('data/revenue/income-2026-2.json');
+const income2026=read('data/revenue/income-2026-3.json');
 for(const [key,rows] of Object.entries(c.groups)){
  const expected=key==='revenue'?v('fiscalRevenue'):key==='taxRevenue'?p.breakdowns.taxRevenue.reduce((sum,r)=>sum+r.value,0):c.totals.project;
  const reference=key==='revenue'?income2026.total.v:key==='taxRevenue'?income2026.rows.find(r=>r.codes.join('.')==='1.11').v:c.totals.reference;
@@ -38,7 +38,7 @@ assert.equal(infrastructure.length,1);assert(infrastructure[0].a>0&&infrastructu
 assert(Math.abs((infrastructure[0].b/infrastructure[0].a-1)*100-1.259216)<.0001);
 assert(c.groups.jurisdictions.find(r=>r.jurisdictionCode==='31').reference>1.8e12);
 assert.equal(c.groups.functions.length,20);assert.equal(c.groups.jurisdictions.length,22);
-const config=read('config/site.json');assert.equal(config.featuredBudgetStatus,'project');assert.equal(config.currentExecutionPeriod,'2026-2');assert.equal(config.currentBudgetYear,2026);assert.deepEqual(config.projectViews,['summary','expenses','revenue','areas']);
+const config=read('config/site.json');assert.equal(config.featuredBudgetStatus,'project');assert.equal(config.currentExecutionPeriod,'2026-3');assert.equal(config.currentBudgetYear,2026);assert.deepEqual(config.projectViews,['summary','expenses','revenue','areas']);
 assert(!fs.existsSync(path.resolve(__dirname,'../data/revenue/2027/tax-changes.json')));
 const salary=read('data/salaries/latest-reference.json');assert.equal(salary.latest.value,12474468.49);assert.equal(salary.ratio,salary.latest.value/salary.president.value);
 console.log('Proyecto 2027: universo, resultados, clasificaciones, comparación nominal/real estimada, trazabilidad y separación de ejecución verificados.');

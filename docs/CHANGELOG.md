@@ -1,5 +1,35 @@
 # Cambios
 
+## 2026-11-19 · Recuperar el cierre y abrir los componentes
+
+- Inicio recupera el gráfico del déficit anual 2025 y actualiza la comparación del margen a enero–septiembre de 2024, 2025 y 2026.
+- El gráfico de variaciones incorpora un botón que muestra los principales rubros de ingresos y partidas de gasto, con montos ejecutados y variaciones reales. Los grupos restantes se suman sin duplicaciones.
+- La comparación del margen usa el saldo y los ingresos del mismo período. Se incorpora el ingreso oficial de septiembre de 2024 a su referencia histórica y se reutilizan los totales ya verificados de 2025 y 2026.
+
+## 2026-11-18 · Portada de ejecución y tipografía
+
+- Inicio prioriza el tercer trimestre de 2026 con dos gráficos: saldo acumulado por año y variaciones reales de ingresos y gastos frente al mismo corte de 2025.
+- Los puntos de 2023–2026 se calculan con cortes oficiales. El saldo se ajusta trimestre por trimestre a precios de julio–septiembre de 2026. La portada ofrece selector de corte, tablas y fuentes.
+- Las viñetas 2027 quedan ocultas con una bandera reversible. Se conservan sus enlaces directos. El proyecto, el mapa fiscal y el buscador siguen accesibles desde Inicio.
+- Se adopta DM Sans local, la familia de Presupuesto PBA, con su licencia OFL.
+
+### Recorridos y lectura
+
+- La navegación recupera los nombres completos en escritorio al volver desde móvil. El selector distingue propuesta, ejecución y cierre anual. En móvil, las cuatro pestañas de Proyecto 2027 caben en una fila.
+- Resumen 2027 abre con el monto, la variación y el saldo, seguido de la cuenta fiscal. La búsqueda de áreas y los puntos de análisis se reubican más abajo. Se agregan accesos compartibles a comparación, áreas y obras.
+- Comparar abre con CABA frente a Buenos Aires, el indicador y las etapas elegidas. El mapa, la lista y la evolución quedan a continuación. Una sola selección de provincia actualiza ambas lecturas y conserva el foco. El indicador elegido encabeza la tabla bilateral.
+- Las tablas que necesitan desplazamiento horizontal muestran una ayuda, admiten teclado e identifican la primera columna. Las tablas que caben conservan su presentación compacta. Se corrige el contraste de la referencia provincial en oscuro.
+- Los accesos de sección conservan provincia, base y demás opciones de la URL.
+
+## 2026-11-17 · Avance 2026, enero a septiembre
+
+- Nuevo corte inicial de Avance 2026: saldo, deuda, gastos e ingresos al 30/09. Se conserva el enlace al corte de junio.
+- Se incorpora el informe de Contaduría (Exp. 3561/2026) con páginas por fila. Los gastos se exploran por finalidad/función, área/unidad/programa, inciso/partida, carácter económico y ubicación.
+- Comparaciones enero–septiembre contra el mismo período de 2025, ajustadas con el promedio observado del IPCBA. Presupuestos anuales 2027/2026 conservan el ajuste promedio anual de la versión publicada.
+- Septiembre actualiza las bases agregadas de Proyecto 2027, las fichas de Áreas, Comparar CABA y los puntos de gasto total, capital e ingresos en Evolución. Las vistas que necesitan el detalle cruzado o el código exacto de intereses distinguen el corte de junio.
+- Inicio muestra el saldo observado de 2026. El escenario de cierre se recalcula con el cuarto trimestre de 2025 y se identifica como estimación.
+- Menos texto repetido en tarjetas y gráficos. Las fórmulas y supuestos quedan en Fuentes y metodología.
+
 ## 2026-11-17 · Inflación promedio anual
 
 - Por pedido del dueño, todas las comparaciones a precios constantes usan la inflación promedio anual del IPCBA (promedio contra promedio). 2014–2025 ya la usaban y no cambian. 2026 pasa a 32,3% estimado (IPCBA observado hasta octubre) y 2027 a 21,3% estimado; antes se derivaban de supuestos diciembre/diciembre de 30% y 18% (32,2% y 21,4%).

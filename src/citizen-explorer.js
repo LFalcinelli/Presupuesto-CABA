@@ -1,6 +1,6 @@
 'use strict';
 const originalMethod=method,originalHistory=historical,originalSalary=salaries,originalIncome=income;
-function incomeCitizen(){let html=originalIncome();const change=!state.incomePath?.length?(state.period==='2025-4'?annualComparisonPanel('income'):state.incomeComparison&&state.config.incomeAnalysisPeriods?.[state.period]?incomeComparisonPanel():''):'';return html.replace('<!-- income-change-slot -->',()=>change)}
+function incomeCitizen(){let html=originalIncome();const change=!state.incomePath?.length?(state.period===advancePeriod?quarterIncomePanel():state.period==='2025-4'?annualComparisonPanel('income'):state.incomeComparison&&state.config.incomeAnalysisPeriods?.[state.period]?incomeComparisonPanel():''):'';return html.replace('<!-- income-change-slot -->',()=>change)}
 
 function incomeComparisonPanel(){const d=state.incomeComparison,t=d.total,change=(t.b/t.a-1)*100;return `<section class="income-comparison"><p class="eyebrow">AVANCE ${state.dataset.year} · MISMO SEMESTRE, MISMO PODER DE COMPRA</p><h3>¿Cómo cambió la recaudación?</h3><p>Primer semestre de 2025 frente al primer semestre de 2026.</p>${provenance('calculation','Ingresos realizados oficiales reexpresados con IPCBA promedio semestral. Recursos corrientes y de capital; se excluyen fuentes financieras y contribuciones figurativas.')}<div class="metrics"><div class="metric"><label>2025 · actualizado por inflación</label><strong>${short(t.a)}</strong><small>Precios promedio de abril–junio 2026</small></div><div class="metric"><label>2026 · actualizado por inflación</label><strong>${short(t.b)}</strong><small>Precios promedio de abril–junio 2026</small></div><div class="metric"><label>Variación real</label><strong>${signedPct(change)}</strong><small>Descontando la inflación</small></div></div><div class="chart-panel"><h4>Los recursos, por origen</h4>${incomePairedBars(d.groups)}<section class="income-tax-changes"><h4>Cómo cambiaron los principales impuestos</h4><p class="note">Son componentes de los ingresos tributarios del gráfico anterior.</p>${incomePairedBars(d.taxes)}</section></div><details><summary>Ver valores y fuentes de la comparación</summary><div class="table-wrap"><table><caption>Ingresos realizados · millones de pesos del 2.º trimestre de 2026</caption><thead><tr><th>Origen</th><th>1S2025</th><th>1S2026</th><th>Variación real</th></tr></thead><tbody>${[t,...d.groups].map(r=>`<tr><td>${E(displayName(r.name))}</td><td class="num">${fmt(r.a/1e6)}</td><td class="num">${fmt(r.b/1e6)}</td><td class="num">${r.a?signedPct((r.b/r.a-1)*100):'Sin base'}</td></tr>`).join('')}</tbody></table></div><p>Se ajusta el acumulado de cada semestre por el IPCBA promedio del mismo período. No se compara un semestre con un año completo.</p><p><a href="${d.officialSources[0].url}" target="_blank" rel="noopener">GCBA · ejecuciones presupuestarias</a> · <a href="/sources/recursos-2026-2.pdf" target="_blank" rel="noopener">Informe 2026</a> · <a href="/data/income-comparison.csv" download>Descargar CSV</a> · <a href="/data/income-comparison.json" download>Fuentes y metadatos JSON</a></p></details></section>`}
 function incomePairedBars(rows){return `<div class="comparison-legend"><span><i class="year-2025"></i>1.er semestre 2025</span><span><i class="year-2026"></i>1.er semestre 2026</span></div>${incomePairedBarsForHistory(rows,2025,2026)}`}
@@ -35,6 +35,52 @@ function historyUSDPanel(){const d=state.historyUSD;if(!d)return '';const a=d.se
 document.addEventListener('click',e=>{const b=e.target.closest('[data-usd-history]');if(b){state.historyUSDDim=b.dataset.usdHistory;render()}});
 Object.assign(extraViews,{income:incomeCitizen,home:budgetOverview,structure,explained:explainedCitizen,method:methodCitizen,history:historyCitizen,salaries:originalSalary});
 document.addEventListener('click',e=>{const b=e.target.closest('[data-structure-path]');if(b){state.structurePath=JSON.parse(b.dataset.structurePath);state.view='structure';render()}});
-function decorateTables(){document.querySelectorAll('#content table').forEach(table=>{const headers=[...table.querySelectorAll('thead th')].map(th=>th.textContent);table.querySelectorAll('tbody tr').forEach(tr=>[...tr.children].forEach((td,i)=>td.setAttribute('data-label',headers[i]||'')))});document.querySelectorAll('#content svg[role="img"]').forEach(svg=>svg.setAttribute('focusable','false'))}
+let tableScrollSequence=0;
+function updateTableScroll(wrapper){
+ const overflowing=wrapper.clientWidth>0&&wrapper.scrollWidth> wrapper.clientWidth+2;
+ wrapper.classList.toggle('table-overflow',overflowing);
+ wrapper.classList.toggle('table-at-end',wrapper.scrollLeft+wrapper.clientWidth>=wrapper.scrollWidth-2);
+ wrapper.classList.toggle('table-at-start',wrapper.scrollLeft<=2);
+ wrapper.tabIndex=overflowing?0:-1;
+ const hint=document.getElementById(wrapper.dataset.tableScroll);
+ if(hint)hint.hidden=!overflowing;
+}
+const tableScrollObserver=new ResizeObserver(entries=>{
+ for(const {target} of entries)updateTableScroll(target);
+});
+function decorateTables(){
+ tableScrollObserver.disconnect();
+ document.querySelectorAll('#content table').forEach(table=>{
+  const headers=[...table.querySelectorAll('thead th')].map(th=>th.textContent);
+  table.querySelectorAll('tbody tr').forEach(tr=>[...tr.children].forEach((td,i)=>td.setAttribute('data-label',headers[i]||'')));
+  if(table.closest('.sr-only'))return;
+  let wrapper=table.closest('.table-wrap');
+  if(!wrapper){
+   wrapper=document.createElement('div');
+   wrapper.className='table-wrap';
+   table.before(wrapper);
+   wrapper.append(table);
+  }
+  if(!wrapper.dataset.tableScroll){
+   const hint=document.createElement('p');
+   hint.id='table-scroll-hint-'+(++tableScrollSequence);
+   hint.className='table-scroll-hint';
+   hint.textContent='Deslizá o usá las flechas para ver todas las columnas →';
+   hint.hidden=true;
+   wrapper.before(hint);
+   wrapper.dataset.tableScroll=hint.id;
+   wrapper.setAttribute('role','region');
+   wrapper.setAttribute('aria-describedby',hint.id);
+   const title=table.caption?.textContent.trim()||table.closest('section')?.querySelector('h2,h3')?.textContent.trim()||'Datos del presupuesto';
+   wrapper.setAttribute('aria-label','Tabla · '+title);
+  }
+  updateTableScroll(wrapper);
+  tableScrollObserver.observe(wrapper);
+ });
+ document.querySelectorAll('#content svg[role="img"]').forEach(svg=>svg.setAttribute('focusable','false'));
+}
+document.addEventListener('scroll',event=>{
+ if(event.target.matches?.('.table-wrap[data-table-scroll]'))updateTableScroll(event.target);
+},true);
 
 function longMethodNote(){return `<details><summary>Serie larga, presupuestos provinciales y territorio</summary><p>La evolución del presupuesto de CABA comienza en 2005: aprobado hasta 2012, actualizado al cierre anual desde 2013 y actualizado a junio para 2026. El color identifica cada etapa. La comparación entre años ofrece finalidades, funciones, objeto del gasto y gastos corrientes/capital desde 2005. La evolución real provincial abarca 2005–2025; utiliza gastos realizados de DNAP. El contraste en dólares compara el mínimo de la serie 2005–2026 con 2026; ajusta el dólar por CPI-U estadounidense, no por inflación argentina.</p><p>Ambas series usan un IPC empalmado: archivo aportado de nueve provincias hasta abril de 2016, tramo INDEC GBA hasta noviembre de 2016 y niveles originales del IPC nacional desde diciembre de 2016. No se presenta el empalme antiguo como un IPC nacional oficial homogéneo. Se conserva el promedio abril–junio de 2026 como base.</p><p>El presupuesto por habitante divide una autorización anual por el Censo 2022. El presupuesto por km² usa superficies IGN; Tierra del Fuego utiliza 21.571 km² del sector argentino de la Isla Grande e Isla de los Estados, sin superficie antártica ni islas del Atlántico Sur. La elección sirve a la homogeneidad del indicador y no modifica el alcance jurídico de la Provincia. No es una medida de eficiencia.</p><p><a href="/data/budget-history-long.json" download>Presupuestos 2005–2026 y fuentes</a> · <a href="/data/inflation-long.json" download>Índices y método de empalme</a> · <a href="/data/national-spending-history.csv" download>Gasto real provincial</a></p></details>`}

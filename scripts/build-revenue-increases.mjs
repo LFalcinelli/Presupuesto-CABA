@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),project=read('data/budget/2027/project.json'),map=read('data/budget/2027/fiscal-map.json'),comparison=read('data/budget/2027/comparison-2026.json'),income=read('data/revenue/income-2026-2.json');
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),project=read('data/budget/2027/project.json'),map=read('data/budget/2027/fiscal-map.json'),comparison=read('data/budget/2027/comparison-2026.json'),income=read(comparison.classificationMethod.referenceIncome);
 const F=comparison.deflator.factor,F_TEXT=String(F).replace('.',',');
 const rows=[];
 const add=(name,value,code,page,note='')=>{const base=income.rows.find(r=>r.codes.join('.')===code);if(!base)throw Error('Missing income '+code);rows.push({name,project2027:value,initial2026:base.s,current2026:base.v,realDifferenceInitial:value/F-base.s,realDifferenceCurrent:value/F-base.v,realVariationInitial:base.s>0?(value/F/base.s-1)*100:null,realVariationCurrent:base.v>0?(value/F/base.v-1)*100:null,code,note,source2027:project.source.document,pdfPage2027:page,source2026:income.sourceFile,pdfPage2026:base.page});};

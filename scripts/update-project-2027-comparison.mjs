@@ -18,7 +18,7 @@ d.deflator={indicator:'Inflación promedio anual (IPCBA, promedio 2027 contra pr
  limitation:'Estimación de inflación promedio anual, no inflación observada. Es el mismo ajuste que usa la serie de Evolución.'};
 d.inflationAdjusted=true;d.defaultDisplay='real';
 d.adjustedUnit='ARS a precios de 2026 · ajuste con inflación promedio anual estimada';
-d.method='Dos autorizaciones anuales del mismo universo fiscal. Proyecto 2027 frente al presupuesto 2026 actualizado al 30/06. Variación real estimada = (Proyecto 2027 / Presupuesto 2026 / 1,213 − 1) × 100, con inflación promedio anual estimada de 21,3% para 2027. Se conserva también la lectura nominal. No compara ejecuciones ni utiliza inflación observada.';
+d.method='Dos autorizaciones anuales del mismo universo fiscal. Proyecto 2027 frente al presupuesto 2026 vigente al '+String(d.referenceDate).split('-').reverse().join('/')+'. Variación real estimada = (Proyecto 2027 / Presupuesto 2026 / 1,213 − 1) × 100, con inflación promedio anual estimada de 21,3% para 2027. Se conserva también la lectura nominal. No compara ejecuciones ni utiliza inflación observada.';
 d.totals.nominalVariationPct=(d.totals.project/d.totals.reference-1)*100;
 d.totals.projectAdjusted=d.totals.project/factor;
 d.totals.realDifference=d.totals.projectAdjusted-d.totals.reference;

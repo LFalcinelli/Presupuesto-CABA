@@ -5,23 +5,24 @@ module.exports=async({page,browser,base})=>{
  const ready=()=>page.waitForFunction(()=>document.querySelector('#content')?.getAttribute('aria-busy')==='false');
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:1000});await page.goto(base+'#inicio');await ready();
-  assert(await page.locator('.project-questions').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.fiscal-readings'))&Node.DOCUMENT_POSITION_FOLLOWING)));
+  assert(await page.locator('.home-execution').evaluate(e=>!!(e.compareDocumentPosition(document.querySelector('.fiscal-map'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   assert(!await page.locator('.hero-data').innerText().then(text=>text.replace(/\u00a0/g,' ')).then(t=>/paga.*impuestos/i.test(t)));
   await page.goto(base+'#explorar?periodo=2025-4');await ready();
   const closed=caif.periods['2025-4'];assert((await page.locator('.fiscal-main-result').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('281.526 millones'));assert((await page.locator('.fiscal-main-result h2').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('déficit'));
   assert.equal(await page.locator('.fiscal-account-detail').count(),1);assert.equal(await page.locator('.fiscal-summary .fiscal-kpis').count(),0);
   await page.locator('.fiscal-account-detail>summary').click();assert.equal(await page.locator('.fiscal-account-detail tbody tr').count(),11);
   assert((await page.locator('.fiscal-account-detail').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes(number(closed.income)));assert((await page.locator('.fiscal-account-detail').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes(number(closed.expense)));
-  if(width<650){assert.equal(await page.locator('#period-tabs').isVisible(),false);await page.locator('#mobile-period').selectOption('2026-2');}else await page.locator('[data-period="2026-2"]').click();await ready();
-  assert(page.url().includes('2026-2'));assert((await page.locator('.fiscal-main-result h2').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('superávit'));
+  if(width<650){assert.equal(await page.locator('#period-tabs').isVisible(),false);await page.locator('#mobile-period').selectOption('2026-3');}else await page.locator('[data-period="2026-3"]').click();await ready();
+  assert(page.url().includes('2026-3'));assert((await page.locator('.fiscal-main-result h2').innerText().then(text=>text.replace(/\u00a0/g,' '))).toLowerCase().includes('superávit'));
+  await page.goto(base+'#explorar?periodo=2026-2');await ready();
   const semester=await page.locator('.semester-bars').innerText().then(text=>text.replace(/\u00a0/g,' '));for(const r of caif.context.semesters){assert(semester.includes(String(r.year)));assert(semester.includes(new Intl.NumberFormat('es-AR',{minimumFractionDigits:1,maximumFractionDigits:1}).format(r.financialRatio)));}
   if(width<650)await page.locator('#mobile-period').selectOption('history');else await page.locator('#period-tabs [data-view="history"]').click();await ready();assert.equal(await page.locator('.tabs').isVisible(),false);
   assert((await page.locator('.history-impact').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('descontando la inflación'));await page.locator('#execution-year').selectOption('1997');assert((await page.locator('#execution-point').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('criterio distinto'));assert(!(await page.locator('#execution-point').innerText().then(text=>text.replace(/\u00a0/g,' '))).includes('Etapa definitiva'));
-  await page.goto(base+'#comparar');await ready();assert.equal(await page.locator('#pair-province').inputValue(),'06');
+  await page.goto(base+'#comparar');await ready();assert.equal(await page.locator('#province-select').inputValue(),'06');
   assert.deepEqual(await page.locator('.pair-identities h3').allTextContents(),['CABA','Buenos Aires']);
   assert(await page.locator('.pair-silhouette').evaluateAll(es=>es.every(e=>e.getAttribute('viewBox').split(' ').every(v=>Number.isFinite(+v))&&e.querySelector('path').getBBox().width>0)));
   for(const id of ['06','14']){
-   await page.locator('#pair-province').selectOption(id);const p=provinces.periods.find(p=>p.id==='2026-2'),r=p.rows.find(r=>r.id===id),c=p.rows.find(r=>r.id==='02');const stages=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/budget/2027/stages.json')));
+   await page.locator('#province-select').selectOption(id);const p=provinces.periods.find(p=>p.id==='2026-2'),r=p.rows.find(r=>r.id===id),c=p.rows.find(r=>r.id==='02');const stages=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/budget/2027/stages.json')));
    assert.deepEqual(await page.locator('.pair-identities h3').allTextContents(),['CABA',r.name]);
    const values=await page.locator('.pair-sheet>.pair-metrics>div').first().locator('dd').allTextContents();assert.deepEqual(values,['$\u00a0'+number(stages.totals.initial/c.population),'$\u00a0'+number(r.indicators.budgetPc)]);
   }

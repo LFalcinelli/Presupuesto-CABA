@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "unit": "pesos corrientes del período",
+  "scope": "Administración Gubernamental · Consolidado General · ingresos realizados menos gastos devengados, antes de figurativas y sin financiamiento · cifras provisorias",
+  "source": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias",
+  "ipcSource": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2026/10/ir_2026_2064.pdf",
+  "observations": [
+    {"period":"2023-1","nominal":172120491746.92,"source":"Contaduría · informe al 31/03/2023, totales por carácter económico; CAIF, fila IX","url":"https://buenosaires.gob.ar/sites/default/files/2023-05/1ER-TRIMESTRE-2023_0.pdf"},
+    {"period":"2023-2","nominal":229795176761.12,"source":"Contaduría · CAIF al 30/06/2023, fila IX"},
+    {"period":"2023-3","nominal":381893369070.19,"source":"Contaduría · informe al 30/09/2023, totales por carácter económico","url":"https://buenosaires.gob.ar/sites/default/files/2023-11/3ER-TRIM-2023.pdf"},
+    {"period":"2023-4","nominal":279846251575.71,"source":"Contaduría · informe al 31/12/2023, pp. 13 y 18","url":"https://buenosaires.gob.ar/sites/default/files/2024-02/4TO%20TRIM%202023.pdf"},
+    {"period":"2024-1","nominal":643642140478.96,"source":"Contaduría · CAIF al 31/03/2024, fila IX"},
+    {"period":"2024-2","caif":"semester","source":"Contaduría · informe al 30/06/2024, pp. 5, 12 y 20; CAIF, fila IX"},
+    {"period":"2024-3","nominal":964532157044.01,"income":6592227585694.37,"source":"Contaduría · informe al 30/09/2024, pp. 12 y 17","url":"https://buenosaires.gob.ar/sites/default/files/2024-11/3ER_TRIMESTRE_2024.pdf"},
+    {"period":"2024-4","nominal":373752109798.98,"source":"Contaduría · informe al 31/12/2024, pp. 12 y 17"},
+    {"period":"2025-1","nominal":877285929985,"source":"Contaduría · CAIF al 31/03/2025, fila IX"},
+    {"period":"2025-2","caif":"semester","source":"Contaduría · informe al 30/06/2025, pp. 5, 10 y 18; CAIF, fila IX"},
+    {"period":"2025-3","advance":"previousFinancialResult","source":"Contaduría · informe al 30/09/2025, p. 13 y gasto por carácter económico"},
+    {"period":"2025-4","caif":"period","source":"Contaduría · informe al 31/12/2025, ingresos realizados y gasto devengado"},
+    {"period":"2026-1","nominal":820806179095.25,"source":"Contaduría · informe al 31/03/2026, pp. 13 y 16; CAIF, fila IX"},
+    {"period":"2026-2","caif":"period","source":"Contaduría · informe al 30/06/2026, ingresos realizados y gasto devengado"},
+    {"period":"2026-3","advance":"financialResult","source":"Contaduría · Exp. 3561/2026, pp. 13 y 20"}
+  ]
+}

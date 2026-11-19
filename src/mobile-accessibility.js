@@ -1,6 +1,15 @@
 'use strict';
 const mobileView=()=>matchMedia('(max-width: 650px)').matches;
 const mobileFoldState=new Map();let mobileFoldKey='';
+function updateMainNavigation(){
+ const labels={landing:['Inicio','Inicio'],summary:['Explorar los datos','Datos'],compare:['Comparar CABA','Comparar'],explained:['Presupuesto explicado','Guía']};
+ for(const button of document.querySelectorAll('.main-nav [data-view]')){
+  const label=labels[button.dataset.view];
+  if(!label)continue;
+  button.textContent=label[mobileView()?1:0];
+  button.setAttribute('aria-label',label[0]);
+ }
+}
 governmentTitle=name=>displayName(name);
 
 
@@ -35,6 +44,7 @@ function foldMobileSection(section,title,summary){
 }
 function openMobileAncestors(node){for(let p=node?.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;}
 function accessibleEnhancements(){
+ updateMainNavigation();
  const key=state.view+'/'+(state.governmentArea||'');if(key!==mobileFoldKey){mobileFoldState.clear();mobileFoldKey=key;}
  const theme=document.querySelector('#theme-preference');if(theme)theme.value=CabaTheme.preference;
  const toggle=document.querySelector('#theme-toggle');if(toggle){const labels={auto:'Automático',light:'Claro',dark:'Oscuro'};toggle.setAttribute('aria-label','Tema: '+labels[CabaTheme.preference].toLowerCase()+' (cambiar)');toggle.firstElementChild.innerHTML=themeIcon(CabaTheme.preference);}
@@ -49,9 +59,8 @@ function accessibleEnhancements(){
  if(mobileView()){const tabs=document.querySelector('.mobile-explorer .tabs'),active=tabs?.querySelector('.active,[aria-selected="true"],[aria-pressed="true"]');if(tabs&&active)tabs.scrollLeft=Math.max(0,active.offsetLeft-tabs.offsetLeft-(tabs.clientWidth-active.offsetWidth)/2);}
 
  const controls=document.querySelector('#explorer-controls>.wrap'),period=controls?.querySelector('.compact-period'),tabs=controls?.querySelector('.controls');
- if(period&&tabs){controls.classList.add('mobile-explorer');period.querySelector('select')?.setAttribute('aria-label','Período de los datos');}
+ if(period&&tabs){controls.classList.add('mobile-explorer');period.querySelector('select')?.setAttribute('aria-label','Qué querés consultar');}
  if(mobileView()){
-  for(const button of document.querySelectorAll('.main-nav button')){const names={landing:'Inicio',summary:'Datos',compare:'Comparar',explained:'Guía'};if(names[button.dataset.view]){button.setAttribute('aria-label',button.textContent);button.textContent=names[button.dataset.view];}}
   for(const button of document.querySelectorAll('[data-project-tab="areas"]'))button.textContent='Áreas';
   for(const control of document.querySelectorAll('.review-base-control,.gov-comparison-tools')){if(control.closest('.mobile-base'))continue;const select=control.querySelector('select');if(!select)continue;const fold=document.createElement('details');fold.className='mobile-base';fold.innerHTML=`<summary>Comparando con: ${select.value==='current'?'ampliado':'votado'} 2026 <span aria-hidden="true">⌄</span></summary>`;control.before(fold);fold.append(control);}
   if(document.querySelector('.gov-kpis')){
@@ -88,10 +97,10 @@ const accessibleRender=render;
 render=function(...args){for(const fold of document.querySelectorAll('.fm-mobile-details,.mobile-section,.mobile-base'))mobileFoldState.set(fold.dataset.section||fold.className,fold.open);return accessibleRender(...args);};
 const accessibleShell=explorerShell;
 explorerShell=function(){accessibleShell();
+ updateMainNavigation();
  const date=document.querySelector('meta[name="site-reviewed"]')?.content,footer=document.querySelector('#updated-label');if(footer&&date)footer.textContent=footer.textContent.replace(/Sitio revisado: [\d/]+/,'Sitio revisado: '+date);
  if(mobileView()){
   const controls=document.querySelector('#explorer-controls>.wrap');if(controls)controls.classList.add('mobile-explorer');
-  for(const b of document.querySelectorAll('.main-nav button')){const names={landing:'Inicio',summary:'Datos',compare:'Comparar',explained:'Guía'};if(names[b.dataset.view])b.textContent=names[b.dataset.view];}
   for(const b of document.querySelectorAll('.tabs [data-project-tab="areas"]'))b.textContent='Áreas';
  }
 };

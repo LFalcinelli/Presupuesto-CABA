@@ -7,7 +7,7 @@ function fiscalSummary(){
 }
 extraViews.summary=fiscalSummary;
 
-function executionLabel(r){return r.kind==='legacy'?'Registro histórico · criterio distinto':r.kind==='budget'?'Presupuesto actualizado a junio · valor real estimado':r.kind==='project'?'Proyecto · valor real estimado':r.status;}
+function executionLabel(r){return r.kind==='legacy'?'Registro histórico · criterio distinto':r.kind==='budget'?r.status+' · valor real estimado':r.kind==='project'?'Proyecto · valor real estimado':r.status;}
 function tenYearImpact(){
  const rows=state.executionHistory.rows,a=rows.find(r=>r.year===2015),b=rows.find(r=>r.year===2025);if(!a||!b||a.kind!=='executed'||b.kind!=='executed')return '';
  return `<aside class="history-impact"><strong>${signedPct((b.real/a.real-1)*100)} en diez años, descontando la inflación.</strong>Gasto ejecutado de 2025 frente al de 2015.<p>En ese período cambiaron las responsabilidades de la Ciudad. El crecimiento del gasto no indica por sí solo una mejora equivalente de los servicios. ${detailLink('historia','Ver hitos y método')}</p></aside>`;
@@ -50,7 +50,8 @@ explorerShell=function(){
  const project=state.view==='project',history=state.view==='history',current=project?'project':history?'history':state.period;
  const periods=[['project','Proyecto 2027'],...state.config.featuredPeriods.map(id=>[id,periodName(summaryFor(id))]),['history','Evolución 1997–2027']];
  document.querySelector('.compact-period')?.remove();document.querySelector('.explorer-location')?.remove();
- const periodTabs=document.querySelector('#period-tabs');periodTabs.insertAdjacentHTML('beforebegin',`<label class="compact-period">Período de los datos<select id="mobile-period">${periods.map(([id,label])=>`<option value="${id}" ${id===current?'selected':''}>${E(label)}</option>`).join('')}</select></label>`);
+ const descriptions={project:'propuesta',history:'serie histórica',[state.config.currentExecutionPeriod]:'ejecución acumulada','2025-4':'año completo'};
+ const periodTabs=document.querySelector('#period-tabs');periodTabs.insertAdjacentHTML('beforebegin',`<label class="compact-period">Qué querés consultar<select id="mobile-period">${periods.map(([id,label])=>`<option value="${id}" ${id===current?'selected':''}>${E(label)}${descriptions[id]?' · '+descriptions[id]:''}</option>`).join('')}</select></label>`);
  const tab=document.querySelector('.tabs .active')?.textContent||'Gastos';
  periodTabs.insertAdjacentHTML('afterend',`<p class="explorer-location"><span>Estás en</span> ${E(periods.find(([id])=>id===current)?.[1]||periodName(summaryFor(state.period)))}${history?'':` <span>›</span> <strong>${E(tab)}</strong>`}</p>`);
  document.querySelector('.tabs').hidden=history;

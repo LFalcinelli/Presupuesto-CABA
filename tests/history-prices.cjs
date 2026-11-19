@@ -33,7 +33,7 @@ for(const rows of [h.rows,h.series.currentPrimary.rows,h.series.capital.rows])fo
 const total=y=>h.rows.find(r=>r.year===y),current=y=>h.series.currentPrimary.rows.find(r=>r.year===y);
 assert.equal(total(2005).cell,'L28');assert.equal(current(2005).cell,'L9');
 near(total(2005).nominal,5815692930.42,.001);near(total(2025).nominal,13751703241459.578,.01);
-assert.equal(total(2026).nominal,19877152039294);assert.equal(total(2027).nominal,project.summary.fiscalExpense.value);
+assert.equal(total(2026).nominal,19878243196345);assert.equal(total(2027).nominal,project.summary.fiscalExpense.value);
 assert.equal(current(2026).nominal,15565399800000);assert.equal(current(2026).nominalPrecisionPesos,100000);
 assert.equal(current(2027).nominal,project.summary.currentExpense.value-project.summary.interest.value);
 for(const r of [current(2026),current(2027),total(2027)]){assert(r.source);assert.equal(r.sourceSha256,project.source.fileSha256);assert(r.pdfPage);}
@@ -41,8 +41,8 @@ for(const [year,billions] of [[2013,15.53],[2017,19.09],[2023,19.18],[2024,17.35
 near(current(2023).real/1e12,15.24,.05);near(current(2027).real/1e12,15.34,.05);
 assert(total(2027).real<total(2026).real);assert.equal(h.events[1].label,'2016–2017 · Traspaso de la Policía');
 assert.equal(p.ipcbaSource.sha256,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'public/sources/IPCBA-serie-empalmada.xlsx'))).digest('hex'));
-const capital=y=>h.series.capital.rows.find(r=>r.year===y);assert.equal(capital(2005).cell,'L20');assert.equal(capital(2026).nominal,4033207400000);assert.equal(capital(2027).nominal,project.summary.capitalExpense.value);
-const revenue=y=>h.series.revenue.rows.find(r=>r.year===y),income=read('data/revenue/income-2026-2.json');
+const capital=y=>h.series.capital.rows.find(r=>r.year===y);assert.equal(capital(2005).cell,'L20');assert.equal(capital(2026).nominal,4096434477067);assert.equal(capital(2027).nominal,project.summary.capitalExpense.value);
+const revenue=y=>h.series.revenue.rows.find(r=>r.year===y),income=read('data/revenue/income-2026-3.json');
 assert.equal(h.series.revenue.rows.length,31);
 for(const r of h.series.revenue.rows){
  near(r.factor,total(r.year).factor);near(r.real,r.nominal*r.factor,.01);
@@ -55,8 +55,8 @@ near(revenue(2025).nominal-total(2025).nominal,-281525677404,1);
 assert.equal(revenue(2026).nominal,income.total.v);assert.notEqual(revenue(2026).nominal,income.total.r);
 assert.equal(revenue(2027).nominal,project.summary.fiscalRevenue.value);
 assert.notEqual(revenue(2026).nominal,total(2026).nominal);assert.notEqual(revenue(2027).nominal,total(2027).nominal);
-assert.deepEqual(revenue(2026).pdfPages,[5,9]);assert.equal(revenue(2027).pdfPage,190);
-assert.equal(revenue(2026).sourceSha256,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'public/sources/recursos-2026-2.pdf'))).digest('hex'));
+assert.deepEqual(revenue(2026).pdfPages,[5,13]);assert.equal(revenue(2027).pdfPage,190);
+assert.equal(revenue(2026).sourceSha256,income.sha256);
 assert.equal(revenue(2027).sourceSha256,project.source.fileSha256);
 const revenueCSV=fs.readFileSync(path.join(root,'data/history/execution-history.csv'),'utf8').trim().split('\n').filter(line=>line.startsWith('revenue,'));
 assert.equal(revenueCSV.length,31);for(const line of revenueCSV){const [,year,nominal,real]=line.split(',');assert.equal(Number(nominal),revenue(Number(year)).nominal);assert.equal(Number(real),revenue(Number(year)).real);}

@@ -15,18 +15,43 @@ loadBudgetSearch=async function(){await Promise.all([Site.loadFeature('search'),
 function pageIndexKey(){return [state.view,state.period,state.projectTab,state.governmentArea||''].join('|');}
 const indexedReadRoute=readRoute,indexedSyncRoute=syncRoute;
 readRoute=function(){indexedReadRoute();state.pageBlock=new URLSearchParams(location.hash.split('?')[1]||'').get('bloque');state.pageBlockRoute=pageIndexKey();state.pageBlockPending=Boolean(state.pageBlock);};
-syncRoute=function(){indexedSyncRoute();if(state.pageBlockRoute!==pageIndexKey())state.pageBlock=null;if(state.pageBlock){const [route,query]=location.hash.split('?'),q=new URLSearchParams(query||'');q.set('bloque',state.pageBlock);history.replaceState(null,'',route+'?'+q);}};
+syncRoute=function(){
+ indexedSyncRoute();
+ if(state.pageBlockRoute!==pageIndexKey())state.pageBlock=null;
+ const [route,query]=location.hash.split('?'),q=new URLSearchParams(query||'');
+ if(state.pageBlock){
+  q.set('bloque',state.pageBlock);
+  history.replaceState(null,'',route+'?'+q);
+ }
+ for(const link of document.querySelectorAll('[data-page-anchor]')){
+  q.set('bloque',link.dataset.pageAnchor);
+  link.setAttribute('href',route+'?'+q);
+ }
+};
 function scrollToPageBlock(id){const target=document.getElementById(id);if(!target||!target.closest('main'))return;if(target.tagName==='DETAILS')target.open=true;for(let p=target.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;target.tabIndex=-1;target.focus({preventScroll:true});target.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
 function mountPageIndex(view){
- if(!(view==='history'||view==='project'&&['areas','revenue'].includes(state.projectTab)||view==='home'&&state.period==='2026-2'))return;
+ if(!(view==='history'||view==='compare'||view==='project'&&['summary','areas','revenue'].includes(state.projectTab)||
+  view==='home'&&(state.period===state.config.currentExecutionPeriod||state.config.analysisPeriods[state.period])))return;
  const root=document.querySelector('main'),heading=root.querySelector('h1');if(!heading||root.querySelector('.page-index'))return;
  const items=[];
  function add(target,label){if(!target||items.some(i=>i.target===target))return;const clean=label.trim().replace(/\s+/g,' ');if(!clean)return;if(!target.id){let id='page-'+clean.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').slice(0,55);if(document.getElementById(id))id+='-'+items.length;target.id=id;}items.push({target,label:clean});}
  if(view==='history'){add(root.querySelector('.execution-history'),'Serie 1997–2027');add(root.querySelector('.dollar-perspective'),'Presupuesto en dólares');add(root.querySelector('.historical-extras'),'Más comparaciones');}
- else if(state.projectTab==='areas'&&!state.governmentArea){add(root.querySelector('#gov-directory-search')?.closest('label')||root.querySelector('#gov-search')?.closest('label'),'Buscar un área');add(root.querySelector('.gov-cards'),'Áreas de Gobierno');add(root.querySelector('#budget-depth'),'Otras lecturas del presupuesto');}
+ else if(view==='project'&&state.projectTab==='summary'){
+  add(root.querySelector('.project-comparison-inline'),'Qué cambia frente a 2026');
+  add(root.querySelector('.area-search'),'Buscar un área');
+  add(root.querySelector('.investment-explorer'),'Obras previstas');
+ }
+ else if(view==='compare'){
+  add(root.querySelector('#province-pair'),'Comparar dos jurisdicciones');
+  add(root.querySelector('#comparison-landscape'),'Mapa y lista del país');
+  add(root.querySelector('#national-history'),'Evolución del gasto');
+ }
+ else if(view==='project'&&state.projectTab==='areas'&&!state.governmentArea){add(root.querySelector('#gov-directory-search')?.closest('label')||root.querySelector('#gov-search')?.closest('label'),'Buscar un área');add(root.querySelector('.gov-cards'),'Áreas de Gobierno');add(root.querySelector('#budget-depth'),'Otras lecturas del presupuesto');}
  else for(const h of root.querySelectorAll('h2')){if(h.closest('article,.gov-card,.metric,.project-reading-cards,.fiscal-result-card,.page-index'))continue;add(h,h.textContent);if(items.length===8)break;}
  if(!items.length)return;
- const index=document.createElement('details');index.className='page-index';index.open=innerWidth>650;index.innerHTML='<summary>En esta página</summary><nav aria-label="Secciones de esta página">'+items.map(({target,label})=>{const [route,query]=location.hash.split('?'),q=new URLSearchParams(query||'');q.set('bloque',target.id);return `<a data-page-anchor="${E(target.id)}" href="${E(route+'?'+q)}">${E(label)}</a>`;}).join('')+'</nav>';heading.after(index);
+ const index=document.createElement('details');index.className='page-index';index.open=innerWidth>650;index.innerHTML='<summary>En esta página</summary><nav aria-label="Secciones de esta página">'+items.map(({target,label})=>{const [route,query]=location.hash.split('?'),q=new URLSearchParams(query||'');q.set('bloque',target.id);return `<a data-page-anchor="${E(target.id)}" href="${E(route+'?'+q)}">${E(label)}</a>`;}).join('')+'</nav>';
+ const placement=view==='project'&&state.projectTab==='summary'?root.querySelector('.project-overview'):heading;
+ placement.after(index);
 }
 document.addEventListener('click',e=>{const a=e.target.closest('[data-page-anchor]');if(!a)return;e.preventDefault();e.stopImmediatePropagation();state.pageBlock=a.dataset.pageAnchor;state.pageBlockRoute=pageIndexKey();state.pageBlockPending=false;history.replaceState(null,'',a.href);scrollToPageBlock(state.pageBlock);},true);
 const indexedEnhance=enhanceVisuals;

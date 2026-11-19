@@ -1,5 +1,25 @@
 # Metodología canónica
 
+## Saldo trimestral de la portada
+
+La serie 2023–2026 usa ingresos realizados menos gasto devengado, incluidos los intereses, sin partidas figurativas ni financiamiento. Son resultados provisorios de la Administración Gubernamental. La observación de cada corte y su fuente están en `data/fiscal-results/quarterly-balances.json`. Junio y diciembre de 2025 y junio de 2026 se enlazan a la CAIF ya contrastada. Septiembre de 2025 y 2026 se enlaza a los totales del avance.
+
+Se toma la diferencia nominal entre dos cortes sucesivos, se multiplica por el cociente entre el IPCBA promedio de julio–septiembre 2026 y el IPCBA promedio del trimestre de origen, y luego se acumula. Ese procedimiento separa los flujos por trimestre y mantiene una base de precios común. Septiembre de 2023 y 2024 sale de los totales oficiales. El gráfico de 2026 termina en septiembre.
+
+El gráfico de variaciones compara los acumulados de enero–septiembre de 2025 y 2026 con el cociente de IPCBA promedio de esos nueve meses, igual que Avance 2026. El saldo por cada $100 se calcula con los totales publicados de cada corte. El comando `node scripts/build-home-execution.mjs` reproduce los dos gráficos a partir de las fuentes registradas.
+
+El bloque de cierre conserva la cuenta anual 2025 de la CAIF. El margen a septiembre divide el saldo financiero por los ingresos realizados en enero–septiembre de cada año, con el ingreso 2024 del informe de Contaduría, página 12. El desglose de variaciones usa los rubros de recursos y los incisos de gastos del avance. Muestra los cinco grupos con mayor monto de 2026 y suma los restantes en una fila. Las barras representan su participación en el total del período y las variaciones usan el mismo ajuste por inflación que el gráfico agregado.
+
+## Avance a septiembre de 2026
+
+El saldo financiero resta gasto devengado de ingresos realizados, ambos acumulados enero–septiembre. Se excluyen partidas figurativas, fuentes y aplicaciones financieras. La comparación real con 2025 usa la razón entre los promedios mensuales del IPCBA de enero a septiembre de cada año. Los totales 2025 se toman del informe oficial; las aperturas de gasto de su CSV redondean cada registro al peso. Las aperturas 2026 se concilian con el total publicado, con diferencias de centavos por redondeo.
+
+El expediente 3561/2026 publica clasificaciones por separado. Permite comparar acumulados por código y abrir cada jurisdicción hasta unidad y programa. No permite determinar el gasto de una partida dentro de una unidad ni separar el código económico 21410000 del agregado 214. Por lo tanto, el sitio no publica resultado primario estimado para septiembre: se conserva la cuenta de junio con intereses identificados. El total, capital e ingresos presupuestados de Evolución pasan a septiembre; el corriente sin intereses y su relación con el PBG conservan junio. Los factores de la serie anual quedan intactos.
+
+Proyecto 2027 frente al vigente: se compara el proyecto y el crédito anual al 30/09 con el factor 1,213, igual que en Evolución. Los cruces por unidad y tipo de gasto, las fichas programáticas ya elaboradas, y los destacados que dependen de esos cruces mantienen la fecha de junio. El stock de deuda directa de septiembre y el aval AUSA se muestran por separado, en dólares al tipo de cambio de cierre.
+
+Escenario de cierre 2026: se suma al saldo observado enero–septiembre el saldo octubre–diciembre de 2025 escalado por el cociente de ingresos de los primeros nueve meses. Es una estimación propia, sin carácter oficial.
+
 La migración del 30/09/2026 no cambia cifras ni criterios. La metadata de cada dataset conserva fuente, unidades, corte, factores, notas y limitaciones particulares.
 
 ## Lectura incorporada el 07/10/2026

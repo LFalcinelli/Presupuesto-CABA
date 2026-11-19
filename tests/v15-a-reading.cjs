@@ -5,20 +5,20 @@ module.exports=async({page,base})=>{
   await page.setViewportSize({width,height:1000});await page.emulateMedia({reducedMotion:'reduce'});
   let home;
   for(const route of ['#inicio','#buscar?q=salud','#inicio?vineta=2']){
-   await page.goto(base+route);await ready();await page.evaluate(async t=>{CabaTheme.set(t);await render();},theme);await ready();
+   await page.goto(base+route);await ready();await page.evaluate(async t=>{CabaTheme.set(t);state.config.flags.homeEditorialHighlights=true;await render();},theme);await ready();
    assert(await page.locator('.hero-request').isHidden());assert(await page.locator('.hero-own-taxes').isHidden());assert(await page.locator('.project-hero').isHidden());
    const text=await page.locator('.home-highlights').textContent();if(!home)home=text;else assert.equal(text,home);
    assert.equal(await page.locator('.highlight-project-total a').getAttribute('href'),'#proyecto-2027?vista=summary');
    assert.equal(await page.locator('.fm-heading .eyebrow').textContent(),'PRESUPUESTO 2027');
    assert(!/déficit económico/i.test(await page.locator('main').textContent()));
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-   if(route.includes('vineta')){const t=await page.locator('#home-highlight-body').innerText();assert.match(t,/588.821/);assert.match(t,/268.478/);assert.match(t,/No hay proyección oficial/);assert.match(t,/No es un resultado asegurado/);await page.keyboard.press('Escape');}
+   if(route.includes('vineta')){const t=await page.locator('#home-highlight-body').innerText();assert.match(t,/587.726/);assert.match(t,/268.478/);assert.match(t,/No hay proyección oficial/);assert.match(t,/No es un resultado asegurado/);await page.keyboard.press('Escape');}
    if(route.includes('buscar'))await page.keyboard.press('Escape');
    assert.deepEqual(await auditTheme(page),{text:[],surfaces:[]});
   }
-  assert(!(await page.locator('[data-highlight-card="1"] h2').innerText()).includes('(sin intereses)'));const text=(await page.locator('[data-highlight-card="2"]').innerText()).replace(/\u00a0/g,' ');assert.match(text,/ESCENARIO ESTIMADO/);assert.match(text,/≈ −\$588.821 millones · estimado/);assert.match(text,/≈ −\$268.478 millones · estimado/);
+  assert(!(await page.locator('[data-highlight-card="1"] h2').innerText()).includes('(sin intereses)'));const text=(await page.locator('[data-highlight-card="2"]').innerText()).replace(/\u00a0/g,' ');assert.match(text,/ESCENARIO ESTIMADO/);assert.match(text,/984.125 millones/);assert.match(text,/≈ −\$268.478 millones · estimado/);
   await page.evaluate(async()=>{Object.assign(state.config.flags,{homeProjectHero:true,homeOwnTaxes:true,homeClosing2026Projection:false});await render();});await ready();
-  assert(await page.locator('.hero-request').isVisible());assert(await page.locator('.hero-own-taxes').isVisible());assert.match(await page.locator('[data-highlight-card="2"]').innerText(),/1er SEMESTRE 2026 · SUPERÁVIT/);
+  assert(await page.locator('.hero-request').isVisible());assert(await page.locator('.hero-own-taxes').isVisible());assert.match(await page.locator('[data-highlight-card="2"]').innerText(),/ENERO–SEPTIEMBRE 2026 · SUPERÁVIT/);
   await page.evaluate(async()=>{Object.assign(state.config.flags,{homeProjectHero:false,homeOwnTaxes:false,homeClosing2026Projection:true});await render();});await ready();
  }
  await page.emulateMedia({reducedMotion:'no-preference'});console.log('v15 A: rutas equivalentes, banderas reversibles y estimaciones visibles; contraste y ancho en cuatro estados.');
