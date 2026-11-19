@@ -1,5 +1,11 @@
 # Cambios
 
+## 2026-11-19 · Recuperar el cierre y abrir los componentes
+
+- Inicio recupera el gráfico del déficit anual 2025 y actualiza la comparación del margen a enero–septiembre de 2024, 2025 y 2026.
+- El gráfico de variaciones incorpora un botón que muestra los principales rubros de ingresos y partidas de gasto, con montos ejecutados y variaciones reales. Los grupos restantes se suman sin duplicaciones.
+- La comparación del margen usa el saldo y los ingresos del mismo período. Se incorpora el ingreso oficial de septiembre de 2024 a su referencia histórica y se reutilizan los totales ya verificados de 2025 y 2026.
+
 ## 2026-11-18 · Portada de ejecución y tipografía
 
 - Inicio prioriza el tercer trimestre de 2026 con dos gráficos: saldo acumulado por año y variaciones reales de ingresos y gastos frente al mismo corte de 2025.

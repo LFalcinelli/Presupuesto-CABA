@@ -53,8 +53,42 @@ function homeExecutionChanges(data) {
    </div>`).join('')}
   </figure>
   <p class="home-execution-insight">De cada $100 que entraron, quedaron <strong>$${now}</strong>. En ${data.year - 1} quedaban <strong>$${before}</strong>.</p>
+  <button class="text-link home-components-toggle" type="button" data-home-components aria-controls="home-change-breakdown" aria-expanded="${Boolean(state.homeComponentsOpen)}">${state.homeComponentsOpen ? 'Ocultar el desglose ↑' : 'Ver los principales ingresos y gastos ↓'}</button>
   <div class="home-execution-links"><a href="${quarterLink('income')}">Ver ingresos →</a><a href="${quarterLink('home')}">Ver gastos →</a></div>
  </article>`;
+}
+
+function homeExecutionComponents(kind, data) {
+ const incomeLabels = {'1.11': 'Impuestos', '1.14': 'Ventas y servicios'};
+ const all = data.components[kind];
+ const rows = all.slice(0, 5);
+ const rest = all.slice(5);
+ if (rest.length) rows.push({
+  name: kind === 'income' ? 'Resto de ingresos' : 'Resto de gastos',
+  current: rest.reduce((sum, row) => sum + row.current, 0),
+  previous: rest.reduce((sum, row) => sum + row.previous, 0),
+  components: rest.map(row => quarterName(row)).join(', ')
+ });
+ const total = data.comparison[kind].current;
+ return `<section class="home-component-column change-${kind}">
+  <h3>${kind === 'income' ? 'Ingresos' : 'Gastos'} · ${short(total)}</h3>
+  <ul>${rows.map(row => {
+   const variation = quarterDelta(row.current, row.previous, data.comparison.factor);
+   const label = kind === 'income' ? incomeLabels[row.codes?.join('.')] || quarterName(row) : quarterName(row);
+   return `<li>
+    <div><span title="${E(row.components || row.name)}">${E(label)}</span><strong>${short(row.current)}</strong></div>
+    <i class="home-component-track" aria-hidden="true"><b style="width:${row.current / total * 100}%"></b></i>
+    <small>${signedPct(variation)} real frente a ${data.year - 1}</small>
+   </li>`;
+  }).join('')}</ul>
+ </section>`;
+}
+
+function homeExecutionBreakdown(data) {
+ return `<section id="home-change-breakdown" class="home-change-breakdown" aria-label="Desglose de ingresos y gastos"${state.homeComponentsOpen ? '' : ' hidden'}>
+  <p>Montos de enero–septiembre ${data.year}. Las barras muestran cuánto pesa cada grupo. Los porcentajes comparan con ${data.year - 1}, descontando la inflación.</p>
+  <div class="home-components-grid">${homeExecutionComponents('income', data)}${homeExecutionComponents('expense', data)}</div>
+ </section>`;
 }
 
 function homeExecutionSources(data) {
@@ -66,6 +100,8 @@ function homeExecutionSources(data) {
   <p>En el primer gráfico ajustamos el saldo de cada trimestre con el IPCBA y luego sumamos los trimestres. En el segundo usamos el IPCBA promedio de enero a septiembre de cada año para comparar ingresos y gastos.</p>
   ${quarterTable(['Corte', 'Saldo en pesos del período', 'Saldo a precios de julio–septiembre 2026'], realRows, 'Saldos acumulados por trimestre')}
   ${quarterTable(['Concepto', 'Enero–septiembre 2025', 'Enero–septiembre 2026'], ['income','expense','balance'].map((key, i) => [['Ingresos','Gastos','Saldo'][i],money(data.comparison[key].previous),money(data.comparison[key].current)]), 'Totales originales en pesos de cada período')}
+  <p>El margen compara enero–septiembre de cada año y divide el saldo financiero por los ingresos de ese período.</p>
+  ${quarterTable(['Año', 'Ingresos enero–septiembre', 'Saldo financiero', 'Saldo por cada $100 de ingresos'], data.samePeriod.map(row => [row.year, money(row.income), money(row.financialResult), '$' + fmt(row.financialRatio, 1)]), 'Margen a septiembre · 2024–2026')}
   <ul><li><a href="${E(data.source)}">Informes de ejecución de Contaduría General</a></li><li><a href="${E(data.ipcSource)}">IPC de la Ciudad (IDECBA)</a></li><li><a href="${Site.url('data/fiscal-results/home-execution.json')}" download>Descargar los valores y la referencia de cada corte (JSON)</a></li></ul>
  </details>`;
 }
@@ -92,10 +128,20 @@ function homeExecutionMarkup() {
    </article>
    ${homeExecutionChanges(data)}
   </div>
+  ${homeExecutionBreakdown(data)}
   ${homeExecutionSources(data)}
   ${homeSearchForm()}
  </section>`;
 }
+
+document.addEventListener('click', event => {
+ const button = event.target.closest('[data-home-components]');
+ if (!button) return;
+ state.homeComponentsOpen = !state.homeComponentsOpen;
+ document.getElementById('home-change-breakdown').hidden = !state.homeComponentsOpen;
+ button.setAttribute('aria-expanded', String(state.homeComponentsOpen));
+ button.textContent = state.homeComponentsOpen ? 'Ocultar el desglose ↑' : 'Ver los principales ingresos y gastos ↓';
+});
 
 document.addEventListener('change', event => {
  if (event.target.id !== 'home-balance-quarter') return;

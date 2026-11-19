@@ -12,7 +12,27 @@ module.exports = async ({page, base}) => {
    await page.evaluate(async theme => { CabaTheme.set(theme); await render(); await document.fonts.ready; }, theme);
    assert.equal(await page.locator('main h1').count(), 1);
    assert.equal(await page.locator('.home-execution-card').count(), 2);
-   assert.equal(await page.locator('[data-highlight-card],.fiscal-readings').count(), 0);
+   assert.equal(await page.locator('[data-highlight-card]').count(), 0);
+   assert.equal(await page.locator('.fiscal-reading-grid>article').count(), 2);
+   assert.match(await page.locator('.deficit-reading').innerText(), /281\.526\s+millones/);
+   assert.equal(await page.locator('.deficit-reading a').getAttribute('href'), '#explorar?periodo=2025-4');
+   assert.match(await page.locator('.surplus-reading').innerText(), /ENERO–SEPTIEMBRE/);
+   assert.deepEqual(await page.locator('.surplus-reading .semester-bars strong').allTextContents().then(rows => rows.map(text => text.replace(/\u00a0/g, ' '))), ['$ 14,6', '$ 9,5', '$ 7,8']);
+   const breakdownButton = page.locator('[data-home-components]');
+   assert.equal(await breakdownButton.getAttribute('aria-expanded'), 'false');
+   assert(await page.locator('#home-change-breakdown').isHidden());
+   await breakdownButton.focus();
+   await page.keyboard.press('Space');
+   assert.equal(await breakdownButton.getAttribute('aria-expanded'), 'true');
+   assert.equal(await page.locator('.home-component-column').count(), 2);
+   assert.equal(await page.locator('.home-component-column li').count(), 12);
+   assert.match(await page.locator('.home-component-column').first().innerText(), /impuestos|tributarios/i);
+   assert.deepEqual(await auditTheme(page), {text:[], surfaces:[]});
+   assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+   await page.keyboard.press('Enter');
+   assert.equal(await breakdownButton.getAttribute('aria-expanded'), 'false');
+   assert(await page.locator('#home-change-breakdown').isHidden());
+   assert(await breakdownButton.evaluate(el => el === document.activeElement));
    assert(await page.evaluate(() => document.fonts.check('700 16px "DM Sans"') && getComputedStyle(document.body).fontFamily.includes('DM Sans')));
    assert(await page.locator('.balance-month').evaluateAll(labels => labels.every((label, i) => i===0 || labels[i-1].getBoundingClientRect().right < label.getBoundingClientRect().left)));
    const chartContrast = await page.locator('.home-balance-series polyline').evaluateAll(lines => {
@@ -37,7 +57,7 @@ module.exports = async ({page, base}) => {
    assert.match(await page.locator('#home-balance-values .series-3').innerText(), /Sin dato/);
    assert.match(await page.locator('#home-balance-values .series-2').innerText(), /−\$\s?109\.527\s+millones/);
    await page.locator('.home-execution-sources>summary').click();
-   assert.equal(await page.locator('.home-execution-sources table').count(), 2);
+   assert.equal(await page.locator('.home-execution-sources table').count(), 3);
    assert.equal(await page.locator('.home-execution-sources table').first().locator('tbody tr').count(), 15);
    assert.deepEqual(await auditTheme(page), {text:[], surfaces:[]});
    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));

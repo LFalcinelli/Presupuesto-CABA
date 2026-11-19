@@ -8,6 +8,8 @@ Se toma la diferencia nominal entre dos cortes sucesivos, se multiplica por el c
 
 El gráfico de variaciones compara los acumulados de enero–septiembre de 2025 y 2026 con el cociente de IPCBA promedio de esos nueve meses, igual que Avance 2026. El saldo por cada $100 se calcula con los totales publicados de cada corte. El comando `node scripts/build-home-execution.mjs` reproduce los dos gráficos a partir de las fuentes registradas.
 
+El bloque de cierre conserva la cuenta anual 2025 de la CAIF. El margen a septiembre divide el saldo financiero por los ingresos realizados en enero–septiembre de cada año, con el ingreso 2024 del informe de Contaduría, página 12. El desglose de variaciones usa los rubros de recursos y los incisos de gastos del avance. Muestra los cinco grupos con mayor monto de 2026 y suma los restantes en una fila. Las barras representan su participación en el total del período y las variaciones usan el mismo ajuste por inflación que el gráfico agregado.
+
 ## Avance a septiembre de 2026
 
 El saldo financiero resta gasto devengado de ingresos realizados, ambos acumulados enero–septiembre. Se excluyen partidas figurativas, fuentes y aplicaciones financieras. La comparación real con 2025 usa la razón entre los promedios mensuales del IPCBA de enero a septiembre de cada año. Los totales 2025 se toman del informe oficial; las aperturas de gasto de su CSV redondean cada registro al peso. Las aperturas 2026 se concilian con el total publicado, con diferencias de centavos por redondeo.

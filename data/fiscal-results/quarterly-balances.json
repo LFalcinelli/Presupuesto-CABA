@@ -11,7 +11,7 @@
     {"period":"2023-4","nominal":279846251575.71,"source":"Contaduría · informe al 31/12/2023, pp. 13 y 18","url":"https://buenosaires.gob.ar/sites/default/files/2024-02/4TO%20TRIM%202023.pdf"},
     {"period":"2024-1","nominal":643642140478.96,"source":"Contaduría · CAIF al 31/03/2024, fila IX"},
     {"period":"2024-2","caif":"semester","source":"Contaduría · informe al 30/06/2024, pp. 5, 12 y 20; CAIF, fila IX"},
-    {"period":"2024-3","nominal":964532157044.01,"source":"Contaduría · informe al 30/09/2024, pp. 12 y 17","url":"https://buenosaires.gob.ar/sites/default/files/2024-11/3ER_TRIMESTRE_2024.pdf"},
+    {"period":"2024-3","nominal":964532157044.01,"income":6592227585694.37,"source":"Contaduría · informe al 30/09/2024, pp. 12 y 17","url":"https://buenosaires.gob.ar/sites/default/files/2024-11/3ER_TRIMESTRE_2024.pdf"},
     {"period":"2024-4","nominal":373752109798.98,"source":"Contaduría · informe al 31/12/2024, pp. 12 y 17"},
     {"period":"2025-1","nominal":877285929985,"source":"Contaduría · CAIF al 31/03/2025, fila IX"},
     {"period":"2025-2","caif":"semester","source":"Contaduría · informe al 30/06/2025, pp. 5, 10 y 18; CAIF, fila IX"},

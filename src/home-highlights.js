@@ -6,7 +6,7 @@ ensureViewData=async function(view,period){
  if(view==='history'&&!['total','currentPrimary','currentPrimaryPbg','capital','revenue'].includes(state.executionSeries))state.executionSeries='currentPrimary';
  const home=['landing','search'].includes(view),editorial=state.config.flags.homeEditorialHighlights;
  const work=[highlightsLoad(view,period)];
- if(home&&!editorial)work.push(dataFile('home-execution').then(d=>state.homeExecution=d));
+ if(home)work.push(dataFile('home-execution').then(d=>state.homeExecution=d));
  if((home&&(editorial||state.homeHighlight))||(view==='method'&&state.methodSection==='inicio'))work.push(dataFile('home-highlights-2027').then(d=>state.homeHighlights=d));
  await Promise.all(work);
 };

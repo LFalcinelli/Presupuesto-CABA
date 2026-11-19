@@ -1,9 +1,45 @@
 'use strict';
 // This edition adds focused views without changing the accounting engine.
 function homeFiscalReadings(){
- if(!state.config.flags.homeEditorialHighlights)return '';
- const f=state.homeHighlights?.cards[1]?.advance2026;
- return f?`<aside class="home-section fiscal-readings"><p class="eyebrow">NUEVO · ENERO–SEPTIEMBRE 2026</p><h2>Las cuentas de la Ciudad, a septiembre</h2><p>Ingresaron <b>${short(f.income)}</b> y se gastaron <b>${short(f.expense)}</b>.</p><a class="text-link" href="#explorar?periodo=2026-3">Ver la ejecución de 2026 →</a></aside>`:'';
+ const data=state.homeExecution;
+ if(!data)return '';
+ const closed=data.annualClosing,periods=data.samePeriod,first=periods[0],latest=periods.at(-1);
+ const loss=first.financialRatio-latest.financialRatio;
+ const max=Math.max(...periods.map(row=>row.financialRatio));
+ return `<section class="home-section fiscal-readings" aria-labelledby="fiscal-home-title">
+  <p class="eyebrow">LO QUE MUESTRAN LAS CUENTAS</p>
+  <h2 id="fiscal-home-title">2025 cerró con déficit. En 2026 quedó menos margen.</h2>
+  <div class="fiscal-reading-grid">
+   <article class="deficit-reading">
+    <p class="eyebrow">CIERRE 2025</p><h3>Se gastó más de lo que ingresó.</h3>
+    <strong class="fiscal-headline negative">${short(Math.abs(closed.financialResult))}</strong>
+    <p class="fiscal-impact">de déficit fiscal · ${pct(Math.abs(closed.financialRatio))} de los ingresos del año.</p>
+    <div class="deficit-equation" aria-label="Los gastos superaron los ingresos de 2025">
+     <div><span>Ingresó</span><strong>${short(closed.income)}</strong></div>
+     <span class="fiscal-equation-sign" aria-hidden="true">−</span>
+     <div><span>Se gastó</span><strong>${short(closed.expense)}</strong></div>
+     <span class="deficit-label">El saldo fue negativo</span>
+    </div>
+    <p class="fiscal-footnote">Resultado financiero, con intereses. Cierre provisorio · pesos de 2025.</p>
+    <a class="text-link" href="#explorar?periodo=2025-4">Ver cómo cerró 2025 →</a>
+   </article>
+   <article class="surplus-reading">
+    <p class="eyebrow">ENERO–SEPTIEMBRE · MISMO PERÍODO EN CADA AÑO</p>
+    <h3>De cada $100 ingresados, quedó menos.</h3>
+    <div class="surplus-comparison">
+     <span><small>${first.year}</small><strong>$ ${fmt(first.financialRatio,1)}</strong></span>
+     <span class="surplus-arrow" aria-hidden="true">→</span>
+     <span><small>${latest.year}</small><strong>$ ${fmt(latest.financialRatio,1)}</strong></span>
+    </div>
+    <p class="fiscal-impact">El margen bajó ${fmt(loss,1)} puntos como proporción de los ingresos.</p>
+    <div class="semester-bars" role="img" aria-label="Superávit por cada 100 pesos ingresados, enero a septiembre: ${periods.map(row=>row.year+', '+fmt(row.financialRatio,1)+' pesos').join('. ')}">
+     ${periods.map(row=>`<div class="${row.year===latest.year?'current':''}"><span>${row.year}</span><i aria-hidden="true"><b style="width:${row.financialRatio/max*100}%"></b></i><strong>$ ${fmt(row.financialRatio,1)}</strong></div>`).join('')}
+    </div>
+    <p class="fiscal-footnote">Los tres períodos tuvieron superávit. El cierre anual de 2026 todavía está pendiente.</p>
+    <a class="text-link" href="#explorar?periodo=2026-3">Ver las cuentas a septiembre de 2026 →</a>
+   </article>
+  </div>
+ </section>`;
 }
 
 function approvedExecutionPanel(){

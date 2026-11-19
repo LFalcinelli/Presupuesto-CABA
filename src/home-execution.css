@@ -80,6 +80,27 @@
 .home-execution-change .home-execution-insight { background: var(--soft); color: var(--ink); padding: .9rem; border-radius: 8px; margin: auto 0 .7rem; }
 .home-execution-links { display: flex; flex-wrap: wrap; gap: .25rem 1.05rem; }
 .home-execution-links a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 650; }
+.home-components-toggle { display: inline-flex; align-items: center; min-height: 44px; align-self: flex-start; margin: 0 0 .4rem; text-align: left; }
+.home-change-breakdown { margin: 1rem 0; padding: clamp(1rem, 2.5vw, 1.75rem); border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.home-change-breakdown[hidden] { display: none; }
+.home-change-breakdown>p { color: var(--muted); max-width: 80ch; margin-top: 0; }
+.home-components-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 3rem); }
+.home-component-column { min-width: 0; }
+.home-component-column h3 { font-size: 1.2rem; margin: .25rem 0 1rem; }
+.home-component-column ul { margin: 0; padding: 0; list-style: none; }
+.home-component-column li { margin-bottom: 1rem; }
+.home-component-column li>div { display: flex; justify-content: space-between; align-items: baseline; gap: .75rem; color: var(--ink); }
+.home-component-column li span { min-width: 0; }
+.home-component-column li strong { white-space: nowrap; font-size: .95rem; }
+.home-component-column li small { display: block; margin-top: .2rem; font-size: .875rem; color: var(--muted); }
+.home-component-track { display: block; height: 8px; margin-top: .35rem; background: var(--soft); border-radius: 3px; }
+.home-component-track b { display: block; height: 100%; background: currentColor; border-radius: 3px; }
+.fiscal-readings .fiscal-footnote, .fiscal-readings .surplus-comparison small, .fiscal-readings .deficit-equation>div>span { color: var(--muted); }
+.fiscal-readings .surplus-comparison strong { color: var(--income); }
+.fiscal-readings .surplus-comparison>span:first-child strong { color: var(--muted); }
+.fiscal-readings .semester-bars b { background: var(--income); opacity: .55; }
+.fiscal-readings .semester-bars .current b { opacity: 1; }
+.fiscal-readings .semester-bars i { background: var(--soft); }
 .home-execution-sources { margin: .85rem 0 1.15rem; }
 .home-execution-sources summary { min-height: 44px; align-content: center; }
 .home-project-jump { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem 1rem; margin-bottom: .6rem; }
@@ -87,6 +108,7 @@
 .home-project-jump a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 650; }
 @media (max-width: 790px) {
   .home-execution-grid { grid-template-columns: minmax(0, 1fr); }
+  .home-components-grid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 520px) {
   .home-execution-chart text { font-size: 22px; }

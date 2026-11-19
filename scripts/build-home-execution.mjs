@@ -41,6 +41,21 @@ const series = years.map(year => {
 
 const fiscal = advance.fiscal;
 const factor = advance.priceComparison.factor;
+const september2024 = raw.observations.find(row => row.period === '2024-3');
+const samePeriod = [
+  {year: 2024, income: september2024.income, financialResult: september2024.nominal, source: september2024.url},
+  {year: 2025, income: fiscal.previousIncome, financialResult: fiscal.previousFinancialResult, source: advance.previousSources.income},
+  {year: 2026, income: fiscal.income, financialResult: fiscal.financialResult, source: advance.sourceUrl}
+].map(row => ({...row, financialRatio: row.financialResult / row.income * 100}));
+const closed = caif.periods['2025-4'];
+const components = {
+  income: advance.revenueComparison.map(row => ({name: row.name, codes: row.codes, current: row.r, previous: row.previous, page: row.page})),
+  expense: advance.groups.objects.map(row => ({name: row.name, codes: row.codes, current: row.d, previous: row.previous, page: row.page}))
+};
+for (const [key, total] of [['income', fiscal.income], ['expense', fiscal.expense]]) {
+  assert(Math.abs(components[key].reduce((sum, row) => sum + row.current, 0) - total) < 1, 'Los componentes deben conciliar con el total de ' + key);
+  components[key].sort((a, b) => b.current - a.current);
+}
 const output = {
   year: advance.year,
   quarter: advance.quarter,
@@ -50,6 +65,9 @@ const output = {
   scope: raw.scope,
   baseIndex,
   series,
+  samePeriod,
+  annualClosing: {year: closed.year, income: closed.income, expense: closed.expense, financialResult: closed.financialResult, financialRatio: closed.financialRatio},
+  components,
   comparison: {
     factor,
     income: {previous: fiscal.previousIncome, current: fiscal.income},

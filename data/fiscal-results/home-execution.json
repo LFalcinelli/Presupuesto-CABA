@@ -148,6 +148,173 @@
       ]
     }
   ],
+  "samePeriod": [
+    {
+      "year": 2024,
+      "income": 6592227585694.37,
+      "financialResult": 964532157044.01,
+      "source": "https://buenosaires.gob.ar/sites/default/files/2024-11/3ER_TRIMESTRE_2024.pdf",
+      "financialRatio": 14.631354037853871
+    },
+    {
+      "year": 2025,
+      "income": 9711037305964.69,
+      "financialResult": 923174164295.89,
+      "source": "https://buenosaires.gob.ar/sites/default/files/2025-11/3ER_TRIMESTRE_2025.pdf",
+      "financialRatio": 9.506442362535877
+    },
+    {
+      "year": 2026,
+      "income": 12670629873225,
+      "financialResult": 984124721728.2,
+      "source": "https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/direccion-general-contaduria/informacion-contable/ejecuciones-presupuestarias",
+      "financialRatio": 7.76697552982593
+    }
+  ],
+  "annualClosing": {
+    "year": 2025,
+    "income": 13470177564055.3,
+    "expense": 13751703241459.58,
+    "financialResult": -281525677404.28,
+    "financialRatio": -2.0899923261258375
+  },
+  "components": {
+    "income": [
+      {
+        "name": "Ingresos Tributarios",
+        "codes": [
+          "1",
+          "11"
+        ],
+        "current": 10167499193279.2,
+        "previous": 8075709198734.11,
+        "page": 5
+      },
+      {
+        "name": "Transferencias Corrientes",
+        "codes": [
+          "1",
+          "17"
+        ],
+        "current": 1115974385796.7,
+        "previous": 943315137848.08,
+        "page": 10
+      },
+      {
+        "name": "Ingresos no Tributarios",
+        "codes": [
+          "1",
+          "12"
+        ],
+        "current": 831361714915.34,
+        "previous": 213267697152.58,
+        "page": 6
+      },
+      {
+        "name": "Rentas de la Propiedad",
+        "codes": [
+          "1",
+          "16"
+        ],
+        "current": 344064673483.62,
+        "previous": 325568178134.19,
+        "page": 10
+      },
+      {
+        "name": "Venta de Bienes y Servicios de la Administracion Publica",
+        "codes": [
+          "1",
+          "14"
+        ],
+        "current": 206409555853.26,
+        "previous": 140850664361.63,
+        "page": 8
+      },
+      {
+        "name": "RECURSOS DE CAPITAL",
+        "codes": [
+          "2"
+        ],
+        "current": 5320349896.92,
+        "previous": 12326429734.1,
+        "page": 12
+      }
+    ],
+    "expense": [
+      {
+        "name": "Gastos En Personal",
+        "codes": [
+          "1"
+        ],
+        "current": 5428303759789.99,
+        "previous": 4068349017344,
+        "page": 73
+      },
+      {
+        "name": "Servicios No Personales",
+        "codes": [
+          "3"
+        ],
+        "current": 3163156645725.14,
+        "previous": 2413134379877,
+        "page": 73
+      },
+      {
+        "name": "Transferencias",
+        "codes": [
+          "5"
+        ],
+        "current": 1648226303018.89,
+        "previous": 1262806932592,
+        "page": 74
+      },
+      {
+        "name": "Bienes De Uso",
+        "codes": [
+          "4"
+        ],
+        "current": 843306912335.95,
+        "previous": 690924508949,
+        "page": 74
+      },
+      {
+        "name": "Bienes De Consumo",
+        "codes": [
+          "2"
+        ],
+        "current": 328807136389.99,
+        "previous": 272612715428,
+        "page": 73
+      },
+      {
+        "name": "Activos Financieros",
+        "codes": [
+          "6"
+        ],
+        "current": 135901748260.51,
+        "previous": 22936209734,
+        "page": 74
+      },
+      {
+        "name": "Servicio De La Deuda Y Disminución De Otros Pasivos",
+        "codes": [
+          "7"
+        ],
+        "current": 115955848216.92,
+        "previous": 57090258240,
+        "page": 75
+      },
+      {
+        "name": "Otros Gastos",
+        "codes": [
+          "8"
+        ],
+        "current": 22846797759.46,
+        "previous": 9119745,
+        "page": 75
+      }
+    ]
+  },
   "comparison": {
     "factor": 1.3264578094228148,
     "income": {
