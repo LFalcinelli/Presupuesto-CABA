@@ -1,5 +1,11 @@
 # Cambios
 
+## 2026-11-27 · Ejecución a septiembre 2026
+
+- Resumen, Gastos e Ingresos muestran composiciones con rectángulos seleccionables. Se puede abrir una categoría para seguir su jerarquía o consultar importes, comparaciones y fuentes.
+- Gastos e Ingresos distinguen los primeros nueve meses de julio–septiembre. El corte se conserva al compartir el enlace. Las subas y bajas reales tienen mapas separados y tablas con montos comparables.
+- El resumen explica la caída del saldo real, el repunte trimestral de ingresos y la diferencia de ritmo entre gasto corriente y de capital. Las aperturas muestran los cambios por función, por partida y por áreas, y la diferencia de cambio en los ingresos no tributarios.
+
 ## 2026-11-19 · Recuperar el cierre y abrir los componentes
 
 - Inicio recupera el gráfico del déficit anual 2025 y actualiza la comparación del margen a enero–septiembre de 2024, 2025 y 2026.
