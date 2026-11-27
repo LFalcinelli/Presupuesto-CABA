@@ -117,6 +117,8 @@
 
 .quarter-map-columns { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.25rem; }
 .quarter-reading { max-width:76ch; }
+.quarter-window label { width:min(100%,340px); }
+.quarter-window select { width:100%; min-height:44px; }
 .quarter-shortcuts { display:flex; flex-wrap:wrap; gap:.45rem 1.25rem; }
 .quarter-page [tabindex="-1"] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
 .quarter-map-columns>div, .quarter-map-columns>article { min-width:0; }

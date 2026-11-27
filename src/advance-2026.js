@@ -21,7 +21,7 @@ function quarterCut() {
 }
 function quarterWindowPicker(){
  const isolated=state.quarterWindow==='quarter';
- return `<div class="tools quarter-window"><label>Período de ejecución<select id="quarter-window"><option value="acc">Enero–septiembre · acumulado</option><option value="quarter" ${isolated?'selected':''}>Julio–septiembre · solo el trimestre</option></select></label></div>`;
+ return `<div class="tools quarter-window"><label>Período de ejecución<select id="quarter-window"><option value="acc">Enero–septiembre · acumulado</option><option value="quarter" ${isolated?'selected':''}>Julio–septiembre · trimestre</option></select></label></div>`;
 }
 function quarterAmounts(group,row){
  const code=row.codes.join('.');
@@ -39,7 +39,7 @@ function quarterChangeDetail(name,now,previous,factor,note=''){
 function quarterMap(items,label,options={}){
  const positives=items.filter(row=>row.value>0);
  const negatives=items.filter(row=>row.value<-.01);
- return reviewTreemap(positives,{label,limit:8,height:innerWidth<600?375:440,incomeLayout:true,...options})+
+ return reviewTreemap(positives,{label,limit:8,height:innerWidth<600?375:440,...options})+
   (negatives.length?`<p class="note">Los rectángulos se calculan sobre importes positivos. Ajustes negativos:</p><ul>${negatives.map(row=>`<li><button class="text-link" ${row.action}>${E(row.name)} · ${money(row.value)}</button></li>`).join('')}</ul>`:'');
 }
 function quarterComparisons(rows,{title,group,total=null}){
@@ -117,7 +117,7 @@ function quarterSummary(){
  ],'Composición del crédito anual vigente',{height:260});
  return `<section class="panel fiscal-summary quarter-page"><p class="eyebrow">ENERO–SEPTIEMBRE 2026 · CIFRAS PROVISORIAS</p><h1>¿Qué dejaron los ingresos y los gastos?</h1>
  <div class="fiscal-main-result is-surplus"><div><h2>Superávit a septiembre</h2><strong>${short(f.financialResult)}</strong><p>${pct(f.financialRatio)} de los ingresos</p></div><p>El saldo real cayó ${pct(Math.abs((real2026/real2025-1)*100))} frente a 2025 y fue el menor a septiembre en la serie 2023–2026.</p></div>
- <section class="chart-panel quarter-account"><h2>Lo que entró y lo que se gastó</h2><p>Ingresaron <strong>${short(f.income)}</strong> y se gastaron <strong>${short(f.expense)}</strong> en los primeros nueve meses. Abrí los rectángulos para ver cómo se distribuye esa diferencia.</p>${resultMap}
+ <section class="chart-panel quarter-account"><h2>Lo que entró y lo que se gastó</h2><p>Ingresaron <strong>${short(f.income)}</strong> y se gastaron <strong>${short(f.expense)}</strong> en los primeros nueve meses. Abrí los rectángulos para ver el detalle de cada parte.</p>${resultMap}
  <details><summary>Ver la cuenta completa</summary>${quarterTable(['Concepto','Pesos'],[['Ingresos corrientes',f.currentIncome],['Ingresos de capital',f.capitalIncome],['Gasto corriente',f.currentExpense],['Gasto de capital',f.capitalExpense],['Saldo financiero',f.financialResult]].map(([n,v])=>[n,money(v)]),'Enero–septiembre 2026')}<p>El saldo incluye intereses. El expediente agrupa los intereses con otras rentas de la propiedad, por lo que la cuenta de septiembre llega hasta el saldo financiero.</p></details>
  ${quarterFinancing(financing)}</section>
  <section class="chart-panel quarter-credit"><h2>Cuánto del presupuesto se usó</h2><p>Se ejecutó el <strong>${quarterRate(t.d,t.v)}</strong> del crédito anual vigente. Corriente <strong>${quarterRate(current.d,current.v)}</strong> y capital <strong>${quarterRate(capital.d,capital.v)}</strong>.</p>${creditMap}<p>El crédito pasó de ${short(t.s)} votados a ${short(t.v)} al 30 de septiembre.</p></section>
